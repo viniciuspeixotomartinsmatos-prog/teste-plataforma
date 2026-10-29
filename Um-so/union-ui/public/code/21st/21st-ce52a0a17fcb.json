@@ -1,0 +1,1 @@
+{"files":[{"path":"Usage.tsx","content":"import { Hero } from \"@/components/ui/vercel-hero\";\n\nexport default function DemoOne() {\n  return <Hero />;\n}\n"}],"usageOnly":true,"description":"Vercel Hero with grid pattern","examples":[],"variants":[],"additionalCodePaths":[],"framework":"react"}

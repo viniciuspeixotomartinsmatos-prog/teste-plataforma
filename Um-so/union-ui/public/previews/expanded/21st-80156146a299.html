@@ -1,0 +1,112 @@
+<!doctype html><html><head>
+<script>(function(){try{var p=new URLSearchParams(location.search);var t=(p.get('theme')||'').toLowerCase();var dark;if(t==='dark'||p.get('dark')==='true'){dark=true;}else if(t==='light'){dark=false;}else{dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;}var h=document.documentElement,b=document.body;function apply(el){if(!el)return;el.classList.remove('dark','light');el.classList.add(dark?'dark':'light');}apply(h);if(b){apply(b);}else{document.addEventListener('DOMContentLoaded',function(){apply(document.body);});}document.documentElement.style.colorScheme=dark?'dark':'light';}catch(e){document.documentElement.classList.add('dark');}})();</script><meta charset='utf-8'/><meta name='viewport' content='width=device-width,initial-scale=1'>
+<script type="importmap">{"imports":{"react":"https://esm.sh/react@19.1.0","react/jsx-runtime":"https://esm.sh/react@19.1.0/jsx-runtime","react-dom":"https://esm.sh/react-dom@19.1.0","react-dom/client":"https://esm.sh/react-dom@19.1.0/client","clsx":"https://esm.sh/clsx@2.1.1","tailwind-merge":"https://esm.sh/tailwind-merge@3.3.0"}}</script>
+<script src='https://cdn.tailwindcss.com'></script>
+<script>tailwind.config={darkMode:'class',theme:{extend:{colors:{background:'hsl(var(--background))',foreground:'hsl(var(--foreground))',border:'hsl(var(--border))',muted:'hsl(var(--muted))','muted-foreground':'hsl(var(--muted-foreground))'}}}};</script>
+<style>:root{--background:0 0% 100%;--foreground:0 0% 9%;--border:0 0% 87%;--muted:0 0% 96%;--muted-foreground:0 0% 45%;--an-foreground-subtle:#a3a3a3;--an-foreground-muted:#737373}.dark{--background:0 0% 7%;--foreground:0 0% 98%;--border:0 0% 20%;--muted:0 0% 15%;--muted-foreground:0 0% 63%;--an-foreground-subtle:#71717a;--an-foreground-muted:#8c8c8c}html,body,#root{height:100%;margin:0}body{background:hsl(var(--background));color:hsl(var(--foreground));font-family:Inter,ui-sans-serif,system-ui,sans-serif}</style>
+<style>.fixed.top-4.left-4{display:none!important}</style>
+</head><body class="dark"><div id='root'></div><script type='module'>// ../../../../../tmp/agent-elements-text-shimmer/entry-default.tsx
+import React2 from "react";
+import { createRoot } from "react-dom/client";
+
+// ../../../../../tmp/agent-elements-text-shimmer/code.tsx
+import * as React from "react";
+import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+import { jsx } from "react/jsx-runtime";
+function cn(...inputs) {
+  return twMerge(clsx(inputs));
+}
+var SHIMMER_STYLES = `
+@keyframes an-shimmer {
+  from { background-position: 100% center; }
+  to { background-position: 0% center; }
+}
+.an-text-shimmer {
+  display: inline-block;
+  background-size: 250% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(
+    90deg,
+    var(--an-foreground-subtle, #a3a3a3) 0%,
+    var(--an-foreground-subtle, #a3a3a3) 40%,
+    var(--an-foreground-muted, #737373) 50%,
+    var(--an-foreground-subtle, #a3a3a3) 60%,
+    var(--an-foreground-subtle, #a3a3a3) 100%
+  );
+  background-repeat: no-repeat;
+}
+.an-text-shimmer--active {
+  animation: an-shimmer var(--an-shimmer-duration, 2s) linear infinite;
+}
+`;
+var stylesInjected = false;
+function useShimmerStyles() {
+  if (typeof document === "undefined") return;
+  if (stylesInjected) return;
+  if (document.getElementById("an-text-shimmer-styles")) {
+    stylesInjected = true;
+    return;
+  }
+  const style = document.createElement("style");
+  style.id = "an-text-shimmer-styles";
+  style.textContent = SHIMMER_STYLES;
+  document.head.appendChild(style);
+  stylesInjected = true;
+}
+function TextShimmerComponent({
+  children,
+  as: Component = "p",
+  className,
+  duration = 2,
+  spread = 100,
+  delay = 0
+}) {
+  useShimmerStyles();
+  const style = {
+    "--an-shimmer-duration": `${duration}s`,
+    "--an-shimmer-spread": `${spread}px`,
+    animationDelay: delay > 0 ? `${delay}s` : void 0,
+    animationDuration: `${duration}s`,
+    animationIterationCount: "infinite",
+    animationTimingFunction: "linear"
+  };
+  return /* @__PURE__ */ jsx(
+    Component,
+    {
+      className: cn("an-text-shimmer", "an-text-shimmer--active", className),
+      style,
+      children
+    }
+  );
+}
+var TextShimmer = React.memo(TextShimmerComponent);
+
+// ../../../../../private/tmp/agent-elements-text-shimmer/demo-default.tsx
+import { jsx as jsx2 } from "react/jsx-runtime";
+function Demo() {
+  return /* @__PURE__ */ jsx2("div", { className: "flex h-full w-full items-center justify-center p-8", children: /* @__PURE__ */ jsx2(TextShimmer, { as: "span", duration: 1.4, spread: 80, children: "Syncing metadata" }) });
+}
+
+// ../../../../../tmp/agent-elements-text-shimmer/entry-default.tsx
+var root = createRoot(document.getElementById("root"));
+root.render(React2.createElement(Demo));
+requestAnimationFrame(() => {
+  document.body.dataset.ready = "1";
+});
+</script><script>(()=>{const r=()=>requestAnimationFrame(()=>requestAnimationFrame(()=>parent.postMessage({type:"21st-preview-ready"},"*")));document.readyState==="complete"?r():addEventListener("load",r,{once:true})})()</script><script data-21st-keys="1">(()=>{
+if(parent===window)return
+const q='[data-state="open"],dialog[open]'
+const open=()=>document.querySelectorAll(q).length
+addEventListener("keydown",(e)=>{
+const before=open()
+setTimeout(()=>{
+if(e.defaultPrevented||open()<before)return
+const t=(e.composedPath&&e.composedPath()[0])||e.target
+if(t&&(t.isContentEditable||/^(INPUT|TEXTAREA|SELECT)$/.test(t.nodeName)))return
+parent.postMessage({type:"21st-preview-key",key:e.key,code:e.code,altKey:e.altKey,ctrlKey:e.ctrlKey,metaKey:e.metaKey,shiftKey:e.shiftKey},"*")
+},0)
+})
+})()</script></body></html>

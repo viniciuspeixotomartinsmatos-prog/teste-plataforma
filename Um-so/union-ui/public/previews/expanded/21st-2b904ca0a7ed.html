@@ -1,0 +1,188 @@
+<!doctype html><html><head>
+<script>(function(){try{var p=new URLSearchParams(location.search);var t=(p.get('theme')||'').toLowerCase();var dark;if(t==='dark'||p.get('dark')==='true'){dark=true;}else if(t==='light'){dark=false;}else{dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;}var h=document.documentElement,b=document.body;function apply(el){if(!el)return;el.classList.remove('dark','light');el.classList.add(dark?'dark':'light');}apply(h);if(b){apply(b);}else{document.addEventListener('DOMContentLoaded',function(){apply(document.body);});}document.documentElement.style.colorScheme=dark?'dark':'light';}catch(e){document.documentElement.classList.add('dark');}})();</script><meta charset='utf-8'/><meta name='viewport' content='width=device-width,initial-scale=1'>
+<script type="importmap">{"imports":{"react":"https://esm.sh/react@19.1.0","react/jsx-runtime":"https://esm.sh/react@19.1.0/jsx-runtime","react-dom":"https://esm.sh/react-dom@19.1.0","react-dom/client":"https://esm.sh/react-dom@19.1.0/client","clsx":"https://esm.sh/clsx@2.1.1","tailwind-merge":"https://esm.sh/tailwind-merge@3.3.0"}}</script>
+<script src='https://cdn.tailwindcss.com'></script>
+<script>tailwind.config={darkMode:'class',theme:{extend:{colors:{background:'hsl(var(--background))',foreground:'hsl(var(--foreground))'}}}};</script>
+<style>:root{--background:0 0% 100%;--foreground:0 0% 9%}.dark{--background:0 0% 7%;--foreground:0 0% 98%}html,body,#root{height:100%;margin:0}body{background:hsl(var(--background));color:hsl(var(--foreground));font-family:Inter,ui-sans-serif,system-ui,sans-serif}</style>
+<style>.fixed.top-4.left-4{display:none!important}</style>
+</head><body><div id='root'></div><script type='module'>// ../../../../../tmp/agent-elements-todo-tool/entry-default.tsx
+import React2 from "react";
+import { createRoot } from "react-dom/client";
+
+// ../../../../../tmp/agent-elements-todo-tool/code.tsx
+import * as React from "react";
+import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+import { jsx, jsxs } from "react/jsx-runtime";
+function cn(...inputs) {
+  return twMerge(clsx(inputs));
+}
+var SHIMMER_STYLE_ID = "an-todo-tool-shimmer-styles";
+var SHIMMER_STYLES = `
+@keyframes an-todo-shimmer {
+  from { background-position: 100% center; }
+  to { background-position: 0% center; }
+}
+.an-todo-shimmer {
+  display: inline-flex;
+  align-items: center;
+  height: 1rem;
+  background-size: 250% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, #a3a3a3 0%, #a3a3a3 40%, #525252 50%, #a3a3a3 60%, #a3a3a3 100%);
+  background-repeat: no-repeat;
+  animation: an-todo-shimmer 1.2s linear infinite;
+}
+`;
+var shimmerStylesInjected = false;
+function ensureShimmerStyles() {
+  if (typeof document === "undefined") return;
+  if (shimmerStylesInjected) return;
+  if (document.getElementById(SHIMMER_STYLE_ID)) {
+    shimmerStylesInjected = true;
+    return;
+  }
+  const el = document.createElement("style");
+  el.id = SHIMMER_STYLE_ID;
+  el.textContent = SHIMMER_STYLES;
+  document.head.appendChild(el);
+  shimmerStylesInjected = true;
+}
+function CheckIcon({ className }) {
+  return /* @__PURE__ */ jsx(
+    "svg",
+    {
+      viewBox: "0 0 24 24",
+      fill: "none",
+      stroke: "currentColor",
+      strokeWidth: 2.5,
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      className,
+      "aria-hidden": "true",
+      children: /* @__PURE__ */ jsx("polyline", { points: "20 6 9 17 4 12" })
+    }
+  );
+}
+function ArrowRightIcon({ className }) {
+  return /* @__PURE__ */ jsxs(
+    "svg",
+    {
+      viewBox: "0 0 24 24",
+      fill: "none",
+      stroke: "currentColor",
+      strokeWidth: 2.5,
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      className,
+      "aria-hidden": "true",
+      children: [
+        /* @__PURE__ */ jsx("line", { x1: "5", y1: "12", x2: "19", y2: "12" }),
+        /* @__PURE__ */ jsx("polyline", { points: "12 5 19 12 12 19" })
+      ]
+    }
+  );
+}
+function TodoStatusIcon({
+  status,
+  isPending
+}) {
+  if (isPending && status === "in_progress") {
+    return /* @__PURE__ */ jsx("div", { className: "w-3.5 h-3.5 rounded-full flex items-center justify-center shrink-0 border border-neutral-400 dark:border-neutral-600", children: /* @__PURE__ */ jsx(ArrowRightIcon, { className: "w-2 h-2 text-neutral-500 dark:text-neutral-500" }) });
+  }
+  switch (status) {
+    case "completed":
+      return /* @__PURE__ */ jsx("div", { className: "w-3.5 h-3.5 rounded-full flex items-center justify-center shrink-0 border border-neutral-300 dark:border-neutral-700", children: /* @__PURE__ */ jsx(CheckIcon, { className: "w-2 h-2 text-neutral-500 dark:text-neutral-500" }) });
+    case "in_progress":
+      return /* @__PURE__ */ jsx("div", { className: "w-3.5 h-3.5 rounded-full flex items-center justify-center shrink-0 border border-neutral-400 dark:border-neutral-600", children: /* @__PURE__ */ jsx(ArrowRightIcon, { className: "w-2 h-2 text-neutral-500 dark:text-neutral-500" }) });
+    default:
+      return /* @__PURE__ */ jsx("div", { className: "w-3.5 h-3.5 rounded-full flex items-center justify-center shrink-0 border border-neutral-400 dark:border-neutral-600" });
+  }
+}
+var TodoListItem = React.memo(function TodoListItem2({
+  todo,
+  isPending
+}) {
+  return /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-2", children: [
+    /* @__PURE__ */ jsx("div", { className: "mt-[2px]", children: /* @__PURE__ */ jsx(TodoStatusIcon, { status: todo.status, isPending }) }),
+    /* @__PURE__ */ jsx(
+      "span",
+      {
+        className: cn(
+          "text-sm",
+          todo.status === "completed" && "line-through",
+          isPending || todo.status === "completed" || todo.status === "pending" ? "text-neutral-500 dark:text-neutral-400" : "text-neutral-700 dark:text-neutral-300"
+        ),
+        children: todo.content
+      }
+    )
+  ] });
+});
+var TodoTool = React.memo(function TodoTool2({
+  state = "idle",
+  todos: todos2 = [],
+  isCreation = false,
+  isPending = false,
+  className
+}) {
+  React.useEffect(() => {
+    ensureShimmerStyles();
+  }, []);
+  const isStreaming = state === "streaming" || todos2.length === 0;
+  if (isStreaming) {
+    return /* @__PURE__ */ jsx(
+      "div",
+      {
+        className: cn(
+          "space-y-2 text-sm leading-relaxed text-neutral-700 dark:text-neutral-300",
+          className
+        ),
+        children: /* @__PURE__ */ jsx("div", { className: "text-neutral-500 dark:text-neutral-400", children: /* @__PURE__ */ jsx("span", { className: "an-todo-shimmer", children: isCreation ? "Creating to-do list..." : "Updating to-dos..." }) })
+      }
+    );
+  }
+  return /* @__PURE__ */ jsx(
+    "div",
+    {
+      className: cn(
+        "space-y-2 text-sm leading-relaxed text-neutral-700 dark:text-neutral-300",
+        className
+      ),
+      children: todos2.map((todo, idx) => /* @__PURE__ */ jsx(TodoListItem, { todo, isPending }, idx))
+    }
+  );
+});
+
+// ../../../../../private/tmp/agent-elements-todo-tool/demo-default.tsx
+import { jsx as jsx2 } from "react/jsx-runtime";
+var todos = [
+  { content: "Audit components", status: "pending" },
+  { content: "Tighten spacing", status: "pending" },
+  { content: "Ship updates", status: "pending" }
+];
+function Demo() {
+  return /* @__PURE__ */ jsx2("div", { className: "flex items-center justify-center w-full min-h-screen bg-background p-8 overflow-hidden", children: /* @__PURE__ */ jsx2("div", { className: "w-fit", children: /* @__PURE__ */ jsx2(TodoTool, { state: "idle", todos }) }) });
+}
+
+// ../../../../../tmp/agent-elements-todo-tool/entry-default.tsx
+var root = createRoot(document.getElementById("root"));
+root.render(React2.createElement(Demo));
+requestAnimationFrame(() => {
+  document.body.dataset.ready = "1";
+});
+</script><script>(()=>{const r=()=>requestAnimationFrame(()=>requestAnimationFrame(()=>parent.postMessage({type:"21st-preview-ready"},"*")));document.readyState==="complete"?r():addEventListener("load",r,{once:true})})()</script><script data-21st-keys="1">(()=>{
+if(parent===window)return
+const q='[data-state="open"],dialog[open]'
+const open=()=>document.querySelectorAll(q).length
+addEventListener("keydown",(e)=>{
+const before=open()
+setTimeout(()=>{
+if(e.defaultPrevented||open()<before)return
+const t=(e.composedPath&&e.composedPath()[0])||e.target
+if(t&&(t.isContentEditable||/^(INPUT|TEXTAREA|SELECT)$/.test(t.nodeName)))return
+parent.postMessage({type:"21st-preview-key",key:e.key,code:e.code,altKey:e.altKey,ctrlKey:e.ctrlKey,metaKey:e.metaKey,shiftKey:e.shiftKey},"*")
+},0)
+})
+})()</script></body></html>

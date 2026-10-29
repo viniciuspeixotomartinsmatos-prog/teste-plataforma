@@ -1,0 +1,251 @@
+<!doctype html><html><head>
+<script>(function(){try{var p=new URLSearchParams(location.search);var t=(p.get('theme')||'').toLowerCase();var dark;if(t==='dark'||p.get('dark')==='true'){dark=true;}else if(t==='light'){dark=false;}else{dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;}var h=document.documentElement,b=document.body;function apply(el){if(!el)return;el.classList.remove('dark','light');el.classList.add(dark?'dark':'light');}apply(h);if(b){apply(b);}else{document.addEventListener('DOMContentLoaded',function(){apply(document.body);});}document.documentElement.style.colorScheme=dark?'dark':'light';}catch(e){document.documentElement.classList.add('dark');}})();</script><meta charset='utf-8'/><meta name='viewport' content='width=device-width,initial-scale=1'>
+<script type="importmap">{"imports":{"react":"https://esm.sh/react@19.1.0","react/jsx-runtime":"https://esm.sh/react@19.1.0/jsx-runtime","react-dom":"https://esm.sh/react-dom@19.1.0","react-dom/client":"https://esm.sh/react-dom@19.1.0/client","clsx":"https://esm.sh/clsx@2.1.1","tailwind-merge":"https://esm.sh/tailwind-merge@3.3.0","react-markdown":"https://esm.sh/react-markdown@9.0.1?deps=react@19.1.0","remark-gfm":"https://esm.sh/remark-gfm@4.0.0"}}</script>
+<script src='https://cdn.tailwindcss.com'></script>
+<script>tailwind.config={darkMode:'class',theme:{extend:{colors:{background:'hsl(var(--background))',foreground:'hsl(var(--foreground))'}}}};</script>
+<style>:root{--background:0 0% 100%;--foreground:0 0% 9%}.dark{--background:0 0% 7%;--foreground:0 0% 98%}html,body,#root{height:100%;margin:0}body{background:hsl(var(--background));color:hsl(var(--foreground));font-family:Inter,ui-sans-serif,system-ui,sans-serif}</style>
+<style>.fixed.top-4.left-4{display:none!important}</style>
+</head><body><div id='root'></div><script type='module'>// ../../../../../tmp/agent-elements-markdown/entry-default.tsx
+import React from "react";
+import { createRoot } from "react-dom/client";
+
+// ../../../../../tmp/agent-elements-markdown/code.tsx
+import { memo } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+import { jsx } from "react/jsx-runtime";
+function cn(...inputs) {
+  return twMerge(clsx(inputs));
+}
+function fixNumberedListBreaks(text) {
+  return text.replace(/^(\d+)\.\s*\n+\s*\n*/gm, "$1. ");
+}
+var CODE_FENCE_LANGS = /* @__PURE__ */ new Set([
+  "bash",
+  "diff",
+  "html",
+  "js",
+  "json",
+  "jsx",
+  "md",
+  "markdown",
+  "sh",
+  "shell",
+  "text",
+  "ts",
+  "tsx",
+  "yml",
+  "yaml"
+]);
+function normalizeCodeFenceLanguages(text) {
+  return text.replace(/```([^\n]*)/g, (_match, langRaw) => {
+    const lang = String(langRaw || "").trim().toLowerCase();
+    if (!lang) return "```";
+    const normalized = lang.split(/\s+/)[0];
+    return CODE_FENCE_LANGS.has(normalized) ? `\`\`\`${normalized}` : "```text";
+  });
+}
+var components = {
+  h1: ({ children, ...props }) => /* @__PURE__ */ jsx(
+    "h1",
+    {
+      className: "text-base font-semibold mt-3 mb-1.5 text-neutral-900 dark:text-neutral-50",
+      ...props,
+      children
+    }
+  ),
+  h2: ({ children, ...props }) => /* @__PURE__ */ jsx(
+    "h2",
+    {
+      className: "text-base font-semibold mt-3 mb-1.5 text-neutral-900 dark:text-neutral-50",
+      ...props,
+      children
+    }
+  ),
+  h3: ({ children, ...props }) => /* @__PURE__ */ jsx(
+    "h3",
+    {
+      className: "text-sm font-semibold mt-2 mb-1 text-neutral-900 dark:text-neutral-50",
+      ...props,
+      children
+    }
+  ),
+  h4: ({ children, ...props }) => /* @__PURE__ */ jsx(
+    "h4",
+    {
+      className: "text-sm font-medium mt-2 mb-1 text-neutral-900 dark:text-neutral-50",
+      ...props,
+      children
+    }
+  ),
+  p: ({ children, ...props }) => /* @__PURE__ */ jsx(
+    "p",
+    {
+      className: "text-sm leading-relaxed mb-2 text-neutral-700 dark:text-neutral-300",
+      ...props,
+      children
+    }
+  ),
+  ul: ({ children, ...props }) => /* @__PURE__ */ jsx(
+    "ul",
+    {
+      className: "list-disc list-outside space-y-0.5 text-sm mb-2 pl-4 text-neutral-700 dark:text-neutral-300",
+      ...props,
+      children
+    }
+  ),
+  ol: ({ children, ...props }) => /* @__PURE__ */ jsx(
+    "ol",
+    {
+      className: "list-decimal list-outside space-y-0.5 text-sm mb-2 pl-5 text-neutral-700 dark:text-neutral-300",
+      ...props,
+      children
+    }
+  ),
+  li: ({ children, ...props }) => /* @__PURE__ */ jsx(
+    "li",
+    {
+      className: "text-sm pl-0.5 text-neutral-700 dark:text-neutral-300",
+      ...props,
+      children
+    }
+  ),
+  strong: ({ children, ...props }) => /* @__PURE__ */ jsx(
+    "strong",
+    {
+      className: "font-medium text-neutral-900 dark:text-neutral-50",
+      ...props,
+      children
+    }
+  ),
+  em: ({ children, ...props }) => /* @__PURE__ */ jsx("em", { className: "italic", ...props, children }),
+  a: ({ href, children, ...props }) => {
+    if (!href) return /* @__PURE__ */ jsx("span", { children });
+    const isExternal = href.startsWith("http") || href.startsWith("mailto:");
+    return /* @__PURE__ */ jsx(
+      "a",
+      {
+        ...props,
+        href,
+        target: isExternal ? "_blank" : void 0,
+        rel: isExternal ? "noopener noreferrer" : void 0,
+        className: "hover:underline underline-offset-2 text-blue-600 dark:text-blue-400",
+        children
+      }
+    );
+  },
+  blockquote: ({ children, ...props }) => /* @__PURE__ */ jsx(
+    "blockquote",
+    {
+      className: "pl-3 italic mb-2 text-sm border-l-2 border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400",
+      ...props,
+      children
+    }
+  ),
+  hr: ({ ...props }) => /* @__PURE__ */ jsx(
+    "hr",
+    {
+      className: "my-4 border-neutral-200 dark:border-neutral-800",
+      ...props
+    }
+  ),
+  table: ({ children, ...props }) => /* @__PURE__ */ jsx("div", { className: "overflow-x-auto my-3 border border-neutral-200 dark:border-neutral-800 rounded-[10px]", children: /* @__PURE__ */ jsx("table", { className: "w-full text-sm", ...props, children }) }),
+  thead: ({ children, ...props }) => /* @__PURE__ */ jsx(
+    "thead",
+    {
+      className: "bg-neutral-100 dark:bg-neutral-900",
+      ...props,
+      children
+    }
+  ),
+  th: ({ children, ...props }) => /* @__PURE__ */ jsx(
+    "th",
+    {
+      className: "text-left font-medium px-3 py-2 text-neutral-900 dark:text-neutral-50",
+      ...props,
+      children
+    }
+  ),
+  td: ({ children, ...props }) => /* @__PURE__ */ jsx(
+    "td",
+    {
+      className: "px-3 py-2 border-t border-neutral-200 dark:border-neutral-800 text-neutral-700 dark:text-neutral-300",
+      ...props,
+      children
+    }
+  ),
+  code: ({ children, className, ...props }) => {
+    const isBlock = typeof className === "string" && className.startsWith("language-");
+    if (isBlock) {
+      return /* @__PURE__ */ jsx("code", { className, ...props, children });
+    }
+    return /* @__PURE__ */ jsx(
+      "code",
+      {
+        className: "px-1 py-0.5 rounded bg-neutral-100 dark:bg-neutral-900 text-[0.875em] font-mono text-neutral-800 dark:text-neutral-200",
+        ...props,
+        children
+      }
+    );
+  },
+  pre: ({ children, ...props }) => /* @__PURE__ */ jsx(
+    "pre",
+    {
+      className: "my-3 p-3 rounded-[10px] border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-950 overflow-x-auto text-xs font-mono text-neutral-800 dark:text-neutral-200",
+      ...props,
+      children
+    }
+  )
+};
+var Markdown = memo(function Markdown2({
+  content: content2,
+  className
+}) {
+  const safeContent = normalizeCodeFenceLanguages(
+    fixNumberedListBreaks(content2)
+  );
+  return /* @__PURE__ */ jsx("div", { className: cn("an-markdown break-words", className), children: /* @__PURE__ */ jsx(ReactMarkdown, { components, remarkPlugins: [remarkGfm], children: safeContent }) });
+});
+
+// ../../../../../private/tmp/agent-elements-markdown/demo-default.tsx
+import { jsx as jsx2 } from "react/jsx-runtime";
+var content = [
+  "# Release notes",
+  "",
+  "- Added streaming markdown",
+  "- Improved tool rendering",
+  "",
+  "## Example",
+  "",
+  'Use "Markdown" to render assistant text as it streams.',
+  "",
+  "```ts",
+  'console.log("Hello from markdown");',
+  "```"
+].join("\n");
+function DefaultDemo() {
+  return /* @__PURE__ */ jsx2("div", { className: "min-h-screen w-full flex items-center justify-center p-6 bg-white dark:bg-neutral-950", children: /* @__PURE__ */ jsx2("div", { className: "w-full max-w-md", children: /* @__PURE__ */ jsx2(Markdown, { content }) }) });
+}
+
+// ../../../../../tmp/agent-elements-markdown/entry-default.tsx
+var root = createRoot(document.getElementById("root"));
+root.render(React.createElement(DefaultDemo));
+requestAnimationFrame(() => {
+  document.body.dataset.ready = "1";
+});
+</script><script>(()=>{const r=()=>requestAnimationFrame(()=>requestAnimationFrame(()=>parent.postMessage({type:"21st-preview-ready"},"*")));document.readyState==="complete"?r():addEventListener("load",r,{once:true})})()</script><script data-21st-keys="1">(()=>{
+if(parent===window)return
+const q='[data-state="open"],dialog[open]'
+const open=()=>document.querySelectorAll(q).length
+addEventListener("keydown",(e)=>{
+const before=open()
+setTimeout(()=>{
+if(e.defaultPrevented||open()<before)return
+const t=(e.composedPath&&e.composedPath()[0])||e.target
+if(t&&(t.isContentEditable||/^(INPUT|TEXTAREA|SELECT)$/.test(t.nodeName)))return
+parent.postMessage({type:"21st-preview-key",key:e.key,code:e.code,altKey:e.altKey,ctrlKey:e.ctrlKey,metaKey:e.metaKey,shiftKey:e.shiftKey},"*")
+},0)
+})
+})()</script></body></html>

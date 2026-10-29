@@ -1,0 +1,220 @@
+<!doctype html><html><head>
+<script>(function(){try{var p=new URLSearchParams(location.search);var t=(p.get('theme')||'').toLowerCase();var dark;if(t==='dark'||p.get('dark')==='true'){dark=true;}else if(t==='light'){dark=false;}else{dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;}var h=document.documentElement,b=document.body;function apply(el){if(!el)return;el.classList.remove('dark','light');el.classList.add(dark?'dark':'light');}apply(h);if(b){apply(b);}else{document.addEventListener('DOMContentLoaded',function(){apply(document.body);});}document.documentElement.style.colorScheme=dark?'dark':'light';}catch(e){document.documentElement.classList.add('dark');}})();</script><meta charset='utf-8'/><meta name='viewport' content='width=device-width,initial-scale=1'>
+<script type="importmap">{"imports":{"react":"https://esm.sh/react@19.1.0","react/jsx-runtime":"https://esm.sh/react@19.1.0/jsx-runtime","react-dom":"https://esm.sh/react-dom@19.1.0","react-dom/client":"https://esm.sh/react-dom@19.1.0/client","clsx":"https://esm.sh/clsx@2.1.1","tailwind-merge":"https://esm.sh/tailwind-merge@3.3.0"}}</script>
+<script src='https://cdn.tailwindcss.com'></script>
+<script>tailwind.config={darkMode:'class',theme:{extend:{colors:{background:'hsl(var(--background))',foreground:'hsl(var(--foreground))'}}}};</script>
+<style>:root{--background:0 0% 100%;--foreground:0 0% 9%}.dark{--background:0 0% 7%;--foreground:0 0% 98%}html,body,#root{height:100%;margin:0}body{background:hsl(var(--background));color:hsl(var(--foreground));font-family:Inter,ui-sans-serif,system-ui,sans-serif}</style>
+<style>.fixed.top-4.left-4{display:none!important}</style>
+</head><body><div id='root'></div><script type='module'>// ../../../../../tmp/agent-elements-bash-tool/entry-default.tsx
+import React2 from "react";
+import { createRoot } from "react-dom/client";
+
+// ../../../../../tmp/agent-elements-bash-tool/code.tsx
+import * as React from "react";
+import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+import { jsx, jsxs } from "react/jsx-runtime";
+function cn(...inputs) {
+  return twMerge(clsx(inputs));
+}
+var SHIMMER_STYLE_ID = "an-bash-tool-shimmer-styles";
+var SHIMMER_STYLES = `
+@keyframes an-bash-shimmer {
+  from { background-position: 100% center; }
+  to { background-position: 0% center; }
+}
+.an-bash-shimmer {
+  display: inline-block;
+  background-size: 250% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, #a3a3a3 0%, #a3a3a3 40%, #525252 50%, #a3a3a3 60%, #a3a3a3 100%);
+  background-repeat: no-repeat;
+  animation: an-bash-shimmer 1.2s linear infinite;
+}
+@keyframes an-bash-dot {
+  0%, 60%, 100% { opacity: 0.2; }
+  30% { opacity: 1; }
+}
+.an-bash-dot { animation: an-bash-dot 1.4s infinite; }
+`;
+var shimmerStylesInjected = false;
+function ensureShimmerStyles() {
+  if (typeof document === "undefined") return;
+  if (shimmerStylesInjected) return;
+  if (document.getElementById(SHIMMER_STYLE_ID)) {
+    shimmerStylesInjected = true;
+    return;
+  }
+  const el = document.createElement("style");
+  el.id = SHIMMER_STYLE_ID;
+  el.textContent = SHIMMER_STYLES;
+  document.head.appendChild(el);
+  shimmerStylesInjected = true;
+}
+function extractCommandSummary(cmd) {
+  return cmd.split("|").map((s) => s.trim().split(/\s+/)[0] ?? "").filter(Boolean).slice(0, 4).join(", ");
+}
+function Spinner() {
+  return /* @__PURE__ */ jsx(
+    "svg",
+    {
+      className: "w-3 h-3 text-neutral-500 dark:text-neutral-400 animate-spin shrink-0",
+      viewBox: "0 0 16 16",
+      fill: "none",
+      "aria-hidden": "true",
+      children: /* @__PURE__ */ jsx(
+        "circle",
+        {
+          cx: "8",
+          cy: "8",
+          r: "6",
+          stroke: "currentColor",
+          strokeWidth: "1.5",
+          strokeDasharray: "28",
+          strokeDashoffset: "7",
+          strokeLinecap: "round"
+        }
+      )
+    }
+  );
+}
+function LoadingDots() {
+  return /* @__PURE__ */ jsxs("span", { className: "inline-flex", "aria-hidden": "true", children: [
+    /* @__PURE__ */ jsx("span", { className: "an-bash-dot", style: { animationDelay: "0.2s" }, children: "." }),
+    /* @__PURE__ */ jsx("span", { className: "an-bash-dot", style: { animationDelay: "0.4s" }, children: "." }),
+    /* @__PURE__ */ jsx("span", { className: "an-bash-dot", style: { animationDelay: "0.6s" }, children: "." })
+  ] });
+}
+function ApprovalFooter({
+  isRunning,
+  approval
+}) {
+  const [decision, setDecision] = React.useState(null);
+  const skipText = decision === "rejected" ? "Skipped" : approval.skipLabel ?? "Skip";
+  const runText = decision === "approved" ? "Approved" : approval.runLabel ?? "Run";
+  const status = React.useMemo(() => {
+    if (decision === "approved") return { label: "Waiting", dots: true };
+    if (decision === "rejected") return { label: "Canceled", dots: false };
+    if (isRunning) return { label: "Starting", dots: true };
+    return null;
+  }, [decision, isRunning]);
+  const handleSkip = () => {
+    if (decision) return;
+    setDecision("rejected");
+    approval.onSkip?.();
+  };
+  const handleRun = () => {
+    if (decision) return;
+    setDecision("approved");
+    approval.onRun?.();
+  };
+  return /* @__PURE__ */ jsxs("div", { className: "flex items-center justify-between py-1 pl-3 pr-2 border-t border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900", children: [
+    status ? /* @__PURE__ */ jsxs("span", { className: "text-xs text-neutral-500 dark:text-neutral-400", children: [
+      status.label,
+      status.dots && /* @__PURE__ */ jsx(LoadingDots, {})
+    ] }) : /* @__PURE__ */ jsx("span", { "aria-hidden": "true" }),
+    /* @__PURE__ */ jsxs("div", { className: "flex gap-1", children: [
+      /* @__PURE__ */ jsx(
+        "button",
+        {
+          type: "button",
+          onClick: handleSkip,
+          disabled: Boolean(decision),
+          className: "h-5 px-1.5 rounded-[4px] text-xs text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-200/60 dark:hover:bg-neutral-800/60 active:scale-[0.98] transition-[background-color,color,transform] duration-150 disabled:opacity-60 disabled:hover:bg-transparent disabled:active:scale-100",
+          children: skipText
+        }
+      ),
+      /* @__PURE__ */ jsx(
+        "button",
+        {
+          type: "button",
+          onClick: handleRun,
+          disabled: Boolean(decision),
+          className: "h-5 px-1.5 rounded-[4px] text-xs font-medium bg-blue-500 dark:bg-blue-400 text-white dark:text-neutral-950 hover:bg-blue-500/90 dark:hover:bg-blue-400/90 active:scale-[0.98] transition-[background-color,transform] duration-150 disabled:opacity-60 disabled:active:scale-100",
+          children: runText
+        }
+      )
+    ] })
+  ] });
+}
+var BashTool = React.memo(function BashTool2({
+  state = "idle",
+  command,
+  output,
+  approval,
+  className
+}) {
+  React.useEffect(() => {
+    ensureShimmerStyles();
+  }, []);
+  const isRunning = state === "running";
+  const summary = extractCommandSummary(command);
+  return /* @__PURE__ */ jsxs(
+    "div",
+    {
+      className: cn(
+        "rounded-[10px] border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 overflow-hidden",
+        className
+      ),
+      children: [
+        /* @__PURE__ */ jsxs("div", { className: "flex items-center justify-between pl-2.5 pr-2 h-7", children: [
+          /* @__PURE__ */ jsx("div", { className: "flex items-center gap-1.5 min-w-0 overflow-hidden", children: isRunning ? /* @__PURE__ */ jsxs("span", { className: "an-bash-shimmer text-xs leading-none truncate", children: [
+            "Running command: ",
+            summary
+          ] }) : /* @__PURE__ */ jsxs("span", { className: "text-xs text-neutral-500 dark:text-neutral-400 truncate", children: [
+            "Ran command: ",
+            summary
+          ] }) }),
+          isRunning && /* @__PURE__ */ jsx(Spinner, {})
+        ] }),
+        /* @__PURE__ */ jsxs("div", { className: "border-t border-neutral-200 dark:border-neutral-800 px-2.5 py-1.5 font-mono text-[12px] leading-[16px] overflow-hidden bg-white dark:bg-neutral-950", children: [
+          /* @__PURE__ */ jsxs("div", { className: "break-all", children: [
+            /* @__PURE__ */ jsxs("span", { className: "text-amber-600 dark:text-amber-400 select-none", children: [
+              "$",
+              " "
+            ] }),
+            /* @__PURE__ */ jsx("span", { className: "text-neutral-900 dark:text-neutral-100", children: command })
+          ] }),
+          !isRunning && output && /* @__PURE__ */ jsx("div", { className: "mt-1 text-neutral-500 dark:text-neutral-400 whitespace-pre-line max-h-[80px] overflow-hidden", children: output })
+        ] }),
+        approval && /* @__PURE__ */ jsx(ApprovalFooter, { isRunning, approval })
+      ]
+    }
+  );
+});
+
+// ../../../../../private/tmp/agent-elements-bash-tool/demo-default.tsx
+import { jsx as jsx2 } from "react/jsx-runtime";
+function Demo() {
+  return /* @__PURE__ */ jsx2("div", { className: "flex items-center justify-center w-full min-h-screen bg-background p-8 overflow-hidden", children: /* @__PURE__ */ jsx2("div", { className: "w-full max-w-md", children: /* @__PURE__ */ jsx2(
+    BashTool,
+    {
+      state: "idle",
+      command: "ls -la",
+      output: "app\nlib\nREADME.md"
+    }
+  ) }) });
+}
+
+// ../../../../../tmp/agent-elements-bash-tool/entry-default.tsx
+var root = createRoot(document.getElementById("root"));
+root.render(React2.createElement(Demo));
+requestAnimationFrame(() => {
+  document.body.dataset.ready = "1";
+});
+</script><script>(()=>{const r=()=>requestAnimationFrame(()=>requestAnimationFrame(()=>parent.postMessage({type:"21st-preview-ready"},"*")));document.readyState==="complete"?r():addEventListener("load",r,{once:true})})()</script><script data-21st-keys="1">(()=>{
+if(parent===window)return
+const q='[data-state="open"],dialog[open]'
+const open=()=>document.querySelectorAll(q).length
+addEventListener("keydown",(e)=>{
+const before=open()
+setTimeout(()=>{
+if(e.defaultPrevented||open()<before)return
+const t=(e.composedPath&&e.composedPath()[0])||e.target
+if(t&&(t.isContentEditable||/^(INPUT|TEXTAREA|SELECT)$/.test(t.nodeName)))return
+parent.postMessage({type:"21st-preview-key",key:e.key,code:e.code,altKey:e.altKey,ctrlKey:e.ctrlKey,metaKey:e.metaKey,shiftKey:e.shiftKey},"*")
+},0)
+})
+})()</script></body></html>

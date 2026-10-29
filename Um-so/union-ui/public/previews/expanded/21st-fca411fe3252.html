@@ -1,0 +1,548 @@
+<!doctype html><html><head>
+<script>(function(){try{var p=new URLSearchParams(location.search);var t=(p.get('theme')||'').toLowerCase();var dark;if(t==='dark'||p.get('dark')==='true'){dark=true;}else if(t==='light'){dark=false;}else{dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;}var h=document.documentElement,b=document.body;function apply(el){if(!el)return;el.classList.remove('dark','light');el.classList.add(dark?'dark':'light');}apply(h);if(b){apply(b);}else{document.addEventListener('DOMContentLoaded',function(){apply(document.body);});}document.documentElement.style.colorScheme=dark?'dark':'light';}catch(e){document.documentElement.classList.add('dark');}})();</script><meta charset='utf-8'/><meta name='viewport' content='width=device-width,initial-scale=1'>
+<script type="importmap">{"imports":{"react":"https://esm.sh/react@19.1.0","react/jsx-runtime":"https://esm.sh/react@19.1.0/jsx-runtime","react-dom":"https://esm.sh/react-dom@19.1.0","react-dom/client":"https://esm.sh/react-dom@19.1.0/client","clsx":"https://esm.sh/clsx@2.1.1","tailwind-merge":"https://esm.sh/tailwind-merge@3.3.0"}}</script>
+<script src='https://cdn.tailwindcss.com'></script>
+<script>tailwind.config={darkMode:'class',theme:{extend:{colors:{background:'hsl(var(--background))',foreground:'hsl(var(--foreground))'}}}};</script>
+<style>:root{--background:0 0% 100%;--foreground:0 0% 9%}.dark{--background:0 0% 7%;--foreground:0 0% 98%}html,body,#root{height:100%;margin:0}body{background:hsl(var(--background));color:hsl(var(--foreground));font-family:Inter,ui-sans-serif,system-ui,sans-serif}</style>
+<style>.fixed.top-4.left-4{display:none!important}</style>
+</head><body><div id='root'></div><script type='module'>// ../../../../../tmp/agent-elements-question-tool/entry-default.tsx
+import React from "react";
+import { createRoot } from "react-dom/client";
+
+// ../../../../../private/tmp/agent-elements-question-tool/demo-default.tsx
+import { useState as useState2 } from "react";
+
+// ../../../../../tmp/agent-elements-question-tool/code.tsx
+import { useEffect, useMemo, useState } from "react";
+import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+import { jsx, jsxs } from "react/jsx-runtime";
+function cn(...inputs) {
+  return twMerge(clsx(inputs));
+}
+var QUESTION_CUSTOM_ID = "__custom__";
+function optionBadge(idx) {
+  return String.fromCharCode(65 + idx);
+}
+function IconQuestion({ className }) {
+  return /* @__PURE__ */ jsxs(
+    "svg",
+    {
+      className,
+      viewBox: "0 0 24 24",
+      fill: "none",
+      stroke: "currentColor",
+      strokeWidth: "2",
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      "aria-hidden": true,
+      children: [
+        /* @__PURE__ */ jsx("path", { d: "M3 20l1.3 -3.9a9 9 0 1 1 3.4 2.9z" }),
+        /* @__PURE__ */ jsx("path", { d: "M12 16v.01" }),
+        /* @__PURE__ */ jsx("path", { d: "M12 13a2 2 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483" })
+      ]
+    }
+  );
+}
+function IconChevronUp({ className }) {
+  return /* @__PURE__ */ jsx(
+    "svg",
+    {
+      className,
+      viewBox: "0 0 24 24",
+      fill: "none",
+      stroke: "currentColor",
+      strokeWidth: "2",
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      "aria-hidden": true,
+      children: /* @__PURE__ */ jsx("path", { d: "M6 15l6 -6l6 6" })
+    }
+  );
+}
+function IconChevronDown({ className }) {
+  return /* @__PURE__ */ jsx(
+    "svg",
+    {
+      className,
+      viewBox: "0 0 24 24",
+      fill: "none",
+      stroke: "currentColor",
+      strokeWidth: "2",
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      "aria-hidden": true,
+      children: /* @__PURE__ */ jsx("path", { d: "M6 9l6 6l6 -6" })
+    }
+  );
+}
+function QuestionPrompt({
+  questions: questions2,
+  questionIndex = 1,
+  totalQuestions,
+  onPreviousQuestion,
+  onNextQuestion,
+  submitLabel = "Send",
+  nextLabel = "Next",
+  skipLabel = "Skip",
+  allowSkip = true,
+  initialAnswer,
+  onSubmit,
+  onSkip,
+  className
+}) {
+  const [selectedIds, setSelectedIds] = useState([]);
+  const [customText, setCustomText] = useState("");
+  const [textValue, setTextValue] = useState("");
+  const resolvedTotal = totalQuestions ?? questions2.length;
+  const clampedIndex = Math.max(1, Math.min(questionIndex, resolvedTotal));
+  const activeQuestion = questions2[clampedIndex - 1];
+  const customEnabled = activeQuestion?.allowCustom ?? false;
+  const showNav = resolvedTotal > 1 && (!!onPreviousQuestion || !!onNextQuestion);
+  const canGoPrev = clampedIndex > 1;
+  const canGoNext = clampedIndex < resolvedTotal;
+  const isLastQuestion = clampedIndex >= resolvedTotal;
+  const primaryLabel = isLastQuestion ? submitLabel : nextLabel;
+  useEffect(() => {
+    if (!initialAnswer || initialAnswer.kind === "skip") {
+      setSelectedIds([]);
+      setCustomText("");
+      setTextValue("");
+      return;
+    }
+    if (activeQuestion?.kind === "text") {
+      setSelectedIds([]);
+      setCustomText("");
+      setTextValue(initialAnswer.text ?? "");
+      return;
+    }
+    const nextSelected = new Set(initialAnswer.selectedIds ?? []);
+    const nextCustomText = initialAnswer.text ?? "";
+    if (customEnabled && nextCustomText.trim().length > 0) {
+      nextSelected.add(QUESTION_CUSTOM_ID);
+    }
+    setSelectedIds(Array.from(nextSelected));
+    setCustomText(nextCustomText);
+    setTextValue("");
+  }, [
+    activeQuestion?.kind,
+    clampedIndex,
+    customEnabled,
+    initialAnswer?.kind,
+    initialAnswer?.text,
+    initialAnswer?.selectedIds?.join("|")
+  ]);
+  const canSubmit = useMemo(() => {
+    if (activeQuestion?.kind === "text") return textValue.trim().length > 0;
+    const selectedNonCustom = selectedIds.filter(
+      (id) => id !== QUESTION_CUSTOM_ID
+    ).length;
+    const hasCustomText = customText.trim().length > 0;
+    const total = selectedNonCustom + (hasCustomText ? 1 : 0);
+    if (activeQuestion?.kind === "single") return total === 1;
+    const min = activeQuestion?.minSelections ?? 1;
+    const max = activeQuestion?.maxSelections;
+    if (total < min) return false;
+    if (typeof max === "number" && total > max) return false;
+    return total > 0;
+  }, [
+    activeQuestion?.kind,
+    activeQuestion?.minSelections,
+    activeQuestion?.maxSelections,
+    selectedIds,
+    customText,
+    textValue
+  ]);
+  const toggleMulti = (id) => {
+    setSelectedIds(
+      (prev) => prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]
+    );
+  };
+  const handleSingleSelect = (id) => {
+    setSelectedIds([id]);
+  };
+  const handleCustomTextChange = (nextValue) => {
+    setCustomText(nextValue);
+    if (!activeQuestion) return;
+    if (activeQuestion.kind === "single") {
+      setSelectedIds(nextValue.trim().length > 0 ? [QUESTION_CUSTOM_ID] : []);
+      return;
+    }
+    setSelectedIds((prev) => {
+      const hasCustom = prev.includes(QUESTION_CUSTOM_ID);
+      if (nextValue.trim().length > 0 && !hasCustom) {
+        return [...prev, QUESTION_CUSTOM_ID];
+      }
+      if (nextValue.trim().length === 0 && hasCustom) {
+        return prev.filter((id) => id !== QUESTION_CUSTOM_ID);
+      }
+      return prev;
+    });
+  };
+  const handleSubmit = () => {
+    if (!canSubmit || !activeQuestion) return;
+    if (activeQuestion.kind === "text") {
+      onSubmit({ kind: "text", text: textValue.trim() });
+      return;
+    }
+    const selectedNonCustom = selectedIds.filter(
+      (id) => id !== QUESTION_CUSTOM_ID
+    );
+    const answerText = customText.trim() || void 0;
+    onSubmit({
+      kind: activeQuestion.kind,
+      selectedIds: selectedNonCustom,
+      text: answerText || void 0
+    });
+  };
+  const handleSkip = () => {
+    onSkip?.();
+    onSubmit({ kind: "skip" });
+  };
+  if (!activeQuestion) return null;
+  const optionRowBase = "w-full text-left rounded-md px-2 py-1.5 flex items-center gap-2 -mx-2 hover:bg-neutral-100 dark:hover:bg-neutral-800";
+  const badgeBase = "h-5 min-w-5 px-1 rounded-[4px] inline-flex items-center justify-center text-sm font-medium border";
+  const badgeOff = "bg-transparent text-neutral-500 dark:text-neutral-400 border-neutral-200 dark:border-neutral-700";
+  const badgeOn = "bg-blue-500 text-white border-blue-500 dark:bg-blue-400 dark:text-neutral-950 dark:border-blue-400";
+  return /* @__PURE__ */ jsxs(
+    "div",
+    {
+      className: cn(
+        "px-3 py-2 space-y-2 bg-white dark:bg-neutral-950",
+        className
+      ),
+      children: [
+        /* @__PURE__ */ jsx("div", { className: "flex items-center justify-between gap-px", children: /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-2 text-sm text-neutral-900 dark:text-neutral-100", children: [
+          /* @__PURE__ */ jsx("span", { className: "h-5 min-w-5 px-1 rounded-[4px] inline-flex items-center justify-center text-sm font-medium text-neutral-500 dark:text-neutral-400", children: clampedIndex }),
+          /* @__PURE__ */ jsx("span", { children: activeQuestion.title })
+        ] }) }),
+        activeQuestion.kind !== "text" && (activeQuestion.options?.length ?? 0) > 0 && /* @__PURE__ */ jsxs("div", { className: "space-y-px", children: [
+          activeQuestion.options.map((option, idx) => {
+            const checked = selectedIds.includes(option.id);
+            return /* @__PURE__ */ jsxs(
+              "button",
+              {
+                type: "button",
+                onClick: () => {
+                  if (activeQuestion.kind === "single") {
+                    handleSingleSelect(option.id);
+                    if (customEnabled) setCustomText("");
+                  } else {
+                    toggleMulti(option.id);
+                  }
+                },
+                className: optionRowBase,
+                children: [
+                  /* @__PURE__ */ jsx("span", { className: cn(badgeBase, checked ? badgeOn : badgeOff), children: optionBadge(idx) }),
+                  /* @__PURE__ */ jsxs("span", { className: "text-sm text-neutral-900 dark:text-neutral-100", children: [
+                    option.label,
+                    option.description && /* @__PURE__ */ jsxs("span", { className: "text-neutral-500 dark:text-neutral-400", children: [
+                      " ",
+                      option.description
+                    ] })
+                  ] })
+                ]
+              },
+              option.id
+            );
+          }),
+          customEnabled && /* @__PURE__ */ jsxs("div", { className: "pt-1 flex items-center gap-2", children: [
+            /* @__PURE__ */ jsx(
+              "span",
+              {
+                className: cn(
+                  badgeBase,
+                  selectedIds.includes(QUESTION_CUSTOM_ID) ? badgeOn : badgeOff
+                ),
+                children: optionBadge(activeQuestion.options.length)
+              }
+            ),
+            /* @__PURE__ */ jsx(
+              "input",
+              {
+                value: customText,
+                onChange: (event) => handleCustomTextChange(event.target.value),
+                placeholder: activeQuestion.customPlaceholder ?? "Type your answer",
+                className: "w-full h-7 rounded-md border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-950 px-2 text-sm text-neutral-900 dark:text-neutral-100 outline-none focus:border-neutral-400 dark:focus:border-neutral-500"
+              }
+            )
+          ] })
+        ] }),
+        activeQuestion.kind === "text" && /* @__PURE__ */ jsx(
+          "textarea",
+          {
+            value: textValue,
+            onChange: (event) => setTextValue(event.target.value),
+            placeholder: activeQuestion.placeholder ?? "Type your answer",
+            rows: 3,
+            className: "w-full rounded-md border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-950 px-2 py-1.5 text-sm text-neutral-900 dark:text-neutral-100 resize-y outline-none focus:border-neutral-400 dark:focus:border-neutral-500"
+          }
+        ),
+        /* @__PURE__ */ jsxs(
+          "div",
+          {
+            className: cn(
+              "flex items-center gap-1.5",
+              showNav ? "justify-between" : "justify-end"
+            ),
+            children: [
+              showNav && /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-1.5", children: [
+                onPreviousQuestion && /* @__PURE__ */ jsx(
+                  "button",
+                  {
+                    type: "button",
+                    onClick: onPreviousQuestion,
+                    disabled: !canGoPrev,
+                    className: "h-6 px-2 rounded-[4px] text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 disabled:opacity-60",
+                    children: "Previous"
+                  }
+                ),
+                onNextQuestion && /* @__PURE__ */ jsx(
+                  "button",
+                  {
+                    type: "button",
+                    onClick: onNextQuestion,
+                    disabled: !canGoNext,
+                    className: "h-6 px-2 rounded-[4px] text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 disabled:opacity-60",
+                    children: "Next"
+                  }
+                )
+              ] }),
+              /* @__PURE__ */ jsxs("div", { className: "flex items-center justify-end gap-1.5", children: [
+                allowSkip && /* @__PURE__ */ jsx(
+                  "button",
+                  {
+                    type: "button",
+                    onClick: handleSkip,
+                    className: "h-6 px-2 rounded-[4px] text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800 active:scale-[0.98] transition-[background-color,color,transform] duration-150",
+                    children: skipLabel
+                  }
+                ),
+                /* @__PURE__ */ jsx(
+                  "button",
+                  {
+                    type: "button",
+                    onClick: handleSubmit,
+                    disabled: !canSubmit,
+                    className: "h-6 px-2.5 rounded-[4px] text-sm font-medium bg-blue-500 text-white dark:bg-blue-400 dark:text-neutral-950 hover:bg-blue-600 dark:hover:bg-blue-300 active:scale-[0.98] transition-[background-color,transform] duration-150 disabled:opacity-60 disabled:hover:bg-blue-500 dark:disabled:hover:bg-blue-400 disabled:active:scale-100",
+                    children: primaryLabel
+                  }
+                )
+              ] })
+            ]
+          }
+        )
+      ]
+    }
+  );
+}
+function formatAnswer(answer) {
+  if (answer.kind === "skip") return "Skipped";
+  if (answer.kind === "text") return answer.text || "Answered";
+  const ids = answer.selectedIds?.length ? answer.selectedIds.join(", ") : "";
+  if (answer.text) return ids ? `${ids} (${answer.text})` : answer.text;
+  return ids || "Answered";
+}
+function QuestionTool({
+  questions: questions2,
+  questionIndex,
+  totalQuestions: totalQuestionsProp,
+  onPreviousQuestion,
+  onNextQuestion,
+  submitLabel,
+  nextLabel,
+  skipLabel,
+  allowSkip,
+  onSubmitAnswer,
+  output,
+  toolCallId,
+  className
+}) {
+  const totalQuestions = totalQuestionsProp ?? questions2.length;
+  const [localIndex, setLocalIndex] = useState(questionIndex ?? 1);
+  const isControlled = typeof questionIndex === "number";
+  const effectiveIndex = isControlled ? questionIndex ?? 1 : questions2.length > 0 ? localIndex : 1;
+  const clampedIndex = Math.max(1, Math.min(effectiveIndex, totalQuestions));
+  const question = questions2[clampedIndex - 1];
+  const [localAnswers, setLocalAnswers] = useState({});
+  useEffect(() => {
+    if (typeof questionIndex === "number") {
+      setLocalIndex(questionIndex);
+    }
+  }, [questionIndex]);
+  useEffect(() => {
+    setLocalAnswers({});
+    setLocalIndex(questionIndex ?? 1);
+  }, [toolCallId]);
+  const outputAnswer = output?.answer;
+  const answeredCount = Object.keys(localAnswers).length;
+  const isComplete = totalQuestions === 1 ? !!outputAnswer || answeredCount >= 1 : totalQuestions > 0 && answeredCount >= totalQuestions;
+  const showNavigation = totalQuestions > 1 && !isComplete;
+  const canGoPrev = clampedIndex > 1;
+  const canGoNext = clampedIndex < totalQuestions;
+  const summaryAnswers = useMemo(() => {
+    if (!isComplete || totalQuestions <= 1) return [];
+    return Array.from({ length: totalQuestions }, (_, idx) => ({
+      index: idx + 1,
+      answer: localAnswers[idx + 1]
+    }));
+  }, [isComplete, localAnswers, totalQuestions]);
+  const summaryText = useMemo(() => {
+    if (!isComplete) return "";
+    if (summaryAnswers.length > 0) {
+      return summaryAnswers.map(
+        (item) => `${item.index}: ${item.answer ? formatAnswer(item.answer) : "Pending"}`
+      ).join(" \u2022 ");
+    }
+    if (outputAnswer) return formatAnswer(outputAnswer);
+    if (localAnswers[clampedIndex])
+      return formatAnswer(localAnswers[clampedIndex]);
+    return "Pending";
+  }, [isComplete, summaryAnswers, outputAnswer, localAnswers, clampedIndex]);
+  const goPrev = () => {
+    if (!canGoPrev) return;
+    onPreviousQuestion?.();
+    if (!isControlled) {
+      setLocalIndex((prev) => Math.max(1, prev - 1));
+    }
+  };
+  const goNext = () => {
+    if (!canGoNext) return;
+    onNextQuestion?.();
+    if (!isControlled) {
+      setLocalIndex((prev) => Math.min(totalQuestions, prev + 1));
+    }
+  };
+  if (!question) return null;
+  return /* @__PURE__ */ jsxs(
+    "div",
+    {
+      className: cn(
+        "rounded-[10px] border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 overflow-hidden",
+        className
+      ),
+      children: [
+        /* @__PURE__ */ jsxs("div", { className: "h-7 border-b border-neutral-200 dark:border-neutral-800 px-3 flex items-center justify-between text-xs text-neutral-500 dark:text-neutral-400", children: [
+          /* @__PURE__ */ jsxs("div", { className: "inline-flex items-center gap-1.5", children: [
+            /* @__PURE__ */ jsx(IconQuestion, { className: "w-3.5 h-3.5" }),
+            "Question"
+          ] }),
+          showNavigation && /* @__PURE__ */ jsxs("div", { className: "inline-flex items-center gap-1", children: [
+            /* @__PURE__ */ jsx(
+              "button",
+              {
+                type: "button",
+                onClick: goPrev,
+                disabled: !canGoPrev,
+                className: "size-5 inline-flex items-center justify-center rounded-[4px] hover:bg-neutral-100 dark:hover:bg-neutral-800 disabled:opacity-40",
+                "aria-label": "Previous question",
+                children: /* @__PURE__ */ jsx(IconChevronUp, { className: "w-3.5 h-3.5" })
+              }
+            ),
+            /* @__PURE__ */ jsxs("span", { children: [
+              clampedIndex,
+              " of ",
+              totalQuestions
+            ] }),
+            /* @__PURE__ */ jsx(
+              "button",
+              {
+                type: "button",
+                onClick: goNext,
+                disabled: !canGoNext,
+                className: "size-5 inline-flex items-center justify-center rounded-[4px] hover:bg-neutral-100 dark:hover:bg-neutral-800 disabled:opacity-40",
+                "aria-label": "Next question",
+                children: /* @__PURE__ */ jsx(IconChevronDown, { className: "w-3.5 h-3.5" })
+              }
+            )
+          ] })
+        ] }),
+        isComplete ? /* @__PURE__ */ jsx("div", { className: "px-3 py-2 text-xs text-neutral-500 dark:text-neutral-400 bg-white dark:bg-neutral-950", children: summaryText }) : /* @__PURE__ */ jsx(
+          QuestionPrompt,
+          {
+            questions: questions2,
+            questionIndex: clampedIndex,
+            totalQuestions,
+            initialAnswer: localAnswers[clampedIndex],
+            submitLabel,
+            nextLabel,
+            skipLabel,
+            allowSkip,
+            onSubmit: (nextAnswer) => {
+              setLocalAnswers((prev) => ({
+                ...prev,
+                [clampedIndex]: nextAnswer
+              }));
+              onSubmitAnswer?.(nextAnswer);
+              if (clampedIndex < totalQuestions) {
+                goNext();
+              }
+            }
+          },
+          `${clampedIndex}-${question.title}`
+        )
+      ]
+    }
+  );
+}
+
+// ../../../../../private/tmp/agent-elements-question-tool/demo-default.tsx
+import { jsx as jsx2 } from "react/jsx-runtime";
+var questions = [
+  {
+    kind: "single",
+    title: "Which direction should I take?",
+    options: [
+      { id: "small", label: "Small patch" },
+      { id: "full", label: "Full refactor" }
+    ],
+    allowCustom: true
+  },
+  {
+    kind: "single",
+    title: "How cautious should the rollout be?",
+    options: [
+      { id: "safe", label: "Safe and incremental" },
+      { id: "fast", label: "Fast rollout" }
+    ],
+    allowCustom: true
+  }
+];
+function Demo() {
+  const [questionIndex, setQuestionIndex] = useState2(1);
+  const totalQuestions = questions.length;
+  return /* @__PURE__ */ jsx2("div", { className: "min-h-screen w-full flex items-center justify-center p-6 bg-white dark:bg-neutral-950", children: /* @__PURE__ */ jsx2("div", { className: "w-full max-w-[420px]", children: /* @__PURE__ */ jsx2(
+    QuestionTool,
+    {
+      questions,
+      questionIndex,
+      totalQuestions,
+      onPreviousQuestion: () => setQuestionIndex((prev) => Math.max(1, prev - 1)),
+      onNextQuestion: () => setQuestionIndex((prev) => Math.min(totalQuestions, prev + 1)),
+      submitLabel: "Submit",
+      skipLabel: "Skip",
+      onSubmitAnswer: (answer) => console.log(answer)
+    }
+  ) }) });
+}
+
+// ../../../../../tmp/agent-elements-question-tool/entry-default.tsx
+var root = createRoot(document.getElementById("root"));
+root.render(React.createElement(Demo));
+requestAnimationFrame(() => {
+  document.body.dataset.ready = "1";
+});
+</script><script>(()=>{const r=()=>requestAnimationFrame(()=>requestAnimationFrame(()=>parent.postMessage({type:"21st-preview-ready"},"*")));document.readyState==="complete"?r():addEventListener("load",r,{once:true})})()</script><script data-21st-keys="1">(()=>{
+if(parent===window)return
+const q='[data-state="open"],dialog[open]'
+const open=()=>document.querySelectorAll(q).length
+addEventListener("keydown",(e)=>{
+const before=open()
+setTimeout(()=>{
+if(e.defaultPrevented||open()<before)return
+const t=(e.composedPath&&e.composedPath()[0])||e.target
+if(t&&(t.isContentEditable||/^(INPUT|TEXTAREA|SELECT)$/.test(t.nodeName)))return
+parent.postMessage({type:"21st-preview-key",key:e.key,code:e.code,altKey:e.altKey,ctrlKey:e.ctrlKey,metaKey:e.metaKey,shiftKey:e.shiftKey},"*")
+},0)
+})
+})()</script></body></html>

@@ -1,0 +1,313 @@
+<!doctype html><html><head>
+<script>(function(){try{var p=new URLSearchParams(location.search);var t=(p.get('theme')||'').toLowerCase();var dark;if(t==='dark'||p.get('dark')==='true'){dark=true;}else if(t==='light'){dark=false;}else{dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;}var h=document.documentElement,b=document.body;function apply(el){if(!el)return;el.classList.remove('dark','light');el.classList.add(dark?'dark':'light');}apply(h);if(b){apply(b);}else{document.addEventListener('DOMContentLoaded',function(){apply(document.body);});}document.documentElement.style.colorScheme=dark?'dark':'light';}catch(e){document.documentElement.classList.add('dark');}})();</script><meta charset='utf-8'/><meta name='viewport' content='width=device-width,initial-scale=1'>
+<script type="importmap">{"imports":{"react":"https://esm.sh/react@19.1.0","react/jsx-runtime":"https://esm.sh/react@19.1.0/jsx-runtime","react-dom":"https://esm.sh/react-dom@19.1.0","react-dom/client":"https://esm.sh/react-dom@19.1.0/client","clsx":"https://esm.sh/clsx@2.1.1","tailwind-merge":"https://esm.sh/tailwind-merge@3.3.0"}}</script>
+<script src='https://cdn.tailwindcss.com'></script>
+<script>tailwind.config={darkMode:'class',theme:{extend:{colors:{background:'hsl(var(--background))',foreground:'hsl(var(--foreground))'}}}};</script>
+<style>:root{--background:0 0% 100%;--foreground:0 0% 9%}.dark{--background:0 0% 7%;--foreground:0 0% 98%}html,body,#root{height:100%;margin:0}body{background:hsl(var(--background));color:hsl(var(--foreground));font-family:Inter,ui-sans-serif,system-ui,sans-serif}</style>
+<style>.fixed.top-4.left-4{display:none!important}</style>
+</head><body><div id='root'></div><script type='module'>// ../../../../../tmp/agent-elements-edit-tool/entry-default.tsx
+import React2 from "react";
+import { createRoot } from "react-dom/client";
+
+// ../../../../../tmp/agent-elements-edit-tool/code.tsx
+import * as React from "react";
+import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+import { jsx, jsxs } from "react/jsx-runtime";
+function cn(...inputs) {
+  return twMerge(clsx(inputs));
+}
+var SHIMMER_STYLE_ID = "an-edit-tool-shimmer-styles";
+var SHIMMER_STYLES = `
+@keyframes an-edit-shimmer {
+  from { background-position: 100% center; }
+  to { background-position: 0% center; }
+}
+.an-edit-shimmer {
+  display: inline-flex;
+  align-items: center;
+  height: 1rem;
+  background-size: 250% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, #a3a3a3 0%, #a3a3a3 40%, #525252 50%, #a3a3a3 60%, #a3a3a3 100%);
+  background-repeat: no-repeat;
+  animation: an-edit-shimmer 1.2s linear infinite;
+}
+@keyframes an-edit-dot {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+.an-edit-dot { animation: an-edit-dot 1.4s ease-in-out infinite; }
+.an-edit-dot:nth-child(2) { animation-delay: 0.2s; }
+.an-edit-dot:nth-child(3) { animation-delay: 0.4s; }
+`;
+var shimmerStylesInjected = false;
+function ensureShimmerStyles() {
+  if (typeof document === "undefined") return;
+  if (shimmerStylesInjected) return;
+  if (document.getElementById(SHIMMER_STYLE_ID)) {
+    shimmerStylesInjected = true;
+    return;
+  }
+  const el = document.createElement("style");
+  el.id = SHIMMER_STYLE_ID;
+  el.textContent = SHIMMER_STYLES;
+  document.head.appendChild(el);
+  shimmerStylesInjected = true;
+}
+function lineDiff(oldText, newText) {
+  const a = oldText.split("\n");
+  const b = newText.split("\n");
+  const m = a.length;
+  const n = b.length;
+  const dp = Array.from(
+    { length: m + 1 },
+    () => new Array(n + 1).fill(0)
+  );
+  for (let i2 = m - 1; i2 >= 0; i2--) {
+    for (let j2 = n - 1; j2 >= 0; j2--) {
+      if (a[i2] === b[j2]) dp[i2][j2] = dp[i2 + 1][j2 + 1] + 1;
+      else dp[i2][j2] = Math.max(dp[i2 + 1][j2], dp[i2][j2 + 1]);
+    }
+  }
+  const ops = [];
+  let i = 0;
+  let j = 0;
+  while (i < m && j < n) {
+    if (a[i] === b[j]) {
+      ops.push({ type: "context", text: a[i] });
+      i++;
+      j++;
+    } else if (dp[i + 1][j] >= dp[i][j + 1]) {
+      ops.push({ type: "remove", text: a[i] });
+      i++;
+    } else {
+      ops.push({ type: "add", text: b[j] });
+      j++;
+    }
+  }
+  while (i < m) {
+    ops.push({ type: "remove", text: a[i] });
+    i++;
+  }
+  while (j < n) {
+    ops.push({ type: "add", text: b[j] });
+    j++;
+  }
+  return ops;
+}
+function countDiffStats(ops) {
+  let added = 0;
+  let removed = 0;
+  for (const op of ops) {
+    if (op.type === "add") added++;
+    else if (op.type === "remove") removed++;
+  }
+  return { added, removed };
+}
+function ApprovalFooter({
+  isPending,
+  approveLabel = "Approve",
+  rejectLabel = "Reject",
+  onApprove,
+  onReject
+}) {
+  const [decision, setDecision] = React.useState(null);
+  const handleApprove = () => {
+    setDecision("approved");
+    onApprove?.();
+  };
+  const handleReject = () => {
+    setDecision("rejected");
+    onReject?.();
+  };
+  let status = null;
+  if (decision === "approved") status = isPending ? "Starting" : "Approved";
+  else if (decision === "rejected") status = "Canceled";
+  else if (isPending) status = "Waiting";
+  return /* @__PURE__ */ jsxs("div", { className: "flex items-center justify-between gap-2 px-2.5 py-2 border-t border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-950/40", children: [
+    status && decision !== null ? /* @__PURE__ */ jsxs("span", { className: "text-xs text-neutral-500 dark:text-neutral-400 inline-flex items-center gap-1.5", children: [
+      status,
+      decision === "approved" && isPending && /* @__PURE__ */ jsxs("span", { className: "inline-flex gap-0.5", children: [
+        /* @__PURE__ */ jsx("span", { className: "an-edit-dot", children: "." }),
+        /* @__PURE__ */ jsx("span", { className: "an-edit-dot", children: "." }),
+        /* @__PURE__ */ jsx("span", { className: "an-edit-dot", children: "." })
+      ] })
+    ] }) : /* @__PURE__ */ jsx("span", { className: "text-xs text-neutral-500 dark:text-neutral-400", children: status ?? "" }),
+    decision === null && /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-1.5", children: [
+      /* @__PURE__ */ jsx(
+        "button",
+        {
+          type: "button",
+          onClick: handleReject,
+          className: "px-2 h-7 rounded-[6px] text-xs font-medium border border-neutral-200 dark:border-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800/60",
+          children: rejectLabel
+        }
+      ),
+      /* @__PURE__ */ jsx(
+        "button",
+        {
+          type: "button",
+          onClick: handleApprove,
+          className: "px-2 h-7 rounded-[6px] text-xs font-medium bg-blue-500 dark:bg-blue-400 text-white dark:text-neutral-950 hover:bg-blue-600 dark:hover:bg-blue-300",
+          children: approveLabel
+        }
+      )
+    ] })
+  ] });
+}
+var EditTool = React.memo(function EditTool2({
+  state = "completed",
+  variant = "edit",
+  filePath,
+  oldContent: oldContent2,
+  newContent: newContent2,
+  approval,
+  className
+}) {
+  React.useEffect(() => {
+    ensureShimmerStyles();
+  }, []);
+  const isPending = state === "pending";
+  const isWaiting = state === "waiting";
+  const isWrite = variant === "write";
+  const fileName = filePath?.split("/").pop() ?? void 0;
+  const diffOps = React.useMemo(() => {
+    if (isWaiting) return null;
+    if (isWrite && newContent2) {
+      return newContent2.split("\n").map((text) => ({ type: "add", text }));
+    }
+    if (oldContent2 !== void 0 && newContent2 !== void 0) {
+      return lineDiff(oldContent2, newContent2);
+    }
+    return null;
+  }, [isWaiting, isWrite, oldContent2, newContent2]);
+  const stats = React.useMemo(
+    () => diffOps ? countDiffStats(diffOps) : null,
+    [diffOps]
+  );
+  const headerLabel = isWaiting ? "Generating..." : isPending ? `${isWrite ? "Creating" : "Editing"}${fileName ? ` ${fileName}` : ""}` : `${isWrite ? "Created" : "Edited"}${fileName ? ` ${fileName}` : ""}`;
+  return /* @__PURE__ */ jsxs(
+    "div",
+    {
+      className: cn(
+        "rounded-[10px] border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-black overflow-hidden w-full",
+        className
+      ),
+      children: [
+        /* @__PURE__ */ jsxs(
+          "div",
+          {
+            className: cn(
+              "flex items-center justify-between px-2.5 h-7 bg-neutral-100 dark:bg-neutral-900",
+              diffOps && diffOps.length > 0 || approval ? "border-b border-neutral-200 dark:border-neutral-800" : ""
+            ),
+            children: [
+              /* @__PURE__ */ jsx("div", { className: "flex items-center gap-1.5 min-w-0", children: isPending || isWaiting ? /* @__PURE__ */ jsx("span", { className: "an-edit-shimmer text-xs", children: headerLabel }) : /* @__PURE__ */ jsx("span", { className: "text-xs text-neutral-500 dark:text-neutral-400 truncate", children: headerLabel }) }),
+              stats && !isPending && !isWaiting && (stats.added > 0 || stats.removed > 0) && /* @__PURE__ */ jsxs("span", { className: "text-[11px] font-mono text-neutral-500 dark:text-neutral-400 inline-flex gap-2 shrink-0", children: [
+                stats.added > 0 && /* @__PURE__ */ jsxs("span", { className: "text-green-600 dark:text-green-400", children: [
+                  "+",
+                  stats.added
+                ] }),
+                stats.removed > 0 && /* @__PURE__ */ jsxs("span", { className: "text-red-600 dark:text-red-400", children: [
+                  "-",
+                  stats.removed
+                ] })
+              ] })
+            ]
+          }
+        ),
+        diffOps && diffOps.length > 0 && /* @__PURE__ */ jsx("div", { className: "text-[12px] font-mono leading-[1.5] bg-white dark:bg-black overflow-x-auto", children: diffOps.map((op, i) => /* @__PURE__ */ jsxs(
+          "div",
+          {
+            className: cn(
+              "flex items-start min-w-0",
+              op.type === "add" && "bg-green-50 dark:bg-green-950/30 text-green-900 dark:text-green-200",
+              op.type === "remove" && "bg-red-50 dark:bg-red-950/30 text-red-900 dark:text-red-200",
+              op.type === "context" && "text-neutral-700 dark:text-neutral-300"
+            ),
+            children: [
+              /* @__PURE__ */ jsx(
+                "span",
+                {
+                  className: cn(
+                    "select-none w-4 text-center shrink-0",
+                    op.type === "add" && "text-green-600 dark:text-green-400",
+                    op.type === "remove" && "text-red-600 dark:text-red-400",
+                    op.type === "context" && "text-neutral-400 dark:text-neutral-600"
+                  ),
+                  children: op.type === "add" ? "+" : op.type === "remove" ? "-" : " "
+                }
+              ),
+              /* @__PURE__ */ jsx("span", { className: "whitespace-pre pr-2 flex-1 min-w-0", children: op.text || " " })
+            ]
+          },
+          i
+        )) }),
+        approval && /* @__PURE__ */ jsx(
+          ApprovalFooter,
+          {
+            isPending,
+            approveLabel: approval.approveLabel,
+            rejectLabel: approval.rejectLabel,
+            onApprove: approval.onApprove,
+            onReject: approval.onReject
+          }
+        )
+      ]
+    }
+  );
+});
+
+// ../../../../../private/tmp/agent-elements-edit-tool/demo-default.tsx
+import { jsx as jsx2 } from "react/jsx-runtime";
+var oldContent = `export const metadata = { title: 'Old' };
+
+export default function Page() {
+  return <div>Old content</div>;
+}
+`;
+var newContent = `export const metadata = { title: 'Updated' };
+
+export default function Page() {
+  return (
+    <div>
+      <h1>Release notes</h1>
+      <p>New layout applied.</p>
+    </div>
+  );
+}
+`;
+function Demo() {
+  return /* @__PURE__ */ jsx2("div", { className: "flex items-center justify-center w-full min-h-screen bg-background p-8 overflow-hidden", children: /* @__PURE__ */ jsx2("div", { className: "w-full max-w-md", children: /* @__PURE__ */ jsx2(
+    EditTool,
+    {
+      filePath: "/app/page.tsx",
+      oldContent,
+      newContent
+    }
+  ) }) });
+}
+
+// ../../../../../tmp/agent-elements-edit-tool/entry-default.tsx
+var root = createRoot(document.getElementById("root"));
+root.render(React2.createElement(Demo));
+requestAnimationFrame(() => {
+  document.body.dataset.ready = "1";
+});
+</script><script>(()=>{const r=()=>requestAnimationFrame(()=>requestAnimationFrame(()=>parent.postMessage({type:"21st-preview-ready"},"*")));document.readyState==="complete"?r():addEventListener("load",r,{once:true})})()</script><script data-21st-keys="1">(()=>{
+if(parent===window)return
+const q='[data-state="open"],dialog[open]'
+const open=()=>document.querySelectorAll(q).length
+addEventListener("keydown",(e)=>{
+const before=open()
+setTimeout(()=>{
+if(e.defaultPrevented||open()<before)return
+const t=(e.composedPath&&e.composedPath()[0])||e.target
+if(t&&(t.isContentEditable||/^(INPUT|TEXTAREA|SELECT)$/.test(t.nodeName)))return
+parent.postMessage({type:"21st-preview-key",key:e.key,code:e.code,altKey:e.altKey,ctrlKey:e.ctrlKey,metaKey:e.metaKey,shiftKey:e.shiftKey},"*")
+},0)
+})
+})()</script></body></html>

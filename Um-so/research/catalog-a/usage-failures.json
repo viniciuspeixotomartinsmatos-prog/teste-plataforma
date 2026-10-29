@@ -1,0 +1,70 @@
+[
+  {
+    "id": "reactbits--crosshair",
+    "reason": "No JSX usage view"
+  },
+  {
+    "id": "reactbits--strands",
+    "reason": "Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (7:0)"
+  },
+  {
+    "id": "reactbits--logo-loop",
+    "reason": "No JSX usage view"
+  },
+  {
+    "id": "reactbits--metallic-paint",
+    "reason": "Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (8:0)"
+  },
+  {
+    "id": "reactbits--target-cursor",
+    "reason": "No JSX usage view"
+  },
+  {
+    "id": "reactbits--laser-flow",
+    "reason": "No JSX usage view"
+  },
+  {
+    "id": "reactbits--card-swap",
+    "reason": "Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (14:0)"
+  },
+  {
+    "id": "reactbits--morph-slider",
+    "reason": "Missing semicolon. (9:4)"
+  },
+  {
+    "id": "reactbits--dome-gallery",
+    "reason": "No JSX usage view"
+  },
+  {
+    "id": "reactbits--folder",
+    "reason": "Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (15:0)"
+  },
+  {
+    "id": "reactbits--glass-surface",
+    "reason": "Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (14:0)"
+  },
+  {
+    "id": "reactbits--elastic-mesh",
+    "reason": "Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (15:0)"
+  },
+  {
+    "id": "reactbits--scroll-expand",
+    "reason": "Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (14:0)"
+  },
+  {
+    "id": "reactbits--curved-input",
+    "reason": "Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (14:0)"
+  },
+  {
+    "id": "reactbits--dodge-field",
+    "reason": "Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (5:0)"
+  },
+  {
+    "id": "reactbits--jelly-radio",
+    "reason": "Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (23:0)"
+  },
+  {
+    "id": "reactbits--status-mark",
+    "reason": "Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (22:0)"
+  }
+]
