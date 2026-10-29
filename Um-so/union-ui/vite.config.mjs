@@ -16,7 +16,7 @@ export default defineConfig({
     host: "0.0.0.0",
     allowedHosts: ["terminal.local"],
     fs: { deny: [".env", ".env.*", "*.{crt,pem}", "**/.git/**", "**/var/**", "**/*.sqlite*", "**/research/**"] },
-    watch: { ignored: ["**/public/previews/**", "**/public/code/**", "**/.preview-sources/**", "**/.preview-cache/**", "**/dist/**"] },
+    watch: { ignored: ["**/public/previews/**", "**/public/assets/thumbnails/**", "**/public/code/**", "**/.preview-sources/**", "**/.preview-cache/**", "**/dist/**"] },
     warmup: {
       clientFiles: ["./src/main.jsx"],
     },

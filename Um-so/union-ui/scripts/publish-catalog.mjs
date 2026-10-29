@@ -5,11 +5,14 @@ const root=path.resolve('public');
 const read=async name=>JSON.parse(await fs.readFile(path.join(root,'data',name+'.json'),'utf8'));
 const [catalog,readiness,expanded]=await Promise.all([read('catalog'),read('preview-readiness'),read('preview-expansion')]);
 let patches={};try{patches=await read('catalog-connected');}catch{}
+let media={};try{media=await read('catalog-media');}catch{}
+try{media={...media,...await read('icon-covers')};}catch{}
 const compiled=new Map(readiness.items.filter(x=>x.status==='ready'&&x.hasDemo).map(x=>[x.id,x]));
 const retained=new Map(expanded.filter(x=>x.previewPath).map(x=>[x.id,x]));
 const live=[];
 for(const original of catalog){
- const item={...original,...patches[original.id]};
+ const cover=media[original.id];
+ const item={...original,...patches[original.id],...(cover?.image?{image:cover.image}:{}),...(cover?.video?{video:cover.video}:{})};
  const runtime=compiled.get(item.id),capture=retained.get(item.id);
  const previewPath=runtime?.previewPath||capture?.previewPath||item.previewPath;
  if(!previewPath)continue;

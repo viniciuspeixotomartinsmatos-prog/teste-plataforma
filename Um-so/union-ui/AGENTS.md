@@ -22,3 +22,5 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - On 2026-10-28 local browser access became available again and the local app opened successfully. Use the authorized IAB to verify the new tools and account flows, including desktop/mobile states. Do not use unrelated native windows or Chrome sessions.
 
 - On 2026-10-28 the user cancelled Stripe work explicitly. Keep payment integration disabled, do not provision accounts/prices or request Stripe authorization. Continue the remaining app work with access open. Preserve the agreed prices internally for later.
+
+- Preview covers must show the actual item: recover source images locally; where unavailable, use its own local executable preview, loaded near the viewport. Never substitute a generic category image or another item’s thumbnail.

@@ -57,3 +57,11 @@ O servidor Node em server/start.mjs serve o build, a autenticação e as coleç�
 Em desenvolvimento, os e-mails de recuperação são gravados somente na caixa privada var/mail; não são enviados. Em produção, configure SMTP_URL, MAIL_FROM e APP_ORIGIN HTTPS. A inicialização de produção falha se o e-mail não estiver configurado. Faça backup consistente do banco SQLite e mantenha uma única instância gravadora com volume persistente.
 
 A cobrança permanece desligada (BILLING_ENABLED=false), e o acesso a ferramentas e downloads está aberto. Os preços acordados ficam preservados internamente, sem checkout ativo. O adaptador estático de Sites continua intacto para demonstração visual; ele não executa o backend Node nem substitui a hospedagem das contas. Nenhuma publicação pública foi realizada nesta etapa.
+
+## Capas e vídeos do catálogo
+
+Em 29/10/2026 foram recuperadas 5.539 capas originais e 245 vídeos locais, além de 1.546 capas SVG renderizadas dos ícones originais. O catálogo publicado tem 7.800 capas locais. Outros 2.791 cards usam sua própria demonstração executável como capa, sem ilustração genérica. Os frames são montados somente perto da área visível, e vídeos ficam sem som e param ao sair da tela.
+
+Os manifests catalog-media.json e icon-covers.json são aplicados por catalog:publish; media:recover reproduz a aquisição. A recuperação por versão do bundle é uma inferência de endereço e só é aceita quando a resposta é uma imagem que o decodificador consegue abrir. Os arquivos originais indisponíveis usam o preview local. A contagem de cards com visual não significa que todas as interações de todos os componentes foram validadas.
+
+As novas capas foram codificadas em WebP com largura máxima de 800 px e proporção preservada: 79 MiB, contra 1.702 MiB dos arquivos recuperados. Os originais ficam privados em var/media/original-covers e não são enviados ao Git; os endereços de origem permanecem no manifest. A comparação usa o mesmo visual real do catálogo.

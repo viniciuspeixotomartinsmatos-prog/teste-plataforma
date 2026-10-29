@@ -9,13 +9,14 @@
     "preview": "vite preview",
     "test:sites": "node --test tests/sites-worker.test.mjs",
     "test:interactions": "node scripts/audit-interactions.mjs",
-    "test": "node --test tests/catalog.test.mjs tests/runtime.test.mjs tests/export.test.mjs tests/app.test.mjs tests/vue-runtime.test.mjs tests/application.test.mjs tests/workspace-merge.test.mjs tests/http-server.test.mjs tests/tools.test.mjs tests/account-sync.test.mjs",
+    "test": "node --test tests/catalog.test.mjs tests/runtime.test.mjs tests/export.test.mjs tests/app.test.mjs tests/vue-runtime.test.mjs tests/application.test.mjs tests/workspace-merge.test.mjs tests/http-server.test.mjs tests/tools.test.mjs tests/account-sync.test.mjs tests/catalog-media.test.mjs",
     "catalog:publish": "node scripts/publish-catalog.mjs",
     "previews:build": "node scripts/build-preview-inventory.mjs --retry-blocked --concurrency=2",
     "start": "node server/start.mjs",
     "build:tools": "node scripts/build-tools.mjs",
     "billing:setup": "node scripts/setup-billing.mjs",
-    "test:tools": "node --test tests/tools.test.mjs && node scripts/audit-tool-ui.mjs && node scripts/audit-tool-ui.mjs background-studio"
+    "test:tools": "node --test tests/tools.test.mjs && node scripts/audit-tool-ui.mjs && node scripts/audit-tool-ui.mjs background-studio",
+    "media:recover": "node scripts/recover-catalog-media.mjs && node scripts/render-icon-covers.mjs && node scripts/recover-preview-videos.mjs && node scripts/optimize-catalog-covers.mjs --apply && node scripts/publish-catalog.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",

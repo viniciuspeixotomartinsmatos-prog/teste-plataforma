@@ -60,3 +60,16 @@ Para publicar contas em produção, ainda é necessário configurar o domínio H
 - Build de produção aprovado em 1 min 55 s.
 - Quatro testes do adaptador estático aprovados.
 - Teste do build servido pelo Node aprovado: rotas, três frames de ferramentas, recursos locais, conta, acesso sem cobrança e assets da interface.
+
+## Capas do catálogo — 29/10/2026
+
+- Auditoria inicial: 9.876 cards sem imagem ligada ao catálogo.
+- Recuperadas 5.539 imagens originais, decodificadas antes da inclusão, e 245 vídeos MP4 validados.
+- Geradas 1.546 capas SVG a partir do desenho montado de cada ícone. A auditoria rasterizou todos os SVGs; seis ícones de sinal zero têm somente pequenos pontos, conforme os originais. Nenhum SVG ficou sem geometria.
+- Estado final: 7.800 capas locais e 2.791 capas com a própria demonstração. Todos os 10.591 cards publicados têm uma fonte visual.
+- Cards sem imagem e imagens quebradas usam o próprio iframe com sandbox allow-scripts; o teste verifica troca após erro e desmontagem ao sair da região visível. Vídeos são mudos, carregam sob demanda e param quando o card sai da tela.
+- Verificação visual real no navegador local, desktop padrão e 390×844: busca Magic Card mostrou os previews nos cards antes vazios, sem overflow horizontal na amostra mobile. Os avisos React encontrados no histórico do console foram produzidos pelo hot reload após alterar a lista de dependências de um efeito durante desenvolvimento; revisão limpa é feita após reload.
+- Restauradas as fontes e a configuração TypeScript necessárias aos exemplos Vue no repositório compartilhado. O .gitignore anterior excluía o cache inteiro.
+- 33 testes da suíte principal e quatro do adaptador passaram. Build de produção aprovado. Isso não representa inspeção visual de cada componente ou de todos os vídeos.
+
+Após a otimização (WebP, largura máxima 800 px, qualidade 82), os 33 testes passaram novamente. As novas capas ocupam 79 MiB; os 245 vídeos ocupam 264 MiB. Depois de recarregar a página de teste, o console não registrou novos erros: sete cards, imagem decodificada e cinco previews montados na região visível, sem overflow horizontal. A tela de comparação também usa a mídia real.

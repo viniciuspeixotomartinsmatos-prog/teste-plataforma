@@ -1,7 +1,7 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs/promises';import path from 'node:path';import {JSDOM} from 'jsdom';import {build} from 'esbuild';
 const dom=new JSDOM('<!doctype html><html><body><div id="root"></div></body></html>',{url:'http://localhost:4173/'});
 for(const name of ['window','document','history','localStorage','HTMLElement','Node','MutationObserver','Event','MouseEvent','KeyboardEvent'])globalThis[name]=dom.window[name];
-globalThis.IS_REACT_ACT_ENVIRONMENT=true;window.scrollTo=()=>{};
+globalThis.IS_REACT_ACT_ENVIRONMENT=true;window.scrollTo=()=>{};dom.window.HTMLMediaElement.prototype.pause=()=>{};
 let clipboard='';Object.defineProperty(globalThis,'navigator',{value:dom.window.navigator,configurable:true});Object.defineProperty(navigator,'clipboard',{value:{writeText:async text=>{clipboard=text;}}});
 globalThis.fetch=async url=>{const dest=path.join('public',String(url).split('?')[0]);try{const text=await fs.readFile(dest,'utf8');return {ok:true,json:async()=>JSON.parse(text),text:async()=>text};}catch{return{ok:false,status:404};}};
 await build({entryPoints:['src/App.jsx'],outfile:'tests/.app-test-bundle.mjs',platform:'node',format:'esm',bundle:true,packages:'external',logLevel:'silent',loader:{'.css':'empty'}});
