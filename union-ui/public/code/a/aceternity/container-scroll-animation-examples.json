@@ -1,0 +1,11 @@
+{
+  "name": "container-scroll-animation-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/container-scroll-animation-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport React from \"react\";\nimport { ContainerScroll } from \"../ui/container-scroll-animation\";\n\nexport function HeroScrollDemo() {\n  return (\n    <div className=\"flex flex-col overflow-hidden\">\n      <ContainerScroll\n        titleComponent={\n          <>\n            <h1 className=\"text-4xl font-semibold text-black dark:text-white\">\n              Unleash the power of <br />\n              <span className=\"text-4xl md:text-[6rem] font-bold mt-1 leading-none\">\n                Scroll Animations\n              </span>\n            </h1>\n          </>\n        }\n      >\n        <img\n          src={`/linear.webp`}\n          alt=\"hero\"\n          height={720}\n          width={1400}\n          className=\"mx-auto rounded-2xl object-cover h-full object-left-top\"\n          draggable={false}\n        />\n      </ContainerScroll>\n    </div>\n  );\n}\n"
+    }
+  ]
+}

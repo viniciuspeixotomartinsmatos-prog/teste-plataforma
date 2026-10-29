@@ -1,0 +1,16 @@
+{
+  "name": "code-block-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/code-block-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport { CodeBlock } from \"@/components/ui/code-block\";\n\nexport function CodeBlockDemo() {\n  const code = `const DummyComponent = () => {\n  const [count, setCount] = React.useState(0);\n\n  const handleClick = () => {\n    setCount(prev => prev + 1);\n  };\n\n  return (\n    <div className=\"p-4 border rounded-lg\">\n      <h2 className=\"text-xl font-bold mb-4\">Fights Counter</h2>\n      <p className=\"mb-2\">Fight Club Fights Count: {count}</p>\n      <button \n        onClick={handleClick}\n        className=\"px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600\"\n      >\n        Increment\n      </button>\n    </div>\n  );\n};\n`;\n\n  return (\n    <div className=\"max-w-3xl mx-auto w-full\">\n      <CodeBlock\n        language=\"jsx\"\n        filename=\"DummyComponent.jsx\"\n        highlightLines={[9, 13, 14, 18]}\n        code={code}\n      />\n    </div>\n  );\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/code-block-demo-2.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport { CodeBlock } from \"@/components/ui/code-block\";\n\nexport function CodeBlockDemoSecond() {\n  const code = `const DummyComponent = () => {\n  const [count, setCount] = React.useState(0);\n\n  const handleClick = () => {\n    setCount(prev => prev + 1);\n  };\n\n  return (\n    <div className=\"p-4 border rounded-lg\">\n      <h2 className=\"text-xl font-bold mb-4\">Fights Counter</h2>\n      <p className=\"mb-2\">Fight Club Fights Count: {count}</p>\n      <button \n        onClick={handleClick}\n        className=\"px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600\"\n      >\n        Increment\n      </button>\n    </div>\n  );\n};\n`;\n  const HTMLLanguage = `<div className=\"p-4 border rounded-lg\">\n  <h2 className=\"text-xl font-bold mb-4\">Fights Counter</h2>\n  <p className=\"mb-2\">Fight Club Fights Count: {count}</p>\n  <button \n    onClick={handleClick}\n    className=\"px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600\"\n  >\n    Increment\n  </button>\n</div>\n`;\n\n  const CSSLanguage = `.button {\n  background-color: blue;\n  color: white;\n  padding: 10px 20px;\n  border-radius: 5px;\n  cursor: pointer;\n}\n`;\n\n  return (\n    <div className=\"max-w-3xl mx-auto w-full\">\n      <CodeBlock\n        language=\"jsx\"\n        filename=\"DummyComponent.jsx\"\n        tabs={[\n          { name: \"DummyComponent.html\", code: HTMLLanguage, language: \"html\" },\n          {\n            name: \"DummyComponent.css\",\n            code: CSSLanguage,\n            language: \"css\",\n            highlightLines: [1, 2, 3],\n          },\n        ]}\n      />\n    </div>\n  );\n}\n"
+    }
+  ]
+}

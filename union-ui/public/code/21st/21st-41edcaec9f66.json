@@ -1,0 +1,1 @@
+{"files":[{"path":"Usage.tsx","content":"import { BackgroundPaths } from \"@/components/ui/background-paths\"\n\n\nexport function DemoBackgroundPaths() {\n    return <BackgroundPaths title=\"Background Paths\" />\n}"}],"usageOnly":true,"description":"Landing Background paths with Gradient Title","examples":[],"variants":[],"additionalCodePaths":[],"framework":"react"}

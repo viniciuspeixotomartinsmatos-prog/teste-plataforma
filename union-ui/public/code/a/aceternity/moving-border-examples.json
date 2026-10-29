@@ -1,0 +1,11 @@
+{
+  "name": "moving-border-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/moving-border-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport React from \"react\";\nimport { Button } from \"../ui/moving-border\";\n\nexport function MovingBorderDemo() {\n  return (\n    <div>\n      <Button\n        borderRadius=\"1.75rem\"\n        className=\"bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800\"\n      >\n        Borders are cool\n      </Button>\n    </div>\n  );\n}\n"
+    }
+  ]
+}

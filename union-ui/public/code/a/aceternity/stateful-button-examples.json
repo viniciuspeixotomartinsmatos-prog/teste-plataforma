@@ -1,0 +1,11 @@
+{
+  "name": "stateful-button-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/stateful-button-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\n\nimport React from \"react\";\nimport { Button } from \"@/components/ui/stateful-button\";\n\nexport function StatefulButtonDemo() {\n  // dummy API call\n  const handleClick = () => {\n    return new Promise((resolve) => {\n      setTimeout(resolve, 4000);\n    });\n  };\n  return (\n    <div className=\"flex h-40 w-full items-center justify-center\">\n      <Button onClick={handleClick}>Send message</Button>\n    </div>\n  );\n}\n"
+    }
+  ]
+}

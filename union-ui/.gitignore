@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.log
+.env*
+tests/.app-test-bundle.mjs
+.preview-sources/
+.preview-cache/
+var/
+
+!.env.example

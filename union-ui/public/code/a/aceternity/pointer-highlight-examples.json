@@ -1,0 +1,21 @@
+{
+  "name": "pointer-highlight-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/pointer-highlight-demo.tsx",
+      "type": "registry:example",
+      "content": "import { PointerHighlight } from \"@/components/ui/pointer-highlight\";\n\nexport function PointerHighlightDemo() {\n  return (\n    <div className=\"mx-auto max-w-lg py-20 text-2xl font-bold tracking-tight md:text-4xl\">\n      The best way to grow is to\n      <PointerHighlight>\n        <span>collaborate</span>\n      </PointerHighlight>\n    </div>\n  );\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/pointer-highlight-demo-3.tsx",
+      "type": "registry:example",
+      "content": "import { PointerHighlight } from \"@/components/ui/pointer-highlight\";\n\nexport function PointerHighlightDemo() {\n  return (\n    <div className=\"mx-auto grid max-w-4xl grid-cols-1 gap-4 py-20 sm:grid-cols-3\">\n      <div className=\"rounded-md p-6\">\n        <div className=\"h-40 w-full rounded-lg bg-linear-to-r from-blue-200 to-sky-200\" />\n        <div className=\"mx-auto mt-4 max-w-lg text-base font-bold tracking-tight md:text-base\">\n          <PointerHighlight\n            rectangleClassName=\"bg-neutral-200 dark:bg-neutral-700 border-neutral-300 dark:border-neutral-600 leading-loose\"\n            pointerClassName=\"text-yellow-500 h-3 w-3\"\n            containerClassName=\"inline-block mr-1\"\n          >\n            <span className=\"relative z-10\">collab tool</span>\n          </PointerHighlight>\n          of the century with max benefits and minimal effort.\n        </div>\n        <p className=\"mt-4 text-sm text-neutral-500\">\n          Our state of the art collab tool of the century with max benefits.\n        </p>\n      </div>\n      <div className=\"rounded-md p-6\">\n        <div className=\"h-40 w-full rounded-lg bg-linear-to-r from-blue-200 to-purple-200\" />\n        <div className=\"mx-auto mt-4 max-w-lg text-base font-bold tracking-tight md:text-base\">\n          Discover our\n          <PointerHighlight\n            rectangleClassName=\"bg-blue-100 dark:bg-blue-900 border-blue-300 dark:border-blue-700 leading-loose\"\n            pointerClassName=\"text-blue-500 h-3 w-3\"\n            containerClassName=\"inline-block mx-1\"\n          >\n            <span className=\"relative z-10\">innovative </span>\n          </PointerHighlight>\n          solutions for your business needs.\n        </div>\n        <p className=\"mt-4 text-sm text-neutral-500\">\n          Transforming ideas into reality with cutting-edge technology and\n          expert guidance.\n        </p>\n      </div>\n\n      <div className=\"rounded-md p-6\">\n        <div className=\"h-40 w-full rounded-lg bg-linear-45 from-green-200 to-yellow-200\" />\n        <div className=\"mx-auto mt-4 max-w-lg text-base font-bold tracking-tight md:text-base\">\n          Experience the future with our\n          <PointerHighlight\n            rectangleClassName=\"bg-green-100 dark:bg-green-900 border-green-300 dark:border-green-700 leading-loose\"\n            pointerClassName=\"text-green-500 h-3 w-3\"\n            containerClassName=\"inline-block ml-1\"\n          >\n            <span className=\"relative z-10\">sustainable technology</span>\n          </PointerHighlight>\n          .\n        </div>\n        <p className=\"mt-4 text-sm text-neutral-500\">\n          Eco-friendly solutions designed for a better tomorrow and reduced\n          environmental impact.\n        </p>\n      </div>\n    </div>\n  );\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/pointer-highlight-demo-2.tsx",
+      "type": "registry:example",
+      "content": "import { PointerHighlight } from \"@/components/ui/pointer-highlight\";\n\nexport function PointerHighlightDemo() {\n  return (\n    <div className=\"mx-auto max-w-lg py-20 text-2xl font-bold tracking-tight md:text-4xl\">\n      There has to be some\n      <PointerHighlight\n        rectangleClassName=\"bg-neutral-200 dark:bg-neutral-700 border-neutral-300 dark:border-neutral-600\"\n        pointerClassName=\"text-yellow-500\"\n      >\n        <span className=\"relative z-10\">background to animate too</span>\n      </PointerHighlight>\n    </div>\n  );\n}\n"
+    }
+  ]
+}

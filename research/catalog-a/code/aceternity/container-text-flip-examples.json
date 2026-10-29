@@ -1,0 +1,16 @@
+{
+  "name": "container-text-flip-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/container-text-flip-demo.tsx",
+      "type": "registry:example",
+      "content": "import { ContainerTextFlip } from \"@/components/ui/container-text-flip\";\n\nexport function ContainerTextFlipDemo() {\n  return (\n    <ContainerTextFlip\n      words={[\"better\", \"modern\", \"Tyler Durden\", \"awesome\"]}\n    />\n  );\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/container-text-flip-demo-2.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport { ContainerTextFlip } from \"@/components/ui/container-text-flip\";\nimport { motion } from \"motion/react\";\nimport { cn } from \"@/utils/cn\";\n\nexport function ContainerTextFlipDemo() {\n  const words = [\"better\", \"modern\", \"beautiful\", \"awesome\"];\n  return (\n    <motion.h1\n      initial={{\n        opacity: 0,\n      }}\n      whileInView={{\n        opacity: 1,\n      }}\n      className={cn(\n        \"relative mb-6 max-w-2xl text-left text-4xl leading-normal font-bold tracking-tight text-zinc-700 md:text-7xl dark:text-zinc-100\",\n      )}\n      layout\n    >\n      <div className=\"inline-block\">\n        Make your websites look 10x <ContainerTextFlip words={words} />\n        {/* <Blips /> */}\n      </div>\n    </motion.h1>\n  );\n}\n"
+    }
+  ]
+}

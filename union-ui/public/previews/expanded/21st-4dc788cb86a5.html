@@ -1,0 +1,192 @@
+<!doctype html><html><head>
+<script>(function(){try{var p=new URLSearchParams(location.search);var t=(p.get('theme')||'').toLowerCase();var dark;if(t==='dark'||p.get('dark')==='true'){dark=true;}else if(t==='light'){dark=false;}else{dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;}var h=document.documentElement,b=document.body;function apply(el){if(!el)return;el.classList.remove('dark','light');el.classList.add(dark?'dark':'light');}apply(h);if(b){apply(b);}else{document.addEventListener('DOMContentLoaded',function(){apply(document.body);});}document.documentElement.style.colorScheme=dark?'dark':'light';}catch(e){document.documentElement.classList.add('dark');}})();</script><meta charset='utf-8'/><meta name='viewport' content='width=device-width,initial-scale=1'>
+<script type="importmap">{"imports":{"react":"https://esm.sh/react@19.1.0","react/jsx-runtime":"https://esm.sh/react@19.1.0/jsx-runtime","react-dom":"https://esm.sh/react-dom@19.1.0","react-dom/client":"https://esm.sh/react-dom@19.1.0/client","clsx":"https://esm.sh/clsx@2.1.1","tailwind-merge":"https://esm.sh/tailwind-merge@3.3.0","@tabler/icons-react":"https://esm.sh/@tabler/icons-react@3.34.0?deps=react@19.1.0"}}</script>
+<script src='https://cdn.tailwindcss.com'></script>
+<script>tailwind.config={darkMode:'class',theme:{extend:{colors:{background:'hsl(var(--background))',foreground:'hsl(var(--foreground))'}}}};</script>
+<style>:root{--background:0 0% 100%;--foreground:0 0% 9%}.dark{--background:0 0% 7%;--foreground:0 0% 98%}html,body,#root{height:100%;margin:0}body{background:hsl(var(--background));color:hsl(var(--foreground));font-family:Inter,ui-sans-serif,system-ui,sans-serif}</style>
+<style>.fixed.top-4.left-4{display:none!important}</style>
+</head><body><div id='root'></div><script type='module'>// ../../../../../tmp/agent-elements-file-attachment/entry-default.tsx
+import React from "react";
+import { createRoot } from "react-dom/client";
+
+// ../../../../../tmp/agent-elements-file-attachment/code.tsx
+import { useState } from "react";
+import {
+  IconX as X,
+  IconFileText as FileText,
+  IconFileCode as FileCode,
+  IconFileTypeJs as FileJson,
+  IconPhoto as ImageIcon
+} from "@tabler/icons-react";
+import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+import { Fragment, jsx, jsxs } from "react/jsx-runtime";
+function cn(...inputs) {
+  return twMerge(clsx(inputs));
+}
+function formatFileSize(bytes) {
+  if (bytes < 1024) return `${bytes} B`;
+  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+}
+function getFileIconName(filename, isImage) {
+  if (isImage) return "image";
+  const ext = filename.split(".").pop()?.toLowerCase();
+  if ([
+    "js",
+    "ts",
+    "jsx",
+    "tsx",
+    "py",
+    "rb",
+    "go",
+    "rs",
+    "java",
+    "kt",
+    "swift",
+    "c",
+    "cpp",
+    "h",
+    "hpp",
+    "cs",
+    "php"
+  ].includes(ext || "")) {
+    return "code";
+  }
+  if (["json", "yaml", "yml", "xml"].includes(ext || "")) return "data";
+  return "text";
+}
+function renderFileIcon(iconName) {
+  const cls = "size-4 text-neutral-500 dark:text-neutral-400";
+  switch (iconName) {
+    case "image":
+      return /* @__PURE__ */ jsx(ImageIcon, { className: cls });
+    case "code":
+      return /* @__PURE__ */ jsx(FileCode, { className: cls });
+    case "data":
+      return /* @__PURE__ */ jsx(FileJson, { className: cls });
+    default:
+      return /* @__PURE__ */ jsx(FileText, { className: cls });
+  }
+}
+function FileAttachment({
+  id,
+  filename,
+  size,
+  isImage,
+  url,
+  onRemove,
+  className,
+  display = "chip"
+}) {
+  const [isHovered, setIsHovered] = useState(false);
+  const iconName = getFileIconName(filename, isImage);
+  const isImageOnly = display === "image-only" && isImage && !!url;
+  return /* @__PURE__ */ jsxs(
+    "div",
+    {
+      className: cn(
+        "relative bg-neutral-100/80 dark:bg-neutral-800/60 rounded-[6px]",
+        isImageOnly ? "size-10 flex items-center justify-center" : "flex items-center gap-2 pl-1 pr-2 py-1 min-w-[120px] max-w-[200px]",
+        className
+      ),
+      onMouseEnter: () => setIsHovered(true),
+      onMouseLeave: () => setIsHovered(false),
+      children: [
+        isImageOnly ? /* @__PURE__ */ jsx("div", { className: "size-8 overflow-hidden shrink-0 rounded-[4px]", children: /* @__PURE__ */ jsx(
+          "img",
+          {
+            src: url,
+            alt: filename,
+            className: "w-full h-full object-cover"
+          }
+        ) }) : /* @__PURE__ */ jsxs(Fragment, { children: [
+          isImage && url ? /* @__PURE__ */ jsx("div", { className: "w-8 self-stretch overflow-hidden shrink-0 rounded-[4px]", children: /* @__PURE__ */ jsx(
+            "img",
+            {
+              src: url,
+              alt: filename,
+              className: "w-full h-full object-cover aspect-square"
+            }
+          ) }) : /* @__PURE__ */ jsx("div", { className: "flex items-center justify-center w-8 self-stretch bg-neutral-200 dark:bg-neutral-700 shrink-0 rounded-[4px]", children: renderFileIcon(iconName) }),
+          /* @__PURE__ */ jsxs("div", { className: "flex flex-col min-w-0", children: [
+            /* @__PURE__ */ jsx(
+              "span",
+              {
+                className: "text-sm font-medium text-neutral-900 dark:text-neutral-100 truncate",
+                title: filename,
+                children: filename
+              }
+            ),
+            size !== void 0 && /* @__PURE__ */ jsx("span", { className: "text-[10px] text-neutral-500 dark:text-neutral-400", children: formatFileSize(size) })
+          ] })
+        ] }),
+        onRemove && /* @__PURE__ */ jsx(
+          "button",
+          {
+            onClick: (e) => {
+              e.stopPropagation();
+              onRemove();
+            },
+            className: cn(
+              "absolute -top-1.5 -right-1.5 size-4 rounded-full bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700",
+              "flex items-center justify-center transition-[opacity,transform] duration-150 ease-out active:scale-[0.97] z-10",
+              "text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100",
+              isHovered ? "opacity-100" : "opacity-0"
+            ),
+            type: "button",
+            children: /* @__PURE__ */ jsx(X, { className: "size-3" })
+          }
+        )
+      ]
+    }
+  );
+}
+
+// ../../../../../private/tmp/agent-elements-file-attachment/demo-default.tsx
+import { jsx as jsx2, jsxs as jsxs2 } from "react/jsx-runtime";
+var heroSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f59e0b"/><stop offset="1" stop-color="#ec4899"/></linearGradient></defs><rect width="64" height="64" fill="url(#g)"/><circle cx="44" cy="20" r="8" fill="#fff" fill-opacity="0.85"/><path d="M0 50 L20 36 L36 46 L52 30 L64 42 L64 64 L0 64 Z" fill="#000" fill-opacity="0.25"/></svg>`;
+var heroImg = `data:image/svg+xml;utf8,${encodeURIComponent(heroSvg)}`;
+function Demo() {
+  return /* @__PURE__ */ jsx2("div", { className: "flex h-full w-full items-center justify-center p-8", children: /* @__PURE__ */ jsxs2("div", { className: "flex items-center gap-3", children: [
+    /* @__PURE__ */ jsx2(
+      FileAttachment,
+      {
+        id: "report",
+        filename: "quarterly-report.pdf",
+        size: 245e3
+      }
+    ),
+    /* @__PURE__ */ jsx2(
+      FileAttachment,
+      {
+        id: "hero",
+        filename: "hero.png",
+        size: 86e3,
+        isImage: true,
+        url: heroImg
+      }
+    )
+  ] }) });
+}
+
+// ../../../../../tmp/agent-elements-file-attachment/entry-default.tsx
+var root = createRoot(document.getElementById("root"));
+root.render(React.createElement(Demo));
+requestAnimationFrame(() => {
+  document.body.dataset.ready = "1";
+});
+</script><script>(()=>{const r=()=>requestAnimationFrame(()=>requestAnimationFrame(()=>parent.postMessage({type:"21st-preview-ready"},"*")));document.readyState==="complete"?r():addEventListener("load",r,{once:true})})()</script><script data-21st-keys="1">(()=>{
+if(parent===window)return
+const q='[data-state="open"],dialog[open]'
+const open=()=>document.querySelectorAll(q).length
+addEventListener("keydown",(e)=>{
+const before=open()
+setTimeout(()=>{
+if(e.defaultPrevented||open()<before)return
+const t=(e.composedPath&&e.composedPath()[0])||e.target
+if(t&&(t.isContentEditable||/^(INPUT|TEXTAREA|SELECT)$/.test(t.nodeName)))return
+parent.postMessage({type:"21st-preview-key",key:e.key,code:e.code,altKey:e.altKey,ctrlKey:e.ctrlKey,metaKey:e.metaKey,shiftKey:e.shiftKey},"*")
+},0)
+})
+})()</script></body></html>

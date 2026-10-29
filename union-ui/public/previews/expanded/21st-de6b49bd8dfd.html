@@ -1,0 +1,134 @@
+<!doctype html><html><head>
+<script>(function(){try{var p=new URLSearchParams(location.search);var t=(p.get('theme')||'').toLowerCase();var dark;if(t==='dark'||p.get('dark')==='true'){dark=true;}else if(t==='light'){dark=false;}else{dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;}var h=document.documentElement,b=document.body;function apply(el){if(!el)return;el.classList.remove('dark','light');el.classList.add(dark?'dark':'light');}apply(h);if(b){apply(b);}else{document.addEventListener('DOMContentLoaded',function(){apply(document.body);});}document.documentElement.style.colorScheme=dark?'dark':'light';}catch(e){document.documentElement.classList.add('dark');}})();</script><meta charset='utf-8'/><meta name='viewport' content='width=device-width,initial-scale=1'>
+<script type="importmap">{"imports":{"react":"https://esm.sh/react@19.1.0","react/jsx-runtime":"https://esm.sh/react@19.1.0/jsx-runtime","react-dom":"https://esm.sh/react-dom@19.1.0","react-dom/client":"https://esm.sh/react-dom@19.1.0/client","clsx":"https://esm.sh/clsx@2.1.1","tailwind-merge":"https://esm.sh/tailwind-merge@3.3.0","@tabler/icons-react":"https://esm.sh/@tabler/icons-react@3.34.0?deps=react@19.1.0"}}</script>
+<script src='https://cdn.tailwindcss.com'></script>
+<script>tailwind.config={darkMode:'class',theme:{extend:{colors:{background:'hsl(var(--background))',foreground:'hsl(var(--foreground))'}}}};</script>
+<style>:root{--background:0 0% 100%;--foreground:0 0% 9%}.dark{--background:0 0% 7%;--foreground:0 0% 98%}html,body,#root{height:100%;margin:0}body{background:hsl(var(--background));color:hsl(var(--foreground));font-family:Inter,ui-sans-serif,system-ui,sans-serif}</style>
+<style>.fixed.top-4.left-4{display:none!important}</style>
+</head><body><div id='root'></div><script type='module'>// ../../../../../tmp/agent-elements-thinking-tool/entry-default.tsx
+import React2 from "react";
+import { createRoot } from "react-dom/client";
+
+// ../../../../../tmp/agent-elements-thinking-tool/code.tsx
+import * as React from "react";
+import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+import { IconChevronRight } from "@tabler/icons-react";
+import { jsx, jsxs } from "react/jsx-runtime";
+function cn(...inputs) {
+  return twMerge(clsx(inputs));
+}
+var SHIMMER_STYLE_ID = "an-thinking-tool-shimmer-styles";
+var SHIMMER_STYLES = `
+@keyframes an-thinking-shimmer {
+  from { background-position: 100% center; }
+  to { background-position: 0% center; }
+}
+.an-thinking-shimmer {
+  display: inline-flex;
+  align-items: center;
+  height: 1rem;
+  background-size: 250% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, #a3a3a3 0%, #a3a3a3 40%, #525252 50%, #a3a3a3 60%, #a3a3a3 100%);
+  background-repeat: no-repeat;
+  animation: an-thinking-shimmer 1.2s linear infinite;
+}
+`;
+var shimmerStylesInjected = false;
+function ensureShimmerStyles() {
+  if (typeof document === "undefined") return;
+  if (shimmerStylesInjected) return;
+  if (document.getElementById(SHIMMER_STYLE_ID)) {
+    shimmerStylesInjected = true;
+    return;
+  }
+  const el = document.createElement("style");
+  el.id = SHIMMER_STYLE_ID;
+  el.textContent = SHIMMER_STYLES;
+  document.head.appendChild(el);
+  shimmerStylesInjected = true;
+}
+var ThinkingTool = React.memo(function ThinkingTool2({
+  state = "thinking",
+  content,
+  defaultOpen = false,
+  expanded,
+  onToggleExpand,
+  className
+}) {
+  React.useEffect(() => {
+    ensureShimmerStyles();
+  }, []);
+  const isControlled = expanded !== void 0;
+  const [internalOpen, setInternalOpen] = React.useState(defaultOpen);
+  const isOpen = isControlled ? !!expanded : internalOpen;
+  const expandable = !!content;
+  const isAnimating = state === "thinking";
+  const canToggle = expandable;
+  const handleToggle = () => {
+    if (!canToggle) return;
+    if (isControlled) {
+      onToggleExpand?.();
+    } else {
+      setInternalOpen((v) => !v);
+    }
+  };
+  return /* @__PURE__ */ jsxs("div", { className: cn("flex flex-col gap-2 w-full", className), children: [
+    /* @__PURE__ */ jsxs(
+      "button",
+      {
+        type: "button",
+        onClick: handleToggle,
+        disabled: !canToggle,
+        "aria-expanded": canToggle ? isOpen : void 0,
+        className: cn(
+          "group flex items-center max-w-full select-none gap-1 rounded-[6px] bg-transparent border-0 p-0 m-0 text-left",
+          canToggle ? "cursor-pointer" : "cursor-default"
+        ),
+        children: [
+          /* @__PURE__ */ jsx("div", { className: "flex items-center gap-2 min-w-0 text-sm text-neutral-500 dark:text-neutral-400", children: /* @__PURE__ */ jsx("span", { className: "font-[450] whitespace-nowrap shrink-0", children: isAnimating ? /* @__PURE__ */ jsx("span", { className: "an-thinking-shimmer", children: "Thinking" }) : "Thought" }) }),
+          expandable && /* @__PURE__ */ jsx(
+            IconChevronRight,
+            {
+              className: cn(
+                "shrink-0 text-neutral-500 dark:text-neutral-400 transition-transform duration-150 ease-out size-3",
+                isOpen ? "rotate-90" : "rotate-0"
+              )
+            }
+          )
+        ]
+      }
+    ),
+    expandable && isOpen && /* @__PURE__ */ jsx("div", { className: "overflow-hidden", children: /* @__PURE__ */ jsx("div", { className: "max-h-[175px] overflow-y-auto", children: /* @__PURE__ */ jsx("p", { className: "text-sm text-neutral-500 dark:text-neutral-400 whitespace-pre-wrap", children: content }) }) })
+  ] });
+});
+
+// ../../../../../private/tmp/agent-elements-thinking-tool/demo-default.tsx
+import { jsx as jsx2 } from "react/jsx-runtime";
+function Demo() {
+  return /* @__PURE__ */ jsx2("div", { className: "flex items-center justify-center w-full min-h-screen bg-background p-8 overflow-hidden", children: /* @__PURE__ */ jsx2("div", { className: "w-fit", children: /* @__PURE__ */ jsx2(ThinkingTool, { state: "thinking", content: "Draft", defaultOpen: true }) }) });
+}
+
+// ../../../../../tmp/agent-elements-thinking-tool/entry-default.tsx
+var root = createRoot(document.getElementById("root"));
+root.render(React2.createElement(Demo));
+requestAnimationFrame(() => {
+  document.body.dataset.ready = "1";
+});
+</script><script>(()=>{const r=()=>requestAnimationFrame(()=>requestAnimationFrame(()=>parent.postMessage({type:"21st-preview-ready"},"*")));document.readyState==="complete"?r():addEventListener("load",r,{once:true})})()</script><script data-21st-keys="1">(()=>{
+if(parent===window)return
+const q='[data-state="open"],dialog[open]'
+const open=()=>document.querySelectorAll(q).length
+addEventListener("keydown",(e)=>{
+const before=open()
+setTimeout(()=>{
+if(e.defaultPrevented||open()<before)return
+const t=(e.composedPath&&e.composedPath()[0])||e.target
+if(t&&(t.isContentEditable||/^(INPUT|TEXTAREA|SELECT)$/.test(t.nodeName)))return
+parent.postMessage({type:"21st-preview-key",key:e.key,code:e.code,altKey:e.altKey,ctrlKey:e.ctrlKey,metaKey:e.metaKey,shiftKey:e.shiftKey},"*")
+},0)
+})
+})()</script></body></html>

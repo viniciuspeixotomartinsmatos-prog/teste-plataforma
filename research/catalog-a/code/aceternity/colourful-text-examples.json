@@ -1,0 +1,11 @@
+{
+  "name": "colourful-text-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/colourful-text-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport React from \"react\";\nimport ColourfulText from \"@/components/ui/colourful-text\";\nimport { motion } from \"motion/react\";\n\nexport function ColourfulTextDemo() {\n  return (\n    <div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n      <motion.img\n        src=\"https://assets.aceternity.com/linear-demo.webp\"\n        alt=\"\"\n        className=\"h-full w-full object-cover absolute inset-0 [mask-image:radial-gradient(circle,transparent,black_80%)] pointer-events-none\"\n        initial={{ opacity: 0 }}\n        animate={{ opacity: 0.5 }}\n        transition={{ duration: 1 }}\n      />\n      <h1 className=\"text-2xl md:text-5xl lg:text-7xl font-bold text-center text-white relative z-2 font-sans\">\n        The best <ColourfulText text=\"components\" /> <br /> you will ever find\n      </h1>\n    </div>\n  );\n}\n"
+    }
+  ]
+}

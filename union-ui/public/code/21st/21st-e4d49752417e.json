@@ -1,0 +1,1 @@
+{"files":[{"path":"Usage.tsx","content":"import { HoverPreview } from \"@/components/ui/hover-preview\";\n\nexport default function DemoOne() {\n  return <HoverPreview />;\n}\n"}],"usageOnly":true,"description":"Hover Preview Component that displays image previews above text links when hovering.","examples":[],"variants":[],"additionalCodePaths":[],"framework":"react"}

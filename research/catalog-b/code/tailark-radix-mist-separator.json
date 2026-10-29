@@ -1,0 +1,24 @@
+{
+  "name": "Mist Separator",
+  "sourceId": "tailark",
+  "files": [
+    {
+      "path": "registry/bases/radix/mist/ui/separator.tsx",
+      "content": "'use client'\n\nimport * as React from 'react'\nimport * as SeparatorPrimitive from '@radix-ui/react-separator'\n\nimport { cn } from '@/registry/core/lib/utils'\n\nfunction Separator({ className, orientation = 'horizontal', decorative = true, ...props }: React.ComponentProps<typeof SeparatorPrimitive.Root>) {\n    return (\n        <SeparatorPrimitive.Root\n            data-slot=\"separator\"\n            decorative={decorative}\n            orientation={orientation}\n            className={cn(\n                'bg-border shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px',\n                className\n            )}\n            {...props}\n        />\n    )\n}\n\nexport { Separator }\n",
+      "type": "registry:component"
+    },
+    {
+      "path": "registry/core/lib/utils.ts",
+      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}",
+      "type": "dependency"
+    }
+  ],
+  "demoCode": null,
+  "dependencies": [
+    "@radix-ui/react-separator",
+    "react"
+  ],
+  "registryDependencies": [],
+  "license": "MIT",
+  "sourceUrl": "https://github.com/tailark/blocks/blob/main/registry/bases/radix/mist/ui/separator.tsx"
+}

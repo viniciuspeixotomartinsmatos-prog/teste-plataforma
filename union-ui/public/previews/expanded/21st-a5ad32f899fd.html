@@ -1,0 +1,164 @@
+<!doctype html><html><head>
+<script>(function(){try{var p=new URLSearchParams(location.search);var t=(p.get('theme')||'').toLowerCase();var dark;if(t==='dark'||p.get('dark')==='true'){dark=true;}else if(t==='light'){dark=false;}else{dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;}var h=document.documentElement,b=document.body;function apply(el){if(!el)return;el.classList.remove('dark','light');el.classList.add(dark?'dark':'light');}apply(h);if(b){apply(b);}else{document.addEventListener('DOMContentLoaded',function(){apply(document.body);});}document.documentElement.style.colorScheme=dark?'dark':'light';}catch(e){document.documentElement.classList.add('dark');}})();</script><meta charset='utf-8'/><meta name='viewport' content='width=device-width,initial-scale=1'>
+<script type="importmap">{"imports":{"react":"https://esm.sh/react@19.1.0","react/jsx-runtime":"https://esm.sh/react@19.1.0/jsx-runtime","react-dom":"https://esm.sh/react-dom@19.1.0","react-dom/client":"https://esm.sh/react-dom@19.1.0/client","clsx":"https://esm.sh/clsx@2.1.1","tailwind-merge":"https://esm.sh/tailwind-merge@3.3.0"}}</script>
+<script src='https://cdn.tailwindcss.com'></script>
+<script>tailwind.config={darkMode:'class',theme:{extend:{colors:{background:'hsl(var(--background))',foreground:'hsl(var(--foreground))'}}}};</script>
+<style>:root{--background:0 0% 100%;--foreground:0 0% 9%}.dark{--background:0 0% 7%;--foreground:0 0% 98%}html,body,#root{height:100%;margin:0}body{background:hsl(var(--background));color:hsl(var(--foreground));font-family:Inter,ui-sans-serif,system-ui,sans-serif}</style>
+<style>.fixed.top-4.left-4{display:none!important}</style>
+</head><body><div id='root'></div><script type='module'>// ../../../../../tmp/agent-elements-user-message/entry-default.tsx
+import React from "react";
+import { createRoot } from "react-dom/client";
+
+// ../../../../../tmp/agent-elements-user-message/code.tsx
+import { memo as memo2, useState } from "react";
+import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+// ../../../../../tmp/agent-elements-user-message/_stub-file-attachment.tsx
+import { memo } from "react";
+import { jsx } from "react/jsx-runtime";
+var FileAttachment = memo(function FileAttachment2(props) {
+  return /* @__PURE__ */ jsx("div", { className: "flex items-center gap-2 px-3 py-2 rounded-xl bg-neutral-100 dark:bg-neutral-800 text-sm", children: /* @__PURE__ */ jsx("span", { className: "truncate max-w-[180px]", children: props.filename ?? "Attachment" }) });
+});
+
+// ../../../../../tmp/agent-elements-user-message/code.tsx
+import { jsx as jsx2, jsxs } from "react/jsx-runtime";
+function cn(...inputs) {
+  return twMerge(clsx(inputs));
+}
+function isRecord(value) {
+  return typeof value === "object" && value !== null;
+}
+function isTextPart(part) {
+  return part.type === "text" && typeof part.text === "string";
+}
+function getImageUrlFromPart(part) {
+  if (!isRecord(part)) return null;
+  const type = part.type;
+  if (typeof type !== "string") return null;
+  if (type === "image") {
+    const imagePart = part;
+    return imagePart.url ?? imagePart.image ?? null;
+  }
+  if (type === "data-image") {
+    const dataPart = part;
+    return dataPart.data?.url ?? null;
+  }
+  if (type === "file") {
+    const filePart = part;
+    if (filePart.mimeType?.startsWith("image/")) {
+      if (filePart.url) return filePart.url;
+      if (filePart.data) {
+        return `data:${filePart.mimeType};base64,${filePart.data}`;
+      }
+    }
+  }
+  return null;
+}
+function getFileFromPart(part) {
+  if (!isRecord(part)) return null;
+  if (part.type !== "file") return null;
+  const filePart = part;
+  const filename = filePart.filename || filePart.name || filePart.fileName || "Attachment";
+  const isImage = filePart.mimeType?.startsWith("image/") ?? false;
+  if (isImage) return null;
+  return {
+    filename,
+    size: filePart.size
+  };
+}
+var UserMessage = memo2(function UserMessage2({
+  message,
+  className,
+  enableImagePreview = false,
+  onImageClick
+}) {
+  const [, setLightboxIndex] = useState(null);
+  const textParts = message.parts?.filter(isTextPart) ?? [];
+  const text = textParts.map((p) => p.text).join("");
+  const images = [];
+  const files = [];
+  for (const part of message.parts ?? []) {
+    const imageUrl = getImageUrlFromPart(part);
+    if (imageUrl) images.push(imageUrl);
+    const file = getFileFromPart(part);
+    if (file) files.push(file);
+  }
+  if (isRecord(message) && Array.isArray(message.experimental_attachments)) {
+    for (const att of message.experimental_attachments) {
+      if (att.contentType?.startsWith("image/") && att.url) {
+        images.push(att.url);
+      }
+    }
+  }
+  if (!text && images.length === 0 && files.length === 0) return null;
+  return /* @__PURE__ */ jsxs("div", { className: cn("flex flex-col items-end gap-1", className), children: [
+    images.length > 0 && images.map((url, i) => /* @__PURE__ */ jsx2(
+      "div",
+      {
+        className: cn(
+          "max-w-[200px] p-1.5 bg-neutral-100 dark:bg-neutral-800 rounded-2xl",
+          enableImagePreview && "cursor-pointer"
+        ),
+        onClick: enableImagePreview ? () => {
+          setLightboxIndex(i);
+          onImageClick?.(i, images);
+        } : void 0,
+        children: /* @__PURE__ */ jsx2(
+          "img",
+          {
+            src: url,
+            alt: "attachment",
+            className: "block object-cover max-w-[184px] max-h-[120px] rounded-xl"
+          }
+        )
+      },
+      i
+    )),
+    files.length > 0 && /* @__PURE__ */ jsx2("div", { className: "flex flex-col items-end gap-2", children: files.map((file, i) => /* @__PURE__ */ jsx2(
+      FileAttachment,
+      {
+        id: `${file.filename}-${i}`,
+        filename: file.filename,
+        size: file.size
+      },
+      `${file.filename}-${i}`
+    )) }),
+    text && /* @__PURE__ */ jsx2("div", { className: "max-w-[calc(95%-40px)] ms-[70px]", children: /* @__PURE__ */ jsx2("div", { className: "px-3.5 py-1.5 text-sm transition-colors rounded-2xl bg-neutral-900 text-neutral-50 dark:bg-neutral-100 dark:text-neutral-900", children: /* @__PURE__ */ jsx2("p", { className: "leading-5 whitespace-pre-wrap break-words", children: text }) }) })
+  ] });
+});
+
+// ../../../../../private/tmp/agent-elements-user-message/demo-default.tsx
+import { jsx as jsx3 } from "react/jsx-runtime";
+function Demo() {
+  return /* @__PURE__ */ jsx3("div", { className: "flex items-center justify-center w-full min-h-screen bg-background p-8 overflow-hidden", children: /* @__PURE__ */ jsx3("div", { className: "w-full max-w-md", children: /* @__PURE__ */ jsx3(
+    UserMessage,
+    {
+      message: {
+        id: "msg-1",
+        parts: [{ type: "text", text: "Share the latest status." }]
+      }
+    }
+  ) }) });
+}
+
+// ../../../../../tmp/agent-elements-user-message/entry-default.tsx
+var root = createRoot(document.getElementById("root"));
+root.render(React.createElement(Demo));
+requestAnimationFrame(() => {
+  document.body.dataset.ready = "1";
+});
+</script><script>(()=>{const r=()=>requestAnimationFrame(()=>requestAnimationFrame(()=>parent.postMessage({type:"21st-preview-ready"},"*")));document.readyState==="complete"?r():addEventListener("load",r,{once:true})})()</script><script data-21st-keys="1">(()=>{
+if(parent===window)return
+const q='[data-state="open"],dialog[open]'
+const open=()=>document.querySelectorAll(q).length
+addEventListener("keydown",(e)=>{
+const before=open()
+setTimeout(()=>{
+if(e.defaultPrevented||open()<before)return
+const t=(e.composedPath&&e.composedPath()[0])||e.target
+if(t&&(t.isContentEditable||/^(INPUT|TEXTAREA|SELECT)$/.test(t.nodeName)))return
+parent.postMessage({type:"21st-preview-key",key:e.key,code:e.code,altKey:e.altKey,ctrlKey:e.ctrlKey,metaKey:e.metaKey,shiftKey:e.shiftKey},"*")
+},0)
+})
+})()</script></body></html>

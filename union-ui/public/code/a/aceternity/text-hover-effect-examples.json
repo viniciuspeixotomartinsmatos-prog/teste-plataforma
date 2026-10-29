@@ -1,0 +1,11 @@
+{
+  "name": "text-hover-effect-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/text-hover-effect-demo.tsx",
+      "type": "registry:example",
+      "content": "import React from \"react\";\nimport { TextHoverEffect } from \"@/components/ui/text-hover-effect\";\n\nexport function TextHoverEffectDemo() {\n  return (\n    <div className=\"h-[40rem] flex items-center justify-center\">\n      <TextHoverEffect text=\"ACET\" />\n    </div>\n  );\n}\n"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "image-generation-loader-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/image-generation-loader-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\n\nimport { ImageGenerationLoader } from \"@/components/ui/image-generation-loader\";\n\nexport function ImageGenerationLoaderDemo() {\n  return (\n    <div className=\"mx-auto w-full max-w-2xl px-6 py-10 sm:p-12\">\n      <div className=\"relative aspect-4/3 overflow-hidden rounded-2xl bg-neutral-900 outline-1 -outline-offset-1 outline-black/10 dark:outline-white/10\">\n        <img\n          src=\"https://assets.aceternity.com/components/vertical-sliding-loader-demo.webp\"\n          alt=\"A project creation interface\"\n          className=\"size-full object-cover dark:hidden\"\n        />\n        <img\n          src=\"https://assets.aceternity.com/components/vertical-sliding-loader-demo-dark.webp\"\n          alt=\"A project creation interface\"\n          className=\"size-full object-cover not-dark:hidden\"\n        />\n        <ImageGenerationLoader\n          effect=\"scale-wave\"\n          easing=\"ease-in-out\"\n          text=\"Analysing\"\n          cellSize={3}\n          gap={1}\n          bandHeight={48}\n          colors={[\"var(--color-blue-500)\", \"var(--color-blue-800)\"]}\n        />\n      </div>\n      <div className=\"mt-4 flex items-center gap-3\">\n        <img\n          src=\"https://assets.aceternity.com/avatars/manu.webp\"\n          alt=\"Manu Arora\"\n          className=\"size-9 rounded-full object-cover\"\n        />\n        <div className=\"flex min-w-0 items-baseline gap-2\">\n          <p className=\"shrink-0 text-base/7 font-medium sm:text-sm/6\">\n            Manu Arora\n          </p>\n          <p className=\"truncate text-base/7 text-neutral-500 sm:text-sm/6 dark:text-neutral-400\">\n            Multi cards empty state skeletons\n          </p>\n        </div>\n      </div>\n    </div>\n  );\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/image-generation-loader-shimmer-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\n\nimport { ImageGenerationLoader } from \"@/components/ui/image-generation-loader\";\n\nexport function ImageGenerationLoaderShimmerDemo() {\n  return (\n    <div className=\"w-full px-6 py-10 sm:p-12\">\n      <div className=\"relative mx-auto aspect-4/3 w-full max-w-xl overflow-hidden rounded-2xl bg-neutral-900 outline-1 -outline-offset-1 outline-black/10 dark:outline-white/10\">\n        <img\n          src=\"https://assets.aceternity.com/components/vertical-sliding-loader-demo-dark.webp\"\n          alt=\"A dark project creation interface\"\n          className=\"size-full object-cover\"\n        />\n        <ImageGenerationLoader\n          effect=\"shimmer\"\n          easing=\"cubic-bezier(0.22, 1, 0.36, 1)\"\n          duration={3200}\n          bandHeight={44}\n          colors={[\"var(--color-violet-400)\", \"var(--color-indigo-700)\"]}\n          overlayOpacity={0.24}\n        />\n      </div>\n    </div>\n  );\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/image-generation-loader-wave-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\n\nimport { ImageGenerationLoader } from \"@/components/ui/image-generation-loader\";\n\nexport function ImageGenerationLoaderWaveDemo() {\n  return (\n    <div className=\"w-full px-6 py-10 sm:p-12\">\n      <div className=\"relative mx-auto aspect-4/3 w-full max-w-xl overflow-hidden rounded-2xl bg-neutral-100 outline-1 -outline-offset-1 outline-black/10 dark:outline-white/10\">\n        <img\n          src=\"https://assets.aceternity.com/components/vertical-sliding-loader-demo.webp\"\n          alt=\"A project creation interface\"\n          className=\"size-full object-cover\"\n        />\n        <ImageGenerationLoader\n          effect=\"wave\"\n          easing={[0.65, 0, 0.35, 1]}\n          text=\"Loading\"\n          cellSize={3}\n          gap={1}\n          bandHeight={48}\n          waveAmplitude={10}\n          colors={[\"var(--color-cyan-400)\", \"var(--color-blue-800)\"]}\n          overlayOpacity={0.2}\n        />\n      </div>\n    </div>\n  );\n}\n"
+    }
+  ]
+}

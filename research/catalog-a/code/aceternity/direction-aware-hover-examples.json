@@ -1,0 +1,11 @@
+{
+  "name": "direction-aware-hover-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/direction-aware-hover-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport { DirectionAwareHover } from \"../ui/direction-aware-hover\";\n\nexport function DirectionAwareHoverDemo() {\n  const imageUrl =\n    \"https://images.unsplash.com/photo-1663765970236-f2acfde22237?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\";\n  return (\n    <div className=\"h-[40rem] relative  flex items-center justify-center\">\n      <DirectionAwareHover imageUrl={imageUrl}>\n        <p className=\"font-bold text-xl\">In the mountains</p>\n        <p className=\"font-normal text-sm\">$1299 / night</p>\n      </DirectionAwareHover>\n    </div>\n  );\n}\n"
+    }
+  ]
+}

@@ -1,0 +1,374 @@
+<!doctype html><html><head>
+<script>(function(){try{var p=new URLSearchParams(location.search);var t=(p.get('theme')||'').toLowerCase();var dark;if(t==='dark'||p.get('dark')==='true'){dark=true;}else if(t==='light'){dark=false;}else{dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;}var h=document.documentElement,b=document.body;function apply(el){if(!el)return;el.classList.remove('dark','light');el.classList.add(dark?'dark':'light');}apply(h);if(b){apply(b);}else{document.addEventListener('DOMContentLoaded',function(){apply(document.body);});}document.documentElement.style.colorScheme=dark?'dark':'light';}catch(e){document.documentElement.classList.add('dark');}})();</script><meta charset='utf-8'/><meta name='viewport' content='width=device-width,initial-scale=1'>
+<script type="importmap">{"imports":{"react":"https://esm.sh/react@19.1.0","react/jsx-runtime":"https://esm.sh/react@19.1.0/jsx-runtime","react-dom":"https://esm.sh/react-dom@19.1.0","react-dom/client":"https://esm.sh/react-dom@19.1.0/client","clsx":"https://esm.sh/clsx@2.1.1","tailwind-merge":"https://esm.sh/tailwind-merge@3.3.0"}}</script>
+<script src='https://cdn.tailwindcss.com'></script>
+<script>tailwind.config={darkMode:'class',theme:{extend:{colors:{background:'hsl(var(--background))',foreground:'hsl(var(--foreground))'}}}};</script>
+<style>:root{--background:0 0% 100%;--foreground:0 0% 9%}.dark{--background:0 0% 7%;--foreground:0 0% 98%}html,body,#root{height:100%;margin:0}body{background:hsl(var(--background));color:hsl(var(--foreground));font-family:Inter,ui-sans-serif,system-ui,sans-serif}</style>
+<style>.fixed.top-4.left-4{display:none!important}</style>
+</head><body><div id='root'></div><script type='module'>// ../../../../../tmp/agent-elements-tool-group/entry-default.tsx
+import React from "react";
+import { createRoot } from "react-dom/client";
+
+// ../../../../../tmp/agent-elements-tool-group/code.tsx
+import {
+  memo,
+  useEffect,
+  useRef,
+  useState
+} from "react";
+import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+import { jsx, jsxs } from "react/jsx-runtime";
+function cn(...inputs) {
+  return twMerge(clsx(inputs));
+}
+var SHIMMER_KEY = "an-tool-group-shimmer";
+function ensureShimmerStyles() {
+  if (typeof document === "undefined") return;
+  if (document.getElementById(SHIMMER_KEY)) return;
+  const style = document.createElement("style");
+  style.id = SHIMMER_KEY;
+  style.textContent = `
+@keyframes an-tg-shimmer {
+  from { background-position: 100% center; }
+  to { background-position: 0% center; }
+}
+.an-tg-shimmer {
+  display: inline-block;
+  background-size: 250% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, var(--an-tg-shimmer-base, #a3a3a3) 0%, var(--an-tg-shimmer-base, #a3a3a3) 40%, var(--an-tg-shimmer-hi, #525252) 50%, var(--an-tg-shimmer-base, #a3a3a3) 60%, var(--an-tg-shimmer-base, #a3a3a3) 100%);
+  background-repeat: no-repeat;
+  animation: an-tg-shimmer 2s linear infinite;
+}
+.dark .an-tg-shimmer {
+  --an-tg-shimmer-base: #525252;
+  --an-tg-shimmer-hi: #a3a3a3;
+}
+`;
+  document.head.appendChild(style);
+}
+function IconChevronRight({ className }) {
+  return /* @__PURE__ */ jsx(
+    "svg",
+    {
+      className,
+      viewBox: "0 0 24 24",
+      fill: "none",
+      stroke: "currentColor",
+      strokeWidth: "2",
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      "aria-hidden": true,
+      children: /* @__PURE__ */ jsx("path", { d: "M9 6l6 6l-6 6" })
+    }
+  );
+}
+function IconFile({ className }) {
+  return /* @__PURE__ */ jsxs(
+    "svg",
+    {
+      className,
+      viewBox: "0 0 24 24",
+      fill: "none",
+      stroke: "currentColor",
+      strokeWidth: "1.8",
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      "aria-hidden": true,
+      children: [
+        /* @__PURE__ */ jsx("path", { d: "M14 3v4a1 1 0 0 0 1 1h4" }),
+        /* @__PURE__ */ jsx("path", { d: "M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" })
+      ]
+    }
+  );
+}
+function IconSearch({ className }) {
+  return /* @__PURE__ */ jsxs(
+    "svg",
+    {
+      className,
+      viewBox: "0 0 24 24",
+      fill: "none",
+      stroke: "currentColor",
+      strokeWidth: "1.8",
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      "aria-hidden": true,
+      children: [
+        /* @__PURE__ */ jsx("circle", { cx: "10", cy: "10", r: "7" }),
+        /* @__PURE__ */ jsx("path", { d: "M21 21l-6 -6" })
+      ]
+    }
+  );
+}
+function IconTerminal({ className }) {
+  return /* @__PURE__ */ jsxs(
+    "svg",
+    {
+      className,
+      viewBox: "0 0 24 24",
+      fill: "none",
+      stroke: "currentColor",
+      strokeWidth: "1.8",
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      "aria-hidden": true,
+      children: [
+        /* @__PURE__ */ jsx("path", { d: "M5 7l5 5l-5 5" }),
+        /* @__PURE__ */ jsx("path", { d: "M12 19h7" })
+      ]
+    }
+  );
+}
+var CATEGORY_ICONS = {
+  file: IconFile,
+  search: IconSearch,
+  command: IconTerminal,
+  generic: IconFile
+};
+function formatCount(value, label) {
+  return `${value} ${value === 1 ? label : `${label}s`}`;
+}
+function summarizeCounts(tools) {
+  let fileCount = 0;
+  let searchCount = 0;
+  let commandCount = 0;
+  for (const t of tools) {
+    if (t.category === "file") fileCount += 1;
+    else if (t.category === "search") searchCount += 1;
+    else if (t.category === "command") commandCount += 1;
+  }
+  const parts = [];
+  if (fileCount > 0) parts.push(formatCount(fileCount, "file"));
+  if (searchCount > 0)
+    parts.push(`${searchCount} ${searchCount === 1 ? "search" : "searches"}`);
+  if (commandCount > 0) parts.push(formatCount(commandCount, "command"));
+  if (parts.length === 0) return "";
+  if (parts.length === 1) return parts[0];
+  if (parts.length === 2) return `${parts[0]} and ${parts[1]}`;
+  return `${parts.slice(0, -1).join(", ")}, and ${parts[parts.length - 1]}`;
+}
+function streamingCountsLabel(tools) {
+  let fileCount = 0;
+  let searchCount = 0;
+  for (const t of tools) {
+    if (t.category === "file") fileCount += 1;
+    else if (t.category === "search") searchCount += 1;
+  }
+  const parts = [];
+  if (fileCount > 0) parts.push(formatCount(fileCount, "file"));
+  if (searchCount > 0)
+    parts.push(`${searchCount} ${searchCount === 1 ? "search" : "searches"}`);
+  return parts.join(", ");
+}
+function NestedToolRow({
+  tool,
+  isShimmer
+}) {
+  const Icon = tool.icon ?? CATEGORY_ICONS[tool.category ?? "generic"];
+  return /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-2 h-7 text-sm text-neutral-700 dark:text-neutral-300", children: [
+    /* @__PURE__ */ jsx(
+      Icon,
+      {
+        className: cn(
+          "w-3.5 h-3.5 shrink-0",
+          tool.isError ? "text-red-500" : "text-neutral-500 dark:text-neutral-400"
+        )
+      }
+    ),
+    /* @__PURE__ */ jsx(
+      "span",
+      {
+        className: cn(
+          "truncate",
+          isShimmer && "an-tg-shimmer",
+          tool.isError && "text-red-500"
+        ),
+        children: tool.title
+      }
+    ),
+    tool.subtitle && /* @__PURE__ */ jsx("span", { className: "text-neutral-500 dark:text-neutral-400 truncate", children: tool.subtitle })
+  ] });
+}
+var ToolGroup = memo(function ToolGroup2({
+  state = "completed",
+  description,
+  nestedTools: nestedTools2 = [],
+  completeLabel,
+  shimmerLabel,
+  interruptedLabel,
+  elapsedTime,
+  defaultOpen,
+  maxVisibleTools = 5,
+  showElapsed = true,
+  className
+}) {
+  useEffect(() => {
+    ensureShimmerStyles();
+  }, []);
+  const isPending = state === "pending";
+  const isInterrupted = state === "interrupted";
+  const hasNestedTools = nestedTools2.length > 0;
+  const [expanded, setExpanded] = useState(
+    defaultOpen ?? (isPending && hasNestedTools)
+  );
+  const [visibleCount, setVisibleCount] = useState(
+    isPending ? 0 : nestedTools2.length
+  );
+  const listRef = useRef(null);
+  useEffect(() => {
+    if (!isPending || nestedTools2.length === 0) {
+      setVisibleCount(nestedTools2.length);
+      return;
+    }
+    let index = 1;
+    setVisibleCount(Math.min(index, nestedTools2.length));
+    const interval = setInterval(() => {
+      index += 1;
+      setVisibleCount(Math.min(index, nestedTools2.length));
+      if (index >= nestedTools2.length) clearInterval(interval);
+    }, 450);
+    return () => clearInterval(interval);
+  }, [isPending, nestedTools2.length]);
+  useEffect(() => {
+    if (!isPending || !listRef.current) return;
+    listRef.current.scrollTop = listRef.current.scrollHeight;
+  }, [isPending, visibleCount]);
+  if (isInterrupted) {
+    return /* @__PURE__ */ jsx(
+      "div",
+      {
+        className: cn(
+          "flex items-center gap-2 h-8 text-sm text-neutral-500 dark:text-neutral-400",
+          className
+        ),
+        children: /* @__PURE__ */ jsx("span", { children: interruptedLabel })
+      }
+    );
+  }
+  const visibleTools = isPending ? nestedTools2.slice(0, Math.max(visibleCount, 0)) : nestedTools2;
+  const visibleToolCount = visibleTools.length;
+  const subtitle = isPending ? streamingCountsLabel(visibleTools) : hasNestedTools ? summarizeCounts(nestedTools2) : description ? description.length > 60 ? `${description.slice(0, 57)}...` : description : "";
+  const headerLabel = isPending ? shimmerLabel ?? completeLabel : completeLabel;
+  const showElapsedDisplay = showElapsed && elapsedTime;
+  const maskThreshold = 4;
+  const streamHeight = Math.max(1, maxVisibleTools) * 28;
+  return /* @__PURE__ */ jsxs("div", { className: cn("w-full", className), children: [
+    /* @__PURE__ */ jsxs(
+      "button",
+      {
+        type: "button",
+        onClick: () => setExpanded((v) => !v),
+        disabled: !hasNestedTools,
+        className: cn(
+          "group w-full flex items-center gap-2 h-8 text-sm text-left",
+          hasNestedTools ? "cursor-pointer text-neutral-700 dark:text-neutral-300" : "cursor-default text-neutral-700 dark:text-neutral-300"
+        ),
+        children: [
+          hasNestedTools && /* @__PURE__ */ jsx(
+            IconChevronRight,
+            {
+              className: cn(
+                "w-3.5 h-3.5 shrink-0 text-neutral-500 dark:text-neutral-400 transition-transform",
+                expanded ? "rotate-90" : "rotate-0"
+              )
+            }
+          ),
+          /* @__PURE__ */ jsx(
+            "span",
+            {
+              className: cn(
+                "shrink-0",
+                isPending && "an-tg-shimmer"
+              ),
+              children: headerLabel
+            }
+          ),
+          subtitle && /* @__PURE__ */ jsx("span", { className: "text-neutral-500 dark:text-neutral-400 truncate min-w-0 flex-1", children: subtitle }),
+          showElapsedDisplay && /* @__PURE__ */ jsx("span", { className: "font-normal tabular-nums shrink-0 text-neutral-400 dark:text-neutral-500", children: elapsedTime })
+        ]
+      }
+    ),
+    hasNestedTools && expanded && /* @__PURE__ */ jsxs("div", { className: "relative", children: [
+      isPending && visibleToolCount > maskThreshold && /* @__PURE__ */ jsx("div", { className: "absolute inset-x-0 top-0 h-10 z-10 pointer-events-none bg-gradient-to-b from-white dark:from-neutral-950 to-transparent" }),
+      /* @__PURE__ */ jsx(
+        "div",
+        {
+          ref: listRef,
+          className: cn(
+            "pl-5",
+            nestedTools2.length > 1 ? "space-y-1" : "space-y-0",
+            isPending && visibleToolCount > maskThreshold && "overflow-y-auto"
+          ),
+          style: isPending && visibleToolCount > maskThreshold ? { height: `${streamHeight}px` } : void 0,
+          children: visibleTools.map((tool, idx) => /* @__PURE__ */ jsx(
+            NestedToolRow,
+            {
+              tool,
+              isShimmer: isPending && idx === visibleCount - 1
+            },
+            idx
+          ))
+        }
+      )
+    ] })
+  ] });
+});
+
+// ../../../../../private/tmp/agent-elements-tool-group/demo-default.tsx
+import { jsx as jsx2 } from "react/jsx-runtime";
+var nestedTools = [
+  {
+    category: "command",
+    title: "Bash",
+    subtitle: "pnpm lint"
+  },
+  {
+    category: "search",
+    title: "Grep",
+    subtitle: "InputBar"
+  },
+  {
+    category: "file",
+    title: "Read",
+    subtitle: "/lib/agent-ui/components/input-bar.tsx"
+  }
+];
+function Demo() {
+  return /* @__PURE__ */ jsx2("div", { className: "min-h-screen w-full flex items-center justify-center p-6 bg-white dark:bg-neutral-950", children: /* @__PURE__ */ jsx2("div", { className: "w-full max-w-[420px]", children: /* @__PURE__ */ jsx2(
+    ToolGroup,
+    {
+      state: "completed",
+      nestedTools,
+      completeLabel: "Task completed",
+      shimmerLabel: "Running task",
+      interruptedLabel: "Task interrupted",
+      elapsedTime: "6s",
+      defaultOpen: false
+    }
+  ) }) });
+}
+
+// ../../../../../tmp/agent-elements-tool-group/entry-default.tsx
+var root = createRoot(document.getElementById("root"));
+root.render(React.createElement(Demo));
+requestAnimationFrame(() => {
+  document.body.dataset.ready = "1";
+});
+</script><script>(()=>{const r=()=>requestAnimationFrame(()=>requestAnimationFrame(()=>parent.postMessage({type:"21st-preview-ready"},"*")));document.readyState==="complete"?r():addEventListener("load",r,{once:true})})()</script><script data-21st-keys="1">(()=>{
+if(parent===window)return
+const q='[data-state="open"],dialog[open]'
+const open=()=>document.querySelectorAll(q).length
+addEventListener("keydown",(e)=>{
+const before=open()
+setTimeout(()=>{
+if(e.defaultPrevented||open()<before)return
+const t=(e.composedPath&&e.composedPath()[0])||e.target
+if(t&&(t.isContentEditable||/^(INPUT|TEXTAREA|SELECT)$/.test(t.nodeName)))return
+parent.postMessage({type:"21st-preview-key",key:e.key,code:e.code,altKey:e.altKey,ctrlKey:e.ctrlKey,metaKey:e.metaKey,shiftKey:e.shiftKey},"*")
+},0)
+})
+})()</script></body></html>

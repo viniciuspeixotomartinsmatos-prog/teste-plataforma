@@ -1,0 +1,248 @@
+<!doctype html><html><head>
+<script>(function(){try{var p=new URLSearchParams(location.search);var t=(p.get('theme')||'').toLowerCase();var dark;if(t==='dark'||p.get('dark')==='true'){dark=true;}else if(t==='light'){dark=false;}else{dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;}var h=document.documentElement,b=document.body;function apply(el){if(!el)return;el.classList.remove('dark','light');el.classList.add(dark?'dark':'light');}apply(h);if(b){apply(b);}else{document.addEventListener('DOMContentLoaded',function(){apply(document.body);});}document.documentElement.style.colorScheme=dark?'dark':'light';}catch(e){document.documentElement.classList.add('dark');}})();</script><meta charset='utf-8'/><meta name='viewport' content='width=device-width,initial-scale=1'>
+<script type="importmap">{"imports":{"react":"https://esm.sh/react@19.1.0","react/jsx-runtime":"https://esm.sh/react@19.1.0/jsx-runtime","react-dom":"https://esm.sh/react-dom@19.1.0","react-dom/client":"https://esm.sh/react-dom@19.1.0/client","clsx":"https://esm.sh/clsx@2.1.1","tailwind-merge":"https://esm.sh/tailwind-merge@3.3.0","@tabler/icons-react":"https://esm.sh/@tabler/icons-react@3.34.0?deps=react@19.1.0"}}</script>
+<script src='https://cdn.tailwindcss.com'></script>
+<script>tailwind.config={darkMode:'class',theme:{extend:{colors:{background:'hsl(var(--background))',foreground:'hsl(var(--foreground))'}}}};</script>
+<style>:root{--background:0 0% 100%;--foreground:0 0% 9%}.dark{--background:0 0% 7%;--foreground:0 0% 98%}html,body,#root{height:100%;margin:0}body{background:hsl(var(--background));color:hsl(var(--foreground));font-family:Inter,ui-sans-serif,system-ui,sans-serif}</style>
+<style>.fixed.top-4.left-4{display:none!important}</style>
+</head><body><div id='root'></div><script type='module'>// ../../../../../tmp/agent-elements-mcp-tool/entry-default.tsx
+import React2 from "react";
+import { createRoot } from "react-dom/client";
+
+// ../../../../../tmp/agent-elements-mcp-tool/code.tsx
+import * as React from "react";
+import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+import { IconChevronRight } from "@tabler/icons-react";
+import { jsx, jsxs } from "react/jsx-runtime";
+function cn(...inputs) {
+  return twMerge(clsx(inputs));
+}
+var SHIMMER_STYLE_ID = "an-mcp-tool-shimmer-styles";
+var SHIMMER_STYLES = `
+@keyframes an-mcp-shimmer {
+  from { background-position: 100% center; }
+  to { background-position: 0% center; }
+}
+.an-mcp-shimmer {
+  display: inline-flex;
+  align-items: center;
+  height: 1rem;
+  background-size: 250% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, #a3a3a3 0%, #a3a3a3 40%, #525252 50%, #a3a3a3 60%, #a3a3a3 100%);
+  background-repeat: no-repeat;
+  animation: an-mcp-shimmer 1.2s linear infinite;
+}
+`;
+var shimmerStylesInjected = false;
+function ensureShimmerStyles() {
+  if (typeof document === "undefined") return;
+  if (shimmerStylesInjected) return;
+  if (document.getElementById(SHIMMER_STYLE_ID)) {
+    shimmerStylesInjected = true;
+    return;
+  }
+  const el = document.createElement("style");
+  el.id = SHIMMER_STYLE_ID;
+  el.textContent = SHIMMER_STYLES;
+  document.head.appendChild(el);
+  shimmerStylesInjected = true;
+}
+var COMPLETED_VERBS = {
+  List: "Listed",
+  Get: "Got",
+  Create: "Created",
+  Update: "Updated",
+  Delete: "Deleted",
+  Search: "Searched",
+  Fetch: "Fetched",
+  Retrieve: "Retrieved",
+  Send: "Sent",
+  Generate: "Generated",
+  Add: "Added",
+  Remove: "Removed",
+  Modify: "Modified",
+  Draft: "Drafted",
+  Manage: "Managed",
+  Query: "Queried",
+  Start: "Started",
+  Set: "Set",
+  Check: "Checked",
+  Find: "Found"
+};
+var PRIORITY_ARGS = [
+  "query",
+  "question",
+  "email",
+  "name",
+  "id",
+  "customer",
+  "url",
+  "issue",
+  "body",
+  "summary",
+  "title"
+];
+function getCompletedTitle(displayName) {
+  const words = displayName.split(" ");
+  const verb = words[0] ?? "";
+  const rest = words.slice(1).join(" ");
+  const completed = COMPLETED_VERBS[verb];
+  return completed ? rest ? `${completed} ${rest}` : completed : displayName;
+}
+function formatMcpArgs(input) {
+  if (!input || typeof input !== "object") return "";
+  const entries = Object.entries(input).filter(
+    ([, v]) => v !== void 0 && v !== null && v !== ""
+  );
+  if (entries.length === 0) return "";
+  const sorted = [...entries].sort(([a], [b]) => {
+    const ai = PRIORITY_ARGS.indexOf(a);
+    const bi = PRIORITY_ARGS.indexOf(b);
+    if (ai !== -1 && bi !== -1) return ai - bi;
+    if (ai !== -1) return -1;
+    if (bi !== -1) return 1;
+    return 0;
+  });
+  const parts = [];
+  for (const [key, value] of sorted) {
+    if (parts.length >= 2) break;
+    const val = typeof value === "string" ? value : JSON.stringify(value);
+    const display = val.length > 30 ? val.slice(0, 27) + "..." : val;
+    parts.push(`${key}: ${display}`);
+  }
+  return parts.join("  ");
+}
+function formatOutput(output) {
+  const trimmed = output.trim();
+  if (!trimmed) return "";
+  if (trimmed.startsWith("{") || trimmed.startsWith("[")) {
+    try {
+      return JSON.stringify(JSON.parse(trimmed), null, 2);
+    } catch {
+      return output.length > 3e3 ? output.slice(0, 3e3) + "\n..." : output;
+    }
+  }
+  return output.length > 3e3 ? output.slice(0, 3e3) + "\n..." : output;
+}
+var McpTool = React.memo(function McpTool2({
+  state = "completed",
+  displayName,
+  args,
+  output,
+  defaultOpen = false,
+  expanded,
+  onToggleExpand,
+  className
+}) {
+  React.useEffect(() => {
+    ensureShimmerStyles();
+  }, []);
+  const isControlled = expanded !== void 0;
+  const [internalOpen, setInternalOpen] = React.useState(defaultOpen);
+  const isOpen = isControlled ? !!expanded : internalOpen;
+  if (state === "interrupted") {
+    return /* @__PURE__ */ jsx(
+      "div",
+      {
+        className: cn(
+          "flex items-center max-w-full select-none gap-1",
+          className
+        ),
+        children: /* @__PURE__ */ jsxs("span", { className: "text-sm text-neutral-500 dark:text-neutral-400 font-[450]", children: [
+          displayName,
+          " interrupted"
+        ] })
+      }
+    );
+  }
+  const isPending = state === "pending";
+  const title = isPending ? `Preparing ${displayName}` : getCompletedTitle(displayName);
+  const subtitle = isPending ? "" : formatMcpArgs(args);
+  const formattedOutput = !isPending && output ? formatOutput(output) : "";
+  const expandable = !isPending && !!formattedOutput;
+  const handleToggle = () => {
+    if (!expandable) return;
+    if (isControlled) {
+      onToggleExpand?.();
+    } else {
+      setInternalOpen((v) => !v);
+    }
+  };
+  return /* @__PURE__ */ jsxs("div", { className: cn("flex flex-col gap-2 w-full", className), children: [
+    /* @__PURE__ */ jsxs(
+      "button",
+      {
+        type: "button",
+        onClick: handleToggle,
+        disabled: !expandable,
+        "aria-expanded": expandable ? isOpen : void 0,
+        className: cn(
+          "group flex items-center max-w-full select-none gap-1 bg-transparent border-0 p-0 m-0 text-left",
+          expandable ? "cursor-pointer" : "cursor-default"
+        ),
+        children: [
+          /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-2 min-w-0 text-sm text-neutral-500 dark:text-neutral-400", children: [
+            /* @__PURE__ */ jsx("span", { className: "font-[450] whitespace-nowrap shrink-0", children: isPending ? /* @__PURE__ */ jsx("span", { className: "an-mcp-shimmer", children: title }) : title }),
+            subtitle && /* @__PURE__ */ jsx("span", { className: "font-normal truncate min-w-0 flex-1 text-neutral-400 dark:text-neutral-500/80", children: subtitle })
+          ] }),
+          expandable && /* @__PURE__ */ jsx(
+            IconChevronRight,
+            {
+              className: cn(
+                "shrink-0 text-neutral-500 dark:text-neutral-400 transition-transform duration-150 ease-out size-3",
+                isOpen ? "rotate-90" : "rotate-0"
+              )
+            }
+          )
+        ]
+      }
+    ),
+    expandable && isOpen && /* @__PURE__ */ jsx("div", { className: "rounded-[10px] overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-950", children: /* @__PURE__ */ jsx("pre", { className: "m-0 p-3 text-[12px] leading-[1.5] font-mono text-neutral-800 dark:text-neutral-200 overflow-x-auto whitespace-pre", children: formattedOutput }) })
+  ] });
+});
+
+// ../../../../../private/tmp/agent-elements-mcp-tool/demo-default.tsx
+import { jsx as jsx2 } from "react/jsx-runtime";
+function Demo() {
+  return /* @__PURE__ */ jsx2("div", { className: "flex items-center justify-center w-full min-h-screen bg-background p-8 overflow-hidden", children: /* @__PURE__ */ jsx2("div", { className: "w-full max-w-md", children: /* @__PURE__ */ jsx2(
+    McpTool,
+    {
+      displayName: "List Resources",
+      args: { query: "resources" },
+      output: JSON.stringify(
+        [
+          { id: "res_1", name: "Billing" },
+          { id: "res_2", name: "Support" }
+        ],
+        null,
+        2
+      ),
+      defaultOpen: true
+    }
+  ) }) });
+}
+
+// ../../../../../tmp/agent-elements-mcp-tool/entry-default.tsx
+var root = createRoot(document.getElementById("root"));
+root.render(React2.createElement(Demo));
+requestAnimationFrame(() => {
+  document.body.dataset.ready = "1";
+});
+</script><script>(()=>{const r=()=>requestAnimationFrame(()=>requestAnimationFrame(()=>parent.postMessage({type:"21st-preview-ready"},"*")));document.readyState==="complete"?r():addEventListener("load",r,{once:true})})()</script><script data-21st-keys="1">(()=>{
+if(parent===window)return
+const q='[data-state="open"],dialog[open]'
+const open=()=>document.querySelectorAll(q).length
+addEventListener("keydown",(e)=>{
+const before=open()
+setTimeout(()=>{
+if(e.defaultPrevented||open()<before)return
+const t=(e.composedPath&&e.composedPath()[0])||e.target
+if(t&&(t.isContentEditable||/^(INPUT|TEXTAREA|SELECT)$/.test(t.nodeName)))return
+parent.postMessage({type:"21st-preview-key",key:e.key,code:e.code,altKey:e.altKey,ctrlKey:e.ctrlKey,metaKey:e.metaKey,shiftKey:e.shiftKey},"*")
+},0)
+})
+})()</script></body></html>

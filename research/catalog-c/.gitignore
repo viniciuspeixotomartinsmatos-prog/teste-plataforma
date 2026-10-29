@@ -1,0 +1,6 @@
+animate-repo/
+shadcn-repo/
+*.html
+shadcn-raw-metadata.json
+registry-test.json
+__pycache__/

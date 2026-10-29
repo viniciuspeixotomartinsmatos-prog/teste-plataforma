@@ -1,0 +1,11 @@
+{
+  "name": "spotlight-new-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/spotlight-new-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport React from \"react\";\nimport { Spotlight } from \"@/components/ui/spotlight-new\";\n\nexport function SpotlightNewDemo() {\n  return (\n    <div className=\"h-[40rem] w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden\">\n      <Spotlight />\n      <div className=\" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0\">\n        <h1 className=\"text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50\">\n          Spotlight <br /> which is not overused.\n        </h1>\n        <p className=\"mt-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto\">\n          A subtle yet effective spotlight effect, because the previous version\n          is used a bit too much these days.\n        </p>\n      </div>\n    </div>\n  );\n}\n"
+    }
+  ]
+}
