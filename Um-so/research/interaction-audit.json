@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-10-30T16:52:33.978Z",
+  "environment": "JSDOM, actual compiled React components; not a browser or visual audit",
+  "results": [
+    {
+      "id": "motion-accordion",
+      "passed": true
+    },
+    {
+      "id": "reactbits--stepper",
+      "passed": true
+    },
+    {
+      "id": "animate-primitives-animate-ui-tabs",
+      "passed": true
+    },
+    {
+      "id": "kokonut-switch-button",
+      "passed": true
+    },
+    {
+      "id": "shadcnblocks-block-data-table1",
+      "passed": true
+    }
+  ]
+}

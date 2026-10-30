@@ -1,0 +1,202 @@
+<!doctype html><html><head><script data-umso-environment>(function sandboxStorage(workerBootstrap=''){
+ let isolated=false;
+ // Opaque sandbox documents cannot access browser storage. Give each demo an
+ // isolated, temporary store instead of granting access to the app's origin.
+ for(const name of ['localStorage','sessionStorage']){
+  try{window[name].getItem('__preview_probe__');continue;}catch{isolated=true;}
+  const entries=new Map();const storage={get length(){return entries.size;},key(index){return [...entries.keys()][index]??null;},getItem(key){return entries.get(String(key))??null;},setItem(key,value){entries.set(String(key),String(value));},removeItem(key){entries.delete(String(key));},clear(){entries.clear();}};
+  try{Object.defineProperty(window,name,{configurable:true,value:storage});}catch{}
+ }
+ try{if(isolated)throw Error('isolated');void document.cookie;}catch{
+  const cookies=new Map();try{Object.defineProperty(document,'cookie',{configurable:true,get(){return [...cookies].map(([key,value])=>key+'='+value).join('; ');},set(value){const [pair,...options]=String(value).split(';'),index=pair.indexOf('=');if(index<0)return;const key=pair.slice(0,index).trim();if(options.some(option=>/^\s*max-age\s*=\s*0\s*$/i.test(option)))cookies.delete(key);else cookies.set(key,pair.slice(index+1));}});}catch{}
+ }
+ if(isolated){const original=window.postMessage;window.postMessage=function(message,targetOrigin,transfer){if(this===window){if(targetOrigin==='null')targetOrigin='*';else if(targetOrigin?.targetOrigin==='null')targetOrigin={...targetOrigin,targetOrigin:'*'};}return original.call(this,message,targetOrigin,transfer);};}
+ if(isolated){
+  // URL synchronization is optional inside an embedded demo. Keep its state
+  // local when the browser rejects a URL belonging to the host application.
+  const stateGetter=Object.getOwnPropertyDescriptor(Object.getPrototypeOf(history),'state')?.get;let localState=null,fallback=false;
+  for(const method of ['pushState','replaceState']){const original=history[method].bind(history);history[method]=function(state,unused,url){try{const result=original(state,unused,url);fallback=false;return result;}catch(error){if(error.name!=='SecurityError')throw error;localState=typeof structuredClone==='function'?structuredClone(state):JSON.parse(JSON.stringify(state));fallback=true;}};}
+  if(stateGetter)Object.defineProperty(history,'state',{configurable:true,get(){return fallback?localState:stateGetter.call(history);}});
+ }
+ if(workerBootstrap&&typeof Worker==='function'){
+  const NativeBlob=window.Blob;
+  window.Blob=class extends NativeBlob{static [Symbol.hasInstance](value){return value instanceof NativeBlob;}constructor(parts=[],options={}){
+   const text=parts.every(part=>typeof part==='string')?parts.join(''):'';
+   const script=/javascript/.test(options.type||'')||!options.type&&/^\s*(?:var |let |const |\(?function|["']use strict)/.test(text)&&/\bonmessage\s*=|\bpostMessage\s*\(/.test(text);
+   if(script&&text&&!text.includes('/* umso-worker-compat */')){const strict=text.match(/^\s*(["'])use strict\1\s*;?/);parts=strict?[strict[0]+'\n/* umso-worker-compat */\n'+workerBootstrap+'\n'+text.slice(strict[0].length)]:['/* umso-worker-compat */\n'+workerBootstrap+'\n',...parts];}
+   super(parts,options);
+  }};
+ }
+})("");</script>
+<script>(function(){try{var p=new URLSearchParams(location.search);var t=(p.get('theme')||'').toLowerCase();var dark;if(t==='dark'||p.get('dark')==='true'){dark=true;}else if(t==='light'){dark=false;}else{dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;}var h=document.documentElement,b=document.body;function apply(el){if(!el)return;el.classList.remove('dark','light');el.classList.add(dark?'dark':'light');}apply(h);if(b){apply(b);}else{document.addEventListener('DOMContentLoaded',function(){apply(document.body);});}document.documentElement.style.colorScheme=dark?'dark':'light';}catch(e){document.documentElement.classList.add('dark');}})();</script><meta charset='utf-8'/><meta name='viewport' content='width=device-width,initial-scale=1'>
+<script type="importmap">{"imports":{"react":"https://esm.sh/react@19.1.0","react/jsx-runtime":"https://esm.sh/react@19.1.0/jsx-runtime","react-dom":"https://esm.sh/react-dom@19.1.0","react-dom/client":"https://esm.sh/react-dom@19.1.0/client","clsx":"https://esm.sh/clsx@2.1.1","tailwind-merge":"https://esm.sh/tailwind-merge@3.3.0","@tabler/icons-react":"https://esm.sh/@tabler/icons-react@3.34.0?deps=react@19.1.0"}}</script>
+<script src='https://cdn.tailwindcss.com'></script>
+<script>tailwind.config={darkMode:'class',theme:{extend:{colors:{background:'hsl(var(--background))',foreground:'hsl(var(--foreground))'}}}};</script>
+<style>:root{--background:0 0% 100%;--foreground:0 0% 9%}.dark{--background:0 0% 7%;--foreground:0 0% 98%}html,body,#root{height:100%;margin:0}body{background:hsl(var(--background));color:hsl(var(--foreground));font-family:Inter,ui-sans-serif,system-ui,sans-serif}</style>
+<style>.fixed.top-4.left-4{display:none!important}</style>
+</head><body><div id='root'></div><script type='module'>// ../../../../../tmp/agent-elements-search-tool/entry-default.tsx
+import React2 from "react";
+import { createRoot } from "react-dom/client";
+
+// ../../../../../tmp/agent-elements-search-tool/code.tsx
+import * as React from "react";
+import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+import { IconChevronRight, IconFileText } from "@tabler/icons-react";
+import { jsx, jsxs } from "react/jsx-runtime";
+function cn(...inputs) {
+  return twMerge(clsx(inputs));
+}
+var SHIMMER_STYLE_ID = "an-search-tool-shimmer-styles";
+var SHIMMER_STYLES = `
+@keyframes an-search-shimmer {
+  from { background-position: 100% center; }
+  to { background-position: 0% center; }
+}
+.an-search-shimmer {
+  display: inline-flex;
+  align-items: center;
+  height: 1rem;
+  background-size: 250% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, #a3a3a3 0%, #a3a3a3 40%, #525252 50%, #a3a3a3 60%, #a3a3a3 100%);
+  background-repeat: no-repeat;
+  animation: an-search-shimmer 1.2s linear infinite;
+}
+`;
+var shimmerStylesInjected = false;
+function ensureShimmerStyles() {
+  if (typeof document === "undefined") return;
+  if (shimmerStylesInjected) return;
+  if (document.getElementById(SHIMMER_STYLE_ID)) {
+    shimmerStylesInjected = true;
+    return;
+  }
+  const el = document.createElement("style");
+  el.id = SHIMMER_STYLE_ID;
+  el.textContent = SHIMMER_STYLES;
+  document.head.appendChild(el);
+  shimmerStylesInjected = true;
+}
+var SearchTool = React.memo(function SearchTool2({
+  state = "done",
+  query,
+  results: results2 = [],
+  defaultOpen = false,
+  expanded,
+  onToggleExpand,
+  className
+}) {
+  React.useEffect(() => {
+    ensureShimmerStyles();
+  }, []);
+  const isControlled = expanded !== void 0;
+  const [internalOpen, setInternalOpen] = React.useState(defaultOpen);
+  const isOpen = isControlled ? !!expanded : internalOpen;
+  const isAnimating = state === "searching";
+  const totalResults = results2.length;
+  const expandable = totalResults > 0;
+  const handleToggle = () => {
+    if (!expandable) return;
+    if (isControlled) {
+      onToggleExpand?.();
+    } else {
+      setInternalOpen((v) => !v);
+    }
+  };
+  return /* @__PURE__ */ jsxs("div", { className: cn("flex flex-col gap-2 w-full", className), children: [
+    /* @__PURE__ */ jsxs(
+      "button",
+      {
+        type: "button",
+        onClick: handleToggle,
+        disabled: !expandable,
+        "aria-expanded": expandable ? isOpen : void 0,
+        className: cn(
+          "group flex items-center max-w-full select-none gap-1 bg-transparent border-0 p-0 m-0 text-left",
+          expandable ? "cursor-pointer" : "cursor-default"
+        ),
+        children: [
+          /* @__PURE__ */ jsx("div", { className: "flex items-center gap-2 min-w-0 text-sm text-neutral-500 dark:text-neutral-400", children: /* @__PURE__ */ jsx("span", { className: "font-[450] whitespace-nowrap shrink-0", children: isAnimating ? /* @__PURE__ */ jsx("span", { className: "an-search-shimmer", children: "Searching..." }) : `Found ${totalResults} result${totalResults === 1 ? "" : "s"}` }) }),
+          expandable && /* @__PURE__ */ jsx(
+            IconChevronRight,
+            {
+              className: cn(
+                "shrink-0 text-neutral-500 dark:text-neutral-400 transition-transform duration-150 ease-out size-3",
+                isOpen ? "rotate-90" : "rotate-0"
+              )
+            }
+          )
+        ]
+      }
+    ),
+    expandable && isOpen && /* @__PURE__ */ jsxs("div", { className: "rounded-[10px] overflow-hidden bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800", children: [
+      /* @__PURE__ */ jsxs("div", { className: "flex items-center px-2.5 py-0 border-b border-neutral-200 dark:border-neutral-800 h-7 text-xs gap-1", children: [
+        /* @__PURE__ */ jsx("span", { className: "text-neutral-900 dark:text-neutral-100 font-medium", children: "Searched for" }),
+        " ",
+        /* @__PURE__ */ jsxs("span", { className: "text-neutral-500 dark:text-neutral-400 truncate", children: [
+          "\u201C",
+          query,
+          "\u201D"
+        ] })
+      ] }),
+      /* @__PURE__ */ jsx("div", { className: "max-h-[200px] overflow-y-auto bg-white dark:bg-neutral-950", children: /* @__PURE__ */ jsx("div", { className: "flex flex-col gap-1 p-1", children: results2.map((result, i) => /* @__PURE__ */ jsxs(
+        "div",
+        {
+          className: cn(
+            "flex items-center gap-2 px-2 py-1 rounded-[6px] cursor-default",
+            "hover:bg-neutral-200/50 dark:hover:bg-neutral-800/50"
+          ),
+          children: [
+            /* @__PURE__ */ jsx("div", { className: "flex items-center justify-center w-4 h-4 shrink-0 text-neutral-500 dark:text-neutral-400", children: /* @__PURE__ */ jsx(IconFileText, { className: "w-4 h-4" }) }),
+            /* @__PURE__ */ jsx("span", { className: "text-sm text-neutral-900 dark:text-neutral-100 truncate flex-1 min-w-0", children: result.title }),
+            /* @__PURE__ */ jsx("span", { className: "text-xs text-neutral-500 dark:text-neutral-400 shrink-0 whitespace-nowrap", children: result.date || result.source })
+          ]
+        },
+        i
+      )) }) })
+    ] })
+  ] });
+});
+
+// ../../../../../private/tmp/agent-elements-search-tool/demo-default.tsx
+import { jsx as jsx2 } from "react/jsx-runtime";
+var results = [
+  { title: "United UA837 SFO\u2192NRT \xB7 $1,105 economy", source: "google.com/flights" },
+  { title: "SFO\u2013Tokyo \xB7 14 results from $1,089", source: "expedia.com" },
+  { title: "ANA NH7 Direct SFO\u2192NRT \xB7 $1,240 rt", source: "google.com/flights" }
+];
+function Demo() {
+  return /* @__PURE__ */ jsx2("div", { className: "flex items-center justify-center w-full min-h-screen bg-background p-8 overflow-hidden", children: /* @__PURE__ */ jsx2("div", { className: "w-full max-w-md", children: /* @__PURE__ */ jsx2(
+    SearchTool,
+    {
+      state: "done",
+      query: "best flights to Tokyo",
+      results,
+      defaultOpen: true
+    }
+  ) }) });
+}
+
+// ../../../../../tmp/agent-elements-search-tool/entry-default.tsx
+var root = createRoot(document.getElementById("root"));
+root.render(React2.createElement(Demo));
+requestAnimationFrame(() => {
+  document.body.dataset.ready = "1";
+});
+</script><script>(()=>{const r=()=>requestAnimationFrame(()=>requestAnimationFrame(()=>parent.postMessage({type:"21st-preview-ready"},"*")));document.readyState==="complete"?r():addEventListener("load",r,{once:true})})()</script><script data-21st-keys="1">(()=>{
+if(parent===window)return
+const q='[data-state="open"],dialog[open]'
+const open=()=>document.querySelectorAll(q).length
+addEventListener("keydown",(e)=>{
+const before=open()
+setTimeout(()=>{
+if(e.defaultPrevented||open()<before)return
+const t=(e.composedPath&&e.composedPath()[0])||e.target
+if(t&&(t.isContentEditable||/^(INPUT|TEXTAREA|SELECT)$/.test(t.nodeName)))return
+parent.postMessage({type:"21st-preview-key",key:e.key,code:e.code,altKey:e.altKey,ctrlKey:e.ctrlKey,metaKey:e.metaKey,shiftKey:e.shiftKey},"*")
+},0)
+})
+})()</script></body></html>

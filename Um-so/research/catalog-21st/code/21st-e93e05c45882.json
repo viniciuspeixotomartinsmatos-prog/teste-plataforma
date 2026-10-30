@@ -1,0 +1,1 @@
+{"files": [{"path": "Usage.tsx", "content": "import { SignIn1 } from \"@/components/ui/modern-stunning-sign-in\";\n\nfunction Demo() {\n  return <SignIn1 />;\n}\n\nexport { Demo };\n\nexport default Demo;\n"}], "usageOnly": true, "description": "Dark theme modern and stunning sign-in component."}

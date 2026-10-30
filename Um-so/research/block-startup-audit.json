@@ -1,0 +1,588 @@
+{
+  "checkedAt": "2026-10-27T19:39:26.348Z",
+  "environment": "JSDOM startup audit; layout, GPU rendering and remote media require separate browser verification",
+  "passed": 116,
+  "failed": 0,
+  "results": [
+    {
+      "id": "shadcnblocks-block-about29",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-about3",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-accept-invite1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-application-shell1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-awards1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-background-pattern1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-banner1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-blog120",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-blog7",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-blogpost1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-book-a-demo1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-calendar1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-careers-intro1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-careers4",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-case-studies2",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-case-study8",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-changelog1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-chart-card1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-chart-card3",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-chart-group1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-checkout1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-code-example1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-community1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-company-benefits1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-compare-products1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-compare7",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-compliance1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-contact7",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-content1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-cta10",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-cta11",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-cta34",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-cta35",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-cta36",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-cta37",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-cta38",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-cta39",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-customer-details1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-data-table1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-download2",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-ecommerce-footer1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-experience1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-experience5",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-faq1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-feature1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-feature13",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-feature166",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-feature17",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-feature197",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-feature2",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-feature43",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-feature51",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-feature72",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-feature73",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-footer2",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-gallery6",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-gallery97",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-help1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-hero1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-hero115",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-hero3",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-hero45",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-hero47",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-hero7",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-incentives1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-industries1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-integration3",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-investors1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-invite-user1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-issue-list1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-leaderboard1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-list2",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-live-purchase1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-login1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-logos18",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-logos8",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-navbar1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-navbar35",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-offer-modal4",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-order-summary1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-payment-methods1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-pricing2",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-pricing4",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-pricing6",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-product-card1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-product-categories1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-product-detail1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-product-gallery1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-product-list1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-product-quick-view4",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-product-specs1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-project1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-projects5",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-promo-banner1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-rate-card2",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-resource1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-reviews1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-service1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-services4",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-shader3",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-shopping-cart1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-sidebar1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-signup1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-stats-card1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-stats8",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-team1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-team56",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-testimonial10",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-testimonial9",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-timeline9",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-todo1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-trust-strip1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-user-profile1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-waitlist1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-wishlist1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "id": "shadcnblocks-block-settings-profile1",
+      "passed": true,
+      "errors": []
+    }
+  ]
+}

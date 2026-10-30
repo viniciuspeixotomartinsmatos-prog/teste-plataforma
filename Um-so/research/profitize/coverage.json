@@ -1,0 +1,694 @@
+{
+  "capturedAt": "2026-10-29T18:26:20.873Z",
+  "generatedAt": "2026-10-30T13:51:05.205Z",
+  "observed": 82,
+  "published": 82,
+  "newEntries": 66,
+  "consolidated": [
+    {
+      "recoveredId": "recovered--animated-mosaic-portrait",
+      "id": "21st-9f9f01a9001c",
+      "name": "Animated Mosaic Portrait",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--card-fan-carousel",
+      "id": "21st-eed058c323d7",
+      "name": "Card Fan Carousel",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--cobe-globe",
+      "id": "21st-e55a11521090",
+      "name": "Cobe Globe",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--dashboard-sidebar",
+      "id": "21st-6fc2d8d57282",
+      "name": "Dashboard Sidebar",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--draggable-widget-grid",
+      "id": "21st-4d18a6da85c4",
+      "name": "Draggable Widget Grid",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--finance-bento",
+      "id": "21st-66d9e4f594af",
+      "name": "Finance Bento",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--halftone-wordmark-footer",
+      "id": "21st-09a318832265",
+      "name": "Halftone Wordmark Footer",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--indicator-chart",
+      "id": "21st-e6baa579733c",
+      "name": "Indicator Chart",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--interactive-selector",
+      "id": "21st-c222aff32987",
+      "name": "Interactive Selector",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--perspective-tunnel",
+      "id": "21st-e69ce91a8d2a",
+      "name": "Perspective Tunnel Hero",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--polaroid-line-carousel",
+      "id": "21st-d0cd0e792a0f",
+      "name": "Polaroid Line Carousel",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--progress-metric-card",
+      "id": "21st-18a66baf5b9f",
+      "name": "Progress Metric Card",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--progressive-blur-card",
+      "id": "21st-4edf4db17950",
+      "name": "Progressive Blur Card",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--sign-in-page",
+      "id": "21st-7a9ac2e76797",
+      "name": "Sign In Page",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--web3-bento",
+      "id": "21st-f54d65a5d33b",
+      "name": "Web3 Bento",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--works-wheel",
+      "id": "21st-9b3f0393f89f",
+      "name": "Works Wheel",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    }
+  ],
+  "executable": 75,
+  "recorded": 7,
+  "skipped": [],
+  "failed": [],
+  "downloadedAssets": 113,
+  "downloadedBytes": 0,
+  "items": [
+    {
+      "id": "recovered--3d-globe",
+      "name": "3D Globe",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/3d-globe.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--3d-testimonials",
+      "name": "3D Testimonials",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/3d-testimonials.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--ai-prompt-box",
+      "name": "AI Prompt Box",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/ai-prompt-box.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--ancora",
+      "name": "Âncora",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/ancora.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "21st-9f9f01a9001c",
+      "name": "Animated Mosaic Portrait",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/animated-mosaic-portrait.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--apoteose",
+      "name": "Apoteose",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/apoteose.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--aurora",
+      "name": "Aurora",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/aurora.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--avatar-group",
+      "name": "Avatar Group",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/avatar-group.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--campo",
+      "name": "Campo",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/campo.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "21st-eed058c323d7",
+      "name": "Card Fan Carousel",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/card-fan-carousel.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--circular-navigation",
+      "name": "Circular Navigation",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/circular-navigation.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "name": "Clothing Rail Hero",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/clothing-rail-hero.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "21st-e55a11521090",
+      "name": "Cobe Globe",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/cobe-globe.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--cristal",
+      "name": "Cristal",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/cristal.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--cromo",
+      "name": "Cromo",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/cromo.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "21st-6fc2d8d57282",
+      "name": "Dashboard Sidebar",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/dashboard-sidebar.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "21st-4d18a6da85c4",
+      "name": "Draggable Widget Grid",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/draggable-widget-grid.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--esteira",
+      "name": "Esteira",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/esteira.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "21st-66d9e4f594af",
+      "name": "Finance Bento",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/finance-bento.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--floating-dock",
+      "name": "Floating Dock",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/floating-dock.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--flue",
+      "name": "Flue",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/flue.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--fluxo",
+      "name": "Fluxo",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/fluxo.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--glass-folder",
+      "name": "Glass Folder",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/glass-folder.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--gota",
+      "name": "Gota",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/gota.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "21st-09a318832265",
+      "name": "Halftone Wordmark Footer",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/halftone-wordmark-footer.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--helice",
+      "name": "Hélice",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/helice.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--holo-card",
+      "name": "Holo Card",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/holo-card.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--holo-trading-card",
+      "name": "Holo Trading Card",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/holo-trading-card.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "21st-e6baa579733c",
+      "name": "Indicator Chart",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/indicator-chart.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "21st-c222aff32987",
+      "name": "Interactive Selector",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/interactive-selector.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--limalha",
+      "name": "Limalha",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/limalha.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--liquid-glass-dock",
+      "name": "Liquid Glass Dock",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/liquid-glass-dock.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--liquid-glass",
+      "name": "Liquid Glass",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/liquid-glass.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--mercurio",
+      "name": "Mercúrio",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/mercurio.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--moldura",
+      "name": "Moldura",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/moldura.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--nebulosa",
+      "name": "Nebulosa",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/nebulosa.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "21st-e69ce91a8d2a",
+      "name": "Perspective Tunnel Hero",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/perspective-tunnel.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "21st-d0cd0e792a0f",
+      "name": "Polaroid Line Carousel",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/polaroid-line-carousel.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--pontilhado",
+      "name": "Pontilhado",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/pontilhado.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "21st-18a66baf5b9f",
+      "name": "Progress Metric Card",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/progress-metric-card.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "21st-4edf4db17950",
+      "name": "Progressive Blur Card",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/progressive-blur-card.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--relevo",
+      "name": "Relevo",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/relevo.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "21st-7a9ac2e76797",
+      "name": "Sign In Page",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/sign-in-page.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--tipos",
+      "name": "Tipos",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/tipos.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--topografia",
+      "name": "Topografia",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/topografia.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "21st-f54d65a5d33b",
+      "name": "Web3 Bento",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/web3-bento.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "21st-9b3f0393f89f",
+      "name": "Works Wheel",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/works-wheel.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--alto",
+      "name": "Alto",
+      "mode": "interactive-page",
+      "preview": "/previews/recovered/demos/alto/index.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--aroeira",
+      "name": "Aroeira",
+      "mode": "interactive-page",
+      "preview": "/previews/recovered/demos/aroeira/index.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--brasa",
+      "name": "Brasa",
+      "mode": "interactive-page",
+      "preview": "/previews/recovered/demos/brasa/index.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--breu",
+      "name": "Breu",
+      "mode": "interactive-page",
+      "preview": "/previews/recovered/demos/breu/index.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--classe-g",
+      "name": "Classe G",
+      "mode": "recorded-video",
+      "preview": "/previews/recovered/classe-g.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--clausula",
+      "name": "Cláusula",
+      "mode": "interactive-page",
+      "preview": "/previews/recovered/demos/clausula/index.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--corda",
+      "name": "Corda",
+      "mode": "interactive-page",
+      "preview": "/previews/recovered/demos/corda/index.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--fermento",
+      "name": "Fermento",
+      "mode": "interactive-page",
+      "preview": "/previews/recovered/demos/fermento/index.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--gaivota",
+      "name": "Gaivota",
+      "mode": "interactive-page",
+      "preview": "/previews/recovered/demos/gaivota/index.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--grau",
+      "name": "Grau",
+      "mode": "recorded-video",
+      "preview": "/previews/recovered/grau.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--lastro",
+      "name": "Lastro",
+      "mode": "interactive-page",
+      "preview": "/previews/recovered/demos/lastro/index.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--m4-competition",
+      "name": "M4 Competition",
+      "mode": "recorded-video",
+      "preview": "/previews/recovered/m4-competition.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--margem",
+      "name": "Margem",
+      "mode": "interactive-page",
+      "preview": "/previews/recovered/demos/margem/index.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--mia",
+      "name": "Mia",
+      "mode": "interactive-page",
+      "preview": "/previews/recovered/demos/mia/index.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--mosaik",
+      "name": "Mosaik",
+      "mode": "interactive-page",
+      "preview": "/previews/recovered/demos/mosaik/index.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--nanquim",
+      "name": "Nanquim",
+      "mode": "interactive-page",
+      "preview": "/previews/recovered/demos/nanquim/index.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--norte",
+      "name": "Norte",
+      "mode": "interactive-page",
+      "preview": "/previews/recovered/demos/norte/index.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--nota",
+      "name": "Nota",
+      "mode": "interactive-page",
+      "preview": "/previews/recovered/demos/nota/index.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--prado",
+      "name": "Prado",
+      "mode": "interactive-page",
+      "preview": "/previews/recovered/demos/prado/index.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--proa",
+      "name": "Proa",
+      "mode": "interactive-page",
+      "preview": "/previews/recovered/demos/proa/index.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--prumo",
+      "name": "Prumo",
+      "mode": "interactive-page",
+      "preview": "/previews/recovered/demos/prumo/index.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--rastro",
+      "name": "Rastro",
+      "mode": "recorded-video",
+      "preview": "/previews/recovered/rastro.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--sereno",
+      "name": "Sereno",
+      "mode": "interactive-page",
+      "preview": "/previews/recovered/demos/sereno/index.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--sinal",
+      "name": "Sinal",
+      "mode": "interactive-page",
+      "preview": "/previews/recovered/demos/sinal/index.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--sopro",
+      "name": "Sopro",
+      "mode": "interactive-page",
+      "preview": "/previews/recovered/demos/sopro/index.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--taboa",
+      "name": "Taboa",
+      "mode": "interactive-page",
+      "preview": "/previews/recovered/demos/taboa/index.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--tecla",
+      "name": "Tecla",
+      "mode": "interactive-page",
+      "preview": "/previews/recovered/demos/tecla/index.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--torra",
+      "name": "Torra",
+      "mode": "interactive-page",
+      "preview": "/previews/recovered/demos/torra/index.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--traco",
+      "name": "Traço",
+      "mode": "interactive-page",
+      "preview": "/previews/recovered/demos/traco/index.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--trilha",
+      "name": "Trilha",
+      "mode": "recorded-video",
+      "preview": "/previews/recovered/trilha.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--veio",
+      "name": "Veio",
+      "mode": "interactive-page",
+      "preview": "/previews/recovered/demos/veio/index.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--vulto",
+      "name": "Vulto",
+      "mode": "interactive-page",
+      "preview": "/previews/recovered/demos/vulto/index.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--zenite",
+      "name": "Zênite",
+      "mode": "interactive-page",
+      "preview": "/previews/recovered/demos/zenite/index.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--conhecaoclaude",
+      "name": "Esse é o Claude",
+      "mode": "recorded-video",
+      "preview": "/previews/recovered/conhecaoclaude.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--estreia",
+      "name": "Nova Feature",
+      "mode": "recorded-video",
+      "preview": "/previews/recovered/estreia.html",
+      "promptOrigin": "reconstructed"
+    }
+  ],
+  "limitations": [
+    "All new prompts are explicitly reconstructed; no original server prompt was extracted.",
+    "Compiled demos are not the original editable project sources.",
+    "The recorded-only entries have playable video, not an invented interactive implementation.",
+    "No server-side authentication, billing, database or non-public content was recovered.",
+    "External media in original demos may still require internet."
+  ]
+}

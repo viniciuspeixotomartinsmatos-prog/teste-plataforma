@@ -1,0 +1,188 @@
+<!doctype html><html><head><script data-umso-environment>(function sandboxStorage(workerBootstrap=''){
+ let isolated=false;
+ // Opaque sandbox documents cannot access browser storage. Give each demo an
+ // isolated, temporary store instead of granting access to the app's origin.
+ for(const name of ['localStorage','sessionStorage']){
+  try{window[name].getItem('__preview_probe__');continue;}catch{isolated=true;}
+  const entries=new Map();const storage={get length(){return entries.size;},key(index){return [...entries.keys()][index]??null;},getItem(key){return entries.get(String(key))??null;},setItem(key,value){entries.set(String(key),String(value));},removeItem(key){entries.delete(String(key));},clear(){entries.clear();}};
+  try{Object.defineProperty(window,name,{configurable:true,value:storage});}catch{}
+ }
+ try{if(isolated)throw Error('isolated');void document.cookie;}catch{
+  const cookies=new Map();try{Object.defineProperty(document,'cookie',{configurable:true,get(){return [...cookies].map(([key,value])=>key+'='+value).join('; ');},set(value){const [pair,...options]=String(value).split(';'),index=pair.indexOf('=');if(index<0)return;const key=pair.slice(0,index).trim();if(options.some(option=>/^\s*max-age\s*=\s*0\s*$/i.test(option)))cookies.delete(key);else cookies.set(key,pair.slice(index+1));}});}catch{}
+ }
+ if(isolated){const original=window.postMessage;window.postMessage=function(message,targetOrigin,transfer){if(this===window){if(targetOrigin==='null')targetOrigin='*';else if(targetOrigin?.targetOrigin==='null')targetOrigin={...targetOrigin,targetOrigin:'*'};}return original.call(this,message,targetOrigin,transfer);};}
+ if(isolated){
+  // URL synchronization is optional inside an embedded demo. Keep its state
+  // local when the browser rejects a URL belonging to the host application.
+  const stateGetter=Object.getOwnPropertyDescriptor(Object.getPrototypeOf(history),'state')?.get;let localState=null,fallback=false;
+  for(const method of ['pushState','replaceState']){const original=history[method].bind(history);history[method]=function(state,unused,url){try{const result=original(state,unused,url);fallback=false;return result;}catch(error){if(error.name!=='SecurityError')throw error;localState=typeof structuredClone==='function'?structuredClone(state):JSON.parse(JSON.stringify(state));fallback=true;}};}
+  if(stateGetter)Object.defineProperty(history,'state',{configurable:true,get(){return fallback?localState:stateGetter.call(history);}});
+ }
+ if(workerBootstrap&&typeof Worker==='function'){
+  const NativeBlob=window.Blob;
+  window.Blob=class extends NativeBlob{static [Symbol.hasInstance](value){return value instanceof NativeBlob;}constructor(parts=[],options={}){
+   const text=parts.every(part=>typeof part==='string')?parts.join(''):'';
+   const script=/javascript/.test(options.type||'')||!options.type&&/^\s*(?:var |let |const |\(?function|["']use strict)/.test(text)&&/\bonmessage\s*=|\bpostMessage\s*\(/.test(text);
+   if(script&&text&&!text.includes('/* umso-worker-compat */')){const strict=text.match(/^\s*(["'])use strict\1\s*;?/);parts=strict?[strict[0]+'\n/* umso-worker-compat */\n'+workerBootstrap+'\n'+text.slice(strict[0].length)]:['/* umso-worker-compat */\n'+workerBootstrap+'\n',...parts];}
+   super(parts,options);
+  }};
+ }
+})("");</script>
+<script>(function(){try{var p=new URLSearchParams(location.search);var t=(p.get('theme')||'').toLowerCase();var dark;if(t==='dark'||p.get('dark')==='true'){dark=true;}else if(t==='light'){dark=false;}else{dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;}var h=document.documentElement,b=document.body;function apply(el){if(!el)return;el.classList.remove('dark','light');el.classList.add(dark?'dark':'light');}apply(h);if(b){apply(b);}else{document.addEventListener('DOMContentLoaded',function(){apply(document.body);});}document.documentElement.style.colorScheme=dark?'dark':'light';}catch(e){document.documentElement.classList.add('dark');}})();</script><meta charset='utf-8'/><meta name='viewport' content='width=device-width,initial-scale=1'>
+<script type="importmap">{"imports":{"react":"https://esm.sh/react@19.1.0","react/jsx-runtime":"https://esm.sh/react@19.1.0/jsx-runtime","react-dom":"https://esm.sh/react-dom@19.1.0","react-dom/client":"https://esm.sh/react-dom@19.1.0/client","clsx":"https://esm.sh/clsx@2.1.1","tailwind-merge":"https://esm.sh/tailwind-merge@3.3.0","lottie-react":"https://esm.sh/lottie-react@2.4.1?deps=react@19.1.0,react-dom@19.1.0"}}</script>
+<script src='https://cdn.tailwindcss.com'></script>
+<script>tailwind.config={darkMode:'class',theme:{extend:{colors:{background:'hsl(var(--background))',foreground:'hsl(var(--foreground))'}}}};</script>
+<style>:root{--background:0 0% 100%;--foreground:0 0% 9%}.dark{--background:0 0% 7%;--foreground:0 0% 98%}html,body,#root{height:100%;margin:0}body{background:hsl(var(--background));color:hsl(var(--foreground));font-family:Inter,ui-sans-serif,system-ui,sans-serif}</style>
+<style>.fixed.top-4.left-4{display:none!important}</style>
+</head><body><div id='root'></div><script type='module'>// ../../../../../tmp/agent-elements-spiral-loader/entry-default.tsx
+import React2 from "react";
+import { createRoot } from "react-dom/client";
+
+// ../../../../../tmp/agent-elements-spiral-loader/code.tsx
+import * as React from "react";
+import Lottie from "lottie-react";
+import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+import { jsx, jsxs } from "react/jsx-runtime";
+function cn(...inputs) {
+  return twMerge(clsx(inputs));
+}
+var FAST_REPEATS = 4;
+var SLOW_REPEATS = 2;
+var spiralFastData = { "nm": "spiral2", "h": 16, "w": 16, "meta": { "g": "@lottiefiles/toolkit-js 0.71.7" }, "layers": [{ "ty": 4, "nm": "Vector 5821 copy Outlines", "sr": 1, "st": 0, "op": 30, "ip": 0, "ln": "18", "hasMask": false, "ao": 0, "ks": { "a": { "a": 0, "k": [12.5, 6.5, 0] }, "s": { "a": 0, "k": [100, 100, 100] }, "p": { "a": 1, "k": [{ "o": { "x": 0.167, "y": 0.167 }, "i": { "x": 0.833, "y": 0.833 }, "s": [12, 8, 0], "t": 0 }, { "s": [4, 8, 0], "t": 29 }] }, "r": { "a": 0, "k": 0 }, "sa": { "a": 0, "k": 0 }, "o": { "a": 0, "k": 24 } }, "shapes": [{ "ty": "gr", "nm": "Group 1", "it": [{ "ty": "sh", "nm": "Path 1", "d": 1, "ks": { "a": 0, "k": { "c": false, "i": [[0, 0], [-0.289, 3.296], [2.218, 0], [-0.23, -2.627], [-4.452, 0], [-0.289, 3.296], [2.218, 0], [-0.23, -2.627], [-4.452, 0], [-0.289, 3.296], [2.218, 0], [-0.232, -2.627], [-4.443, 0]], "o": [[4.452, 0], [0.23, -2.627], [-2.218, 0], [0.289, 3.296], [4.452, 0], [0.23, -2.627], [-2.218, 0], [0.289, 3.296], [4.452, 0], [0.23, -2.627], [-2.218, 0], [0.292, 3.296], [0, 0]], "v": [[-12, 6], [-4.975, -1.012], [-8, -6], [-11.025, -1.012], [-4, 6], [3.025, -1.012], [0, -6], [-3.025, -1.012], [4, 6], [11.025, -1.012], [8, -6], [4.98, -1.012], [12, 6]] } } }, { "ty": "st", "nm": "Stroke 1", "lc": 2, "lj": 2, "ml": 4, "o": { "a": 0, "k": 100 }, "w": { "a": 0, "k": 1.4 }, "c": { "a": 0, "k": [1, 1, 1] } }, { "ty": "tr", "a": { "a": 0, "k": [0, 0] }, "s": { "a": 0, "k": [100, 100] }, "p": { "a": 0, "k": [12.5, 6.5] }, "r": { "a": 0, "k": 0 }, "sa": { "a": 0, "k": 0 }, "o": { "a": 0, "k": 100 } }] }, { "ty": "tm", "nm": "Trim Paths 1", "e": { "a": 1, "k": [{ "o": { "x": 0.341, "y": 0.488 }, "i": { "x": 0.269, "y": 0.75 }, "s": [44], "t": 0 }, { "s": [77], "t": 29 }] }, "o": { "a": 0, "k": 0 }, "s": { "a": 1, "k": [{ "o": { "x": 0.32, "y": 0.154 }, "i": { "x": 0.826, "y": 0.579 }, "s": [23], "t": 0 }, { "s": [57], "t": 29 }] }, "m": 1 }], "ind": 1 }], "v": "5.7.0", "fr": 60, "op": 30, "ip": 0, "assets": [] };
+var spiralSlowData = { "nm": "spiral1", "h": 16, "w": 16, "meta": { "g": "@lottiefiles/toolkit-js 0.71.7" }, "layers": [{ "ty": 4, "nm": "Vector 5821 copy Outlines", "sr": 1, "st": 0, "op": 60, "ip": 0, "ln": "18", "hasMask": false, "ao": 0, "ks": { "a": { "a": 0, "k": [12.5, 6.5, 0] }, "s": { "a": 0, "k": [100, 100, 100] }, "p": { "a": 1, "k": [{ "o": { "x": 0.167, "y": 0.167 }, "i": { "x": 0.833, "y": 0.833 }, "s": [12, 8, 0], "t": 0 }, { "s": [4, 8, 0], "t": 59 }] }, "r": { "a": 0, "k": 0 }, "sa": { "a": 0, "k": 0 }, "o": { "a": 0, "k": 24 } }, "shapes": [{ "ty": "gr", "nm": "Group 1", "it": [{ "ty": "sh", "nm": "Path 1", "d": 1, "ks": { "a": 0, "k": { "c": false, "i": [[0, 0], [-0.289, 3.296], [2.218, 0], [-0.23, -2.627], [-4.452, 0], [-0.289, 3.296], [2.218, 0], [-0.23, -2.627], [-4.452, 0], [-0.289, 3.296], [2.218, 0], [-0.232, -2.627], [-4.443, 0]], "o": [[4.452, 0], [0.23, -2.627], [-2.218, 0], [0.289, 3.296], [4.452, 0], [0.23, -2.627], [-2.218, 0], [0.289, 3.296], [4.452, 0], [0.23, -2.627], [-2.218, 0], [0.292, 3.296], [0, 0]], "v": [[-12, 6], [-4.975, -1.012], [-8, -6], [-11.025, -1.012], [-4, 6], [3.025, -1.012], [0, -6], [-3.025, -1.012], [4, 6], [11.025, -1.012], [8, -6], [4.98, -1.012], [12, 6]] } } }, { "ty": "st", "nm": "Stroke 1", "lc": 2, "lj": 2, "ml": 4, "o": { "a": 0, "k": 100 }, "w": { "a": 0, "k": 1.4 }, "c": { "a": 0, "k": [1, 1, 1] } }, { "ty": "tr", "a": { "a": 0, "k": [0, 0] }, "s": { "a": 0, "k": [100, 100] }, "p": { "a": 0, "k": [12.5, 6.5] }, "r": { "a": 0, "k": 0 }, "sa": { "a": 0, "k": 0 }, "o": { "a": 0, "k": 100 } }] }, { "ty": "tm", "nm": "Trim Paths 1", "e": { "a": 1, "k": [{ "o": { "x": 0.341, "y": 0.992 }, "i": { "x": 0.269, "y": 0.491 }, "s": [44], "t": 0 }, { "s": [77], "t": 59 }] }, "o": { "a": 0, "k": 0 }, "s": { "a": 1, "k": [{ "o": { "x": 0.32, "y": 0.313 }, "i": { "x": 0.826, "y": 0.143 }, "s": [23], "t": 0 }, { "s": [57], "t": 59 }] }, "m": 1 }], "ind": 1 }], "v": "5.7.0", "fr": 60, "op": 60, "ip": 0, "assets": [] };
+function useIsDarkTheme() {
+  const [isDark, setIsDark] = React.useState(false);
+  React.useEffect(() => {
+    const update = () => {
+      setIsDark(document.documentElement.classList.contains("dark"));
+    };
+    update();
+    const observer = new MutationObserver(update);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"]
+    });
+    return () => observer.disconnect();
+  }, []);
+  return isDark;
+}
+function SpiralLoader({ size = 16, className }) {
+  const [isMounted, setIsMounted] = React.useState(false);
+  const [phase, setPhase] = React.useState("fast");
+  const repeatCountRef = React.useRef(0);
+  const fastRef = React.useRef(null);
+  const slowRef = React.useRef(null);
+  const isDark = useIsDarkTheme();
+  React.useEffect(() => {
+    setIsMounted(true);
+  }, []);
+  const startFastPhase = React.useCallback(() => {
+    repeatCountRef.current = 0;
+    setPhase("fast");
+    slowRef.current?.stop();
+    fastRef.current?.goToAndPlay(0, true);
+  }, []);
+  const startSlowPhase = React.useCallback(() => {
+    repeatCountRef.current = 0;
+    setPhase("slow");
+    fastRef.current?.stop();
+    slowRef.current?.goToAndPlay(0, true);
+  }, []);
+  const handleFastComplete = React.useCallback(() => {
+    repeatCountRef.current += 1;
+    if (repeatCountRef.current < FAST_REPEATS) {
+      fastRef.current?.goToAndPlay(0, true);
+    } else {
+      startSlowPhase();
+    }
+  }, [startSlowPhase]);
+  const handleSlowComplete = React.useCallback(() => {
+    repeatCountRef.current += 1;
+    if (repeatCountRef.current < SLOW_REPEATS) {
+      slowRef.current?.goToAndPlay(0, true);
+    } else {
+      startFastPhase();
+    }
+  }, [startFastPhase]);
+  if (!isMounted) return null;
+  const needsInvert = !isDark;
+  return /* @__PURE__ */ jsxs(
+    "div",
+    {
+      className: cn("relative shrink-0", className),
+      style: { width: size, height: size },
+      children: [
+        /* @__PURE__ */ jsx(
+          "div",
+          {
+            className: cn(
+              "absolute inset-0 transition-opacity duration-75",
+              needsInvert && "invert",
+              phase === "fast" ? "opacity-100" : "opacity-0"
+            ),
+            children: /* @__PURE__ */ jsx(
+              Lottie,
+              {
+                lottieRef: fastRef,
+                animationData: spiralFastData,
+                loop: false,
+                autoplay: true,
+                onComplete: handleFastComplete,
+                style: { width: "100%", height: "100%" }
+              }
+            )
+          }
+        ),
+        /* @__PURE__ */ jsx(
+          "div",
+          {
+            className: cn(
+              "absolute inset-0 transition-opacity duration-75",
+              needsInvert && "invert",
+              phase === "slow" ? "opacity-100" : "opacity-0"
+            ),
+            children: /* @__PURE__ */ jsx(
+              Lottie,
+              {
+                lottieRef: slowRef,
+                animationData: spiralSlowData,
+                loop: false,
+                autoplay: false,
+                onComplete: handleSlowComplete,
+                style: { width: "100%", height: "100%" }
+              }
+            )
+          }
+        )
+      ]
+    }
+  );
+}
+
+// ../../../../../private/tmp/agent-elements-spiral-loader/demo-default.tsx
+import { jsx as jsx2 } from "react/jsx-runtime";
+function Demo() {
+  return /* @__PURE__ */ jsx2("div", { className: "flex h-full w-full items-center justify-center p-8", children: /* @__PURE__ */ jsx2(SpiralLoader, { size: 24 }) });
+}
+
+// ../../../../../tmp/agent-elements-spiral-loader/entry-default.tsx
+var root = createRoot(document.getElementById("root"));
+root.render(React2.createElement(Demo));
+requestAnimationFrame(() => {
+  document.body.dataset.ready = "1";
+});
+</script><script>(()=>{const r=()=>requestAnimationFrame(()=>requestAnimationFrame(()=>parent.postMessage({type:"21st-preview-ready"},"*")));document.readyState==="complete"?r():addEventListener("load",r,{once:true})})()</script><script data-21st-keys="1">(()=>{
+if(parent===window)return
+const q='[data-state="open"],dialog[open]'
+const open=()=>document.querySelectorAll(q).length
+addEventListener("keydown",(e)=>{
+const before=open()
+setTimeout(()=>{
+if(e.defaultPrevented||open()<before)return
+const t=(e.composedPath&&e.composedPath()[0])||e.target
+if(t&&(t.isContentEditable||/^(INPUT|TEXTAREA|SELECT)$/.test(t.nodeName)))return
+parent.postMessage({type:"21st-preview-key",key:e.key,code:e.code,altKey:e.altKey,ctrlKey:e.ctrlKey,metaKey:e.metaKey,shiftKey:e.shiftKey},"*")
+},0)
+})
+})()</script></body></html>

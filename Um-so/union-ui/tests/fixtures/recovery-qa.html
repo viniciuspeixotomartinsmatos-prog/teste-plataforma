@@ -1,0 +1,16 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Recovery QA</title></head><body><h1>Prévia: teste automático de inicialização</h1><p id="progress">Preparando</p><ol id="results"></ol><div id="stage"></div><script type="module">
+const selection=new URLSearchParams(location.search).get('only')?.split(',');
+const items=(await(await fetch('/data/catalog-live.json')).json()).filter(x=>(x.sourceId==='recovered'||x.recoverySourceId==='recovered')&&(!selection||selection.includes(x.slug)));
+const outcomes=[];const stage=document.getElementById('stage');stage.style.cssText='position:fixed;top:0;left:0;opacity:.01;pointer-events:none;z-index:-1';let current;
+for(const item of items){
+ document.getElementById('progress').textContent=`${outcomes.length}/${items.length}: ${item.name}`;
+ let html=await(await fetch(item.previewPath)).text();
+ const base=new URL(item.previewPath,location.href).href;
+ const probe=`<base href="${base}"><script>(()=>{const errors=[];window.addEventListener('error',e=>{if(e.target===window)errors.push(e.message+' | '+String(e.error?.stack||'').slice(0,500))});window.addEventListener('unhandledrejection',e=>errors.push(String(e.reason?.message||e.reason)));window.addEventListener('load',()=>setTimeout(()=>{const root=document.getElementById('root')||document.body;parent.postMessage({qaId:${JSON.stringify(item.id)},errors,text:root.innerText?.trim().length||0,canvases:root.querySelectorAll('canvas').length,controls:root.querySelectorAll('input,button,video,svg,img').length,notices:[...document.querySelectorAll('[data-recovery-notice]')].map(x=>x.textContent),images:[...root.querySelectorAll('img')].filter(x=>x.complete&&!x.naturalWidth).map(x=>x.getAttribute('src'))},'*')},${['cromo','mosaik'].includes(item.slug)?6000:1800}));})();<\/script>`;
+ html=html.replace(/<head(?:\s[^>]*)?>/i,match=>match+probe);
+ const frame=document.createElement('iframe');frame.style.cssText='width:1200px;height:800px';frame.sandbox='allow-scripts allow-downloads';
+ const result=await new Promise(resolve=>{const timer=setTimeout(()=>{window.removeEventListener('message',listener);resolve({qaId:item.id,errors:['timeout']})},15000);function listener(e){if(e.source!==frame.contentWindow||e.data?.qaId!==item.id)return;clearTimeout(timer);window.removeEventListener('message',listener);resolve(e.data)}window.addEventListener('message',listener);stage.append(frame);frame.srcdoc=html;});
+ frame.remove();const dependencyWarning=Boolean(result.notices?.length&&result.errors.every(e=>e==='Failed to fetch'));const good=(!result.errors.length||dependencyWarning)&&(result.text||result.canvases||result.controls);outcomes.push({...result,name:item.name,ok:!!good,dependencyWarning});const li=document.createElement('li');li.textContent=(good?'PASS ':'FAIL ')+item.name+' '+result.errors.join('; ').slice(0,160)+(result.images?.length?' images='+result.images.length:'');document.getElementById('results').append(li);
+}
+document.getElementById('progress').textContent=`Concluído: ${outcomes.filter(x=>x.ok).length}/${items.length}`;const output=document.createElement('pre');output.id='qa-json';output.textContent=JSON.stringify(outcomes);document.body.append(output);
+</script></body></html>

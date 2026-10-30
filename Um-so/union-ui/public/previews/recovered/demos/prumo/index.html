@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="pt-BR" class="is-intro">
+<head><script src="/previews/recovered/compat.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prumo — casas em terreno difícil, do desenho à chave</title>
+  <meta name="description" content="Prumo, construtora de casas no litoral norte de São Paulo e na serra. Projetamos e construímos com preço fechado: 38 casas entregues em encosta, restinga, ilha e serra." />
+  <meta name="theme-color" content="#0b0b0b" />
+  <link rel="icon" href="/previews/recovered/demos/prumo/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="/previews/recovered/demos/prumo/intro/nuvens.webp" as="image" type="image/webp" />
+  <link rel="preload" href="/previews/recovered/demos/prumo/frames/obra/0001.webp" as="image" type="image/webp" />
+  <!-- CSS crítico do loader: vale desde o 1º quadro, antes do CSS e do JS do site chegarem (sem ele, o pôster das
+       nuvens pisca antes do loader). O resto do loader está em src/sections/intro.css. -->
+  <style>html.is-intro{background:#0b0b0b;overflow:hidden}.intro{z-index:100;background:#0b0b0b;position:fixed;inset:0}.loader{position:absolute;inset:0}.loader__half{background:#0b0b0b;width:calc(50% + 1px);position:absolute;top:0;bottom:0}.loader__half--l{left:0}.loader__half--r{right:0}.loader__plumb,.loader__n,.loader__meta,.intro__mark{opacity:0}</style>
+  <script type="module" crossorigin src="/previews/recovered/demos/prumo/assets/index-fGCpf9UT.js"></script>
+  <link rel="stylesheet" crossorigin href="/previews/recovered/demos/prumo/assets/index-D-O6Ylft.css">
+</head>
+<body>
+  <!-- Abertura: o loader (o fio de prumo desce com o download) abre sobre o vídeo do drone, que desce das nuvens e
+       para no 1º frame do hero. O vídeo não tem src aqui: o loader baixa ele inteiro e conta os bytes. -->
+  <div class="intro" aria-hidden="true">
+    <video poster="/previews/recovered/demos/prumo/intro/nuvens.webp" muted playsinline preload="none"></video>
+    <div class="hero__shade intro__shade"></div>
+    <div class="loader">
+      <div class="loader__half loader__half--l"></div>
+      <div class="loader__half loader__half--r"></div>
+      <div class="loader__plumb">
+        <div class="loader__swing">
+          <i class="loader__line"></i>
+          <div class="loader__bob">
+            <i class="loader__bar"></i>
+            <svg class="loader__weight" viewBox="11.5 45.4 37.4 42.6"><path d="M11.5 45.4H48.9V63.5L30.2 88L11.5 63.5Z" /></svg>
+          </div>
+        </div>
+      </div>
+      <span class="loader__n mono">000</span>
+      <p class="loader__meta mono"><span class="loader__video">Vídeo</span><span class="loader__frames">Quadros</span></p>
+    </div>
+    <div class="intro__mark"><svg viewBox="0 0 296.2 72.8"><use href="#logo-word" /></svg></div>
+  </div>
+
+  <!-- Topo: só o logo no centro e o orçamento no canto -->
+  <header class="top">
+    <a class="top__logo" href="#topo" aria-label="Prumo, início">
+      <svg class="logo" viewBox="0 0 296.2 72.8" aria-hidden="true"><use href="#logo-word" /></svg>
+    </a>
+    <a class="top__cta mono" href="#terreno"><span aria-hidden="true">↳</span> Pedir orçamento</a>
+  </header>
+
+  <!-- Barra flutuante no pé: símbolo, seção atual e menu -->
+  <nav class="dock" aria-label="Menu">
+    <a class="dock__mark" href="#topo" aria-label="Início"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#logo-mark" /></svg></a>
+    <span class="dock__label mono" aria-live="polite">Início</span>
+    <button class="dock__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="menu" id="menu" hidden>
+    <a href="#topo"><span class="mono">01</span>Início</a>
+    <a href="#metodo"><span class="mono">02</span>Método</a>
+    <a href="#obras"><span class="mono">03</span>Obras</a>
+    <a href="#preco"><span class="mono">04</span>Preço fechado</a>
+    <a href="#terreno"><span class="mono">05</span>Tenho um terreno</a>
+  </div>
+
+  <main id="topo">
+    <!-- 01 Hero: a obra da Casa Feiticeira presa ao scroll, cinco planos -->
+    <section class="hero" aria-label="Prumo, do desenho à chave" data-label="Início">
+      <canvas class="hero__canvas" aria-hidden="true"></canvas>
+      <img class="hero__still" src="/previews/recovered/demos/prumo/frames/obra/0001.webp" alt="" aria-hidden="true" />
+      <div class="hero__shade" aria-hidden="true"></div>
+
+      <div class="opening">
+        <h1 class="hero__title" data-roll>
+          <span class="line"><span>Casas em terreno difícil,</span></span>
+          <span class="line"><span>do desenho à chave.</span></span>
+        </h1>
+      </div>
+
+      <div class="step" data-label="2017 · Projeto">
+        <p class="step__year mono">2017 · Projeto</p>
+        <p class="hero__title" data-roll><span class="line"><span>Do desenho…</span></span></p>
+        <p class="step__fact">Doze semanas de projeto antes da primeira máquina.<br />Nenhuma árvore com mais de 30 cm de tronco saiu.</p>
+      </div>
+      <div class="step" data-label="2018 · Fundação">
+        <p class="step__year mono">2018 · Fundação</p>
+        <p class="hero__title" data-roll><span class="line"><span>…à fundação…</span></span></p>
+        <p class="step__fact">Doze pilares na encosta e 340 m³ de terra movida,<br />metade do que pedia uma casa no chão.</p>
+      </div>
+      <div class="step" data-label="2019 · Estrutura">
+        <p class="step__year mono">2019 · Estrutura</p>
+        <p class="hero__title" data-roll><span class="line"><span>…ao concreto…</span></span></p>
+        <p class="step__fact">Duas lajes com fôrma de tábua,<br />cada uma concretada de uma vez, numa noite.</p>
+      </div>
+      <div class="step" data-label="2020 · Acabamento">
+        <p class="step__year mono">2020 · Acabamento</p>
+        <p class="hero__title" data-roll><span class="line"><span>…ao acabamento…</span></span></p>
+        <p class="step__fact">4.800 ripas de freijó encaixadas à mão<br />e seis folhas de vidro de 12 metros.</p>
+      </div>
+      <div class="step" data-label="2021 · Entrega">
+        <p class="step__year mono">2021 · Entrega</p>
+        <p class="hero__title" data-roll><span class="line"><span>…à chave.</span></span></p>
+        <p class="step__fact">26 meses de obra. Entregue 11 dias antes do prazo,<br />1,8% acima do orçamento assinado.</p>
+      </div>
+
+      <p class="hero__count mono" aria-hidden="true">Obra 014 · Mês <span class="hero__m">00</span>/26</p>
+    </section>
+
+    <!-- 02 Faixa de dados -->
+    <section class="facts" aria-label="A Prumo em números" data-label="Números">
+      <dl>
+        <div data-rise><dt class="mono">Casas entregues</dt><dd>38</dd></div>
+        <div data-rise><dt class="mono">Anos de obra</dt><dd>14</dd></div>
+        <div data-rise><dt class="mono">Obras paradas</dt><dd>0</dd></div>
+        <div data-rise><dt class="mono">Desvio médio de orçamento</dt><dd>2,1%</dd></div>
+        <div data-rise><dt class="mono">Engenheira por obra</dt><dd>1</dd></div>
+      </dl>
+    </section>
+
+    <!-- 03 Método -->
+    <section class="method" id="metodo" data-label="Método">
+      <header class="sec-head">
+        <p class="mono label">Método</p>
+        <h2 class="title" data-roll>
+          <span class="line"><span>Uma equipe do primeiro traço</span></span>
+          <span class="line"><span>à última ripa.</span></span>
+        </h2>
+      </header>
+      <div class="method__grid">
+        <ol class="method__list">
+          <li data-rise>
+            <span class="mono method__n">01</span>
+            <h3>Leitura do terreno</h3>
+            <p class="mono method__time">3 semanas</p>
+            <p>Topografia, sondagem do solo, laudo de vegetação e o caminho do sol em cada estação. Você recebe: o terreno em números e o que ele permite.</p>
+          </li>
+          <li data-rise>
+            <span class="mono method__n">02</span>
+            <h3>Projeto</h3>
+            <p class="mono method__time">10 a 14 semanas</p>
+            <p>Arquitetura, estrutura e instalações desenhadas juntas, pela mesma equipe que vai construir. Você recebe: maquete, projeto completo e orçamento linha a linha.</p>
+          </li>
+          <li data-rise>
+            <span class="mono method__n">03</span>
+            <h3>Contrato fechado</h3>
+            <p class="mono method__time">1 semana</p>
+            <p>Preço, prazo e multa por atraso no mesmo papel. Você recebe: o número que vai pagar, e mais nenhum.</p>
+          </li>
+          <li data-rise>
+            <span class="mono method__n">04</span>
+            <h3>Obra</h3>
+            <p class="mono method__time">14 a 26 meses</p>
+            <p>Uma engenheira dedicada, um mestre de obras fixo, relatório com fotos toda sexta. Você recebe: a obra no celular sem precisar descer a serra.</p>
+          </li>
+          <li data-rise>
+            <span class="mono method__n">05</span>
+            <h3>Chave e garantia</h3>
+            <p class="mono method__time">5 anos</p>
+            <p>Manual da casa, as built e uma visita por ano durante cinco anos. Você recebe: alguém que atende quando a chuva de março testar o telhado.</p>
+          </li>
+        </ol>
+        <figure class="method__photo" data-rise>
+          <img src="/previews/recovered/demos/prumo/img/canteiro.webp" alt="Engenheira e mestre de obras conferindo o projeto e a maquete no contêiner do canteiro." loading="lazy" />
+          <figcaption class="mono">Canteiro da obra 014 · sexta, 7h40</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 04 Obras entregues -->
+    <section class="works" id="obras" data-label="Obras">
+      <header class="sec-head">
+        <p class="mono label">Obras entregues</p>
+        <h2 class="title" data-roll><span class="line"><span>Quatro de trinta e oito.</span></span></h2>
+      </header>
+      <div class="works__grid">
+        <article class="work work--wide" data-rise>
+          <figure><img src="/previews/recovered/demos/prumo/img/casa-feiticeira.webp" alt="Casa de concreto e freijó numa encosta de mata sobre a baía, ao pôr do sol." loading="lazy" /></figure>
+          <div class="work__meta">
+            <h3>Casa Feiticeira</h3>
+            <dl class="mono"><div><dt>Local</dt><dd>Ilhabela, SP</dd></div><div><dt>Entrega</dt><dd>2021</dd></div><div><dt>Área</dt><dd>1.140 m²</dd></div><div><dt>Prazo</dt><dd>−11 dias</dd></div><div><dt>Orçamento</dt><dd>+1,8%</dd></div></dl>
+          </div>
+        </article>
+        <article class="work" data-rise>
+          <figure><img src="/previews/recovered/demos/prumo/img/casa-boicucanga.webp" alt="Casa térrea sobre pilotis num jardim de restinga, com muxarabis de madeira." loading="lazy" /></figure>
+          <div class="work__meta">
+            <h3>Casa Boiçucanga</h3>
+            <dl class="mono"><div><dt>Local</dt><dd>São Sebastião, SP</dd></div><div><dt>Entrega</dt><dd>2023</dd></div><div><dt>Área</dt><dd>420 m²</dd></div><div><dt>Prazo</dt><dd>no dia</dd></div><div><dt>Orçamento</dt><dd>+0,6%</dd></div></dl>
+          </div>
+        </article>
+        <article class="work" data-rise>
+          <figure><img src="/previews/recovered/demos/prumo/img/casa-serra.webp" alt="Casa de pedra e telhado escuro na serra, com o vale em névoa e araucárias." loading="lazy" /></figure>
+          <div class="work__meta">
+            <h3>Casa Mantiqueira</h3>
+            <dl class="mono"><div><dt>Local</dt><dd>Gonçalves, MG</dd></div><div><dt>Entrega</dt><dd>2024</dd></div><div><dt>Área</dt><dd>610 m²</dd></div><div><dt>Prazo</dt><dd>+9 dias</dd></div><div><dt>Orçamento</dt><dd>+2,4%</dd></div></dl>
+          </div>
+        </article>
+        <article class="work work--wide" data-rise>
+          <figure><img src="/previews/recovered/demos/prumo/img/casa-ibiraquera.webp" alt="Casa de tijolo caiado em volta de um pátio com uma figueira, perto da lagoa." loading="lazy" /></figure>
+          <div class="work__meta">
+            <h3>Casa Ibiraquera</h3>
+            <dl class="mono"><div><dt>Local</dt><dd>Imbituba, SC</dd></div><div><dt>Entrega</dt><dd>2025</dd></div><div><dt>Área</dt><dd>380 m²</dd></div><div><dt>Prazo</dt><dd>−4 dias</dd></div><div><dt>Orçamento</dt><dd>+1,1%</dd></div></dl>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 05 Preço fechado -->
+    <section class="price" id="preco" data-label="Preço fechado">
+      <p class="mono label">Preço fechado</p>
+      <h2 class="statement" data-roll>
+        <span class="line"><span>O preço que a gente assina</span></span>
+        <span class="line"><span>é o preço que você paga.</span></span>
+      </h2>
+      <ul class="price__list">
+        <li data-rise><span class="mono">01</span>Se o material sobe no meio da obra, a diferença é nossa.</li>
+        <li data-rise><span class="mono">02</span>Atrasou, a Prumo paga 0,1% do contrato por dia, descontado na parcela.</li>
+        <li data-rise><span class="mono">03</span>Mudança só entra com orçamento assinado antes, item por item.</li>
+      </ul>
+    </section>
+
+    <!-- 06 Depoimento -->
+    <section class="quote" data-label="Clientes">
+      <blockquote data-rise>
+        <p>“Moro em São Paulo e fui à obra seis vezes em dois anos. Toda sexta tinha foto, número e o que ia acontecer na semana seguinte. A casa ficou como a maquete.”</p>
+        <footer class="mono">Helena Arruda · Casa Feiticeira, 2021</footer>
+      </blockquote>
+    </section>
+
+    <!-- 07 Fecho -->
+    <section class="close" id="terreno" data-label="Contato">
+      <div class="close__inner">
+        <div class="close__text">
+          <p class="mono label">Começar</p>
+          <h2 class="title" data-roll><span class="line"><span>Tem um terreno?</span></span></h2>
+          <p data-rise>Conte onde fica. Em até três dias úteis a engenheira liga para marcar uma visita, sem custo até o estudo do terreno.</p>
+        </div>
+        <form class="form" action="#" onsubmit="event.preventDefault(); this.classList.add('is-sent');" data-rise>
+          <label><span class="mono">Cidade do terreno</span><input type="text" name="cidade" placeholder="Ilhabela, SP" required /></label>
+          <label><span class="mono">Tamanho</span><input type="text" name="tamanho" placeholder="2.400 m²" /></label>
+          <label class="form__wide"><span class="mono">Em que pé está</span>
+            <select name="fase"><option>Ainda estou comprando o terreno</option><option selected>Tenho o terreno, sem projeto</option><option>Tenho projeto, preciso construir</option></select>
+          </label>
+          <label><span class="mono">Nome</span><input type="text" name="nome" autocomplete="name" required /></label>
+          <label><span class="mono">WhatsApp</span><input type="tel" name="whatsapp" autocomplete="tel" placeholder="(11) 9 0000-0000" required /></label>
+          <button class="btn form__wide" type="submit">Pedir a visita <span aria-hidden="true">→</span></button>
+          <p class="form__ok mono form__wide" role="status">Recebido. A engenheira liga em até três dias úteis.</p>
+        </form>
+      </div>
+      <footer class="foot">
+        <svg class="foot__logo" viewBox="0 0 380.2 133" aria-hidden="true"><use href="#logo-lockup" /></svg>
+        <div class="foot__row mono">
+          <span>Prumo Engenharia e Construção · São Sebastião, SP</span>
+          <span>obras@prumo.eng.br · (12) 9 0000-0000</span>
+          <span>© 2026 Prumo</span>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <!-- Logo (símbolo e assinatura), desenhado a partir do conceito em fonte/logo-conceito.jpg -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="logo-mark" viewBox="-36.3 -45 133 133"><rect x="28" y="-45" width="4.4" height="92"/><rect x="0" y="29" width="60.4" height="4.4"/><path d="M11.5 45.4H48.9V63.5L30.2 88L11.5 63.5Z"/></symbol>
+      <symbol id="logo-word" viewBox="0 0 296.2 72.8"><path d="M24.90 46.80C41 46.80 51.40 38.30 51.40 23.20C51.40 8.20 41 0 24.90 0L0 0L0 71.80L11 71.80L11 46.80ZM24.80 9.30C34.50 9.30 40.40 14.40 40.40 23.30C40.40 32.20 34.50 37.50 24.80 37.50L11 37.50L11 9.30ZM71.70 44.70C71.70 33.00 80.00 28.00 91.40 28.60L91.40 18.10C82.70 18.10 74.70 22.70 71.00 30.00L71.00 18.80L61.60 18.80L61.60 71.80L71.70 71.80ZM132.50 50C132.50 58.30 127 63.90 120.20 63.90C113.60 63.90 109 60.10 109 50.90L109 18.80L98.90 18.80L98.90 52.90C98.90 66.50 106.30 72.80 117 72.80C124.20 72.80 130.40 68.90 133.20 63.40L133.20 71.80L142.60 71.80L142.60 18.80L132.50 18.80ZM166.70 71.80L166.70 41.40C166.70 32.50 172.20 26.70 179.20 26.70C186.60 26.70 190.50 31.90 190.50 40.70L190.50 71.80L200.60 71.80L200.60 41.40C200.60 32.50 206.20 26.70 213.10 26.70C220.50 26.70 224.40 31.90 224.40 40.70L224.40 71.80L234.50 71.80L234.50 37.50C234.50 24.90 227.50 17.80 216.60 17.80C208.50 17.80 202.40 22.00 198.70 28.80C196.30 21.80 190.40 17.80 182.60 17.80C175.30 17.80 169.60 21.50 166.00 27.60L166.00 18.80L156.60 18.80L156.60 71.80ZM270.20 72.80C285.20 72.80 296.20 61 296.20 45.30C296.20 29.60 285.20 17.80 270.20 17.80C255.20 17.80 244.20 29.60 244.20 45.30C244.20 61 255.20 72.80 270.20 72.80ZM270.20 63.90C261.50 63.90 254.70 56.90 254.70 45.30C254.70 33.70 261.50 26.80 270.20 26.80C278.90 26.80 285.80 33.70 285.80 45.30C285.80 56.90 278.90 63.90 270.20 63.90Z"/></symbol>
+      <symbol id="logo-lockup" viewBox="0 -45 380.2 133"><rect x="28" y="-45" width="4.4" height="92"/><rect x="0" y="29" width="60.4" height="4.4"/><path d="M11.5 45.4H48.9V63.5L30.2 88L11.5 63.5Z"/><g transform="translate(84 0)"><path d="M24.90 46.80C41 46.80 51.40 38.30 51.40 23.20C51.40 8.20 41 0 24.90 0L0 0L0 71.80L11 71.80L11 46.80ZM24.80 9.30C34.50 9.30 40.40 14.40 40.40 23.30C40.40 32.20 34.50 37.50 24.80 37.50L11 37.50L11 9.30ZM71.70 44.70C71.70 33.00 80.00 28.00 91.40 28.60L91.40 18.10C82.70 18.10 74.70 22.70 71.00 30.00L71.00 18.80L61.60 18.80L61.60 71.80L71.70 71.80ZM132.50 50C132.50 58.30 127 63.90 120.20 63.90C113.60 63.90 109 60.10 109 50.90L109 18.80L98.90 18.80L98.90 52.90C98.90 66.50 106.30 72.80 117 72.80C124.20 72.80 130.40 68.90 133.20 63.40L133.20 71.80L142.60 71.80L142.60 18.80L132.50 18.80ZM166.70 71.80L166.70 41.40C166.70 32.50 172.20 26.70 179.20 26.70C186.60 26.70 190.50 31.90 190.50 40.70L190.50 71.80L200.60 71.80L200.60 41.40C200.60 32.50 206.20 26.70 213.10 26.70C220.50 26.70 224.40 31.90 224.40 40.70L224.40 71.80L234.50 71.80L234.50 37.50C234.50 24.90 227.50 17.80 216.60 17.80C208.50 17.80 202.40 22.00 198.70 28.80C196.30 21.80 190.40 17.80 182.60 17.80C175.30 17.80 169.60 21.50 166.00 27.60L166.00 18.80L156.60 18.80L156.60 71.80ZM270.20 72.80C285.20 72.80 296.20 61 296.20 45.30C296.20 29.60 285.20 17.80 270.20 17.80C255.20 17.80 244.20 29.60 244.20 45.30C244.20 61 255.20 72.80 270.20 72.80ZM270.20 63.90C261.50 63.90 254.70 56.90 254.70 45.30C254.70 33.70 261.50 26.80 270.20 26.80C278.90 26.80 285.80 33.70 285.80 45.30C285.80 56.90 278.90 63.90 270.20 63.90Z"/></g></symbol>
+    </defs>
+  </svg>
+</body>
+</html>

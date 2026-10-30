@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><script src="/previews/recovered/compat.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vulto. — streetwear bordado à mão em São Paulo</title>
+  <meta name="description" content="Calças, camisetas e moletons bordados à mão no Bom Retiro, São Paulo. Cinquenta peças por modelo, numeradas. Entrega em todo o Brasil." />
+  <meta name="theme-color" content="#fcfbfa" />
+  <link rel="icon" href="/previews/recovered/demos/vulto/favicon.svg" type="image/svg+xml" />
+  <script>
+    // abertura só com JS e movimento liberado; o failsafe tira a abertura se o JS não subir em 5 s
+    (function () {
+      var d = document.documentElement, troca = false;
+      // chegou por uma troca de página (motion/troca.js): a tela nasce coberta de branco e só faz a metade de descobrir
+      try { troca = !!sessionStorage.getItem('vulto:troca'); } catch (e) {}
+      if (troca) d.classList.add('is-troca');
+      // com movimento: o texto que entra por tempo fica escondido até o JS assumir (motion-ready); sem isso ele pintava
+      // visível, sumia quando o JS o escondia e entrava de novo
+      if (!matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('js-motion');
+      // sem transição CSS até o JS assumir: no dev o CSS chega depois do primeiro quadro e cada transição (grau do giro,
+      // sacola, aviso) aparecia e sumia num fade
+      d.classList.add('is-booting');
+      // a abertura só no começo da página: quem chega na Loja (/#loja, ou voltando de uma peça) vai direto a ela
+      if (!troca && location.hash !== '#loja' && !matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('is-loading');
+      setTimeout(function () { if (!window.__booted) d.classList.remove('is-loading', 'js-motion', 'is-booting'); }, 5000);
+      var l = document.createElement('link');
+      l.rel = 'preload'; l.as = 'image'; l.type = 'image/webp';
+      l.href = (new URLSearchParams(location.search).has('hd') ? '/frames/giro-hd' : matchMedia('(max-width: 760px)').matches ? '/frames/giro-m' : '/frames/giro') + 'https://vulto-demo.vercel.app/0001.webp';
+      document.head.appendChild(l);
+    })();
+  </script>
+  <style>.loader{display:none}.is-loading .loader{z-index:90;background:#fcfbfa;display:block;position:fixed;inset:0}.is-loading body{overflow:hidden}.is-loading .brand__in{opacity:0}html.js-motion{background:#fcfbfa}.is-booting *,.is-booting :before,.is-booting :after{transition:none!important}.js-motion:not(.motion-ready) body>:not(.loader){visibility:hidden}html.is-troca:after{content:"";z-index:300;background:#fff;position:fixed;inset:0}</style>
+  <script type="module" crossorigin src="/previews/recovered/demos/vulto/assets/loja-CTzdjTz0.js"></script>
+  <link rel="modulepreload" crossorigin href="/previews/recovered/demos/vulto/assets/scrollbar-ByOzH56A.js">
+  <link rel="stylesheet" crossorigin href="/previews/recovered/demos/vulto/assets/scrollbar-BuqvjP_B.css">
+  <link rel="stylesheet" crossorigin href="/previews/recovered/demos/vulto/assets/loja-BChnRDcf.css">
+</head>
+<body>
+  <!-- Abertura: só o logo, que nasce no centro saindo do desfoque e voa para o lugar dele no hero -->
+  <div class="loader" aria-hidden="true"></div>
+
+  <!-- o logo é um elemento só: nasce no centro (abertura), assenta grande no hero e encolhe para o canto -->
+  <a class="brand" href="#topo" aria-label="Vulto, início"><span class="brand__in logo"><span class="logo__v">V</span>ulto.</span></a>
+
+  <header class="nav">
+    <nav class="nav__links" aria-label="Seções">
+      <a class="ul" href="#loja">Coleção</a>
+      <a class="ul" href="#atelie">Ateliê</a>
+      <a class="ul" href="#sobre">Sobre</a>
+    </nav>
+    <button class="nav__bag" type="button" aria-label="Sacola, 0 peças"><span>Sacola</span><b class="nav__count mono">0</b></button>
+    <button class="nav__menu" type="button" aria-label="Abrir menu" aria-expanded="false"><i></i><i></i></button>
+  </header>
+
+  <div class="menu" aria-hidden="true">
+    <ul class="menu__list">
+      <li><a href="#loja"><span class="mono">01</span><span class="serif">Loja</span></a></li>
+      <li><a href="#atelie"><span class="mono">02</span><span class="serif">Ateliê</span></a></li>
+      <li><a href="#sobre"><span class="mono">03</span><span class="serif">Sobre</span></a></li>
+    </ul>
+    <p class="menu__foot mono">Rua dos Bordadeiros, 50 · Bom Retiro · São Paulo</p>
+  </div>
+
+  <main>
+    <!-- 01 Hero + giro do moletom (palco preso; o scroll gira o Moletom aranha de frente às costas) -->
+    <section class="giro" id="topo" aria-label="Vulto">
+      <div class="giro__stage">
+        <canvas class="giro__canvas" aria-hidden="true"></canvas>
+
+        <div class="hero">
+          <h1 class="sr-only">Vulto. Peças bordadas à mão em São Paulo.</h1>
+          <p class="hero__p" data-split>Peças bordadas à mão em São Paulo.<br />Cinquenta por modelo, numeradas.<br />Entrega em todo o Brasil.</p>
+          <a class="pill hero__pill" href="#loja"><span class="pill__t" data-t="Ver a coleção">Ver a coleção</span></a>
+        </div>
+
+        <div class="mani mani--1" aria-label="Todo vulto da história acabou em mármore.">
+          <p class="mani__t" data-blur>Todo vulto da história acabou em mármore.</p>
+        </div>
+        <div class="mani mani--2">
+          <p class="mani__t" data-blur>O de hoje anda na rua, de moletom largo e aranha bordada nas costas.</p>
+        </div>
+
+        <dl class="specs">
+          <div class="specs__row"><dt class="mono">Peça</dt><dd class="mono">Moletom aranha · Nº 01/12</dd></div>
+          <div class="specs__row"><dt class="mono">Base</dt><dd class="mono">Moletom 480 g, felpa</dd></div>
+          <div class="specs__row"><dt class="mono">Bordado</dt><dd class="mono">Aranha, 9 horas de ponto cheio</dd></div>
+          <div class="specs__row"><dt class="mono">Tiragem</dt><dd class="mono">50, numeradas · restam 17</dd></div>
+          <div class="specs__row specs__row--go"><dt class="mono">R$ 690</dt><dd class="mono"><a class="ul" href="https://vulto-demo.vercel.app/peca/moletom-aranha/" data-troca>Ver a peça →</a></dd></div>
+        </dl>
+
+        <p class="giro__deg mono" aria-hidden="true"><span>Moletom aranha</span> · <span class="giro__n">000</span>°</p>
+        <p class="giro__hint mono" aria-hidden="true">Role devagar</p>
+      </div>
+    </section>
+
+    <!-- 02 Loja: sobe por cima do palco; o moletom some atrás de "Loja" -->
+    <section class="loja" id="loja" aria-labelledby="loja-t">
+      <header class="loja__head">
+        <h2 class="loja__t serif" id="loja-t"><span class="chars" data-chars>Loja</span></h2>
+        <p class="loja__p" data-split>Primeira tiragem: doze peças,<br />cinquenta de cada, numeradas à mão.</p>
+      </header>
+
+      <!-- grade:inicio (gerado por scripts/paginas.mjs a partir de src/data/pecas.js; não editar à mão) -->
+      <div class="filtros" role="toolbar" aria-label="Filtrar a loja">
+        <button class="filtros__b mono is-on" type="button" data-cat="*" aria-pressed="true">Tudo<sup>12</sup></button>
+        <button class="filtros__b mono" type="button" data-cat="Moletom" aria-pressed="false">Moletons<sup>2</sup></button>
+        <button class="filtros__b mono" type="button" data-cat="Calça" aria-pressed="false">Calças<sup>2</sup></button>
+        <button class="filtros__b mono" type="button" data-cat="Jaqueta" aria-pressed="false">Jaquetas<sup>1</sup></button>
+        <button class="filtros__b mono" type="button" data-cat="Camiseta" aria-pressed="false">Camisetas<sup>3</sup></button>
+        <button class="filtros__b mono" type="button" data-cat="Boné" aria-pressed="false">Bonés<sup>1</sup></button>
+        <button class="filtros__b mono" type="button" data-cat="Camisa" aria-pressed="false">Camisas<sup>2</sup></button>
+        <button class="filtros__b mono" type="button" data-cat="Bermuda" aria-pressed="false">Bermudas<sup>1</sup></button>
+        <p class="filtros__n mono dim"><span class="filtros__count">12</span> peças · Tiragem 01</p>
+      </div>
+      <ul class="grade">
+        <li class="card" data-cat="Moletom">
+          <div class="card__media">
+            <a class="card__fig" href="https://vulto-demo.vercel.app/peca/moletom-aranha/" data-troca aria-label="Moletom aranha, R$ 690">
+              <img class="card__img card__img--1" src="/previews/recovered/demos/vulto/img/loja/moletom-aranha-frente.webp" alt="Moletom preto com capuz e uma aranha vermelha bordada" width="720" height="900" loading="lazy" decoding="async" />
+              <img class="card__img card__img--2" src="/previews/recovered/demos/vulto/img/loja/moletom-aranha-costas.webp" alt="" width="720" height="900" loading="lazy" decoding="async" />
+              <span class="card__n mono">01</span>
+            </a>
+            <div class="card__quick"><span class="mono dim">Adicionar</span><span class="card__sizes"><button class="mono" type="button" data-add="moletom-aranha" data-size="P">P</button><button class="mono" type="button" data-add="moletom-aranha" data-size="M">M</button><button class="mono" type="button" data-add="moletom-aranha" data-size="G">G</button><button class="mono" type="button" data-add="moletom-aranha" data-size="GG">GG</button></span></div>
+          </div>
+          <a class="card__cap" href="https://vulto-demo.vercel.app/peca/moletom-aranha/" data-troca tabindex="-1">
+            <span class="card__name">Moletom aranha</span><span class="card__price">R$ 690</span>
+            <span class="card__cat dim">Moletom</span><span class="card__left mono dim">Restam 17/50</span>
+          </a>
+        </li>
+        <li class="card" data-cat="Calça">
+          <div class="card__media">
+            <a class="card__fig" href="https://vulto-demo.vercel.app/peca/calca-bordada-01/" data-troca aria-label="Calça bordada 01, R$ 890">
+              <img class="card__img card__img--1" src="/previews/recovered/demos/vulto/img/loja/calca-01-frente.webp" alt="Calça larga preta com galho de cerejeira bordado em rosa na perna" width="720" height="900" loading="lazy" decoding="async" />
+              <img class="card__img card__img--2" src="/previews/recovered/demos/vulto/img/loja/calca-01-costas.webp" alt="" width="720" height="900" loading="lazy" decoding="async" />
+              <span class="card__n mono">02</span>
+            </a>
+            <div class="card__quick"><span class="mono dim">Adicionar</span><span class="card__sizes"><button class="mono" type="button" data-add="calca-bordada-01" data-size="P">P</button><button class="mono" type="button" data-add="calca-bordada-01" data-size="M">M</button><button class="mono" type="button" data-add="calca-bordada-01" data-size="G">G</button><button class="mono" type="button" data-add="calca-bordada-01" data-size="GG">GG</button></span></div>
+          </div>
+          <a class="card__cap" href="https://vulto-demo.vercel.app/peca/calca-bordada-01/" data-troca tabindex="-1">
+            <span class="card__name">Calça bordada 01</span><span class="card__price">R$ 890</span>
+            <span class="card__cat dim">Calça</span><span class="card__left mono dim">Restam 12/50</span>
+          </a>
+        </li>
+        <li class="card" data-cat="Jaqueta">
+          <div class="card__media">
+            <a class="card__fig" href="https://vulto-demo.vercel.app/peca/jaqueta-peonia/" data-troca aria-label="Jaqueta peônia, R$ 1.180">
+              <img class="card__img card__img--1" src="/previews/recovered/demos/vulto/img/loja/jaqueta-peonia-frente.webp" alt="Jaqueta curta de sarja preta com uma peônia rosa bordada nas costas" width="720" height="900" loading="lazy" decoding="async" />
+              <img class="card__img card__img--2" src="/previews/recovered/demos/vulto/img/loja/jaqueta-peonia-costas.webp" alt="" width="720" height="900" loading="lazy" decoding="async" />
+              <span class="card__n mono">03</span>
+            </a>
+            <div class="card__quick"><span class="mono dim">Adicionar</span><span class="card__sizes"><button class="mono" type="button" data-add="jaqueta-peonia" data-size="P">P</button><button class="mono" type="button" data-add="jaqueta-peonia" data-size="M">M</button><button class="mono" type="button" data-add="jaqueta-peonia" data-size="G">G</button><button class="mono" type="button" data-add="jaqueta-peonia" data-size="GG">GG</button></span></div>
+          </div>
+          <a class="card__cap" href="https://vulto-demo.vercel.app/peca/jaqueta-peonia/" data-troca tabindex="-1">
+            <span class="card__name">Jaqueta peônia</span><span class="card__price">R$ 1.180</span>
+            <span class="card__cat dim">Jaqueta</span><span class="card__left mono dim">Restam 06/50</span>
+          </a>
+        </li>
+        <li class="card" data-cat="Camiseta">
+          <div class="card__media">
+            <a class="card__fig" href="https://vulto-demo.vercel.app/peca/camiseta-teia/" data-troca aria-label="Camiseta teia, R$ 290">
+              <img class="card__img card__img--1" src="/previews/recovered/demos/vulto/img/loja/camiseta-teia-frente.webp" alt="Camiseta preta larga com uma teia bordada em branco no peito" width="720" height="900" loading="lazy" decoding="async" />
+              <img class="card__img card__img--2" src="/previews/recovered/demos/vulto/img/loja/camiseta-teia-costas.webp" alt="" width="720" height="900" loading="lazy" decoding="async" />
+              <span class="card__n mono">04</span>
+            </a>
+            <div class="card__quick"><span class="mono dim">Adicionar</span><span class="card__sizes"><button class="mono" type="button" data-add="camiseta-teia" data-size="P">P</button><button class="mono" type="button" data-add="camiseta-teia" data-size="M">M</button><button class="mono" type="button" data-add="camiseta-teia" data-size="G">G</button><button class="mono" type="button" data-add="camiseta-teia" data-size="GG">GG</button></span></div>
+          </div>
+          <a class="card__cap" href="https://vulto-demo.vercel.app/peca/camiseta-teia/" data-troca tabindex="-1">
+            <span class="card__name">Camiseta teia</span><span class="card__price">R$ 290</span>
+            <span class="card__cat dim">Camiseta</span><span class="card__left mono dim">Restam 21/50</span>
+          </a>
+        </li>
+        <li class="card" data-cat="Calça">
+          <div class="card__media">
+            <a class="card__fig" href="https://vulto-demo.vercel.app/peca/calca-branca-03/" data-troca aria-label="Calça branca 03, R$ 920">
+              <img class="card__img card__img--1" src="/previews/recovered/demos/vulto/img/loja/calca-branca-03-frente.webp" alt="Calça reta cru com um galho fino bordado ao longo da perna" width="720" height="900" loading="lazy" decoding="async" />
+              <img class="card__img card__img--2" src="/previews/recovered/demos/vulto/img/loja/calca-branca-03-costas.webp" alt="" width="720" height="900" loading="lazy" decoding="async" />
+              <span class="card__n mono">05</span>
+            </a>
+            <div class="card__quick"><span class="mono dim">Adicionar</span><span class="card__sizes"><button class="mono" type="button" data-add="calca-branca-03" data-size="P">P</button><button class="mono" type="button" data-add="calca-branca-03" data-size="M">M</button><button class="mono" type="button" data-add="calca-branca-03" data-size="G">G</button><button class="mono" type="button" data-add="calca-branca-03" data-size="GG">GG</button></span></div>
+          </div>
+          <a class="card__cap" href="https://vulto-demo.vercel.app/peca/calca-branca-03/" data-troca tabindex="-1">
+            <span class="card__name">Calça branca 03</span><span class="card__price">R$ 920</span>
+            <span class="card__cat dim">Calça</span><span class="card__left mono dim">Restam 08/50</span>
+          </a>
+        </li>
+        <li class="card" data-cat="Boné">
+          <div class="card__media">
+            <a class="card__fig" href="https://vulto-demo.vercel.app/peca/bone-aranha/" data-troca aria-label="Boné aranha, R$ 190">
+              <img class="card__img card__img--1" src="/previews/recovered/demos/vulto/img/loja/bone-aranha-frente.webp" alt="Boné preto com uma aranha vermelha bordada na frente" width="720" height="900" loading="lazy" decoding="async" />
+              <img class="card__img card__img--2" src="/previews/recovered/demos/vulto/img/loja/bone-aranha-costas.webp" alt="" width="720" height="900" loading="lazy" decoding="async" />
+              <span class="card__n mono">06</span>
+            </a>
+            <div class="card__quick"><span class="mono dim">Adicionar</span><span class="card__sizes"><button class="mono" type="button" data-add="bone-aranha" data-size="Único">Único</button></span></div>
+          </div>
+          <a class="card__cap" href="https://vulto-demo.vercel.app/peca/bone-aranha/" data-troca tabindex="-1">
+            <span class="card__name">Boné aranha</span><span class="card__price">R$ 190</span>
+            <span class="card__cat dim">Boné</span><span class="card__left mono dim">Restam 26/50</span>
+          </a>
+        </li>
+        <li class="card is-out" data-cat="Camisa">
+          <div class="card__media">
+            <a class="card__fig" href="https://vulto-demo.vercel.app/peca/camisa-vermelha/" data-troca aria-label="Camisa vermelha, esgotado">
+              <img class="card__img card__img--1" src="/previews/recovered/demos/vulto/img/loja/camisa-vermelha-frente.webp" alt="Camisa vermelha de manga curta com uma teia bordada em branco no ombro" width="720" height="900" loading="lazy" decoding="async" />
+              <img class="card__img card__img--2" src="/previews/recovered/demos/vulto/img/loja/camisa-vermelha-costas.webp" alt="" width="720" height="900" loading="lazy" decoding="async" />
+              <span class="card__n mono">07</span>
+            </a>
+            <div class="card__quick card__quick--out"><span class="mono dim">Tiragem 02 em março</span><a class="mono" href="#avise">Avise-me</a></div>
+          </div>
+          <a class="card__cap" href="https://vulto-demo.vercel.app/peca/camisa-vermelha/" data-troca tabindex="-1">
+            <span class="card__name">Camisa vermelha</span><span class="card__tag mono">Esgotado</span>
+            <span class="card__cat dim">Camisa</span><span class="card__left mono dim">50/50 vendidas</span>
+          </a>
+        </li>
+        <li class="card" data-cat="Moletom">
+          <div class="card__media">
+            <a class="card__fig" href="https://vulto-demo.vercel.app/peca/moletom-teia/" data-troca aria-label="Moletom teia, R$ 640">
+              <img class="card__img card__img--1" src="/previews/recovered/demos/vulto/img/loja/moletom-teia-frente.webp" alt="Moletom careca cinza com uma teia branca bordada na manga" width="720" height="900" loading="lazy" decoding="async" />
+              <img class="card__img card__img--2" src="/previews/recovered/demos/vulto/img/loja/moletom-teia-costas.webp" alt="" width="720" height="900" loading="lazy" decoding="async" />
+              <span class="card__n mono">08</span>
+            </a>
+            <div class="card__quick"><span class="mono dim">Adicionar</span><span class="card__sizes"><button class="mono" type="button" data-add="moletom-teia" data-size="P">P</button><button class="mono" type="button" data-add="moletom-teia" data-size="M">M</button><button class="mono" type="button" data-add="moletom-teia" data-size="G">G</button><button class="mono" type="button" data-add="moletom-teia" data-size="GG">GG</button></span></div>
+          </div>
+          <a class="card__cap" href="https://vulto-demo.vercel.app/peca/moletom-teia/" data-troca tabindex="-1">
+            <span class="card__name">Moletom teia</span><span class="card__price">R$ 640</span>
+            <span class="card__cat dim">Moletom</span><span class="card__left mono dim">Restam 14/50</span>
+          </a>
+        </li>
+        <li class="card" data-cat="Camiseta">
+          <div class="card__media">
+            <a class="card__fig" href="https://vulto-demo.vercel.app/peca/camiseta-flor/" data-troca aria-label="Camiseta flor, R$ 290">
+              <img class="card__img card__img--1" src="/previews/recovered/demos/vulto/img/loja/camiseta-flor-frente.webp" alt="Camiseta crua com uma flor de cerejeira bordada no peito" width="720" height="900" loading="lazy" decoding="async" />
+              <img class="card__img card__img--2" src="/previews/recovered/demos/vulto/img/loja/camiseta-flor-costas.webp" alt="" width="720" height="900" loading="lazy" decoding="async" />
+              <span class="card__n mono">09</span>
+            </a>
+            <div class="card__quick"><span class="mono dim">Adicionar</span><span class="card__sizes"><button class="mono" type="button" data-add="camiseta-flor" data-size="P">P</button><button class="mono" type="button" data-add="camiseta-flor" data-size="M">M</button><button class="mono" type="button" data-add="camiseta-flor" data-size="G">G</button><button class="mono" type="button" data-add="camiseta-flor" data-size="GG">GG</button></span></div>
+          </div>
+          <a class="card__cap" href="https://vulto-demo.vercel.app/peca/camiseta-flor/" data-troca tabindex="-1">
+            <span class="card__name">Camiseta flor</span><span class="card__price">R$ 290</span>
+            <span class="card__cat dim">Camiseta</span><span class="card__left mono dim">Restam 19/50</span>
+          </a>
+        </li>
+        <li class="card" data-cat="Bermuda">
+          <div class="card__media">
+            <a class="card__fig" href="https://vulto-demo.vercel.app/peca/bermuda-galho/" data-troca aria-label="Bermuda galho, R$ 520">
+              <img class="card__img card__img--1" src="/previews/recovered/demos/vulto/img/loja/bermuda-galho-frente.webp" alt="Bermuda larga de jeans preto com galho de cerejeira bordado na perna" width="720" height="900" loading="lazy" decoding="async" />
+              <img class="card__img card__img--2" src="/previews/recovered/demos/vulto/img/loja/bermuda-galho-costas.webp" alt="" width="720" height="900" loading="lazy" decoding="async" />
+              <span class="card__n mono">10</span>
+            </a>
+            <div class="card__quick"><span class="mono dim">Adicionar</span><span class="card__sizes"><button class="mono" type="button" data-add="bermuda-galho" data-size="P">P</button><button class="mono" type="button" data-add="bermuda-galho" data-size="M">M</button><button class="mono" type="button" data-add="bermuda-galho" data-size="G">G</button><button class="mono" type="button" data-add="bermuda-galho" data-size="GG">GG</button></span></div>
+          </div>
+          <a class="card__cap" href="https://vulto-demo.vercel.app/peca/bermuda-galho/" data-troca tabindex="-1">
+            <span class="card__name">Bermuda galho</span><span class="card__price">R$ 520</span>
+            <span class="card__cat dim">Bermuda</span><span class="card__left mono dim">Restam 22/50</span>
+          </a>
+        </li>
+        <li class="card" data-cat="Camisa">
+          <div class="card__media">
+            <a class="card__fig" href="https://vulto-demo.vercel.app/peca/camisa-galho/" data-troca aria-label="Camisa galho, R$ 560">
+              <img class="card__img card__img--1" src="/previews/recovered/demos/vulto/img/loja/camisa-galho-frente.webp" alt="Camisa crua de manga longa com um ramo bordado saindo do bolso" width="720" height="900" loading="lazy" decoding="async" />
+              <img class="card__img card__img--2" src="/previews/recovered/demos/vulto/img/loja/camisa-galho-costas.webp" alt="" width="720" height="900" loading="lazy" decoding="async" />
+              <span class="card__n mono">11</span>
+            </a>
+            <div class="card__quick"><span class="mono dim">Adicionar</span><span class="card__sizes"><button class="mono" type="button" data-add="camisa-galho" data-size="P">P</button><button class="mono" type="button" data-add="camisa-galho" data-size="M">M</button><button class="mono" type="button" data-add="camisa-galho" data-size="G">G</button><button class="mono" type="button" data-add="camisa-galho" data-size="GG">GG</button></span></div>
+          </div>
+          <a class="card__cap" href="https://vulto-demo.vercel.app/peca/camisa-galho/" data-troca tabindex="-1">
+            <span class="card__name">Camisa galho</span><span class="card__price">R$ 560</span>
+            <span class="card__cat dim">Camisa</span><span class="card__left mono dim">Restam 11/50</span>
+          </a>
+        </li>
+        <li class="card is-out" data-cat="Camiseta">
+          <div class="card__media">
+            <a class="card__fig" href="https://vulto-demo.vercel.app/peca/camiseta-aranha/" data-troca aria-label="Camiseta aranha, esgotado">
+              <img class="card__img card__img--1" src="/previews/recovered/demos/vulto/img/loja/camiseta-aranha-frente.webp" alt="Camiseta vermelha com uma aranha preta grande bordada nas costas" width="720" height="900" loading="lazy" decoding="async" />
+              <img class="card__img card__img--2" src="/previews/recovered/demos/vulto/img/loja/camiseta-aranha-costas.webp" alt="" width="720" height="900" loading="lazy" decoding="async" />
+              <span class="card__n mono">12</span>
+            </a>
+            <div class="card__quick card__quick--out"><span class="mono dim">Tiragem 02 em março</span><a class="mono" href="#avise">Avise-me</a></div>
+          </div>
+          <a class="card__cap" href="https://vulto-demo.vercel.app/peca/camiseta-aranha/" data-troca tabindex="-1">
+            <span class="card__name">Camiseta aranha</span><span class="card__tag mono">Esgotado</span>
+            <span class="card__cat dim">Camiseta</span><span class="card__left mono dim">50/50 vendidas</span>
+          </a>
+        </li>
+      </ul>
+      <!-- grade:fim -->
+      <div class="loja__foot">
+        <p class="loja__big serif" data-split>Doze peças.<br /><em>Seiscentas</em><br />no mundo.</p>
+        <dl class="loja__terms">
+          <div><dt class="mono dim">Tamanhos</dt><dd>P ao GG, com as medidas em cada peça</dd></div>
+          <div><dt class="mono dim">Trocas</dt><dd>30 dias, sem perguntas</dd></div>
+          <div><dt class="mono dim">Envio</dt><dd>Em 48 h, para todo o Brasil</dd></div>
+          <div><dt class="mono dim">Tiragem</dt><dd>50 por modelo, numeradas à mão</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- 03 Ateliê: o relógio anda de 00:00 a 14:00 e o bordado avança junto -->
+    <section class="atelie" id="atelie" aria-labelledby="atelie-t">
+      <div class="atelie__stage">
+        <figure class="atelie__fig">
+          <img class="atelie__img" data-k="0" src="/previews/recovered/demos/vulto/img/bastidor-1.webp" alt="Bastidor sobre sarja preta com o galho de cerejeira riscado a giz" width="1024" height="1024" decoding="async" />
+          <img class="atelie__img" data-k="1" src="/previews/recovered/demos/vulto/img/bastidor-2.webp" alt="" width="1024" height="1024" decoding="async" />
+          <img class="atelie__img" data-k="2" src="/previews/recovered/demos/vulto/img/bastidor-3.webp" alt="" width="1024" height="1024" decoding="async" />
+          <figcaption class="atelie__cap mono"><span class="atelie__state">Risco a giz</span></figcaption>
+        </figure>
+        <div class="atelie__side">
+          <p class="atelie__label mono" data-split>Ateliê · Bom Retiro, São Paulo</p>
+          <h2 class="atelie__t serif" id="atelie-t" data-split>Devagar,<br />de propósito.</h2>
+          <div class="clock">
+            <p class="clock__n mono" aria-hidden="true"><span class="clock__h">00</span><i>:</i><span class="clock__m">00</span></p>
+            <p class="clock__cap mono dim" data-split>de 14:00 horas de bordado por calça</p>
+            <div class="clock__bar"><i></i></div>
+          </div>
+          <ul class="nums">
+            <li><p class="nums__n" data-count="50">50</p><p class="nums__c dim">peças por modelo</p></li>
+            <li class="nums__label">
+              <img src="/previews/recovered/demos/vulto/img/etiqueta.webp" alt="Etiqueta de algodão escrita à mão: Nº 07/50" width="640" height="640" loading="lazy" decoding="async" />
+              <div><p class="nums__n">Nº <span data-count="7" data-pad="2">07</span>/50</p><p class="nums__c dim">numerada à mão na etiqueta</p></div>
+            </li>
+            <li><p class="nums__n" data-count="1">1</p><p class="nums__c dim">bordadeira do começo ao fim</p></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 Manifesto: o bloco vermelho abre de um fio -->
+    <section class="sobre" id="sobre" aria-labelledby="sobre-t">
+      <div class="sobre__block">
+        <h2 class="sobre__t serif" id="sobre-t" data-split>Ninguém vira busto<br />de camiseta<br />lisa.</h2>
+        <img class="sobre__bust" src="/previews/recovered/demos/vulto/img/busto-serigrafia.webp" alt="" width="900" height="1125" loading="lazy" decoding="async" />
+        <p class="sobre__foot mono" data-split>Vulto · Tiragem 01 · São Paulo</p>
+        <a class="sobre__btn" href="#loja"><span class="pill__t" data-t="Ver a loja">Ver a loja</span></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- 05 Rodapé -->
+  <footer class="foot" id="avise">
+    <div class="foot__news">
+      <p class="foot__q" data-split>A tiragem 02 sai em março.<br />Quer saber antes?</p>
+      <form class="foot__form" onsubmit="event.preventDefault(); this.classList.add('is-sent');">
+        <label class="sr-only" for="email">Seu e-mail</label>
+        <input id="email" type="email" required placeholder="seu e-mail" autocomplete="email" />
+        <button type="submit" class="foot__send"><span class="pill__t" data-t="Avisar">Avisar</span></button>
+        <p class="foot__ok mono" aria-live="polite">Anotado. A gente avisa antes de todo mundo.</p>
+      </form>
+    </div>
+    <div class="foot__cols">
+      <div><p class="mono">Loja</p><ul><li><a class="ul" href="#loja">Calças</a></li><li><a class="ul" href="#loja">Camisetas</a></li><li><a class="ul" href="#loja">Camisas</a></li><li><a class="ul" href="#loja">Moletons</a></li></ul></div>
+      <div><p class="mono">Ateliê</p><ul><li>Rua dos Bordadeiros, 50</li><li>Bom Retiro</li><li>São Paulo, SP</li></ul></div>
+      <div><p class="mono">Atendimento</p><ul><li><a class="ul" href="#avise">Trocas em 30 dias</a></li><li><a class="ul" href="#avise">Envio para todo o Brasil</a></li><li><a class="ul" href="#avise">Tabela de medidas</a></li><li><a class="ul" href="#avise">WhatsApp</a></li></ul></div>
+      <div><p class="mono">Siga</p><ul><li><a class="ul" href="#avise">Instagram</a></li><li><a class="ul" href="#avise">TikTok</a></li><li><a class="ul" href="#avise">Pinterest</a></li></ul></div>
+    </div>
+    <div class="foot__legal mono">
+      <p>Vulto Ateliê de Bordados Ltda.<span class="foot__sep"> · </span><br class="foot__br" />CNPJ 48.271.903/0001-16</p>
+      <p class="foot__credit">Moletom 3D baseado em <a class="ul" href="https://sketchfab.com/3d-models/classic-black-flame-hoodie-0fd0effa321e456cb2a7467e2899b658" target="_blank" rel="noopener">“Classic Black Flame Hoodie”</a> de <a class="ul" href="https://sketchfab.com/krrril_" target="_blank" rel="noopener">kril</a>, <a class="ul" href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></p>
+      <p class="foot__c">© 2026 <svg class="spider" viewBox="0 0 40 48" aria-hidden="true"><use href="#aranha" /></svg></p>
+    </div>
+    <p class="foot__logo logo" aria-hidden="true"><span class="chars" data-chars-logo><span class="ch logo__v">V</span><span class="ch">u</span><span class="ch">l</span><span class="ch">t</span><span class="ch">o</span><span class="ch">.</span></span></p>
+  </footer>
+
+  <p class="toast mono" role="status" aria-live="polite"></p>
+
+  <aside class="bag" aria-label="Sacola" aria-hidden="true">
+    <p class="bag__head mono"><span>Sacola</span><span class="bag__n">0 peças</span></p>
+    <ul class="bag__list"><li class="bag__empty dim">Nada aqui ainda. As peças saem numeradas na ordem da compra.</li></ul>
+    <p class="bag__total"><span>Total</span><span class="bag__sum">R$ 0</span></p>
+    <a class="bag__go" href="#avise"><span class="pill__t" data-t="Finalizar compra">Finalizar compra</span></a>
+  </aside>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="aranha" viewBox="0 0 40 48">
+      <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17 19 L9 12 L6 3" /><path d="M23 19 L31 12 L34 3" />
+        <path d="M16 22 L6 20 L1 13" /><path d="M24 22 L34 20 L39 13" />
+        <path d="M16 27 L6 31 L2 40" /><path d="M24 27 L34 31 L38 40" />
+        <path d="M17 31 L11 39 L10 47" /><path d="M23 31 L29 39 L30 47" />
+      </g>
+      <ellipse cx="20" cy="17" rx="3.6" ry="3.4" fill="currentColor" />
+      <ellipse cx="20" cy="27.5" rx="5.6" ry="7.6" fill="currentColor" />
+    </symbol>
+  </svg>
+</body>
+</html>

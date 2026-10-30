@@ -1,0 +1,9 @@
+import fs from 'node:fs/promises';
+const folder='public/assets/center-stage';await fs.mkdir(folder,{recursive:true});
+for(const [name,light,mobile]of [['desktop',false,false],['desktop-light',true,false],['mobile',false,true]]){
+ const width=mobile?390:1440,height=mobile?844:940,bg=light?'#fafafa':'#0a0a0b',panel=light?'#fff':'#151517',text=light?'#18181b':'#ededf0',muted=light?'#656570':'#9b9ba5',line=light?'#dedee5':'#2b2b30';
+ const left=mobile?24:80,top=mobile?120:170;
+ const cards=Array.from({length:mobile?4:6},(_,i)=>{const x=mobile?24:80+(i%3)*430,y=(mobile?305:385)+Math.floor(i/(mobile?1:3))*(mobile?158:230),w=mobile?342:402,h=mobile?140:205;return `<g><rect x="${x}" y="${y}" width="${w}" height="${h}" rx="14" fill="${panel}" stroke="${line}"/><circle cx="${x+w/2}" cy="${y+h/2-13}" r="${29+i%3*6}" fill="none" stroke="${['#b9eaa4','#c6b6ff','#f3bb96'][i%3]}" stroke-width="2"/><path d="M${x+20} ${y+h-24}h${w*.35}" stroke="${muted}" stroke-width="5" stroke-linecap="round"/></g>`;}).join('');
+ const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}"><rect width="100%" height="100%" fill="${bg}"/><path d="M0 75h${width}" stroke="${line}"/><g fill="${text}" font-family="Arial, sans-serif"><text x="${left}" y="48" font-size="24" font-weight="700">Um só.</text>${mobile?'':`<text x="860" y="47" font-size="16">Explorar　 Coleções　 Ferramentas</text>`}<text x="${left}" y="${top}" font-size="${mobile?12:14}" fill="${muted}" letter-spacing="2">UM ESPAÇO. INFINITAS IDEIAS.</text><text x="${left}" y="${top+(mobile?65:88)}" font-size="${mobile?42:70}" font-weight="700" letter-spacing="-2">Tudo para criar.</text><text x="${left}" y="${top+(mobile?111:164)}" font-size="${mobile?39:70}" fill="${muted}" letter-spacing="-2">Em um só lugar.</text></g>${cards}</svg>`;
+ await fs.writeFile(folder+'/'+name+'.svg',svg);
+}

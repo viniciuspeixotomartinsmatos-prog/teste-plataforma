@@ -1,0 +1,1 @@
+{"files": [{"path": "Usage.tsx", "content": "import { VercelV0Chat } from \"@/components/ui/v0-ai-chat\"\n\nexport function Demo() {\n    return <VercelV0Chat />\n}"}], "usageOnly": true, "description": "Design of the v0 AI Chat"}

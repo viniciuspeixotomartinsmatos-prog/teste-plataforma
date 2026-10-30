@@ -1,0 +1,16 @@
+{
+  "name": "Dusk Landing 1 Components Hero Video",
+  "sourceId": "tailark",
+  "files": [
+    {
+      "path": "registry/bases/base/dusk/pages/landing/one/components/hero-video.tsx",
+      "content": "'use client'\n\nexport default function HeroVideo() {\n    return (\n        <video\n            aria-hidden\n            autoPlay\n            muted\n            loop\n            playsInline\n            className=\"size-full object-cover\"\n            src=\"https://videos.pexels.com/video-files/18419650/18419650-uhd_2560_1440_30fps.mp4\"\n            onLoadedMetadata={(event) => {\n                event.currentTarget.playbackRate = 0.5\n            }}\n        />\n    )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "demoCode": "'use client'\n\nexport default function HeroVideo() {\n    return (\n        <video\n            aria-hidden\n            autoPlay\n            muted\n            loop\n            playsInline\n            className=\"size-full object-cover\"\n            src=\"https://videos.pexels.com/video-files/18419650/18419650-uhd_2560_1440_30fps.mp4\"\n            onLoadedMetadata={(event) => {\n                event.currentTarget.playbackRate = 0.5\n            }}\n        />\n    )\n}\n",
+  "dependencies": [],
+  "registryDependencies": [],
+  "license": "MIT",
+  "sourceUrl": "https://github.com/tailark/blocks/blob/main/registry/bases/base/dusk/pages/landing/one/components/hero-video.tsx"
+}
