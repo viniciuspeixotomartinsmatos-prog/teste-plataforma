@@ -98,3 +98,5 @@ Após a otimização (WebP, largura máxima 800 px, qualidade 82), os 33 testes 
 Build de produção aprovado em 3 min 17 s; quatro testes do adaptador Sites aprovados. Corrigido também o contêiner sem tamanho de Warp Gradient; a verificação visual dessa última correção continua pendente.
 
 Validação final após as últimas mudanças: 45 testes principais aprovados. Nova compilação da interface aprovada em 2,18 s, reutilizando os assets estáticos já copiados. A auditoria estática examinou 13.352 documentos/bundles e não encontrou referências locais de mídia sem arquivo ou remapeamento válido. Essa checagem não certifica serviços externos.
+
+Após a revisão da exportação portátil, os nove testes de saúde passaram, incluindo um novo teste que exige renderer JS, cena JSON e imagens aninhadas de Energy Beam incorporados no HTML. A suíte principal anterior tinha 45 testes; esse caso acrescenta um teste ao total.

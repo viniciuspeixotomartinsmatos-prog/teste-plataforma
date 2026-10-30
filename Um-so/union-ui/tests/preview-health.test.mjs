@@ -50,3 +50,9 @@ test('readiness sees controls inside an open custom-element shadow root',async()
  const messages=[];const dom=new JSDOM(instrumentPreviewHTML('<html><head></head><body><model-picker></model-picker></body></html>','picker','http://localhost/example.html'),{runScripts:'dangerously',pretendToBeVisual:true,beforeParse(w){w.postMessage=data=>messages.push(data);}});
  try{const w=dom.window;Object.defineProperty(w.document.body,'innerText',{value:''});const shadow=w.document.querySelector('model-picker').attachShadow({mode:'open'}),button=w.document.createElement('button');button.textContent='Select model';button.getBoundingClientRect=()=>({width:100,height:40});shadow.append(button);await wait(180);assert.ok(messages.some(m=>m.type==='preview-ready'&&m.checked));}finally{dom.window.close();}
 });
+
+test('portable Energy Beam includes its renderer, scene JSON and nested original images',async()=>{
+ const rows=JSON.parse(await fs.readFile('public/data/catalog-live.json','utf8')),item=rows.find(r=>r.id==='21st-c31b2034c9ea'),previous=globalThis.fetch;
+ globalThis.fetch=async url=>{try{const file=path.join('public',String(url).split('?')[0]),bytes=await fs.readFile(file),ext=path.extname(file);return new Response(bytes,{headers:{'content-type':{'.js':'text/javascript','.json':'application/json','.png':'image/png','.webp':'image/webp'}[ext]||'application/octet-stream'}});}catch{return new Response('',{status:404});}};
+ try{const html=await standalonePreview(item),scene=html.match(/data:application\/json;base64,([A-Za-z0-9+/=]+)/)?.[1];assert.match(html,/data:text\/javascript;base64,/);assert.ok(scene);assert.match(Buffer.from(scene,'base64').toString(),/data:image\//);assert.ok(!html.includes('/assets/demo-recovered/'));}finally{globalThis.fetch=previous;}
+});
