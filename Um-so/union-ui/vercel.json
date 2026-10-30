@@ -1,6 +1,45 @@
 {
   "headers": [
-    { "source": "/assets/:path*", "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }] },
-    { "source": "/previews/:path*", "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }] }
+    {
+      "source": "/assets/:path*",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/previews/:path*",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
+  ],
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/component/:path*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/collections/:path*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/tools/:path*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/account/:path*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/plans/:path*",
+      "destination": "/index.html"
+    }
   ]
 }

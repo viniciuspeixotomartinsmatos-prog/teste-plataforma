@@ -19,11 +19,32 @@ async function embeddedFont(url){
  let binary='';for(let offset=0;offset<bytes.length;offset+=8192)binary+=String.fromCharCode(...bytes.subarray(offset,offset+8192));
  return 'data:font/woff2;base64,'+btoa(binary);
 }
+async function inlineRecoveredPreview(html){
+ const cache=new Map();
+ const assetPattern=/\/previews\/recovered\/(?:[A-Za-z0-9_@.,~%+-]+\/)*[A-Za-z0-9_@.,~%+-]+\.(?:m?js|css|png|jpe?g|webp|avif|svg|gif|ico|woff2?|ttf|otf|mp4|webm|glb|gltf|json|wasm|txt)(?:\?[^"'`\s)<>]*)?/gi;
+ async function embedAssets(text,ancestors=new Set()){
+  for(const url of new Set([...text.matchAll(assetPattern)].map(m=>m[0]))){
+   if(ancestors.has(url))throw Error('Dependência circular no pacote recuperado: '+url);
+   if(!cache.has(url))cache.set(url,(async()=>{const response=await fetch(url);if(!response.ok)throw Error('Recurso indisponível no pacote: '+url);let data;let mime=response.headers.get('content-type')||'application/octet-stream';if(/\.(?:m?js|css|json|txt)(?:\?|$)/.test(url)){mime=/\.m?js(?:\?|$)/.test(url)?'text/javascript':/\.css(?:\?|$)/.test(url)?'text/css':mime;data=new TextEncoder().encode(await embedAssets(await response.text(),new Set([...ancestors,url])));}else data=new Uint8Array(await response.arrayBuffer());let binary='';for(let offset=0;offset<data.length;offset+=8192)binary+=String.fromCharCode(...data.subarray(offset,offset+8192));return 'data:'+mime+';base64,'+btoa(binary);})());
+   text=text.split(url).join(await cache.get(url));
+  }return text;
+ }
+ for(const match of [...html.matchAll(/<script\b([^>]*?)src=["'](\/previews\/recovered\/[^"']+\.js)["']([^>]*)><\/script>/g)]){
+  const code=await embedAssets(await fetchText(match[2]));html=html.replace(match[0],()=>'<script'+match[1]+match[3]+'>'+code.replace(/<\/script/gi,'<\\/script')+'</script>');
+ }
+ return (await embedAssets(html)).replaceAll('/previews/recovered/build','https://profitize.com.br/build');
+}
 export async function standalonePreview(item,theme='dark',config,settings){
  const local=item.runtimePreviewPath||item.previewPath;
  if(!local)throw Error('Demonstração indisponível.');
  const url=theme==='light'&&local.startsWith('/previews/runtime/')?local.replace(/\.html$/,'.light.html'):local;
  let html=await fetchText(url);const mapping=await assetMapping(item.id);html=injectDemoAssets(html,mapping);
+ if(local.startsWith('/previews/recovered/')){
+  // Retain stylesheet contents before embedding their media and font references.
+  for(const match of [...html.matchAll(/<link\b[^>]*href=["'](\/previews\/recovered\/[^"']+\.css)["'][^>]*>/g)]){const css=await fetchText(match[1]);html=html.replace(match[0],()=>'<style>'+css.replace(/<\/style/gi,'<\\/style')+'</style>');}
+  html=await inlineRecoveredPreview(html);
+ }
+
  // Inline the locally compiled JS and stylesheet so the downloaded demo can
  // run outside this server. Original third-party media URLs remain intact.
  for(const match of [...html.matchAll(/<script\b[^>]*src=["'](\/previews\/runtime\/[^"']+\.js)["'][^>]*><\/script>/g)]){
@@ -71,9 +92,10 @@ export async function componentArchive(item,payload,{name,theme='dark',config,se
 }
 
 export async function componentPrompt(item,payload,{name=item.name,description='',theme='dark',config,settings}={}){
- const framework=(payload?.framework||item.framework)==='vue'?'VUE':'REACT';
+ const format=payload?.framework||item.framework;
+ const framework=format==='vue'?'VUE':format==='html'?'HTML':'REACT';
  const sourceFiles=payload?.files||[];
  const hasSource=item.availability==='code'&&sourceFiles.length>0;
  const implementation=hasSource?sourceFiles.map(f=>'// '+f.path+'\n'+f.content).join('\n\n'):(settings?await standalonePreview(item,theme,config,settings):(sourceFiles.find(f=>f.path==='preview.html')?.content||await standalonePreview(item,theme,config,settings)));
- return `Adicione o componente ${name} ao meu projeto.\n${description}\n\nMantenha a composição, as animações e a resposta às interações. Adapte as cores à identidade do projeto, preserve a acessibilidade e instale as dependências necessárias.\n\n${hasSource?'IMPLEMENTAÇÃO '+framework+' E ARQUIVOS AUXILIARES':'DEMONSTRAÇÃO HTML COMPLETA\nO HTML abaixo contém o componente compilado. Use-o como referência executável para reconstruir a implementação editável; não presuma que um import de pacote contém seu código.'}\n${implementation}\n\nDEPENDÊNCIAS\n${(payload?.dependencies||item.dependencies||[]).join(', ')}\n\nEXEMPLO DE USO\n${payload?.demoCode||''}${settings?'\nPERSONALIZAÇÃO VISUAL\n'+JSON.stringify(settings,null,2):''}${config?'\nPROPRIEDADES DO PREVIEW\n'+JSON.stringify(config,null,2):''}`;
+ return `${payload?.reconstructionPrompt?payload.reconstructionPrompt+'\n\n':''}Adicione o componente ${name} ao meu projeto.\n${description}\n\nMantenha a composição, as animações e a resposta às interações. Adapte as cores à identidade do projeto, preserve a acessibilidade e instale as dependências necessárias.\n\n${hasSource?'IMPLEMENTAÇÃO '+framework+' E ARQUIVOS AUXILIARES':'DEMONSTRAÇÃO HTML COMPLETA\nO HTML abaixo contém o componente compilado. Use-o como referência executável para reconstruir a implementação editável; não presuma que um import de pacote contém seu código.'}\n${implementation}\n\nDEPENDÊNCIAS\n${(payload?.dependencies||item.dependencies||[]).join(', ')}\n\nEXEMPLO DE USO\n${payload?.demoCode||''}${settings?'\nPERSONALIZAÇÃO VISUAL\n'+JSON.stringify(settings,null,2):''}${config?'\nPROPRIEDADES DO PREVIEW\n'+JSON.stringify(config,null,2):''}`;
 }

@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nota. · o financeiro do MEI, resolvido</title>
+  <meta name="description" content="Emita nota, pague o DAS e veja o caixa do mês. Tudo no mesmo app." />
+  <meta name="theme-color" content="#1d3fd6" />
+  <link rel="icon" href="/previews/recovered/demos/nota/favicon.svg" type="image/svg+xml" />
+  <script type="module" crossorigin src="/previews/recovered/demos/nota/assets/index-lgk6-v6E.js"></script>
+  <link rel="stylesheet" crossorigin href="/previews/recovered/demos/nota/assets/index-BcLhFE-J.css">
+</head>
+<body>
+  <!-- Nav: wordmark, três links e a pílula de cadastro. Fica por cima do palco 3D. -->
+<header class="nav">
+  <a class="nav__marca" href="#" aria-label="nota, início">nota<span>.</span></a>
+  <nav class="nav__links" aria-label="Principal">
+    <a href="#como-funciona">Como funciona</a>
+    <a href="#precos">Preços</a>
+    <a href="#contadores">Para contadores</a>
+  </nav>
+  <a class="pilula" href="#criar-conta">Criar conta grátis</a>
+</header>
+
+  <main>
+    <!-- Palco: o hero (papéis em caos) e a peça principal (papéis se organizam na tela do app).
+     Uma seção presa no scroll; o canvas 3D fica atrás dos dois blocos de texto. -->
+<section class="palco" id="palco" aria-label="O financeiro do MEI">
+  <div class="palco__fixo">
+    <canvas class="palco__canvas" aria-hidden="true"></canvas>
+    <div class="palco__grao" aria-hidden="true"></div>
+
+    <div class="hero" data-hero>
+      <h1 class="hero__titulo">
+        <span class="linha"><span>O financeiro</span></span>
+        <span class="linha"><span>do MEI,</span></span>
+        <span class="linha"><span>resolvido.</span></span>
+      </h1>
+      <p class="hero__sub">Emita nota, pague o DAS e veja o caixa do mês. Tudo no mesmo app.</p>
+    </div>
+    <p class="hero__rodape hero__rodape--esq" data-hero-rodape>R$ 0 para começar · sem cartão</p>
+    <p class="hero__rodape hero__rodape--dir" data-hero-rodape>Role para organizar <span aria-hidden="true">↓</span></p>
+
+    <div class="ordem" data-ordem>
+      <h2 class="ordem__titulo">
+        <span class="linha"><span>Cada papel</span></span>
+        <span class="linha"><span>no seu lugar.</span></span>
+      </h2>
+      <ul class="ordem__lista">
+        <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10.5l4.2 4.2L16.5 5.8"/></svg>Nota fiscal em 30 segundos</li>
+        <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10.5l4.2 4.2L16.5 5.8"/></svg>DAS lembrado e pago no dia</li>
+        <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10.5l4.2 4.2L16.5 5.8"/></svg>Caixa do mês sem planilha</li>
+      </ul>
+    </div>
+
+    <!-- Leitura da tela do app para quem não vê o canvas -->
+    <div class="sr-only">
+      <p>Caixa de outubro: R$ 18.420,00.</p>
+      <ul>
+        <li>Nota emitida · Estúdio Lumen · R$ 2.400</li>
+        <li>DAS pago · R$ 75,90</li>
+        <li>Pix recebido · R$ 1.150</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+    <!-- 01 · Emitir nota: o relógio corre até 00:30 enquanto o formulário se preenche e a NFS-e sai pelo topo do celular.
+     Alvo: conceito/15-nota-emitir.jpg -->
+<section class="emitir" id="como-funciona" data-clara>
+  <div class="emitir__fixo">
+    <div class="emitir__texto">
+      <p class="rotulo">01 · Emitir nota</p>
+      <p class="emitir__relogio" aria-label="30 segundos"><span data-relogio>00:00</span></p>
+      <h2 class="emitir__titulo">Nota fiscal<br />em 30 segundos.</h2>
+      <p class="emitir__corpo">Escolha o cliente, digite o valor e toque em emitir. A nota sai com o seu CNPJ e vai por e-mail e WhatsApp.</p>
+    </div>
+    <div class="emitir__aparelho">
+      <div class="emitir__saida">
+        <div class="nfse" data-nfse aria-hidden="true">
+          <p class="nfse__titulo">NFS-e</p>
+          <span class="nfse__barra"></span>
+          <div class="nfse__tabela"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <span class="nfse__linha"></span><span class="nfse__linha nfse__linha--curta"></span>
+        </div>
+      </div>
+      <div class="celular" role="img" aria-label="Tela do app: nova nota para Estúdio Lumen, R$ 2.400,00">
+        <span class="celular__ilha"></span>
+        <p class="celular__titulo">Nova nota</p>
+        <p class="celular__rotulo">Cliente</p>
+        <p class="campo"><span data-digita="Estúdio Lumen"></span><i class="cursor" data-cursor-cliente></i></p>
+        <p class="celular__rotulo">Valor</p>
+        <p class="campo"><span data-digita="R$ 2.400,00"></span><i class="cursor" data-cursor-valor></i></p>
+        <p class="celular__botao" data-botao>Emitir nota</p>
+        <p class="celular__ok" data-ok>Nota enviada</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- 02 · Pagar o DAS: a tira de doze guias corre de lado com o scroll e o carimbo "pago" cai mês a mês até outubro.
+     Alvo: conceito/16-nota-das.jpg -->
+<section class="das" id="das">
+  <div class="das__fixo">
+    <div class="das__topo">
+      <div class="das__texto">
+        <p class="rotulo">02 · Pagar o DAS</p>
+        <h2 class="das__titulo">O DAS lembrado<br />e pago no dia.</h2>
+        <p class="das__corpo">Todo mês o app avisa antes do vencimento e paga com um toque. Sem multa, sem guia perdida no e-mail.</p>
+      </div>
+      <div class="das__dia">
+        <p class="das__numero">dia 20</p>
+        <p class="das__micro">R$ 75,90 · guia de outubro</p>
+      </div>
+    </div>
+    <div class="das__trilho">
+      <ol class="das__guias" data-guias>
+        <li class="guia"><span class="guia__mes">Jan</span><span class="guia__carimbo">pago</span></li>
+        <li class="guia"><span class="guia__mes">Fev</span><span class="guia__carimbo">pago</span></li>
+        <li class="guia"><span class="guia__mes">Mar</span><span class="guia__carimbo">pago</span></li>
+        <li class="guia"><span class="guia__mes">Abr</span><span class="guia__carimbo">pago</span></li>
+        <li class="guia"><span class="guia__mes">Mai</span><span class="guia__carimbo">pago</span></li>
+        <li class="guia"><span class="guia__mes">Jun</span><span class="guia__carimbo">pago</span></li>
+        <li class="guia"><span class="guia__mes">Jul</span><span class="guia__carimbo">pago</span></li>
+        <li class="guia"><span class="guia__mes">Ago</span><span class="guia__carimbo">pago</span></li>
+        <li class="guia"><span class="guia__mes">Set</span><span class="guia__carimbo">pago</span></li>
+        <li class="guia"><span class="guia__mes">Out</span><span class="guia__carimbo">pago</span></li>
+        <li class="guia guia--aberta"><span class="guia__mes">Nov</span></li>
+        <li class="guia guia--aberta"><span class="guia__mes">Dez</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+    <!-- 03 · Ver o caixa: o gráfico é feito de pilhas de recibos que crescem folha a folha.
+     Alvo: conceito/17-nota-caixa.jpg -->
+<section class="caixa" id="caixa" data-clara>
+  <div class="caixa__texto">
+    <p class="rotulo">03 · Ver o caixa</p>
+    <h2 class="caixa__titulo">Seu caixa,<br />sem planilha.</h2>
+    <p class="caixa__corpo">Cada Pix, nota e despesa entra sozinho. No fim do mês você vê quanto entrou, quanto saiu e quanto sobrou.</p>
+    <dl class="caixa__tabela">
+      <div><dt>Entrou</dt><dd data-conta="21300">R$ 21.300,00</dd></div>
+      <div><dt>Saiu</dt><dd data-conta="2880">R$ 2.880,00</dd></div>
+      <div class="caixa__sobrou"><dt>Sobrou</dt><dd data-conta="18420">R$ 18.420,00</dd></div>
+    </dl>
+  </div>
+  <div class="caixa__grafico" aria-hidden="true">
+    <div class="caixa__chao" data-chao>
+      <div class="pilha" style="--alvo: 0.26" data-tipo="nota"><span class="pilha__mes">Mai</span></div>
+      <div class="pilha" style="--alvo: 0.38" data-tipo="boleto-c"><span class="pilha__mes">Jun</span></div>
+      <div class="pilha" style="--alvo: 0.55" data-tipo="nota-c"><span class="pilha__mes">Jul</span></div>
+      <div class="pilha" style="--alvo: 0.47" data-tipo="pix"><span class="pilha__mes">Ago</span></div>
+      <div class="pilha" style="--alvo: 0.72" data-tipo="nota-b"><span class="pilha__mes">Set</span></div>
+      <div class="pilha pilha--destaque" style="--alvo: 1" data-tipo="nota"><span class="pilha__mes">Out</span></div>
+    </div>
+    <p class="caixa__marca" data-marca>R$ 18.420</p>
+  </div>
+</section>
+
+    <!-- Quem usa: um cupom térmico comprido sai da borda de cima e imprime os depoimentos conforme a página rola.
+     Alvo: conceito/18-nota-cupom.jpg -->
+<section class="cupom" id="contadores">
+  <div class="cupom__texto">
+    <p class="rotulo">Quem usa</p>
+    <h2 class="cupom__titulo">Menos papel.<br />Mais tempo<br />para trabalhar.</h2>
+    <p class="cupom__contador">Para contadores: acompanhe todos os seus clientes MEI num painel só.</p>
+    <a class="pilula pilula--contorno" href="#criar-conta">Conhecer o painel</a>
+  </div>
+  <div class="cupom__fenda">
+    <figure class="cupom__papel" data-cupom>
+      <p class="cupom__cab">NOTA · CUPOM DE QUEM USA</p>
+      <hr />
+      <blockquote>
+        <p>Emiti minha primeira nota no ônibus, voltando de uma entrega.</p>
+        <cite>Carla Mendes · confeiteira · Recife</cite>
+      </blockquote>
+      <hr />
+      <blockquote>
+        <p>O lembrete do DAS me livrou de três multas.</p>
+        <cite>Diego Rocha · eletricista · Contagem</cite>
+      </blockquote>
+      <hr />
+      <blockquote>
+        <p>Mando o mês fechado pro meu contador num link.</p>
+        <cite>Júlia Prado · fotógrafa · Curitiba</cite>
+      </blockquote>
+      <hr />
+      <p class="cupom__total"><span>PAPEL GUARDADO NA GAVETA</span><span>0</span></p>
+      <span class="cupom__barras"></span>
+    </figure>
+  </div>
+</section>
+
+    <!-- Preços + fecho + rodapé: dois planos como folhas presas por clipe, a frase final e o rodapé de uma linha.
+     Alvo: conceito/19-nota-precos.jpg -->
+<section class="precos" id="precos">
+  <div class="precos__topo">
+    <div class="precos__texto">
+      <p class="rotulo">Preços</p>
+      <h2 class="precos__titulo">Comece grátis.<br /><span>Pague quando crescer.</span></h2>
+    </div>
+    <div class="precos__folhas">
+      <article class="plano" data-plano>
+        <svg class="clipe" viewBox="0 0 24 64" aria-hidden="true"><path d="M8 44V12a6 6 0 0 1 12 0v38a9 9 0 0 1-18 0V18" /></svg>
+        <h3 class="plano__nome">Grátis</h3>
+        <p class="plano__preco">R$ 0</p>
+        <ul><li>5 notas por mês</li><li>Lembrete do DAS</li><li>Caixa do mês</li></ul>
+      </article>
+      <article class="plano plano--pro" data-plano>
+        <svg class="clipe" viewBox="0 0 24 64" aria-hidden="true"><path d="M8 44V12a6 6 0 0 1 12 0v38a9 9 0 0 1-18 0V18" /></svg>
+        <h3 class="plano__nome">Pro</h3>
+        <p class="plano__preco">R$ 19<small>/mês</small></p>
+        <ul><li>Notas sem limite</li><li>DAS pago pelo app</li><li>Relatório para o contador</li></ul>
+      </article>
+    </div>
+  </div>
+  <div class="fecho" id="criar-conta">
+    <p class="fecho__frase" data-fecho>Feche o mês em 5 minutos.</p>
+    <a class="pilula pilula--grande" href="#criar-conta">Criar conta grátis</a>
+  </div>
+  <footer class="rodape">
+    <a class="rodape__marca" href="#">nota<span>.</span></a>
+    <nav class="rodape__links" aria-label="Rodapé">
+      <a href="#como-funciona">Como funciona</a><a href="#precos">Preços</a><a href="#contadores">Para contadores</a><a href="#criar-conta">Ajuda</a>
+    </nav>
+    <p class="rodape__direitos">© 2026 Nota Tecnologia</p>
+  </footer>
+</section>
+
+  </main>
+</body>
+</html>

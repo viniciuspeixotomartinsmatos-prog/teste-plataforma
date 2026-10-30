@@ -1,8 +1,9 @@
 {
   "generatedAt": "2026-10-30T16:49:59.510Z",
-  "indexed": 17243,
-  "published": 10591,
+  "indexed": 17325,
+  "published": 10673,
   "compiledWithExample": 2831,
   "retained": 7830,
-  "remaining": 6652
+  "remaining": 6652,
+  "recovered": 82
 }

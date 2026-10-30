@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Norte — hospedagem de sites e servidores</title>
+  <meta name="description" content="Seu site no ar 99,99% do tempo, em 12 regiões. Hospedagem, servidores e domínios a partir de R$ 19,90 por mês, com migração grátis e suporte 24 horas.">
+  <meta name="theme-color" content="#161412">
+  <link rel="icon" href="/previews/recovered/demos/norte/favicon.svg" type="image/svg+xml">
+  <!-- no dev do Vite o CSS entra pelo JS: o body espera escondido, sobre o fundo da página, até src/estilo.js
+       (ou 6 s, se algo falhar; sem JS, o <noscript>), e nada transiciona do estilo padrão do navegador para o da página -->
+  <style>html{background:#0e0d0c}html:not(.com-estilo) body{visibility:hidden;animation:0s 6s forwards mostra}@keyframes mostra{to{visibility:visible}}html:not(.assentou) *,html:not(.assentou) :before,html:not(.assentou) :after{transition:none!important}</style>
+  <noscript><style>body{animation:none;visibility:visible!important}</style></noscript>
+  <link rel="preload" href="/previews/recovered/demos/norte/textures/terra-cor-2048.webp" as="image" type="image/webp">
+  <script type="module" crossorigin src="/previews/recovered/demos/norte/assets/index-DKE_dE47.js"></script>
+  <link rel="stylesheet" crossorigin href="/previews/recovered/demos/norte/assets/index-DQSdPW6H.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- camada fixa do globo: atrás do conteúdo, na frente das palavras gigantes -->
+  <canvas class="globo" aria-hidden="true"></canvas>
+  <!-- o ponto que se solta do globo e vira o cursor da busca -->
+  <span class="ponto-voo" aria-hidden="true"></span>
+
+  <header class="nav" data-nav>
+    <nav class="nav__grupo nav__grupo--esq" aria-label="Produtos">
+      <a class="link" href="#planos">Hospedagem</a>
+      <a class="link" href="#planos" data-plano-link="servidor">Servidores</a>
+      <a class="link" href="#dominio">Domínios</a>
+      <a class="link" href="#planos">Preços</a>
+    </nav>
+    <a class="nav__marca" href="#topo" aria-label="Norte, voltar ao topo"><span class="nav__ponto" aria-hidden="true"></span>Norte</a>
+    <div class="nav__grupo nav__grupo--dir">
+      <a class="link" href="#">Entrar</a>
+      <a class="link" href="#suporte">Suporte 24h</a>
+    </div>
+    <button class="nav__menu" type="button" aria-expanded="false" aria-controls="menu"><span class="rola" data-texto="Menu">Menu</span></button>
+  </header>
+
+  <div class="menu" id="menu" hidden>
+    <nav class="menu__links" aria-label="Menu">
+      <a class="menu__link" href="#planos"><span>Hospedagem</span></a>
+      <a class="menu__link" href="#planos" data-plano-link="servidor"><span>Servidores</span></a>
+      <a class="menu__link" href="#dominio"><span>Domínios</span></a>
+      <a class="menu__link" href="#planos"><span>Preços</span></a>
+      <a class="menu__link" href="#suporte"><span>Suporte 24h</span></a>
+    </nav>
+    <div class="menu__pe">
+      <a class="link" href="#">Entrar</a>
+      <a class="botao" href="#planos"><span class="rola" data-texto="Criar meu site">Criar meu site</span></a>
+    </div>
+  </div>
+
+  <main id="conteudo">
+
+    <!-- 1. HERO -->
+    <section class="hero" id="topo" data-secao="hero">
+      <p class="palavra hero__palavra" aria-hidden="true" data-palavra>Online</p>
+      <h1 class="hero__lead">
+        <span class="linha"><span>Seu site no ar</span></span>
+        <span class="linha"><span>99,99% do tempo,</span></span>
+        <span class="linha"><span>em 12 regiões.</span></span>
+      </h1>
+      <p class="hero__preco">
+        <span class="linha"><span>Planos a partir de</span></span>
+        <span class="linha"><span>R$ 19,90 por mês</span></span>
+      </p>
+      <div class="hero__acoes">
+        <a class="botao" href="#planos"><span class="rola" data-texto="Criar meu site">Criar meu site</span></a>
+        <a class="botao-seta" href="#planos" aria-label="Ver os planos">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13M11 4.5 16.5 10 11 15.5"/></svg>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13M11 4.5 16.5 10 11 15.5"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- 2. REGIÕES: o globo fica no meio e as frases passam pelos lados -->
+    <section class="regioes" id="regioes" data-secao="regioes">
+      <div class="regioes__bloco regioes__bloco--a" data-revela>
+        <h2 class="titulo">
+          <span class="linha"><span>Perto de</span></span>
+          <span class="linha"><span>quem visita.</span></span>
+        </h2>
+        <p class="corpo">Seu site responde da região mais próxima de cada visitante. São doze, em cinco continentes.</p>
+      </div>
+      <div class="regioes__bloco regioes__bloco--b" data-revela data-falha>
+        <h2 class="titulo">
+          <span class="linha"><span>Uma para,</span></span>
+          <span class="linha"><span>outra assume.</span></span>
+        </h2>
+        <p class="corpo">Se uma região sai do ar, a vizinha assume em segundos. Quem está no seu site nem percebe.</p>
+      </div>
+    </section>
+
+    <!-- 3. DOMÍNIO -->
+    <section class="dominio" id="dominio" data-secao="dominio">
+      <div class="dominio__topo" data-revela>
+        <h2 class="titulo">
+          <span class="linha"><span>Comece</span></span>
+          <span class="linha"><span>pelo nome.</span></span>
+        </h2>
+        <p class="corpo">Digite o nome que você quer. O domínio sai grátis no primeiro ano em qualquer plano anual.</p>
+      </div>
+
+      <form class="busca" role="search" novalidate data-busca>
+        <label class="busca__rotulo" for="busca-nome">Nome do seu site</label>
+        <div class="busca__linha">
+          <div class="busca__campo">
+            <span class="busca__espelho" aria-hidden="true"></span>
+            <input class="busca__input" id="busca-nome" name="nome" type="text" inputmode="url" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" maxlength="40" placeholder="seunegocio" aria-describedby="busca-erro">
+            <span class="busca__sufixo" aria-hidden="true"><span class="busca__ponto">.<span class="busca__luz"></span></span><span data-sufixo-resto>com.br</span></span>
+            <span class="busca__cursor" aria-hidden="true"></span>
+          </div>
+          <button class="botao-seta busca__enviar" type="submit" aria-label="Buscar domínio">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13M11 4.5 16.5 10 11 15.5"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13M11 4.5 16.5 10 11 15.5"/></svg>
+          </button>
+        </div>
+        <p class="busca__erro" id="busca-erro" role="alert"></p>
+      </form>
+
+      <ul class="tlds" aria-live="polite" data-tlds>
+        <li class="tld" data-tld=".com.br" data-preco="39,90">
+          <button class="tld__escolher" type="button" aria-pressed="true">
+            <span class="tld__ponto" aria-hidden="true"></span>
+            <span class="tld__nome">.com.br</span>
+          </button>
+          <span class="tld__estado">Digite um nome</span>
+          <span class="tld__preco">R$ 39,90 por ano</span>
+          <button class="tld__acao" type="button" disabled><span class="rola" data-texto="Registrar">Registrar</span></button>
+          <span class="tld__sugestoes"></span>
+        </li>
+        <li class="tld" data-tld=".com" data-preco="69,90">
+          <button class="tld__escolher" type="button" aria-pressed="false">
+            <span class="tld__ponto" aria-hidden="true"></span>
+            <span class="tld__nome">.com</span>
+          </button>
+          <span class="tld__estado">Digite um nome</span>
+          <span class="tld__preco">R$ 69,90 por ano</span>
+          <button class="tld__acao" type="button" disabled><span class="rola" data-texto="Registrar">Registrar</span></button>
+          <span class="tld__sugestoes"></span>
+        </li>
+        <li class="tld" data-tld=".net" data-preco="79,90">
+          <button class="tld__escolher" type="button" aria-pressed="false">
+            <span class="tld__ponto" aria-hidden="true"></span>
+            <span class="tld__nome">.net</span>
+          </button>
+          <span class="tld__estado">Digite um nome</span>
+          <span class="tld__preco">R$ 79,90 por ano</span>
+          <button class="tld__acao" type="button" disabled><span class="rola" data-texto="Registrar">Registrar</span></button>
+          <span class="tld__sugestoes"></span>
+        </li>
+        <li class="tld" data-tld=".site" data-preco="9,90">
+          <button class="tld__escolher" type="button" aria-pressed="false">
+            <span class="tld__ponto" aria-hidden="true"></span>
+            <span class="tld__nome">.site</span>
+          </button>
+          <span class="tld__estado">Digite um nome</span>
+          <span class="tld__preco">R$ 9,90 no 1º ano</span>
+          <button class="tld__acao" type="button" disabled><span class="rola" data-texto="Registrar">Registrar</span></button>
+          <span class="tld__sugestoes"></span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 4. PLANOS -->
+    <section class="planos" id="planos" data-secao="planos">
+      <div class="planos__topo" data-revela>
+        <h2 class="titulo">
+          <span class="linha"><span>Escolha</span></span>
+          <span class="linha"><span>o tamanho.</span></span>
+        </h2>
+        <div class="alternador" role="radiogroup" aria-label="Cobrança" data-alternador>
+          <span class="alternador__fundo" aria-hidden="true"></span>
+          <button type="button" role="radio" aria-checked="true" data-ciclo="mensal">Mensal</button>
+          <button type="button" role="radio" aria-checked="false" data-ciclo="anual">Anual <span class="alternador__desc">−20%</span></button>
+        </div>
+      </div>
+
+      <div class="planos__lista" role="radiogroup" aria-label="Planos" data-planos>
+        <button class="plano" type="button" role="radio" aria-checked="false" data-plano="site" data-mensal="19,90" data-anual="15,90">
+          <span class="plano__ponto" aria-hidden="true"></span>
+          <span class="plano__nome">Site</span>
+          <span class="plano__spec">1 site · 20 GB · e-mail profissional</span>
+          <span class="plano__preco"><span class="plano__moeda">R$</span><span class="plano__valor">19,90</span><span class="plano__mes">/mês</span></span>
+        </button>
+        <button class="plano" type="button" role="radio" aria-checked="true" data-plano="negocio" data-mensal="39,90" data-anual="31,90">
+          <span class="plano__ponto" aria-hidden="true"></span>
+          <span class="plano__nome">Negócio</span>
+          <span class="plano__spec">10 sites · 100 GB · domínio grátis</span>
+          <span class="plano__preco"><span class="plano__moeda">R$</span><span class="plano__valor">39,90</span><span class="plano__mes">/mês</span></span>
+        </button>
+        <button class="plano" type="button" role="radio" aria-checked="false" data-plano="loja" data-mensal="79,90" data-anual="63,90">
+          <span class="plano__ponto" aria-hidden="true"></span>
+          <span class="plano__nome">Loja</span>
+          <span class="plano__spec">loja virtual · 200 GB · CDN nas 12 regiões</span>
+          <span class="plano__preco"><span class="plano__moeda">R$</span><span class="plano__valor">79,90</span><span class="plano__mes">/mês</span></span>
+        </button>
+        <button class="plano" type="button" role="radio" aria-checked="false" data-plano="servidor" data-mensal="149,90" data-anual="119,90">
+          <span class="plano__ponto" aria-hidden="true"></span>
+          <span class="plano__nome">Servidor</span>
+          <span class="plano__spec">2 vCPU · 4 GB de RAM · 80 GB NVMe</span>
+          <span class="plano__preco"><span class="plano__moeda">R$</span><span class="plano__valor">149,90</span><span class="plano__mes">/mês</span></span>
+        </button>
+      </div>
+
+      <div class="planos__resumo" data-revela>
+        <p class="planos__frase" aria-live="polite"><span class="planos__dominio" data-dominio>seunegocio.com.br</span> no plano <span data-plano-nome>Negócio</span>, <span data-plano-preco>R$ 39,90 por mês</span>.</p>
+        <a class="botao botao--claro" href="#"><span class="rola" data-texto="Criar meu site">Criar meu site</span></a>
+      </div>
+      <p class="planos__nota" data-revela>Todos com SSL, backup diário e migração grátis. Cancele quando quiser.</p>
+    </section>
+
+    <!-- 5. MIGRAÇÃO: a foto à esquerda, esfumada no preto; texto e formulário à direita, para onde ela olha -->
+    <section class="migracao" id="migracao" data-secao="migracao">
+      <figure class="foto migracao__foto">
+        <picture>
+          <source media="(max-width: 760px)" srcset="/img/migracao-vertical-800.webp 800w, /img/migracao-vertical-1200.webp 1200w" sizes="100vw">
+          <img src="/previews/recovered/demos/norte/img/migracao-1800.webp" srcset="/img/migracao-1100.webp 1100w, /previews/recovered/demos/norte/img/migracao-1800.webp 1800w, /img/migracao-2400.webp 2400w" sizes="(max-width: 760px) 100vw, 62vw" width="2400" height="1592" alt="Mulher trabalhando no notebook à noite, num balcão de madeira com uma luminária acesa" loading="lazy" decoding="async">
+        </picture>
+      </figure>
+      <div class="migracao__conteudo">
+        <div class="migracao__texto" data-revela>
+          <h2 class="titulo">
+            <span class="linha"><span>A mudança é</span></span>
+            <span class="linha"><span>por nossa conta.</span></span>
+          </h2>
+          <p class="corpo">Trazemos site, e-mails e domínio de onde estiverem, sem tirar nada do ar. Você não precisa parar.</p>
+        </div>
+        <form class="linha-form" novalidate data-migracao data-revela>
+          <label class="campo">
+            <span class="campo__rotulo">Endereço do site</span>
+            <input class="campo__input" name="site" type="text" inputmode="url" autocomplete="url" autocapitalize="none" spellcheck="false" placeholder="seusite.com.br">
+            <span class="campo__linha" aria-hidden="true"></span>
+            <span class="campo__erro" aria-live="polite"></span>
+          </label>
+          <label class="campo">
+            <span class="campo__rotulo">Seu e-mail</span>
+            <input class="campo__input" name="email" type="email" autocomplete="email" placeholder="voce@email.com">
+            <span class="campo__linha" aria-hidden="true"></span>
+            <span class="campo__erro" aria-live="polite"></span>
+          </label>
+          <button class="botao" type="submit"><span class="rola" data-texto="Pedir a mudança">Pedir a mudança</span></button>
+          <p class="linha-form__ok" role="status"><span class="ponto" aria-hidden="true"></span><span>Pedido recebido. Em até uma hora, alguém da Norte escreve para <b data-email-ok></b>.</span></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- 6. NÚMEROS -->
+    <section class="numeros" data-secao="numeros">
+      <div class="numero numero--a" data-numero>
+        <p class="numero__valor" aria-label="99,99%">99,99%</p>
+        <p class="numero__legenda">no ar no último ano.<br>Foram 52 minutos fora, somando tudo.</p>
+      </div>
+      <div class="numero numero--b" data-numero>
+        <p class="numero__valor" aria-label="0,4 segundo">0,4 s</p>
+        <p class="numero__legenda">para a primeira página abrir.<br>Disco NVMe e cache em todos os planos.</p>
+      </div>
+    </section>
+
+    <!-- 7. SUPORTE 24H -->
+    <section class="suporte" id="suporte" data-secao="suporte">
+      <figure class="foto suporte__foto">
+        <picture>
+          <source media="(max-width: 760px)" srcset="/img/suporte-vertical-800.webp 800w, /img/suporte-vertical-1200.webp 1200w" sizes="100vw">
+          <img src="/previews/recovered/demos/norte/img/suporte-1600.webp" srcset="/img/suporte-1000.webp 1000w, /previews/recovered/demos/norte/img/suporte-1600.webp 1600w, /img/suporte-2200.webp 2200w" sizes="64vw" width="2200" height="1467" alt="Atendente de headset concentrada no atendimento, com luz quente" loading="lazy" decoding="async">
+        </picture>
+      </figure>
+      <div class="suporte__conteudo">
+        <div class="numero numero--c" data-numero>
+          <p class="numero__valor suporte__relogio" data-relogio><span data-h>23</span><span class="suporte__dois">:</span><span data-m>41</span></p>
+          <p class="numero__legenda" data-relogio-legenda>é a hora aí.</p>
+        </div>
+        <div class="suporte__texto" data-revela>
+          <h2 class="titulo">
+            <span class="linha"><span>Alguém atende</span></span>
+            <span class="linha"><span>a qualquer hora.</span></span>
+          </h2>
+          <p class="corpo">Chat, telefone e e-mail, 24 horas, com quem entende de site. A resposta chega em 2 minutos, em média.</p>
+          <a class="botao" href="#"><span class="rola" data-texto="Falar com alguém">Falar com alguém</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. FECHO -->
+    <section class="fecho" data-secao="fecho" data-revela>
+      <div class="fecho__nome">
+        <span class="ponto ponto--vivo fecho__ponto" aria-hidden="true"></span>
+        <p class="fecho__dominio" data-dominio data-ajusta>seunegocio.com.br</p>
+      </div>
+      <div class="fecho__linha" data-revela>
+        <p class="fecho__frase">no ar hoje, por <span data-fecho-preco>R$ 39,90</span> por mês.</p>
+        <div class="fecho__acoes">
+          <a class="botao" href="#planos"><span class="rola" data-texto="Criar meu site">Criar meu site</span></a>
+          <a class="botao-seta" href="#planos" aria-label="Ver os planos">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13M11 4.5 16.5 10 11 15.5"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13M11 4.5 16.5 10 11 15.5"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape__topo">
+      <a class="rodape__status" href="#">
+        <span class="ponto ponto--vivo" aria-hidden="true"></span>
+        <span>Tudo no ar agora</span>
+      </a>
+      <nav class="rodape__cols" aria-label="Rodapé">
+        <div class="rodape__col">
+          <p class="rodape__titulo">Hospedagem</p>
+          <a class="link" href="#planos">Site</a>
+          <a class="link" href="#planos">Negócio</a>
+          <a class="link" href="#planos">Loja</a>
+        </div>
+        <div class="rodape__col">
+          <p class="rodape__titulo">Servidores</p>
+          <a class="link" href="#planos">Servidor em nuvem</a>
+          <a class="link" href="#regioes">As 12 regiões</a>
+          <a class="link" href="#migracao">Migração grátis</a>
+        </div>
+        <div class="rodape__col">
+          <p class="rodape__titulo">Domínios</p>
+          <a class="link" href="#dominio">Registrar</a>
+          <a class="link" href="#dominio">Transferir</a>
+        </div>
+        <div class="rodape__col">
+          <p class="rodape__titulo">Ajuda</p>
+          <a class="link" href="#suporte">Suporte 24h</a>
+          <a class="link" href="#">Central de ajuda</a>
+          <a class="link" href="#">Status</a>
+        </div>
+      </nav>
+    </div>
+    <div class="rodape__base">
+      <p class="rodape__legal"><span>© 2026 Norte Hospedagem Ltda.</span><span class="rodape__sep" aria-hidden="true"> · </span><span>CNPJ 00.000.000/0001-00</span></p>
+      <div class="rodape__base-links">
+        <a class="link" href="#">Termos</a>
+        <a class="link" href="#">Privacidade</a>
+        <a class="link" href="#topo">Voltar ao topo</a>
+      </div>
+    </div>
+    <p class="palavra rodape__palavra" aria-hidden="true" data-palavra>Norte</p>
+  </footer>
+
+  <div class="barra" aria-hidden="true"><span class="barra__polegar"></span></div>
+
+  <svg class="filtros" aria-hidden="true" width="0" height="0">
+    <filter id="borrao-x" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="0 0"/>
+    </filter>
+  </svg>
+
+</body>
+</html>

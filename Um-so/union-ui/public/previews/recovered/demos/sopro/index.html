@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sopro — estúdio criativo</title>
+  <meta name="description" content="Sopro é um estúdio criativo em Curitiba: marca, campanha, espaço e digital. Toda ideia começa com ar." />
+  <meta name="theme-color" content="#fbfbfb" />
+  <link rel="icon" href="/previews/recovered/demos/sopro/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="/previews/recovered/demos/sopro/infla/cheio.webp" as="image" type="image/webp" />
+  <script>
+    // ?reel (ou ?reel=0.7): baixa o contraste para gravar a tela com o celular sem estourar os claros, e sem barra de rolagem
+    (function () {
+      var r = new URLSearchParams(location.search).get('reel');
+      if (r === null) return;
+      var k = Math.min(1, Math.max(0.4, parseFloat(r) || 0.85));
+      document.documentElement.style.filter = 'contrast(' + k + ') brightness(' + k + ')';
+      document.documentElement.style.scrollbarWidth = 'none';
+      document.head.appendChild(document.createElement('style')).textContent = '::-webkit-scrollbar{display:none}';
+    })();
+  </script>
+  <script>
+    // abertura só com JS; se o JS não subir em 4 s, a página aparece sem ela
+    (function () {
+      var d = document.documentElement;
+      d.classList.add('intro-on');
+      setTimeout(function () { if (!window.__soproBooted) { d.classList.remove('intro-on'); } }, 4000);
+    })();
+  </script>
+  <style>html,body{background:#fbfbfb}.loader{display:none}.intro-on .loader{display:grid}.intro-on .hero__top,.intro-on .hero__foot,.intro-on .nav,.intro-on .hero__word{opacity:0}</style>
+  <script type="module" crossorigin src="/previews/recovered/demos/sopro/assets/index-DUMS7NJ2.js"></script>
+  <link rel="stylesheet" crossorigin href="/previews/recovered/demos/sopro/assets/index-CC5BsuVD.css">
+</head>
+<body>
+  <!-- Abertura: o monograma, o grau que infla e a contagem até zero -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__mark"><span class="loader__s">S</span><i class="loader__ar"></i></div>
+    <span class="loader__count label">100</span>
+  </div>
+
+  <header class="nav">
+    <a class="nav__logo" href="#topo" aria-label="Sopro, início">S<i></i></a>
+    <button class="nav__menu label" type="button" aria-expanded="false" aria-controls="menu">Menu <span aria-hidden="true">+</span></button>
+  </header>
+
+  <!-- Menu de tela cheia: a cortina preta desce e os itens sobem um a um -->
+  <nav class="menu" id="menu" aria-label="Menu" hidden>
+    <ol class="menu__list">
+      <li><a href="#objetos"><span class="label">01</span><b>Ideias</b></a></li>
+      <li><a href="#trabalhos"><span class="label">02</span><b>Trabalhos</b></a></li>
+      <li><a href="#estudio"><span class="label">03</span><b>Estúdio</b></a></li>
+      <li><a href="#servicos"><span class="label">04</span><b>Serviços</b></a></li>
+      <li><a href="#contato"><span class="label">05</span><b>Contato</b></a></li>
+    </ol>
+    <p class="menu__foot label">oi@sopro.studio · +55 41 3000-0000</p>
+  </nav>
+
+  <main>
+    <!-- Hero: nome chapado; a tinta (WebGL) mostra por dentro as letras infladas -->
+    <section class="hero" id="topo">
+      <div class="hero__top">
+        <p class="hero__lede">Toda ideia começa com ar.<br />A gente sopra até ela ocupar a sala.</p>
+        <p class="hero__what label">Marca · Campanha · Espaço · Digital</p>
+      </div>
+
+      <h1 class="hero__word" aria-label="Sopro"><span aria-hidden="true">S</span><span aria-hidden="true">O</span><span aria-hidden="true">P</span><span aria-hidden="true">R</span><span aria-hidden="true">O</span></h1>
+      <canvas class="hero__ink" aria-hidden="true"></canvas>
+
+      <div class="hero__foot">
+        <a class="pill pill--dark" href="#contato">Marcar uma conversa <span aria-hidden="true">→</span></a>
+        <p class="label">Estúdio criativo · Curitiba, PR</p>
+        <p class="label hero__social"><a href="#">Instagram</a> / <a href="#">LinkedIn</a></p>
+      </div>
+    </section>
+
+    <!-- Objetos: infláveis flutuando no preto, puxados pelo cursor -->
+    <section class="objetos" id="objetos">
+      <div class="objetos__field" aria-hidden="true">
+        <img class="obj" data-depth="0.9" style="--x: 6%; --y: 8%; --w: 18vw" src="/previews/recovered/demos/sopro/img/obj-nuvem.webp" alt="" />
+        <img class="obj" data-depth="1.4" style="--x: 70%; --y: 6%; --w: 15vw" src="/previews/recovered/demos/sopro/img/obj-raio.webp" alt="" />
+        <img class="obj" data-depth="0.6" style="--x: 76%; --y: 74%; --w: 19vw" src="/previews/recovered/demos/sopro/img/obj-anel.webp" alt="" />
+        <img class="obj" data-depth="1.2" style="--x: 4%; --y: 62%; --w: 14vw" src="/previews/recovered/demos/sopro/img/obj-gota.webp" alt="" />
+        <img class="obj" data-depth="0.8" style="--x: 44%; --y: 70%; --w: 13vw" src="/previews/recovered/demos/sopro/img/obj-piao.webp" alt="" />
+      </div>
+      <div class="objetos__text">
+        <p class="label">(Ideias com ar dentro)</p>
+        <h2 class="big" data-lines>
+          <span class="ln"><span>Marca não é logo.</span></span>
+          <span class="ln"><span>É volume: o espaço</span></span>
+          <span class="ln"><span>que ela ocupa quando</span></span>
+          <span class="ln"><span>alguém entra na sala.</span></span>
+        </h2>
+      </div>
+    </section>
+
+    <!-- Trabalhos: o título se monta a partir de letras soltas; grade desalinhada -->
+    <section class="trabalhos" id="trabalhos">
+      <header class="trabalhos__head">
+        <h2 class="trabalhos__title" aria-label="Trabalhos">
+          <span>T</span><span>R</span><span>A</span><span>B</span><span>A</span><span>L</span><span>H</span><span>O</span><span>S</span>
+        </h2>
+        <div class="trabalhos__meta">
+          <span class="label">(06) projetos selecionados</span>
+          <span class="label">2024 — 2026</span>
+        </div>
+      </header>
+
+      <ol class="cases">
+        <li class="case-card" style="--col: 1 / span 5">
+          <a href="#">
+            <figure><img src="/previews/recovered/demos/sopro/img/case-erva-brava.webp" alt="Embalagens pretas da Erva Brava com tipografia vermelha" loading="lazy" /></figure>
+            <div class="case-card__meta"><span class="label">01 — Erva Brava</span><span class="label">Embalagem · Marca</span></div>
+            <p class="case-card__line">Uma erva-mate que não pede licença.</p>
+          </a>
+        </li>
+        <li class="case-card" style="--col: 7 / span 6; --push: 16vh">
+          <a href="#">
+            <figure><img src="/previews/recovered/demos/sopro/img/case-pedala.webp" alt="Fachada vermelha da loja Pedala com letras cromadas" loading="lazy" /></figure>
+            <div class="case-card__meta"><span class="label">02 — Pedala</span><span class="label">Espaço · Sinalização</span></div>
+            <p class="case-card__line">Uma loja de bicicleta que se vê da outra quadra.</p>
+          </a>
+        </li>
+        <li class="case-card" style="--col: 2 / span 6">
+          <a href="#">
+            <figure><img src="/previews/recovered/demos/sopro/img/case-mare.webp" alt="Cartazes do festival Maré colados num muro" loading="lazy" /></figure>
+            <div class="case-card__meta"><span class="label">03 — Maré</span><span class="label">Campanha · Evento</span></div>
+            <p class="case-card__line">Três dias de festival, um muro inteiro de ondas.</p>
+          </a>
+        </li>
+        <li class="case-card" style="--col: 9 / span 4; --push: 24vh">
+          <a href="#">
+            <figure><img src="/previews/recovered/demos/sopro/img/case-lume.webp" alt="Sacos e caixas da padaria Lume no balcão" loading="lazy" /></figure>
+            <div class="case-card__meta"><span class="label">04 — Lume</span><span class="label">Marca · Embalagem</span></div>
+            <p class="case-card__line">Padaria de bairro com sol próprio.</p>
+          </a>
+        </li>
+        <li class="case-card" style="--col: 1 / span 4; --push: 8vh">
+          <a href="#">
+            <figure><img src="/previews/recovered/demos/sopro/img/case-coral.webp" alt="Celular com o aplicativo da Coral" loading="lazy" /></figure>
+            <div class="case-card__meta"><span class="label">05 — Coral</span><span class="label">Digital · Produto</span></div>
+            <p class="case-card__line">Um banco que fala como gente.</p>
+          </a>
+        </li>
+        <li class="case-card case-card--cta" style="--col: 6 / span 7">
+          <a href="#case">
+            <span class="label">06 — Fôlego</span>
+            <b>Ver o case em destaque <span aria-hidden="true">↓</span></b>
+          </a>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Case em destaque: a foto de tela cheia encolhe até virar a tela da sala -->
+    <section class="case" id="case">
+      <div class="case__stage">
+        <img class="case__sala" src="/previews/recovered/demos/sopro/img/sala.webp" alt="" aria-hidden="true" />
+        <div class="case__screen"><img src="/previews/recovered/demos/sopro/img/case-folego.webp" alt="Corredor de vermelho na neblina, campanha da Fôlego" /></div>
+        <div class="case__copy">
+          <p class="label">(Case em destaque) 06 — Fôlego</p>
+          <h3 class="case__title" data-beat>Uma marca de corrida<br />lançada no meio da neblina.</h3>
+          <p class="case__note label" data-beat>Campanha · Filme · Exposição — 2026</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- O estúdio -->
+    <section class="estudio" id="estudio">
+      <p class="label estudio__tag">(O estúdio)</p>
+      <div class="estudio__grid">
+        <h2 class="estudio__text" data-lines>
+          <span class="ln"><span>A gente se chama Sopro porque toda marca</span></span>
+          <span class="ln"><span>começa assim: um pouco de ar que alguém</span></span>
+          <span class="ln"><span>resolveu levar a sério. Damos forma, volume</span></span>
+          <span class="ln"><span>e pressão até a ideia ocupar o lugar dela.</span></span>
+        </h2>
+        <figure class="estudio__pedestal">
+          <img src="/previews/recovered/demos/sopro/img/pedestal.webp" alt="Cubo inflável vermelho num pedestal branco" loading="lazy" />
+          <figcaption class="label">Ou qualquer coisa que ainda não tem nome.</figcaption>
+        </figure>
+        <figure class="estudio__paisagem">
+          <div><img src="/previews/recovered/demos/sopro/img/paisagem.webp" alt="Escultura inflável vermelha gigante num campo dos Campos Gerais" loading="lazy" /></div>
+          <figcaption class="label">Nó, 2025 — instalação nos Campos Gerais, PR</figcaption>
+        </figure>
+      </div>
+      <dl class="estudio__nums">
+        <div><dt class="label">Projetos inflados</dt><dd data-count="148">0</dd></div>
+        <div><dt class="label">Anos de fôlego</dt><dd data-count="9">0</dd></div>
+        <div><dt class="label">Pessoas no estúdio</dt><dd data-count="14">0</dd></div>
+      </dl>
+    </section>
+
+    <!-- Serviços: os objetos caem com física e dá para arrastar -->
+    <section class="servicos" id="servicos">
+      <div class="servicos__top">
+        <h2 class="big" data-lines>
+          <span class="ln"><span>Ar com</span></span>
+          <span class="ln"><span>intenção.</span></span>
+        </h2>
+        <div class="servicos__cols">
+          <p class="label">A gente faz</p>
+          <ul class="servicos__list">
+            <li>Identidade de marca</li>
+            <li>Campanha e filme</li>
+            <li>Espaço e cenografia</li>
+            <li>Site e produto digital</li>
+            <li>Embalagem</li>
+          </ul>
+          <p class="servicos__note">Estratégia é decidir onde o ar entra. O resto é soprar com força.</p>
+        </div>
+      </div>
+      <div class="pilha" aria-hidden="true">
+        <p class="pilha__hint label">Arraste as coisas</p>
+      </div>
+    </section>
+
+    <!-- Contato: o nome gigante branco, as letras fogem do cursor -->
+    <footer class="contato" id="contato">
+      <div class="contato__top">
+        <h2 class="big" data-lines>
+          <span class="ln"><span>Bora encher</span></span>
+          <span class="ln"><span>essa ideia?</span></span>
+        </h2>
+        <div class="contato__actions">
+          <a class="pill pill--line" href="#">Marcar uma conversa <span aria-hidden="true">→</span></a>
+          <a class="pill pill--line" href="mailto:oi@sopro.studio">oi@sopro.studio <span aria-hidden="true">↗</span></a>
+        </div>
+        <ul class="contato__links">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Behance</a></li>
+        </ul>
+      </div>
+      <p class="contato__word" aria-label="Sopro"><span aria-hidden="true">S</span><span aria-hidden="true">O</span><span aria-hidden="true">P</span><span aria-hidden="true">R</span><span aria-hidden="true">O</span></p>
+      <div class="contato__foot label">
+        <span>© 2026 Sopro Estúdio Criativo — Curitiba, PR</span>
+        <span>Rua do Fôlego, 120 · São Francisco</span>
+        <a href="#topo">Voltar ao topo ↑</a>
+      </div>
+    </footer>
+  </main>
+
+</body>
+</html>

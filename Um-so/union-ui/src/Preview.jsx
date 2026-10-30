@@ -19,5 +19,5 @@ export function Preview({item,theme='dark',width='desktop',config,onStatus,setti
  {state==='loading'&&<div className="preview-loading"><Loader2 className="spin"/><p>Preparando sua prévia</p><small>O componente já está sendo carregado.</small></div>}
  {mediaError&&state!=='error'&&<div className='preview-media-warning' role='alert'>{mediaError}<button onClick={()=>setAttempt(v=>v+1)}>Tentar novamente</button></div>}
  {state==='error'&&<div className="preview-runtime-error" role="alert"><p>Não foi possível concluir o carregamento.</p><button className="button" onClick={()=>setAttempt(v=>v+1)}><RotateCcw size={14}/> Tentar novamente</button><details><summary>Detalhes técnicos</summary><code>{message.slice(0,400)}</code></details></div>}
- </div><button className="preview-refresh icon-button" title="Reiniciar preview" onClick={()=>setAttempt(v=>v+1)}><RefreshCw size={15}/></button>{state==='ready'&&<div className="preview-interaction-hint"><MousePointer2 size={11}/> Interaja com a prévia</div>}</div>;
+ </div><button className="preview-refresh icon-button" title="Reiniciar preview" onClick={()=>setAttempt(v=>v+1)}><RefreshCw size={15}/></button>{state==='ready'&&<div className="preview-interaction-hint"><MousePointer2 size={11}/> {item.recoveryMode==='recorded-video'?'Reproduza a prévia':'Interaja com a prévia'}</div>}</div>;
 }

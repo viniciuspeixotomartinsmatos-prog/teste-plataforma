@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Prado · financeiro em dia, sem planilha</title>
+    <meta name="description" content="Contas a pagar e a receber, boletos e Pix automáticos, notas fiscais e o banco conectado num lugar só. Software de gestão financeira para pequenas empresas." />
+    <meta name="theme-color" content="#eceee9" />
+    <link rel="icon" href="/previews/recovered/demos/prado/favicon.svg" type="image/svg+xml" />
+    <!-- no dev do Vite o CSS entra pelo JS: o body espera escondido, sobre o fundo da página, até src/estilo.js
+         (ou 6 s, se algo falhar; sem JS, o <noscript>), e nada transiciona do estilo padrão do navegador para o da página -->
+    <style>html{background:#eceee9}html:not(.com-estilo) body{visibility:hidden;animation:0s 6s forwards mostra}@keyframes mostra{to{visibility:visible}}html:not(.assentou) *,html:not(.assentou) :before,html:not(.assentou) :after{transition:none!important}</style>
+    <noscript><style>body{animation:none;visibility:visible!important}</style></noscript>
+    <link rel="preload" as="image" href="/previews/recovered/demos/prado/img/hero-ceu.webp" media="(min-width: 761px) and (orientation: landscape), (min-width: 1101px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="/previews/recovered/demos/prado/img/hero-colinas.webp" media="(min-width: 761px) and (orientation: landscape), (min-width: 1101px)" />
+    <link rel="preload" as="image" href="/previews/recovered/demos/prado/img/hero-ceu-celular.webp" media="(max-width: 760px), (orientation: portrait) and (max-width: 1100px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="/previews/recovered/demos/prado/img/hero-colinas-celular.webp" media="(max-width: 760px), (orientation: portrait) and (max-width: 1100px)" />
+    <script>document.documentElement.classList.add('js');</script>
+    <script type="module" crossorigin src="/previews/recovered/demos/prado/assets/index-BWen2XjN.js"></script>
+    <link rel="stylesheet" crossorigin href="/previews/recovered/demos/prado/assets/index-DNbPOGIY.css">
+  </head>
+  <body>
+    <!-- ícones próprios (traço 1,6 px, cantos redondos), usados com <svg class="ico"><use href="#i-..."/></svg> -->
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="marca" viewBox="0 0 32 32">
+      <path d="M14.6 29.2c-.7-5.6-3-10.3-7.9-14.3 3.9 1.9 7.5 5.1 9.6 9.3l-.3 5z" />
+      <path d="M14.6 29.2c.9-9.3 4.6-18 12.3-25.5-5.3 7.6-8.1 16.4-8.6 25.5h-3.7z" />
+    </symbol>
+    <symbol id="i-inicio" viewBox="0 0 24 24"><path d="M4.5 10.2 12 4.5l7.5 5.7V19a.9.9 0 0 1-.9.9h-4.1v-5.4h-5v5.4H5.4a.9.9 0 0 1-.9-.9z" /></symbol>
+    <symbol id="i-pagar" viewBox="0 0 24 24"><path d="M14 3.8H7.2a1 1 0 0 0-1 1v14.4a1 1 0 0 0 1 1h9.6a1 1 0 0 0 1-1V7.6z" /><path d="M14 3.8v3.8h3.8" /><path d="m9.6 15.4 4.8-4.8M10.8 10.6h3.6v3.6" /></symbol>
+    <symbol id="i-receber" viewBox="0 0 24 24"><path d="M14 3.8H7.2a1 1 0 0 0-1 1v14.4a1 1 0 0 0 1 1h9.6a1 1 0 0 0 1-1V7.6z" /><path d="M14 3.8v3.8h3.8" /><path d="m14.4 10.6-4.8 4.8M9.6 11.8v3.6h3.6" /></symbol>
+    <symbol id="i-notas" viewBox="0 0 24 24"><path d="M6.5 3.8h11v16.4l-2.2-1.4-2.2 1.4-2.2-1.4-2.2 1.4-2.2-1.4z" /><path d="M9.2 8.5h5.6M9.2 11.8h5.6M9.2 15.1h3.2" /></symbol>
+    <symbol id="i-relatorios" viewBox="0 0 24 24"><path d="M4.5 19.5h15" /><path d="M7.5 16.5v-5M12 16.5V7M16.5 16.5V9" /></symbol>
+    <symbol id="i-busca" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6" /><path d="m15.5 15.5 4 4" /></symbol>
+    <symbol id="i-banco" viewBox="0 0 24 24"><path d="M4 9.2 12 4.8l8 4.4" /><path d="M5.8 10.6v6.8M9.9 10.6v6.8M14.1 10.6v6.8M18.2 10.6v6.8" /><path d="M4 19.6h16" /></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5.5 12.5 4.2 4.2 8.8-9.2" /></symbol>
+    <symbol id="i-cima" viewBox="0 0 24 24"><path d="M12 18.5v-13M6.8 10.7 12 5.5l5.2 5.2" /></symbol>
+    <symbol id="i-baixo" viewBox="0 0 24 24"><path d="M12 5.5v13M6.8 13.3 12 18.5l5.2-5.2" /></symbol>
+    <symbol id="i-diag" viewBox="0 0 24 24"><path d="M7 17 17 7M8.5 7H17v8.5" /></symbol>
+    <symbol id="i-esq" viewBox="0 0 24 24"><path d="m14.5 6.5-5.5 5.5 5.5 5.5" /></symbol>
+    <symbol id="i-dir" viewBox="0 0 24 24"><path d="m9.5 6.5 5.5 5.5-5.5 5.5" /></symbol>
+    <symbol id="i-abre" viewBox="0 0 24 24"><path d="m6.5 9.5 5.5 5.5 5.5-5.5" /></symbol>
+    <symbol id="i-pix" viewBox="0 0 24 24"><path d="M5 9h12.5M14 5.5 17.5 9 14 12.5" /><path d="M19 15H6.5M10 11.5 6.5 15l3.5 3.5" /></symbol>
+    <symbol id="i-boleto" viewBox="0 0 24 24"><path d="M4.5 6.5v11M7.2 6.5v11M9.2 6.5v11M12 6.5v11M14.6 6.5v11M16.6 6.5v11M19.5 6.5v11" /></symbol>
+    <symbol id="i-cartao" viewBox="0 0 24 24"><rect x="3.8" y="6.2" width="16.4" height="11.6" rx="2" /><path d="M3.8 10.2h16.4M7 14.6h3" /></symbol>
+    <symbol id="i-cadeado" viewBox="0 0 24 24"><rect x="5.5" y="10.5" width="13" height="9.5" rx="2" /><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5" /></symbol>
+    <symbol id="i-sino" viewBox="0 0 24 24"><path d="M6.5 16.5V11a5.5 5.5 0 0 1 11 0v5.5l1.5 1.5H5z" /><path d="M10.2 20.2a2 2 0 0 0 3.6 0" /></symbol>
+    <symbol id="i-elo" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l2.8-2.8a4 4 0 0 0-5.7-5.7l-1 1" /><path d="M14 10a4 4 0 0 0-5.7 0l-2.8 2.8a4 4 0 0 0 5.7 5.7l1-1" /></symbol>
+    <symbol id="i-seta" viewBox="0 0 16 16"><path d="M3 8h9.5M8.5 4l4 4-4 4" /></symbol>
+  </defs>
+</svg>
+
+    <!-- nav: fixa; no topo fica sobre o céu do hero, some ao descer e volta ao subir (motion/nav.js) -->
+<header class="nav" data-nav>
+  <div class="nav__in">
+    <a class="nav__marca" href="#topo" aria-label="Prado, voltar ao topo">
+      <svg class="marca" viewBox="0 0 32 32" aria-hidden="true">
+        <path class="marca__a" d="M14.6 29.2c-.7-5.6-3-10.3-7.9-14.3 3.9 1.9 7.5 5.1 9.6 9.3l-.3 5z" />
+        <path class="marca__b" d="M14.6 29.2c.9-9.3 4.6-18 12.3-25.5-5.3 7.6-8.1 16.4-8.6 25.5h-3.7z" />
+      </svg>
+    </a>
+    <nav class="nav__links" aria-label="Seções">
+      <a href="#produto">Produto</a>
+      <a href="#para-quem">Para quem</a>
+      <a href="#integracoes">Integrações</a>
+      <a href="#seguranca">Segurança</a>
+      <a href="#precos">Preços</a>
+    </nav>
+    <div class="nav__acoes">
+      <a class="btn btn--claro btn--nav nav__entrar" href="#precos">Entrar</a>
+      <a class="btn btn--escuro btn--nav" href="#precos">
+        Começar grátis
+        <span class="seta" aria-hidden="true">
+          <svg viewBox="0 0 16 16"><path d="M3 8h9.5M8.5 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          <svg viewBox="0 0 16 16"><path d="M3 8h9.5M8.5 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+        </span>
+      </a>
+      <button class="nav__menu" type="button" aria-expanded="false" aria-controls="menu" data-menu-abre>
+        <span class="sr">Abrir menu</span>
+        <i></i><i></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- menu do celular: folha clara que desce de cima -->
+<div class="menu" id="menu" data-menu hidden>
+  <div class="menu__in">
+    <div class="menu__topo">
+      <span class="menu__nome serifa">Prado</span>
+      <button class="menu__fecha" type="button" data-menu-fecha><span class="sr">Fechar menu</span><i></i><i></i></button>
+    </div>
+    <nav class="menu__links" aria-label="Seções">
+      <a href="#produto" class="serifa">Produto</a>
+      <a href="#para-quem" class="serifa">Para quem</a>
+      <a href="#integracoes" class="serifa">Integrações</a>
+      <a href="#seguranca" class="serifa">Segurança</a>
+      <a href="#precos" class="serifa">Preços</a>
+    </nav>
+    <div class="menu__acoes">
+      <a class="btn btn--claro" href="#precos">Entrar</a>
+      <a class="btn btn--escuro" href="#precos">Começar grátis</a>
+    </div>
+  </div>
+</div>
+
+    <main>
+      <!-- hero: de ponta a ponta: o céu e as montanhas atrás, o app no meio e as colinas na frente.
+     Rolando, as colinas descem e o app aparece inteiro (motion/hero.js). -->
+<section class="hero" id="topo" data-hero>
+  <div class="hero__card" data-hero-card>
+    <div class="hero__terra" data-terra aria-hidden="true">
+      <picture class="hero__ceu" data-camada="ceu">
+        <source media="(max-width: 760px), (orientation: portrait) and (max-width: 1100px)" srcset="/previews/recovered/demos/prado/img/hero-ceu-celular.webp" width="1280" height="2520" />
+        <img src="/previews/recovered/demos/prado/img/hero-ceu.webp" srcset="/img/hero-ceu-1600.webp 1600w, /previews/recovered/demos/prado/img/hero-ceu.webp 2400w" sizes="100vw" width="2400" height="2000" alt="" fetchpriority="high" decoding="async" />
+      </picture>
+    </div>
+
+    <div class="hero__palco">
+      <div class="hero__texto">
+        <a class="chip entra" href="#receber" style="--atraso: 0.05s">
+          <span class="chip__tag">Novo</span>
+          <span class="chip__txt">Pix e boletos automáticos</span>
+          <svg class="chip__seta ico" aria-hidden="true"><use href="#i-dir" /></svg>
+        </a>
+        <h1 class="hero__titulo serifa entra-linhas" style="--atraso: 0.12s">
+          <span class="linha" style="--i: 0"><span>Financeiro em dia.</span></span>
+          <span class="linha" style="--i: 1"><span>Sem planilha.</span></span>
+        </h1>
+        <p class="hero__sub entra" style="--atraso: 0.38s">Contas, boletos e notas fiscais <br />num lugar só, com o banco conectado.</p>
+        <div class="hero__ctas entra" style="--atraso: 0.5s">
+          <a class="btn btn--escuro" href="#precos">
+            Começar grátis
+            <span class="seta" aria-hidden="true">
+              <svg viewBox="0 0 16 16"><use href="#i-seta" /></svg>
+              <svg viewBox="0 0 16 16"><use href="#i-seta" /></svg>
+            </span>
+          </a>
+          <a class="btn btn--claro" href="#precos">Agendar demonstração</a>
+        </div>
+      </div>
+
+      <div class="hero__app" data-hero-app>
+        <!-- o painel do Prado em HTML de verdade (dados de demonstração da Padaria Ciranda).
+     O HTML traz o estado final; motion/painel.js volta ao estado de antes e anima o Pix que entra e a conta que vira paga.
+     O gráfico também é montado lá. -->
+<div class="app" data-app>
+  <aside class="app__lado">
+    <div class="app__marca">
+      <svg class="marca" aria-hidden="true"><use href="#marca" /></svg>
+      <span>Prado</span>
+    </div>
+    <nav class="app__menu" aria-label="Menu do painel">
+      <a class="is-ativo" href="#topo" aria-current="page"><svg class="ico" aria-hidden="true"><use href="#i-inicio" /></svg>Início</a>
+      <a href="#pagar"><svg class="ico" aria-hidden="true"><use href="#i-pagar" /></svg>Contas a pagar</a>
+      <a href="#receber"><svg class="ico" aria-hidden="true"><use href="#i-receber" /></svg>Contas a receber</a>
+      <a href="#receber"><svg class="ico" aria-hidden="true"><use href="#i-notas" /></svg>Notas fiscais</a>
+      <a href="#prever"><svg class="ico" aria-hidden="true"><use href="#i-relatorios" /></svg>Relatórios</a>
+    </nav>
+    <div class="app__banco">
+      <span class="app__banco-ico"><svg class="ico" aria-hidden="true"><use href="#i-banco" /></svg><i class="pulso"></i></span>
+      <span class="app__banco-txt"><b>Conta PJ conectada</b><span>Atualizada há 2 min</span></span>
+    </div>
+  </aside>
+
+  <div class="app__main">
+    <header class="app__topo">
+      <button class="app__empresa" type="button">
+        <span class="app__empresa-ini" aria-hidden="true">PC</span>Padaria Ciranda
+        <svg class="ico" aria-hidden="true"><use href="#i-abre" /></svg>
+      </button>
+      <span class="app__busca"><svg class="ico" aria-hidden="true"><use href="#i-busca" /></svg>Buscar contas, clientes e notas<kbd>⌘K</kbd></span>
+      <span class="app__periodo">
+        <button type="button" aria-label="Mês anterior"><svg class="ico" aria-hidden="true"><use href="#i-esq" /></svg></button>
+        <span>Outubro</span>
+        <button type="button" aria-label="Próximo mês"><svg class="ico" aria-hidden="true"><use href="#i-dir" /></svg></button>
+      </span>
+      <button class="app__sino" type="button" aria-label="Avisos"><svg class="ico" aria-hidden="true"><use href="#i-sino" /></svg><i data-sino></i></button>
+      <span class="app__avatar" aria-hidden="true">LR</span>
+    </header>
+
+    <div class="app__corpo">
+      <div class="app__titulo">
+        <h2>Fluxo de caixa</h2>
+        <div class="seg" role="tablist" aria-label="Período do gráfico" data-seg>
+          <i class="seg__fundo" aria-hidden="true"></i>
+          <button type="button" role="tab" aria-selected="true" data-periodo="30">30 dias</button>
+          <button type="button" role="tab" aria-selected="false" data-periodo="90">Trimestre</button>
+          <button type="button" role="tab" aria-selected="false" data-periodo="12">12 meses</button>
+        </div>
+      </div>
+
+      <div class="app__metricas">
+        <div class="metrica metrica--saldo">
+          <span class="metrica__ico" aria-hidden="true"><svg class="ico"><use href="#i-diag" /></svg></span>
+          <span class="metrica__txt">
+            <span class="metrica__rot">Saldo hoje</span>
+            <b class="metrica__val num" data-valor="saldo" data-de="47070" data-para="48320">R$ 48.320</b>
+          </span>
+          <span class="metrica__nota num" data-nota="saldo"><em>+ R$ 3.480</em> hoje</span>
+        </div>
+        <div class="metrica metrica--receber">
+          <span class="metrica__ico" aria-hidden="true"><svg class="ico"><use href="#i-baixo" /></svg></span>
+          <span class="metrica__txt">
+            <span class="metrica__rot">A receber</span>
+            <b class="metrica__val num" data-valor="receber" data-de="14150" data-para="12900">R$ 12.900</b>
+          </span>
+          <span class="metrica__nota num" data-nota="receber">7 cobranças</span>
+        </div>
+        <div class="metrica metrica--pagar">
+          <span class="metrica__ico" aria-hidden="true"><svg class="ico"><use href="#i-cima" /></svg></span>
+          <span class="metrica__txt">
+            <span class="metrica__rot">A pagar</span>
+            <b class="metrica__val num" data-valor="pagar" data-de="8690" data-para="7410">R$ 7.410</b>
+          </span>
+          <span class="metrica__nota num" data-nota="pagar">2 contas · 7 dias</span>
+        </div>
+      </div>
+
+      <div class="grafico" data-grafico>
+        <div class="grafico__topo">
+          <span class="grafico__nome">Entradas e saídas</span>
+          <span class="grafico__leg"><i class="e"></i>Entradas <i class="s"></i>Saídas <i class="p"></i>Previsto</span>
+        </div>
+        <div class="grafico__area" data-barras role="img" aria-label="Entradas e saídas por dia em outubro"></div>
+        <div class="grafico__eixo num" data-eixo></div>
+        <div class="grafico__dica num" data-dica aria-hidden="true"></div>
+      </div>
+
+      <div class="app__listas">
+        <section class="lista">
+          <header><h3>Próximos vencimentos</h3><a href="#pagar" class="lista__mais">Ver todas</a></header>
+          <ul>
+            <li class="conta" data-conta-hoje>
+              <span class="conta__ico"><svg class="ico" aria-hidden="true"><use href="#i-boleto" /></svg></span>
+              <span class="conta__nome">Moinho Boa Safra<small>Farinha · boleto</small></span>
+              <span class="conta__data">Hoje</span>
+              <span class="conta__val num">R$ 1.280,00</span>
+              <span class="estado estado--pago" data-estado><i class="estado__check"><svg viewBox="0 0 24 24"><path d="m5.5 12.5 4.2 4.2 8.8-9.2" pathLength="1" /></svg></i><span data-estado-txt>Pago</span></span>
+            </li>
+            <li class="conta">
+              <span class="conta__ico"><svg class="ico" aria-hidden="true"><use href="#i-boleto" /></svg></span>
+              <span class="conta__nome">Aluguel do ponto<small>Imóvel · boleto</small></span>
+              <span class="conta__data">25 out</span>
+              <span class="conta__val num">R$ 3.200,00</span>
+              <span class="estado" data-estado-aluguel>Agendado</span>
+            </li>
+            <li class="conta">
+              <span class="conta__ico"><svg class="ico" aria-hidden="true"><use href="#i-banco" /></svg></span>
+              <span class="conta__nome">Energia elétrica<small>Débito automático</small></span>
+              <span class="conta__data">27 out</span>
+              <span class="conta__val num">R$ 4.210,00</span>
+              <span class="estado">A vencer</span>
+            </li>
+          </ul>
+        </section>
+        <section class="lista">
+          <header><h3>Recebidos hoje</h3><span class="lista__total num" data-recebido>R$ 3.480,00</span></header>
+          <ul data-recebidos>
+            <li class="conta conta--nova" data-pix-linha>
+              <span class="conta__ico conta__ico--verde"><svg class="ico" aria-hidden="true"><use href="#i-pix" /></svg></span>
+              <span class="conta__nome">Café Jardim<small>Pix · encomenda</small></span>
+              <span class="conta__data num">09:42</span>
+              <span class="conta__val conta__val--mais num">+ R$ 1.250,00</span>
+            </li>
+            <li class="conta">
+              <span class="conta__ico"><svg class="ico" aria-hidden="true"><use href="#i-boleto" /></svg></span>
+              <span class="conta__nome">Escola Arco-Íris<small>Boleto · lanches</small></span>
+              <span class="conta__data num">08:15</span>
+              <span class="conta__val conta__val--mais num">+ R$ 860,00</span>
+            </li>
+            <li class="conta">
+              <span class="conta__ico"><svg class="ico" aria-hidden="true"><use href="#i-cartao" /></svg></span>
+              <span class="conta__nome">Vendas no balcão<small>Cartão · maquininha</small></span>
+              <span class="conta__data num">07:30</span>
+              <span class="conta__val conta__val--mais num">+ R$ 1.370,00</span>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <div class="aviso" data-aviso role="status" aria-live="polite">
+    <span class="aviso__ico"><svg class="ico" aria-hidden="true"><use href="#i-pix" /></svg></span>
+    <span class="aviso__txt"><b>Pix recebido</b><span>Café Jardim · agora</span></span>
+    <span class="aviso__val num">+ R$ 1.250,00</span>
+  </div>
+</div>
+
+      </div>
+    </div>
+
+    <div class="hero__colinas" data-camada="colinas" aria-hidden="true">
+      <picture>
+        <source media="(max-width: 760px), (orientation: portrait) and (max-width: 1100px)" srcset="/previews/recovered/demos/prado/img/hero-colinas-celular.webp" width="1280" height="941" />
+        <img src="/previews/recovered/demos/prado/img/hero-colinas.webp" srcset="/img/hero-colinas-1600.webp 1600w, /previews/recovered/demos/prado/img/hero-colinas.webp 2400w" sizes="100vw" width="2400" height="658" alt="" decoding="async" />
+      </picture>
+    </div>
+
+    <div class="hero__prova" data-prova>
+      <p>Usado por <span class="num">4.200</span> empresas</p>
+      <ul class="serifa">
+        <li>Padaria Ciranda</li>
+        <li>Oficina 47</li>
+        <li>Estúdio Nove</li>
+        <li>Moura Contábil</li>
+        <li>Vila Pet</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+      <!-- manhã: o respiro depois do hero. Só a frase, e a sombra de folhas (camada fixa .sombra) passando por cima do papel -->
+<section class="manha" data-sombra-zona aria-label="O que o Prado faz">
+  <p class="manha__frase serifa entra-linhas">
+    <span class="linha" style="--i: 0"><span>Abra o Prado de manhã.</span></span>
+    <span class="linha" style="--i: 1"><span>Saiba onde está <em>cada real.</em></span></span>
+  </p>
+</section>
+
+      <!-- produto: três cards de foto, cada um com um pedaço do app em vidro. A luz vai da manhã (orvalho)
+     ao meio-dia (sombra na parede) e à tarde (capim dourado). Estado vivo em motion/widgets.js -->
+<section class="produto" id="produto" aria-label="Produto">
+  <div class="produto__grade">
+    <article class="cartao cartao--escuro" id="receber" data-cartao style="--atraso: 0s">
+      <div class="cartao__foto"><img src="/previews/recovered/demos/prado/img/receber.webp" alt="" width="1000" height="1389" loading="lazy" decoding="async" /></div>
+      <div class="widget widget--vidro" data-widget="cobranca">
+        <div class="w-topo">
+          <span class="w-ico"><svg class="ico" aria-hidden="true"><use href="#i-receber" /></svg></span>
+          <span class="w-tit">Cobrança <span class="num">#0412</span></span>
+          <span class="w-chip"><svg class="w-chip__check" viewBox="0 0 24 24" aria-hidden="true"><path d="m5.5 12.5 4.2 4.2 8.8-9.2" pathLength="1" /></svg>Paga às 09:42</span>
+        </div>
+        <p class="w-cliente">Café Jardim · encomenda de pães</p>
+        <p class="w-valor num">R$ 1.250,00</p>
+        <div class="w-modo" role="tablist" aria-label="Forma de pagamento" data-modo>
+          <i class="w-modo__fundo" aria-hidden="true"></i>
+          <button type="button" role="tab" aria-selected="true" data-modo-btn="pix"><svg class="ico" aria-hidden="true"><use href="#i-pix" /></svg>Pix</button>
+          <button type="button" role="tab" aria-selected="false" data-modo-btn="boleto"><svg class="ico" aria-hidden="true"><use href="#i-boleto" /></svg>Boleto</button>
+        </div>
+        <div class="w-detalhe" data-detalhe>
+          <span class="w-codigo" data-detalhe-pix>
+            <svg class="w-qr" viewBox="0 0 9 9" aria-hidden="true"><path d="M0 0h3v3H0zM6 0h3v3H6zM0 6h3v3H0zM4 0h1v1H4zM4 2h1v2H4zM5 4h2v1H5zM8 4h1v1H8zM4 6h1v1H4zM6 6h1v1H6zM8 6h1v3H8zM5 8h2v1H5zM3 4h1v1H3zM1 4h1v1H1z" /></svg>
+            Pix copia e cola
+          </span>
+          <span class="w-codigo" data-detalhe-boleto hidden>
+            <svg class="w-barras" viewBox="0 0 60 12" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h1v12H0zM2 0h2v12H2zM5 0h1v12H5zM7 0h1v12H7zM10 0h2v12h-2zM13 0h1v12h-1zM15 0h1v12h-1zM18 0h2v12h-2zM21 0h1v12h-1zM23 0h2v12h-2zM26 0h1v12h-1zM29 0h1v12h-1zM31 0h2v12h-2zM34 0h1v12h-1zM36 0h1v12h-1zM39 0h2v12h-2zM42 0h1v12h-1zM44 0h1v12h-1zM47 0h2v12h-2zM50 0h1v12h-1zM52 0h2v12h-2zM55 0h1v12h-1zM57 0h1v12h-1zM59 0h1v12h-1z" /></svg>
+            Vence 22 out
+          </span>
+          <button class="w-copia" type="button" data-copia><span data-copia-txt>Copiar</span></button>
+        </div>
+        <p class="w-rodape" data-nf><span class="w-nf__ico"><svg class="ico" aria-hidden="true"><use href="#i-notas" /></svg><svg class="w-nf__check" viewBox="0 0 24 24" aria-hidden="true"><path d="m5.5 12.5 4.2 4.2 8.8-9.2" pathLength="1" /></svg></span><span data-nf-txt>Nota fiscal nº <span class="num">1.284</span> anexada</span></p>
+      </div>
+      <div class="cartao__texto">
+        <h3 class="serifa">Pix e boleto na <br />mesma cobrança.</h3>
+        <p>O cliente escolhe como pagar. A baixa é automática e a nota fiscal vai junto.</p>
+      </div>
+    </article>
+
+    <article class="cartao cartao--claro" id="pagar" data-cartao style="--atraso: 0.12s">
+      <div class="cartao__foto"><img src="/previews/recovered/demos/prado/img/pagar.webp" alt="" width="1000" height="1389" loading="lazy" decoding="async" /></div>
+      <div class="widget widget--claro" data-widget="pagar">
+        <div class="w-topo">
+          <span class="w-tit">A pagar · 7 dias</span>
+          <b class="w-total num">R$ 7.410</b>
+        </div>
+        <ul class="w-lista">
+          <li class="w-item">
+            <span class="w-nome">Moinho Boa Safra<small>Farinha · paga hoje</small></span>
+            <span class="w-val num">R$ 1.280,00</span>
+            <span class="w-tag w-tag--ok"><svg class="w-paga__check" viewBox="0 0 24 24" aria-hidden="true"><path d="m5.5 12.5 4.2 4.2 8.8-9.2" /></svg>Pago</span>
+          </li>
+          <li class="w-item" data-item-aluguel>
+            <span class="w-nome">Aluguel do ponto<small>Vence 25 out</small></span>
+            <span class="w-val num">R$ 3.200,00</span>
+            <button class="w-paga" type="button" data-agenda><svg class="w-paga__check" viewBox="0 0 24 24" aria-hidden="true"><path d="m5.5 12.5 4.2 4.2 8.8-9.2" pathLength="1" /></svg><span data-agenda-txt>Agendado</span></button>
+          </li>
+          <li class="w-item">
+            <span class="w-nome">Energia elétrica<small>Vence 27 out</small></span>
+            <span class="w-val num">R$ 4.210,00</span>
+            <span class="w-tag">Débito</span>
+          </li>
+        </ul>
+        <label class="w-aviso">
+          <span><svg class="ico" aria-hidden="true"><use href="#i-sino" /></svg>Avisar 3 dias antes</span>
+          <input class="sr" type="checkbox" role="switch" checked data-aviso-sw />
+          <i class="w-switch" aria-hidden="true"></i>
+        </label>
+      </div>
+      <div class="cartao__texto">
+        <h3 class="serifa">Nenhuma conta <br />vence esquecida.</h3>
+        <p>Lembrete antes do vencimento e pagamento pelo app, sempre com a sua aprovação.</p>
+      </div>
+    </article>
+
+    <article class="cartao cartao--escuro" id="prever" data-cartao style="--atraso: 0.24s">
+      <div class="cartao__foto"><img src="/previews/recovered/demos/prado/img/prever.webp" alt="" width="1000" height="1389" loading="lazy" decoding="async" /></div>
+      <div class="widget widget--vidro" data-widget="prever">
+        <div class="w-topo"><span class="w-tit">Sobra prevista em 31 out</span></div>
+        <p class="w-valor num" data-sobra>R$ 52.180</p>
+        <p class="w-variacao"><svg class="ico" aria-hidden="true"><use href="#i-cima" /></svg><span><span class="num">8%</span> acima de setembro</span></p>
+        <svg class="w-curva" viewBox="0 0 300 96" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="curva-area" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0.32" /><stop offset="1" stop-color="#fff" stop-opacity="0" /></linearGradient>
+          </defs>
+          <path class="w-curva__area" d="M0 70 C 20 66, 34 74, 52 64 S 86 58, 104 60 S 140 46, 158 50 S 192 40, 212 36 L 212 96 L 0 96 Z" fill="url(#curva-area)" />
+          <path class="w-curva__linha" d="M0 70 C 20 66, 34 74, 52 64 S 86 58, 104 60 S 140 46, 158 50 S 192 40, 212 36" pathLength="1" />
+          <path class="w-curva__prev" d="M212 36 C 232 31, 252 34, 270 24 S 292 18, 300 16" pathLength="1" />
+          <circle class="w-curva__hoje" cx="212" cy="36" r="4.5" />
+        </svg>
+        <div class="w-eixo num"><span>1 out</span><span>hoje</span><span>31 out</span></div>
+      </div>
+      <div class="cartao__texto">
+        <h3 class="serifa">Quanto sobra, antes <br />do fim do mês.</h3>
+        <p>Previsão de caixa com tudo o que já está agendado, para decidir com calma.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+      <!-- para quem: as cinco empresas que o hero cita, agora com rosto. Cada foto sobe num ritmo próprio ao rolar
+     (galeria solta); no hover ou no toque aparece a frase de quem usa. -->
+<section class="gente" id="para-quem">
+  <div class="gente__topo">
+    <h2 class="serifa h2 entra-linhas">
+      <span class="linha" style="--i: 0"><span>Feito para quem tem</span></span>
+      <span class="linha" style="--i: 1"><span>balcão, não planilha.</span></span>
+    </h2>
+    <p class="lead entra" style="--atraso: 0.2s">Padarias, oficinas, estúdios, escritórios e pet shops: mais de 4.200 pequenas empresas fecham o mês no Prado.</p>
+  </div>
+  <ul class="gente__fila">
+    <li class="pessoa" style="--v: 26; --atraso: 0s">
+      <button class="pessoa__foto" type="button" aria-expanded="false" aria-describedby="fala-1" data-pessoa>
+        <img src="/previews/recovered/demos/prado/img/pessoa-padaria.webp" alt="Mãos de padeiro modelando a massa sobre a tábua" width="760" height="1013" loading="lazy" decoding="async" />
+        <span class="pessoa__fala" id="fala-1">“Fecho o caixa do dia em cinco minutos.”</span>
+      </button>
+      <p class="pessoa__nome"><b class="serifa">Padaria Ciranda</b><span>Padaria</span></p>
+    </li>
+    <li class="pessoa" style="--v: 64; --atraso: 0.08s">
+      <button class="pessoa__foto" type="button" aria-expanded="false" aria-describedby="fala-2" data-pessoa>
+        <img src="/previews/recovered/demos/prado/img/pessoa-oficina.webp" alt="Mecânico de braços cruzados na oficina" width="760" height="1013" loading="lazy" decoding="async" />
+        <span class="pessoa__fala" id="fala-2">“Acabaram as multas por boleto atrasado.”</span>
+      </button>
+      <p class="pessoa__nome"><b class="serifa">Oficina 47</b><span>Oficina mecânica</span></p>
+    </li>
+    <li class="pessoa" style="--v: 36; --atraso: 0.16s">
+      <button class="pessoa__foto" type="button" aria-expanded="false" aria-describedby="fala-3" data-pessoa>
+        <img src="/previews/recovered/demos/prado/img/pessoa-estudio.webp" alt="Designer organizando provas de impressão no estúdio" width="760" height="1013" loading="lazy" decoding="async" />
+        <span class="pessoa__fala" id="fala-3">“A nota fiscal sai junto com a cobrança.”</span>
+      </button>
+      <p class="pessoa__nome"><b class="serifa">Estúdio Nove</b><span>Estúdio de design</span></p>
+    </li>
+    <li class="pessoa" style="--v: 82; --atraso: 0.24s">
+      <button class="pessoa__foto" type="button" aria-expanded="false" aria-describedby="fala-4" data-pessoa>
+        <img src="/previews/recovered/demos/prado/img/pessoa-contabil.webp" alt="Contadora conferindo documentos com a calculadora" width="760" height="1013" loading="lazy" decoding="async" />
+        <span class="pessoa__fala" id="fala-4">“Os clientes chegam com tudo conciliado.”</span>
+      </button>
+      <p class="pessoa__nome"><b class="serifa">Moura Contábil</b><span>Escritório contábil</span></p>
+    </li>
+    <li class="pessoa" style="--v: 44; --atraso: 0.32s">
+      <button class="pessoa__foto" type="button" aria-expanded="false" aria-describedby="fala-5" data-pessoa>
+        <img src="/previews/recovered/demos/prado/img/pessoa-pet.webp" alt="Poodle recém-tosado sorrindo" width="760" height="1013" loading="lazy" decoding="async" />
+        <span class="pessoa__fala" id="fala-5">“Oito em cada dez clientes pagam no Pix.”</span>
+      </button>
+      <p class="pessoa__nome"><b class="serifa">Vila Pet</b><span>Pet shop</span></p>
+    </li>
+  </ul>
+  <figure class="gente__depo">
+    <blockquote class="serifa entra-linhas">
+      <span class="linha" style="--i: 0"><span>“Antes era uma semana de planilha.</span></span>
+      <span class="linha" style="--i: 1"><span>Hoje o mês fecha numa manhã.”</span></span>
+    </blockquote>
+    <figcaption class="entra" style="--atraso: 0.3s">Lúcia Ramos, Padaria Ciranda</figcaption>
+  </figure>
+</section>
+
+      <!-- banco conectado: card largo com o riacho visto de cima; a conciliação em vidro claro fica metade no card
+     e metade na faixa de baixo (nasce aqui e termina na segurança) -->
+<section class="banco" id="integracoes">
+  <div class="banco__card" data-abre>
+    <picture class="banco__foto">
+      <source media="(max-width: 760px)" srcset="/previews/recovered/demos/prado/img/banco-celular.webp" width="1080" height="1350" />
+      <img src="/previews/recovered/demos/prado/img/banco.webp" alt="" width="2400" height="1171" loading="lazy" decoding="async" />
+    </picture>
+    <div class="banco__texto">
+      <h2 class="serifa h2 entra-linhas">
+        <span class="linha" style="--i: 0"><span>O extrato entra</span></span>
+        <span class="linha" style="--i: 1"><span>sozinho.</span></span>
+      </h2>
+      <p class="entra" style="--atraso: 0.25s">Conecte a conta PJ uma vez. Cada Pix, boleto e tarifa chega conciliado, e o seu contador recebe tudo pronto.</p>
+    </div>
+  </div>
+  <div class="widget widget--claro widget--concilia" data-widget="concilia" data-entra>
+    <div class="w-topo">
+      <span class="w-tit">Conciliação automática</span>
+      <span class="w-hora num">hoje, 09:42</span>
+    </div>
+    <div class="c-linha">
+      <span class="c-ico"><svg class="ico" aria-hidden="true"><use href="#i-banco" /></svg></span>
+      <span class="c-txt"><small>Extrato da conta PJ</small><b>PIX · CAFE JARDIM</b></span>
+      <span class="c-val num">+ 1.250,00</span>
+    </div>
+    <div class="c-elo" aria-hidden="true"><i class="c-elo__fio"></i><span class="c-elo__ico"><svg class="ico"><use href="#i-elo" /></svg></span></div>
+    <div class="c-linha">
+      <span class="c-ico c-ico--prado"><svg class="marca" aria-hidden="true"><use href="#marca" /></svg></span>
+      <span class="c-txt"><small>Cobrança #0412</small><b>Café Jardim · encomenda</b></span>
+      <span class="c-val num">+ 1.250,00</span>
+    </div>
+    <div class="c-rodape">
+      <span class="w-chip w-chip--ok" data-concilia-chip><svg class="w-chip__check" viewBox="0 0 24 24" aria-hidden="true"><path d="m5.5 12.5 4.2 4.2 8.8-9.2" pathLength="1" /></svg>Conciliado</span>
+      <span class="c-mini"><i class="pulso pulso--fixo"></i>Conta PJ conectada · a cada 15 min</span>
+    </div>
+  </div>
+</section>
+
+      <!-- segurança: segundo respiro, a sombra de folhas volta; recebe a metade de baixo da conciliação -->
+<section class="seguranca" id="seguranca" data-sombra-zona>
+  <h2 class="serifa h2 entra-linhas">
+    <span class="linha" style="--i: 0"><span>Nenhum pagamento sai</span></span>
+    <span class="linha" style="--i: 1"><span>sem a sua aprovação.</span></span>
+  </h2>
+  <p class="lead entra" style="--atraso: 0.2s">O Prado conversa com o banco por conexão criptografada e só move dinheiro quando você confirma. Desconecte quando quiser.</p>
+</section>
+
+    </main>
+    <!-- fecho: o vale no fim da tarde, o convite e o rodapé de vidro fosco por cima, com "Prado" gigante cortado -->
+<div class="fecho" id="precos">
+  <div class="fecho__card" data-abre>
+    <picture class="fecho__foto">
+      <source media="(max-width: 760px)" srcset="/previews/recovered/demos/prado/img/fecho-celular.webp" width="1080" height="2160" />
+      <img src="/previews/recovered/demos/prado/img/fecho.webp" alt="" width="2400" height="1714" loading="lazy" decoding="async" />
+    </picture>
+    <section class="fecho__cta" aria-labelledby="fecho-titulo">
+      <h2 id="fecho-titulo" class="serifa h2 entra-linhas">
+        <span class="linha" style="--i: 0"><span>Comece o próximo mês</span></span>
+        <span class="linha" style="--i: 1"><span>com o caixa em dia.</span></span>
+      </h2>
+      <p class="fecho__preco entra" style="--atraso: 0.2s"><b>30 dias grátis</b>, sem cartão. Depois, <span class="num">R$ 89</span> por mês com tudo incluído.</p>
+      <form class="form entra" style="--atraso: 0.3s" data-form novalidate>
+        <div class="form__campo" data-campo>
+          <label class="sr" for="email">Seu e-mail de trabalho</label>
+          <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="Seu e-mail de trabalho" required />
+          <svg class="form__ok" viewBox="0 0 24 24" aria-hidden="true"><path d="m5.5 12.5 4.2 4.2 8.8-9.2" pathLength="1" /></svg>
+          <button class="btn btn--escuro form__btn" type="submit">
+            <span data-form-btn>Começar grátis</span>
+            <span class="seta" aria-hidden="true"><svg viewBox="0 0 16 16"><use href="#i-seta" /></svg><svg viewBox="0 0 16 16"><use href="#i-seta" /></svg></span>
+          </button>
+        </div>
+        <p class="form__msg" data-form-msg role="status" aria-live="polite"></p>
+      </form>
+    </section>
+    <footer class="rodape">
+      <div class="rodape__vidro">
+        <div class="rodape__linha"><span>© 2026 Prado</span><i aria-hidden="true"></i><span>Financeiro em dia. Sem planilha.</span></div>
+        <nav class="rodape__links" aria-label="Rodapé">
+          <div>
+            <h3>Produto</h3>
+            <a class="link" href="#pagar">Contas a pagar</a>
+            <a class="link" href="#receber">Contas a receber</a>
+            <a class="link" href="#receber">Pix e boletos</a>
+            <a class="link" href="#receber">Notas fiscais</a>
+            <a class="link" href="#prever">Relatórios</a>
+          </div>
+          <div>
+            <h3>Prado</h3>
+            <a class="link" href="#para-quem">Para quem</a>
+            <a class="link" href="#integracoes">Integrações</a>
+            <a class="link" href="#seguranca">Segurança</a>
+            <a class="link" href="#precos">Preços</a>
+          </div>
+          <div>
+            <h3>Fale com a gente</h3>
+            <a class="link" href="#precos">Agendar demonstração</a>
+            <a class="link" href="#precos">Central de ajuda</a>
+            <a class="link" href="#topo">Voltar ao topo</a>
+          </div>
+          <div class="rodape__legal">
+            <p>Prado Gestão Financeira Ltda.<br />CNPJ 00.000.000/0001-00</p>
+          </div>
+        </nav>
+        <p class="rodape__marca serifa" aria-hidden="true"><span>Prado</span></p>
+      </div>
+    </footer>
+  </div>
+</div>
+
+    <div class="sombra" data-sombra aria-hidden="true"><i></i></div>
+    <div class="barra" data-barra aria-hidden="true"><i></i></div>
+  </body>
+</html>

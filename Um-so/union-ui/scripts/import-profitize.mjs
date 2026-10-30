@@ -1,0 +1,98 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {createRecoveredRuntime,deduplicateRecoveredItems} from './lib/recovered-runtime.mjs';
+const app=process.cwd(),snapshot=path.resolve(app,'../research/profitize'),publicRoot=path.join(app,'public');
+const destination=path.join(publicRoot,'previews/recovered'),prefix='/previews/recovered';
+const read=async file=>JSON.parse(await fs.readFile(file,'utf8'));
+const write=async(file,body)=>{await fs.mkdir(path.dirname(file),{recursive:true});await fs.writeFile(file,body);};
+const hash=text=>crypto.createHash('sha256').update(text).digest('hex');
+const escape=text=>String(text).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;');
+const json=value=>JSON.stringify(value).replaceAll('<','\\u003c');
+const origin='https://profitize.com.br';
+const captureArg=process.argv.find(x=>x.startsWith('--capture='))?.slice(10);
+const capture=captureArg&&path.resolve(captureArg);
+const [items,captured,loader]=await Promise.all([read(path.join(snapshot,'catalog.json')),read(path.join(snapshot,'runtime-snapshot.json')),fs.readFile(path.join(app,'scripts/lib/recovered-runtime.mjs'),'utf8')]);
+const failed=[],requests=new Map();let bytes=0;
+const binaryExtensions=/\.(?:png|jpe?g|webp|avif|svg|gif|ico|woff2?|ttf|otf|mp4|webm|glb|gltf|json|wasm|txt)$/i;
+const assetPattern=/(?:\/[A-Za-z0-9_@.,~%+-]+)+\.(?:png|jpe?g|webp|avif|svg|gif|ico|woff2?|ttf|otf|mp4|webm|glb|gltf|json|wasm)(?:\?[^"'`\s)<>]*)?/gi;
+function ownAssetURL(raw){if(raw.startsWith('data:')||raw.includes('${'))return null;try{let url=new URL(raw,origin);if(url.origin!==origin)return null;if(!url.pathname.startsWith('/build/'))url=new URL('/build'+url.pathname,origin);return url;}catch{return null;}}
+async function retainAsset(raw){const url=ownAssetURL(raw);if(!url||!binaryExtensions.test(url.pathname))return null;const local=prefix+url.pathname;if(requests.has(url.href))return requests.get(url.href);const task=(async()=>{const target=path.join(publicRoot,local);try{await fs.access(target);return local;}catch{}try{const response=await fetch(url,{signal:AbortSignal.timeout(60000)});if(!response.ok)throw Error('HTTP '+response.status);const data=Buffer.from(await response.arrayBuffer());if(data.length>95*1024*1024)throw Error('Asset exceeds GitHub file limit');await write(target,data);bytes+=data.length;return local;}catch(error){failed.push({url:url.href,error:error.message});return url.href;}})();requests.set(url.href,task);return task;}
+async function batch(list,fn,concurrency=5){const queue=[...list];await Promise.all(Array.from({length:concurrency},async()=>{while(queue.length)await fn(queue.shift());}));}
+// The module snapshot contains public, compiled demo factories, never browser sessions.
+const uniqueFactories=captured.factories.map(code=>code.replaceAll('let t="/build"','let t="'+prefix+'/build"'));
+const declarations=uniqueFactories.map((code,index)=>'const f'+index+'='+code+';').join('\n');
+const aliases=Object.entries(captured.aliases).map(([id,index])=>json(id)+':f'+index).join(',');
+const runtimeCode=loader.replaceAll('export function','function')+'\n'+declarations+'\nwindow.recovered=createRecoveredRuntime({'+aliases+'});\nwindow.recoveredEntries='+json(captured.entries)+';';
+await write(path.join(destination,'runtime.js'),runtimeCode);
+const cssFolder=path.join(snapshot,'styles');await fs.mkdir(cssFolder,{recursive:true});
+if(capture){for(const file of await fs.readdir(path.join(capture,'css')))await fs.copyFile(path.join(capture,'css',file),path.join(cssFolder,file));const home=await fs.readFile(path.join(capture,'home.html'),'utf8');for(const match of home.matchAll(/<link[^>]+href="(\/build\/_next\/[^"?]+\.css)"/g)){const file=path.basename(match[1]);try{await fs.access(path.join(cssFolder,file));}catch{const res=await fetch(origin+match[1]);if(!res.ok)throw Error('CSS '+file);await write(path.join(cssFolder,file),await res.text());}}}
+let css='';for(const file of (await fs.readdir(cssFolder)).sort()){
+ let source=await fs.readFile(path.join(cssFolder,file),'utf8');
+ for(const match of [...source.matchAll(/url\(["']?([^)'"\s]+)["']?\)/g)]){if(/^(?:data:|https?:|#)/.test(match[1]))continue;const url=new URL(match[1],origin+'/build/_next/static/immutable/chunks/'+file);const local=await retainAsset(url.href);if(local)source=source.split(match[1]).join(local);}
+ css+='\n'+source;
+}
+const assets=new Set();for(const text of uniqueFactories)for(const match of text.matchAll(assetPattern)){if(!match[0].startsWith('/static/')&&!match[0].startsWith('/media/'))assets.add(match[0]);}
+for(const filename of ['apoteose.txt','apoteose.png','geist-mono.woff2'])assets.add('/build/ascii/apoteose/'+filename);
+for(const filename of ['terra.jpg','terra-relevo.png'])assets.add('/build/componentes/3d-globe/'+filename);
+assets.add('/build/componentes/holo-trading-card/pikachu-ex.webp');
+for(const filename of ['acima-das-nuvens','lago-de-vidro','vale-dourado','linha-da-neve','serras-azuis','ponte-da-cascata'])assets.add('/build/componentes/polaroid-line-carousel/'+filename+'.webp');
+for(const item of items){for(const media of Object.values(item.preview||{}))if(typeof media==='string'&&media.startsWith('/build/'))assets.add(media);}
+await batch(assets,retainAsset);
+await write(path.join(destination,'styles.css'),css);
+// Keep HTML demos and every same-origin asset they reference; leave original external media URLs intact.
+async function mirrorDemo(item){
+ const base=new URL(item.demoUrl),demoPrefix=prefix+'/demos/'+item.slug,seen=new Map(),queue=[];
+ const localURL=url=>demoPrefix+(url.pathname==='/'?'/index.html':url.pathname);
+ async function fetchFile(url){const key=url.href;if(seen.has(key))return seen.get(key);const task=(async()=>{const res=await fetch(url,{signal:AbortSignal.timeout(60000)});if(!res.ok)throw Error(url.href+' HTTP '+res.status);const data=Buffer.from(await res.arrayBuffer()),type=res.headers.get('content-type')||'';let output=data;if(/javascript|text\/css|text\/html/.test(type)||/\.(?:js|css|html)$/.test(url.pathname)||url.pathname==='/'){
+ let text=data.toString('utf8');const references=new Set();const pattern=/(?:["'`(])((?:\/(?!\/)|\.\.?\/)[^"'`()\s<>\\]*?\.(?:m?js|css|png|jpe?g|webp|avif|svg|gif|ico|woff2?|ttf|otf|mp4|webm|glb|gltf|json|wasm)(?:\?[^"'`()\s<>\\]*)?)(?=["'`)])/g;
+ for(const match of text.matchAll(pattern)){if(match[1].includes('${'))continue;const linked=new URL(match[1],url);if(linked.origin===base.origin)references.add(match[1]);}
+ for(const raw of references){const linked=new URL(raw,url);if(!seen.has(linked.href))queue.push(linked);text=text.split(raw).join(localURL(linked));}
+ if(/javascript/.test(type)||/\.m?js$/.test(url.pathname))text=text.replace(/(["'`])(\/(?!\/)[^"'`\n]*?)\1/g,(whole,quote,value,offset)=>value.startsWith(prefix+'/')||text[offset-1]==='+'||!/^\/(?:img|images|frames|textures|papeis|fonts|videos|assets|media|intro)(?:[-/]|$)/.test(value)?whole:quote+base.origin+value+quote);
+ if(item.slug==='mosaik')text=text.replace('auth:{persistSession:!0,autoRefreshToken:!0,detectSessionInUrl:!1}','auth:{persistSession:!1,autoRefreshToken:!1,detectSessionInUrl:!1,lock:async(name,timeout,work)=>work()}');
+ // Resolve remaining root-relative links without stealing navigation from the parent library.
+ text=text.replace(/((?:src|href|poster)=['"])(\/(?!\/)[^'"]+)(['"])/g,(_,start,value,end)=>value.startsWith(prefix+'/')?start+value+end:start+new URL(value,base).href+end);
+ if(type.includes('html'))text=text.replace(/<script\b[^>]*src=["'][^"']*(?:analytics|tracking|\/t\.js)[^"']*["'][^>]*><\/script>/gi,'');
+ output=Buffer.from(text);
+ }
+ await write(path.join(publicRoot,localURL(url)),output);bytes+=output.length;return localURL(url);})();seen.set(key,task);return task;}
+ const local=await fetchFile(base);const unavailable=[];while(queue.length){const next=queue.splice(0,5);await Promise.all(next.map(url=>fetchFile(url).catch(error=>{if(/\.(?:m?js|css)$/.test(url.pathname))throw error;unavailable.push(url);failed.push({slug:item.slug,kind:'optional-demo-asset',url:url.href,error:error.message});})));}
+ if(unavailable.length)for(const key of seen.keys()){const url=new URL(key),target=path.join(publicRoot,localURL(url));if(!/\.(?:m?js|css|html)$/.test(url.pathname)&&url.pathname!=='/')continue;try{let text=await fs.readFile(target,'utf8');for(const absent of unavailable)text=text.split(localURL(absent)).join(absent.href);await write(target,text);}catch{}}
+ if(item.slug==='corda'){
+  for(let cap=1;cap<=4;cap++){
+   const folder='/frames/cap-'+cap;await fetchFile(new URL('/img/cap-'+cap+'.webp',base));await fetchFile(new URL(folder+'/manifest.json',base));
+   const manifest=JSON.parse(await fs.readFile(path.join(publicRoot,demoPrefix+folder+'/manifest.json'),'utf8'));
+   if(!Number.isInteger(manifest.count)||manifest.count<1||manifest.count>500||manifest.ext!=='webp')throw Error('Unsupported frame manifest');
+   await batch(Array.from({length:manifest.count},(_,index)=>index+1),index=>fetchFile(new URL(folder+'/'+String(index).padStart(4,'0')+'.webp',base)),8);
+  }
+  for(const key of seen.keys()){const url=new URL(key);if(!/\.m?js$/.test(url.pathname))continue;const target=path.join(publicRoot,localURL(url));let text=await fs.readFile(target,'utf8');for(const directory of ['/img/','/frames/'])text=text.split(base.origin+directory).join(demoPrefix+directory);await write(target,text);}
+  const target=path.join(publicRoot,local);let html=await fs.readFile(target,'utf8');html=html.replace('<head>','<head><script>window.Image=class extends window.Image{constructor(...args){super(...args);this.crossOrigin="anonymous";}};</script>');await write(target,html);
+ }
+ return local;
+}
+const onlyDemo=process.argv.find(x=>x.startsWith('--only-demo='))?.slice(12)?.split(',');const demoPaths={};await batch(items.filter(x=>x.demoUrl),async item=>{try{if(onlyDemo&&!onlyDemo.includes(item.slug)){await fs.access(path.join(destination,'demos',item.slug,'index.html'));demoPaths[item.slug]=prefix+'/demos/'+item.slug+'/index.html';}else demoPaths[item.slug]=await mirrorDemo(item);}catch(error){failed.push({slug:item.slug,kind:'demo',error:error.message});}},3);
+const categoryMap={Hero:'Heroes',Shader:'Backgrounds',Avatar:'Components',Dashboard:'Dashboards',Carrossel:'Galleries',Rodapé:'Footers',Login:'Authentication',Dock:'Navigation',Depoimentos:'Testimonials',Navegação:'Navigation'};
+const codeFolder=path.join(publicRoot,'code/recovered');const rows=[];let executable=0,recorded=0;
+const boot=String.raw`const info=window.recoveredItem;const r=window.recovered;const React=r.load(271645);async function mount(){let component,props={};if(window.recoveredEntries[info.slug])component=(await r.context(0).A(window.recoveredEntries[info.slug])).default;else{const spec=r.load(849266).liveSpec(info.slug);if(spec){component=r.load(800884).LiveShader;props={spec,className:'recovered-shader'};}else if(r.load(609673).hasLiveAscii(info.slug)){component=r.load(609673).LiveAscii;props={slug:info.slug,mode:'stage',className:'recovered-shader'};}else throw Error('No retained executable demo');}const metadata=r.load(515470).LIVE_COMPONENTS[info.slug];const root=document.getElementById('root');if(metadata){root.style.background=metadata.bg||'';if(metadata.light)document.documentElement.style.colorScheme='light';}r.load(146480).createRoot(root,{onUncaughtError:error=>{throw error;}}).render(React.createElement(component,props));}mount().catch(error=>{document.getElementById('root').textContent=error.message;setTimeout(()=>{throw error;});});`;
+for(const item of items){
+ const id='recovered--'+item.slug;const hasRuntime=Boolean(captured.entries[item.slug]||['aurora','nebulosa','moldura','fluxo','topografia','pontilhado','limalha','tipos','flue','cromo','animated-mosaic-portrait','apoteose'].includes(item.slug));
+ const mode=hasRuntime?'interactive-component':demoPaths[item.slug]?'interactive-page':'recorded-video';
+ if(mode==='recorded-video')recorded++;else executable++;
+ let previewPath=demoPaths[item.slug],html;
+ if(!previewPath){previewPath=prefix+'/'+item.slug+'.html';html='<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+escape(item.title)+'</title>'+(hasRuntime?'<link rel="stylesheet" href="'+prefix+'/styles.css">':'')+'<style>html,body,#root{margin:0;min-height:100%;width:100%;}body{background:#09090b;color:#fff}#root{min-height:100vh;isolation:isolate}.recovered-shader{position:fixed!important;inset:0!important;width:100%!important;height:100%!important}video{display:block;width:100%;height:100vh;object-fit:contain}#preview-label{position:fixed;bottom:12px;left:12px;z-index:5;background:#111c;border:1px solid #fff3;border-radius:6px;padding:6px 10px;font:12px system-ui;color:white}#root a{cursor:pointer}</style></head><body><div id="root">'+(hasRuntime?'':'<video aria-label="'+escape(item.title)+' — prévia gravada" src="'+escape(prefix+(item.preview?.video||''))+'" poster="'+escape(prefix+(item.preview?.poster||''))+'" autoplay muted loop playsinline controls></video><span id="preview-label">Prévia gravada · prompt de reconstrução disponível</span>')+'</div>'+(hasRuntime?'<script>window.recoveredItem='+json({slug:item.slug})+';</script><script src="'+prefix+'/runtime.js"></script><script>'+boot+'</script>':'')+'</body></html>';await write(path.join(publicRoot,previewPath),html);}
+ const fingerprint=hash(hasRuntime?(captured.entries[item.slug]?captured.factories[captured.aliases[captured.entries[item.slug]]]:item.slug):item.demoUrl||item.preview.video);
+ const prompt=`# ${item.title} — prompt reconstruído\n\nEste prompt foi reconstruído a partir da demonstração pública e da descrição do item. Não é o prompt original do servidor.\n\nCrie ${item.type==='landing_page'?'uma landing page completa':item.type==='motion'?'uma composição animada de motion design':'um componente reutilizável'} com esta direção: ${item.description}\n\nReferência executável ou gravada: ${previewPath}.\n${mode==='recorded-video'?'A referência é um vídeo, não uma implementação editável recuperada. Use os controles para examinar a sequência, o ritmo e as transições.':'Preserve o comportamento da demonstração local: composição, tipografia, materiais, animações e respostas ao ponteiro, clique, teclado e rolagem quando presentes.'}\n\nCategoria: ${item.niche}. Tags: ${(item.tags||[]).join(', ')}. Tom: ${item.tone||'conforme referência'}. Proporção de apresentação: ${item.aspect||'responsiva'}.\n\nImplemente HTML semântico e componentes React isolados, estilos responsivos para celular, tablet e desktop, foco visível, rótulos acessíveis e prefers-reduced-motion. Preserve os shaders/WebGL/canvas presentes na referência; não substitua os efeitos por imagem estática. Use os recursos locais do pacote. Separe conteúdo configurável e valores de animação. Não invente funcionamento de serviços externos, pagamentos ou autenticação: conecte essas partes somente a backends reais configurados no projeto de destino.\n\nO pacote pode conter JavaScript compilado recuperado, não o TSX original. Compare o resultado com a prévia em movimento, inclusive estados de hover, abertura e fechamento, arraste ou navegação que ela apresentar.\n`;
+ await write(path.join(destination,'prompts',item.slug+'.md'),prompt);
+ const demoHTML=html||await fs.readFile(path.join(publicRoot,previewPath),'utf8');
+ const payload={name:item.title,framework:'html',recoveryMode:mode,promptOrigin:'reconstructed',reconstructionPrompt:prompt,dependencies:[],license:'User-authorized recovery of publicly shipped demo; retain original notices.',files:[{path:'preview.html',content:demoHTML},{path:'RECONSTRUCTION.md',content:prompt}]};
+ await write(path.join(codeFolder,id+'.json'),JSON.stringify(payload));
+ rows.push({id,sourceId:'recovered',name:item.title,slug:item.slug,description:item.description,category:item.type==='landing_page'?'Heroes':item.type==='motion'?'Interactions':categoryMap[item.niche]||'Components',kind:item.type==='landing_page'?'template':item.type==='motion'?'motion':item.niche==='Shader'?'shader':'component',tags:[...(item.tags||[]),item.niche,'recuperado',mode==='recorded-video'?'prévia gravada':'prévia interativa'],image:item.preview?.poster?.startsWith('/build/')?prefix+item.preview.poster:undefined,previewPath,codePath:'/code/recovered/'+id+'.json',availability:'preview',framework:'html',recoveryMode:mode,reconstructionPromptPath:prefix+'/prompts/'+item.slug+'.md',promptOrigin:'reconstructed',recoveryFingerprint:fingerprint,updated:item.updatedAt,publicSlug:item.slug+'-'+hash(id).slice(0,6),sourceUrl:'https://profitize.com.br/build/'+item.kind.segment+'/'+item.slug});
+}
+const catalogPath=path.join(publicRoot,'data/catalog.json'),livePath=path.join(publicRoot,'data/catalog-live.json');
+const existing=await read(catalogPath),previousLive=await read(livePath);const {accepted,skipped}=deduplicateRecoveredItems(existing.filter(x=>x.sourceId!=='recovered'),rows);
+await write(catalogPath,JSON.stringify([...existing.filter(x=>x.sourceId!=='recovered'),...accepted]));
+await write(livePath,JSON.stringify([...previousLive.filter(x=>x.sourceId!=='recovered'),...accepted]));
+const sourcesPath=path.join(publicRoot,'data/sources.json'),sources=(await read(sourcesPath)).filter(x=>x.id!=='recovered');sources.push({id:'recovered',name:'Catálogo recuperado',url:origin+'/build',description:'Demonstrações compiladas e referências de vídeo recuperadas com autorização do proprietário.',count:accepted.length,codeCount:0,color:'#f97316',icon:'/assets/sources/recovered.svg'});await write(sourcesPath,JSON.stringify(sources));
+const coveragePath=path.join(publicRoot,'data/catalog-coverage.json'),coverage=await read(coveragePath);coverage.indexed=existing.filter(x=>x.sourceId!=='recovered').length+accepted.length;coverage.published=previousLive.filter(x=>x.sourceId!=='recovered').length+accepted.length;coverage.remaining=coverage.indexed-coverage.published;coverage.generatedAt=new Date().toISOString();coverage.recovered=accepted.length;await write(coveragePath,JSON.stringify(coverage,null,2));
+const report={capturedAt:captured.capturedAt,generatedAt:new Date().toISOString(),observed:items.length,published:accepted.length,executable,recorded,skipped,failed,downloadedAssets:requests.size,downloadedBytes:bytes,items:rows.map(x=>({id:x.id,name:x.name,mode:x.recoveryMode,preview:x.previewPath,promptOrigin:x.promptOrigin})),limitations:['All new prompts are explicitly reconstructed; no original server prompt was extracted.','Compiled demos are not the original editable project sources.','The recorded-only entries have playable video, not an invented interactive implementation.','No server-side authentication, billing, database or non-public content was recovered.','External media in original demos may still require internet.']};
+await write(path.join(snapshot,'coverage.json'),JSON.stringify(report,null,2));await write(path.join(publicRoot,'data/recovered-coverage.json'),JSON.stringify(report,null,2));console.log(JSON.stringify({observed:items.length,published:accepted.length,executable,recorded,failed:failed.length,assets:requests.size,downloadedMB:Math.round(bytes/1048576)}));

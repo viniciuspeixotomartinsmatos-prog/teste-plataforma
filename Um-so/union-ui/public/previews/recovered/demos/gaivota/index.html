@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gaivota* — o drone de 249 g que cabe na mochila</title>
+  <meta name="description" content="Gaivota* G1: drone dobrável de 249 g, 4K a 60 qps e 34 minutos no ar. Filmado nos Lençóis Maranhenses." />
+  <meta name="theme-color" content="#0b0e10" />
+  <link rel="icon" href="/previews/recovered/demos/gaivota/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="/previews/recovered/demos/gaivota/frames/decolagem/0001.webp" as="image" fetchpriority="high" />
+  <!-- antes do CSS (que no dev só chega com o JS): fundo escuro e a página escondida até o 1º quadro da decolagem estar
+       desenhado, sem HTML cru nem branco; se o JS não subir, ela aparece em 4 s -->
+  <style>html{background:#0b0e10}body{transition:opacity .6s cubic-bezier(.16,1,.3,1)}html.js-wait body{opacity:0}</style>
+  <script>
+    document.documentElement.classList.add('js-wait');
+    setTimeout(() => document.documentElement.classList.remove('js-wait'), 4000);
+  </script>
+  <script type="module" crossorigin src="/previews/recovered/demos/gaivota/assets/index-DZbz4dvI.js"></script>
+  <link rel="stylesheet" crossorigin href="/previews/recovered/demos/gaivota/assets/index-pkjYS5s7.css">
+</head>
+<body>
+  <nav class="nav is-hidden is-still" aria-label="Seções">
+    <a href="#voo"><span>Voo</span></a><i aria-hidden="true">·</i>
+    <a href="#drone"><span>Drone</span></a><i aria-hidden="true">·</i>
+    <a href="#camera"><span>Câmera</span></a><i aria-hidden="true">·</i>
+    <a href="#preco"><span>Preço</span></a><i aria-hidden="true">·</i>
+    <a href="#suporte"><span>Suporte</span></a>
+  </nav>
+
+  <div class="cursor" aria-hidden="true"><i class="cursor__ring"></i><span class="cursor__read mono">2°31′S · 43°07′O</span></div>
+
+  <main class="page">
+    <!-- 01–02 O palco: hero → decolagem → tela do controle → o que ela vê. Um pin só; o roteiro está em src/motion/stage.js -->
+    <section class="stage" id="voo" aria-label="A Gaivota decola e mostra o que filma">
+      <canvas class="stage__takeoff" aria-hidden="true"></canvas>
+      <div class="stage__shade" aria-hidden="true"></div>
+      <div class="stage__dim" aria-hidden="true"></div>
+
+      <div class="hero">
+        <div class="wordmark-wrap"><h1 class="wordmark hero__word"><span class="sr">Gaivota</span><span aria-hidden="true"><span class="wm__l"><span>G</span></span><span class="wm__l"><span>a</span></span><span class="wm__l"><span>i</span></span><span class="wm__l"><span>v</span></span><span class="wm__l"><span>o</span></span><span class="wm__l"><span>t</span></span><span class="wm__l"><span>a</span></span><span class="wm__l wm__star"><span>*</span></span></span></h1></div>
+        <div class="hero__side">
+          <p class="hero__desc" data-split>249 gramas, 4K a 60 qps,<br />34 minutos no ar.<br />Dobra no bolso da mochila.</p>
+          <a class="pill" href="#voo" data-autopilot><span class="pill__label"><span>Ver o voo</span><span aria-hidden="true">Ver o voo</span></span><i class="pill__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" /></svg></i></a>
+        </div>
+        <p class="hero__cue mono" aria-hidden="true"><span>Role para voar</span><span class="cue__line"></span></p>
+      </div>
+
+      <!-- altímetro: a altura sai da fração do vídeo (0 m até a decolagem, 120 m no fim do clipe) -->
+      <div class="alt" aria-hidden="true">
+        <div class="alt__scale"><div class="alt__tape"></div><i class="alt__mark"></i></div>
+        <div class="alt__read">
+          <p class="alt__label mono">Altitude</p>
+          <p class="alt__value"><b class="alt__n">000</b><span class="mono">m</span></p>
+          <p class="alt__time mono">T+<span class="alt__t">00,0</span> s</p>
+        </div>
+      </div>
+
+      <!-- marcos da decolagem (pé esquerdo) -->
+      <div class="beat beat--low" data-beat="a">
+        <p class="label mono" data-split>01 — Decolagem</p>
+        <h2 class="beat__title" data-split>Sai da duna<br />em dois segundos.</h2>
+        <p class="beat__sub" data-split>Toque duas vezes no controle: ela sobe sozinha até 1,5&nbsp;m e espera&nbsp;você.</p>
+      </div>
+      <div class="beat beat--low" data-beat="b">
+        <p class="label mono" data-split>01 — Subida</p>
+        <h2 class="beat__title" data-split>Sobe sozinha.<br />Você só enquadra.</h2>
+        <p class="beat__sub" data-split>Ela segue o carro a 40&nbsp;km/h e desvia do que aparece na&nbsp;frente.</p>
+      </div>
+      <div class="beat beat--low" data-beat="c">
+        <p class="label mono" data-split>01 — 120 metros</p>
+        <h2 class="beat__title" data-split>Lá de cima, os Lençóis<br />cabem num quadro só.</h2>
+      </div>
+
+      <!-- a tela do controle sobe por cima do último quadro e abre até a borda -->
+      <div class="remote">
+        <div class="remote__body" aria-hidden="true"><i class="remote__stick remote__stick--l"></i><i class="remote__stick remote__stick--r"></i></div>
+        <div class="remote__screen">
+          <canvas class="stage__feed" aria-hidden="true"></canvas>
+          <div class="feed__shade" aria-hidden="true"></div>
+          <div class="hud" aria-hidden="true">
+            <i class="hud__corner hud__corner--tl"></i><i class="hud__corner hud__corner--tr"></i>
+            <i class="hud__corner hud__corner--bl"></i><i class="hud__corner hud__corner--br"></i>
+            <p class="hud__item hud__tl mono"><b class="hud__rec"></b>REC <span class="hud__time">00:41</span></p>
+            <p class="hud__item hud__tr mono">4K 60 · ISO 100 · 1/120</p>
+            <div class="hud__reticle"><i class="hud__horizon"></i><i class="hud__cross"></i></div>
+            <p class="hud__item hud__bl mono">ALT <span class="hud__alt">120</span> m<span class="hud__distw"> · DIST <span class="hud__dist">1,2</span> km</span></p>
+            <p class="hud__item hud__br mono"><span class="hud__batw">BATERIA </span><span class="hud__bat">71</span>% <i class="hud__batt"><i></i></i></p>
+            <div class="hud__track"><i></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="beat beat--remote" data-beat="d">
+        <p class="label mono" data-split>02 — Ao vivo</p>
+        <p class="beat__line" data-split>O que ela filma chega na tela do controle, a&nbsp;1,8&nbsp;km.</p>
+      </div>
+      <div class="beat beat--mid" data-beat="e">
+        <p class="label mono" data-split>02 — O que ela vê</p>
+        <h2 class="beat__title beat__title--big" data-split>Filmado com uma<br />Gaivota de 249 g,<br />a 1,8 km do carro.</h2>
+      </div>
+      <div class="beat beat--mid" data-beat="f">
+        <p class="label mono" data-split>02 — Sem equipe</p>
+        <h2 class="beat__title beat__title--big" data-split>Sem tripé,<br />sem helicóptero,<br />sem equipe.</h2>
+        <p class="beat__sub" data-split>Uma mochila, uma bateria e dez minutos antes do sol&nbsp;subir.</p>
+      </div>
+    </section>
+
+    <!-- 03 A Gaivota: a areia sobe como uma duna por cima da filmagem -->
+    <section class="spec" id="drone" aria-label="A Gaivota">
+      <svg class="dune" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true"><path d="M0 220V128C138 88 236 46 372 52c150 7 214 92 372 96 166 4 238-112 424-118 120-4 196 40 272 74v186Z" /></svg>
+      <figure class="spec__photo">
+        <div class="spec__clip"><img src="/previews/recovered/demos/gaivota/img/dobrada.webp" width="1024" height="1536" alt="Uma mão segura a Gaivota dobrada diante das dunas e das lagoas" decoding="async" /></div>
+        <figcaption class="spec__tag mono">Dobrada · 14,8 × 9 × 6 cm</figcaption>
+      </figure>
+      <div class="spec__body">
+        <p class="label mono" data-split>03 — A Gaivota</p>
+        <h2 class="spec__title" data-split>Dobra, guarda,<br />esquece que trouxe.</h2>
+        <ul class="spec__list">
+          <li class="spec__row"><p class="spec__num"><span class="odo" data-odo="249">249</span><span class="spec__unit">g</span></p><p class="spec__cap">Menos que uma lata cheia de&nbsp;refrigerante.</p></li>
+          <li class="spec__row"><p class="spec__num"><span class="spec__pre">4K</span><span class="odo" data-odo="60">60</span></p><p class="spec__cap">Sensor de 1/1,3″ e 10 bits: o turquesa sai turquesa.</p></li>
+          <li class="spec__row"><p class="spec__num"><span class="odo" data-odo="34">34</span><span class="spec__unit">min</span></p><p class="spec__cap">Um pôr do sol inteiro com uma bateria&nbsp;só.</p></li>
+        </ul>
+        <p class="spec__foot mono">Alcance 10 km · Vento até 38 km/h · Volta sozinha</p>
+      </div>
+    </section>
+
+    <!-- 04 Abre: o macro dos braços se desdobrando, preso ao scroll. Entra como uma seção comum, sem efeito de troca -->
+    <section class="unfold" aria-label="A Gaivota abre os braços">
+      <canvas class="unfold__frames" aria-hidden="true"></canvas>
+      <div class="unfold__shade" aria-hidden="true"></div>
+      <div class="beat unfold__beat" data-beat="a">
+        <p class="label mono" data-split>04 — Abre</p>
+        <h2 class="beat__title" data-split>Tira da mochila,<br />abre os braços.</h2>
+        <p class="beat__sub" data-split>Os quatro braços giram e travam no lugar. Sem parafuso nem&nbsp;ferramenta.</p>
+      </div>
+      <div class="beat unfold__beat" data-beat="b">
+        <p class="label mono" data-split>04 — Liga</p>
+        <h2 class="beat__title" data-split>Dez segundos<br />depois, está no ar.</h2>
+        <p class="beat__sub" data-split>As hélices de ponta laranja encaixam com meia volta e se veem de longe no&nbsp;céu.</p>
+      </div>
+    </section>
+
+    <!-- 05 A câmera: o gimbal se abre em quatro peças ao longo do eixo da lente -->
+    <section class="cam" id="camera" aria-label="A câmera">
+      <div class="cam__inner">
+        <header class="cam__head">
+          <p class="label mono label--sun" data-split>05 — A câmera</p>
+          <h2 class="cam__title" data-split>Três eixos.<br />Um horizonte reto.</h2>
+          <p class="cam__desc" data-split>O vento em cima das dunas passa de 30&nbsp;km/h. O&nbsp;gimbal corrige 2.000 vezes por segundo, e a imagem nem&nbsp;percebe.</p>
+        </header>
+        <div class="gimbal-rail">
+          <div class="gimbal">
+            <div class="gimbal__glow" aria-hidden="true"></div>
+            <i class="gimbal__axis" aria-hidden="true"></i>
+            <figure class="gimbal__part" data-part="1"><img src="/previews/recovered/demos/gaivota/img/gimbal-1.webp" width="291" height="350" alt="Lente" decoding="async" /></figure>
+            <figure class="gimbal__part" data-part="2"><img src="/previews/recovered/demos/gaivota/img/gimbal-2.webp" width="394" height="350" alt="Módulo da câmera com o sensor" decoding="async" /></figure>
+            <figure class="gimbal__part" data-part="3"><img src="/previews/recovered/demos/gaivota/img/gimbal-3.webp" width="514" height="350" alt="Braço do gimbal com o motor de inclinação" decoding="async" /></figure>
+            <figure class="gimbal__part" data-part="4"><img src="/previews/recovered/demos/gaivota/img/gimbal-4.webp" width="422" height="350" alt="Motor de giro e base com amortecedores" decoding="async" /></figure>
+            <ol class="gimbal__labels">
+              <li data-part="1"><i class="lead"></i><span class="mono"><b>01</b> Lente<br /><em>24 mm f/1.7</em></span></li>
+              <li data-part="2"><i class="lead"></i><span class="mono"><b>02</b> Sensor<br /><em>1/1,3″ 48 MP</em></span></li>
+              <li data-part="3"><i class="lead"></i><span class="mono"><b>03</b> Gimbal<br /><em>3 eixos</em></span></li>
+              <li data-part="4"><i class="lead"></i><span class="mono"><b>04</b> Base<br /><em>amortecedor de silicone</em></span></li>
+            </ol>
+          </div>
+        </div>
+        <p class="cam__axis mono" aria-hidden="true">Eixo da lente · <span class="cam__deg">0,0</span>°</p>
+      </div>
+    </section>
+
+    <!-- 06 Preço: o kit muda conforme a escolha -->
+    <section class="price" id="preco" aria-label="Preço">
+      <figure class="price__photo">
+        <div class="price__clip">
+          <img class="price__img" src="/previews/recovered/demos/gaivota/img/kit.webp" width="1254" height="1254" alt="A Gaivota aberta com o controle, três baterias, a bolsa de ombro e hélices extras sobre a areia" decoding="async" />
+          <!-- a mesma foto editada sem a bolsa e sem duas baterias: entra por cima numa varredura no sentido das ondulações -->
+          <img class="price__img price__img--ela" src="/previews/recovered/demos/gaivota/img/kit-ela.webp" width="1254" height="1254" alt="" aria-hidden="true" decoding="async" />
+        </div>
+        <span class="price__note mono" aria-hidden="true">Bolsa e 2 baterias: só no Voo longo</span>
+      </figure>
+      <div class="price__body">
+        <p class="label mono" data-split>06 — Preço</p>
+        <h2 class="price__title" data-split>Leve a Gaivota.</h2>
+        <div class="seg" role="radiogroup" aria-label="Escolha o kit">
+          <i class="seg__pill" aria-hidden="true"></i>
+          <button class="seg__opt" role="radio" aria-checked="false" data-kit="ela">Só ela</button>
+          <button class="seg__opt" role="radio" aria-checked="true" data-kit="longo">Voo longo</button>
+        </div>
+        <p class="price__value" aria-live="polite"><span class="price__cur">R$</span><span class="odo price__n" data-odo="6.290">6.290</span></p>
+        <p class="price__inst">ou 12× de <span class="price__parc"><span>R$ 524,17</span></span> sem juros</p>
+        <ul class="price__list">
+          <li>Gaivota G1 + controle com tela</li>
+          <li data-only="ela">1 bateria inteligente</li>
+          <li data-only="longo">3 baterias e carregador triplo</li>
+          <li data-only="longo">Bolsa de ombro</li>
+          <li>6 hélices extras</li>
+        </ul>
+        <a class="buy" href="#preco"><span class="buy__label"><span>Comprar a Gaivota</span><span aria-hidden="true">Comprar a Gaivota</span></span><i class="buy__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" /></svg></i></a>
+        <p class="price__foot mono">Frete grátis · 30 dias para devolver · Garantia de 1 ano</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- 07 Footer: fica por baixo da página e aparece quando o preço sobe; "volta sozinha" até pousar -->
+  <footer class="foot" id="suporte">
+    <img class="foot__bg" src="/previews/recovered/demos/gaivota/img/fim.webp" width="1920" height="1080" alt="" decoding="async" />
+    <div class="foot__shade" aria-hidden="true"></div>
+    <div class="foot__top">
+      <p class="foot__rth mono"><span class="foot__rth-dot"></span><span class="foot__rth-msg">Voltando para casa</span> · <span class="foot__km">1,8</span> km</p>
+      <p class="foot__line" data-split>A próxima foto da viagem é de&nbsp;cima.</p>
+      <a class="pill pill--small" href="#preco"><span class="pill__label"><span>Ver o preço</span><span aria-hidden="true">Ver o preço</span></span></a>
+    </div>
+    <div class="foot__cols">
+      <div><p class="foot__h mono">Produto</p><a href="#drone"><span>Drone</span></a><a href="#camera"><span>Câmera</span></a><a href="#voo"><span>Voo</span></a><a href="#preco"><span>Preço</span></a></div>
+      <div><p class="foot__h mono">Suporte</p><a href="#suporte"><span>Manual</span></a><a href="#suporte"><span>Garantia</span></a><a href="#suporte"><span>Assistência em São Luís</span></a><a href="#suporte"><span>Fale com a gente</span></a></div>
+      <div><p class="foot__h mono">Siga</p><a href="#suporte"><span>Instagram</span></a><a href="#suporte"><span>YouTube</span></a></div>
+    </div>
+    <div class="foot__base">
+      <div class="foot__wrap"><p class="wordmark foot__word" aria-label="Gaivota"><span class="wm__l"><span>G</span></span><span class="wm__l"><span>a</span></span><span class="wm__l"><span>i</span></span><span class="wm__l"><span>v</span></span><span class="wm__l"><span>o</span></span><span class="wm__l"><span>t</span></span><span class="wm__l"><span>a</span></span><span class="wm__l wm__star"><span>*</span></span></p></div>
+      <p class="foot__legal mono">© 2026 Gaivota Robótica Ltda · São Luís, MA</p>
+    </div>
+  </footer>
+
+</body>
+</html>
