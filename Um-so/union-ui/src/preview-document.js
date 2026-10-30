@@ -1,5 +1,5 @@
 import {injectPreviewEnvironment} from './preview-environment.js';
-function inspectPreview(id){
+function inspectPreview(id,dependencyWarning){
  let failed=false,sent=false,lastMedia='';
  const send=(type,message)=>parent.postMessage({type,id,message,checked:true},'*');
  addEventListener('error',event=>{
@@ -7,7 +7,7 @@ function inspectPreview(id){
   if(/^ResizeObserver loop/.test(event.message))return;
   failed=true;send('preview-error',event.message);
  },true);
- addEventListener('unhandledrejection',event=>{failed=true;send('preview-error',String(event.reason?.message||event.reason));});
+ addEventListener('unhandledrejection',event=>{const message=String(event.reason?.message||event.reason);if(dependencyWarning&&message==='Failed to fetch'&&document.getElementById('root')?.innerText?.trim()){send('preview-warning',message);return;}failed=true;send('preview-error',message);});
  function inspect(){
   if(failed)return;
   const root=document.body||document.getElementById('root');
@@ -33,6 +33,6 @@ export function instrumentPreviewHTML(html,id,baseURL){
  html=injectPreviewEnvironment(html);
  const base=String(baseURL).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
  html=html.replace(/new URL\(window.location.href\)(\.searchParams\.get\((["'])theme\2\))/g,'new URL(document.baseURI)$1');
- const script='<base href="'+base+'"><script>('+inspectPreview.toString()+')('+JSON.stringify(id).replace(/</g,'\\u003c')+');</script>';
+ const script='<base href="'+base+'"><script>('+inspectPreview.toString()+')('+JSON.stringify(id).replace(/</g,'\\u003c')+','+html.includes('data-recovery-notice')+');</script>';
  return /<head(?:\s[^>]*)?>/i.test(html)?html.replace(/<head(?:\s[^>]*)?>/i,match=>match+script):script+html;
 }

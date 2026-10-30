@@ -40,6 +40,14 @@
     {
       "source": "/plans/:path*",
       "destination": "/index.html"
+    },
+    {
+      "source": "/builder/:path*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/resources/:path*",
+      "destination": "/index.html"
     }
   ]
 }

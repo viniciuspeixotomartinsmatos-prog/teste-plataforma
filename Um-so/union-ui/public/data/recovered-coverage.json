@@ -1,59 +1,113 @@
 {
   "capturedAt": "2026-10-29T18:26:20.873Z",
-  "generatedAt": "2026-10-30T13:31:44.688Z",
+  "generatedAt": "2026-10-30T13:51:05.205Z",
   "observed": 82,
   "published": 82,
+  "newEntries": 66,
+  "consolidated": [
+    {
+      "recoveredId": "recovered--animated-mosaic-portrait",
+      "id": "21st-9f9f01a9001c",
+      "name": "Animated Mosaic Portrait",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--card-fan-carousel",
+      "id": "21st-eed058c323d7",
+      "name": "Card Fan Carousel",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--cobe-globe",
+      "id": "21st-e55a11521090",
+      "name": "Cobe Globe",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--dashboard-sidebar",
+      "id": "21st-6fc2d8d57282",
+      "name": "Dashboard Sidebar",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--draggable-widget-grid",
+      "id": "21st-4d18a6da85c4",
+      "name": "Draggable Widget Grid",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--finance-bento",
+      "id": "21st-66d9e4f594af",
+      "name": "Finance Bento",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--halftone-wordmark-footer",
+      "id": "21st-09a318832265",
+      "name": "Halftone Wordmark Footer",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--indicator-chart",
+      "id": "21st-e6baa579733c",
+      "name": "Indicator Chart",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--interactive-selector",
+      "id": "21st-c222aff32987",
+      "name": "Interactive Selector",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--perspective-tunnel",
+      "id": "21st-e69ce91a8d2a",
+      "name": "Perspective Tunnel Hero",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--polaroid-line-carousel",
+      "id": "21st-d0cd0e792a0f",
+      "name": "Polaroid Line Carousel",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--progress-metric-card",
+      "id": "21st-18a66baf5b9f",
+      "name": "Progress Metric Card",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--progressive-blur-card",
+      "id": "21st-4edf4db17950",
+      "name": "Progressive Blur Card",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--sign-in-page",
+      "id": "21st-7a9ac2e76797",
+      "name": "Sign In Page",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--web3-bento",
+      "id": "21st-f54d65a5d33b",
+      "name": "Web3 Bento",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    },
+    {
+      "recoveredId": "recovered--works-wheel",
+      "id": "21st-9b3f0393f89f",
+      "name": "Works Wheel",
+      "reason": "single-existing-title-retain-id-and-original-pointers"
+    }
+  ],
   "executable": 75,
   "recorded": 7,
   "skipped": [],
-  "failed": [
-    {
-      "url": "https://profitize.com.br/build/holo-trading-card/pikachu-ex.webp",
-      "error": "HTTP 404"
-    },
-    {
-      "url": "https://profitize.com.br/build/apoteose.png",
-      "error": "HTTP 404"
-    },
-    {
-      "url": "https://profitize.com.br/build/3d-globe/terra-relevo.png",
-      "error": "HTTP 404"
-    },
-    {
-      "url": "https://profitize.com.br/build/3d-globe/terra.jpg",
-      "error": "HTTP 404"
-    },
-    {
-      "url": "https://profitize.com.br/build/geist-mono.woff2",
-      "error": "HTTP 404"
-    },
-    {
-      "url": "https://profitize.com.br/build/vale-dourado.webp",
-      "error": "HTTP 404"
-    },
-    {
-      "url": "https://profitize.com.br/build/linha-da-neve.webp",
-      "error": "HTTP 404"
-    },
-    {
-      "url": "https://profitize.com.br/build/serras-azuis.webp",
-      "error": "HTTP 404"
-    },
-    {
-      "url": "https://profitize.com.br/build/acima-das-nuvens.webp",
-      "error": "HTTP 404"
-    },
-    {
-      "url": "https://profitize.com.br/build/ponte-da-cascata.webp",
-      "error": "HTTP 404"
-    },
-    {
-      "url": "https://profitize.com.br/build/lago-de-vidro.webp",
-      "error": "HTTP 404"
-    }
-  ],
-  "downloadedAssets": 124,
-  "downloadedBytes": 28333642,
+  "failed": [],
+  "downloadedAssets": 113,
+  "downloadedBytes": 0,
   "items": [
     {
       "id": "recovered--3d-globe",
@@ -84,7 +138,7 @@
       "promptOrigin": "reconstructed"
     },
     {
-      "id": "recovered--animated-mosaic-portrait",
+      "id": "21st-9f9f01a9001c",
       "name": "Animated Mosaic Portrait",
       "mode": "interactive-component",
       "preview": "/previews/recovered/animated-mosaic-portrait.html",
@@ -119,7 +173,7 @@
       "promptOrigin": "reconstructed"
     },
     {
-      "id": "recovered--card-fan-carousel",
+      "id": "21st-eed058c323d7",
       "name": "Card Fan Carousel",
       "mode": "interactive-component",
       "preview": "/previews/recovered/card-fan-carousel.html",
@@ -140,7 +194,7 @@
       "promptOrigin": "reconstructed"
     },
     {
-      "id": "recovered--cobe-globe",
+      "id": "21st-e55a11521090",
       "name": "Cobe Globe",
       "mode": "interactive-component",
       "preview": "/previews/recovered/cobe-globe.html",
@@ -161,14 +215,14 @@
       "promptOrigin": "reconstructed"
     },
     {
-      "id": "recovered--dashboard-sidebar",
+      "id": "21st-6fc2d8d57282",
       "name": "Dashboard Sidebar",
       "mode": "interactive-component",
       "preview": "/previews/recovered/dashboard-sidebar.html",
       "promptOrigin": "reconstructed"
     },
     {
-      "id": "recovered--draggable-widget-grid",
+      "id": "21st-4d18a6da85c4",
       "name": "Draggable Widget Grid",
       "mode": "interactive-component",
       "preview": "/previews/recovered/draggable-widget-grid.html",
@@ -182,7 +236,7 @@
       "promptOrigin": "reconstructed"
     },
     {
-      "id": "recovered--finance-bento",
+      "id": "21st-66d9e4f594af",
       "name": "Finance Bento",
       "mode": "interactive-component",
       "preview": "/previews/recovered/finance-bento.html",
@@ -224,7 +278,7 @@
       "promptOrigin": "reconstructed"
     },
     {
-      "id": "recovered--halftone-wordmark-footer",
+      "id": "21st-09a318832265",
       "name": "Halftone Wordmark Footer",
       "mode": "interactive-component",
       "preview": "/previews/recovered/halftone-wordmark-footer.html",
@@ -252,14 +306,14 @@
       "promptOrigin": "reconstructed"
     },
     {
-      "id": "recovered--indicator-chart",
+      "id": "21st-e6baa579733c",
       "name": "Indicator Chart",
       "mode": "interactive-component",
       "preview": "/previews/recovered/indicator-chart.html",
       "promptOrigin": "reconstructed"
     },
     {
-      "id": "recovered--interactive-selector",
+      "id": "21st-c222aff32987",
       "name": "Interactive Selector",
       "mode": "interactive-component",
       "preview": "/previews/recovered/interactive-selector.html",
@@ -308,14 +362,14 @@
       "promptOrigin": "reconstructed"
     },
     {
-      "id": "recovered--perspective-tunnel",
+      "id": "21st-e69ce91a8d2a",
       "name": "Perspective Tunnel Hero",
       "mode": "interactive-component",
       "preview": "/previews/recovered/perspective-tunnel.html",
       "promptOrigin": "reconstructed"
     },
     {
-      "id": "recovered--polaroid-line-carousel",
+      "id": "21st-d0cd0e792a0f",
       "name": "Polaroid Line Carousel",
       "mode": "interactive-component",
       "preview": "/previews/recovered/polaroid-line-carousel.html",
@@ -329,14 +383,14 @@
       "promptOrigin": "reconstructed"
     },
     {
-      "id": "recovered--progress-metric-card",
+      "id": "21st-18a66baf5b9f",
       "name": "Progress Metric Card",
       "mode": "interactive-component",
       "preview": "/previews/recovered/progress-metric-card.html",
       "promptOrigin": "reconstructed"
     },
     {
-      "id": "recovered--progressive-blur-card",
+      "id": "21st-4edf4db17950",
       "name": "Progressive Blur Card",
       "mode": "interactive-component",
       "preview": "/previews/recovered/progressive-blur-card.html",
@@ -350,7 +404,7 @@
       "promptOrigin": "reconstructed"
     },
     {
-      "id": "recovered--sign-in-page",
+      "id": "21st-7a9ac2e76797",
       "name": "Sign In Page",
       "mode": "interactive-component",
       "preview": "/previews/recovered/sign-in-page.html",
@@ -371,14 +425,14 @@
       "promptOrigin": "reconstructed"
     },
     {
-      "id": "recovered--web3-bento",
+      "id": "21st-f54d65a5d33b",
       "name": "Web3 Bento",
       "mode": "interactive-component",
       "preview": "/previews/recovered/web3-bento.html",
       "promptOrigin": "reconstructed"
     },
     {
-      "id": "recovered--works-wheel",
+      "id": "21st-9b3f0393f89f",
       "name": "Works Wheel",
       "mode": "interactive-component",
       "preview": "/previews/recovered/works-wheel.html",

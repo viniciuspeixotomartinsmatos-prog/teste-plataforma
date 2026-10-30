@@ -67,7 +67,8 @@ export async function standalonePreview(item,theme='dark',config,settings){
 }
 export async function componentArchive(item,payload,{name,theme='dark',config,settings}={}){
  const {zipSync,strToU8}=await import('fflate');
- const framework=(payload?.framework||item.framework)==='vue'?'Vue':'React';
+ const format=payload?.framework||item.framework;
+ const framework=format==='vue'?'Vue':format==='html'?'HTML':'React';
  const entries={};
  for(const f of payload?.files||[]){
   if(item.availability!=='code'&&f.path==='preview.html')continue;
@@ -75,7 +76,14 @@ export async function componentArchive(item,payload,{name,theme='dark',config,se
   entries['src/'+parts.join('/')]=strToU8(f.content||'');
  }
  if(payload?.demoCode)entries[framework==='Vue'?'example.vue':'example.tsx']=strToU8(payload.demoCode);
- entries['preview.html']=strToU8(await standalonePreview(item,theme,config,settings));
+ const recoveredDemo=item.previewPath?.match(/^\/previews\/recovered\/demos\/([^/]+)\/index\.html$/);
+ if(recoveredDemo){
+  const base='/previews/recovered/demos/'+recoveredDemo[1],manifest=await (await fetch('/data/recovered-demo-assets.json')).json();
+  const localize=text=>text.replaceAll(base+'/','/').replaceAll('/previews/recovered/compat.js','/compat.js');
+  for(const file of manifest[recoveredDemo[1]]||[]){if(!file||file.split('/').some(part=>part==='..'||part==='.')||file.startsWith('/'))throw Error('Caminho inválido no pacote recuperado.');const response=await fetch(base+'/'+file);if(!response.ok)throw Error('Arquivo indisponível: '+file);entries[file]=/\.(?:m?js|css|html|json|svg|txt)$/i.test(file)?strToU8(localize(await response.text())):new Uint8Array(await response.arrayBuffer());}
+  entries['preview.html']=entries['index.html'];entries['compat.js']=strToU8(await fetchText('/previews/recovered/compat.js'));
+  entries['serve.mjs']=strToU8(`import http from 'node:http';import fs from 'node:fs';import path from 'node:path';import {fileURLToPath} from 'node:url';const root=path.dirname(fileURLToPath(import.meta.url));const types={'.js':'text/javascript','.css':'text/css','.html':'text/html','.json':'application/json','.svg':'image/svg+xml','.webp':'image/webp','.woff2':'font/woff2','.mp4':'video/mp4'};http.createServer((req,res)=>{try{const name=decodeURIComponent(new URL(req.url,'http://localhost').pathname);const file=path.resolve(root,'.'+(name==='/'?'/preview.html':name));if(!file.startsWith(root+path.sep))throw Error();res.setHeader('Content-Type',types[path.extname(file)]||'application/octet-stream');res.setHeader('Access-Control-Allow-Origin','*');const stream=fs.createReadStream(file);stream.on('error',()=>{res.statusCode=404;res.end('Not found')});stream.pipe(res);}catch{res.statusCode=404;res.end('Not found')}}).listen(Number(process.env.PORT)||4175,'127.0.0.1',()=>console.log('Abra http://127.0.0.1:'+(process.env.PORT||4175)));`);
+ }else entries['preview.html']=strToU8(await standalonePreview(item,theme,config,settings));
  const mapping=await assetMapping(item.id),media=new Set(Object.values(mapping));
  const sourceText=[...(payload?.files||[]).map(file=>file.content||''),payload?.demoCode||''].join('\n');
  for(const match of sourceText.matchAll(/["'(](\/(?!\/)[^\s"'()<>`\\]+\.(?:png|jpe?g|webp|avif|svg|gif|mp4|webm|mp3|wav|ogg|glb|gltf|hdr|exr))/gi))media.add(mapping[match[1]]||match[1]);
@@ -83,7 +91,7 @@ export async function componentArchive(item,payload,{name,theme='dark',config,se
  if(Object.keys(mapping).length)entries['demo-assets.json']=strToU8(JSON.stringify(mapping,null,2));
  if(settings)entries['visual-settings.json']=strToU8(JSON.stringify(settings,null,2));
  if(config)entries['preview-settings.json']=strToU8(JSON.stringify(config,null,2));
- entries['README.md']=strToU8(`# ${name||item.name}\n\nAbra preview.html no navegador para experimentar a demonstração. JavaScript e CSS locais estão incorporados no HTML; imagens, vídeos ou fontes externos usados pelo exemplo podem precisar de internet.\n\n${item.availability==='code'?'Os arquivos em src/ contêm o código disponível para integração ao seu projeto '+framework+'. Preserve os caminhos de importação ou adapte os aliases. Copie a pasta public/ para o diretório público do seu projeto. Se houver demo-assets.json, substitua as referências originais pelo mapa de mídias locais.':'Este pacote contém a demonstração HTML compilada. Os arquivos editáveis ainda não foram recuperados para este item.'}\n\nDependências: ${(payload?.dependencies||item.dependencies||[]).join(', ')}\n`);
+ entries['README.md']=strToU8(`# ${name||item.name}\n\n${recoveredDemo?'Execute node serve.mjs nesta pasta e abra http://127.0.0.1:4175. O servidor local é necessário para os módulos JavaScript e seus imports circulares.':'Abra preview.html no navegador para experimentar a demonstração. JavaScript e CSS locais estão incorporados no HTML.'} Imagens, vídeos ou fontes externos usados pelo exemplo podem precisar de internet.\n\n${item.availability==='code'?'Os arquivos em src/ contêm o código disponível para integração ao seu projeto '+framework+'. Preserve os caminhos de importação ou adapte os aliases.':'Este pacote contém a demonstração HTML compilada. Os arquivos editáveis ainda não foram recuperados para este item.'}\n\nDependências: ${(payload?.dependencies||item.dependencies||[]).join(', ')}\n`);
  const notices=await fetchText('/licenses/ATTRIBUTIONS.md');
  entries['LICENSE-NOTICES.md']=strToU8(notices+'\n\n'+(typeof payload?.license==='string'?payload.license:JSON.stringify(payload?.license||item.license||{})));
  const licenses=await (await fetch('/licenses/manifest.json')).json();
@@ -94,6 +102,7 @@ export async function componentArchive(item,payload,{name,theme='dark',config,se
 export async function componentPrompt(item,payload,{name=item.name,description='',theme='dark',config,settings}={}){
  const format=payload?.framework||item.framework;
  const framework=format==='vue'?'VUE':format==='html'?'HTML':'REACT';
+ if(payload?.reconstructionPrompt)return payload.reconstructionPrompt+'\n\nREFERÊNCIA VISUAL ORIGINAL\n'+(item.sourceUrl||'Consulte a prévia da biblioteca.')+'\n\nA demonstração HTML compilada e seus recursos estão no pacote para download. Use essa referência para reconstruir a implementação editável. Este prompt não contém o projeto original do servidor.'+(settings?'\n\nPERSONALIZAÇÃO VISUAL\n'+JSON.stringify(settings,null,2):'')+(config?'\n\nPROPRIEDADES DA PRÉVIA\n'+JSON.stringify(config,null,2):'');
  const sourceFiles=payload?.files||[];
  const hasSource=item.availability==='code'&&sourceFiles.length>0;
  const implementation=hasSource?sourceFiles.map(f=>'// '+f.path+'\n'+f.content).join('\n\n'):(settings?await standalonePreview(item,theme,config,settings):(sourceFiles.find(f=>f.path==='preview.html')?.content||await standalonePreview(item,theme,config,settings)));

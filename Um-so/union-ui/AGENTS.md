@@ -30,3 +30,7 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - The source folders `research/catalog-c/animate-repo/packages/react/src` and `research/shared-registry/components/ui/table.tsx` are required for recompilation. Do not exclude them as disposable caches. Run `npm run test:interactions` when changing source resolution.
 
 - On 2026-10-30 the user reported black interactive previews and missing demo images, including Circular Carousel. File existence and catalog covers do not establish runtime health. Verify startup, media decoding and interactions; record unresolved cases honestly. Keep demos isolated without allow-same-origin. Preserve generated asset content hashes, local recovered media and the dev static middleware after application authorization.
+
+- The user authorized commit and push to `jorge` after requested project changes and verification. Fetch and incorporate collaborators' updates first; never force-push over shared work.
+
+- Profitize recovery preserves the 82 observed items, consolidating 16 uniquely matched existing titles while keeping their IDs and previous preview pointers. Distinguish compiled interactive demos, recorded video references and reconstructed prompts. Do not claim the original TSX projects or backend were recovered.
