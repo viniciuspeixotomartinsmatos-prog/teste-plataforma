@@ -24,3 +24,7 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - On 2026-10-28 the user cancelled Stripe work explicitly. Keep payment integration disabled, do not provision accounts/prices or request Stripe authorization. Continue the remaining app work with access open. Preserve the agreed prices internally for later.
 
 - Preview covers must show the actual item: recover source images locally; where unavailable, use its own local executable preview, loaded near the viewport. Never substitute a generic category image or another item’s thumbnail.
+- User explicitly enabled the Caveman skill for all further conversation: concise Portuguese, full technical accuracy. Keep documentation and code complete.
+- The shared playground bridge customizes isolated demos without executing editor-supplied code. Preserve nested DOM nodes, original animation behavior when unedited, validated colors/text settings and parent-window message checks.
+- `/builder` stores projects locally under `umso:pages:v1`; it does not claim account synchronization. Preserve JSON import/export, per-section isolation, history and desktop/mobile heights. Exported pages retain license notices. Do not describe compiled HTML sections as recovered editable React source.
+- The source folders `research/catalog-c/animate-repo/packages/react/src` and `research/shared-registry/components/ui/table.tsx` are required for recompilation. Do not exclude them as disposable caches. Run `npm run test:interactions` when changing source resolution.

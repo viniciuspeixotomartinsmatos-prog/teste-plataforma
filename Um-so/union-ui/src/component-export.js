@@ -1,3 +1,4 @@
+import {addPlaygroundBridge} from './playground-bridge.js';
 async function fetchText(url){
  const response=await fetch(url);
  if(!response.ok)throw Error('Não foi possível obter '+url);
@@ -10,7 +11,7 @@ async function embeddedFont(url){
  let binary='';for(let offset=0;offset<bytes.length;offset+=8192)binary+=String.fromCharCode(...bytes.subarray(offset,offset+8192));
  return 'data:font/woff2;base64,'+btoa(binary);
 }
-export async function standalonePreview(item,theme='dark',config){
+export async function standalonePreview(item,theme='dark',config,settings){
  const local=item.runtimePreviewPath||item.previewPath;
  if(!local)throw Error('Demonstração indisponível.');
  const url=theme==='light'&&local.startsWith('/previews/runtime/')?local.replace(/\.html$/,'.light.html'):local;
@@ -30,9 +31,9 @@ export async function standalonePreview(item,theme='dark',config){
   const data=JSON.stringify(config).replace(/</g,'\\u003c');
   html=html.replace('</body>',()=>`<script>window.addEventListener('message',function(e){if(e.data?.type==='preview-ready')window.postMessage({type:'preview:set-props',props:${data}},'*')});setTimeout(()=>window.postMessage({type:'preview:set-props',props:${data}},'*'),100);</script></body>`);
  }
- return html;
+ return settings?addPlaygroundBridge(html,item.id,settings):html;
 }
-export async function componentArchive(item,payload,{name,theme='dark',config}={}){
+export async function componentArchive(item,payload,{name,theme='dark',config,settings}={}){
  const {zipSync,strToU8}=await import('fflate');
  const framework=(payload?.framework||item.framework)==='vue'?'Vue':'React';
  const entries={};
@@ -42,7 +43,8 @@ export async function componentArchive(item,payload,{name,theme='dark',config}={
   entries['src/'+parts.join('/')]=strToU8(f.content||'');
  }
  if(payload?.demoCode)entries[framework==='Vue'?'example.vue':'example.tsx']=strToU8(payload.demoCode);
- entries['preview.html']=strToU8(await standalonePreview(item,theme,config));
+ entries['preview.html']=strToU8(await standalonePreview(item,theme,config,settings));
+ if(settings)entries['visual-settings.json']=strToU8(JSON.stringify(settings,null,2));
  if(config)entries['preview-settings.json']=strToU8(JSON.stringify(config,null,2));
  entries['README.md']=strToU8(`# ${name||item.name}\n\nAbra preview.html no navegador para experimentar a demonstração. JavaScript e CSS locais estão incorporados no HTML; imagens, vídeos ou fontes externos usados pelo exemplo podem precisar de internet.\n\n${item.availability==='code'?'Os arquivos em src/ contêm o código disponível para integração ao seu projeto '+framework+'. Preserve os caminhos de importação ou adapte os aliases.':'Este pacote contém a demonstração HTML compilada. Os arquivos editáveis ainda não foram recuperados para este item.'}\n\nDependências: ${(payload?.dependencies||item.dependencies||[]).join(', ')}\n`);
  const notices=await fetchText('/licenses/ATTRIBUTIONS.md');
@@ -52,10 +54,10 @@ export async function componentArchive(item,payload,{name,theme='dark',config}={
  return zipSync(entries,{level:6});
 }
 
-export async function componentPrompt(item,payload,{name=item.name,description='',theme='dark',config}={}){
+export async function componentPrompt(item,payload,{name=item.name,description='',theme='dark',config,settings}={}){
  const framework=(payload?.framework||item.framework)==='vue'?'VUE':'REACT';
  const sourceFiles=payload?.files||[];
  const hasSource=item.availability==='code'&&sourceFiles.length>0;
- const implementation=hasSource?sourceFiles.map(f=>'// '+f.path+'\n'+f.content).join('\n\n'):(sourceFiles.find(f=>f.path==='preview.html')?.content||await standalonePreview(item,theme,config));
- return `Adicione o componente ${name} ao meu projeto.\n${description}\n\nMantenha a composição, as animações e a resposta às interações. Adapte as cores à identidade do projeto, preserve a acessibilidade e instale as dependências necessárias.\n\n${hasSource?'IMPLEMENTAÇÃO '+framework+' E ARQUIVOS AUXILIARES':'DEMONSTRAÇÃO HTML COMPLETA\nO HTML abaixo contém o componente compilado. Use-o como referência executável para reconstruir a implementação editável; não presuma que um import de pacote contém seu código.'}\n${implementation}\n\nDEPENDÊNCIAS\n${(payload?.dependencies||item.dependencies||[]).join(', ')}\n\nEXEMPLO DE USO\n${payload?.demoCode||''}${config?'\nPROPRIEDADES DO PREVIEW\n'+JSON.stringify(config,null,2):''}`;
+ const implementation=hasSource?sourceFiles.map(f=>'// '+f.path+'\n'+f.content).join('\n\n'):(settings?await standalonePreview(item,theme,config,settings):(sourceFiles.find(f=>f.path==='preview.html')?.content||await standalonePreview(item,theme,config,settings)));
+ return `Adicione o componente ${name} ao meu projeto.\n${description}\n\nMantenha a composição, as animações e a resposta às interações. Adapte as cores à identidade do projeto, preserve a acessibilidade e instale as dependências necessárias.\n\n${hasSource?'IMPLEMENTAÇÃO '+framework+' E ARQUIVOS AUXILIARES':'DEMONSTRAÇÃO HTML COMPLETA\nO HTML abaixo contém o componente compilado. Use-o como referência executável para reconstruir a implementação editável; não presuma que um import de pacote contém seu código.'}\n${implementation}\n\nDEPENDÊNCIAS\n${(payload?.dependencies||item.dependencies||[]).join(', ')}\n\nEXEMPLO DE USO\n${payload?.demoCode||''}${settings?'\nPERSONALIZAÇÃO VISUAL\n'+JSON.stringify(settings,null,2):''}${config?'\nPROPRIEDADES DO PREVIEW\n'+JSON.stringify(config,null,2):''}`;
 }

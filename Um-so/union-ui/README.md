@@ -6,6 +6,9 @@ Aplicação local com catálogo único, busca, prévias interativas, código, fa
 
 - Abrir um componente inicia a prévia automaticamente em um iframe isolado.
 - Particles oferece quantidade, tamanho, suavidade, velocidade e cor, com resposta ao cursor.
+- O playground permite alterar cores, fonte, escala, cantos e textos encontrados no DOM. Os estilos podem ser salvos neste navegador e acompanham o prompt e o ZIP. Canvas, imagens e texto desenhado não são campos de texto editáveis. A velocidade adicional atua nas animações expostas pela Web Animations API.
+- O Montador (`/builder`) reúne até 30 seções por projeto, com busca, favoritos, ordenação por arraste ou botões, duplicação, visibilidade, desfazer/refazer e alturas distintas para desktop/celular. O botão “Usar no montador” leva também as edições atuais do playground. Partículas mantêm seus controles próprios.
+- Projetos do montador ficam neste navegador, separados das coleções sincronizadas da conta. Exporte o JSON para compartilhar e continuar em outro dispositivo. O ZIP da página contém `index.html`, demonstrações isoladas em `sections/`, projeto e licenças. Cada seção preserva seu runtime original; o resultado não é um projeto React único com todas as fontes reconstruídas. Links e formulários mantêm o comportamento da demonstração.
 - A busca aceita português e inglês; Ctrl/Cmd K abre a busca global. Há filtros por categoria e tipo, favoritos, coleções e comparação de até três itens.
 - O prompt inclui a implementação e os arquivos auxiliares quando recuperados. Para itens com apenas uma prévia compilada, inclui o HTML executável completo e identifica essa diferença no próprio prompt.
 - O ZIP contém preview.html, configurações atuais quando aplicáveis, arquivos disponíveis, instruções e avisos técnicos completos. JavaScript, CSS e fontes locais do motor nativo são incorporados ao HTML; recursos externos ainda podem precisar de internet.
