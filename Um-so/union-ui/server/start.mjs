@@ -27,6 +27,7 @@ export async function createServer(options={}){
     if(path.extname(pathname)||!req.headers.accept?.includes('text/html'))throw Object.assign(Error(),{status:404});
     target=path.join(root,'index.html');stat=await fs.stat(target);
    }
+   if(/^\/(assets|previews)\//.test(pathname))res.setHeader('Access-Control-Allow-Origin','*');
    const ext=path.extname(target).toLowerCase();res.setHeader('Content-Type',types[ext]||'application/octet-stream');
    const gated=pathname.startsWith('/code/')||pathname.startsWith('/tools-runtime/');
    res.setHeader('Cache-Control',gated?'private, no-store':ext==='.html'?'no-cache':'public, max-age=3600');

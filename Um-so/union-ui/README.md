@@ -68,3 +68,9 @@ Em 29/10/2026 foram recuperadas 5.539 capas originais e 245 vídeos locais, alé
 Os manifests catalog-media.json e icon-covers.json são aplicados por catalog:publish; media:recover reproduz a aquisição. A recuperação por versão do bundle é uma inferência de endereço e só é aceita quando a resposta é uma imagem que o decodificador consegue abrir. Os arquivos originais indisponíveis usam o preview local. A contagem de cards com visual não significa que todas as interações de todos os componentes foram validadas.
 
 As novas capas foram codificadas em WebP com largura máxima de 800 px e proporção preservada: 79 MiB, contra 1.702 MiB dos arquivos recuperados. Os originais ficam privados em var/media/original-covers e não são enviados ao Git; os endereços de origem permanecem no manifest. A comparação usa o mesmo visual real do catálogo.
+
+## Integridade das demonstrações
+
+As mídias internas das demonstrações também são locais. `public/data/demo-local-assets.json` mantém as origens e os métodos de recuperação ou recomposição. Exportações HTML incorporam esses recursos; ZIPs levam os arquivos necessários em `public/`. Os previews mantêm sandbox opaco com armazenamento temporário separado.
+
+`npm test` verifica inicialização, mídias, workers e exportação; `npm run audit:runtime` serve a triagem para um navegador autorizado. `reports/preview-runtime-audit.json` registra a última execução e os casos que ainda precisam de revisão. A presença de um arquivo não comprova interação funcional. Consulte `design-qa.md` para o alcance e os limites da validação.

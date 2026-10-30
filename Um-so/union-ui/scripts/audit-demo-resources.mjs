@@ -1,0 +1,19 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+const root=path.resolve('public'),rows=JSON.parse(await fs.readFile(path.join(root,'data/catalog-live.json'),'utf8'));
+const recovered=JSON.parse(await fs.readFile(path.join(root,'data/demo-local-assets.json'),'utf8'));
+const sources=new Map(),links=new Map(),exists=new Map();
+async function fileExists(url){const file=url.split(/[?#]/)[0];if(!exists.has(file))exists.set(file,fs.stat(path.join(root,file)).then(s=>s.isFile()&&s.size>0).catch(()=>false));return exists.get(file);}
+for(const item of rows){const preview=item.runtimePreviewPath||item.previewPath;if(!sources.has(preview))sources.set(preview,new Set());sources.get(preview).add(item.id);}
+let cursor=0;const initial=[...sources.keys()];
+await Promise.all(Array.from({length:8},async()=>{while(cursor<initial.length){const file=initial[cursor++];let html;try{html=await fs.readFile(path.join(root,file),'utf8');}catch{continue;}for(const match of html.matchAll(/<script[^>]+src=["'](\/[^"']+\.js)["']/g)){if(!sources.has(match[1]))sources.set(match[1],new Set());for(const id of sources.get(file))sources.get(match[1]).add(id);}}}));
+cursor=0;const files=[...sources.keys()];
+await Promise.all(Array.from({length:8},async()=>{while(cursor<files.length){const file=files[cursor++];let code;try{code=await fs.readFile(path.join(root,file),'utf8');}catch{continue;}for(const match of code.matchAll(/(["'`])((?:https?:\/\/|\/)[^"'`<>\s\\]{1,1500}?\.(?:png|jpe?g|webp|avif|svg|gif|mp4|webm|woff2?|glb|gltf|hdr|exr|ogg|mp3|wav)(?:\?[^"'`<>\s\\]*)?)\1/gi)){const url=match[2];if(!links.has(url))links.set(url,{url,files:new Set(),ids:new Set()});const entry=links.get(url);entry.files.add(file);for(const id of sources.get(file))entry.ids.add(id);}}}));
+// Image services commonly use extensionless URLs. Include those too.
+cursor=0;
+await Promise.all(Array.from({length:8},async()=>{while(cursor<files.length){const file=files[cursor++];let code;try{code=await fs.readFile(path.join(root,file),'utf8');}catch{continue;}for(const match of code.matchAll(/https?:\/\/[^\s"'`<>\\)]+/g)){let url=match[0];if(url.includes('${')||url.includes('{')||url.endsWith('photo-'))continue;try{if(!/^(images\.unsplash\.com|images\.pexels\.com|picsum\.photos|i\.pravatar\.cc|ui\.aceternity\.com|www\.aceternity\.com)$/.test(new URL(url).hostname))continue;}catch{continue;}if(/aceternity\.com/.test(new URL(url).hostname)&&!url.includes('/_next/image?'))continue;if(new URL(url).pathname==='/')continue;if(!links.has(url))links.set(url,{url,files:new Set(),ids:new Set()});const entry=links.get(url);entry.files.add(file);for(const id of sources.get(file))entry.ids.add(id);}}}));
+const local=[],external=[];
+for(const entry of links.values()){const record={url:entry.url,ids:[...entry.ids],files:[...entry.files]};if(entry.url.startsWith('/')){if(!await fileExists(entry.url)){const unresolved=[];for(const id of record.ids){const map=recovered.items[id]||{},replacement=map[entry.url]||map[entry.url.split('?')[0]];if(!replacement||!await fileExists(replacement))unresolved.push(id);}if(unresolved.length)local.push({...record,ids:unresolved});}}else external.push(record);}
+const domains={};for(const e of external){const host=new URL(e.url).hostname;domains[host]=(domains[host]||0)+1;}
+await fs.mkdir('var/audits',{recursive:true});const report={generatedAt:new Date().toISOString(),published:rows.length,files:files.length,missingLocal:local,external,domains};await fs.writeFile('var/audits/demo-resources.json',JSON.stringify(report,null,2));
+console.log(JSON.stringify({published:rows.length,files:files.length,missingLocal:local.length,affectedLocal:new Set(local.flatMap(e=>e.ids)).size,external:external.length,domains,firstMissing:local.slice(0,18).map(e=>({url:e.url,ids:e.ids.slice(0,3)}))},null,2));

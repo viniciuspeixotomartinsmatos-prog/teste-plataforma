@@ -84,3 +84,17 @@ Após a otimização (WebP, largura máxima 800 px, qualidade 82), os 33 testes 
 - Desktop e 390×844 revisados. Corrigida navegação móvel em duas linhas para manter os cinco links visíveis. Na amostra mobile, documento de 375 px dentro do viewport de 390 px: nenhum overflow horizontal. Evidências locais em `var/audits/builder-mobile.png` e `var/audits/playground-desktop.png`.
 - Suíte principal: 36 testes aprovados; adaptador Sites: quatro. Build completo aprovado; recompilação final de produção sem recópia dos assets estáticos também aprovada. Nenhuma cobrança foi ativada.
 - Limites: projetos são locais, compartilhados por JSON; páginas exportadas compõem runtimes isolados. Recursos externos e integrações de formulários não se tornam serviços reais automaticamente. A inspeção visual cobre os fluxos acima, não as 10.591 demonstrações individualmente.
+
+## Correção das demonstrações — 30/10/2026
+
+- Triagem automatizada no navegador executou as 10.591 entradas publicadas. A última rodada marcou 23 casos para revisão; cinco receberam correções posteriores e aguardam novo teste. O bloqueio de uso do navegador nas configurações do Work impediu concluir essa rodada. O relatório por entrada está em reports/preview-runtime-audit.json. Isso não equivale a validar manualmente todas as interações.
+- Circular Carousel foi visto no navegador com as três imagens locais carregadas, sem os ícones quebrados da captura do usuário. Evidência em var/audits/circular-carousel-fixed.png. A tentativa de entrada por teclado encontrou limitação de foco da ferramenta; não se declara esse gesto aprovado.
+- Corrigidos exemplos com largura zero, conteúdo demonstrativo ausente, armazenamento indisponível em sandbox opaco, helpers ausentes em workers serializados e entrega incorreta de bundles recém-gerados pelo Vite. Sandbox continua sem allow-same-origin.
+- Cache local de 5915 mapeamentos de mídia, aproximadamente 1107 MiB de arquivos únicos. Proveniência e dados recompostos estão explícitos em data/demo-local-assets.json e licenses/demo-media-recovery.txt. Substituição de dados de exemplo não significa recuperação do original.
+- Restaurados o GLB original do modelo ASCII, a cena/renderer/imagens originais de Energy Beam, os favicons do exemplo CRM, o módulo Markdown compilado localmente e o motor compatível de Sparkles. Uss usa uma reconstrução interativa identificada nos arquivos técnicos.
+- Suíte principal: 42 testes aprovados antes dos dois testes adicionais de integridade. Os sete testes de saúde finais passaram; os dois adicionais verificam todos os caminhos mapeados e GLB/Markdown. Cinco testes de interação em JSDOM aprovados. Build e adaptador registrados abaixo após conclusão.
+- Nenhuma cobrança ativada. A branch de publicação informada pelo usuário é jorge.
+
+Build de produção aprovado em 3 min 17 s; quatro testes do adaptador Sites aprovados. Corrigido também o contêiner sem tamanho de Warp Gradient; a verificação visual dessa última correção continua pendente.
+
+Validação final após as últimas mudanças: 45 testes principais aprovados. Nova compilação da interface aprovada em 2,18 s, reutilizando os assets estáticos já copiados. A auditoria estática examinou 13.352 documentos/bundles e não encontrou referências locais de mídia sem arquivo ou remapeamento válido. Essa checagem não certifica serviços externos.

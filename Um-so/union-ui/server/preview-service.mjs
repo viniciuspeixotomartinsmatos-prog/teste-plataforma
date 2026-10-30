@@ -1,3 +1,6 @@
+import {injectPreviewEnvironment} from '../src/preview-environment.js';
+import {demoAssetsFor} from './demo-assets.mjs';
+import {injectDemoAssets} from '../src/demo-asset-bridge.js';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { createRequire } from 'node:module';
@@ -131,12 +134,14 @@ export async function compileItem(id,{cache=true,persist=false}={}){
   const js=vueBuilt?.js||built?.outputFiles.find(f=>f.path.endsWith('.js'))?.text;
   const css=vueBuilt?.css||built?.outputFiles.filter(f=>f.path.endsWith('.css')).map(f=>f.text).join('\n')||'';
   if(!js)throw Error('Original source did not produce a JavaScript bundle.');
-  const result={id,key,js,css,framework:item.framework,bytes:Buffer.byteLength(js),elapsedMs:Date.now()-start,hasDemo:context.hasDemo,entry:context.main,sourceFileCount:context.files.size};
+  const assetMap=await demoAssetsFor(id);
+  const result={id,key,js,css,assetMap,framework:item.framework,bytes:Buffer.byteLength(js),elapsedMs:Date.now()-start,hasDemo:context.hasDemo,entry:context.main,sourceFileCount:context.files.size};
   if(cache){bundles.set(key,result);while(bundles.size>64)bundles.delete(bundles.keys().next().value);}
   if(persist){
    const staticDir=path.join(PUBLIC_ROOT,'previews','runtime');await fs.mkdir(staticDir,{recursive:true});
-   await fs.writeFile(path.join(staticDir,key+'.js'),js);
-   const staticResult={...result,bundlePath:'/previews/runtime/'+key+'.js'};
+   const bundleKey=crypto.createHash('sha256').update(js+css).digest('hex').slice(0,24);
+   await fs.writeFile(path.join(staticDir,bundleKey+'.js'),js);
+   const staticResult={...result,bundlePath:'/previews/runtime/'+bundleKey+'.js'};
    const safeId=id.replace(/[^a-zA-Z0-9._-]/g,'-');
    result.previewPath='/previews/runtime/'+safeId+'.html';
    await fs.writeFile(path.join(staticDir,safeId+'.html'),previewHTML(item,staticResult,'dark'));
@@ -157,7 +162,7 @@ export function previewHTML(item,compiled,theme='dark'){
  const palettes=[['dark','#09090b','#fafafa','#27272a'],['light','#ffffff','#18181b','#f4f4f5']].map(([mode,bg,fg,secondary])=>`html.${mode}{color-scheme:${mode};--background:${bg};--foreground:${fg};--primary:${fg};--primary-foreground:${bg};--secondary:${secondary};--border:${mode==='dark'?'#27272a':'#e4e4e7'}}`).join('');
  compiled={...compiled,css:(compiled.css||'')+palettes};
  const full=item.category==='Backgrounds'||item.sourceId==='reactbits'||item.sourceId==='tailark'||item.kind==='block';
- return`<!doctype html><html class="${theme}" data-theme="${theme}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(item.name)} · Preview</title><link rel="stylesheet" href="/assets/preview.css"><style>:root{color-scheme:${theme};--background:${theme==='dark'?'#09090b':'#ffffff'};--foreground:${theme==='dark'?'#fafafa':'#18181b'};--card:var(--background);--card-foreground:var(--foreground);--popover:var(--background);--popover-foreground:var(--foreground);--primary:${theme==='dark'?'#fafafa':'#18181b'};--primary-foreground:${theme==='dark'?'#18181b':'#fafafa'};--secondary:${theme==='dark'?'#27272a':'#f4f4f5'};--secondary-foreground:var(--foreground);--muted:var(--secondary);--muted-foreground:#a1a1aa;--accent:var(--secondary);--accent-foreground:var(--foreground);--border:${theme==='dark'?'#27272a':'#e4e4e7'};--input:var(--border);--ring:#71717a;--radius:.75rem}*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,system-ui,sans-serif;background:var(--background);color:var(--foreground)}#root{width:100%;min-height:100vh;${full?(item.category==='Backgrounds'?'height:100vh;position:relative;overflow:hidden':'position:relative'):'display:flex;align-items:center;justify-content:center;padding:32px'}}#root>div{max-width:100%}${item.kind==='icon'?'#root{display:grid;place-items:center}':''}${compiled.css||''}</style></head><body><div id="root"></div><script src="${compiled.bundlePath||'/api/preview-bundle/'+compiled.key+'.js'}" defer></script></body></html>`;
+ return injectPreviewEnvironment(injectDemoAssets(`<!doctype html><html class="${theme}" data-theme="${theme}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(item.name)} · Preview</title><link rel="stylesheet" href="/assets/preview.css"><style>:root{color-scheme:${theme};--background:${theme==='dark'?'#09090b':'#ffffff'};--foreground:${theme==='dark'?'#fafafa':'#18181b'};--card:var(--background);--card-foreground:var(--foreground);--popover:var(--background);--popover-foreground:var(--foreground);--primary:${theme==='dark'?'#fafafa':'#18181b'};--primary-foreground:${theme==='dark'?'#18181b':'#fafafa'};--secondary:${theme==='dark'?'#27272a':'#f4f4f5'};--secondary-foreground:var(--foreground);--muted:var(--secondary);--muted-foreground:#a1a1aa;--accent:var(--secondary);--accent-foreground:var(--foreground);--border:${theme==='dark'?'#27272a':'#e4e4e7'};--input:var(--border);--ring:#71717a;--radius:.75rem}*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,system-ui,sans-serif;background:var(--background);color:var(--foreground)}#root{width:100%;min-height:100vh;${full?(item.category==='Backgrounds'?'height:100vh;position:relative;overflow:hidden':'position:relative'):'display:flex;align-items:center;justify-content:center;padding:32px'}}#root>div{max-width:100%}${item.kind==='icon'?'#root{display:grid;place-items:center}':''}${compiled.css||''}</style></head><body><div id="root"></div><script src="${compiled.bundlePath||'/api/preview-bundle/'+compiled.key+'.js'}" defer></script></body></html>`,compiled.assetMap));
 }
 
 export function createPreviewPlugin(){

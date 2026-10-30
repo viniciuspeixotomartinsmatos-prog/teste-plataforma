@@ -1,0 +1,6 @@
+{
+  "headers": [
+    { "source": "/assets/:path*", "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }] },
+    { "source": "/previews/:path*", "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }] }
+  ]
+}

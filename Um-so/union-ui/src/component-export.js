@@ -1,4 +1,12 @@
 import {addPlaygroundBridge} from './playground-bridge.js';
+import {injectDemoAssets} from './demo-asset-bridge.js';
+let localAssets;
+async function assetMapping(id){localAssets??=fetch('/data/demo-local-assets.json').then(r=>r.ok?r.json():{items:{}}).catch(()=>({items:{}}));return(await localAssets).items?.[id]||{};}
+async function embedMedia(html){
+ const paths=new Set([...html.matchAll(/(?:["'(])(\/(?!\/)[^\s"'()<>`\\]+\.(?:png|jpe?g|webp|avif|svg|gif|mp4|webm|mp3|wav|ogg|glb|gltf|hdr|exr|js|json|woff2?)(?:\?[^\s"'()<>`\\]*)?)/gi)].map(m=>m[1]));
+ for(const path of paths){if(path.includes('${'))continue;const response=await fetch(path);if(!response.ok)continue;const extension=path.split('?')[0].split('.').pop().toLowerCase();const nested=extension==='json'?await embedMedia(await response.text()):null;const bytes=nested===null?new Uint8Array(await response.arrayBuffer()):new TextEncoder().encode(nested);let binary='';for(let offset=0;offset<bytes.length;offset+=8192)binary+=String.fromCharCode(...bytes.subarray(offset,offset+8192));const ext=path.split('?')[0].split('.').pop().toLowerCase(),type=response.headers?.get?.('content-type')||({svg:'image/svg+xml',jpg:'image/jpeg',jpeg:'image/jpeg',png:'image/png',webp:'image/webp',avif:'image/avif',gif:'image/gif',mp4:'video/mp4',webm:'video/webm',wav:'audio/wav',mp3:'audio/mpeg',ogg:'audio/ogg',glb:'model/gltf-binary',js:'text/javascript',json:'application/json',woff2:'font/woff2',woff:'font/woff'}[ext]||'application/octet-stream');html=html.replaceAll(path,'data:'+type+';base64,'+btoa(binary));}
+ return html;
+}
 async function fetchText(url){
  const response=await fetch(url);
  if(!response.ok)throw Error('Não foi possível obter '+url);
@@ -15,7 +23,7 @@ export async function standalonePreview(item,theme='dark',config,settings){
  const local=item.runtimePreviewPath||item.previewPath;
  if(!local)throw Error('Demonstração indisponível.');
  const url=theme==='light'&&local.startsWith('/previews/runtime/')?local.replace(/\.html$/,'.light.html'):local;
- let html=await fetchText(url);
+ let html=await fetchText(url);const mapping=await assetMapping(item.id);html=injectDemoAssets(html,mapping);
  // Inline the locally compiled JS and stylesheet so the downloaded demo can
  // run outside this server. Original third-party media URLs remain intact.
  for(const match of [...html.matchAll(/<script\b[^>]*src=["'](\/previews\/runtime\/[^"']+\.js)["'][^>]*><\/script>/g)]){
@@ -31,6 +39,9 @@ export async function standalonePreview(item,theme='dark',config,settings){
   const data=JSON.stringify(config).replace(/</g,'\\u003c');
   html=html.replace('</body>',()=>`<script>window.addEventListener('message',function(e){if(e.data?.type==='preview-ready')window.postMessage({type:'preview:set-props',props:${data}},'*')});setTimeout(()=>window.postMessage({type:'preview:set-props',props:${data}},'*'),100);</script></body>`);
  }
+ for(const [from,to]of Object.entries(mapping))if(from.startsWith('/')||from.startsWith('http'))html=html.replaceAll(from,to);
+ html=await embedMedia(html);
+ html=html.replace(/new URL\(window.location.href\)\.searchParams\.get\((["'])theme\1\)/g,JSON.stringify(theme));
  return settings?addPlaygroundBridge(html,item.id,settings):html;
 }
 export async function componentArchive(item,payload,{name,theme='dark',config,settings}={}){
@@ -44,9 +55,14 @@ export async function componentArchive(item,payload,{name,theme='dark',config,se
  }
  if(payload?.demoCode)entries[framework==='Vue'?'example.vue':'example.tsx']=strToU8(payload.demoCode);
  entries['preview.html']=strToU8(await standalonePreview(item,theme,config,settings));
+ const mapping=await assetMapping(item.id),media=new Set(Object.values(mapping));
+ const sourceText=[...(payload?.files||[]).map(file=>file.content||''),payload?.demoCode||''].join('\n');
+ for(const match of sourceText.matchAll(/["'(](\/(?!\/)[^\s"'()<>`\\]+\.(?:png|jpe?g|webp|avif|svg|gif|mp4|webm|mp3|wav|ogg|glb|gltf|hdr|exr))/gi))media.add(mapping[match[1]]||match[1]);
+ for(const url of media){if(typeof url!=='string'||!url.startsWith('/')||url.split('/').includes('..'))continue;const response=await fetch(url);if(response.ok)entries['public'+url.split('?')[0]]=new Uint8Array(await response.arrayBuffer());}
+ if(Object.keys(mapping).length)entries['demo-assets.json']=strToU8(JSON.stringify(mapping,null,2));
  if(settings)entries['visual-settings.json']=strToU8(JSON.stringify(settings,null,2));
  if(config)entries['preview-settings.json']=strToU8(JSON.stringify(config,null,2));
- entries['README.md']=strToU8(`# ${name||item.name}\n\nAbra preview.html no navegador para experimentar a demonstração. JavaScript e CSS locais estão incorporados no HTML; imagens, vídeos ou fontes externos usados pelo exemplo podem precisar de internet.\n\n${item.availability==='code'?'Os arquivos em src/ contêm o código disponível para integração ao seu projeto '+framework+'. Preserve os caminhos de importação ou adapte os aliases.':'Este pacote contém a demonstração HTML compilada. Os arquivos editáveis ainda não foram recuperados para este item.'}\n\nDependências: ${(payload?.dependencies||item.dependencies||[]).join(', ')}\n`);
+ entries['README.md']=strToU8(`# ${name||item.name}\n\nAbra preview.html no navegador para experimentar a demonstração. JavaScript e CSS locais estão incorporados no HTML; imagens, vídeos ou fontes externos usados pelo exemplo podem precisar de internet.\n\n${item.availability==='code'?'Os arquivos em src/ contêm o código disponível para integração ao seu projeto '+framework+'. Preserve os caminhos de importação ou adapte os aliases. Copie a pasta public/ para o diretório público do seu projeto. Se houver demo-assets.json, substitua as referências originais pelo mapa de mídias locais.':'Este pacote contém a demonstração HTML compilada. Os arquivos editáveis ainda não foram recuperados para este item.'}\n\nDependências: ${(payload?.dependencies||item.dependencies||[]).join(', ')}\n`);
  const notices=await fetchText('/licenses/ATTRIBUTIONS.md');
  entries['LICENSE-NOTICES.md']=strToU8(notices+'\n\n'+(typeof payload?.license==='string'?payload.license:JSON.stringify(payload?.license||item.license||{})));
  const licenses=await (await fetch('/licenses/manifest.json')).json();

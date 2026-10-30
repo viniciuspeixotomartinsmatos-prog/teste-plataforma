@@ -1,8 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><script data-umso-environment>(function sandboxStorage(workerBootstrap=''){
+ let isolated=false;
+ // Opaque sandbox documents cannot access browser storage. Give each demo an
+ // isolated, temporary store instead of granting access to the app's origin.
+ for(const name of ['localStorage','sessionStorage']){
+  try{window[name].getItem('__preview_probe__');continue;}catch{isolated=true;}
+  const entries=new Map();const storage={get length(){return entries.size;},key(index){return [...entries.keys()][index]??null;},getItem(key){return entries.get(String(key))??null;},setItem(key,value){entries.set(String(key),String(value));},removeItem(key){entries.delete(String(key));},clear(){entries.clear();}};
+  try{Object.defineProperty(window,name,{configurable:true,value:storage});}catch{}
+ }
+ try{if(isolated)throw Error('isolated');void document.cookie;}catch{
+  const cookies=new Map();try{Object.defineProperty(document,'cookie',{configurable:true,get(){return [...cookies].map(([key,value])=>key+'='+value).join('; ');},set(value){const [pair,...options]=String(value).split(';'),index=pair.indexOf('=');if(index<0)return;const key=pair.slice(0,index).trim();if(options.some(option=>/^\s*max-age\s*=\s*0\s*$/i.test(option)))cookies.delete(key);else cookies.set(key,pair.slice(index+1));}});}catch{}
+ }
+ if(isolated){const original=window.postMessage;window.postMessage=function(message,targetOrigin,transfer){if(this===window){if(targetOrigin==='null')targetOrigin='*';else if(targetOrigin?.targetOrigin==='null')targetOrigin={...targetOrigin,targetOrigin:'*'};}return original.call(this,message,targetOrigin,transfer);};}
+ if(isolated){
+  // URL synchronization is optional inside an embedded demo. Keep its state
+  // local when the browser rejects a URL belonging to the host application.
+  const stateGetter=Object.getOwnPropertyDescriptor(Object.getPrototypeOf(history),'state')?.get;let localState=null,fallback=false;
+  for(const method of ['pushState','replaceState']){const original=history[method].bind(history);history[method]=function(state,unused,url){try{const result=original(state,unused,url);fallback=false;return result;}catch(error){if(error.name!=='SecurityError')throw error;localState=typeof structuredClone==='function'?structuredClone(state):JSON.parse(JSON.stringify(state));fallback=true;}};}
+  if(stateGetter)Object.defineProperty(history,'state',{configurable:true,get(){return fallback?localState:stateGetter.call(history);}});
+ }
+ if(workerBootstrap&&typeof Worker==='function'){
+  const NativeBlob=window.Blob;
+  window.Blob=class extends NativeBlob{static [Symbol.hasInstance](value){return value instanceof NativeBlob;}constructor(parts=[],options={}){
+   const text=parts.every(part=>typeof part==='string')?parts.join(''):'';
+   const script=/javascript/.test(options.type||'')||!options.type&&/^\s*(?:var |let |const |\(?function|["']use strict)/.test(text)&&/\bonmessage\s*=|\bpostMessage\s*\(/.test(text);
+   if(script&&text&&!text.includes('/* umso-worker-compat */')){const strict=text.match(/^\s*(["'])use strict\1\s*;?/);parts=strict?[strict[0]+'\n/* umso-worker-compat */\n'+workerBootstrap+'\n'+text.slice(strict[0].length)]:['/* umso-worker-compat */\n'+workerBootstrap+'\n',...parts];}
+   super(parts,options);
+  }};
+ }
+})("");</script><script data-umso-assets>(function remapAssets(mapping){
+ const filled=new WeakSet();
+ const resolve=value=>{if(typeof value!=='string')return value;if(mapping[value])return mapping[value];try{const url=new URL(value,document.baseURI);return mapping[url.href]||mapping[url.origin+url.pathname]||mapping[url.pathname+url.search]||mapping[url.pathname]||value;}catch{return value;}};
+ const rewrite=value=>typeof value==='string'?value.replace(/url\((['"]?)(.*?)\1\)/g,(_,quote,url)=>'url('+quote+resolve(url)+quote+')'):value;
+ const srcset=value=>String(value).replace(/(?:https?:\/\/|\/)[^\s,]+/g,resolve);
+ for(const [proto,key]of [[HTMLImageElement.prototype,'src'],[HTMLImageElement.prototype,'srcset'],[HTMLMediaElement.prototype,'src'],[HTMLVideoElement.prototype,'poster'],[HTMLSourceElement.prototype,'src'],[HTMLSourceElement.prototype,'srcset']]){const descriptor=Object.getOwnPropertyDescriptor(proto,key);if(!descriptor?.set)continue;Object.defineProperty(proto,key,{...descriptor,set(value){descriptor.set.call(this,key==='srcset'?srcset(value):resolve(value));}});}
+ const setAttribute=Element.prototype.setAttribute;Element.prototype.setAttribute=function(name,value){if(/^(src|poster)$/i.test(name)||name==='href'&&['IMAGE','LINK'].includes(this.tagName.toUpperCase()))value=resolve(value);else if(name==='srcset')value=srcset(value);else if(name==='style')value=rewrite(value);return setAttribute.call(this,name,value);};
+ const originalFetch=window.fetch;window.fetch=function(input,options){if(typeof input==='string'||input instanceof URL)return originalFetch.call(this,resolve(String(input)),options);if(input instanceof Request){const url=resolve(input.url);if(url!==input.url)return originalFetch.call(this,new Request(url,input),options);}return originalFetch.call(this,input,options);};
+ const scan=()=>{for(const node of document.querySelectorAll('img,video,source,image,style,[style]')){if(node.tagName==='IMG'&&!node.getAttribute('src')&&!node.getAttribute('srcset')&&mapping.__emptyImage&&!filled.has(node)){filled.add(node);setAttribute.call(node,'src',mapping.__emptyImage);}if(node.tagName==='STYLE'){const next=rewrite(node.textContent);if(next!==node.textContent)node.textContent=next;}else{for(const key of ['src','srcset','poster','href','style']){const current=node.getAttribute(key);if(!current)continue;const next=key==='style'?rewrite(current):key==='srcset'?srcset(current):resolve(current);if(next!==current)setAttribute.call(node,key,next);}}}};
+ let pending=false;new MutationObserver(records=>{if(!records.some(r=>r.type==='childList'||r.attributeName!=='style'||r.target.getAttribute('style')?.includes('url(')))return;if(!pending){pending=true;setTimeout(()=>{pending=false;scan();},16);}}).observe(document,{childList:true,subtree:true,attributes:true,attributeFilter:['src','srcset','poster','href','style']});
+ scan();
+})({"https://cdn.21st.dev/assets/localized/839b12da2e4dd346b256cebae72e10c479a102c8980a22084c41275e4b9a0e12.png":"/assets/demo-cache/1ef8a960545fd87c36a7094c.webp","https://cdn.21st.dev/assets/localized/39f1e89e5596050671d2c5e43247556682b6501fdc26a72514c1b6b27aca1040.webp":"/assets/demo-cache/311cd18100acaf9c8c9981b3.webp","https://cdn.21st.dev/assets/localized/9330b299938127244aa249ee03c095db066c29c3545aebcc61662ed5499003e9.webp":"/assets/demo-cache/737f247f4075f64c3fc351f1.webp","https://cdn.21st.dev/assets/localized/d2f606dd20ae0f042b33801d94e64ebede24d0881c18518f027e75871c46db24.webp":"/assets/demo-cache/d73b24e454dda094fe8f6ea3.webp","https://cdn.21st.dev/assets/localized/228deba2e4b600146bdcb6cfa359b8ead6aacc2b1c13550a29cd82824cfa1c01.jpg":"/assets/demo-cache/9a38bd3a02a202ba9184970c.webp","https://cdn.21st.dev/assets/localized/db3a4fbabb256c7ddb62896ba874be07f89dcce5ec82dbf31f0d29241a089c0d.webp":"/assets/demo-cache/c05042580358a2bb1a4bfa5f.webp","https://cdn.21st.dev/assets/localized/517863093d43d51285cbb156a97a13dbb8a4da2178336e63fb84a2f9dff31721.webp":"/assets/demo-cache/0c52e84a698f9134a10d7376.webp","https://cdn.21st.dev/assets/localized/8e5396313325182ff85d1229a80fdff6351d6e9d18a74ba7a202cefdba9eb840.webp":"/assets/demo-cache/d0beb518bfcd3355e6507014.webp","https://cdn.21st.dev/assets/localized/ee638b072758424ef4dc58adbf6d24d95d562f371b5d5660e3cf4682507f9b21.webp":"/assets/demo-cache/42c2ec668c9b1a9f92b6bf78.webp","https://cdn.21st.dev/assets/localized/d74859654f1bfc3e0258b9b7e519319287c3f6e4c0c8cebfd42dec18c33f747c.webp":"/assets/demo-cache/5c8a198ce1a96d880302a5bb.webp","https://cdn.21st.dev/assets/localized/ddf108b39535f3be69c96dae3c31c69ed9ba282766c8543c5ff78dd4edc7755e.webp":"/assets/demo-cache/880386500fe69abd549d5813.webp","https://cdn.21st.dev/assets/localized/4270ec0a3fab31d664d1febae5f74fb06603099fa8476feb7367dec5f04ecb57.webp":"/assets/demo-cache/ee5c565c0d85f61da8d2dc99.webp","https://cdn.21st.dev/assets/localized/276d61dd498c0836991acd0d78c3e588dfe2396ac209eadd76f7e610588d473e.webp":"/assets/demo-cache/5f978ef7a1f827e3c22b2466.webp","https://cdn.21st.dev/assets/localized/a6b7394b90e0f93c7a07e26b63fc927bb6b4c361474f508b3902196d30ec29d9.webp":"/assets/demo-cache/4a1116c907fbb5cc79f4ce57.webp","https://cdn.21st.dev/assets/localized/4134f3dcc459b74f84d65c239bccbf6532920d950a1ee11e3c2a738f9d455be5.webp":"/assets/demo-cache/05e04408df06c14785113d17.webp"});</script>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React + TS</title>
     <script>
