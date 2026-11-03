@@ -34,3 +34,5 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - The user authorized commit and push to `jorge` after requested project changes and verification. Fetch and incorporate collaborators' updates first; never force-push over shared work.
 
 - Profitize recovery preserves the 82 observed items, consolidating 16 uniquely matched existing titles while keeping their IDs and previous preview pointers. Distinguish compiled interactive demos, recorded video references and reconstructed prompts. Do not claim the original TSX projects or backend were recovered.
+
+- Protected deployments prepare preview scripts/styles in the authenticated parent and relay only validated public static media to the opaque iframe. Preserve frame-source checks, item IDs, encoded path validation and API/origin exclusions in `preview-assets.js`; keep Deployment Protection and sandbox isolation enabled.
