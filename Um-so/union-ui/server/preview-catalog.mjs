@@ -148,5 +148,6 @@ export async function createSourceContext(item,payload){
   for(const candidate of candidates.slice(0,3)){await loadOther(candidate);found=findLocal(importPath,importer);if(found)return found;}
   return null;
  }
- return {item,payload,files,main,primary:normalize(primary.path),baseName,hasDemo:!!demoCode,demoKind:runtimeDemo?.kind,resolveSource};
+ const dependencies=runtimeDemo?.dependencies?new Set([...(payload.dependencies||[]),...runtimeDemo.dependencies]):undefined;
+ return {item,payload,files,main,primary:normalize(primary.path),baseName,hasDemo:!!demoCode,demoKind:runtimeDemo?.kind,dependencies,resolveSource};
 }

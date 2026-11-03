@@ -13,7 +13,11 @@ function inspectPreview(id,dependencyWarning){
   const root=document.body||document.getElementById('root');
   const roots=root?[root]:[];for(let i=0;i<roots.length;i++)for(const node of roots[i].querySelectorAll('*'))if(node.shadowRoot)roots.push(node.shadowRoot);
   const select=selector=>roots.flatMap(scope=>[...scope.querySelectorAll(selector)]);
-  const content=root&&((typeof root.innerText==='string'?root.innerText:root.textContent)?.trim()||select('canvas,svg,img,video,iframe,button,input,textarea,select,[role=slider],[role=progressbar]').some(node=>{const r=node.getBoundingClientRect();return r.width>0&&r.height>0&&!node.closest('[aria-hidden=true]');})||select('div,span').some(node=>{const r=node.getBoundingClientRect(),style=getComputedStyle(node);return r.width>1&&r.height>1&&style.visibility!=='hidden'&&Number(style.opacity)>0&&(style.backgroundImage!=='none'||style.boxShadow!=='none'||parseFloat(style.borderTopWidth)>0&&style.borderTopColor!=='rgba(0, 0, 0, 0)'||style.backgroundColor!=='rgba(0, 0, 0, 0)'&&style.backgroundColor!==getComputedStyle(root).backgroundColor);}));
+  // A mounted canvas or a solid background does not prove a GPU frame was
+  // presented. Respect renderer startup markers before accepting readiness.
+  if(select('[data-preview-pending="true"]').length){setTimeout(inspect,150);return;}
+  const awaitingRenderer=node=>node.closest('[data-ready="false"]')?.querySelector('canvas');
+  const content=root&&((typeof root.innerText==='string'?root.innerText:root.textContent)?.trim()||select('canvas,svg,img,video,iframe,button,input,textarea,select,[role=slider],[role=progressbar]').some(node=>{const r=node.getBoundingClientRect();return r.width>0&&r.height>0&&!node.closest('[aria-hidden=true]')&&!awaitingRenderer(node);})||select('div,span').some(node=>{const r=node.getBoundingClientRect(),style=getComputedStyle(node);return !awaitingRenderer(node)&&r.width>1&&r.height>1&&style.visibility!=='hidden'&&Number(style.opacity)>0&&(style.backgroundImage!=='none'||style.boxShadow!=='none'||parseFloat(style.borderTopWidth)>0&&style.borderTopColor!=='rgba(0, 0, 0, 0)'||style.backgroundColor!=='rgba(0, 0, 0, 0)'&&style.backgroundColor!==getComputedStyle(root).backgroundColor);}));
   if(!content){setTimeout(inspect,150);return;}
   const images=select('img').filter(image=>image.getAttribute('src')||image.getAttribute('srcset'));
   const broken=images.filter(image=>image.complete&&!image.naturalWidth);
