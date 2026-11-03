@@ -9,7 +9,7 @@ import {categoryLabels,kindLabels,copyText,downloadBlob} from './catalog.js';
 import './playground.css';
 import './builder.css';
 import {componentArchive,componentPrompt,standalonePreview} from './component-export.js';
-const particlesDefaults={quantity:180,ease:60,size:0.8,color:'#b9f9ab',vx:0,vy:0};
+const particlesDefaults={quantity:180,ease:60,size:0.8,color:'#b79af5',vx:0,vy:0};
 export default function ComponentPage({item,rows,saved,onSave,onBack,onOpen,notify,collections,setCollections,onNewCollection,compared,onCompare,theme,canExport=true,onUpgrade,onBuild}){
  const [tab,setTab]=useState('preview'),[width,setWidth]=useState('desktop'),[previewTheme,setPreviewTheme]=useState(theme),[payload,setPayload]=useState(null),[fileIndex,setFileIndex]=useState(0),[codePath,setCodePath]=useState(item.codePath||''),[busy,setBusy]=useState(false),[copied,setCopied]=useState(''),[settings,setSettings]=useState(false),[config,setConfig]=useState(particlesDefaults),[downloading,setDownloading]=useState(false);
  const [visual,setVisual]=useState(()=>cleanSettings()),[inspection,setInspection]=useState(null);

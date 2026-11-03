@@ -10,6 +10,8 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 ## Product decisions
 
+- On 2026-11-03 the user replaced the green product identity with a refined amethyst palette. Use dark accent `#B79AF5`, light accent `#6D3FD1`, purple-neutral surfaces and matching header/footer logo and favicon. Keep product navigation, buttons, statuses, account panels and studio chrome coherent; original catalog demonstrations and user-customized artwork keep their own colors. Continue synchronizing with `origin/jorge` before every project prompt and pushing verified changes afterward.
+
 - The user requested a new application merging 21st, Aceternity UI, Magic UI, React Bits, Kokonut UI, shadcnblocks, Motion Primitives, Tailark and Animate UI.
 - The temporary visible identity is “Um só.” until the user supplies a final name. Present a single product: no library names, source logos, credits, authors or library filters in the product UI. Preserve original code and required notices in technical files.
 - Every published catalog entry must open an automatic interactive preview. Do not present metadata-only references or unassembled components as working previews. Keep the complete acquisition inventory internally while implementing the remaining entries.
