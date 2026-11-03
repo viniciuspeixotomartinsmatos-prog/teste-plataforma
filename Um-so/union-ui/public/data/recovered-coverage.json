@@ -1,9 +1,9 @@
 {
   "capturedAt": "2026-10-29T18:26:20.873Z",
-  "generatedAt": "2026-10-30T13:51:05.205Z",
-  "observed": 82,
-  "published": 82,
-  "newEntries": 66,
+  "generatedAt": "2026-11-03T16:25:22.929Z",
+  "observed": 91,
+  "published": 91,
+  "newEntries": 75,
   "consolidated": [
     {
       "recoveredId": "recovered--animated-mosaic-portrait",
@@ -102,11 +102,11 @@
       "reason": "single-existing-title-retain-id-and-original-pointers"
     }
   ],
-  "executable": 75,
-  "recorded": 7,
+  "executable": 77,
+  "recorded": 14,
   "skipped": [],
   "failed": [],
-  "downloadedAssets": 113,
+  "downloadedAssets": 147,
   "downloadedBytes": 0,
   "items": [
     {
@@ -681,6 +681,69 @@
       "name": "Nova Feature",
       "mode": "recorded-video",
       "preview": "/previews/recovered/estreia.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--lusco",
+      "name": "Lusco",
+      "mode": "recorded-video",
+      "preview": "/previews/recovered/lusco.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--sushi-conveyor-menu",
+      "name": "Sushi Conveyor Menu",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/sushi-conveyor-menu.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--maison",
+      "name": "Maison",
+      "mode": "recorded-video",
+      "preview": "/previews/recovered/maison.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--clareira",
+      "name": "Clareira",
+      "mode": "recorded-video",
+      "preview": "/previews/recovered/clareira.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--akari",
+      "name": "Akari",
+      "mode": "recorded-video",
+      "preview": "/previews/recovered/akari.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--ollo",
+      "name": "Ollo",
+      "mode": "recorded-video",
+      "preview": "/previews/recovered/ollo.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--glassy-coverflow-carousel",
+      "name": "Glassy Coverflow Carousel",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/glassy-coverflow-carousel.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--sulko",
+      "name": "Sulko",
+      "mode": "recorded-video",
+      "preview": "/previews/recovered/sulko.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--shari",
+      "name": "Shari",
+      "mode": "recorded-video",
+      "preview": "/previews/recovered/shari.html",
       "promptOrigin": "reconstructed"
     }
   ],

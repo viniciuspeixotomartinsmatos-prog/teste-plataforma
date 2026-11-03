@@ -35,7 +35,7 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 - The user authorized commit and push to `jorge` after requested project changes and verification. Fetch and incorporate collaborators' updates first; never force-push over shared work.
 
-- Profitize recovery preserves the 82 observed items, consolidating 16 uniquely matched existing titles while keeping their IDs and previous preview pointers. Distinguish compiled interactive demos, recorded video references and reconstructed prompts. Do not claim the original TSX projects or backend were recovered.
+- Profitize recovery now preserves 91 observed items (82 initial plus 9 added on 2026-11-03), consolidating 16 uniquely matched existing titles while keeping their IDs and previous preview pointers. Keep the newer release runtime separate from the original snapshot. New Sushi Conveyor Menu and Glassy Coverflow Carousel demos must mount in interactive stage mode, never inert tile mode. Seven new landing pages use their original playable video references. Distinguish compiled interactive demos, recorded video references and reconstructed prompts. Do not claim the original TSX projects or backend were recovered.
 
 - Protected deployments prepare preview scripts/styles in the authenticated parent and relay only validated public static media to the opaque iframe. Preserve frame-source checks, item IDs, encoded path validation and API/origin exclusions in `preview-assets.js`; keep Deployment Protection and sandbox isolation enabled.
 

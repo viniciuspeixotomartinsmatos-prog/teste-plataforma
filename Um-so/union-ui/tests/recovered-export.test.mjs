@@ -31,3 +31,9 @@ test('template ZIP retains cyclic modules as files and supplies a local server',
  globalThis.fetch=async url=>new Response(values[url],{status:Object.hasOwn(values,url)?200:404});
  try{const zip=unzipSync(await componentArchive({name:'Example',framework:'html',availability:'preview',previewPath:base+'/index.html'},{files:[]}));assert.ok(zip['serve.mjs']);assert.equal(strFromU8(zip['assets/a.js']),'import "/assets/b.js";');assert.ok(strFromU8(zip['README.md']).includes('node serve.mjs'));}finally{globalThis.fetch=original;}
 });
+
+test('new interactive component exports embed dynamically assembled poster and dish URLs',async()=>{
+ const fs=await import('node:fs/promises'),path=await import('node:path'),original=globalThis.fetch;
+ globalThis.fetch=async url=>{try{if(typeof url!=='string'||!url.startsWith('/'))return new Response('',{status:404});const bytes=await fs.readFile(path.join('public',url.split('?')[0])),ext=path.extname(url).slice(1);return new Response(bytes,{headers:{'content-type':{webp:'image/webp',png:'image/png',jpg:'image/jpeg',js:'text/javascript',css:'text/css',woff2:'font/woff2',json:'application/json'}[ext]||'application/octet-stream'}});}catch{return new Response('',{status:404});}};
+ try{const catalog=JSON.parse(await fs.readFile('public/data/catalog-live.json','utf8'));for(const slug of ['sushi-conveyor-menu','glassy-coverflow-carousel']){const item=catalog.find(r=>r.slug===slug&&r.sourceId==='recovered');assert.ok(Object.keys(item.previewAssets).length>=6);const html=await standalonePreview(item);for(const url of Object.keys(item.previewAssets))assert.ok(html.includes(JSON.stringify(url)+':"data:image/webp;base64,'),url+' must map to embedded pixels');assert.ok(!/<script[^>]+src="\/previews\/recovered/.test(html));}}finally{globalThis.fetch=original;}
+});

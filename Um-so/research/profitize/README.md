@@ -1,5 +1,13 @@
 # Recuperação ProfitizeBuild
 
+## Atualização — 03/11/2026
+
+Inventário atual: 91 itens, todos ligados ao catálogo. São 77 demonstrações executáveis e 14 referências de vídeo. A atualização adicionou Sushi Conveyor Menu e Glassy Coverflow Carousel com os módulos públicos novos em modo stage interativo; Lusco, Maison, Clareira, Akari, Ollo, Sulko e Shari usam os vídeos originais com controles. Todos os prompts desta recuperação continuam identificados como reconstruídos.
+
+A versão nova do runtime fica em releases/2026-11-03 e não substitui o snapshot dos 82 itens iniciais. Bundles, hashes, metadados e diferenças de fábricas ficam preservados. Variantes de uma mesma fábrica com nomes locais minificados distintos mantêm a primeira ocorrência; a execução dos componentes é verificada separadamente no navegador. A análise REA estática examinou um dos 67 bundles, deixando os outros 66 explicitamente fora de escopo; não constitui prova de execução.
+
+## Coleta inicial
+
 Foram observados 82 itens publicados: 47 componentes/shaders, 33 landing pages e 2 motions. A coleta usou os documentos e bundles públicos de https://profitize.com.br/build. Nenhuma sessão, senha ou cookie foi exportado.
 
 ## Integração

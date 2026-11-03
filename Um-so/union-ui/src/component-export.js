@@ -38,7 +38,7 @@ export async function standalonePreview(item,theme='dark',config,settings){
  const local=item.runtimePreviewPath||item.previewPath;
  if(!local)throw Error('Demonstração indisponível.');
  const url=theme==='light'&&local.startsWith('/previews/runtime/')?local.replace(/\.html$/,'.light.html'):local;
- let html=await fetchText(url);const mapping=await assetMapping(item.id);html=injectDemoAssets(html,mapping);
+ let html=await fetchText(url);const mapping={...await assetMapping(item.id),...item.previewAssets};html=injectDemoAssets(html,mapping);
  if(local.startsWith('/previews/recovered/')){
   // Retain stylesheet contents before embedding their media and font references.
   for(const match of [...html.matchAll(/<link\b[^>]*href=["'](\/previews\/recovered\/[^"']+\.css)["'][^>]*>/g)]){const css=await fetchText(match[1]);html=html.replace(match[0],()=>'<style>'+css.replace(/<\/style/gi,'<\\/style')+'</style>');}
@@ -60,7 +60,10 @@ export async function standalonePreview(item,theme='dark',config,settings){
   const data=JSON.stringify(config).replace(/</g,'\\u003c');
   html=html.replace('</body>',()=>`<script>window.addEventListener('message',function(e){if(e.data?.type==='preview-ready')window.postMessage({type:'preview:set-props',props:${data}},'*')});setTimeout(()=>window.postMessage({type:'preview:set-props',props:${data}},'*'),100);</script></body>`);
  }
- for(const [from,to]of Object.entries(mapping))if(from.startsWith('/')||from.startsWith('http'))html=html.replaceAll(from,to);
+ // Recovered runtimes assemble image URLs at runtime. Their bridge already
+ // maps original URLs to embedded data; rewriting its object keys would erase
+ // that lookup and leave exported carousels requesting the original server.
+ if(!local.startsWith('/previews/recovered/'))for(const [from,to]of Object.entries(mapping))if(from.startsWith('/')||from.startsWith('http'))html=html.replaceAll(from,to);
  html=await embedMedia(html);
  html=html.replace(/new URL\(window.location.href\)\.searchParams\.get\((["'])theme\1\)/g,JSON.stringify(theme));
  return settings?addPlaygroundBridge(html,item.id,settings):html;
@@ -84,7 +87,7 @@ export async function componentArchive(item,payload,{name,theme='dark',config,se
   entries['preview.html']=entries['index.html'];entries['compat.js']=strToU8(await fetchText('/previews/recovered/compat.js'));
   entries['serve.mjs']=strToU8(`import http from 'node:http';import fs from 'node:fs';import path from 'node:path';import {fileURLToPath} from 'node:url';const root=path.dirname(fileURLToPath(import.meta.url));const types={'.js':'text/javascript','.css':'text/css','.html':'text/html','.json':'application/json','.svg':'image/svg+xml','.webp':'image/webp','.woff2':'font/woff2','.mp4':'video/mp4'};http.createServer((req,res)=>{try{const name=decodeURIComponent(new URL(req.url,'http://localhost').pathname);const file=path.resolve(root,'.'+(name==='/'?'/preview.html':name));if(!file.startsWith(root+path.sep))throw Error();res.setHeader('Content-Type',types[path.extname(file)]||'application/octet-stream');res.setHeader('Access-Control-Allow-Origin','*');const stream=fs.createReadStream(file);stream.on('error',()=>{res.statusCode=404;res.end('Not found')});stream.pipe(res);}catch{res.statusCode=404;res.end('Not found')}}).listen(Number(process.env.PORT)||4175,'127.0.0.1',()=>console.log('Abra http://127.0.0.1:'+(process.env.PORT||4175)));`);
  }else entries['preview.html']=strToU8(await standalonePreview(item,theme,config,settings));
- const mapping=await assetMapping(item.id),media=new Set(Object.values(mapping));
+ const mapping={...await assetMapping(item.id),...item.previewAssets},media=new Set(Object.values(mapping));
  const sourceText=[...(payload?.files||[]).map(file=>file.content||''),payload?.demoCode||''].join('\n');
  for(const match of sourceText.matchAll(/["'(](\/(?!\/)[^\s"'()<>`\\]+\.(?:png|jpe?g|webp|avif|svg|gif|mp4|webm|mp3|wav|ogg|glb|gltf|hdr|exr))/gi))media.add(mapping[match[1]]||match[1]);
  for(const url of media){if(typeof url!=='string'||!url.startsWith('/')||url.split('/').includes('..'))continue;const response=await fetch(url);if(response.ok)entries['public'+url.split('?')[0]]=new Uint8Array(await response.arrayBuffer());}
