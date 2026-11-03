@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {JSDOM} from 'jsdom';
 import * as compiler from 'esbuild';
-import {preparePreviewAssets,createPreviewAssetResponder} from '../src/preview-assets.js';
+import {preparePreviewAssets,createPreviewAssetResponder,addPreviewAssetClient} from '../src/preview-assets.js';
 
 test('protected classic scripts and styles load through the parent before entering the opaque sandbox',async()=>{
  const files={
@@ -37,4 +37,14 @@ test('asset messages require the current frame and cannot read APIs, other origi
  const data={type:'preview:asset',id:'demo',requestId:'1',url:'/assets/test.png'};
  for(const change of [{source:{}},{id:'other'},{url:'/api/auth/get-session'},{url:'https://other.example/assets/test.png'},{url:'/assets/%2e%2e%2fapi/auth/get-session'}])await responder({source:change.source||frame,data:{...data,...change}});
  assert.equal(requests.length,0);await responder({source:frame,data});assert.equal(requests.length,1);assert.equal(requests[0].options.credentials,'same-origin');assert.equal(replies[0].status,200);assert.deepEqual([...new Uint8Array(replies[0].bytes)],[1,2]);
+});
+
+test('relayed image sources remain decodable and are not overridden by unauthenticated responsive candidates',async()=>{
+ const html=addPreviewAssetClient('<html><head></head><body><img src="/previews/demo/main.webp" srcset="/missing-small.webp 600w, /previews/demo/main.webp 1800w"></body></html>','demo','https://app.example/previews/demo/index.html');
+ const dom=new JSDOM(html,{url:'https://app.example',runScripts:'dangerously',beforeParse(w){
+  w.URL.createObjectURL=()=> 'blob:null/verified-image';w.URL.revokeObjectURL=()=>{};
+  w.HTMLImageElement.prototype.decode=function(){return Promise.resolve(this.getAttribute('src'));};
+  w.postMessage=data=>{if(data.type==='preview:asset')queueMicrotask(()=>w.dispatchEvent(new w.MessageEvent('message',{source:w,data:{type:'preview:asset-result',id:'demo',requestId:data.requestId,status:200,mime:'image/webp',bytes:new w.Uint8Array([1,2]).buffer}})));};
+ }});
+ try{await new Promise(resolve=>dom.window.document.addEventListener('DOMContentLoaded',resolve,{once:true}));await new Promise(resolve=>setTimeout(resolve,0));const image=dom.window.document.querySelector('img');assert.equal(image.getAttribute('srcset'),null);const pending=new dom.window.Image();pending.src='/previews/demo/next.webp';assert.equal(await pending.decode(),'blob:null/verified-image');}finally{dom.window.close();}
 });
