@@ -11,7 +11,7 @@ export function cleanSettings(value={}){
 export function cleanComponentConfig(id,value={}){
  if(id!=='magic--particles')return undefined;
  value=value&&typeof value==='object'?value:{};
- return{quantity:Math.round(bounded(value.quantity??180,20,600,180)),ease:bounded(value.ease??60,10,120,60),size:bounded(value.size??.8,.2,3,.8),color:color(value.color)||'#b9f9ab',vx:bounded(value.vx??0,-1,1,0),vy:bounded(value.vy??0,-1,1,0)};
+ return{quantity:Math.round(bounded(value.quantity??180,20,600,180)),ease:bounded(value.ease??60,10,120,60),size:bounded(value.size??.8,.2,3,.8),color:color(value.color)||'#b79af5',vx:bounded(value.vx??0,-1,1,0),vy:bounded(value.vy??0,-1,1,0)};
 }
 export const newId=()=>crypto.randomUUID();
 export function newProject(title='Página sem título'){return{version:PROJECT_VERSION,id:newId(),title,theme:'dark',sections:[],updatedAt:new Date().toISOString()};}

@@ -2,11 +2,11 @@ import React,{useEffect,useState} from 'react';
 import {Music2,Waves,Shapes,Layers3,Camera,ArrowUpRight,ArrowLeft,Maximize2,Loader2} from 'lucide-react';
 import './tools.css';
 const tools=[
- {id:'sound-lab',title:'Laboratório de áudio',eyebrow:'SOM',description:'Crie sons, ajuste o timbre e exporte áudio ou código para o seu projeto.',icon:Music2,color:'#c7c0ff'},
- {id:'background-studio',title:'Estúdio de fundos',eyebrow:'MOVIMENTO',description:'Personalize fundos animados e exporte o resultado em código, imagem ou vídeo.',icon:Waves,color:'#b8e7a8'},
- {id:'texture-lab',title:'Laboratório de texturas',eyebrow:'IMAGEM',description:'Combine efeitos e camadas para transformar imagens em novas composições.',icon:Layers3,color:'#f2bb94'},
- {id:'shape-magic',title:'Estúdio de formas',eyebrow:'FORMAS',description:'Crie formas, materiais e composições com controles de luz e movimento.',icon:Shapes,color:'#a4d4f5'},
- {id:'center-stage',title:'Estúdio de apresentação',eyebrow:'APRESENTAÇÃO',description:'Monte cenas e apresentações para imagens, produtos e interfaces.',icon:Camera,color:'#edb6da'},
+ {id:'sound-lab',title:'Laboratório de áudio',eyebrow:'SOM',description:'Crie sons, ajuste o timbre e exporte áudio ou código para o seu projeto.',icon:Music2,color:'#c7b3f8'},
+ {id:'background-studio',title:'Estúdio de fundos',eyebrow:'MOVIMENTO',description:'Personalize fundos animados e exporte o resultado em código, imagem ou vídeo.',icon:Waves,color:'#b79af5'},
+ {id:'texture-lab',title:'Laboratório de texturas',eyebrow:'IMAGEM',description:'Combine efeitos e camadas para transformar imagens em novas composições.',icon:Layers3,color:'#cdb5e8'},
+ {id:'shape-magic',title:'Estúdio de formas',eyebrow:'FORMAS',description:'Crie formas, materiais e composições com controles de luz e movimento.',icon:Shapes,color:'#a496d6'},
+ {id:'center-stage',title:'Estúdio de apresentação',eyebrow:'APRESENTAÇÃO',description:'Monte cenas e apresentações para imagens, produtos e interfaces.',icon:Camera,color:'#d8bdf4'},
 ];
 export default function ToolsPage({path,search='',hash='',theme,navigate,canExport=true,onUpgrade}){
  const id=path.split('/')[2],tool=tools.find(t=>t.id===id);

@@ -1,4 +1,4 @@
-@import 'C:/Users/jorge/OneDrive/Documentos/ChatGPT/21st app novo/union-ui/node_modules/tailwindcss/index.css' source(none); @source './';
+@import 'C:/Users/Vini/Downloads/teste-plataforma/Um-so/union-ui/node_modules/tailwindcss/index.css' source(none); @source './';
 @source not '../public/r';
 @source not './ts-tailwind';
 @source not './tailwind/{Animations,Backgrounds,Micro,TextAnimations}';
