@@ -33,3 +33,8 @@ As demonstrações continuam sem `allow-same-origin`. Armazenamento indisponíve
 Algumas mídias externas originais e URLs montadas dinamicamente continuam dependentes de internet. Os downloads de componentes incorporam scripts, folhas e recursos locais explícitos; caminhos dinâmicos remanescentes de mídia apontam para a origem pública original. As landing pages são entregues com seu grafo de módulos e `serve.mjs`, evitando quebrar imports circulares ao tentar incorporá-los num único HTML. O README de cada ZIP explica a execução por HTTP local.
 
 Mosaik pode mostrar um aviso de dependência externa quando seu backend público falha. A demonstração visual permanece renderizada; isso não significa que o serviço de contas original foi restaurado. A auditoria registra esse estado separadamente de uma inicialização limpa.
+# Deployment integrity repair — 2026-11-03
+
+Six copied WOFF2 fonts under `previews/recovered/build/_next/static/immutable/media/` caused `IMMUTABLE_STATIC_HASH_MISMATCH`. A minimal preview containing only those fonts and an index reproduced the error (`dpl_ExxMDfAaPYKrezSHSsZ8fFVbKP4R`). The identical font bytes published successfully under `previews/recovered/assets/next/media/` (`dpl_3mo65wZN5pJNsCJQWH29wXKfSRRN`, READY).
+
+Move these recovered fonts into the ordinary static namespace, update the generated stylesheet, and preserve that mapping in `scripts/import-profitize.mjs`. All six SHA-256 digests remain unchanged. Original capture evidence retains the original source paths. The regression test checks that no copied immutable directory is published and that all stylesheet font URLs resolve to local WOFF2 files.
