@@ -21,15 +21,27 @@ export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientF
    const body=async()=>{const text=await request.text();if(new TextEncoder().encode(text).byteLength>1500000)throw fail(413,'Arquivo muito grande.');try{return JSON.parse(text);}catch{throw fail(400,'Dados inválidos.');}};
    const getUser=async()=>{const {data,error}=await client.auth.getUser();if(error?.status>=500)throw fail(503,'Não foi possível verificar sua sessão. Tente novamente.');return data?.user||null;};
    const requireUser=async()=>{const user=await getUser();if(!user)throw fail(401,'Entre na sua conta para continuar.','sign_in_required');return user;};
-   const check=result=>{if(result.error){const code=result.error.code;throw fail(result.error.status===429?429:400,code==='email_not_confirmed'?'Confirme seu e-mail antes de entrar.':code==='invalid_credentials'?'E-mail ou senha incorretos.':'Não foi possível concluir. Confira seus dados e tente novamente.',code);}return result.data;};
+   const check=result=>{if(result.error){const code=result.error.code;throw fail(result.error.status===429?429:400,result.error.status===429?'Aguarde um pouco antes de tentar novamente.':code==='email_not_confirmed'?'Confirme seu e-mail antes de entrar.':code==='otp_expired'?'Esse link expirou ou já foi usado. Solicite um novo link.':code==='invalid_credentials'?'E-mail ou senha incorretos.':'Não foi possível concluir. Confira seus dados e tente novamente.',code);}return result.data;};
    let response;
    if(route==='/api/health')response=json({ok:true,auth:'supabase',billingMode:'disabled'});
    else if(route==='/api/auth/get-session')response=json({user:profile(await getUser())});
    else if(route==='/api/access')response=json({canExport:Boolean(await getUser()),requiresSubscription:false,billingMode:'disabled',subscription:null});
    else if(route==='/api/auth/callback'&&request.method==='GET'){
     if(!url.searchParams.get('code'))throw fail(400,'Link inválido ou expirado. Solicite um novo link.');
-    check(await client.auth.exchangeCodeForSession(url.searchParams.get('code')));
+    const flowId=url.searchParams.get('sb_flow_id');
+    check(await client.auth.exchangeCodeForSession(url.searchParams.get('code'),flowId?{flowId}:undefined));
     response=new Response(null,{status:303,headers:{Location:origin+safeNext(url.searchParams.get('next'))}});
+   }else if(route==='/api/auth/verify-email'&&request.method==='POST'){
+    const input=await body();
+    if(typeof input.tokenHash!=='string'||!/^[A-Za-z0-9_=-]{20,1024}$/.test(input.tokenHash)||!['email','recovery'].includes(input.type))throw fail(400,'Link inválido ou expirado. Solicite um novo link.','confirmation_invalid');
+    const data=check(await client.auth.verifyOtp({token_hash:input.tokenHash,type:input.type}));
+    if(!data?.session||!data.user)throw fail(400,'Não foi possível validar o link. Solicite um novo link.','confirmation_invalid');
+    response=json({ok:true,next:input.type==='recovery'?'/account/reset':'/'});
+   }else if(route==='/api/auth/resend-confirmation'&&request.method==='POST'){
+    const input=await body();
+    if(typeof input.email!=='string'||input.email.length>254||!/^\S+@\S+\.\S+$/.test(input.email))throw fail(400,'Informe um e-mail válido.');
+    check(await client.auth.resend({type:'signup',email:input.email,options:{emailRedirectTo:origin+'/api/auth/callback'}}));
+    response=json({ok:true});
    }else if(route==='/api/auth/sign-up/email'&&request.method==='POST'){
     const input=await body();if(typeof input.name!=='string'||!input.name.trim()||input.name.length>100||typeof input.password!=='string'||input.password.length<12)throw fail(400,'Informe seu nome e uma senha com pelo menos 12 caracteres.');
     const data=check(await client.auth.signUp({email:input.email,password:input.password,options:{data:{name:input.name.trim()},emailRedirectTo:origin+'/api/auth/callback'}}));
@@ -61,7 +73,11 @@ export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientF
    }else if(route.startsWith('/api/billing/'))throw fail(503,'Assinaturas ainda não foram ativadas.','billing_disabled');
    else response=json({error:'Rota não encontrada.'},404);
    return finish(response);
-  }catch(error){return finish(json({error:error.status?error.message:'Não foi possível concluir. Tente novamente.',code:error.code},error.status||500));}
+  }catch(error){
+   // Never expose a raw callback error or reflect the one-time code into a page.
+   if(new URL(request.url).pathname==='/api/auth/callback'&&request.method==='GET'&&error.status!==503){const recovery=new URL(request.url).searchParams.get('next')==='/account/reset',missing=error.code==='pkce_code_verifier_not_found';return finish(new Response(null,{status:303,headers:{Location:origin+'/account?auth_error='+(recovery?'recovery_link':missing?'confirmation_browser':'confirmation_link'),'Referrer-Policy':'no-referrer'}}));}
+   return finish(json({error:error.status?error.message:'Não foi possível concluir. Tente novamente.',code:error.code},error.status||500));
+  }
  }
  async function isSignedIn(request){const {client}=clientFactory(request);const {data,error}=await client.auth.getUser();return !error&&Boolean(data?.user);}
  return{handle,isSignedIn,canReadCode:isSignedIn,origin,close:()=>{}};

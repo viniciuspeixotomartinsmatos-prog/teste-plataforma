@@ -6,14 +6,16 @@ export function supabaseConfig(env=process.env){
 export function requestClient(request,{env=process.env}={}){
  const {url,key}=supabaseConfig(env);
  if(!url||!key)throw Object.assign(Error('O acesso está em configuração. Tente novamente mais tarde.'),{status:503,code:'auth_setup_required'});
- const changed=[];
+ const jar=new Map(parseCookieHeader(request.headers.get('cookie')||'').map(cookie=>[cookie.name,cookie.value]));
+ const changed=new Map(),cacheHeaders=new Headers();
  const client=createServerClient(url,key,{
   cookieOptions:{httpOnly:true,secure:new URL(request.url).protocol==='https:',sameSite:'lax',path:'/'},
-  cookies:{getAll:()=>parseCookieHeader(request.headers.get('cookie')||''),setAll:cookies=>changed.push(...cookies)},
+  cookies:{getAll:()=>[...jar].map(([name,value])=>({name,value})),setAll:(cookies,headers={})=>{for(const cookie of cookies){changed.set(cookie.name,cookie);if(cookie.options?.maxAge===0)jar.delete(cookie.name);else jar.set(cookie.name,cookie.value);}for(const [name,value]of Object.entries(headers))cacheHeaders.set(name,value);}},
  });
  function finish(response){
   response.headers.set('Cache-Control','private, no-store');
-  for(const {name,value,options}of changed)response.headers.append('Set-Cookie',serializeCookieHeader(name,value,options));
+  for(const [name,value]of cacheHeaders)if(['cache-control','expires','pragma'].includes(name))response.headers.set(name,value);
+  for(const {name,value,options}of changed.values())response.headers.append('Set-Cookie',serializeCookieHeader(name,value,options));
   return response;
  }
  return{client,finish};
