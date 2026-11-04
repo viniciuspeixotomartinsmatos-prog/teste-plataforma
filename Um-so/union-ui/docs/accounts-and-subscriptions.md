@@ -12,6 +12,14 @@ Produção usa Supabase Auth, cookies HttpOnly/Secure/SameSite=Lax e validação
 
 O backend local Better Auth/SQLite continua disponível para desenvolvimento e testes isolados. Contas locais não são contas Supabase e não são migradas automaticamente. Dados privados em `var`, `.env.local` e `.vercel` nunca entram no Git.
 
+### Configuração aplicada em 2026-11-04
+
+O projeto Supabase `umso-accounts` (Free, São Paulo, referência `hoipjczqezeedflaiams`) foi criado pela integração nativa e conectado à Vercel. A tabela `workspaces` e sua política RLS foram aplicadas. Site URL e os dois retornos HTTPS acima foram salvos. As credenciais ficam exclusivamente nas variáveis privadas da Vercel e nos arquivos locais ignorados.
+
+Uma conta descartável confirmou login real, cookies HttpOnly/Secure, gravação/leitura de coleções e bloqueio de leitura por outra conta e por visitante. O navegador local confirmou entrada, retorno à ferramenta, persistência após recarregar e saída. Esses testes usam conta confirmada de QA; não comprovam entrega de e-mail. SMTP personalizado e verificação do domínio remetente continuam pendentes. Não é necessário comprar uma caixa postal, mas o provedor de envio precisa verificar o domínio escolhido.
+
+Na Vercel, as rotas aninhadas da API devem usar o entrypoint concreto `api/index.js` com rewrite `/api/:path*` para `/api`. O arquivo com nome de catch-all não resolveu `/api/auth/get-session` no deployment Vite; a falha foi confirmada por HTTP 404 em produção. Manter o teste de roteamento e verificar o endpoint publicado após qualquer alteração de deploy.
+
 ## Depois: assinatura Kiwify
 
 Criar produto recorrente na Kiwify com entrega na plataforma externa. Enviar o usuário autenticado ao checkout. Processar webhooks no servidor com autenticação do evento, idempotência e conferência de produto, comprador e assinatura. Registrar direito de acesso no banco. Renovação mantém acesso até a data paga; cancelamento impede renovação sem encurtar período já pago; reembolso/chargeback e inadimplência seguem regra definida. Nunca liberar assinatura apenas pelo redirecionamento do checkout. Nenhuma cobrança foi ativada nesta etapa.
