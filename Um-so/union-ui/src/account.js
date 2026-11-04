@@ -16,14 +16,15 @@ export function mergeWorkspace(base,local,remote){
  return{saved:mergeList(base.saved,local.saved,remote.saved),collections:[...merged.values()]};
 }
 export function useAccountWorkspace(){
- const [user,setUser]=useState(null),[sessionLoading,setSessionLoading]=useState(true),[sync,setSync]=useState('local'),[error,setError]=useState('');
- const [access,setAccess]=useState({canExport:true,requiresSubscription:false,billingMode:'unconfigured',subscription:null});
+ const [user,setUser]=useState(null),[sessionLoading,setSessionLoading]=useState(true),[sessionError,setSessionError]=useState(''),[sync,setSync]=useState('local'),[error,setError]=useState('');
+ const [access,setAccess]=useState({canExport:false,requiresSubscription:false,billingMode:'unconfigured',subscription:null});
  const guest=useRef({saved:safeStored('union:saved:v1',[]),collections:safeStored('union:collections:v1',[])});
  const [workspace,setWorkspace]=useState(guest.current),[workspaceOwner,setWorkspaceOwner]=useState(null);const current=useRef(workspace);current.current=workspace;
  const owner=useRef(null),base=useRef(empty),revision=useRef(0),ready=useRef(false),queue=useRef(Promise.resolve());
  const refreshAccess=useCallback(async()=>{try{const data=await api('/api/access');setAccess(data);return data;}catch{return null;}},[]);
- const refreshSession=useCallback(async()=>{try{const session=await api('/api/auth/get-session');setUser(session?.user||null);return session?.user||null;}catch{setUser(null);return null;}finally{setSessionLoading(false);}},[]);
+ const refreshSession=useCallback(async()=>{try{const session=await api('/api/auth/get-session');setSessionError('');setUser(session?.user||null);return session?.user||null;}catch(failure){setUser(null);setSessionError(failure.status===503?'O acesso está em configuração. Tente novamente mais tarde.':'Não foi possível verificar sua sessão. Confira sua conexão e tente novamente.');return null;}finally{setSessionLoading(false);}},[]);
  useEffect(()=>{refreshSession();refreshAccess();},[refreshSession,refreshAccess]);
+ useEffect(()=>{const check=()=>{if(document.visibilityState!=='hidden')refreshSession();};window.addEventListener('focus',check);document.addEventListener('visibilitychange',check);const timer=setInterval(check,60000);return()=>{window.removeEventListener('focus',check);document.removeEventListener('visibilitychange',check);clearInterval(timer);};},[refreshSession]);
  useEffect(()=>{
   let active=true;ready.current=false;owner.current=user?.id||null;setError('');
   if(!user){setWorkspace(guest.current);setWorkspaceOwner(null);base.current=empty;revision.current=0;setSync('local');return;}
@@ -54,7 +55,7 @@ export function useAccountWorkspace(){
  },[workspace,user?.id,workspaceOwner]);
  const setSaved=useCallback(update=>setWorkspace(previous=>({...previous,saved:typeof update==='function'?update(previous.saved):update})),[]);
  const setCollections=useCallback(update=>setWorkspace(previous=>({...previous,collections:typeof update==='function'?update(previous.collections):update})),[]);
- const authenticate=useCallback(async(mode,fields)=>{await api(mode==='signup'?'/api/auth/sign-up/email':'/api/auth/sign-in/email',{method:'POST',body:fields});await refreshSession();await refreshAccess();},[refreshSession,refreshAccess]);
+ const authenticate=useCallback(async(mode,fields)=>{const result=await api(mode==='signup'?'/api/auth/sign-up/email':'/api/auth/sign-in/email',{method:'POST',body:{...fields,...(mode==='signup'?{callbackURL:window.location.origin+'/account'}:{})}});const currentUser=await refreshSession();await refreshAccess();if(!currentUser&&mode==='login')throw new Error('Não foi possível confirmar sua sessão. Tente novamente.');return{verificationRequired:!currentUser||result.verificationRequired};},[refreshSession,refreshAccess]);
  const signOut=useCallback(async()=>{await api('/api/auth/sign-out',{method:'POST',body:{}});owner.current=null;ready.current=false;setUser(null);setWorkspace(guest.current);await refreshAccess();},[refreshAccess]);
- return{user,sessionLoading,saved:workspace.saved,collections:workspace.collections,setSaved,setCollections,authenticate,signOut,refreshSession,refreshAccess,access,sync,error};
+ return{user,sessionLoading,sessionError,saved:workspace.saved,collections:workspace.collections,setSaved,setCollections,authenticate,signOut,refreshSession,refreshAccess,access,sync,error};
 }

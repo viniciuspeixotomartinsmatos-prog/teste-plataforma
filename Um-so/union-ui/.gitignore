@@ -8,3 +8,5 @@ tests/.app-test-bundle.mjs
 var/
 
 !.env.example
+
+.vercel/

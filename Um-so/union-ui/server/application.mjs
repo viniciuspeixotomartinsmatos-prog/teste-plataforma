@@ -6,6 +6,8 @@ import {betterAuth} from 'better-auth';
 import {getMigrations} from 'better-auth/db/migration';
 import Stripe from 'stripe';
 import nodemailer from 'nodemailer';
+import {createSupabaseApplication} from './supabase-app.mjs';
+import {supabaseConfig} from './supabase-client.mjs';
 
 export const PLANS=[
  {id:'monthly',name:'Mensal',amount:8000,currency:'brl',months:1},
@@ -21,6 +23,7 @@ function cleanWorkspace(value){
 }
 
 export async function createApplication(options={}){
+ if(!options.database&&supabaseConfig().url)return createSupabaseApplication(options);
  const directory=path.resolve(options.directory||'var');await fs.mkdir(directory,{recursive:true});
  const production=options.production??process.env.NODE_ENV==='production';
  const origin=options.origin||process.env.APP_ORIGIN||'http://127.0.0.1:4173';
@@ -66,7 +69,7 @@ export async function createApplication(options={}){
  function access(user){
   const subscriptions=user?db.prepare('SELECT * FROM subscription WHERE user_id=?').all(user.id):[];
   const active=subscriptions.find(s=>['active','trialing'].includes(s.status)&&(!s.period_end||s.period_end>Date.now()/1000));
-  return{canExport:!requireSubscription||Boolean(active),subscription:active||subscriptions[0]||null,billingMode:mode,requiresSubscription:requireSubscription};
+  return{canExport:Boolean(user)&&(!requireSubscription||Boolean(active)),subscription:active||subscriptions[0]||null,billingMode:mode,requiresSubscription:requireSubscription};
  }
  async function readJSON(request){const text=await request.text();if(Buffer.byteLength(text)>1500000)throw fail(413,'Arquivo muito grande.');try{return JSON.parse(text);}catch{throw fail(400,'Dados inválidos.');}}
  async function webhook(request){
@@ -133,7 +136,8 @@ export async function createApplication(options={}){
    return json({error:'Rota não encontrada.'},404);
   }catch(error){if(error.status)return json({error:error.message,code:error.code},error.status);console.error('Application request failed:',error.name,error.code||'internal_error');return json({error:'Não foi possível concluir. Tente novamente.'},500);}
  }
- async function canReadCode(request){if(!requireSubscription)return true;const current=await session(request);return access(current?.user).canExport;}
+ async function canReadCode(request){const current=await session(request);return access(current?.user).canExport;}
+ async function isSignedIn(request){return Boolean((await session(request))?.user);}
  await auth.$context;
- return{handle,auth,db,canReadCode,origin,close:()=>db.close()};
+ return{handle,auth,db,canReadCode,isSignedIn,origin,close:()=>db.close()};
 }

@@ -6,6 +6,7 @@ import {fileURLToPath} from 'node:url';
 import {pipeline} from 'node:stream/promises';
 import {createApplication} from './application.mjs';
 import {nodeRequest,nodeResponse} from './application-plugin.mjs';
+import {protectedPath,signInResponse} from './access-policy.mjs';
 const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp','.jpg':'image/jpeg','.jpeg':'image/jpeg','.woff':'font/woff','.woff2':'font/woff2','.mp4':'video/mp4','.webm':'video/webm','.mp3':'audio/mpeg','.wav':'audio/wav','.ogg':'audio/ogg','.wasm':'application/wasm','.zip':'application/zip'};
 export async function createServer(options={}){
  const root=path.resolve(options.root||'dist/client'),app=await createApplication(options);
@@ -19,6 +20,7 @@ export async function createServer(options={}){
    if(pathname.startsWith('/api/'))return await nodeResponse(await app.handle(await nodeRequest(req,app.origin)),res);
    if(!['GET','HEAD'].includes(req.method))throw Object.assign(Error(),{status:405});
    if(pathname.split('/').some(p=>p.startsWith('.'))||/\.(sqlite|toml|log|pem)(?:-|$|\.)/i.test(pathname))throw Object.assign(Error(),{status:404});
+   if(protectedPath(pathname)&&!await app.isSignedIn(await nodeRequest(req,app.origin)))return await nodeResponse(signInResponse(await nodeRequest(req,app.origin)),res);
    if((pathname.startsWith('/code/')||pathname.startsWith('/tools-runtime/'))&&!await app.canReadCode(await nodeRequest(req,app.origin)))return await nodeResponse(new Response(JSON.stringify({error:'Assinatura necessária.',code:'subscription_required'}),{status:403,headers:{'Content-Type':'application/json','Cache-Control':'no-store'}}),res);
    let target=path.resolve(root,'.'+pathname);
    if(target!==root&&!target.startsWith(root+path.sep))throw Object.assign(Error(),{status:404});
@@ -29,7 +31,7 @@ export async function createServer(options={}){
    }
    if(/^\/(assets|previews)\//.test(pathname))res.setHeader('Access-Control-Allow-Origin','*');
    const ext=path.extname(target).toLowerCase();res.setHeader('Content-Type',types[ext]||'application/octet-stream');
-   const gated=pathname.startsWith('/code/')||pathname.startsWith('/tools-runtime/');
+   const gated=protectedPath(pathname);
    res.setHeader('Cache-Control',gated?'private, no-store':ext==='.html'?'no-cache':'public, max-age=3600');
    let start=0,end=stat.size-1;
    if(req.headers.range){const range=/^bytes=(\d*)-(\d*)$/.exec(req.headers.range);if(!range)throw Object.assign(Error(),{status:416});start=range[1]?Number(range[1]):Math.max(0,stat.size-Number(range[2]));end=range[1]&&range[2]?Math.min(Number(range[2]),end):end;if(start>end||start>=stat.size)throw Object.assign(Error(),{status:416});res.statusCode=206;res.setHeader('Content-Range',`bytes ${start}-${end}/${stat.size}`);}

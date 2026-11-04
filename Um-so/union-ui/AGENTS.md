@@ -10,6 +10,8 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 ## Product decisions
 
+- On 2026-11-04 the user required authentication for all platform use and chose Supabase for production accounts and persistence. Account/reset screens and boot assets stay public; catalog data, previews, code, studios and builder require a verified session. Supabase production routes must fail closed when unconfigured. Local isolated tests retain Better Auth/SQLite. Kiwify is the chosen future subscription provider; do not activate Stripe. A private contacts spreadsheet and marketing authorization are a later stage, not permission to upload existing users to advertising platforms.
+
 - On 2026-11-03 the user replaced the green product identity with a refined amethyst palette. Use dark accent `#B79AF5`, light accent `#6D3FD1`, purple-neutral surfaces and matching header/footer logo and favicon. Keep product navigation, buttons, statuses, account panels and studio chrome coherent; original catalog demonstrations and user-customized artwork keep their own colors. Continue synchronizing with `origin/jorge` before every project prompt and pushing verified changes afterward.
 
 - The user requested a new application merging 21st, Aceternity UI, Magic UI, React Bits, Kokonut UI, shadcnblocks, Motion Primitives, Tailark and Animate UI.
