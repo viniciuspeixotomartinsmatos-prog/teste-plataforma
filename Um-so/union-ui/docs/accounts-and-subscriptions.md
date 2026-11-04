@@ -28,6 +28,16 @@ O remetente foi configurado via Resend Free, conforme verificação abaixo. Não
 
 ## Depois: assinatura Kiwify
 
+Valores definidos pelo usuário em 2026-11-04, em reais, pelo período completo:
+
+| Plano | Período de acesso | Valor total |
+| --- | --- | --- |
+| Mensal | 1 mês | R$ 85,00 |
+| Trimestral | 3 meses | R$ 165,00 |
+| Anual | 12 meses | R$ 550,00 |
+
+Renovação automática dos planos ainda depende de definição do usuário. Registrar os valores não ativa checkout, assinatura ou cobrança. Não tratar R$ 165,00 e R$ 550,00 como valores mensais nem prometer parcelamento sem configuração confirmada na Kiwify.
+
 Criar produto recorrente na Kiwify com entrega na plataforma externa. Enviar o usuário autenticado ao checkout. Processar webhooks no servidor com autenticação do evento, idempotência e conferência de produto, comprador e assinatura. Registrar direito de acesso no banco. Renovação mantém acesso até a data paga; cancelamento impede renovação sem encurtar período já pago; reembolso/chargeback e inadimplência seguem regra definida. Nunca liberar assinatura apenas pelo redirecionamento do checkout. Nenhuma cobrança foi ativada nesta etapa.
 
 Referências oficiais: https://ajuda.kiwify.com.br/pt-br/article/como-criar-um-produto-de-assinatura-9crmrj/ e https://ajuda.kiwify.com.br/pt-br/article/como-funcionam-os-webhooks-2ydtgl/.

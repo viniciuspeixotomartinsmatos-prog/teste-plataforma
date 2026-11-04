@@ -10,6 +10,8 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 ## Product decisions
 
+- On 2026-11-04 the user set Kiwify plan totals in BRL: 1 month R$ 85.00, 3 months R$ 165.00, 12 months R$ 550.00. These are full-period totals, not installment amounts. Automatic renewal remains undecided. Keep payments disabled until the integration is explicitly configured and verified; do not activate Stripe.
+
 - On 2026-11-04 the user selected `nitidohig.com.br` as the domain for the platform's email setup. Proposed transactional sender: `acesso@nitidohig.com.br`. Its authoritative DNS is at HostGator and existing MX records use Titan. Preserve existing website and mail records while verifying the sender; keep the current working APP_ORIGIN until any website-domain cutover is explicitly scoped and its DNS/HTTPS are verified. SMTP credentials and sender verification remain required before claiming public signup/recovery email delivery works.
 
 - On 2026-11-04 the user required authentication for all platform use and chose Supabase for production accounts and persistence. Account/reset screens and boot assets stay public; catalog data, previews, code, studios and builder require a verified session. Supabase production routes must fail closed when unconfigured. Local isolated tests retain Better Auth/SQLite. Kiwify is the chosen future subscription provider; do not activate Stripe. A private contacts spreadsheet and marketing authorization are a later stage, not permission to upload existing users to advertising platforms.
