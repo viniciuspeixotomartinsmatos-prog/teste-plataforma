@@ -39,3 +39,7 @@ Supabase é o cadastro principal; Google Sheets recebe uma cópia privada, por a
 Campos propostos: ID, nome, sobrenome, e-mail, telefone opcional com DDI, país, data de cadastro, origem/UTMs, plano, situação da assinatura e registro da autorização de marketing (escolha, data, versão do aviso, revogação). Cidade/estado/CEP só se houver necessidade definida. Não exportar senhas, hashes de senha, tokens ou dados de pagamento. Não exigir dados demográficos desnecessários para acesso. A planilha de público deve conter apenas contatos elegíveis ao uso informado e permitir remoção após revogação.
 
 Antes de configurar a exportação, escolher a conta Google e a planilha privada, apresentar o aviso de privacidade e confirmar os campos e a finalidade. Não há integração de planilha nem envio ao Meta nesta etapa.
+
+## Correção de origem pública em 2026-11-04
+
+O endereço público verificado da plataforma é `https://teste-plataforma-delta.vercel.app`. A variável `APP_ORIGIN` de produção estava apontando para o alias gerado de equipe, causando HTTP 403 com “Origem não autorizada.” em requisições legítimas do endereço público. A configuração da Vercel foi corrigida para o domínio público existente, sem alterar DNS nem a proteção de origem. A alteração só entra em vigor em uma nova publicação. O Site URL e os callbacks do Supabase também devem usar esse mesmo domínio; não declarar o cadastro e a entrega de e-mail validados antes da verificação real.
