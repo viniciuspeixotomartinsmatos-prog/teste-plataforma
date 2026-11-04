@@ -16,7 +16,7 @@ O backend local Better Auth/SQLite continua disponível para desenvolvimento e t
 
 O projeto Supabase `umso-accounts` (Free, São Paulo, referência `hoipjczqezeedflaiams`) foi criado pela integração nativa e conectado à Vercel. A tabela `workspaces` e sua política RLS foram aplicadas. Site URL e os dois retornos HTTPS acima foram salvos. As credenciais ficam exclusivamente nas variáveis privadas da Vercel e nos arquivos locais ignorados.
 
-Uma conta descartável confirmou login real, cookies HttpOnly/Secure, gravação/leitura de coleções e bloqueio de leitura por outra conta e por visitante. O navegador local confirmou entrada, retorno à ferramenta, persistência após recarregar e saída. Esses testes usam conta confirmada de QA; não comprovam entrega de e-mail. SMTP personalizado e verificação do domínio remetente continuam pendentes. Não é necessário comprar uma caixa postal, mas o provedor de envio precisa verificar o domínio escolhido.
+Uma conta descartável confirmou login real, cookies HttpOnly/Secure, gravação/leitura de coleções e bloqueio de leitura por outra conta e por visitante. O navegador local confirmou entrada, retorno à ferramenta, persistência após recarregar e saída. Essa primeira rodada usou conta confirmada de QA. A validação posterior de SMTP e links está registrada abaixo; entrega em caixa postal real continua sem comprovação.
 
 Na Vercel, as rotas aninhadas da API devem usar o entrypoint concreto `api/index.js` com rewrite `/api/:path*` para `/api`. O arquivo com nome de catch-all não resolveu `/api/auth/get-session` no deployment Vite; a falha foi confirmada por HTTP 404 em produção. Manter o teste de roteamento e verificar o endpoint publicado após qualquer alteração de deploy.
 
@@ -24,7 +24,7 @@ Na Vercel, as rotas aninhadas da API devem usar o entrypoint concreto `api/index
 
 O usuário escolheu `nitidohig.com.br`. Remetente proposto para confirmações e recuperação: `nitido <acesso@nitidohig.com.br>`. A consulta DNS identificou os nameservers `nspro78.hostgator.com.br` e `nspro79.hostgator.com.br`, com MX `mx1.titan.email` e `mx2.titan.email` (prioridades 10 e 20). Isso identifica os serviços DNS/MX, mas não comprova que exista uma caixa postal ou licença disponível.
 
-O próximo passo depende do acesso ao painel HostGator para verificar o serviço de e-mail e configurar o remetente/SMTP. Não contratar licença ou plano pago sem autorização. Não remover MX, não substituir SPF existente e não apontar o site para a Vercel como efeito colateral de configurar o remetente. Usar somente os registros exatos emitidos pelo provedor escolhido. O APP_ORIGIN continua no endereço Vercel funcional enquanto não houver uma mudança de domínio web com DNS e HTTPS confirmados.
+O remetente foi configurado via Resend Free, conforme verificação abaixo. Não contratar licença ou plano pago sem autorização. Não remover MX, não substituir SPF existente e não apontar o site para a Vercel como efeito colateral de configurar o remetente. Usar somente os registros exatos emitidos pelo provedor escolhido. O APP_ORIGIN continua no endereço Vercel funcional enquanto não houver uma mudança de domínio web com DNS e HTTPS confirmados.
 
 ## Depois: assinatura Kiwify
 
@@ -48,7 +48,7 @@ O endereço público verificado da plataforma é `https://teste-plataforma-delta
 
 O acesso autenticado confirmou o Plano Turbo ativo e a oferta Titan Básico gratuita. Antes da ativação, a HostGator informa que a escolha é irreversível e que os próximos domínios adicionados à hospedagem usarão Titan Grátis automaticamente. Essa alteração global não foi confirmada. O cPanel disponível não apresentou a ferramenta de criação de contas de e-mail. Nenhum plano pago foi contratado e os registros MX/SPF existentes foram preservados.
 
-Foi preparada a integração nativa Resend, plano Free, domínio `nitidohig.com.br`, região `sa-east-1`, para envio transacional separado. A criação ficou bloqueada pelo aceite obrigatório dos termos do fornecedor; ainda não há recurso Resend provisionado, SMTP ativo ou entrega de e-mail comprovada. O próximo passo depende da decisão do usuário na página de aceite da integração.
+Após autorização expressa do usuário, os termos do Resend foram aceitos e a integração nativa foi provisionada no plano Free, domínio `nitidohig.com.br`, região `sa-east-1`, para envio transacional separado. Não foi ativado Titan nem contratado plano pago.
 
 O Site URL do Supabase foi salvo como `https://teste-plataforma-delta.vercel.app`, com callbacks exatos de confirmação e recuperação nesse domínio. Os dois callbacks do alias anterior foram preservados durante a transição. A tela do Supabase confirmou os quatro retornos e o novo Site URL.
 ## Confirmação por e-mail e retorno PKCE
@@ -59,4 +59,20 @@ Os modelos revisáveis estão em `supabase/templates/confirmation.html` e `supab
 
 Não desabilitar confirmação de e-mail nem usar uma chave administrativa para contornar esse fluxo. Os cookies continuam HttpOnly/Secure/SameSite=Lax e os retornos de recuperação são internos. O usuário confirmou recebimento de um e-mail, mas isso não comprova entrega pública para qualquer destinatário.
 
-Nesta implementação, a atualização dos modelos no painel ainda depende do acesso ao projeto pela integração Vercel, na conta administradora `novonormaladm@gmail.com`. A sessão Supabase pessoal atualmente disponível não vê esse projeto. Os arquivos locais dos modelos não alteram automaticamente o serviço hospedado.
+Os dois modelos foram aplicados e salvos no painel Supabase pela sessão administrativa da integração Vercel. Os e-mails emitidos no teste de produção confirmaram os assuntos em português e os links com o domínio canônico, `token_hash` e o tipo correto. Os arquivos locais não alteram automaticamente o serviço hospedado; futuras mudanças também precisam ser aplicadas no painel.
+
+## SMTP e fluxo de e-mail verificados em 2026-11-04
+
+O Resend retornou domínio `verified` e todos os registros exigidos `verified`: TXT `resend._domainkey`, CNAME `rsend` para `rsend-sae1.forge.rmta.net` e CNAME `send` para `send.forge.rmta.net`, TTL 300. Foram adicionados somente esses três registros à zona HostGator. Site, MX Titan e SPF/DMARC existentes foram preservados.
+
+SMTP personalizado foi habilitado e salvo no Supabase: host `smtp.resend.com`, porta TLS 465, usuário `resend`, nome `nitido` e remetente `acesso@nitidohig.com.br`. A senha é a chave privada da integração, nunca registrada neste documento ou no Git. O limite inicial de autenticação permaneceu em 30 e-mails/hora.
+
+Foi testado por HTTP no endereço público `https://teste-plataforma-delta.vercel.app`, com uma conta descartável e destinatário simulado `delivered+...@resend.dev`:
+
+- Cadastro respondeu 200 com confirmação obrigatória; tentativa de login antes da confirmação foi bloqueada.
+- E-mail de confirmação apresentou o modelo salvo e evento Resend `delivered`; seu token foi validado pelo endpoint publicado, com sessão real e cookies HttpOnly/Secure/SameSite=Lax. Reuso do token foi rejeitado.
+- Login com senha funcionou. Recuperação enviou outro e-mail com evento `delivered`, modelo salvo e tipo `recovery`; validação encaminhou para `/account/reset`.
+- Troca de senha respondeu 200; senha antiga foi rejeitada e senha nova autenticou. Saída respondeu 200 e acesso anônimo a `/api/workspace` respondeu 401.
+- A conta descartável e os arquivos privados com suas credenciais foram removidos após os testes.
+
+Os 13 testes locais de autenticação, interface de conta, confirmação e roteamento Vercel passaram. Os destinatários `resend.dev` simulam entrega: esses resultados comprovam integração SMTP e fluxo dos links, mas não chegada à caixa de entrada de Gmail, Outlook ou outro destinatário real. Essa verificação de recebimento permanece pendente. Nenhuma assinatura, cobrança ou exportação de contatos foi ativada.
