@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-04T13:32:06.209169+00:00",
+  "checkedAt": "2026-11-04T13:49:59.327235+00:00",
   "paymentsEnabled": false,
   "sources": [
     {
@@ -11885,28 +11885,15 @@
         "url": "https://raw.githubusercontent.com/magicuidesign/magicui/main/apps/www/public/r/registry.json",
         "sha256": "e88637f0c334a3dac7f02f5089a962ef8a040a484079ed3d417b15fbcc71270b",
         "observedItems": 260,
-        "retainedItems": 250,
-        "addedNames": [
-          "dither-field",
-          "dither-field-brand-demo",
-          "dither-field-card-demo",
-          "dither-field-colors-demo",
-          "dither-field-demo",
-          "dither-field-image-demo",
-          "dither-field-monochrome-demo",
-          "dither-field-patterns-demo",
-          "dither-field-pointer-demo",
-          "dither-field-text-demo"
-        ],
+        "retainedItems": 260,
+        "addedNames": [],
         "changedMetadataNames": [],
         "scope": "Registry metadata comparison; identical metadata does not establish identical source implementations."
       },
       "scope": "Public route discovery only; sitemap omissions, authenticated content, source-code changes and new functionality require separate checks.",
       "status": "inventory-observed",
-      "integratedRouteCount": 78,
-      "unmatchedRoutes": [
-        "/docs/components/dither-field"
-      ],
+      "integratedRouteCount": 79,
+      "unmatchedRoutes": [],
       "addedSincePreviousCheck": [],
       "previousCheckAvailable": true,
       "publishedByThisCheck": 0
@@ -17059,7 +17046,7 @@
         {
           "url": "https://tailark.com/sitemap.xml",
           "bytes": 92962,
-          "sha256": "ca0446bbf37e19e2f3a42210891e1328c57783a8a0456e8b1e0abe6ce25b3fef"
+          "sha256": "e945d4f556158d568dabed110399e698c4e0b7afa4b9e8c9edf2d74536ec7579"
         }
       ],
       "limitations": [
@@ -17253,8 +17240,8 @@
       "requests": [
         {
           "url": "https://profitize.com.br/build/templates",
-          "bytes": 335974,
-          "sha256": "126d8c5df177d2b50a0f0e2f09728d6092252a94786e772a6ccbbc059f7f14c0"
+          "bytes": 339444,
+          "sha256": "eaac22b9fce791e882485ad46d341d2035f26dff5bf7811913ec77d27338298e"
         }
       ],
       "limitations": [
@@ -17319,6 +17306,7 @@
         "/build/landing-pages/clareira",
         "/build/landing-pages/classe-g",
         "/build/landing-pages/clausula",
+        "/build/landing-pages/colina",
         "/build/landing-pages/corda",
         "/build/landing-pages/fermento",
         "/build/landing-pages/gaivota",
@@ -17356,12 +17344,8 @@
       ],
       "scope": "Public route discovery only; sitemap omissions, authenticated content, source-code changes and new functionality require separate checks.",
       "status": "inventory-observed",
-      "integratedRouteCount": 91,
-      "unmatchedRoutes": [
-        "/build/landing-pages/argila",
-        "/build/landing-pages/lavri",
-        "/build/landing-pages/skeleton"
-      ],
+      "integratedRouteCount": 95,
+      "unmatchedRoutes": [],
       "addedSincePreviousCheck": [],
       "previousCheckAvailable": true,
       "publishedByThisCheck": 0

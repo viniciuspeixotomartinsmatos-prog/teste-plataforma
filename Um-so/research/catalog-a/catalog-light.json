@@ -22544,5 +22544,71 @@
         "codeFile": "code/aceternity/world-map-examples.json"
       }
     ]
+  },
+  {
+    "id": "magic--dither-field",
+    "sourceId": "magic",
+    "name": "Dither Field",
+    "slug": "dither-field",
+    "description": "An animated WebGL2 background of Bayer-dithered square dots. The dots follow a light pattern, an image or a video, take one color or a three-stop ramp, and brighten under the pointer.",
+    "category": "backgrounds",
+    "kind": "component",
+    "url": "https://magicui.design/docs/components/dither-field",
+    "image": "",
+    "install": "npx shadcn@latest add \"https://magicui.design/r/dither-field.json\"",
+    "tags": [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "WebGL2",
+      "Dither"
+    ],
+    "availability": "code",
+    "framework": "react",
+    "license": "MIT",
+    "dependencies": [
+      "clsx",
+      "tailwind-merge"
+    ],
+    "examples": [
+      {
+        "name": "dither-field-demo",
+        "codeFile": "code/magic/dither-field-demo.json"
+      },
+      {
+        "name": "dither-field-brand-demo",
+        "codeFile": "code/magic/dither-field-brand-demo.json"
+      },
+      {
+        "name": "dither-field-card-demo",
+        "codeFile": "code/magic/dither-field-card-demo.json"
+      },
+      {
+        "name": "dither-field-colors-demo",
+        "codeFile": "code/magic/dither-field-colors-demo.json"
+      },
+      {
+        "name": "dither-field-image-demo",
+        "codeFile": "code/magic/dither-field-image-demo.json"
+      },
+      {
+        "name": "dither-field-monochrome-demo",
+        "codeFile": "code/magic/dither-field-monochrome-demo.json"
+      },
+      {
+        "name": "dither-field-patterns-demo",
+        "codeFile": "code/magic/dither-field-patterns-demo.json"
+      },
+      {
+        "name": "dither-field-pointer-demo",
+        "codeFile": "code/magic/dither-field-pointer-demo.json"
+      },
+      {
+        "name": "dither-field-text-demo",
+        "codeFile": "code/magic/dither-field-text-demo.json"
+      }
+    ],
+    "updated": "2026-11-04",
+    "codeFile": "code/magic/dither-field.json"
   }
 ]

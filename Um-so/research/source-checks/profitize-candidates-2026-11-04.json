@@ -191,5 +191,69 @@
     ],
     "published": false,
     "validation": "Public metadata and HTTP media headers only; no browser playback validation."
+  },
+  {
+    "slug": "colina",
+    "url": "https://profitize.com.br/build/landing-pages/colina",
+    "status": 200,
+    "item": {
+      "id": "54de1436-4ae2-49f2-b675-483568159f41",
+      "slug": "colina",
+      "title": "Colina",
+      "type": "landing_page",
+      "kind": {
+        "id": "landing_page",
+        "label": "Landing page",
+        "plural": "Landing pages",
+        "segment": "landing-pages",
+        "sortOrder": 0
+      },
+      "niche": "psicologia",
+      "description": "Terapia online: uma paisagem em camadas se monta e, no scroll, os vídeos da sessão sobem de trás do morro e viram o app.",
+      "tags": [
+        "psicologia",
+        "terapia",
+        "saude",
+        "paisagem",
+        "camadas",
+        "vidro-fosco",
+        "transicoes",
+        "intro",
+        "serifa",
+        "claro",
+        "gsap",
+        "mobile"
+      ],
+      "isNew": true,
+      "free": false,
+      "tone": "claro",
+      "industry": "saude",
+      "preview": {
+        "poster": "/build/media/54de1436-4ae2-49f2-b675-483568159f41/poster-53155197.webp",
+        "video": "/build/media/54de1436-4ae2-49f2-b675-483568159f41/previa-card-379cf4bf.mp4",
+        "mode": "cover"
+      },
+      "aspect": "960/551",
+      "publishedAt": "2026-11-04T13:35:18.812218+00:00",
+      "updatedAt": "2026-11-04T13:35:18.812218+00:00"
+    },
+    "media": [
+      {
+        "kind": "poster",
+        "url": "/build/media/54de1436-4ae2-49f2-b675-483568159f41/poster-53155197.webp",
+        "status": 200,
+        "type": "image/webp",
+        "bytes": "75408"
+      },
+      {
+        "kind": "video",
+        "url": "/build/media/54de1436-4ae2-49f2-b675-483568159f41/previa-card-379cf4bf.mp4",
+        "status": 200,
+        "type": "video/mp4",
+        "bytes": "1599276"
+      }
+    ],
+    "published": false,
+    "validation": "Public metadata and HTTP media headers only; no browser playback validation."
   }
 ]

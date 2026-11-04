@@ -1,9 +1,9 @@
 {
   "capturedAt": "2026-10-29T18:26:20.873Z",
-  "generatedAt": "2026-11-03T16:25:22.929Z",
-  "observed": 91,
-  "published": 91,
-  "newEntries": 75,
+  "generatedAt": "2026-11-04T13:48:33.991Z",
+  "observed": 95,
+  "published": 95,
+  "newEntries": 79,
   "consolidated": [
     {
       "recoveredId": "recovered--animated-mosaic-portrait",
@@ -103,10 +103,10 @@
     }
   ],
   "executable": 77,
-  "recorded": 14,
+  "recorded": 18,
   "skipped": [],
   "failed": [],
-  "downloadedAssets": 147,
+  "downloadedAssets": 155,
   "downloadedBytes": 0,
   "items": [
     {
@@ -744,6 +744,34 @@
       "name": "Shari",
       "mode": "recorded-video",
       "preview": "/previews/recovered/shari.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--argila",
+      "name": "argila",
+      "mode": "recorded-video",
+      "preview": "/previews/recovered/argila.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--lavri",
+      "name": "Lavri",
+      "mode": "recorded-video",
+      "preview": "/previews/recovered/lavri.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--skeleton",
+      "name": "Skeleton",
+      "mode": "recorded-video",
+      "preview": "/previews/recovered/skeleton.html",
+      "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--colina",
+      "name": "Colina",
+      "mode": "recorded-video",
+      "preview": "/previews/recovered/colina.html",
       "promptOrigin": "reconstructed"
     }
   ],

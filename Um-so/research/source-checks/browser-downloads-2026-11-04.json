@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-11-04T13:51:44.546Z",
+  "downloads": [
+    {
+      "name": "argila-061ded.zip",
+      "bytes": 3381699,
+      "sha256": "6601511702e3e5f7ead6acc2f3e4ed8020c0c54d8b1f5b29456b5bc28ca1c98e",
+      "files": 19
+    },
+    {
+      "name": "dither-field-3a1140.zip",
+      "bytes": 338896,
+      "sha256": "7efcdeb6101cf4d4112cc72936b69c01b10d644024ae778640dd28fa76fcf171",
+      "files": 20
+    }
+  ]
+}

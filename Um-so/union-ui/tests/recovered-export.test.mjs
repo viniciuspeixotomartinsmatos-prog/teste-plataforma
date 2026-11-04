@@ -37,3 +37,22 @@ test('new interactive component exports embed dynamically assembled poster and d
  globalThis.fetch=async url=>{try{if(typeof url!=='string'||!url.startsWith('/'))return new Response('',{status:404});const bytes=await fs.readFile(path.join('public',url.split('?')[0])),ext=path.extname(url).slice(1);return new Response(bytes,{headers:{'content-type':{webp:'image/webp',png:'image/png',jpg:'image/jpeg',js:'text/javascript',css:'text/css',woff2:'font/woff2',json:'application/json'}[ext]||'application/octet-stream'}});}catch{return new Response('',{status:404});}};
  try{const catalog=JSON.parse(await fs.readFile('public/data/catalog-live.json','utf8'));for(const slug of ['sushi-conveyor-menu','glassy-coverflow-carousel']){const item=catalog.find(r=>r.slug===slug&&r.sourceId==='recovered');assert.ok(Object.keys(item.previewAssets).length>=6);const html=await standalonePreview(item);for(const url of Object.keys(item.previewAssets))assert.ok(html.includes(JSON.stringify(url)+':"data:image/webp;base64,'),url+' must map to embedded pixels');assert.ok(!/<script[^>]+src="\/previews\/recovered/.test(html));}}finally{globalThis.fetch=original;}
 });
+
+test('daily release downloads embed original video bytes and retain reusable Dither source dependencies',async()=>{
+ const fs=await import('node:fs/promises'),path=await import('node:path'),original=globalThis.fetch;
+ globalThis.fetch=async url=>{try{if(typeof url!=='string'||!url.startsWith('/'))return new Response('',{status:404});const ext=path.extname(url),bytes=await fs.readFile(path.join('public',url));return new Response(bytes,{headers:{'content-type':{'.mp4':'video/mp4','.webp':'image/webp','.json':'application/json','.css':'text/css','.js':'text/javascript','.woff2':'font/woff2'}[ext]||'text/plain'}});}catch{return new Response('',{status:404});}};
+ try{
+  const catalog=JSON.parse(await fs.readFile('public/data/catalog-live.json','utf8'));
+  for(const slug of ['argila','lavri','skeleton','colina']){
+   const item=catalog.find(item=>item.sourceId==='recovered'&&item.slug===slug),payload=JSON.parse(await fs.readFile('public'+item.codePath,'utf8'));
+   const files=unzipSync(await componentArchive(item,payload)),html=strFromU8(files['preview.html']);
+   const embedded=html.match(/<video[^>]+src="data:video\/mp4;base64,([^"]+)"/)?.[1];assert.ok(embedded,slug);
+   const local=(await fs.readFile('public'+item.previewPath,'utf8')).match(/<video[^>]+src="([^"]+)"/)[1];
+   assert.deepEqual(Buffer.from(embedded,'base64'),await fs.readFile('public'+local),slug);
+   assert.ok(strFromU8(files['src/RECONSTRUCTION.md']).includes('Não é o prompt original'));
+  }
+  const item=catalog.find(item=>item.id==='magic--dither-field'),payload=JSON.parse(await fs.readFile('public'+item.codePath,'utf8'));
+  const files=unzipSync(await componentArchive(item,payload));assert.ok(files['src/lib/utils.ts']);assert.ok(files['src/registry/magicui/dither-field.tsx']);
+  assert.ok(strFromU8(files['README.md']).includes('clsx, tailwind-merge'));assert.ok(!/<script[^>]+src="\/previews\/runtime\//.test(strFromU8(files['preview.html'])));
+ }finally{globalThis.fetch=original;}
+});

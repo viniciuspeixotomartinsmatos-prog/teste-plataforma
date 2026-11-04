@@ -113,6 +113,20 @@
       "bytes": 1437,
       "sha256": "41665b98ef25b1aca0c97307debf46a149693953c32b90bfda54f94cfc7aa121",
       "published": false
+    },
+    {
+      "url": "https://profitize.com.br/build/media/54de1436-4ae2-49f2-b675-483568159f41/poster-53155197.webp",
+      "file": "pending/profitize/colina/poster-53155197.webp",
+      "bytes": 75408,
+      "sha256": "531551970049a1f713a7245b9766478676a6e7251d5e587bac0a94ca4fdc058c",
+      "published": false
+    },
+    {
+      "url": "https://profitize.com.br/build/media/54de1436-4ae2-49f2-b675-483568159f41/previa-card-379cf4bf.mp4",
+      "file": "pending/profitize/colina/previa-card-379cf4bf.mp4",
+      "bytes": 1599276,
+      "sha256": "379cf4bf90232e81f4ca7c217504cccd22fa4fc8f1bb536efbf8245bedf684fe",
+      "published": false
     }
   ]
 }
