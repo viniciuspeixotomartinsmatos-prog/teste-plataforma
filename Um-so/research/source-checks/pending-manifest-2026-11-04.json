@@ -1,0 +1,118 @@
+{
+  "capturedAt": "2026-11-04T13:32:05.899Z",
+  "validation": "Retained public files only. Browser playback and executable demo validation remain pending.",
+  "files": [
+    {
+      "url": "https://profitize.com.br/build/media/98f5a774-f9ed-4201-9c33-ad704aed4dc4/poster-8c0ecc8f.webp",
+      "file": "pending/profitize/argila/poster-8c0ecc8f.webp",
+      "bytes": 34512,
+      "sha256": "8c0ecc8f3163bd33fedbc633998a4755ee10db6d3164e724564f3bdb358c9e1a",
+      "published": false
+    },
+    {
+      "url": "https://profitize.com.br/build/media/98f5a774-f9ed-4201-9c33-ad704aed4dc4/previa-card-cb8754ce.mp4",
+      "file": "pending/profitize/argila/previa-card-cb8754ce.mp4",
+      "bytes": 1626658,
+      "sha256": "cb8754ceccfe9a79a73fb55c59451e79ee03f1f59bc65d86fd416074e930c6b5",
+      "published": false
+    },
+    {
+      "url": "https://profitize.com.br/build/media/3a3abdfb-d4fe-46c1-a0e6-ff5d3b03a61c/poster-d772380b.webp",
+      "file": "pending/profitize/lavri/poster-d772380b.webp",
+      "bytes": 47616,
+      "sha256": "d772380bc6e53c838fd343e96ed56893bda402f7ff106575dab279294a8677f8",
+      "published": false
+    },
+    {
+      "url": "https://profitize.com.br/build/media/3a3abdfb-d4fe-46c1-a0e6-ff5d3b03a61c/previa-card-49f4b95e.mp4",
+      "file": "pending/profitize/lavri/previa-card-49f4b95e.mp4",
+      "bytes": 1931643,
+      "sha256": "49f4b95e74d33310188fde3f0f285d4a5cb2c93fda4d42785db8d6751ab5f812",
+      "published": false
+    },
+    {
+      "url": "https://profitize.com.br/build/media/c2d77a9f-5c89-4800-afc8-78f679b78cd0/poster-9a6404da.webp",
+      "file": "pending/profitize/skeleton/poster-9a6404da.webp",
+      "bytes": 41418,
+      "sha256": "9a6404da012143ecb8c94bc953432a7e9705b343b4deaed9c394f90e3f5114fe",
+      "published": false
+    },
+    {
+      "url": "https://profitize.com.br/build/media/c2d77a9f-5c89-4800-afc8-78f679b78cd0/previa-card-35d9351d.mp4",
+      "file": "pending/profitize/skeleton/previa-card-35d9351d.mp4",
+      "bytes": 3003715,
+      "sha256": "35d9351de268223cb45df16bfa532c3589a829f9924422f03002abe0f9c79c72",
+      "published": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/magicuidesign/magicui/main/apps/www/public/r/dither-field.json",
+      "file": "pending/magic/dither-field.json",
+      "bytes": 28503,
+      "sha256": "7dd3200eb63cb61e1114e05ccf3e11d8b63b9708d52a8c441e7bd7dd4d039534",
+      "published": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/magicuidesign/magicui/main/apps/www/public/r/dither-field-brand-demo.json",
+      "file": "pending/magic/dither-field-brand-demo.json",
+      "bytes": 1339,
+      "sha256": "19558da92467d7b6e90a68739de26f90fb30e4c193f7d3d2d6afa2980782f5e6",
+      "published": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/magicuidesign/magicui/main/apps/www/public/r/dither-field-card-demo.json",
+      "file": "pending/magic/dither-field-card-demo.json",
+      "bytes": 1942,
+      "sha256": "f7539f9f512711f50ad17786fb53b94bdb029de40249b3392295ae8a6dd74948",
+      "published": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/magicuidesign/magicui/main/apps/www/public/r/dither-field-colors-demo.json",
+      "file": "pending/magic/dither-field-colors-demo.json",
+      "bytes": 1942,
+      "sha256": "37b5364482228cae45e261edb3651c0da7765ab1355849e2467651f349942a13",
+      "published": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/magicuidesign/magicui/main/apps/www/public/r/dither-field-demo.json",
+      "file": "pending/magic/dither-field-demo.json",
+      "bytes": 2049,
+      "sha256": "f092b352eb6c8aba5e0cf5a1fbe2f871322f6f89dfe3c6d608e8a03bf0b01c10",
+      "published": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/magicuidesign/magicui/main/apps/www/public/r/dither-field-image-demo.json",
+      "file": "pending/magic/dither-field-image-demo.json",
+      "bytes": 905,
+      "sha256": "6740fe4bfc8356ca8bab4643eb805e1f72a588ac3b13eb56bd3f0501f0f8dc73",
+      "published": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/magicuidesign/magicui/main/apps/www/public/r/dither-field-monochrome-demo.json",
+      "file": "pending/magic/dither-field-monochrome-demo.json",
+      "bytes": 1277,
+      "sha256": "33854433bf2ed784b919c4a9a4189c0bcc7158a5588d755fab36faef0f73137b",
+      "published": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/magicuidesign/magicui/main/apps/www/public/r/dither-field-patterns-demo.json",
+      "file": "pending/magic/dither-field-patterns-demo.json",
+      "bytes": 1210,
+      "sha256": "1015089d1278c40e73a417b3a259b57cf969ecf7076181daf4f518ae289a88e4",
+      "published": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/magicuidesign/magicui/main/apps/www/public/r/dither-field-pointer-demo.json",
+      "file": "pending/magic/dither-field-pointer-demo.json",
+      "bytes": 1062,
+      "sha256": "a91c57e1c8d88908f9b324fc7bfb1031bfeb9abb626500a300f25eb677389c30",
+      "published": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/magicuidesign/magicui/main/apps/www/public/r/dither-field-text-demo.json",
+      "file": "pending/magic/dither-field-text-demo.json",
+      "bytes": 1437,
+      "sha256": "41665b98ef25b1aca0c97307debf46a149693953c32b90bfda54f94cfc7aa121",
+      "published": false
+    }
+  ]
+}

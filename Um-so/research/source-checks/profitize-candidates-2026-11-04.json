@@ -1,0 +1,195 @@
+[
+  {
+    "slug": "argila",
+    "url": "https://profitize.com.br/build/landing-pages/argila",
+    "status": 200,
+    "item": {
+      "id": "98f5a774-f9ed-4201-9c33-ad704aed4dc4",
+      "slug": "argila",
+      "title": "argila",
+      "type": "landing_page",
+      "kind": {
+        "id": "landing_page",
+        "label": "Landing page",
+        "plural": "Landing pages",
+        "segment": "landing-pages",
+        "sortOrder": 0
+      },
+      "niche": "moda",
+      "description": "Loja de streetwear de moletom pesado: díptico de fotos na capa, catálogo com o modelo recortado e troca de página em quadrados.",
+      "tags": [
+        "moda",
+        "streetwear",
+        "loja",
+        "claro",
+        "minimalista",
+        "fotos",
+        "e-commerce",
+        "multipagina",
+        "transicao-de-pagina",
+        "instagram",
+        "gsap",
+        "lenis"
+      ],
+      "isNew": true,
+      "free": false,
+      "tone": "escuro",
+      "industry": "moda",
+      "preview": {
+        "poster": "/build/media/98f5a774-f9ed-4201-9c33-ad704aed4dc4/poster-8c0ecc8f.webp",
+        "video": "/build/media/98f5a774-f9ed-4201-9c33-ad704aed4dc4/previa-card-cb8754ce.mp4",
+        "mode": "cover"
+      },
+      "aspect": "16/10",
+      "publishedAt": "2026-11-04T03:25:13.120378+00:00",
+      "updatedAt": "2026-11-04T03:33:16.86316+00:00"
+    },
+    "media": [
+      {
+        "kind": "poster",
+        "url": "/build/media/98f5a774-f9ed-4201-9c33-ad704aed4dc4/poster-8c0ecc8f.webp",
+        "status": 200,
+        "type": "image/webp",
+        "bytes": "34512"
+      },
+      {
+        "kind": "video",
+        "url": "/build/media/98f5a774-f9ed-4201-9c33-ad704aed4dc4/previa-card-cb8754ce.mp4",
+        "status": 200,
+        "type": "video/mp4",
+        "bytes": "1626658"
+      }
+    ],
+    "published": false,
+    "validation": "Public metadata and HTTP media headers only; no browser playback validation."
+  },
+  {
+    "slug": "lavri",
+    "url": "https://profitize.com.br/build/landing-pages/lavri",
+    "status": 200,
+    "item": {
+      "id": "3a3abdfb-d4fe-46c1-a0e6-ff5d3b03a61c",
+      "slug": "lavri",
+      "title": "Lavri",
+      "type": "landing_page",
+      "kind": {
+        "id": "landing_page",
+        "label": "Landing page",
+        "plural": "Landing pages",
+        "segment": "landing-pages",
+        "sortOrder": 0
+      },
+      "niche": "fintech",
+      "description": "Software financeiro para empresas: uma pedra bruta vira cromo sob o cursor e, na rolagem, um fio de luz a lapida inteira.",
+      "tags": [
+        "fintech",
+        "gestao-financeira",
+        "saas",
+        "canvas",
+        "cursor",
+        "scroll",
+        "pin",
+        "cromo",
+        "intro",
+        "pixelado",
+        "escuro",
+        "lenis",
+        "mobile"
+      ],
+      "isNew": true,
+      "free": false,
+      "tone": "escuro",
+      "industry": "fintech",
+      "preview": {
+        "poster": "/build/media/3a3abdfb-d4fe-46c1-a0e6-ff5d3b03a61c/poster-d772380b.webp",
+        "video": "/build/media/3a3abdfb-d4fe-46c1-a0e6-ff5d3b03a61c/previa-card-49f4b95e.mp4",
+        "mode": "cover"
+      },
+      "aspect": "50/29",
+      "publishedAt": "2026-11-04T03:27:11.81877+00:00",
+      "updatedAt": "2026-11-04T03:33:10.247968+00:00"
+    },
+    "media": [
+      {
+        "kind": "poster",
+        "url": "/build/media/3a3abdfb-d4fe-46c1-a0e6-ff5d3b03a61c/poster-d772380b.webp",
+        "status": 200,
+        "type": "image/webp",
+        "bytes": "47616"
+      },
+      {
+        "kind": "video",
+        "url": "/build/media/3a3abdfb-d4fe-46c1-a0e6-ff5d3b03a61c/previa-card-49f4b95e.mp4",
+        "status": 200,
+        "type": "video/mp4",
+        "bytes": "1931643"
+      }
+    ],
+    "published": false,
+    "validation": "Public metadata and HTTP media headers only; no browser playback validation."
+  },
+  {
+    "slug": "skeleton",
+    "url": "https://profitize.com.br/build/landing-pages/skeleton",
+    "status": 200,
+    "item": {
+      "id": "c2d77a9f-5c89-4800-afc8-78f679b78cd0",
+      "slug": "skeleton",
+      "title": "Skeleton",
+      "type": "landing_page",
+      "kind": {
+        "id": "landing_page",
+        "label": "Landing page",
+        "plural": "Landing pages",
+        "segment": "landing-pages",
+        "sortOrder": 0
+      },
+      "niche": "relojoaria",
+      "description": "Relojoaria de luxo: o relógio cai girando e para no hero; rolando, a câmera entra no movimento e ele mergulha na água.",
+      "tags": [
+        "relogio",
+        "relojoaria",
+        "joalheria",
+        "luxo",
+        "produto",
+        "video",
+        "scroll",
+        "canvas",
+        "lenis",
+        "claro",
+        "multipagina",
+        "mobile"
+      ],
+      "isNew": true,
+      "free": false,
+      "tone": "claro",
+      "industry": "moda",
+      "preview": {
+        "poster": "/build/media/c2d77a9f-5c89-4800-afc8-78f679b78cd0/poster-9a6404da.webp",
+        "video": "/build/media/c2d77a9f-5c89-4800-afc8-78f679b78cd0/previa-card-35d9351d.mp4",
+        "mode": "cover"
+      },
+      "aspect": "40/23",
+      "publishedAt": "2026-11-04T04:20:06.263444+00:00",
+      "updatedAt": "2026-11-04T12:15:56.189424+00:00"
+    },
+    "media": [
+      {
+        "kind": "poster",
+        "url": "/build/media/c2d77a9f-5c89-4800-afc8-78f679b78cd0/poster-9a6404da.webp",
+        "status": 200,
+        "type": "image/webp",
+        "bytes": "41418"
+      },
+      {
+        "kind": "video",
+        "url": "/build/media/c2d77a9f-5c89-4800-afc8-78f679b78cd0/previa-card-35d9351d.mp4",
+        "status": 200,
+        "type": "video/mp4",
+        "bytes": "3003715"
+      }
+    ],
+    "published": false,
+    "validation": "Public metadata and HTTP media headers only; no browser playback validation."
+  }
+]
