@@ -20,6 +20,12 @@ Uma conta descartável confirmou login real, cookies HttpOnly/Secure, gravação
 
 Na Vercel, as rotas aninhadas da API devem usar o entrypoint concreto `api/index.js` com rewrite `/api/:path*` para `/api`. O arquivo com nome de catch-all não resolveu `/api/auth/get-session` no deployment Vite; a falha foi confirmada por HTTP 404 em produção. Manter o teste de roteamento e verificar o endpoint publicado após qualquer alteração de deploy.
 
+### Domínio remetente escolhido
+
+O usuário escolheu `nitidohig.com.br`. Remetente proposto para confirmações e recuperação: `Um só. <acesso@nitidohig.com.br>`. A consulta DNS identificou os nameservers `nspro78.hostgator.com.br` e `nspro79.hostgator.com.br`, com MX `mx1.titan.email` e `mx2.titan.email` (prioridades 10 e 20). Isso identifica os serviços DNS/MX, mas não comprova que exista uma caixa postal ou licença disponível.
+
+O próximo passo depende do acesso ao painel HostGator para verificar o serviço de e-mail e configurar o remetente/SMTP. Não contratar licença ou plano pago sem autorização. Não remover MX, não substituir SPF existente e não apontar o site para a Vercel como efeito colateral de configurar o remetente. Usar somente os registros exatos emitidos pelo provedor escolhido. O APP_ORIGIN continua no endereço Vercel funcional enquanto não houver uma mudança de domínio web com DNS e HTTPS confirmados.
+
 ## Depois: assinatura Kiwify
 
 Criar produto recorrente na Kiwify com entrega na plataforma externa. Enviar o usuário autenticado ao checkout. Processar webhooks no servidor com autenticação do evento, idempotência e conferência de produto, comprador e assinatura. Registrar direito de acesso no banco. Renovação mantém acesso até a data paga; cancelamento impede renovação sem encurtar período já pago; reembolso/chargeback e inadimplência seguem regra definida. Nunca liberar assinatura apenas pelo redirecionamento do checkout. Nenhuma cobrança foi ativada nesta etapa.
