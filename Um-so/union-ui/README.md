@@ -1,6 +1,6 @@
-# Um só.
+# nitido
 
-Aplicação local com catálogo único, busca, prévias interativas, código, favoritos, coleções e comparação. A identidade é provisória até a definição do nome final. A interface não organiza o produto por bibliotecas nem promove as fontes; a procedência e os avisos técnicos ficam nos arquivos de pesquisa e exportação.
+Aplicação local com catálogo único, busca, prévias interativas, código, favoritos, coleções e comparação. A identidade do produto é nitido. A interface não organiza o produto por bibliotecas nem promove as fontes; a procedência e os avisos técnicos ficam nos arquivos de pesquisa e exportação.
 
 ## Uso e comportamento
 
@@ -49,7 +49,7 @@ Os importadores dependem dos arquivos em ../research. Preserve esse diretório, 
 
 ## Ferramentas e contas
 
-A rota /tools reúne áudio, fundos, texturas, formas e apresentações. Os motores e seus recursos são compilados para public/tools-runtime; não são embeds dos sites originais. Os arquivos das ferramentas podem ser copiados ou baixados; o áudio oferece WAV, MP3 e OGG conforme suporte do navegador, e os estúdios gráficos oferecem os formatos do respectivo editor. Compartilhamentos retornam às rotas do Um só. e preservam os parâmetros.
+A rota /tools reúne áudio, fundos, texturas, formas e apresentações. Os motores e seus recursos são compilados para public/tools-runtime; não são embeds dos sites originais. Os arquivos das ferramentas podem ser copiados ou baixados; o áudio oferece WAV, MP3 e OGG conforme suporte do navegador, e os estúdios gráficos oferecem os formatos do respectivo editor. Compartilhamentos retornam às rotas do nitido e preservam os parâmetros.
 
 Para reproduzir a aquisição e compilação: node scripts/import-tools.mjs e npm run build:tools. Esses comandos dependem do cache em ../research. As fontes originais são mantidas; as adaptações do produto ficam em server/tool-adapters. O build normal utiliza os estúdios já compilados. npm run test:tools cobre síntese de áudio, WAV, SVG, estilos e o fluxo de exportação de código no JSDOM, sem validar GPU ou saída de áudio de um navegador.
 

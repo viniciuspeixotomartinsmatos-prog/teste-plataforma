@@ -45,6 +45,6 @@ export async function createServer(options={}){
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
  const {server}=await createServer();const port=Number(process.env.PORT||4173);
- server.listen(port,process.env.HOST||'0.0.0.0',()=>console.log(`Um só. disponível na porta ${port}.`));
+ server.listen(port,process.env.HOST||'0.0.0.0',()=>console.log(`nitido disponível na porta ${port}.`));
  for(const signal of ['SIGINT','SIGTERM'])process.once(signal,()=>server.close(()=>process.exit(0)));
 }

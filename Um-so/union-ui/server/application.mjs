@@ -37,14 +37,14 @@ export async function createApplication(options={}){
  const transport=smtp?nodemailer.createTransport(smtp):null;
  const mail=async({to,subject,text})=>{
   if(options.sendMail)return options.sendMail({to,subject,text});
-  if(transport)return transport.sendMail({from:process.env.MAIL_FROM||'Um só. <conta@localhost>',to,subject,text});
+  if(transport)return transport.sendMail({from:process.env.MAIL_FROM||'nitido <conta@localhost>',to,subject,text});
   const outbox=path.join(directory,'mail');await fs.mkdir(outbox,{recursive:true});await fs.writeFile(path.join(outbox,randomBytes(12).toString('hex')+'.json'),JSON.stringify({to,subject,text}),{mode:0o600});
  };
  const authOptions={
   database:db,secret,baseURL:origin,basePath:'/api/auth',trustedOrigins:[origin],
   advanced:{ipAddress:{ipAddressHeaders:['x-umso-client-ip']}},
-  emailAndPassword:{enabled:true,minPasswordLength:12,requireEmailVerification:production,revokeSessionsOnPasswordReset:true,sendResetPassword:async({user,url})=>mail({to:user.email,subject:'Redefinir sua senha — Um só.',text:'Use este link para redefinir sua senha: '+url})},
-  emailVerification:{sendOnSignUp:production,autoSignInAfterVerification:true,sendVerificationEmail:async({user,url})=>mail({to:user.email,subject:'Confirme seu e-mail — Um só.',text:'Confirme sua conta: '+url})},
+  emailAndPassword:{enabled:true,minPasswordLength:12,requireEmailVerification:production,revokeSessionsOnPasswordReset:true,sendResetPassword:async({user,url})=>mail({to:user.email,subject:'Redefinir sua senha — nitido',text:'Use este link para redefinir sua senha: '+url})},
+  emailVerification:{sendOnSignUp:production,autoSignInAfterVerification:true,sendVerificationEmail:async({user,url})=>mail({to:user.email,subject:'Confirme seu e-mail — nitido',text:'Confirme sua conta: '+url})},
   user:{deleteUser:{enabled:true,beforeDelete:async user=>{const active=db.prepare("SELECT id FROM subscription WHERE user_id=? AND status IN ('active','trialing','past_due','unpaid')").all(user.id);if(active.length&&!stripe)throw Error('Não foi possível cancelar sua assinatura. Tente novamente.');for(const subscription of active)await stripe.subscriptions.cancel(subscription.id);}}},
   session:{expiresIn:60*60*24*30,updateAge:60*60*24},
   rateLimit:{enabled:true,storage:'database',window:60,max:60,customRules:{'/sign-in/email':{window:60,max:8},'/sign-up/email':{window:60,max:5},'/request-password-reset':{window:60,max:3}}},
