@@ -22,7 +22,7 @@ Na Vercel, as rotas aninhadas da API devem usar o entrypoint concreto `api/index
 
 ### Domínio remetente escolhido
 
-O usuário escolheu `nitidohig.com.br`. Remetente proposto para confirmações e recuperação: `Um só. <acesso@nitidohig.com.br>`. A consulta DNS identificou os nameservers `nspro78.hostgator.com.br` e `nspro79.hostgator.com.br`, com MX `mx1.titan.email` e `mx2.titan.email` (prioridades 10 e 20). Isso identifica os serviços DNS/MX, mas não comprova que exista uma caixa postal ou licença disponível.
+O usuário escolheu `nitidohig.com.br`. Remetente proposto para confirmações e recuperação: `nitido <acesso@nitidohig.com.br>`. A consulta DNS identificou os nameservers `nspro78.hostgator.com.br` e `nspro79.hostgator.com.br`, com MX `mx1.titan.email` e `mx2.titan.email` (prioridades 10 e 20). Isso identifica os serviços DNS/MX, mas não comprova que exista uma caixa postal ou licença disponível.
 
 O próximo passo depende do acesso ao painel HostGator para verificar o serviço de e-mail e configurar o remetente/SMTP. Não contratar licença ou plano pago sem autorização. Não remover MX, não substituir SPF existente e não apontar o site para a Vercel como efeito colateral de configurar o remetente. Usar somente os registros exatos emitidos pelo provedor escolhido. O APP_ORIGIN continua no endereço Vercel funcional enquanto não houver uma mudança de domínio web com DNS e HTTPS confirmados.
 
@@ -43,3 +43,11 @@ Antes de configurar a exportação, escolher a conta Google e a planilha privada
 ## Correção de origem pública em 2026-11-04
 
 O endereço público verificado da plataforma é `https://teste-plataforma-delta.vercel.app`. A variável `APP_ORIGIN` de produção estava apontando para o alias gerado de equipe, causando HTTP 403 com “Origem não autorizada.” em requisições legítimas do endereço público. A configuração da Vercel foi corrigida para o domínio público existente, sem alterar DNS nem a proteção de origem. A alteração só entra em vigor em uma nova publicação. O Site URL e os callbacks do Supabase também devem usar esse mesmo domínio; não declarar o cadastro e a entrega de e-mail validados antes da verificação real.
+
+## Verificação do painel HostGator em 2026-11-04
+
+O acesso autenticado confirmou o Plano Turbo ativo e a oferta Titan Básico gratuita. Antes da ativação, a HostGator informa que a escolha é irreversível e que os próximos domínios adicionados à hospedagem usarão Titan Grátis automaticamente. Essa alteração global não foi confirmada. O cPanel disponível não apresentou a ferramenta de criação de contas de e-mail. Nenhum plano pago foi contratado e os registros MX/SPF existentes foram preservados.
+
+Foi preparada a integração nativa Resend, plano Free, domínio `nitidohig.com.br`, região `sa-east-1`, para envio transacional separado. A criação ficou bloqueada pelo aceite obrigatório dos termos do fornecedor; ainda não há recurso Resend provisionado, SMTP ativo ou entrega de e-mail comprovada. O próximo passo depende da decisão do usuário na página de aceite da integração.
+
+O Site URL do Supabase foi salvo como `https://teste-plataforma-delta.vercel.app`, com callbacks exatos de confirmação e recuperação nesse domínio. Os dois callbacks do alias anterior foram preservados durante a transição. A tela do Supabase confirmou os quatro retornos e o novo Site URL.
