@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import {ArrowRight,Check,Loader2,LogOut,Cloud,Mail,UserRound,Eye,EyeOff} from 'lucide-react';
+import {ArrowRight,Check,Loader2,LogOut,Cloud,Mail,UserRound,Eye,EyeOff,Layers3,LockKeyhole,KeyRound} from 'lucide-react';
 import AuthIllustration from './AuthIllustration.jsx';
 import {api} from './account.js';
 import {safeNext} from './auth-policy.js';
@@ -30,22 +30,22 @@ export default function AccountPage({account,navigate,notify,path='/account',sea
  return <main className="account-page auth-layout auth-fuse" id="main">
   <section className="auth-form-side" aria-labelledby="auth-title">
    <div className="auth-card" key={mode}>
-    <header className="auth-form-heading"><h1 id="auth-title">{title}</h1><p>{subtitle}</p></header>
+    <header className="auth-form-heading"><div className="auth-emblem" aria-hidden="true"><Layers3/></div><h1 id="auth-title">{title}</h1><p>{subtitle}</p></header>
     <form onSubmit={submit} aria-busy={busy}>
      {mode==='confirm'&&<p className="auth-confirm-copy">Confirme para continuar no nitido. Este link será usado uma única vez.</p>}
      {mode==='signup'&&<label htmlFor="auth-name">Nome completo<input id="auth-name" value={name} onChange={e=>setName(e.target.value)} placeholder="Como podemos chamar você?" autoComplete="name" required maxLength={100} disabled={busy}/></label>}
-     {!['reset','confirm'].includes(mode)&&<label htmlFor="auth-email">E-mail<input id="auth-email" type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="voce@exemplo.com" autoComplete="email" required disabled={busy}/></label>}
+     {!['reset','confirm'].includes(mode)&&<label htmlFor="auth-email">E-mail<span className="auth-email-input"><Mail aria-hidden="true"/><input id="auth-email" type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="voce@exemplo.com" autoComplete="email" required disabled={busy}/></span></label>}
      {!['forgot','resend','confirm'].includes(mode)&&<div className="auth-password-field">
       <label htmlFor="auth-password">Senha</label>
-      <div className="auth-password-input"><input id="auth-password" type={showPassword?'text':'password'} value={password} onChange={e=>setPassword(e.target.value)} placeholder={mode==='login'?'Sua senha':'Crie uma senha segura'} autoComplete={mode==='login'?'current-password':'new-password'} minLength={mode==='login'?undefined:12} aria-describedby={mode==='login'?undefined:'auth-password-hint'} required disabled={busy}/><button type="button" className="auth-password-toggle" aria-label={showPassword?'Ocultar senha':'Mostrar senha'} aria-pressed={showPassword} onClick={()=>setShowPassword(value=>!value)} disabled={busy}>{showPassword?<EyeOff size={16}/>:<Eye size={16}/>}</button></div>
+      <div className="auth-password-input"><LockKeyhole className="auth-field-icon" aria-hidden="true"/><input id="auth-password" type={showPassword?'text':'password'} value={password} onChange={e=>setPassword(e.target.value)} placeholder={mode==='login'?'Sua senha':'Crie uma senha segura'} autoComplete={mode==='login'?'current-password':'new-password'} minLength={mode==='login'?undefined:12} aria-describedby={mode==='login'?undefined:'auth-password-hint'} required disabled={busy}/><button type="button" className="auth-password-toggle" aria-label={showPassword?'Ocultar senha':'Mostrar senha'} aria-pressed={showPassword} onClick={()=>setShowPassword(value=>!value)} disabled={busy}>{showPassword?<EyeOff size={16}/>:<Eye size={16}/>}</button></div>
       {mode!=='login'&&<small id="auth-password-hint">Use pelo menos 12 caracteres.</small>}
      </div>}
      {(error||account.sessionError)&&<p className="form-error" role="alert">{error||account.sessionError}</p>}
      {message&&<p className="form-success" role="status"><Mail size={16}/>{message}</p>}
-     <button className="button auth-submit" disabled={busy}>{busy&&<Loader2 className="spin" size={15}/>} {mode==='confirm'?'Confirmar e continuar':mode==='resend'?'Reenviar e-mail':mode==='signup'?'Criar conta':mode==='forgot'?'Enviar instruções':mode==='reset'?'Salvar nova senha':'Entrar'}</button>
+     <button className="button auth-submit" disabled={busy}>{busy&&<Loader2 className="spin" size={15}/>} {mode==='confirm'?'Confirmar e continuar':mode==='resend'?'Reenviar e-mail':mode==='signup'?'Criar conta':mode==='forgot'?'Enviar instruções':mode==='reset'?'Salvar nova senha':'Entrar'}{!busy&&<ArrowRight aria-hidden="true"/>}</button>
     </form>
     <div className="auth-links">
-     {mode==='login'?<><p>Ainda não tem uma conta? <button type="button" onClick={()=>changeMode('signup')} disabled={busy}>Criar uma conta</button></p><div className="auth-support-links"><button type="button" onClick={()=>changeMode('forgot')} disabled={busy}>Esqueci minha senha</button><span aria-hidden="true">·</span><button type="button" onClick={()=>changeMode('resend')} disabled={busy}>Reenviar confirmação</button></div></>:<p>{mode==='signup'?'Já tem uma conta? ':''}<button type="button" onClick={()=>changeMode('login')} disabled={busy}>{mode==='signup'?'Entrar':'Voltar para entrar'}</button></p>}
+     {mode==='login'?<><p>Ainda não tem uma conta? <button type="button" onClick={()=>changeMode('signup')} disabled={busy}>Criar uma conta</button></p><div className="auth-support-links"><button type="button" onClick={()=>changeMode('forgot')} disabled={busy}><KeyRound aria-hidden="true"/>Esqueci minha senha</button><span aria-hidden="true" className="auth-support-divider"/><button type="button" onClick={()=>changeMode('resend')} disabled={busy}><Mail aria-hidden="true"/>Reenviar confirmação</button></div></>:<p>{mode==='signup'?'Já tem uma conta? ':''}<button type="button" onClick={()=>changeMode('login')} disabled={busy}>{mode==='signup'?'Entrar':'Voltar para entrar'}</button></p>}
     </div>
    </div>
   </section>

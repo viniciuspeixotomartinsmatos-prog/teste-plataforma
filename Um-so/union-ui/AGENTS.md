@@ -10,6 +10,8 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 ## Product decisions
 
+- On 2026-11-05 the user superseded the compact Auth Fuse layout with the supplied cosmic nitido login mock (`codex-clipboard-5c8e8262-4420-411c-8c8f-86f0f5e1639b.png`). Match its full-bleed navy space artwork, seated astronaut with yellow lightning, luminous amethyst glass card, large centered heading, labelled icon inputs, purple gradient submit button and exact Portuguese login/quote copy. Keep controls editable and existing authentication intact. The cosmic background is an Image Gen edit of the user reference with UI removed; it is not a screenshot of functional controls or a recovered original layered asset.
+
 - On 2026-11-05 the user supplied an Auth Fuse screenshot and compiled reference for the account screen. Use the compact form on the left, original purple astronaut illustration on the right, subtle floating/typewriter motion, Portuguese copy and nitido branding. Mobile keeps the form readable with artwork hidden. Preserve existing authenticated sessions, signup confirmation, resend and password recovery; decorative sample callbacks or unsupported social-login buttons must not replace real authentication.
 
 - On 2026-11-04 the user set Kiwify plan totals in BRL: 1 month R$ 85.00, 3 months R$ 165.00, 12 months R$ 550.00. These are full-period totals, not installment amounts. The user confirmed automatic renewal for all three plans, at the respective 1-, 3- and 12-month intervals. Keep payments disabled until the integration is explicitly configured and verified; do not activate Stripe.

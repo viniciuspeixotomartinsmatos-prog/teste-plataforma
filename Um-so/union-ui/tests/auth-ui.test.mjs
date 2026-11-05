@@ -45,9 +45,9 @@ test('reference account layout preserves password visibility, signup constraints
  const click=async name=>{const element=[...document.querySelectorAll('button')].find(button=>button.textContent.trim()===name||button.getAttribute('aria-label')===name);assert.ok(element,name);await act(async()=>element.click());};
  try{
   await act(async()=>root.render(React.createElement(App)));await settle();
-  assert.ok(document.querySelector('.auth-fuse'));assert.ok(document.querySelector('.auth-art img').src.endsWith('astronaut-login.webp'));
+  assert.ok(document.querySelector('.auth-fuse'));assert.match(document.querySelector('.auth-art-quote').textContent,/Suas ideias merecem um novo universo/);assert.ok(document.querySelector('.auth-emblem'));
   await click('Mostrar senha');assert.equal(document.getElementById('auth-password').type,'text');assert.equal(document.querySelector('[aria-label="Ocultar senha"]').getAttribute('aria-pressed'),'true');
-  await click('Criar uma conta');assert.equal(document.getElementById('auth-password').type,'password');assert.equal(document.getElementById('auth-password').minLength,12);assert.equal(document.getElementById('auth-name').maxLength,100);assert.ok(document.querySelector('.auth-art img').src.endsWith('astronaut-signup.webp'));
+  await click('Criar uma conta');assert.equal(document.getElementById('auth-password').type,'password');assert.equal(document.getElementById('auth-password').minLength,12);assert.equal(document.getElementById('auth-name').maxLength,100);assert.ok(document.querySelector('.auth-art-quote'));
   await click('Entrar');await click('Esqueci minha senha');assert.equal(document.getElementById('auth-password'),null);assert.match(document.querySelector('h1').textContent,/Recuperar acesso/);
   await click('Voltar para entrar');await click('Reenviar confirmação');assert.equal(document.getElementById('auth-password'),null);assert.match(document.querySelector('h1').textContent,/Reenviar confirmação/);
  }finally{await act(async()=>root.unmount());globalThis.fetch=original;dom.window.close();delete globalThis.IS_REACT_ACT_ENVIRONMENT;}
