@@ -10,6 +10,8 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 ## Product decisions
 
+- On 2026-11-05 the user supplied an Auth Fuse screenshot and compiled reference for the account screen. Use the compact form on the left, original purple astronaut illustration on the right, subtle floating/typewriter motion, Portuguese copy and nitido branding. Mobile keeps the form readable with artwork hidden. Preserve existing authenticated sessions, signup confirmation, resend and password recovery; decorative sample callbacks or unsupported social-login buttons must not replace real authentication.
+
 - On 2026-11-04 the user set Kiwify plan totals in BRL: 1 month R$ 85.00, 3 months R$ 165.00, 12 months R$ 550.00. These are full-period totals, not installment amounts. The user confirmed automatic renewal for all three plans, at the respective 1-, 3- and 12-month intervals. Keep payments disabled until the integration is explicitly configured and verified; do not activate Stripe.
 
 - On 2026-11-04 the user selected `nitidohig.com.br` as the domain for the platform's email setup. Proposed transactional sender: `acesso@nitidohig.com.br`. Its authoritative DNS is at HostGator and existing MX records use Titan. Preserve existing website and mail records while verifying the sender; keep the current working APP_ORIGIN until any website-domain cutover is explicitly scoped and its DNS/HTTPS are verified. SMTP credentials and sender verification remain required before claiming public signup/recovery email delivery works.

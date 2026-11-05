@@ -37,6 +37,22 @@ test('direct platform links show login; successful login returns to the requeste
  }finally{await act(async()=>root.unmount());dom.window.close();delete globalThis.IS_REACT_ACT_ENVIRONMENT;}
 });
 
+test('reference account layout preserves password visibility, signup constraints and recovery navigation',async()=>{
+ const dom=new JSDOM('<div id="root"></div>',{url:'http://localhost:4173/account'}),original=globalThis.fetch;
+ for(const key of ['window','document','history','localStorage','HTMLElement','Node','MutationObserver','Event','MouseEvent'])globalThis[key]=dom.window[key];globalThis.IS_REACT_ACT_ENVIRONMENT=true;window.scrollTo=()=>{};
+ globalThis.fetch=async url=>Response.json(url==='/api/auth/get-session'?{user:null}:url==='/api/access'?{canExport:false}:{});
+ const {App}=await loadApp(),root=createRoot(document.getElementById('root'));const settle=()=>act(async()=>{await new Promise(resolve=>setTimeout(resolve,50));});
+ const click=async name=>{const element=[...document.querySelectorAll('button')].find(button=>button.textContent.trim()===name||button.getAttribute('aria-label')===name);assert.ok(element,name);await act(async()=>element.click());};
+ try{
+  await act(async()=>root.render(React.createElement(App)));await settle();
+  assert.ok(document.querySelector('.auth-fuse'));assert.ok(document.querySelector('.auth-art img').src.endsWith('astronaut-login.webp'));
+  await click('Mostrar senha');assert.equal(document.getElementById('auth-password').type,'text');assert.equal(document.querySelector('[aria-label="Ocultar senha"]').getAttribute('aria-pressed'),'true');
+  await click('Criar uma conta');assert.equal(document.getElementById('auth-password').type,'password');assert.equal(document.getElementById('auth-password').minLength,12);assert.equal(document.getElementById('auth-name').maxLength,100);assert.ok(document.querySelector('.auth-art img').src.endsWith('astronaut-signup.webp'));
+  await click('Entrar');await click('Esqueci minha senha');assert.equal(document.getElementById('auth-password'),null);assert.match(document.querySelector('h1').textContent,/Recuperar acesso/);
+  await click('Voltar para entrar');await click('Reenviar confirmação');assert.equal(document.getElementById('auth-password'),null);assert.match(document.querySelector('h1').textContent,/Reenviar confirmação/);
+ }finally{await act(async()=>root.unmount());globalThis.fetch=original;dom.window.close();delete globalThis.IS_REACT_ACT_ENVIRONMENT;}
+});
+
 test('email confirmation waits for a user click, sends the token only by POST and shows a useful legacy callback error',async()=>{
  const dom=new JSDOM('<div id="root"></div>',{url:'http://localhost:4173/account?token_hash='+('a'.repeat(64))+'&type=email'}),original=globalThis.fetch;
  for(const key of ['window','document','history','localStorage','HTMLElement','Node','MutationObserver','Event','MouseEvent'])globalThis[key]=dom.window[key];
