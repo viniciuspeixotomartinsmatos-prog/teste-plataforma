@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "id": "19f71697-2482-4572-9b67-14d0ca9c975c",
+    "slug": "arbo",
+    "title": "Arbo",
+    "type": "landing_page",
+    "kind": {
+      "id": "landing_page",
+      "label": "Landing page",
+      "plural": "Landing pages",
+      "segment": "landing-pages",
+      "sortOrder": 0
+    },
+    "niche": "imobiliaria",
+    "description": "Lançamento residencial: passe o mouse nos andares da torre à noite, clique e o andar vira a maquete 3D mobiliada.",
+    "tags": [
+      "imobiliaria",
+      "lancamento",
+      "alto-padrao",
+      "3d",
+      "three.js",
+      "maquete",
+      "blender",
+      "hover",
+      "galeria",
+      "escuro",
+      "serifa",
+      "gsap",
+      "mobile"
+    ],
+    "isNew": true,
+    "free": false,
+    "tone": "escuro",
+    "industry": "imoveis",
+    "preview": {
+      "poster": "/build/media/19f71697-2482-4572-9b67-14d0ca9c975c/poster-185d582a.webp",
+      "video": "/build/media/19f71697-2482-4572-9b67-14d0ca9c975c/previa-card-34806ea2.mp4",
+      "mode": "cover"
+    },
+    "aspect": "16/10",
+    "publishedAt": "2026-11-05T03:39:15.531011+00:00",
+    "updatedAt": "2026-11-05T03:39:15.531011+00:00"
+  },
+  "files": [
+    {
+      "file": "profitize/arbo/poster-185d582a.webp",
+      "url": "https://profitize.com.br/build/media/19f71697-2482-4572-9b67-14d0ca9c975c/poster-185d582a.webp",
+      "bytes": 63314,
+      "sha256": "185d582a071d2ebbad29699e4cc5a26338495e6fca715929ff3654a65accacf8"
+    },
+    {
+      "file": "profitize/arbo/previa-card-34806ea2.mp4",
+      "url": "https://profitize.com.br/build/media/19f71697-2482-4572-9b67-14d0ca9c975c/previa-card-34806ea2.mp4",
+      "bytes": 3599541,
+      "sha256": "34806ea23af45efbac4514244cafd314b6d6d733ade781f3098be5e0cdfe60db"
+    }
+  ],
+  "published": false,
+  "validation": "HTTP media retained and container headers inspected; browser decoding and playback remain pending."
+}
