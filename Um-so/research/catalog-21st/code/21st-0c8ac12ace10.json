@@ -1,0 +1,1 @@
+{"files": [{"path": "Usage.tsx", "content": "import { Case } from \"@/components/ui/cases-with-infinite-scroll\";\n\nfunction CaseDemo() {\n  return (\n    <div className=\"block\">\n      <Case />\n    </div>\n  );\n}\n\nexport { CaseDemo };"}], "usageOnly": true, "description": "Cases with a carousel of images, suitable for clients, partners, or integration."}

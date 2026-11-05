@@ -1,0 +1,11 @@
+{
+  "name": "gooey-input-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/gooey-input-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\n\nimport { GooeyInput } from \"@/components/ui/gooey-input\";\n\nexport function GooeyInputDemo() {\n  return (\n    <div className=\"flex h-40 w-full items-center justify-center\">\n      <GooeyInput placeholder=\"Search...\" />\n    </div>\n  );\n}\n"
+    }
+  ]
+}

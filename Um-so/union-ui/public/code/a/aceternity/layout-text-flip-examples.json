@@ -1,0 +1,11 @@
+{
+  "name": "layout-text-flip-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/layout-text-flip-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport { LayoutTextFlip } from \"@/components/ui/layout-text-flip\";\nimport { motion } from \"motion/react\";\n\nexport function LayoutTextFlipDemo() {\n  return (\n    <div>\n      <motion.div className=\"relative mx-4 my-4 flex flex-col items-center justify-center gap-4 text-center sm:mx-0 sm:mb-0 sm:flex-row\">\n        <LayoutTextFlip\n          text=\"Welcome to \"\n          words={[\"Aceternity UI\", \"Fight Club\", \"The Matrix\", \"The Jungle\"]}\n        />\n      </motion.div>\n      <p className=\"mt-4 text-center text-base text-neutral-600 dark:text-neutral-400\">\n        Experience the power of modern UI components that bring your ideas to\n        life.\n      </p>\n    </div>\n  );\n}\n"
+    }
+  ]
+}

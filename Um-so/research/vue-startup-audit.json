@@ -1,0 +1,567 @@
+{
+  "checkedAt": "2026-10-28T15:28:03.276Z",
+  "environment": "JSDOM with real 2D canvas backend and standard web API shims. Does not verify visual layout, browser networking or GPU output.",
+  "passed": 90,
+  "limited": 2,
+  "failed": 0,
+  "results": [
+    {
+      "id": "animate-vue-backgrounds-bubble",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-backgrounds-fireworks",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-backgrounds-glyph",
+      "passed": false,
+      "limited": true,
+      "errors": [
+        "DOM audit does not provide a GPU context",
+        "Preview did not confirm startup"
+      ]
+    },
+    {
+      "id": "animate-vue-backgrounds-gradient",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-backgrounds-gravity-stars",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-backgrounds-hexagon",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-backgrounds-stars",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-backgrounds-topography",
+      "passed": false,
+      "limited": true,
+      "errors": [
+        "DOM audit does not provide a GPU context",
+        "Preview did not confirm startup"
+      ]
+    },
+    {
+      "id": "animate-vue-buttons-flip",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-buttons-github-stars",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-buttons-liquid",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-buttons-theme-toggler",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-components-code-block",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-components-page-transition",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-auto-height",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-avatar-group",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-blur",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-bottom-navigation",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-button",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-click",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-code-block",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-copy-button",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-counting-number",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-cursor",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-effect",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-fade",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-github-stars",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-gradient-text",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-highlight-text",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-highlight",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-icon-button",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-image-zoom",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-input-otp",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-magnetic",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-morphing-text",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-motion-grid",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-particles",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-pinned-list",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-ripple-button",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-rolling-text",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-rotating-text",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-scroll-fade",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-scroll-progress",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-scrolling-number",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-shimmering-text",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-shine",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-slide",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-sliding-number",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-sliding-text",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-splitting-text",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-spring",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-swapping-text",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-tabs",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-theme-toggler",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-tilt",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-tooltip",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-typing-text",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-zoom",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-reka-ui-accordion",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-reka-ui-alert-dialog",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-reka-ui-collapsible",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-reka-ui-combobox",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-reka-ui-context-menu",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-reka-ui-dialog",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-reka-ui-drawer",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-reka-ui-dropdown-menu",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-reka-ui-hover-card",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-reka-ui-menubar",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-reka-ui-navigation-menu",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-reka-ui-popover",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-reka-ui-preview-link-card",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-reka-ui-progress",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-reka-ui-questionnaire",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-reka-ui-radio-group",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-reka-ui-sheet",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-reka-ui-sidebar",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-reka-ui-slider",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-reka-ui-switch",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-reka-ui-tabs",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-reka-ui-toast",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-reka-ui-toggle-group",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-reka-ui-toggle",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-reka-ui-tooltip",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-flip-button",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-liquid-button",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-page-transition",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-github-stars-button",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-animate-ui-theme-toggler-button",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-reka-ui-pagination",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-backgrounds-hole",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-reka-ui-checkbox",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    },
+    {
+      "id": "animate-vue-primitives-reka-ui-select",
+      "passed": true,
+      "limited": false,
+      "errors": []
+    }
+  ]
+}

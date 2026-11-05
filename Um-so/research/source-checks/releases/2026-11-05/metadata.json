@@ -1,0 +1,1500 @@
+{
+  "observedAt": "2026-11-05",
+  "authorSearch": [
+    {
+      "author": "aakashmehra",
+      "results": [
+        {
+          "type": "component",
+          "id": 44588,
+          "name": "Interactive Sniper Scope",
+          "description": "A full-screen rifle scope with a lit green mil-dot reticle, breathing sway and recoil. Shoot glass bottles on a wooden range shelf and they shatter into real fractured shards that bounce and settle. Hit the HOME plate to go home, or RESET to restock. All canvas, synthesized sound.",
+          "previewUrl": "https://cdn.21st.dev/aakashmehra/sniper-scope/default/preview.1793778542039-5edff71a-6be9-4b0a-93fc-0ee3dd16b819.png",
+          "videoUrl": "https://cdn.21st.dev/aakashmehra/sniper-scope/default/video.1793778542039-5edff71a-6be9-4b0a-93fc-0ee3dd16b819.mp4",
+          "author": "aakashmehra",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18zTFlMaDNZM01NTm5mS1VBbVZ6cDBkSTZ5OGkifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/aakashmehra/sniper-scope?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@aakashmehra/components/sniper-scope"
+        },
+        {
+          "type": "component",
+          "id": 44519,
+          "name": "Retro Slide to Unlock",
+          "description": "A skeuomorphic lock screen inspired by early-2010s phones: live clock, drawn water wallpaper, a shimmering slide to unlock knob, camera peek, and working home and sleep buttons with music controls, in an optional classic phone frame. Fully props-driven and keyboard accessible.",
+          "previewUrl": "https://cdn.21st.dev/user_3LYLgwJ6QI0pqW5236yVVu72Qtj/retro-slide-to-unlock/default/preview.1793821121824.webp",
+          "videoUrl": "https://cdn.21st.dev/aakashmehra/retro-slide-to-unlock/default/video.1793720535994-bbd7c36a-1d97-4791-aae8-57922f0b9468.mp4",
+          "author": "aakashmehra",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18zTFlMaDNZM01NTm5mS1VBbVZ6cDBkSTZ5OGkifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/aakashmehra/retro-slide-to-unlock?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@aakashmehra/components/retro-slide-to-unlock"
+        },
+        {
+          "type": "component",
+          "id": 44518,
+          "name": "Nearby Walk Menu",
+          "description": "A line-drawn walking scene from a hotel to nearby landmarks and N Seoul Tower: landmarks rise in, walkers follow the route, hover swaps walking time for distance, with four full-page themes and a lantern cursor glow.",
+          "previewUrl": "https://cdn.21st.dev/aakashmehra/nearby-walk-menu/default/preview.1793719583761-7a5deef4-89c6-43c8-94c6-c907f42c5820.png",
+          "videoUrl": "https://cdn.21st.dev/aakashmehra/nearby-walk-menu/default/video.1793719583761-7a5deef4-89c6-43c8-94c6-c907f42c5820.mp4",
+          "author": "aakashmehra",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18zTFlMaDNZM01NTm5mS1VBbVZ6cDBkSTZ5OGkifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/aakashmehra/nearby-walk-menu?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@aakashmehra/components/nearby-walk-menu"
+        },
+        {
+          "type": "component",
+          "id": 44486,
+          "name": "Coffee Pour Menu",
+          "description": "A coffee menu with detailed SVG cups and hand-written physics: hover a drink and its cup slides in, coffee and milk pour, splash and blend, and the previous cup tips over and falls away.",
+          "previewUrl": "https://cdn.21st.dev/user_3LYLgwJ6QI0pqW5236yVVu72Qtj/coffee-pour-menu/default/preview.1793709298916.webp",
+          "videoUrl": "https://cdn.21st.dev/aakashmehra/coffee-pour-menu/default/video.1793687640857-80b92ddc-4642-485c-b675-dc31ed881384.mp4",
+          "author": "aakashmehra",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18zTFlMaDNZM01NTm5mS1VBbVZ6cDBkSTZ5OGkifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/aakashmehra/coffee-pour-menu?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@aakashmehra/components/coffee-pour-menu"
+        },
+        {
+          "type": "component",
+          "id": 44447,
+          "name": "Holographic Business Card",
+          "description": "An interactive business card that tilts toward your pointer, lifts on hover and flips on click, with nine holographic foils (Shards, Rainbow, Stars, Cosmos, Hearts, Shapes, Gold, Silver, Aurora) set by the effect and intensity props.",
+          "previewUrl": "https://cdn.21st.dev/user_3LYLgwJ6QI0pqW5236yVVu72Qtj/holographic-business-card/default/preview.1793743015299.png",
+          "videoUrl": "https://cdn.21st.dev/user_3LYLgwJ6QI0pqW5236yVVu72Qtj/holographic-business-card/default/video.1793742977985.mp4",
+          "author": "aakashmehra",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18zTFlMaDNZM01NTm5mS1VBbVZ6cDBkSTZ5OGkifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/aakashmehra/holographic-business-card?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@aakashmehra/components/holographic-business-card"
+        },
+        {
+          "type": "component",
+          "id": 44445,
+          "name": "Liquid Glass Button",
+          "description": "A draggable liquid glass Home pill: a Snell's-law displacement map bends the light behind it, with chromatic fringes at the rim. Safari and Firefox get a frosted glassmorphism fallback.",
+          "previewUrl": "https://cdn.21st.dev/aakashmehra/liquid-glass-button/default/preview.1793629426347-3ce8a1bf-b73d-4e07-9d36-a743f90e8e01.png",
+          "videoUrl": "https://cdn.21st.dev/aakashmehra/liquid-glass-button/default/video.1793629426347-3ce8a1bf-b73d-4e07-9d36-a743f90e8e01.mp4",
+          "author": "aakashmehra",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18zTFlMaDNZM01NTm5mS1VBbVZ6cDBkSTZ5OGkifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/aakashmehra/liquid-glass-button?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@aakashmehra/components/liquid-glass-button"
+        },
+        {
+          "type": "component",
+          "id": 44444,
+          "name": "Disc Reveal List",
+          "description": "A hover-reveal list: titles scatter their letters, the other rows dim, and spinning colour-rimmed CDs or polaroids spring in around the active row.",
+          "previewUrl": "https://cdn.21st.dev/user_3LYLgwJ6QI0pqW5236yVVu72Qtj/disc-reveal-list/default/preview.1793640895331.png",
+          "videoUrl": "https://cdn.21st.dev/user_3LYLgwJ6QI0pqW5236yVVu72Qtj/disc-reveal-list/default/video.1793640877611.mp4",
+          "author": "aakashmehra",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18zTFlMaDNZM01NTm5mS1VBbVZ6cDBkSTZ5OGkifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/aakashmehra/disc-reveal-list?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@aakashmehra/components/disc-reveal-list"
+        }
+      ],
+      "limitedTo": 30
+    },
+    {
+      "author": "belalamrofficial",
+      "results": [
+        {
+          "type": "component",
+          "id": 44592,
+          "name": "AI Chat Input Field",
+          "description": "Rich Markdown input field with code blocks, code highlighting, RTL/LTR support",
+          "previewUrl": "https://cdn.21st.dev/user_3H2RA3segeqPs3vjtcoMQLrxJTC/ai-chat-input-field/default/preview.1793824957874.webp",
+          "videoUrl": "https://cdn.21st.dev/user_3H2RA3segeqPs3vjtcoMQLrxJTC/ai-chat-input-field/default/video.1793824922504.mp4",
+          "author": "belalamrofficial",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3H2RA3segeqPs3vjtcoMQLrxJTC/avatar.png",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/belalamrofficial/ai-chat-input-field?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@belalamrofficial/components/ai-chat-input-field"
+        }
+      ],
+      "limitedTo": 30
+    },
+    {
+      "author": "devendrababu9666",
+      "results": [
+        {
+          "type": "component",
+          "id": 44508,
+          "name": "Context Window Packer",
+          "description": "Visualize token allocation, context overflow, and attention fade in long LLM prompts.",
+          "previewUrl": "https://cdn.21st.dev/user_3LXtau2adFONutOH2La3tAfBneZ/context-window-packer/default/preview.1793823515448.webp",
+          "videoUrl": "https://cdn.21st.dev/user_3LXtau2adFONutOH2La3tAfBneZ/context-window-packer/default/video.1793823272409.mp4",
+          "author": "devendrababu9666",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3LXtau2adFONutOH2La3tAfBneZ/avatar.png",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/devendrababu9666/context-window-packer?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@devendrababu9666/components/context-window-packer"
+        }
+      ],
+      "limitedTo": 30
+    },
+    {
+      "author": "ezam0000",
+      "results": [
+        {
+          "type": "component",
+          "id": 44554,
+          "name": "EZPZ Chrome Type",
+          "description": "Make your words shine. Editable chrome lettering with a distance-field bevel, sharp reflected bands and cast shadow. Customize both lines, tint, bevel, reflections and background. Native browser font rendering; React-only; MIT licensed.",
+          "previewUrl": "https://cdn.21st.dev/ezam0000/ezpz-chrome-type/default/preview.1793755133867-3992a91d-a4cc-40f9-bd47-669cebc55939.png",
+          "videoUrl": null,
+          "author": "ezam0000",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18yeTRtQWx0WVB2NFJtelBQQ1lRMUtPcmkybXIifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/ezam0000/ezpz-chrome-type?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@ezam0000/components/ezpz-chrome-type"
+        },
+        {
+          "type": "component",
+          "id": 44553,
+          "name": "EZPZ Dither Portrait",
+          "description": "Make portraits graphic. A two-color Floyd–Steinberg dither with editable pixel size, contrast, exposure, palette and optional EZPZ lettering. Supply your own local or CORS-enabled image URL. Browser-local processing; React-only; MIT licensed.",
+          "previewUrl": "https://cdn.21st.dev/ezam0000/ezpz-dither-portrait/default/preview.1793755128942-71902db2-86a0-4521-9bb5-d48c2e559f19.png",
+          "videoUrl": null,
+          "author": "ezam0000",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18yeTRtQWx0WVB2NFJtelBQQ1lRMUtPcmkybXIifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/ezam0000/ezpz-dither-portrait?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@ezam0000/components/ezpz-dither-portrait"
+        },
+        {
+          "type": "component",
+          "id": 44552,
+          "name": "EZPZ Type Tunnel",
+          "description": "Make depth EZPZ. Editable native lettering projected into a square tunnel. Customize wording, rows, opening, perspective, ink and background. React-only, browser-local rendering. MIT licensed for modification and commercial use.",
+          "previewUrl": "https://cdn.21st.dev/ezam0000/ezpz-type-tunnel/default/preview.1793755126840-6d21ac09-8a63-4860-a6e5-dc17df971f52.png",
+          "videoUrl": null,
+          "author": "ezam0000",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18yeTRtQWx0WVB2NFJtelBQQ1lRMUtPcmkybXIifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/ezam0000/ezpz-type-tunnel?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@ezam0000/components/ezpz-type-tunnel"
+        },
+        {
+          "type": "component",
+          "id": 44531,
+          "name": "EZPZ Type Steps",
+          "description": "Build. Ship. EZPZ. Three connected isometric steps with editable SVG typography. Customize each line, color and font through demo settings. MIT licensed for personal and commercial reuse; React is the only runtime dependency.",
+          "previewUrl": "https://cdn.21st.dev/ezam0000/ezpz-type-steps/default/preview.1793744873748-c9d5d084-88e2-4bdb-88fe-f5b6bc68ec40.png",
+          "videoUrl": null,
+          "author": "ezam0000",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18yeTRtQWx0WVB2NFJtelBQQ1lRMUtPcmkybXIifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/ezam0000/ezpz-type-steps?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@ezam0000/components/ezpz-type-steps"
+        },
+        {
+          "type": "component",
+          "id": 44530,
+          "name": "EZPZ Type Cube",
+          "description": "Make bold ideas EZPZ. A responsive native SVG typography cube. Customize each line, color and font through demo settings. MIT licensed for personal and commercial reuse; React is the only runtime dependency.",
+          "previewUrl": "https://cdn.21st.dev/user_2y4mAmG5WMonwhwjqKc8LyeecUz/ezpz-type-cube/default/preview.1793822535044.png",
+          "videoUrl": null,
+          "author": "ezam0000",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18yeTRtQWx0WVB2NFJtelBQQ1lRMUtPcmkybXIifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/ezam0000/ezpz-type-cube?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@ezam0000/components/ezpz-type-cube"
+        },
+        {
+          "type": "component",
+          "id": 44529,
+          "name": "EZPZ Type Fold",
+          "description": "Big ideas. Made EZPZ. Responsive native SVG typography folded across three planes. Customize each line, color and font through demo settings. MIT licensed for personal and commercial reuse; React is the only runtime dependency.",
+          "previewUrl": "https://cdn.21st.dev/ezam0000/ezpz-type-fold/default/preview.1793744873204-ed5e4c72-4404-4a37-ab37-e27c16782a70.png",
+          "videoUrl": null,
+          "author": "ezam0000",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18yeTRtQWx0WVB2NFJtelBQQ1lRMUtPcmkybXIifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/ezam0000/ezpz-type-fold?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@ezam0000/components/ezpz-type-fold"
+        },
+        {
+          "type": "component",
+          "id": 24317,
+          "name": "collab",
+          "description": "Animated (flicker) ASCII art in the Voxel style, made with the 21st ASCII editor and baked to a looping video. A drop-in, zero-dependency React component for hero sections, cards, and retro terminal-style backgrounds.",
+          "previewUrl": "https://cdn.21st.dev/ezam0000/collab/default/preview.1786103423145-8ff83056-7552-43bf-bb69-a504f164cdc3.webp",
+          "videoUrl": "https://cdn.21st.dev/ezam0000/collab/default/video.1786103423145-8ff83056-7552-43bf-bb69-a504f164cdc3.mp4",
+          "author": "ezam0000",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18yeTRtQWx0WVB2NFJtelBQQ1lRMUtPcmkybXIifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/ezam0000/collab?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@ezam0000/components/collab"
+        }
+      ],
+      "limitedTo": 30
+    },
+    {
+      "author": "hariompandit5556",
+      "results": [
+        {
+          "type": "component",
+          "id": 44487,
+          "name": "Newsletter Terminal Card",
+          "description": "A dark-themed, terminal-inspired newsletter subscription card featuring a retro-futuristic aesthetic. It includes a window-style header with traffic light controls, a command-line prompt, elegant serif typography, and a functional email input form with a glowing orange call-to-ac",
+          "previewUrl": "https://cdn.21st.dev/user_3GKMi7bWGNUXGraJ6zxK4UK6sUH/newsletter-terminal-card/default/preview.1793825954531.webp",
+          "videoUrl": "https://cdn.21st.dev/user_3GKMi7bWGNUXGraJ6zxK4UK6sUH/newsletter-terminal-card/default/video.1793825926736.mp4",
+          "author": "hari7261",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zR0tNaUFIcmYyRFB0VkdJbGEyOWlKYjBiTmIifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/hari7261/newsletter-terminal-card?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@hari7261/components/newsletter-terminal-card"
+        }
+      ],
+      "limitedTo": 30
+    },
+    {
+      "author": "harshjadhavconnect",
+      "results": [
+        {
+          "type": "component",
+          "id": 31717,
+          "name": "Liquid Glass Carousel",
+          "description": "An infinite image carousel viewed through a WebGL liquid-glass lens with chromatic rim dispersion, snap-scrolling, and a click-to-focus zoom on each photo.",
+          "previewUrl": "https://cdn.21st.dev/componentry/liquid-glass-carousel/default/preview.1790338489709-86fe21d3-7ab1-49ed-8d8a-5a3a149d8ba1.png",
+          "videoUrl": "https://cdn.21st.dev/componentry/liquid-glass-carousel/default/video.1790338489709-86fe21d3-7ab1-49ed-8d8a-5a3a149d8ba1.mp4",
+          "author": "harshjadhavconnect",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2yK9eXm6fOaK6ljmiFzPax3KBeK/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/harshjadhavconnect/liquid-glass-carousel?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@harshjadhavconnect/components/liquid-glass-carousel"
+        },
+        {
+          "type": "component",
+          "id": 31554,
+          "name": "Dithered Logo",
+          "description": "An interactive canvas component that turns any image or SVG into a dithered particle field that ripples and repels around the cursor.",
+          "previewUrl": "https://cdn.21st.dev/componentry/dithered-logo/default/preview.1790313361304-7af6902b-151c-4bbe-ab87-362ac4f6c6b6.png",
+          "videoUrl": "https://cdn.21st.dev/componentry/dithered-logo/default/video.1790313361304-7af6902b-151c-4bbe-ab87-362ac4f6c6b6.mp4",
+          "author": "harshjadhavconnect",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2yK9eXm6fOaK6ljmiFzPax3KBeK/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/harshjadhavconnect/dithered-logo?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@harshjadhavconnect/components/dithered-logo"
+        },
+        {
+          "type": "component",
+          "id": 31538,
+          "name": "Wheel Carousel",
+          "description": "A cinematic rotating-wheel picker with inertial drag, curved fading labels, and crossfading imagery, useful for browsing a list of projects or portfolio items.",
+          "previewUrl": "https://cdn.21st.dev/componentry/wheel-carousel/default/preview.1790310771941-c94a8dc9-d9d4-4a69-bf3c-ef1f3121ea69.png",
+          "videoUrl": "https://cdn.21st.dev/componentry/wheel-carousel/default/video.1790310771941-c94a8dc9-d9d4-4a69-bf3c-ef1f3121ea69.mp4",
+          "author": "harshjadhavconnect",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2yK9eXm6fOaK6ljmiFzPax3KBeK/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/harshjadhavconnect/wheel-carousel?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@harshjadhavconnect/components/wheel-carousel"
+        },
+        {
+          "type": "component",
+          "id": 31491,
+          "name": "Pixel Image Trail",
+          "description": "An image reveal effect made of canvas-drawn square fragments that paint in around the cursor and fade out into a bounded pixel trail.",
+          "previewUrl": "https://cdn.21st.dev/componentry/pixel-image-trail/default/preview.1790306473202-27fd79fb-5957-45f8-b69d-0c877442d8e5.png",
+          "videoUrl": "https://cdn.21st.dev/componentry/pixel-image-trail/default/video.1790306473202-27fd79fb-5957-45f8-b69d-0c877442d8e5.mp4",
+          "author": "harshjadhavconnect",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2yK9eXm6fOaK6ljmiFzPax3KBeK/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/harshjadhavconnect/pixel-image-trail?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@harshjadhavconnect/components/pixel-image-trail"
+        },
+        {
+          "type": "component",
+          "id": 31116,
+          "name": "Gradient Hero",
+          "description": "A centered hero section with a warm cinematic gradient backdrop, a small pill badge, a bold headline, short supporting copy, and two call-to-action buttons.",
+          "previewUrl": "https://cdn.21st.dev/componentry/gradient-hero-01/default/preview.1790269839182-fef762db-5fbe-4b58-b54f-4f2fa1d077ca.png",
+          "videoUrl": "https://cdn.21st.dev/componentry/gradient-hero-01/default/video.1790269839182-fef762db-5fbe-4b58-b54f-4f2fa1d077ca.mp4",
+          "author": "harshjadhavconnect",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2yK9eXm6fOaK6ljmiFzPax3KBeK/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/harshjadhavconnect/gradient-hero-01?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@harshjadhavconnect/components/gradient-hero-01"
+        },
+        {
+          "type": "component",
+          "id": 28647,
+          "name": "Spectral Ribbon",
+          "description": "An animated WebGL light ribbon with rainbow spectral fringe drifting on a pure black background, used as a decorative hero or section backdrop.",
+          "previewUrl": "https://cdn.21st.dev/componentry/spectral-ribbon/default/preview.1789994840069-cffbc4f1-2d25-40c2-9267-b95471384ac7.png",
+          "videoUrl": "https://cdn.21st.dev/componentry/spectral-ribbon/default/video.1789994840069-cffbc4f1-2d25-40c2-9267-b95471384ac7.mp4",
+          "author": "harshjadhavconnect",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2yK9eXm6fOaK6ljmiFzPax3KBeK/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/harshjadhavconnect/spectral-ribbon?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@harshjadhavconnect/components/spectral-ribbon"
+        },
+        {
+          "type": "component",
+          "id": 27464,
+          "name": "Image Trail",
+          "description": "A cursor-following trail of images that fade and fly away, used as an interactive hero or background effect.",
+          "previewUrl": "https://cdn.21st.dev/user_registry_componentry_1783513914157/image-trail/default/preview.1790724035942.webp",
+          "videoUrl": "https://cdn.21st.dev/user_registry_componentry_1783513914157/image-trail/default/video.1790724031868.mp4",
+          "author": "harshjadhavconnect",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2yK9eXm6fOaK6ljmiFzPax3KBeK/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/harshjadhavconnect/image-trail?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@harshjadhavconnect/components/image-trail"
+        },
+        {
+          "type": "component",
+          "id": 24457,
+          "name": "Testimonial Marquee",
+          "description": "An infinite horizontally scrolling marquee for showcasing testimonials and social proof, with single-row, dual-row, stacked, and edge-to-edge flush variants.",
+          "previewUrl": "https://cdn.21st.dev/user_registry_componentry_1783513914157/testimonial-marquee/default/preview.1786705778175.webp",
+          "videoUrl": "https://cdn.21st.dev/user_registry_componentry_1783513914157/testimonial-marquee/default/video.1786705760847.mp4",
+          "author": "harshjadhavconnect",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2yK9eXm6fOaK6ljmiFzPax3KBeK/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/harshjadhavconnect/testimonial-marquee?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@harshjadhavconnect/components/testimonial-marquee"
+        },
+        {
+          "type": "component",
+          "id": 20142,
+          "name": "Collection Surfer",
+          "description": "A scroll-driven infinite 3D image gallery where cards surf along a perspective track with magnetic, uplift, or simple hover effects.",
+          "previewUrl": "https://cdn.21st.dev/componentry/collection-surfer/default/preview.1784318033049.png",
+          "videoUrl": "https://cdn.21st.dev/componentry/collection-surfer/default/video.1784312858851-34c1579c-c6bf-428a-82d1-85b71046664d.mp4",
+          "author": "harshjadhavconnect",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2yK9eXm6fOaK6ljmiFzPax3KBeK/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/harshjadhavconnect/collection-surfer?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@harshjadhavconnect/components/collection-surfer"
+        },
+        {
+          "type": "component",
+          "id": 20051,
+          "name": "Hero Geometric",
+          "description": "A full-screen hero section with an animated WebGL shader gradient background and premium serif/sans headline typography.",
+          "previewUrl": "https://cdn.21st.dev/componentry/hero-geometric/default/preview.1785377325332-32ec4070-6de7-4234-9e0f-2c72048919b9.png",
+          "videoUrl": "https://cdn.21st.dev/componentry/hero-geometric/default/video.1785377325332-32ec4070-6de7-4234-9e0f-2c72048919b9.mp4",
+          "author": "harshjadhavconnect",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2yK9eXm6fOaK6ljmiFzPax3KBeK/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/harshjadhavconnect/hero-geometric?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@harshjadhavconnect/components/hero-geometric"
+        },
+        {
+          "type": "component",
+          "id": 20038,
+          "name": "Auth Modal",
+          "description": "An animated authentication modal with social login buttons and email sign-in, opened from a trigger button.",
+          "previewUrl": "https://cdn.21st.dev/user_registry_componentry_1783513914157/auth-modal/default/preview.1787662841913.png",
+          "videoUrl": "https://cdn.21st.dev/user_registry_componentry_1783513914157/auth-modal/default/video.1787662855959.mp4",
+          "author": "harshjadhavconnect",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2yK9eXm6fOaK6ljmiFzPax3KBeK/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/harshjadhavconnect/auth-modal?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@harshjadhavconnect/components/auth-modal"
+        },
+        {
+          "type": "component",
+          "id": 19336,
+          "name": "Text Repel",
+          "description": "Interactive heading text whose individual letters push away from or pull toward the cursor with springy motion.",
+          "previewUrl": "https://cdn.21st.dev/componentry/text-repel/default/preview.1785375796746-06c7eceb-0a8a-412a-aa98-6882a8756caf.png",
+          "videoUrl": "https://cdn.21st.dev/componentry/text-repel/default/video.1785375796746-06c7eceb-0a8a-412a-aa98-6882a8756caf.mp4",
+          "author": "harshjadhavconnect",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2yK9eXm6fOaK6ljmiFzPax3KBeK/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/harshjadhavconnect/text-repel?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@harshjadhavconnect/components/text-repel"
+        },
+        {
+          "type": "component",
+          "id": 19242,
+          "name": "Hyper Text",
+          "description": "An animated text effect that scrambles and cycles through random characters before revealing the final text on hover or load.",
+          "previewUrl": "https://cdn.21st.dev/componentry/hyper-text/default/preview.1783715127296.png",
+          "videoUrl": "https://cdn.21st.dev/componentry/hyper-text/default/video.1783715127296.mp4",
+          "author": "harshjadhavconnect",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2yK9eXm6fOaK6ljmiFzPax3KBeK/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/harshjadhavconnect/hyper-text?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@harshjadhavconnect/components/hyper-text"
+        },
+        {
+          "type": "component",
+          "id": 19241,
+          "name": "Split Flap Display",
+          "description": "An animated split-flap (airport departure board) display that flips through characters to reveal text or label/value rows.",
+          "previewUrl": "https://cdn.21st.dev/componentry/split-flap-display/default/preview.1783715052566.png",
+          "videoUrl": "https://cdn.21st.dev/componentry/split-flap-display/default/video.1783715052566.mp4",
+          "author": "harshjadhavconnect",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2yK9eXm6fOaK6ljmiFzPax3KBeK/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/harshjadhavconnect/split-flap-display?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@harshjadhavconnect/components/split-flap-display"
+        },
+        {
+          "type": "component",
+          "id": 19204,
+          "name": "Scroll Choreography",
+          "description": "A scroll-driven animation that choreographs four quadrant images across the viewport before one hero image expands to fill the screen.",
+          "previewUrl": "https://cdn.21st.dev/componentry/scroll-choreography/default/preview.1783712366971.png",
+          "videoUrl": "https://cdn.21st.dev/componentry/scroll-choreography/default/video.1783712366971.mp4",
+          "author": "harshjadhavconnect",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2yK9eXm6fOaK6ljmiFzPax3KBeK/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/harshjadhavconnect/scroll-choreography?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@harshjadhavconnect/components/scroll-choreography"
+        }
+      ],
+      "limitedTo": 30
+    },
+    {
+      "author": "jvgjfhh467",
+      "results": [
+        {
+          "type": "theme",
+          "id": "7027ab36-394c-434b-a5bf-8f91e5a5816c",
+          "name": "NORTH",
+          "description": null,
+          "previewUrl": null,
+          "author": "jvgjfhh467",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zTGRyaGZodFdSakhHU2t4QWZkalRUZVdleWwifQ",
+          "url": "https://21st.dev/community/themes/north-1793796311382"
+        }
+      ],
+      "limitedTo": 30
+    },
+    {
+      "author": "kedhareswer",
+      "results": [
+        {
+          "type": "component",
+          "id": 44607,
+          "name": "Scroll Rotating Product Slider",
+          "description": "Scroll rotating product slider: a big top-down photo turns and morphs into the next as the page scrolls, while the background colour blends, a dot glides round a ring of curved names and corner garnish swaps. For menus, bakeries and product ranges.",
+          "previewUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/rotating-flavor-slider/default/preview.1793824132234.webp",
+          "videoUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/rotating-flavor-slider/default/video.1793824119707.mp4",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/kedhareswer/rotating-flavor-slider?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@kedhareswer/components/rotating-flavor-slider"
+        },
+        {
+          "type": "component",
+          "id": 44583,
+          "name": "Food Menu Scroll Carousel",
+          "description": "Food menu scroll carousel: page scroll swings each plate out on an orbit as the next swings in, with a wiping two-weight title, chef card and a colour-morphing band. Endless both ways, GSAP ScrollTrigger, light/dark.",
+          "previewUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/dish-orbit-carousel/default/preview.1793824300186.webp",
+          "videoUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/dish-orbit-carousel/default/video.1793824287997.mp4",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/kedhareswer/dish-orbit-carousel?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@kedhareswer/components/dish-orbit-carousel"
+        },
+        {
+          "type": "component",
+          "id": 44528,
+          "name": "Runway Fashion Lookbook Carousel",
+          "description": "Runway fashion lookbook carousel: the collection's looks queue up in depth across a catwalk, and scrolling walks the next model forward into focus while the rest blur behind. A look counter, shop-the-look link and a side rail of pieces with prices.",
+          "previewUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/runway-lookbook/default/preview.1793822924631.webp",
+          "videoUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/runway-lookbook/default/video.1793822831401.mp4",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/kedhareswer/runway-lookbook?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@kedhareswer/components/runway-lookbook"
+        },
+        {
+          "type": "component",
+          "id": 44516,
+          "name": "Flipping Website Screenshot Deck",
+          "description": "Flipping website screenshot deck: a stack of site cards stands on edge, and scrolling or dragging tips the front card forward onto the floor while the next one rises. It settles on a whole card and loops endlessly both ways, with no autoplay.",
+          "previewUrl": "https://cdn.21st.dev/kedhareswer/tumble-deck-showcase/default/preview.1793719120463-720816f3-b263-4e0c-893e-11d4418dd971.jpg",
+          "videoUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/tumble-deck-showcase/default/video.1793742758257.mp4",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/kedhareswer/tumble-deck-showcase?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@kedhareswer/components/tumble-deck-showcase"
+        },
+        {
+          "type": "component",
+          "id": 44515,
+          "name": "3D Stacked Website Cards Scroll",
+          "description": "3D stacked website cards scroll for an agency's case studies: the nearest site card faces you and the rest file away behind it like folders in a drawer, each showing only its top strip. Scroll files them forward and back in an endless loop.",
+          "previewUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/case-stack-scroll/default/preview.1793822411157.webp",
+          "videoUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/case-stack-scroll/default/video.1793822164146.mp4",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/kedhareswer/case-stack-scroll?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@kedhareswer/components/case-stack-scroll"
+        },
+        {
+          "type": "component",
+          "id": 44514,
+          "name": "Curved Arc Image Carousel",
+          "description": "Curved arc image carousel: photo cards ride the rim of a big wheel whose hub sits off the left edge, so a gentle arc of them shows and the card on the equator lies flat with its title beside it. Scroll or drag turns the wheel, and it loops endlessly both ways.",
+          "previewUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/arc-card-carousel/default/preview.1793823154263.webp",
+          "videoUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/arc-card-carousel/default/video.1793823109416.mp4",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/kedhareswer/arc-card-carousel?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@kedhareswer/components/arc-card-carousel"
+        },
+        {
+          "type": "component",
+          "id": 44510,
+          "name": "Hills Landscape Footer with Call to Action",
+          "description": "Hills landscape footer with a call to action: a serif-italic headline floats over six painted ridges of grass that roll into haze and rise with the scroll, and the nearest hill becomes the ground for your links, newsletter and socials. Painted live on canvas, with no photos.",
+          "previewUrl": "https://cdn.21st.dev/kedhareswer/meadow-rise-footer/default/preview.1793707218362-0cf0abe4-6e17-4f0c-8845-fde3a414e98a.jpg",
+          "videoUrl": null,
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/kedhareswer/meadow-rise-footer?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@kedhareswer/components/meadow-rise-footer"
+        },
+        {
+          "type": "component",
+          "id": 44013,
+          "name": "Crumpled Paper Hover Reveal",
+          "description": "Crumpled paper hover reveal in WebGL: paper balls that uncrumple into a handwritten letter, a photo print and a stamped typed letter, then crumple back. Data-driven sheets, GSAP choreography, reduced-motion crossfade.",
+          "previewUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/crumpled-paper-reveal/default/preview.1793603898777.webp",
+          "videoUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/crumpled-paper-reveal/default/video.1793603891952.mp4",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/kedhareswer/crumpled-paper-reveal?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@kedhareswer/components/crumpled-paper-reveal"
+        },
+        {
+          "type": "component",
+          "id": 44012,
+          "name": "Crumpled Paper Changelog",
+          "description": "Crumpled paper changelog: each update is a risograph poster that crumples into a WebGL paper ball and unfolds the next. Drag the timeline, click, swipe or play all.",
+          "previewUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/crumple-changelog/default/preview.1793603864541.webp",
+          "videoUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/crumple-changelog/default/video.1793603854666.mp4",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/kedhareswer/crumple-changelog?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@kedhareswer/components/crumple-changelog"
+        },
+        {
+          "type": "component",
+          "id": 44010,
+          "name": "Photo Cutout Text Reveal",
+          "description": "Photo cutout text reveal: a photograph cuts small pieces out of itself and drops them into the sentence that describes it. The sentence writes itself, cut lines are traced, and each piece lifts, re-crops in mid-air and lands between braces beside its word. Plays on view or on scroll, with a replay button.",
+          "previewUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/cutout-sentence/default/preview.1793604049049.webp",
+          "videoUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/cutout-sentence/default/video.1793604028637.mp4",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/kedhareswer/cutout-sentence?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@kedhareswer/components/cutout-sentence"
+        },
+        {
+          "type": "component",
+          "id": 44009,
+          "name": "Iridescent Silk WebGL Footer",
+          "description": "Iridescent silk WebGL footer: an airy site footer above five folds of shifting, rainbow-sheened fabric under a living film grain. Brand, tagline, social chips, four link columns with badges, and a copyright row. It only starts rendering once the footer scrolls into view.",
+          "previewUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/prism-silk-footer/default/preview.1793603974757.webp",
+          "videoUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/prism-silk-footer/default/video.1793603967964.mp4",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/kedhareswer/prism-silk-footer?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@kedhareswer/components/prism-silk-footer"
+        },
+        {
+          "type": "component",
+          "id": 43936,
+          "name": "3D Spider Cursor Follower",
+          "description": "Interactive 3D spider cursor follower: a jumping spider walks after your pointer on real IK legs, spins Verlet silk webs that stick to the page elements you mark, turns to face you when you stop, falls asleep, and hunts flies caught in its web. Press DEL to sweep the webs. three.js, one rAF loop, reduced-motion aware. Spider model by iRahulRajput (Sketchfab), CC BY 4.0.",
+          "previewUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/silk-spider-cursor/default/preview.1793604133407.webp",
+          "videoUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/silk-spider-cursor/default/video.1793604128545.mp4",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/kedhareswer/silk-spider-cursor?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@kedhareswer/components/silk-spider-cursor"
+        },
+        {
+          "type": "component",
+          "id": 43141,
+          "name": "Handwriting Signature Footer",
+          "description": "Handwriting signature footer: a white stylus writes one word in flowing script stroke by stroke, lifts and rests beside it, then a thank-you line, a short note, two actions and a quiet legal bar settle in. Built-in single-stroke script glyphs, no fonts or images. For signing flows, checkouts and case studies.",
+          "previewUrl": "https://cdn.21st.dev/kedhareswer/signature-pen-footer/default/preview.1793372505190-37c40126-c999-4b17-9e22-0ad116a1496b.png",
+          "videoUrl": "https://cdn.21st.dev/kedhareswer/signature-pen-footer/default/video.1793392876087-89bdb4b9-0942-4328-b437-31b42e8869e1.mp4",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/kedhareswer/signature-pen-footer?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@kedhareswer/components/signature-pen-footer"
+        },
+        {
+          "type": "component",
+          "id": 43140,
+          "name": "Fashion Poster Footer",
+          "description": "Fashion poster footer laid out like a screen-printed print: a photocopied dancer before a red sun with a wheel of her own echo arms fanning behind her, the wordmark in sandpapered red across a black band, link columns, seal, founding year and barcode on paper. Swap in your own photo and brand.",
+          "previewUrl": "https://cdn.21st.dev/kedhareswer/strobe-diva-footer/default/preview.1793372445455-a40d76c6-0c81-4c09-b358-6761239e3163.png",
+          "videoUrl": "https://cdn.21st.dev/kedhareswer/strobe-diva-footer/default/video.1793392885186-9f1e10ec-49f1-4b70-8970-958ce5983276.mp4",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/kedhareswer/strobe-diva-footer?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@kedhareswer/components/strobe-diva-footer"
+        },
+        {
+          "type": "component",
+          "id": 43139,
+          "name": "Ornate Gold Wings Footer",
+          "description": "Ornate gold wings footer: a closing poster where a Rajasthani elder rises from the bottom edge, her eyes ignite and molten gold pours into two baroque wings of acanthus scrolls, paisleys and filigree that run off both edges. A heavy condensed headline sits above, link columns in the quiet corners.",
+          "previewUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/gilded-gaze-footer/default/preview.1793394534332.webp",
+          "videoUrl": "https://cdn.21st.dev/kedhareswer/gilded-gaze-footer/default/video.1793392889188-dc8c66ae-d026-4a1d-9388-e3823bc0cfcc.mp4",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/kedhareswer/gilded-gaze-footer?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@kedhareswer/components/gilded-gaze-footer"
+        },
+        {
+          "type": "template",
+          "id": 1336,
+          "name": "Playful Brand Scroll Landing Page",
+          "description": "Playful brand scroll landing page built with GSAP ScrollTrigger: a rainbow preloader, letters that pop in with a bounce, and a 3D tape roll that rolls down the page laying a real strip over a taped-down paper collage. Then a wavy marquee ribbon, a mask-paint-peel scroll trick, a 3D product shop and a duct-taped footer. Built for loud consumer brands.",
+          "previewUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/templates/playful-brand-scroll-landing-page/preview-1793601408310.png",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "url": "https://21st.dev/community/templates/playful-brand-scroll-landing-page",
+          "price": 0
+        },
+        {
+          "type": "template",
+          "id": 1335,
+          "name": "Design Studio Agency Landing Page",
+          "description": "Design studio agency landing page for a team that works with SaaS startups, seen from beneath a forest canopy: amber autumn trees ring the sky behind the headline, with rotating words, client logos, work, services, process, pricing, FAQ and a booking call to action. Built with GSAP and ScrollTrigger.",
+          "previewUrl": "https://raw.githubusercontent.com/Kedhareswer/21stdev-my-components/main/media/overstory-studio-landing/template-cover.jpg",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "url": "https://21st.dev/community/templates/design-studio-agency-landing-page",
+          "price": 0
+        },
+        {
+          "type": "template",
+          "id": 1334,
+          "name": "Page Flip Recipe Book Template",
+          "description": "Page flip recipe book template: a coffee-table book of biryani legends that turns its pages as you scroll. Each chapter is an open spread on cream paper with a saffron serif title, book columns, a period engraving fading into the page and a photographed pot of biryani under rising steam. Keys, swipe and a contents page included.",
+          "previewUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/templates/page-flip-recipe-book-template/preview-1793601617168.png",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "url": "https://21st.dev/community/templates/page-flip-recipe-book-template",
+          "price": 0
+        },
+        {
+          "type": "template",
+          "id": 1333,
+          "name": "Coffee Roaster Landing Page Template",
+          "description": "Coffee roaster landing page template: a specialty roaster's new-crop launch told as one descent from the top of a volcano into the cup. Photo hero with an altitude gauge, clouds you scroll through, coffee rows, an origins map, whole bean and instant stick products, a farm-to-cup strip and a limited-edition shop block.",
+          "previewUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/templates/coffee-roaster-landing-page-template/preview-1793601546074.png",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "url": "https://21st.dev/community/templates/coffee-roaster-landing-page-template",
+          "price": 0
+        },
+        {
+          "type": "template",
+          "id": 1329,
+          "name": "Team Management SaaS Landing Page",
+          "description": "Team management SaaS landing page template set against alpine light: a framed mountain hero with a waitlist call, a logo marquee, a four-step how it works, a live product preview with four working panels, pricing with a monthly and yearly switch, a testimonial wall, a CTA under prayer flags and a footer whose wordmark rises out of the range.",
+          "previewUrl": "https://raw.githubusercontent.com/Kedhareswer/21stdev-my-components/main/media/summit-teams-template/template-cover.jpg",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "url": "https://21st.dev/community/templates/team-management-saas-landing-page",
+          "price": 0
+        },
+        {
+          "type": "template",
+          "id": 1327,
+          "name": "Henna Shop Ecommerce Template",
+          "description": "Henna shop ecommerce template: a working storefront for an organic henna house dressed like a mehndi wedding card, maroon, olive and burnished gold on parchment with damask grounds, brocade borders, Mughal arches and mandalas. Announcement marquee, search, dropdown nav, a bag drawer with quick-add and running subtotal, a design booker and a stain study you can play with.",
+          "previewUrl": "https://raw.githubusercontent.com/Kedhareswer/21stdev-my-components/main/media/mehndi-atelier-template/template-cover.jpg",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "url": "https://21st.dev/community/templates/henna-shop-ecommerce-template",
+          "price": 0
+        },
+        {
+          "type": "template",
+          "id": 1299,
+          "name": "AI App Builder Landing Page Template",
+          "description": "AI app builder landing page template in one component: a WebGL sky that re-tiles from a pixel mosaic into prism facets and silk waves as you scroll, a pixel-type headline over a working prompt composer with a demo build log and preview, glass feature cards, monthly / yearly pricing and a pixel wordmark footer. Brand, copy, plans and accent as props. The pieces are in the Mosaic Kit library.",
+          "previewUrl": "https://raw.githubusercontent.com/Kedhareswer/21stdev-my-components/main/media/mosaic-prompt-template/template-cover.jpg",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "url": "https://21st.dev/community/templates/ai-app-builder-landing-page-template",
+          "price": 0
+        },
+        {
+          "type": "template",
+          "id": 1289,
+          "name": "Baroque Fresco Interview Page Template",
+          "description": "Baroque fresco interview page template: a long-read editorial page for founder stories, artist profiles and in-conversation features, set inside graded ceiling frescoes with marble figures and drifting cloud banks. GSAP ScrollTrigger sinks the headline into the clouds, pins a pull-quote while a red ribbon draws through it, and raises the next story at the end. Includes a sticky masthead with reading progress and a Q&A section.",
+          "previewUrl": "https://raw.githubusercontent.com/Kedhareswer/21stdev-my-components/main/media/fresco-interview-template/template-cover.jpg",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "url": "https://21st.dev/community/templates/baroque-fresco-interview-page-template",
+          "price": 0
+        },
+        {
+          "type": "template",
+          "id": 1281,
+          "name": "Treasury Management Fintech Landing Page",
+          "description": "Treasury management fintech landing page for a cash-management or business banking product: cream paper, deep teal ink and an olive-gold accent. The hero holds a working dashboard rather than a screenshot, with balances, a chart and transfers. Protection and FDIC coverage, pricing, FAQ, call to action and resources, all moving with GSAP ScrollTrigger.",
+          "previewUrl": "https://raw.githubusercontent.com/Kedhareswer/21stdev-my-components/main/media/teal-treasury-landing/template-cover.jpg",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "url": "https://21st.dev/community/templates/treasury-management-fintech-landing-page",
+          "price": 0
+        },
+        {
+          "type": "template",
+          "id": 1280,
+          "name": "AI Voice Agent Landing Page",
+          "description": "AI voice agent landing page for a clinic or support phone line: every section opens a window onto a landscape at a different hour, from dawn ridges to a night sky, with calm conversation cards floating inside. Customer logos, features, wait-time stats, testimonials and a call to action. GSAP ScrollTrigger. Ember sunset palette shown.",
+          "previewUrl": "https://raw.githubusercontent.com/Kedhareswer/21stdev-my-components/main/media/cairn-agents-landing/template-cover.jpg",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "url": "https://21st.dev/community/templates/ai-voice-agent-landing-page",
+          "price": 0
+        },
+        {
+          "type": "template",
+          "id": 1279,
+          "name": "AI Agent Platform Landing Page",
+          "description": "AI agent platform landing page with a pixel mosaic art direction: a field of blue canvas pixels that sharpens on load, breaks back into blocks on scroll and turns finer under the pointer like a loupe. Hero prompt box, logos, problem and solution, stats, pricing, call to action and a mosaic wordmark footer. GSAP ScrollTrigger.",
+          "previewUrl": "https://raw.githubusercontent.com/Kedhareswer/21stdev-my-components/main/media/tessel-agent-landing/template-cover.jpg",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "url": "https://21st.dev/community/templates/ai-agent-platform-landing-page",
+          "price": 0
+        },
+        {
+          "type": "template",
+          "id": 1278,
+          "name": "Font Launch Landing Page",
+          "description": "Font launch landing page for a display typeface, printed in two riso inks: the face set big in the hero with engravings that print on, the face in use on a record sleeve that slides out with scroll, a live type tester, a glyph inspector, licensing with a running total and a closing thank-you plate. A type specimen a foundry would ship.",
+          "previewUrl": "https://raw.githubusercontent.com/Kedhareswer/21stdev-my-components/main/media/seraph-foundry-template/template-cover.jpg",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "url": "https://21st.dev/community/templates/font-launch-landing-page",
+          "price": 0
+        },
+        {
+          "type": "template",
+          "id": 1277,
+          "name": "Meal Planning App Landing Page",
+          "description": "Meal planning app landing page for athletes: editorial serif, real food and gym photography, macro cards and a phone mockup that actually works. Every section moves with GSAP ScrollTrigger: why it works, meal planning, the app, recipes by goal and resources. Strength-first lifters edition shown.",
+          "previewUrl": "https://raw.githubusercontent.com/Kedhareswer/21stdev-my-components/main/media/fuelplate-recipes-template/template-cover.jpg",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "url": "https://21st.dev/community/templates/meal-planning-app-landing-page",
+          "price": 0
+        },
+        {
+          "type": "template",
+          "id": 1276,
+          "name": "Designer CV Portfolio Template",
+          "description": "Designer CV portfolio template laid out like a printed portfolio marked up with a periwinkle pen: big serif headings, paper and charcoal sheets, handwritten arrows, ovals and doodles in the margins that draw themselves on scroll. Hello, education, skills, five projects, fun facts and a thank-you sheet. GSAP ScrollTrigger.",
+          "previewUrl": "https://raw.githubusercontent.com/Kedhareswer/21stdev-my-components/main/media/marginalia-portfolio-template/template-cover.jpg",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "url": "https://21st.dev/community/templates/designer-cv-portfolio-template",
+          "price": 0
+        },
+        {
+          "type": "template",
+          "id": 1275,
+          "name": "AI Customer Support Landing Page",
+          "description": "AI customer support landing page for a help desk copilot: every picture is a painted meadow, drawn on canvas brush stroke by brush stroke, with grass that sways and leans from the pointer. The hero holds a working inbox on autopilot that reads, replies and resolves tickets. How it works, platform, security, pricing, results and FAQ. Lavender night palette shown.",
+          "previewUrl": "https://raw.githubusercontent.com/Kedhareswer/21stdev-my-components/main/media/mallow-support-template/template-cover.jpg",
+          "author": "kedhareswer",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+          "url": "https://21st.dev/community/templates/ai-customer-support-landing-page",
+          "price": 0
+        }
+      ],
+      "limitedTo": 30
+    },
+    {
+      "author": "lumesec",
+      "results": [
+        {
+          "type": "component",
+          "id": 44579,
+          "name": "Geo Traceroute",
+          "description": "An animated traceroute visualization that renders network hops as a table with round-trip times alongside a dotted world map, where a packet travels hop by hop along great-circle paths.",
+          "previewUrl": "https://cdn.21st.dev/user_registry_lumesec_1793377338131/geo-traceroute/default/preview.1793826189985.png",
+          "videoUrl": "https://cdn.21st.dev/user_registry_lumesec_1793377338131/geo-traceroute/default/video.1793826136533.mp4",
+          "author": "lumesec",
+          "authorImage": "https://github.com/lumesec.png",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/lumesec/geo-traceroute?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@lumesec/components/geo-traceroute"
+        }
+      ],
+      "limitedTo": 30
+    },
+    {
+      "author": "miladjoodi",
+      "results": [
+        {
+          "type": "component",
+          "id": 44568,
+          "name": "Image Diff Slider",
+          "description": "A draggable before/after slider that reveals one image or content block over another to compare two versions side by side.",
+          "previewUrl": "https://cdn.21st.dev/user_registry_miladjoodi_1793377315523/diff/diff-text/preview.1793826409541.png",
+          "videoUrl": "https://cdn.21st.dev/user_registry_miladjoodi_1793377315523/diff/diff-text/video.1793826362903.mp4",
+          "author": "miladjoodi",
+          "authorImage": "https://avatars.githubusercontent.com/u/43522323?v=4",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/miladjoodi/diff?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@miladjoodi/components/diff"
+        }
+      ],
+      "limitedTo": 30
+    },
+    {
+      "author": "navedux",
+      "results": [
+        {
+          "type": "component",
+          "id": 44501,
+          "name": "Illos Knowledge Sources",
+          "description": "AI assistant knowledge panel: a live document count plus sources to connect, sync and reconnect, led by an animated Shader RAG illustration from Illos. Light and dark with your theme tokens. Code is MIT; the illustration is under the Illos free license (illos.dev/license).",
+          "previewUrl": "https://cdn.21st.dev/navedux/illos-knowledge-sources/default/preview.1793692694911-dfd51bc7-57cc-4b00-81e3-0620a212afcd.png",
+          "videoUrl": null,
+          "author": "navedux",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zS3VHdmh4S3NiOHlIc1RHbDNzejQ5a3ljS3cifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/navedux/illos-knowledge-sources?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@navedux/components/illos-knowledge-sources"
+        },
+        {
+          "type": "component",
+          "id": 44500,
+          "name": "Illos Webhook Setup",
+          "description": "Webhook form with URL validation, event checkboxes, a live request preview and a test send, beside an animated Shader webhook fan-out illustration from Illos. Light and dark with your theme tokens. Code is MIT; the illustration is under the Illos free license (illos.dev/license).",
+          "previewUrl": "https://cdn.21st.dev/navedux/illos-webhook-setup/default/preview.1793692635966-1c4b3a15-1bc4-4d4f-a60a-45336ff6d90f.png",
+          "videoUrl": null,
+          "author": "navedux",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zS3VHdmh4S3NiOHlIc1RHbDNzejQ5a3ljS3cifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/navedux/illos-webhook-setup?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@navedux/components/illos-webhook-setup"
+        },
+        {
+          "type": "component",
+          "id": 44499,
+          "name": "Illos Incident Banner",
+          "description": "Incident banner that opens to a timeline of updates and an email subscribe form, beside an animated HUD incident timeline illustration from Illos. Light and dark with your theme tokens. Code is MIT; the illustration is under the Illos free license (illos.dev/license).",
+          "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-incident-banner/default/preview.1793825317470.webp",
+          "videoUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-incident-banner/default/video.1793825229462.mp4",
+          "author": "navedux",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zS3VHdmh4S3NiOHlIc1RHbDNzejQ5a3ljS3cifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/navedux/illos-incident-banner?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@navedux/components/illos-incident-banner"
+        },
+        {
+          "type": "component",
+          "id": 44497,
+          "name": "Illos Signin Alert",
+          "description": "New sign-in alert with device, place and IP, “This was me” and a confirmed “Lock account”, beside an animated HUD threat detection illustration from Illos. Light and dark with your theme tokens. Code is MIT; the illustration is under the Illos free license (illos.dev/license).",
+          "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-signin-alert/default/preview.1793825411340.webp",
+          "videoUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-signin-alert/default/video.1793825399474.mp4",
+          "author": "navedux",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zS3VHdmh4S3NiOHlIc1RHbDNzejQ5a3ljS3cifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/navedux/illos-signin-alert?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@navedux/components/illos-signin-alert"
+        },
+        {
+          "type": "component",
+          "id": 44495,
+          "name": "Illos Stats Card",
+          "description": "KPI card with a 7, 30 or 90 day range, its change and a bar chart you can step through, beside an animated Interface chart illustration from Illos. Light and dark with your theme tokens. Code is MIT; the illustration is under the Illos free license (illos.dev/license).",
+          "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-stats-card/default/preview.1793825587112.webp",
+          "videoUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-stats-card/default/video.1793825456764.mp4",
+          "author": "navedux",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zS3VHdmh4S3NiOHlIc1RHbDNzejQ5a3ljS3cifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/navedux/illos-stats-card?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@navedux/components/illos-stats-card"
+        },
+        {
+          "type": "component",
+          "id": 44493,
+          "name": "Illos Booking Card",
+          "description": "Book-a-call card with a week strip, free time slots, a confirm step and a booked state, led by an animated Interface booking illustration from Illos. Light and dark with your theme tokens. Code is MIT; the illustration is under the Illos free license (illos.dev/license).",
+          "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-booking-card/default/preview.1793825678219.webp",
+          "videoUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-booking-card/default/video.1793825663911.mp4",
+          "author": "navedux",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zS3VHdmh4S3NiOHlIc1RHbDNzejQ5a3ljS3cifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/navedux/illos-booking-card?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@navedux/components/illos-booking-card"
+        },
+        {
+          "type": "component",
+          "id": 44492,
+          "name": "Illos Settings Panel",
+          "description": "Settings section with working switches, an unsaved-changes count, Discard and a saved state, beside an animated Interface settings illustration from Illos. Light and dark with your theme tokens. Code is MIT; the illustration is under the Illos free license (illos.dev/license).",
+          "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-settings-panel/default/preview.1793825771370.webp",
+          "videoUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-settings-panel/default/video.1793825756587.mp4",
+          "author": "navedux",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zS3VHdmh4S3NiOHlIc1RHbDNzejQ5a3ljS3cifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/navedux/illos-settings-panel?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@navedux/components/illos-settings-panel"
+        },
+        {
+          "type": "component",
+          "id": 44491,
+          "name": "Illos Api Key Card",
+          "description": "API keys card: create a key with permissions, show, hide and copy it once, revoke with a confirm step. With an animated Interface illustration from Illos; light and dark with your theme tokens. Code is MIT; the illustration is under the Illos free license (illos.dev/license).",
+          "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-api-key-card/default/preview.1793825856166.webp",
+          "videoUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-api-key-card/default/video.1793825838264.mp4",
+          "author": "navedux",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zS3VHdmh4S3NiOHlIc1RHbDNzejQ5a3ljS3cifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/navedux/illos-api-key-card?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@navedux/components/illos-api-key-card"
+        },
+        {
+          "type": "component",
+          "id": 44489,
+          "name": "Illos Command Palette",
+          "description": "Feature card with a working command palette: Cmd K opens it, typing filters, arrows move, Enter runs. Over an animated Interface illustration from Illos; light and dark with your theme tokens. Code is MIT; the illustration is under the Illos free license (illos.dev/license).",
+          "previewUrl": "https://cdn.21st.dev/navedux/illos-command-palette/default/preview.1793692041941-97395100-d5dd-4962-b656-3cad2430201a.png",
+          "videoUrl": null,
+          "author": "navedux",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zS3VHdmh4S3NiOHlIc1RHbDNzejQ5a3ljS3cifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/navedux/illos-command-palette?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@navedux/components/illos-command-palette"
+        },
+        {
+          "type": "component",
+          "id": 40111,
+          "name": "Illos Usage Pricing",
+          "description": "Usage-based pricing card with a slider that estimates the monthly bill, led by an animated isometric billing meter illustration from Illos. Light and dark with your theme tokens. Code is MIT; the illustration is under the Illos free license (illos.dev/license).",
+          "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-usage-pricing/default/preview.1792590647633.webp",
+          "videoUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-usage-pricing/default/video.1792590629055.mp4",
+          "author": "navedux",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zS3VHdmh4S3NiOHlIc1RHbDNzejQ5a3ljS3cifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/navedux/illos-usage-pricing?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@navedux/components/illos-usage-pricing"
+        },
+        {
+          "type": "component",
+          "id": 40110,
+          "name": "Illos AI Chat Empty State",
+          "description": "Empty state for an AI chat or assistant: suggestion chips, a message box and an animated Shader illustration of tokens streaming in, from Illos. Light and dark with your theme tokens. Code is MIT; the illustration is under the Illos free license (illos.dev/license).",
+          "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-ai-chat-empty-state/default/preview.1792590812591.webp",
+          "videoUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-ai-chat-empty-state/default/video.1792590769639.mp4",
+          "author": "navedux",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zS3VHdmh4S3NiOHlIc1RHbDNzejQ5a3ljS3cifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/navedux/illos-ai-chat-empty-state?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@navedux/components/illos-ai-chat-empty-state"
+        },
+        {
+          "type": "component",
+          "id": 40109,
+          "name": "Illos Email Signup",
+          "description": "Newsletter signup section with an email form and a thank-you state, beside an animated isometric mail illustration from Illos. Light and dark with your theme tokens. Code is MIT; the illustration is under the Illos free license (illos.dev/license).",
+          "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-email-signup/default/preview.1792590853167.webp",
+          "videoUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-email-signup/default/video.1792590841833.mp4",
+          "author": "navedux",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zS3VHdmh4S3NiOHlIc1RHbDNzejQ5a3ljS3cifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/navedux/illos-email-signup?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@navedux/components/illos-email-signup"
+        },
+        {
+          "type": "component",
+          "id": 40107,
+          "name": "Illos Upload Dropzone",
+          "description": "File upload dropzone with drag and drop, a browse button and a list of chosen files, built around an animated isometric uploads illustration from Illos. Light and dark with your theme tokens. Code is MIT; the illustration is under the Illos free license (illos.dev/license).",
+          "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-upload-dropzone/default/preview.1792590876801.webp",
+          "videoUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-upload-dropzone/default/video.1792590871637.mp4",
+          "author": "navedux",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zS3VHdmh4S3NiOHlIc1RHbDNzejQ5a3ljS3cifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/navedux/illos-upload-dropzone?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@navedux/components/illos-upload-dropzone"
+        },
+        {
+          "type": "component",
+          "id": 39685,
+          "name": "Illos Shader Feature Bento",
+          "description": "Three-card feature bento for AI and data products, each card led by an animated Shader illustration: vector search, cache layer, rate limiting. Theme tokens, light and dark. Code is MIT; illustrations are under the Illos free license (illos.dev/license).",
+          "previewUrl": "https://cdn.21st.dev/navedux/illos-shader-feature-bento/default/preview.1792498433871-b8565b5d-930a-4b0d-9f3a-c38164b252f3.png",
+          "videoUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-shader-feature-bento/default/video.1792507301384.mp4",
+          "author": "navedux",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zS3VHdmh4S3NiOHlIc1RHbDNzejQ5a3ljS3cifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/navedux/illos-shader-feature-bento?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@navedux/components/illos-shader-feature-bento"
+        },
+        {
+          "type": "component",
+          "id": 39681,
+          "name": "Illos Edge Hero",
+          "description": "Hero for API and infrastructure products with an animated HUD illustration of requests reaching the nearest edge. Headline, subcopy, two buttons, light and dark. Code is MIT; the illustration is under the Illos free license (illos.dev/license).",
+          "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-edge-hero/default/preview.1792507328102.webp",
+          "videoUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-edge-hero/default/video.1792507321674.mp4",
+          "author": "navedux",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zS3VHdmh4S3NiOHlIc1RHbDNzejQ5a3ljS3cifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/navedux/illos-edge-hero?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@navedux/components/illos-edge-hero"
+        },
+        {
+          "type": "template",
+          "id": 1247,
+          "name": "Tallyfold: instrument-panel landing page for AI finance",
+          "description": "Free landing page for an AI product that checks lending, reinsurance and property files. Panel grid with mono labels, desk tabs, results table, FAQ, light and dark themes, and six animated Illos illustrations that loop on screen. More at illos.dev.",
+          "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/templates/tallyfold/preview-1792773137745.png",
+          "author": "navedux",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zS3VHdmh4S3NiOHlIc1RHbDNzejQ5a3ljS3cifQ",
+          "url": "https://21st.dev/community/templates/tallyfold",
+          "price": 0
+        },
+        {
+          "type": "template",
+          "id": 1246,
+          "name": "Quillery: bento landing page with isometric art",
+          "description": "A bento grid landing page for a business memory product, in light and dark, with three animated Illos isometric illustrations that play while in view and rest under reduced motion. Plain HTML, CSS and JS built with Vite. More illustrations at illos.dev.",
+          "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/templates/quillery/preview-1792773163390.png",
+          "author": "navedux",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zS3VHdmh4S3NiOHlIc1RHbDNzejQ5a3ljS3cifQ",
+          "url": "https://21st.dev/community/templates/quillery",
+          "price": 0
+        },
+        {
+          "type": "template",
+          "id": 1245,
+          "name": "Kestrine: AI document workflow landing page",
+          "description": "Free landing page for an AI product that reads finance documents. Serif editorial layout, sticky workflow index, desk accordion, light and dark themes, and five animated Illos illustrations that loop on screen. More at illos.dev.",
+          "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/templates/kestrine/preview-1792773200111.png",
+          "author": "navedux",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zS3VHdmh4S3NiOHlIc1RHbDNzejQ5a3ljS3cifQ",
+          "url": "https://21st.dev/community/templates/kestrine",
+          "price": 0
+        },
+        {
+          "type": "template",
+          "id": 1244,
+          "name": "Ferrow: landing page with animated isometric art",
+          "description": "A light and dark landing page for an AI knowledge product, with nine animated Illos isometric illustrations that loop while in view and hold still under reduced motion. Plain HTML, CSS and JS built with Vite. More illustrations at illos.dev.",
+          "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/templates/ferrow/preview-1792773221383.png",
+          "author": "navedux",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zS3VHdmh4S3NiOHlIc1RHbDNzejQ5a3ljS3cifQ",
+          "url": "https://21st.dev/community/templates/ferrow",
+          "price": 0
+        },
+        {
+          "type": "template",
+          "id": 1243,
+          "name": "Corvane: SaaS landing page with animated illustrations",
+          "description": "A free landing page for a developer-facing SaaS: split hero, tabbed steps, feature bento, customer stories, FAQ, and light and dark themes. Comes with eight animated Illos illustrations that loop on screen and pause off it. Find more at illos.dev.",
+          "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/templates/corvane/preview-1792773270668.png",
+          "author": "navedux",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zS3VHdmh4S3NiOHlIc1RHbDNzejQ5a3ljS3cifQ",
+          "url": "https://21st.dev/community/templates/corvane",
+          "price": 0
+        },
+        {
+          "type": "template",
+          "id": 1242,
+          "name": "Brindle: B2B landing page with a side index and animation",
+          "description": "A free B2B landing page with a sticky side index, serif headlines, feature rows, customer cards, FAQ, and light and dark themes. Comes with six animated Illos illustrations that loop on screen and pause off it. Find more at illos.dev.",
+          "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/templates/brindle/preview-1792773298863.png",
+          "author": "navedux",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zS3VHdmh4S3NiOHlIc1RHbDNzejQ5a3ljS3cifQ",
+          "url": "https://21st.dev/community/templates/brindle",
+          "price": 0
+        },
+        {
+          "type": "theme",
+          "id": "7638675d-595d-4a40-8616-eafab9e440fb",
+          "name": "Illos Blueprint",
+          "description": null,
+          "previewUrl": null,
+          "author": "navedux",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zS3VHdmh4S3NiOHlIc1RHbDNzejQ5a3ljS3cifQ",
+          "url": "https://21st.dev/community/themes/illos-blueprint-1792512250047"
+        }
+      ],
+      "limitedTo": 30
+    },
+    {
+      "author": "patrickthomasdunn1988",
+      "results": [
+        {
+          "type": "component",
+          "id": 44602,
+          "name": "Cool ribs",
+          "description": "Animated WebGL shader background in the Fluted Glass style. Default variant. Generated by the 21st.dev Shader Builder. Adapted from Paper Shaders under Apache-2.0. 4-color palette (#12000A, #E63976, #FF9770, #FFECD1). Features: cursor-reactive (repel). A drop-in, zero-dependency React component for hero sections and animated gradient/noise backgrounds.",
+          "previewUrl": "https://cdn.21st.dev/patrickthomasdunn1988/cool-ribs/default/preview.1793798159914-41cb5799-953f-46d8-9a68-d95876bfcc80.webp",
+          "videoUrl": "https://cdn.21st.dev/patrickthomasdunn1988/cool-ribs/default/video.1793798159914-41cb5799-953f-46d8-9a68-d95876bfcc80.mp4",
+          "author": "patrickthomasdunn1988",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18yeTNQeWY1OERrMTlYU0FqeGdUdTRqWmFzVzQifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/patrickthomasdunn1988/cool-ribs?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@patrickthomasdunn1988/components/cool-ribs"
+        },
+        {
+          "type": "component",
+          "id": 44601,
+          "name": "Ribbed",
+          "description": "Animated WebGL shader background in the Fluted Glass style. Default variant. Generated by the 21st.dev Shader Builder. Adapted from Paper Shaders under Apache-2.0. 4-color palette (#000000, #1F51FF, #00E5FF, #EAFDFF). Features: cursor-reactive (repel). A drop-in, zero-dependency React component for hero sections and animated gradient/noise backgrounds.",
+          "previewUrl": "https://cdn.21st.dev/patrickthomasdunn1988/ribbed/default/preview.1793798139120-b7ce413f-829c-4cd5-b399-0ee46417b811.webp",
+          "videoUrl": "https://cdn.21st.dev/patrickthomasdunn1988/ribbed/default/video.1793798139120-b7ce413f-829c-4cd5-b399-0ee46417b811.mp4",
+          "author": "patrickthomasdunn1988",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18yeTNQeWY1OERrMTlYU0FqeGdUdTRqWmFzVzQifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/patrickthomasdunn1988/ribbed?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@patrickthomasdunn1988/components/ribbed"
+        },
+        {
+          "type": "component",
+          "id": 44599,
+          "name": "Fire",
+          "description": "Animated WebGL shader background in the Fluted Glass style. Waves variant. Generated by the 21st.dev Shader Builder. Adapted from Paper Shaders under Apache-2.0. 4-color palette (#000000, #1F51FF, #00E5FF, #EAFDFF). Features: cursor-reactive (repel). A drop-in, zero-dependency React component for hero sections and animated gradient/noise backgrounds.",
+          "previewUrl": "https://cdn.21st.dev/patrickthomasdunn1988/fire/default/preview.1793796375530-79200a73-0067-4458-abc5-89c360a7fc31.webp",
+          "videoUrl": "https://cdn.21st.dev/patrickthomasdunn1988/fire/default/video.1793796375530-79200a73-0067-4458-abc5-89c360a7fc31.mp4",
+          "author": "patrickthomasdunn1988",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18yeTNQeWY1OERrMTlYU0FqeGdUdTRqWmFzVzQifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/patrickthomasdunn1988/fire?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@patrickthomasdunn1988/components/fire"
+        },
+        {
+          "type": "component",
+          "id": 44598,
+          "name": "Copper",
+          "description": "Animated WebGL shader background in the Fluted Glass style. Waves variant. Generated by the 21st.dev Shader Builder. Adapted from Paper Shaders under Apache-2.0. 4-color palette (#67E8F9, #155E75, #071A24, #F0FDFA). Features: cursor-reactive (repel). A drop-in, zero-dependency React component for hero sections and animated gradient/noise backgrounds.",
+          "previewUrl": "https://cdn.21st.dev/patrickthomasdunn1988/copper/default/preview.1793796354856-ee90d157-0b57-4d39-8c8b-cffee2c26759.webp",
+          "videoUrl": "https://cdn.21st.dev/patrickthomasdunn1988/copper/default/video.1793796354856-ee90d157-0b57-4d39-8c8b-cffee2c26759.mp4",
+          "author": "patrickthomasdunn1988",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18yeTNQeWY1OERrMTlYU0FqeGdUdTRqWmFzVzQifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/patrickthomasdunn1988/copper?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@patrickthomasdunn1988/components/copper"
+        },
+        {
+          "type": "component",
+          "id": 44597,
+          "name": "Ominous",
+          "description": "Animated WebGL shader background in the Static Mesh Gradient style. Default variant. Generated by the 21st.dev Shader Builder. Adapted from Paper Shaders under Apache-2.0. 4-color palette (#02010A, #04052E, #3D2C8D, #916BBF). Features: cursor-reactive (spotlight). A drop-in, zero-dependency React component for hero sections and animated gradient/noise backgrounds.",
+          "previewUrl": "https://cdn.21st.dev/patrickthomasdunn1988/ominous/default/preview.1793796334772-80e5588e-a759-4f0b-a23b-81f542c8acef.webp",
+          "videoUrl": "https://cdn.21st.dev/patrickthomasdunn1988/ominous/default/video.1793796334772-80e5588e-a759-4f0b-a23b-81f542c8acef.mp4",
+          "author": "patrickthomasdunn1988",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18yeTNQeWY1OERrMTlYU0FqeGdUdTRqWmFzVzQifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/patrickthomasdunn1988/ominous?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@patrickthomasdunn1988/components/ominous"
+        },
+        {
+          "type": "component",
+          "id": 44596,
+          "name": "Bars",
+          "description": "Animated WebGL shader background in the Color Panels style. Default variant. Generated by the 21st.dev Shader Builder. Adapted from Paper Shaders under Apache-2.0. 4-color palette (#02010A, #04052E, #3D2C8D, #916BBF). Features: cursor-reactive (swirl). A drop-in, zero-dependency React component for hero sections and animated gradient/noise backgrounds.",
+          "previewUrl": "https://cdn.21st.dev/patrickthomasdunn1988/bars/default/preview.1793794578899-61b51e07-9de4-4eeb-b860-8a2a436fbfc0.webp",
+          "videoUrl": "https://cdn.21st.dev/patrickthomasdunn1988/bars/default/video.1793794578899-61b51e07-9de4-4eeb-b860-8a2a436fbfc0.mp4",
+          "author": "patrickthomasdunn1988",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18yeTNQeWY1OERrMTlYU0FqeGdUdTRqWmFzVzQifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/patrickthomasdunn1988/bars?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@patrickthomasdunn1988/components/bars"
+        },
+        {
+          "type": "component",
+          "id": 44595,
+          "name": "Shallow",
+          "description": "Animated WebGL shader background in the Halftone Dots style. Mosaic variant. Generated by the 21st.dev Shader Builder. Adapted from Paper Shaders under Apache-2.0. 4-color palette (#0D1B0F, #3E8E41, #C7F464, #FFFDE1). Features: cursor-reactive (repel). A drop-in, zero-dependency React component for hero sections and animated gradient/noise backgrounds.",
+          "previewUrl": "https://cdn.21st.dev/patrickthomasdunn1988/shallow/default/preview.1793794555667-51ad3bf8-2dbc-4546-aa1f-ce664c3ba762.webp",
+          "videoUrl": "https://cdn.21st.dev/patrickthomasdunn1988/shallow/default/video.1793794555667-51ad3bf8-2dbc-4546-aa1f-ce664c3ba762.mp4",
+          "author": "patrickthomasdunn1988",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18yeTNQeWY1OERrMTlYU0FqeGdUdTRqWmFzVzQifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/patrickthomasdunn1988/shallow?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@patrickthomasdunn1988/components/shallow"
+        },
+        {
+          "type": "component",
+          "id": 44594,
+          "name": "Blurred Blob",
+          "description": "Animated WebGL shader background in the Mesh drift style. Generated by the 21st.dev Shader Builder. 4-color palette (#101010, #F5F5F5, #B0B0B0, #3A3A3A). Features: cursor-reactive (push). A drop-in, zero-dependency React component for hero sections and animated gradient/noise backgrounds.",
+          "previewUrl": "https://cdn.21st.dev/patrickthomasdunn1988/blurred-blob/default/preview.1793794534796-bf86374d-21f5-460e-b46e-ddefdf6d06cc.webp",
+          "videoUrl": "https://cdn.21st.dev/patrickthomasdunn1988/blurred-blob/default/video.1793794534796-bf86374d-21f5-460e-b46e-ddefdf6d06cc.mp4",
+          "author": "patrickthomasdunn1988",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18yeTNQeWY1OERrMTlYU0FqeGdUdTRqWmFzVzQifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/patrickthomasdunn1988/blurred-blob?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@patrickthomasdunn1988/components/blurred-blob"
+        },
+        {
+          "type": "component",
+          "id": 44591,
+          "name": "Snake skin",
+          "description": "Animated WebGL shader background in the Halftone Dots style. Round and square variant. Generated by the 21st.dev Shader Builder. Adapted from Paper Shaders under Apache-2.0. 4-color palette (#02010A, #04052E, #3D2C8D, #916BBF). Features: cursor-reactive (ripple), high intensity. A drop-in, zero-dependency React component for hero sections and animated gradient/noise backgrounds.",
+          "previewUrl": "https://cdn.21st.dev/patrickthomasdunn1988/snake-skin/default/preview.1793792735209-afa6d9c0-b55d-425a-8982-ca3ea04e1e98.webp",
+          "videoUrl": "https://cdn.21st.dev/patrickthomasdunn1988/snake-skin/default/video.1793792735209-afa6d9c0-b55d-425a-8982-ca3ea04e1e98.mp4",
+          "author": "patrickthomasdunn1988",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18yeTNQeWY1OERrMTlYU0FqeGdUdTRqWmFzVzQifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/patrickthomasdunn1988/snake-skin?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@patrickthomasdunn1988/components/snake-skin"
+        },
+        {
+          "type": "component",
+          "id": 9516,
+          "name": "Bloodline",
+          "description": "Bloodline showcases a simple animated WebGL background",
+          "previewUrl": "https://cdn.21st.dev/user_2y3Pyhk69FWRxpVrHtXPbucaRRT/bloodline/default/preview.1785532576189.png",
+          "videoUrl": "https://cdn.21st.dev/user_2y3Pyhk69FWRxpVrHtXPbucaRRT/bloodline/default/video.1785532582901.mp4",
+          "author": "patrickthomasdunn1988",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18yeTNQeWY1OERrMTlYU0FqeGdUdTRqWmFzVzQifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/patrickthomasdunn1988/bloodline?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@patrickthomasdunn1988/components/bloodline"
+        },
+        {
+          "type": "component",
+          "id": 9176,
+          "name": "Wilderness",
+          "description": "On Hover Parallax Hero",
+          "previewUrl": "https://cdn.21st.dev/user_2y3Pyhk69FWRxpVrHtXPbucaRRT/wilderness/default/preview.1786145097517.webp",
+          "videoUrl": "https://cdn.21st.dev/user_2y3Pyhk69FWRxpVrHtXPbucaRRT/wilderness/default/video.1786145092527.mp4",
+          "author": "patrickthomasdunn1988",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18yeTNQeWY1OERrMTlYU0FqeGdUdTRqWmFzVzQifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/patrickthomasdunn1988/wilderness?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@patrickthomasdunn1988/components/wilderness"
+        },
+        {
+          "type": "component",
+          "id": 6434,
+          "name": "Tidal Cursor",
+          "description": "Fun Reactive Cursor",
+          "previewUrl": "https://cdn.21st.dev/patrick.thomas.dunn1988/tidal-cursor/default/preview.1756416011619.png",
+          "videoUrl": "https://cdn.21st.dev/patrick.thomas.dunn1988/tidal-cursor/default/video.1756416011619.mp4",
+          "author": "patrickthomasdunn1988",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18yeTNQeWY1OERrMTlYU0FqeGdUdTRqWmFzVzQifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/patrickthomasdunn1988/tidal-cursor?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@patrickthomasdunn1988/components/tidal-cursor"
+        },
+        {
+          "type": "component",
+          "id": 5752,
+          "name": "sneak",
+          "description": "Interactive 3D Text Effect\nA WebGL text component that creates a dynamic ripple effect when you hover over it. The text \"bubbles up\" from the surface based on mouse proximity, with smooth animations and automatic light/dark theme support.\nFeatures 3D displacement shaders, crisp SVG text rendering, and responsive design. Perfect for modern, interactive hero sections.",
+          "previewUrl": "https://cdn.21st.dev/user_2y3Pyhk69FWRxpVrHtXPbucaRRT/sneak/default/preview.1755905115381.png",
+          "videoUrl": "https://cdn.21st.dev/user_2y3Pyhk69FWRxpVrHtXPbucaRRT/sneak/default/video.1755905120398.mp4",
+          "author": "patrickthomasdunn1988",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18yeTNQeWY1OERrMTlYU0FqeGdUdTRqWmFzVzQifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/patrickthomasdunn1988/sneak?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@patrickthomasdunn1988/components/sneak"
+        },
+        {
+          "type": "component",
+          "id": 3218,
+          "name": "Robot Flyby",
+          "description": "As you scroll through the animation, a door will open and a robot will fly down the spaceships hallway. ",
+          "previewUrl": "https://cdn.21st.dev/patrick.thomas.dunn1988/robot-flyby/default/preview.1750896216789.png",
+          "videoUrl": "https://cdn.21st.dev/patrick.thomas.dunn1988/robot-flyby/default/video.1750896216789.mp4",
+          "author": "patrickthomasdunn1988",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18yeTNQeWY1OERrMTlYU0FqeGdUdTRqWmFzVzQifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/patrickthomasdunn1988/robot-flyby?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@patrickthomasdunn1988/components/robot-flyby"
+        },
+        {
+          "type": "component",
+          "id": 3217,
+          "name": "Desert Drift",
+          "description": "As you scroll through the night time animation, a 1986 Toyota Corolla drifts on a desert highway, followed by particles and a camera. ",
+          "previewUrl": "https://cdn.21st.dev/patrick.thomas.dunn1988/desert-drift/default/preview.1750894933609.png",
+          "videoUrl": "https://cdn.21st.dev/patrick.thomas.dunn1988/desert-drift/default/video.1750894933609.mp4",
+          "author": "patrickthomasdunn1988",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18yeTNQeWY1OERrMTlYU0FqeGdUdTRqWmFzVzQifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/patrickthomasdunn1988/desert-drift?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@patrickthomasdunn1988/components/desert-drift"
+        },
+        {
+          "type": "theme",
+          "id": "82b5610e-6173-40ad-bddc-759033baaad0",
+          "name": "Cold Carbon",
+          "description": null,
+          "previewUrl": null,
+          "author": "patrickthomasdunn1988",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18yeTNQeWY1OERrMTlYU0FqeGdUdTRqWmFzVzQifQ",
+          "url": "https://21st.dev/community/themes/cold-carbon-1788331155007"
+        }
+      ],
+      "limitedTo": 30
+    },
+    {
+      "author": "t01033978876",
+      "results": [
+        {
+          "type": "component",
+          "id": 44605,
+          "name": "Poppy Delirium",
+          "description": "Animated WebGL shader background in the Gem Smoke style. Daisy variant. Generated by the 21st.dev Shader Builder. Adapted from Paper Shaders under Apache-2.0. 4-color palette (#12000A, #E63976, #FF9770, #FFECD1). Features: cursor-reactive (spotlight). A drop-in, zero-dependency React component for hero sections and animated gradient/noise backgrounds.",
+          "previewUrl": "https://cdn.21st.dev/t01033978876/poppy-delirium/default/preview.1793807135614-fa5dfec7-9796-425b-b8f9-688cd51fb7c9.webp",
+          "videoUrl": "https://cdn.21st.dev/t01033978876/poppy-delirium/default/video.1793807135614-fa5dfec7-9796-425b-b8f9-688cd51fb7c9.mp4",
+          "author": "t01033978876",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zTGJEUGdpWEJlS3JyVkJQUmRqT2MyY1A5d3YifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/t01033978876/poppy-delirium?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@t01033978876/components/poppy-delirium"
+        },
+        {
+          "type": "component",
+          "id": 44569,
+          "name": "Abyss",
+          "description": "Animated WebGL shader background in the Orb style. Generated by the 21st.dev Shader Builder. 4-color palette (#02010A, #04052E, #3D2C8D, #916BBF). Features: cursor-reactive (spotlight), high intensity. A drop-in, zero-dependency React component for hero sections and animated gradient/noise backgrounds.",
+          "previewUrl": "https://cdn.21st.dev/t01033978876/abyss/default/preview.1793767535140-bf732e66-955a-4022-ab0c-13240e9660d1.webp",
+          "videoUrl": "https://cdn.21st.dev/t01033978876/abyss/default/video.1793767535140-bf732e66-955a-4022-ab0c-13240e9660d1.mp4",
+          "author": "t01033978876",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zTGJEUGdpWEJlS3JyVkJQUmRqT2MyY1A5d3YifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/t01033978876/abyss?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@t01033978876/components/abyss"
+        },
+        {
+          "type": "component",
+          "id": 44512,
+          "name": "Stan",
+          "description": "Animated WebGL shader background in the Flow field style. Generated by the 21st.dev Shader Builder. 4-color palette (#101010, #F5F5F5, #B0B0B0, #3A3A3A). Features: cursor-reactive (swirl). A drop-in, zero-dependency React component for hero sections and animated gradient/noise backgrounds.",
+          "previewUrl": "https://cdn.21st.dev/t01033978876/stan/default/preview.1793715359924-46d0d0ff-5710-4819-a304-2f12d966d8f7.webp",
+          "videoUrl": "https://cdn.21st.dev/t01033978876/stan/default/video.1793715359924-46d0d0ff-5710-4819-a304-2f12d966d8f7.mp4",
+          "author": "t01033978876",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zTGJEUGdpWEJlS3JyVkJQUmRqT2MyY1A5d3YifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/t01033978876/stan?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@t01033978876/components/stan"
+        },
+        {
+          "type": "component",
+          "id": 44511,
+          "name": "Chaos",
+          "description": "Animated WebGL shader background in the Flow field style. Generated by the 21st.dev Shader Builder. 4-color palette (#0A0A12, #5B2A86, #D64FA8, #FFC2E2). Features: cursor-reactive (swirl). A drop-in, zero-dependency React component for hero sections and animated gradient/noise backgrounds.",
+          "previewUrl": "https://cdn.21st.dev/t01033978876/chaos/default/preview.1793715338832-97e4b6d8-a5ae-45b2-9882-61c66d4df4a8.webp",
+          "videoUrl": "https://cdn.21st.dev/t01033978876/chaos/default/video.1793715338832-97e4b6d8-a5ae-45b2-9882-61c66d4df4a8.mp4",
+          "author": "t01033978876",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zTGJEUGdpWEJlS3JyVkJQUmRqT2MyY1A5d3YifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/t01033978876/chaos?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@t01033978876/components/chaos"
+        }
+      ],
+      "limitedTo": 30
+    },
+    {
+      "author": "vuongthanhthanh911516",
+      "results": [
+        {
+          "type": "theme",
+          "id": "06999342-268b-49f0-b05e-7de6ab02ccdb",
+          "name": "Vivid",
+          "description": null,
+          "previewUrl": null,
+          "author": "vuongthanhthanh911516",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zTDlWM3pidVptbWRsalNudzBJUmc5YnE2STQifQ",
+          "url": "https://21st.dev/community/themes/vivid-1793807043275"
+        }
+      ],
+      "limitedTo": 30
+    }
+  ],
+  "video": {
+    "results": [
+      {
+        "type": "component",
+        "id": 37404,
+        "name": "Prism Screenshot Slats",
+        "description": "Prism Screenshot Slats is a product UI animation for Remotion videos. Shows an action and its result inside a product. Plays 6 seconds in 16:9, 9:16 and 1:1, with editable text, images, colors and fonts.",
+        "previewUrl": "https://cdn.21st.dev/21st/prism-slats-gallery/default/preview.1791587386758-f81394a3-fac4-4f1f-9c91-b27c4fa4159f.jpg",
+        "videoUrl": "https://cdn.21st.dev/21st/prism-slats-gallery/default/video.1791587386758-f81394a3-fac4-4f1f-9c91-b27c4fa4159f.mp4",
+        "author": "21st",
+        "authorImage": "https://img.clerk.com/eyJ0eXBlIjoiZGVmYXVsdCIsImlpZCI6Imluc18ybXdGd3U1cW5FQXozZ1U2dmxnMW13ZU1PZEoiLCJyaWQiOiJ1c2VyXzNBNExTa3laM29nT0lWcWdHb1NZRlJ3dVNobSJ9",
+        "installCommand": "npx shadcn@latest add \"https://21st.dev/r/video/21st/prism-slats-gallery?api_key=$API_KEY_21ST\"",
+        "url": "https://21st.dev/@21st/components/prism-slats-gallery",
+        "runtime": "remotion",
+        "kind": "scene",
+        "aspects": [
+          "16:9",
+          "9:16",
+          "1:1"
+        ],
+        "aspect": "16:9"
+      },
+      {
+        "type": "component",
+        "id": 37398,
+        "name": "Rolled Screenshot Blueprint",
+        "description": "Rolled Screenshot Blueprint is a product UI animation for Remotion videos. Shows an action and its result inside a product. Plays 6 seconds in 16:9, 9:16 and 1:1, with editable text, images, colors and fonts.",
+        "previewUrl": "https://cdn.21st.dev/21st/scroll-blueprint-screen/default/preview.1791587210525-4813f0bb-9e02-4e92-b7ad-f7db87ceab86.jpg",
+        "videoUrl": "https://cdn.21st.dev/21st/scroll-blueprint-screen/default/video.1791587210525-4813f0bb-9e02-4e92-b7ad-f7db87ceab86.mp4",
+        "author": "21st",
+        "authorImage": "https://img.clerk.com/eyJ0eXBlIjoiZGVmYXVsdCIsImlpZCI6Imluc18ybXdGd3U1cW5FQXozZ1U2dmxnMW13ZU1PZEoiLCJyaWQiOiJ1c2VyXzNBNExTa3laM29nT0lWcWdHb1NZRlJ3dVNobSJ9",
+        "installCommand": "npx shadcn@latest add \"https://21st.dev/r/video/21st/scroll-blueprint-screen?api_key=$API_KEY_21ST\"",
+        "url": "https://21st.dev/@21st/components/scroll-blueprint-screen",
+        "runtime": "remotion",
+        "kind": "scene",
+        "aspects": [
+          "16:9",
+          "9:16",
+          "1:1"
+        ],
+        "aspect": "16:9"
+      },
+      {
+        "type": "component",
+        "id": 37390,
+        "name": "Stitched Screenshot Frame",
+        "description": "Stitched Screenshot Frame is a product UI animation for Remotion videos. Shows an action and its result inside a product. Plays 6 seconds in 16:9, 9:16 and 1:1, with editable text, images, colors and fonts.",
+        "previewUrl": "https://cdn.21st.dev/21st/stitched-screen-frame/default/preview.1791587243663-55320453-9727-4d12-bc83-05554d5e0ae0.jpg",
+        "videoUrl": "https://cdn.21st.dev/21st/stitched-screen-frame/default/video.1791587243663-55320453-9727-4d12-bc83-05554d5e0ae0.mp4",
+        "author": "21st",
+        "authorImage": "https://img.clerk.com/eyJ0eXBlIjoiZGVmYXVsdCIsImlpZCI6Imluc18ybXdGd3U1cW5FQXozZ1U2dmxnMW13ZU1PZEoiLCJyaWQiOiJ1c2VyXzNBNExTa3laM29nT0lWcWdHb1NZRlJ3dVNobSJ9",
+        "installCommand": "npx shadcn@latest add \"https://21st.dev/r/video/21st/stitched-screen-frame?api_key=$API_KEY_21ST\"",
+        "url": "https://21st.dev/@21st/components/stitched-screen-frame",
+        "runtime": "remotion",
+        "kind": "scene",
+        "aspects": [
+          "16:9",
+          "9:16",
+          "1:1"
+        ],
+        "aspect": "16:9"
+      },
+      {
+        "type": "component",
+        "id": 37369,
+        "name": "Sliding Screenshot Color Planes",
+        "description": "Sliding Screenshot Color Planes is a product UI animation for Remotion videos. Shows an action and its result inside a product. Plays 6 seconds in 16:9, 9:16 and 1:1, with editable text, images, colors and fonts.",
+        "previewUrl": "https://cdn.21st.dev/21st/de-stijl-partition/default/preview.1791582426350-fc125522-81c2-4077-9b6e-ce25bdd61b1b.jpg",
+        "videoUrl": "https://cdn.21st.dev/21st/de-stijl-partition/default/video.1791582426350-fc125522-81c2-4077-9b6e-ce25bdd61b1b.mp4",
+        "author": "21st",
+        "authorImage": "https://img.clerk.com/eyJ0eXBlIjoiZGVmYXVsdCIsImlpZCI6Imluc18ybXdGd3U1cW5FQXozZ1U2dmxnMW13ZU1PZEoiLCJyaWQiOiJ1c2VyXzNBNExTa3laM29nT0lWcWdHb1NZRlJ3dVNobSJ9",
+        "installCommand": "npx shadcn@latest add \"https://21st.dev/r/video/21st/de-stijl-partition?api_key=$API_KEY_21ST\"",
+        "url": "https://21st.dev/@21st/components/de-stijl-partition",
+        "runtime": "remotion",
+        "kind": "scene",
+        "aspects": [
+          "16:9",
+          "9:16",
+          "1:1"
+        ],
+        "aspect": "16:9"
+      },
+      {
+        "type": "component",
+        "id": 37364,
+        "name": "Accordion Screenshot Fold",
+        "description": "Accordion Screenshot Fold is a product UI animation for Remotion videos. Shows an action and its result inside a product. Plays 6 seconds in 16:9, 9:16 and 1:1, with editable text, images, colors and fonts.",
+        "previewUrl": "https://cdn.21st.dev/21st/accordion-zine-unfold/default/preview.1791581246507-d5975aab-72ef-4d2b-a7a4-6c6d24a648da.jpg",
+        "videoUrl": "https://cdn.21st.dev/21st/accordion-zine-unfold/default/video.1791581246507-d5975aab-72ef-4d2b-a7a4-6c6d24a648da.mp4",
+        "author": "21st",
+        "authorImage": "https://img.clerk.com/eyJ0eXBlIjoiZGVmYXVsdCIsImlpZCI6Imluc18ybXdGd3U1cW5FQXozZ1U2dmxnMW13ZU1PZEoiLCJyaWQiOiJ1c2VyXzNBNExTa3laM29nT0lWcWdHb1NZRlJ3dVNobSJ9",
+        "installCommand": "npx shadcn@latest add \"https://21st.dev/r/video/21st/accordion-zine-unfold?api_key=$API_KEY_21ST\"",
+        "url": "https://21st.dev/@21st/components/accordion-zine-unfold",
+        "runtime": "remotion",
+        "kind": "scene",
+        "aspects": [
+          "16:9",
+          "9:16",
+          "1:1"
+        ],
+        "aspect": "16:9"
+      }
+    ]
+  },
+  "unmatched": [
+    "/@hariompandit5556/components/newsletter-terminal-card",
+    "/@harshjadhavconnect/components/animated-gradient",
+    "/@harshjadhavconnect/components/circuit-board",
+    "/@harshjadhavconnect/components/eye-tracking",
+    "/@harshjadhavconnect/components/infinite-image-field",
+    "/@harshjadhavconnect/components/magnet-lines",
+    "/@harshjadhavconnect/components/magnetic-dock",
+    "/@harshjadhavconnect/components/particle-galaxy",
+    "/@harshjadhavconnect/components/pixel-canvas",
+    "/@harshjadhavconnect/components/silk-aurora",
+    "/@harshjadhavconnect/components/webgl-liquid",
+    "/@jvgjfhh467/themes/north-1793796311382",
+    "/@vuongthanhthanh911516/themes/vivid-1793807043275"
+  ],
+  "browserBlock": "Local browser use is disabled in Work settings",
+  "published": 0,
+  "resolvedThemeAliases": [
+    {
+      "sitemapAuthor": "jvgjfhh467",
+      "id": "7027ab36-394c-434b-a5bf-8f91e5a5816c"
+    },
+    {
+      "sitemapAuthor": "vuongthanhthanh911516",
+      "id": "06999342-268b-49f0-b05e-7de6ab02ccdb"
+    }
+  ],
+  "unresolvedComponentRoutes": [
+    "/@hariompandit5556/components/newsletter-terminal-card",
+    "/@harshjadhavconnect/components/animated-gradient",
+    "/@harshjadhavconnect/components/circuit-board",
+    "/@harshjadhavconnect/components/eye-tracking",
+    "/@harshjadhavconnect/components/infinite-image-field",
+    "/@harshjadhavconnect/components/magnet-lines",
+    "/@harshjadhavconnect/components/magnetic-dock",
+    "/@harshjadhavconnect/components/particle-galaxy",
+    "/@harshjadhavconnect/components/pixel-canvas",
+    "/@harshjadhavconnect/components/silk-aurora",
+    "/@harshjadhavconnect/components/webgl-liquid"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "typewriter-effect-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/typewriter-effect-demo-1.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport { TypewriterEffectSmooth } from \"../ui/typewriter-effect\";\nexport function TypewriterEffectSmoothDemo() {\n  const words = [\n    {\n      text: \"Build\",\n    },\n    {\n      text: \"awesome\",\n    },\n    {\n      text: \"apps\",\n    },\n    {\n      text: \"with\",\n    },\n    {\n      text: \"Aceternity.\",\n      className: \"text-blue-500 dark:text-blue-500\",\n    },\n  ];\n  return (\n    <div className=\"flex flex-col items-center justify-center h-[40rem]  \">\n      <p className=\"text-neutral-600 dark:text-neutral-200 text-xs sm:text-base  \">\n        The road to freedom starts from here\n      </p>\n      <TypewriterEffectSmooth words={words} />\n      <div className=\"flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4\">\n        <button className=\"w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm\">\n          Join now\n        </button>\n        <button className=\"w-40 h-10 rounded-xl bg-white text-black border border-black  text-sm\">\n          Signup\n        </button>\n      </div>\n    </div>\n  );\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/typewriter-effect-demo-2.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport { TypewriterEffect } from \"../ui/typewriter-effect\";\n\nexport function TypewriterEffectDemo() {\n  const words = [\n    {\n      text: \"Build\",\n    },\n    {\n      text: \"awesome\",\n    },\n    {\n      text: \"apps\",\n    },\n    {\n      text: \"with\",\n    },\n    {\n      text: \"Aceternity.\",\n      className: \"text-blue-500 dark:text-blue-500\",\n    },\n  ];\n  return (\n    <div className=\"flex flex-col items-center justify-center h-[40rem] \">\n      <p className=\"text-neutral-600 dark:text-neutral-200 text-base  mb-10\">\n        The road to freedom starts from here\n      </p>\n      <TypewriterEffect words={words} />\n      <div className=\"flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 mt-10\">\n        <button className=\"w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm\">\n          Join now\n        </button>\n        <button className=\"w-40 h-10 rounded-xl bg-white text-black border border-black  text-sm\">\n          Signup\n        </button>\n      </div>\n    </div>\n  );\n}\n"
+    }
+  ]
+}

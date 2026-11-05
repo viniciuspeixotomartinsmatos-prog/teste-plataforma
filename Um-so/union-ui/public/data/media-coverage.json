@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-10-29T18:08:10.831Z",
+  "published": 10591,
+  "localImages": 7800,
+  "localVideos": 245,
+  "ownLiveDemoCovers": 2791,
+  "withoutVisual": 0,
+  "recoveredOriginalImages": 5539,
+  "renderedOriginalIcons": 1546,
+  "definition": "Static covers are original decoded images or SVG geometry from original mounted icons. Other cards use their own sandboxed executable preview near the viewport; no generic replacement imagery."
+}

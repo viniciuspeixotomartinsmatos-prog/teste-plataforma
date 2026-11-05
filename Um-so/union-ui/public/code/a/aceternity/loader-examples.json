@@ -1,0 +1,31 @@
+{
+  "name": "loader-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/loader-one-demo.tsx",
+      "type": "registry:example",
+      "content": "import React from \"react\";\nimport { LoaderOne } from \"@/components/ui/loader\";\n\nexport function LoaderOneDemo() {\n  return <LoaderOne />;\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/loader-five-demo.tsx",
+      "type": "registry:example",
+      "content": "import React from \"react\";\nimport { LoaderFive } from \"@/components/ui/loader\";\n\nexport function LoaderFiveDemo() {\n  return <LoaderFive text=\"Generating chat...\" />;\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/loader-two-demo.tsx",
+      "type": "registry:example",
+      "content": "import React from \"react\";\nimport { LoaderTwo } from \"@/components/ui/loader\";\n\nexport function LoaderTwoDemo() {\n  return <LoaderTwo />;\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/loader-three-demo.tsx",
+      "type": "registry:example",
+      "content": "import React from \"react\";\nimport { LoaderThree } from \"@/components/ui/loader\";\n\nexport function LoaderThreeDemo() {\n  return <LoaderThree />;\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/loader-four-demo.tsx",
+      "type": "registry:example",
+      "content": "import React from \"react\";\nimport { LoaderFour } from \"@/components/ui/loader\";\n\nexport function LoaderFourDemo() {\n  return <LoaderFour />;\n}\n"
+    }
+  ]
+}

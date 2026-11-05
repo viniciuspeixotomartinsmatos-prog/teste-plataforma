@@ -1,0 +1,11 @@
+{
+  "name": "wavy-background-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/wavy-background-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport React from \"react\";\nimport { WavyBackground } from \"../ui/wavy-background\";\n\nexport function WavyBackgroundDemo() {\n  return (\n    <WavyBackground className=\"max-w-4xl mx-auto pb-40\">\n      <p className=\"text-2xl md:text-4xl lg:text-7xl text-white font-bold inter-var text-center\">\n        Hero waves are cool\n      </p>\n      <p className=\"text-base md:text-lg mt-4 text-white font-normal inter-var text-center\">\n        Leverage the power of canvas to create a beautiful hero section\n      </p>\n    </WavyBackground>\n  );\n}\n"
+    }
+  ]
+}

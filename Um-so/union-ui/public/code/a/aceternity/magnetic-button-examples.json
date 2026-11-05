@@ -1,0 +1,11 @@
+{
+  "name": "magnetic-button-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/magnetic-button-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport React from \"react\";\nimport { MagneticButton } from \"@/components/ui/magnetic-button\";\n\nexport function MagneticButtonDemo() {\n  const handleClick = () => {\n    console.log(\"clicked\");\n  };\n  return (\n    <div className=\"flex h-[40rem] w-full items-center justify-center\">\n      <MagneticButton>\n        <button\n          onClick={handleClick}\n          className=\"cursor-pointer rounded-lg bg-linear-to-b from-blue-500 to-blue-700 px-4 py-2 font-medium text-white ring-1 ring-white/20 ring-offset-1 ring-offset-blue-500 transition-transform duration-150 ring-inset active:scale-98\"\n        >\n          Follow @mannupaaji\n        </button>\n      </MagneticButton>\n    </div>\n  );\n}\n"
+    }
+  ]
+}

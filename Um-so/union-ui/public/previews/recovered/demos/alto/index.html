@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><script src="/previews/recovered/compat.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Alto — Internet rural via satélite</title>
+  <meta name="description" content="Internet via satélite para sítio, chácara e fazenda: 100 Mega onde a fibra não chega. Consulte a cobertura pelo CEP.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="Alto — Internet rural via satélite">
+  <meta property="og:description" content="100 Mega onde a fibra não chega. Consulte a cobertura pelo CEP.">
+  <link rel="icon" href="/previews/recovered/demos/alto/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/previews/recovered/demos/alto/modelo/satelite.glb" as="fetch" type="model/gltf-binary" crossorigin>
+  <script>document.documentElement.classList.add('js')</script>
+  <script type="module" crossorigin src="/previews/recovered/demos/alto/assets/index-bGuNs5R8.js"></script>
+  <link rel="stylesheet" crossorigin href="/previews/recovered/demos/alto/assets/index-B61-fpH8.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="nav" data-nav>
+    <a class="nav__logo logo" href="#topo" aria-label="Alto, voltar ao topo">Alto<span class="logo__ponto">.</span></a>
+    <button class="nav__menu" type="button" aria-expanded="false" aria-controls="menu" data-menu-botao>
+      <span class="visualmente-oculto" data-menu-rotulo>Abrir menu</span>
+      <i></i><i></i><i></i>
+    </button>
+  </header>
+
+    <div class="menu" id="menu" data-menu aria-hidden="true" inert>
+    <div class="menu__conteudo grade">
+      <nav class="menu__principal" aria-label="Seções">
+        <ol>
+          <li><a href="#planos" data-menu-link><span class="menu__num">01</span><span class="linha"><span>Planos</span></span></a></li>
+          <li><a href="#cobertura" data-menu-link><span class="menu__num">02</span><span class="linha"><span>Cobertura</span></span></a></li>
+          <li><a href="#instalacao" data-menu-link><span class="menu__num">03</span><span class="linha"><span>Instalação</span></span></a></li>
+          <li><a href="#suporte" data-menu-link><span class="menu__num">04</span><span class="linha"><span>Suporte</span></span></a></li>
+        </ol>
+      </nav>
+      <div class="menu__lado">
+        <ul class="menu__secundario">
+          <li><a class="sub" href="#conta" data-menu-link>Minha conta</a></li>
+          <li><a class="sub" href="#conta" data-menu-link>Segunda via</a></li>
+          <li><a class="sub" href="#antena" data-menu-link>Antena</a></li>
+        </ul>
+        <p class="menu__contato">
+          Atendimento todos os dias, das 7h às 22h<br>
+          <a class="sub" href="tel:08000000000">0800 000 0000</a><br>
+          <a class="sub" href="https://wa.me/5500000000000" target="_blank" rel="noopener">WhatsApp (00) 00000-0000</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <main id="conteudo">
+        <section class="hero" id="topo" aria-labelledby="hero-titulo" data-marco="carga">
+      <div class="hero__topo grade">
+        <h1 class="hero__titulo" id="hero-titulo">
+          <span class="linha" style="--i:0"><span>Internet</span></span>
+          <span class="linha" style="--i:1"><span>rural</span></span>
+        </h1>
+        <div class="hero__lado">
+          <p class="hero__sub">
+            <span class="linha" style="--i:2"><span>100 Mega onde</span></span>
+            <span class="linha" style="--i:3"><span>a fibra não chega.</span></span>
+          </p>
+        </div>
+      </div>
+
+      <div class="hero__palco" aria-hidden="true">
+        <div class="hero__vaga" data-vaga="hero" data-pose="ry:-16 rx:10 rz:-3.5 asa:-31 escala:1" data-pose-m="ry:-30 rx:12 rz:-4 asa:-26 escala:1"></div>
+        <div class="hero__sombra" data-sombra></div>
+      </div>
+
+      <div class="hero__pe surge" style="--i:6">
+        <form class="cobertura" data-cobertura novalidate aria-label="Consultar cobertura pelo CEP">
+  <div class="cobertura__campos" data-cobertura-campos>
+    <div class="campo campo--cep" data-campo>
+      <label class="campo__rotulo" for="cep-hero">Seu CEP</label>
+      <input class="campo__entrada" id="cep-hero" name="cep" type="text" inputmode="numeric" autocomplete="postal-code" placeholder="00000-000" maxlength="9" aria-describedby="cep-hero-erro" data-cep>
+      <span class="campo__erro" id="cep-hero-erro"></span>
+    </div>
+    <div class="campo campo--escolha" data-campo>
+      <label class="visualmente-oculto" for="tipo-hero">Tipo de imóvel</label>
+      <select class="campo__entrada" id="tipo-hero" name="tipo" aria-describedby="tipo-hero-erro" data-tipo>
+        <option value="" selected>Tipo de imóvel</option>
+        <option value="casa">Casa no campo</option>
+        <option value="sitio">Sítio ou chácara</option>
+        <option value="fazenda">Fazenda</option>
+        <option value="comercio">Comércio rural</option>
+      </select>
+      <svg class="campo__seta" viewBox="0 0 14 8" aria-hidden="true"><path d="M1 1l6 6 6-6"/></svg>
+      <span class="campo__erro" id="tipo-hero-erro"></span>
+    </div>
+    <div class="campo campo--escolha" data-campo>
+      <label class="visualmente-oculto" for="plano-hero">Plano</label>
+      <select class="campo__entrada" id="plano-hero" name="plano" data-plano>
+        <option value="50">Plano 50 Mega</option>
+        <option value="100" selected>Plano 100 Mega</option>
+        <option value="200">Plano 200 Mega</option>
+      </select>
+      <svg class="campo__seta" viewBox="0 0 14 8" aria-hidden="true"><path d="M1 1l6 6 6-6"/></svg>
+    </div>
+    <button class="cobertura__enviar" type="submit">
+      <span class="cobertura__texto">Consultar cobertura</span>
+      <svg class="cobertura__seta" viewBox="0 0 22 14" aria-hidden="true"><path d="M0 7h20M14 1l6 6-6 6"/></svg>
+      <span class="cobertura__pontos" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+  <div class="cobertura__resultado" data-cobertura-resultado hidden>
+    <p class="cobertura__resposta" tabindex="-1" data-cobertura-resposta></p>
+    <div class="cobertura__acoes">
+      <a class="cobertura__agendar" href="#agendar" data-cobertura-agendar>Agendar instalação <svg class="cobertura__seta" viewBox="0 0 22 14" aria-hidden="true"><path d="M0 7h20M14 1l6 6-6 6"/></svg></a>
+      <button class="cobertura__outro sub" type="button" data-cobertura-voltar>Outro CEP</button>
+    </div>
+  </div>
+</form>
+
+      </div>
+    </section>
+
+        <section class="ceu" aria-labelledby="ceu-titulo">
+      <div class="ceu__grade grade" data-marco>
+        <h2 class="titulo ceu__titulo" id="ceu-titulo">
+          <span class="linha" style="--i:0"><span>Se você vê o céu,</span></span>
+          <span class="linha" style="--i:1"><span>a Alto chega.</span></span>
+        </h2>
+        <p class="ceu__texto surge" style="--i:3">A antena da sua casa conversa direto com o satélite, a 36 mil quilômetros daqui. Não precisa de cabo, poste nem torre por perto: só de céu aberto.</p>
+      </div>
+      <div class="ceu__vaga" data-vaga="ceu" data-pose="ry:158 rx:-30 rz:8 asa:126 escala:1.05" data-pose-m="ry:160 rx:-26 rz:8 asa:130 escala:1" aria-hidden="true"></div>
+    </section>
+
+        <section class="planos" id="planos" aria-labelledby="planos-titulo">
+      <div class="planos__topo grade" data-marco>
+        <h2 class="titulo planos__titulo" id="planos-titulo">
+          <span class="linha" style="--i:0"><span>Três velocidades.</span></span>
+          <span class="linha" style="--i:1"><span>Nenhuma franquia.</span></span>
+        </h2>
+        <p class="planos__nota surge" style="--i:3">Mesmo preço o ano inteiro. A antena fica em comodato e a instalação vem inclusa.</p>
+      </div>
+
+      <ul class="planos__lista grade" data-planos>
+        <li class="plano" data-plano-coluna data-marco style="--atraso:0ms">
+          <p class="plano__velocidade"><span class="linha"><span><b class="plano__num">50</b><span class="plano__mega">Mega</span></span></span></p>
+          <p class="plano__uso surge">Para WhatsApp, banco e vídeo no celular, sem travar.</p>
+          <p class="plano__preco surge"><span class="plano__rs">R$</span>189<span class="plano__mes">/mês</span></p>
+          <a class="plano__assinar surge" href="#cobertura" data-assinar="50">Assinar <svg class="seta-svg" viewBox="0 0 22 14" aria-hidden="true"><path d="M0 7h20M14 1l6 6-6 6"/></svg><span class="visualmente-oculto"> o plano de 50 Mega</span></a>
+        </li>
+        <li class="plano plano--destaque" data-plano-coluna data-marco style="--atraso:90ms">
+          <p class="plano__velocidade"><span class="linha"><span><b class="plano__num">100</b><span class="plano__mega">Mega</span></span></span></p>
+          <p class="plano__uso surge">Para a casa toda: aula, filme e chamada de vídeo ao mesmo tempo.</p>
+          <p class="plano__preco surge"><span class="plano__rs">R$</span>249<span class="plano__mes">/mês</span></p>
+          <a class="plano__assinar surge" href="#cobertura" data-assinar="100">Assinar <svg class="seta-svg" viewBox="0 0 22 14" aria-hidden="true"><path d="M0 7h20M14 1l6 6-6 6"/></svg><span class="visualmente-oculto"> o plano de 100 Mega</span></a>
+          <p class="plano__pedido surge">o mais pedido</p>
+        </li>
+        <li class="plano" data-plano-coluna data-marco style="--atraso:180ms">
+          <p class="plano__velocidade"><span class="linha"><span><b class="plano__num">200</b><span class="plano__mega">Mega</span></span></span></p>
+          <p class="plano__uso surge">Para quem trabalha do campo: câmeras, sistema da fazenda e muita gente conectada.</p>
+          <p class="plano__preco surge"><span class="plano__rs">R$</span>369<span class="plano__mes">/mês</span></p>
+          <a class="plano__assinar surge" href="#cobertura" data-assinar="200">Assinar <svg class="seta-svg" viewBox="0 0 22 14" aria-hidden="true"><path d="M0 7h20M14 1l6 6-6 6"/></svg><span class="visualmente-oculto"> o plano de 200 Mega</span></a>
+        </li>
+      </ul>
+
+      <!-- passagem: o satélite cruza o vão entre os planos e o campo, da direita para a esquerda -->
+      <div class="passagem planos__passagem" aria-hidden="true">
+        <div class="passagem__vaga passagem__vaga--a" data-vaga="passa-1a" data-pose="ry:-26 rx:8 rz:-5 asa:-34 escala:1" data-pose-m="ry:-26 rx:8 rz:-5 asa:-34 escala:1"></div>
+        <div class="passagem__vaga passagem__vaga--b" data-vaga="passa-1b" data-pose="ry:12 rx:12 rz:4 asa:-8 escala:1" data-pose-m="ry:12 rx:12 rz:4 asa:-8 escala:1"></div>
+      </div>
+    </section>
+
+        <section class="chao" aria-labelledby="chao-titulo">
+      <div class="chao__painel">
+        <picture>
+          <source media="(max-width: 760px)" srcset="/previews/recovered/demos/alto/img/campo-m.webp" type="image/webp">
+          <img class="chao__foto" src="/previews/recovered/demos/alto/img/campo.webp" alt="Campo de trigo verde com uma árvore sozinha no horizonte, sob um céu de névoa" width="2400" height="1800" loading="lazy" decoding="async">
+        </picture>
+        <div class="chao__texto grade" data-marco>
+          <h2 class="titulo chao__titulo" id="chao-titulo">
+            <span class="linha" style="--i:0"><span>Sítio, fazenda,</span></span>
+            <span class="linha" style="--i:1"><span>chácara.</span></span>
+          </h2>
+          <p class="chao__frase surge" style="--i:3">Onde tiver céu aberto, a internet chega: no curral, na horta, na varanda.</p>
+        </div>
+      </div>
+
+      <ul class="chao__gente grade" aria-label="Quem usa a Alto">
+        <li class="gente gente--1" data-paralaxe="0.10">
+          <figure>
+            <div class="gente__quadro"><img src="/previews/recovered/demos/alto/img/gente-1.webp" alt="Homem de chapéu de palha olhando o celular no meio das árvores" width="900" height="1125" loading="lazy" decoding="async"></div>
+            <figcaption>Negócio fechado pelo celular, sem ir até a cidade.</figcaption>
+          </figure>
+        </li>
+        <li class="gente gente--2" data-paralaxe="0.22">
+          <figure>
+            <div class="gente__quadro"><img src="/previews/recovered/demos/alto/img/gente-2.webp" alt="Mulher com o notebook no colo numa varanda de madeira, com a mata e a serra ao fundo" width="1400" height="1050" loading="lazy" decoding="async"></div>
+            <figcaption>Reunião às nove, com vista para a mata.</figcaption>
+          </figure>
+        </li>
+        <li class="gente gente--3" data-paralaxe="0.04">
+          <figure>
+            <div class="gente__quadro"><img src="/previews/recovered/demos/alto/img/gente-3.webp" alt="Mulher de avental consultando um tablet entre as plantas da horta" width="900" height="1125" loading="lazy" decoding="async"></div>
+            <figcaption>As encomendas da horta chegam pelo WhatsApp.</figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+
+        <section class="instalacao" id="instalacao" aria-labelledby="instalacao-titulo">
+      <div class="instalacao__topo grade" data-marco>
+        <h2 class="titulo instalacao__titulo" id="instalacao-titulo">
+          <span class="linha" style="--i:0"><span>Do CEP ao Wi‑Fi</span></span>
+          <span class="linha" style="--i:1"><span>em até sete dias.</span></span>
+        </h2>
+      </div>
+
+      <div class="instalacao__palco" aria-hidden="true">
+        <div class="instalacao__vaga instalacao__vaga--a" data-vaga="inst-a" data-pose="ry:-62 rx:9 az:0 el:8 escala:.62" data-pose-m="ry:-62 rx:9 az:0 el:8 escala:.5"></div>
+        <div class="instalacao__vaga instalacao__vaga--b" data-vaga="inst-b" data-pose="ry:-34 rx:11 az:0 el:42 escala:.62" data-pose-m="ry:-34 rx:11 az:0 el:40 escala:.5"></div>
+      </div>
+
+      <ol class="instalacao__passos grade">
+        <li class="passo passo--1" data-marco>
+          <p class="passo__num"><span class="linha"><span>01</span></span></p>
+          <h3 class="passo__nome surge" style="--i:2">Consulta</h3>
+          <p class="passo__texto surge" style="--i:3">Você digita o CEP e escolhe o plano. Leva um minuto.</p>
+        </li>
+        <li class="passo passo--2" data-marco>
+          <p class="passo__num"><span class="linha"><span>02</span></span></p>
+          <h3 class="passo__nome surge" style="--i:2">Visita</h3>
+          <p class="passo__texto surge" style="--i:3">Um técnico da sua região liga e combina o melhor dia.</p>
+        </li>
+        <li class="passo passo--3" id="antena" data-marco>
+          <p class="passo__num"><span class="linha"><span>03</span></span></p>
+          <h3 class="passo__nome surge" style="--i:2">Antena</h3>
+          <p class="passo__texto surge" style="--i:3">A antena vai no telhado ou num mastro, virada para o céu do norte. São três horas de trabalho.</p>
+        </li>
+        <li class="passo passo--4" data-marco>
+          <p class="passo__num"><span class="linha"><span>04</span></span></p>
+          <h3 class="passo__nome surge" style="--i:2">Wi‑Fi</h3>
+          <p class="passo__texto surge" style="--i:3">O técnico só vai embora depois de testar o sinal em cada cômodo.</p>
+        </li>
+      </ol>
+
+      <!-- depois do passo 04, a antena desce para cá (só no desktop) -->
+      <div class="instalacao__vaga--c" data-vaga="inst-c" data-pose="ry:40 rx:14 az:0 el:38 escala:.58" aria-hidden="true"></div>
+
+    </section>
+
+        <section class="casa" aria-labelledby="casa-titulo">
+      <div class="casa__topo grade" data-marco>
+        <h2 class="titulo casa__titulo" id="casa-titulo">
+          <span class="linha" style="--i:0"><span>Longe de tudo,</span></span>
+          <span class="linha" style="--i:1"><span>perto de todo mundo.</span></span>
+        </h2>
+        <p class="casa__texto surge" style="--i:3">Digite o CEP da sua casa. Se ela enxerga o céu, a gente instala.</p>
+      </div>
+
+      <figure class="casa__foto" data-marco>
+        <picture>
+          <source media="(max-width: 760px)" srcset="/previews/recovered/demos/alto/img/casa-m.webp" type="image/webp">
+          <img src="/previews/recovered/demos/alto/img/casa.webp" alt="Casa de sítio branca com porta e janelas azuis, telhado de telha, antena parabólica e um flamboyant florido, terra vermelha na frente" width="2400" height="1600" loading="lazy" decoding="async">
+        </picture>
+        <!-- passagem: o satélite cruza o céu da foto, por cima do telhado, rumo à antena da casa -->
+        <div class="passagem casa__passagem" aria-hidden="true">
+          <div class="passagem__vaga passagem__vaga--a" data-vaga="passa-2a" data-pose="ry:-34 rx:10 rz:-3 asa:-20 escala:1"></div>
+          <div class="passagem__vaga passagem__vaga--b" data-vaga="passa-2b" data-pose="ry:-6 rx:14 rz:3 asa:-40 escala:1"></div>
+        </div>
+      </figure>
+
+      <div class="casa__consulta" id="cobertura" data-ancora="center">
+        <div class="casa__faixa">
+          <form class="cobertura" data-cobertura novalidate aria-label="Consultar cobertura pelo CEP">
+  <div class="cobertura__campos" data-cobertura-campos>
+    <div class="campo campo--cep" data-campo>
+      <label class="campo__rotulo" for="cep-casa">Seu CEP</label>
+      <input class="campo__entrada" id="cep-casa" name="cep" type="text" inputmode="numeric" autocomplete="postal-code" placeholder="00000-000" maxlength="9" aria-describedby="cep-casa-erro" data-cep>
+      <span class="campo__erro" id="cep-casa-erro"></span>
+    </div>
+    <div class="campo campo--escolha" data-campo>
+      <label class="visualmente-oculto" for="tipo-casa">Tipo de imóvel</label>
+      <select class="campo__entrada" id="tipo-casa" name="tipo" aria-describedby="tipo-casa-erro" data-tipo>
+        <option value="" selected>Tipo de imóvel</option>
+        <option value="casa">Casa no campo</option>
+        <option value="sitio">Sítio ou chácara</option>
+        <option value="fazenda">Fazenda</option>
+        <option value="comercio">Comércio rural</option>
+      </select>
+      <svg class="campo__seta" viewBox="0 0 14 8" aria-hidden="true"><path d="M1 1l6 6 6-6"/></svg>
+      <span class="campo__erro" id="tipo-casa-erro"></span>
+    </div>
+    <div class="campo campo--escolha" data-campo>
+      <label class="visualmente-oculto" for="plano-casa">Plano</label>
+      <select class="campo__entrada" id="plano-casa" name="plano" data-plano>
+        <option value="50">Plano 50 Mega</option>
+        <option value="100" selected>Plano 100 Mega</option>
+        <option value="200">Plano 200 Mega</option>
+      </select>
+      <svg class="campo__seta" viewBox="0 0 14 8" aria-hidden="true"><path d="M1 1l6 6 6-6"/></svg>
+    </div>
+    <button class="cobertura__enviar" type="submit">
+      <span class="cobertura__texto">Consultar cobertura</span>
+      <svg class="cobertura__seta" viewBox="0 0 22 14" aria-hidden="true"><path d="M0 7h20M14 1l6 6-6 6"/></svg>
+      <span class="cobertura__pontos" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+  <div class="cobertura__resultado" data-cobertura-resultado hidden>
+    <p class="cobertura__resposta" tabindex="-1" data-cobertura-resposta></p>
+    <div class="cobertura__acoes">
+      <a class="cobertura__agendar" href="#agendar" data-cobertura-agendar>Agendar instalação <svg class="cobertura__seta" viewBox="0 0 22 14" aria-hidden="true"><path d="M0 7h20M14 1l6 6-6 6"/></svg></a>
+      <button class="cobertura__outro sub" type="button" data-cobertura-voltar>Outro CEP</button>
+    </div>
+  </div>
+</form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+    <footer class="rodape" id="suporte" aria-labelledby="rodape-titulo">
+    <div class="rodape__grade grade">
+      <div class="rodape__atendimento" data-marco>
+        <h2 class="rodape__titulo" id="rodape-titulo">
+          <span class="linha" style="--i:0"><span>Suporte de gente,</span></span>
+          <span class="linha" style="--i:1"><span>todos os dias.</span></span>
+        </h2>
+        <p class="rodape__contato surge" style="--i:2">
+          <a class="sub rodape__tel" href="tel:08000000000">0800 000 0000</a>
+          <a class="sub" href="https://wa.me/5500000000000" target="_blank" rel="noopener">WhatsApp (00) 00000-0000</a>
+          <span class="rodape__hora">das 7h às 22h, inclusive domingo</span>
+        </p>
+      </div>
+      <nav class="rodape__links" aria-label="Rodapé">
+        <ul>
+          <li><a class="sub" href="#planos">Planos</a></li>
+          <li><a class="sub" href="#cobertura">Cobertura</a></li>
+          <li><a class="sub" href="#instalacao">Instalação</a></li>
+        </ul>
+        <ul id="conta">
+          <li><a class="sub" href="#conta">Minha conta</a></li>
+          <li><a class="sub" href="#conta">Segunda via</a></li>
+        </ul>
+        <ul>
+          <li><a class="sub" href="#suporte">Suporte</a></li>
+          <li><a class="sub" href="#antena">Antena</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="rodape__ceu" aria-hidden="true">
+      <div class="rodape__vaga rodape__vaga--a" data-vaga="rodape-a" data-pose="ry:-8 rx:6 rz:-3 asa:-30 escala:.92" data-pose-m="ry:-20 rx:8 rz:-5 asa:-30 escala:1"></div>
+      <div class="rodape__vaga rodape__vaga--b" data-vaga="rodape-b" data-pose="ry:-18 rx:8 rz:-6 asa:-36 escala:.92" data-pose-m="ry:-30 rx:10 rz:-8 asa:-40 escala:1"></div>
+    </div>
+
+    <p class="rodape__marca" aria-hidden="true">Alto<span>.</span></p>
+
+    <div class="rodape__base grade">
+      <p class="rodape__empresa">Alto Internet Via Satélite Ltda. · CNPJ 00.000.000/0001-00 (exemplo)</p>
+      <p class="rodape__legal"><a class="sub" href="#termos">Termos</a><a class="sub" href="#privacidade">Privacidade</a></p>
+      <a class="rodape__topo sub" href="#topo">Voltar ao topo <span class="rodape__seta" aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+
+
+  <canvas class="cena" aria-hidden="true"></canvas>
+  <div class="barra" aria-hidden="true"><i class="barra__polegar"></i></div>
+
+</body>
+</html>

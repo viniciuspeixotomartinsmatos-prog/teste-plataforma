@@ -1,0 +1,1 @@
+{"files":[{"path":"Usage.tsx","content":"import Home from \"@/components/ui/hero-ascii-one\";\n\nexport default function DemoOne() {\n  return (\n    <div className=\"w-screen h-screen\">\n      <Home />\n    </div>\n  );\n}\n"}],"usageOnly":true,"description":"Hero ASCII one","examples":[],"variants":[],"additionalCodePaths":[],"framework":"react"}

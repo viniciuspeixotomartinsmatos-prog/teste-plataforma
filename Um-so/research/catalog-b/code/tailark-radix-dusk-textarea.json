@@ -1,0 +1,23 @@
+{
+  "name": "Dusk Textarea",
+  "sourceId": "tailark",
+  "files": [
+    {
+      "path": "registry/bases/radix/dusk/ui/textarea.tsx",
+      "content": "import * as React from 'react'\n\nimport { cn } from '@/registry/core/lib/utils'\n\nfunction Textarea({ className, ...props }: React.ComponentProps) {\n    return (\n        <textarea\n            data-slot=\"textarea\"\n            className={cn('border-input placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive field-sizing-content shadow-xs flex min-h-16 w-full rounded-md border bg-transparent px-3 py-2 text-base outline-none transition-[color,box-shadow] focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 md:text-sm', className)}\n            {...props}\n        />\n    )\n}\n\nexport { Textarea }\n",
+      "type": "registry:component"
+    },
+    {
+      "path": "registry/core/lib/utils.ts",
+      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}",
+      "type": "dependency"
+    }
+  ],
+  "demoCode": null,
+  "dependencies": [
+    "react"
+  ],
+  "registryDependencies": [],
+  "license": "MIT",
+  "sourceUrl": "https://github.com/tailark/blocks/blob/main/registry/bases/radix/dusk/ui/textarea.tsx"
+}

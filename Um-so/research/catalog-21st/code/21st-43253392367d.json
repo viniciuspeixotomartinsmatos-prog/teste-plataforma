@@ -1,0 +1,1 @@
+{"files": [{"path": "Usage.tsx", "content": "import { WaitlistHero } from \"@/components/ui/waitlist-hero\";\n\nexport default function DemoOne() {\n  return <WaitlistHero />;\n}\n"}], "usageOnly": true, "description": "Waitlist Hero Animation"}

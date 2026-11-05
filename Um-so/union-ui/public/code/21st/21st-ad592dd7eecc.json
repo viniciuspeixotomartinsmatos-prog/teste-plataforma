@@ -1,0 +1,1 @@
+{"files":[{"path":"Usage.tsx","content":"import { Features } from \"@/components/blocks/features-8\"\n\nexport const Demo = () => {\n    return <Features />\n}"}],"usageOnly":true,"description":"features section","examples":[],"variants":[],"additionalCodePaths":[],"framework":"react"}
