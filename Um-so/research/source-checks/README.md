@@ -44,3 +44,34 @@ The pending acquisition files and original audit snapshots remain as historical 
 ## 2026-11-05
 
 The daily check retained 52 newly observed public 21st component/example bundles, original CSS for NORTH and Vivid, and the original arbo landing-page video/poster with a disclosed reconstructed prompt. These remain outside the published catalog because authorized local browser use was disabled. Sticker Slap Footer appeared in the Profitize listing but its detail URL returned 404. Per-source comparisons, limitations, retained-file hashes and the next validation steps are recorded in `releases/2026-11-05/README.md` and `integrity.json`. No application entries or payment features were published by this check.
+
+
+## 2026-11-09 — public inventory check; nothing published
+
+Git synchronized with `origin/jorge` before this check. Ten public sources checked using their current sitemaps, official registry/repository fallbacks where configured, public home pages and the Profitize browser catalog. First dated snapshot retains the Nov 5 comparison; closing snapshot adds the two explicitly observed `/build/motion/` routes. These two are newly covered by the matcher, not asserted newly launched.
+
+| Source | Observed routes | Newly observed since Nov 5 | Status |
+|---|---:|---:|---|
+| 21st | 10307 | 125 | Candidates only; executable assembly and validation pending |
+| aceternity | 173 | 0 | Public inventory compared; no new routes observed |
+| magic | 78 | 0 | Public inventory compared; no new routes observed |
+| reactbits | 187 | 0 | Public inventory compared; no new routes observed |
+| kokonut | 124 | 0 | Public inventory compared; no new routes observed |
+| shadcnblocks | 5129 | 476 | Candidates only; executable assembly and validation pending |
+| motion | 33 | 0 | Sitemap 404; official public registry fallback compared (33 routes); web reader returned 403 |
+| tailark | 0 | 0 | Official repository tree compared; no source differences observed; sitemap has no matching routes |
+| animate | 140 | 0 | Public inventory compared; no new routes observed |
+| profitize | 103 | 6 | 103 browser-visible items including 2 Motion entries previously omitted by matcher; original premium prompts require subscribed sign-in |
+
+Profitize: 103 items observed in the public browser listing, compared with 95 retained integrated observations. Public route candidates missing from retained inventory: Sticker Slap Footer, Arbo (already staged on Nov 5), Alísio, Kairo, ORBO, Pátio, Scoopie, Trami and the two Motion references “Esse é o Claude” and “Nova Feature”. Public listings alone are not proof of usable videos, runnable components or original prompt availability. The user scope remains preview videos and prompts.
+
+Clicking “Copiar o prompt de Kairo” opened the explicit “Assine para copiar este prompt” modal in the signed-out IAB. No original premium prompt was retrieved, no subscription was purchased, no authentication or restriction bypassed, and no account credentials were requested or stored. The modal was closed afterward. Access to an already subscribed Profitize account is required for original premium prompts; do not silently label reconstructed text as recovered originals. A new login request is the actionable outcome of this check.
+
+21st exposes Apps, Icons and Video navigation in addition to component/theme/template sections. Existing route discovery does not cover these other products or implementation-only changes; retain this coverage gap for subsequent explicit checks. Shadcnblocks routes increased by 476; 125 new 21st routes were observed. Some newly indexed Shadcnblocks routes already correspond to retained entries (454 total unmatched, not 476 newly missing components). Neither number is a count of new working app entries.
+
+No executable application content changed, no frontend build was necessary for research-only updates. Source checker expanded to include Profitize Motion routes. Both dated reports parse and all ten sources are represented; closing report contains 103 distinct Profitize routes including the two browser-observed Motion entries. Existing Nov 5 bundles still require assembly, media/prompt/download checks and browser validation before publication. Browser inventory and public Profitize rendering worked today; application preview validation was not performed. No Vercel application deployment was requested by this research-only check. Stripe and all payments remain disabled.
+
+
+### Authorized retry after sign-in — 2026-11-09
+
+The user signed into an existing Pro account and asked to retry. Kairo unlocked through the normal site UI; the original prompt was downloaded successfully. Retained in `releases/2026-11-09/profitize/kairo/` with provenance and SHA-256. No application entry was published yet. Other premium items have not been claimed accessible or downloaded.
