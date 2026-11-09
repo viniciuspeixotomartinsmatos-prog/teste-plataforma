@@ -12,9 +12,10 @@ test('authorized original releases copy their actual prompts and export byte-ide
    const item=catalog.find(row=>row.id==='recovered--'+slug);assert.ok(item,slug);
    const payload=JSON.parse(await fs.readFile('public'+item.codePath,'utf8'));
    const prompt=await fs.readFile('../research/source-checks/releases/2026-11-09/profitize/'+slug+'/PROMPT-ORIGINAL.md','utf8');
-   assert.equal(await componentPrompt(item,payload),prompt,slug);
+   const normalizePrompt=text=>text.replace(/\r\n/g,'\n');
+   assert.equal(normalizePrompt(await componentPrompt(item,payload)),normalizePrompt(prompt),slug);
    const archive=unzipSync(await componentArchive(item,payload));
-   assert.equal(strFromU8(archive['src/PROMPT-ORIGINAL.md']),prompt);
+   assert.equal(normalizePrompt(strFromU8(archive['src/PROMPT-ORIGINAL.md'])),normalizePrompt(prompt));
    if(slug==='sticker-slap-footer'){
     assert.ok(archive['src/components/ui/sticker-slap-footer.tsx']);
     assert.ok(archive['src/components/sticker-slap-footer-demo.tsx']);

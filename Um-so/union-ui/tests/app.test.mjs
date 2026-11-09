@@ -12,7 +12,8 @@ async function settle(){await act(async()=>{await new Promise(resolve=>setTimeou
 async function click(el){assert.ok(el,'target exists');await act(async()=>{el.dispatchEvent(new MouseEvent('click',{bubbles:true}));});await settle();}
 function button(text){return [...document.querySelectorAll('button')].find(el=>el.textContent.trim()===text);}
 async function fill(el,value){assert.ok(el);await act(async()=>{const setter=Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype,'value').set;setter.call(el,value);el.dispatchEvent(new Event('input',{bubbles:true}));el.dispatchEvent(new Event('change',{bubbles:true}));});await settle();}
-test('unified workspace preserves search, categories, collections, comparison and source code',async()=>{
+test('unified workspace preserves search, categories, collections, comparison and source code',async t=>{
+ t.after(async()=>{await act(async()=>root.unmount());dom.window.close();});
  await act(async()=>root.render(React.createElement(App)));for(let i=0;i<10&&!document.querySelector('.catalog-grid');i++)await settle();
  assert.equal(document.querySelectorAll('.catalog-grid .item-card').length,36);assert.ok(document.querySelector('h1').textContent.includes('Tudo para criar.'));assert.ok(document.querySelector('.brand').textContent.includes('nitido'));assert.equal(document.querySelector('.source-strip'),null);assert.equal(document.querySelector('.main-nav a[href="/sources"]'),null);
  const categoryButton=[...document.querySelectorAll('.sidebar-link')].find(el=>el.querySelector('span')?.textContent==='Botões');await click(categoryButton);assert.equal(new URLSearchParams(window.location.search).get('category'),'Buttons');assert.ok(document.querySelectorAll('.card-category').length>0);assert.ok([...document.querySelectorAll('.card-category')].every(el=>el.textContent.includes('Botões')));
@@ -39,8 +40,8 @@ test('unified workspace preserves search, categories, collections, comparison an
  for(let i=0;i<40&&(!button('Copiar prompt')||button('Copiar prompt').disabled);i++)await settle();
  await click(button('Copiar prompt'));
  const originalKairo=await fs.readFile('../research/source-checks/releases/2026-11-09/profitize/kairo/PROMPT-ORIGINAL.md','utf8');
- assert.ok(clipboard.startsWith(originalKairo),'recorded preview copies its original authorized prompt, not a generic HTML reconstruction');
+ // Git may check out the Markdown as CRLF while the JSON keeps the original LF.
+ assert.ok(clipboard.replace(/\r\n/g,'\n').startsWith(originalKairo.replace(/\r\n/g,'\n')),'recorded preview copies its original authorized prompt, not a generic HTML reconstruction');
  assert.match(document.querySelector('.detail-about').textContent,/Prompt original incluído/);
- await act(async()=>root.unmount());
 });
 
