@@ -17,8 +17,11 @@ function inspectPreview(id,dependencyWarning){
   // presented. Respect renderer startup markers before accepting readiness.
   if(select('[data-preview-pending="true"]').length){setTimeout(inspect,150);return;}
   const awaitingRenderer=node=>node.closest('[data-ready="false"]')?.querySelector('canvas');
+  // aria-hidden is an accessibility flag, not visual invisibility. Explicitly
+  // presented decorative renderers must be accepted after their first frame.
+  const presented=select('[data-preview-presented="true"]').some(node=>{const r=node.getBoundingClientRect(),s=getComputedStyle(node);return r.width>0&&r.height>0&&s.display!=='none'&&s.visibility!=='hidden';});
   const content=root&&((typeof root.innerText==='string'?root.innerText:root.textContent)?.trim()||select('canvas,svg,img,video,iframe,button,input,textarea,select,[role=slider],[role=progressbar]').some(node=>{const r=node.getBoundingClientRect();return r.width>0&&r.height>0&&!node.closest('[aria-hidden=true]')&&!awaitingRenderer(node);})||select('div,span').some(node=>{const r=node.getBoundingClientRect(),style=getComputedStyle(node);return !awaitingRenderer(node)&&r.width>1&&r.height>1&&style.visibility!=='hidden'&&Number(style.opacity)>0&&(style.backgroundImage!=='none'||style.boxShadow!=='none'||parseFloat(style.borderTopWidth)>0&&style.borderTopColor!=='rgba(0, 0, 0, 0)'||style.backgroundColor!=='rgba(0, 0, 0, 0)'&&style.backgroundColor!==getComputedStyle(root).backgroundColor);}));
-  if(!content){setTimeout(inspect,150);return;}
+  if(!content&&!presented){setTimeout(inspect,150);return;}
   const images=select('img').filter(image=>image.getAttribute('src')||image.getAttribute('srcset'));
   const broken=images.filter(image=>image.complete&&!image.naturalWidth);
   const brokenVideos=select('video').filter(video=>video.error);

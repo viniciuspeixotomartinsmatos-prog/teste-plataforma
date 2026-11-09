@@ -1,5 +1,16 @@
 # Verificação — Um só.
 
+## Splash Cursor loading fix — 2026-11-09
+
+- Target flow: `/component/splash-cursor-47c705` opens its actual cursor effect, confirms a presented frame, accepts pointer movement/click and exits loading. A stalled request or renderer must stop with a retry action.
+- Found: original effect canvas is inside an aria-hidden decorative root; readiness excluded that canvas. Source also returned silently when WebGL2/float targets were unavailable. Preparation lacked a shared abort deadline and a late ready message could hide a failed attempt.
+- Fixed: explicit pending/presented renderer markers; original WebGL renderer retained with startup and context-loss callbacks; interactive Canvas 2D ink compatibility renderer for failed/unsupported GPU initialization. Compatibility output differs from the original fluid shader. Original source and renderer notes included in exported payload.
+- Shared loader: one 20-second deadline covers HTML and resource preparation, including work that ignores AbortSignal. Navigation cancels preparation. A renderer still unready after 30 seconds is unloaded; late ready messages cannot revive an error. Retry uses a fresh attempt.
+- Code checks: 95/95 full-suite tests passed, production build passed (2m25s), Sites packaging tests 4/4, existing interaction audit 5/5. Final generated runtime HTML, bundle, package and overrides byte-compared/synchronized with build output after adapter regeneration.
+- New tests: rendered React loading/error/retry flow with accelerated deadlines; hanging HTML and asset preparation; canvas pixel changes, resize, movement and click; compiled original demo startup with missing WebGL, unsupported float targets and thrown context creation. Tests assert checked readiness after real fallback pixel output and exact retention of the original TSX.
+- Browser: CUA inventory returned `Local browser use is disabled in Work settings`. No alternate-browser bypass used. Desktop/mobile screenshots, actual browser WebGL shader output and authenticated production behavior remain unverified. Previous 21st batch stays unpublished; this fix does not validate those candidates.
+- final result: code checks passed; browser QA blocked
+
 ## 21st November 9 update stage
 
 - Scope: 168 unpublished candidates, including 144 component examples, 16 independently assembled theme demos and eight compiled template references.
