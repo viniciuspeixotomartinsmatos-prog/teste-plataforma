@@ -22,8 +22,8 @@ for(const plan of plans){
  const candidates=existing.filter(price=>price.custom_data?.nitido_plan===plan.id);
  if(candidates.length>1)throw Error('Multiple sandbox prices found for '+plan.id+'. Reconcile manually.');
  let price=candidates[0];
- if(price&&(price.unit_price?.currency_code!==plan.currency||String(price.unit_price?.amount)!==String(plan.amount)||price.billing_cycle?.interval!=='month'||price.billing_cycle?.frequency!==plan.months||price.trial_period||price.unit_price_overrides?.length))throw Error('Existing sandbox price differs from approved plan '+plan.id+'. No price was overwritten.');
- price||=(await api('/prices',{method:'POST',body:{product_id:product.id,description:plan.name+' — sandbox',name:plan.name,unit_price:{amount:String(plan.amount),currency_code:plan.currency},billing_cycle:{interval:'month',frequency:plan.months},custom_data:{nitido_plan:plan.id}}})).data;
+ if(price&&(price.unit_price?.currency_code!==plan.currency||String(price.unit_price?.amount)!==String(plan.amount)||price.billing_cycle?.interval!=='month'||price.billing_cycle?.frequency!==plan.months||price.trial_period||price.unit_price_overrides?.length||price.quantity?.minimum!==1||price.quantity?.maximum!==1))throw Error('Existing sandbox price differs from approved plan '+plan.id+'. No price was overwritten.');
+ price||=(await api('/prices',{method:'POST',body:{product_id:product.id,description:plan.name+' — sandbox',name:plan.name,unit_price:{amount:String(plan.amount),currency_code:plan.currency},billing_cycle:{interval:'month',frequency:plan.months},quantity:{minimum:1,maximum:1},custom_data:{nitido_plan:plan.id}}})).data;
  configured['PADDLE_PRICE_'+plan.id.toUpperCase()]=price.id;
 }
 console.log(JSON.stringify({environment:'sandbox',applied:true,configured,note:'Configure webhook, client token and server credentials separately; billing remains disabled.'},null,2));

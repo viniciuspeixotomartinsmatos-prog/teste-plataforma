@@ -67,7 +67,7 @@ test('paid gate leaves signed-in users locked without confirmed subscription',as
  assert.equal(await app.canReadCode(new Request(origin+'/code/a.json')),false);
 });
 function fixture(){
- const price={id:id('pri'),product_id:id('pro'),status:'active',unit_price:{currency_code:'BRL',amount:'8500'},billing_cycle:{interval:'month',frequency:1},trial_period:null};
+ const price={id:id('pri'),product_id:id('pro'),status:'active',unit_price:{currency_code:'BRL',amount:'8500'},billing_cycle:{interval:'month',frequency:1},trial_period:null,quantity:{minimum:1,maximum:1}};
  const customer=id('ctm'),transaction={id:id('txn'),customer_id:customer,subscription_id:id('sub'),collection_mode:'automatic',currency_code:'BRL',status:'completed',items:[{quantity:1,price}],billing_period:{ends_at:'2026-12-06T12:00:00Z'}};
  const subscription={id:id('sub'),customer_id:customer,status:'active',items:[{quantity:1,price}],scheduled_change:null};
  return{price,customer,transaction,subscription};
@@ -121,13 +121,25 @@ test('activated subscription cannot grant paid access; approved partial refund r
  assert.equal(stored.revoke,true);assert.equal(stored.payment_completed,false);
 });
 test('portal always resolves authenticated customer server-side and validates provider URL',async()=>{
- let path;
+ let path,overview='https://sandbox-customer-portal.paddle.com/session?token=test';
  const billing=createPaddleBilling({env,fetchImpl:async url=>{
   if(url.endsWith('/paddle_customer_for_user'))return Response.json(id('ctm'));
-  path=url;return Response.json({data:{urls:{general:{overview:'https://customer-portal.paddle.com/session?token=test'}}}});
+  path=url;return Response.json({data:{urls:{general:{overview}}}});
  }});
- assert.equal((await billing.portal({id:'user'})).url,'https://customer-portal.paddle.com/session?token=test');
+ assert.equal((await billing.portal({id:'user'})).url,overview);
  assert.equal(path,'https://sandbox-api.paddle.com/customers/'+id('ctm')+'/portal-sessions');
+ for(const url of ['https://customer-portal.paddle.com/session','https://sandbox-customer-portal.paddle.com.evil.test/session','https://sandbox-customer-portal.paddle.com:444/session','https://user@sandbox-customer-portal.paddle.com/session']){
+  overview=url;
+  await assert.rejects(billing.portal({id:'user'}),{status:502});
+ }
+});
+test('checkout rejects a price that lets the customer increase quantity',async()=>{
+ const {price}=fixture();price.quantity.maximum=2;
+ const billing=createPaddleBilling({env,fetchImpl:async url=>{
+  assert.equal(url,'https://sandbox-api.paddle.com/prices/'+id('pri'));
+  return Response.json({data:price});
+ }});
+ await assert.rejects(billing.checkout({id:'user'},{planId:'monthly'}),{code:'billing_price_mismatch'});
 });
 const regional=[{planId:'monthly',currency:'USD',amount:1900,priceId:id('pri','d')},{planId:'yearly',currency:'EUR',amount:9900,priceId:id('pri','e')}];
 test('regional prices expose approved foreign amounts without leaking IDs; malformed maps fail closed',()=>{

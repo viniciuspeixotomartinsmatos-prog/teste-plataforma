@@ -37,7 +37,7 @@ export function createPaddleBilling({env=process.env,fetchImpl=fetch,now=Date.no
   const plan=allPlans.find(p=>p.id===input.planId&&p.currency===(input.currency||'BRL'));if(!plan)throw fail(400,'Plano inválido.');
   // Re-read the server-owned catalog: a dashboard edit cannot silently change agreed terms.
   const price=await api('/prices/'+plan.priceId);
-  if(price.status!=='active'||price.product_id!==config.productId||price.unit_price?.currency_code!==plan.currency||String(price.unit_price?.amount)!==String(plan.amount)||price.billing_cycle?.interval!=='month'||price.billing_cycle?.frequency!==plan.months||price.trial_period||price.unit_price_overrides?.length)throw fail(503,'Este plano está em configuração.','billing_price_mismatch');
+  if(price.status!=='active'||price.product_id!==config.productId||price.unit_price?.currency_code!==plan.currency||String(price.unit_price?.amount)!==String(plan.amount)||price.billing_cycle?.interval!=='month'||price.billing_cycle?.frequency!==plan.months||price.trial_period||price.unit_price_overrides?.length||price.quantity?.minimum!==1||price.quantity?.maximum!==1)throw fail(503,'Este plano está em configuração.','billing_price_mismatch');
   const reserve=()=>rpc('paddle_reserve_checkout',{p_user:user.id,p_environment:config.environment,p_plan:plan.id,p_price:plan.priceId,p_reservation:randomUUID()});
   let reservation=await reserve();
   if(['pending','different'].includes(reservation.state)){
@@ -66,15 +66,17 @@ export function createPaddleBilling({env=process.env,fetchImpl=fetch,now=Date.no
   const transaction=await api('/transactions',{items:[{price_id:plan.priceId,quantity:1}],customer_id:customer,collection_mode:'automatic',currency_code:plan.currency});
   if(!paddleId(transaction.id,'txn')||transaction.customer_id!==customer)throw fail(502,'Transação de cobrança inválida.');
   await rpc('paddle_bind_checkout',{p_user:user.id,p_environment:config.environment,p_customer:customer,p_transaction:transaction.id,p_plan:plan.id,p_price:plan.priceId,p_reservation:reservation.reservation});
-  // Return the transaction ID only; Paddle.js opens this immutable server-created transaction.
+  // Open only the transaction bound to this account. The Paddle price limits the quantity.
   return{transactionId:transaction.id,checkoutUrl:null};
  }
  async function portal(user){
   requireEnabled();const customer=await rpc('paddle_customer_for_user',{p_user:user.id,p_environment:config.environment});
   if(!paddleId(customer,'ctm'))throw fail(404,'Você ainda não tem uma assinatura.');
-  const session=await api('/customers/'+customer+'/portal-sessions',{}),url=session.urls?.general?.overview;
-  if(typeof url!=='string'||!/^https:\/\/([a-z0-9-]+\.)?customer-portal\.paddle\.com\//.test(url))throw fail(502,'Portal indisponível.');
-  return{url};
+  const session=await api('/customers/'+customer+'/portal-sessions',{});
+  const url=URL.parse(session.urls?.general?.overview);
+  const origin=config.environment==='sandbox'?'https://sandbox-customer-portal.paddle.com':'https://customer-portal.paddle.com';
+  if(url?.origin!==origin||url.username||url.password)throw fail(502,'Portal indisponível.');
+  return{url:url.href};
  }
  async function webhook(request){
   requireEnabled();const raw=await readLimitedBody(request);
