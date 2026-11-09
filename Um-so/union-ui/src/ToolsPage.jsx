@@ -1,18 +1,21 @@
-import React,{useEffect,useState} from 'react';
-import {Music2,Waves,Shapes,Layers3,Camera,ArrowUpRight,ArrowLeft,Maximize2,Loader2} from 'lucide-react';
+import React,{useEffect,useState,lazy,Suspense} from 'react';
+import {Music2,Waves,Shapes,Layers3,Camera,ScanLine,ArrowUpRight,ArrowLeft,Maximize2,Loader2} from 'lucide-react';
 import './tools.css';
+const SiteAuditPage=lazy(()=>import('./SiteAuditPage.jsx'));
 const tools=[
+ {id:'raio-x',title:'Raio-X do site',eyebrow:'DIAGNÓSTICO',description:'Analise velocidade, celular, SEO, integrações e privacidade. Copie prompts para corrigir cada ponto.',icon:ScanLine,color:'#b79af5'},
  {id:'sound-lab',title:'Laboratório de áudio',eyebrow:'SOM',description:'Crie sons, ajuste o timbre e exporte áudio ou código para o seu projeto.',icon:Music2,color:'#c7b3f8'},
  {id:'background-studio',title:'Estúdio de fundos',eyebrow:'MOVIMENTO',description:'Personalize fundos animados e exporte o resultado em código, imagem ou vídeo.',icon:Waves,color:'#b79af5'},
  {id:'texture-lab',title:'Laboratório de texturas',eyebrow:'IMAGEM',description:'Combine efeitos e camadas para transformar imagens em novas composições.',icon:Layers3,color:'#cdb5e8'},
  {id:'shape-magic',title:'Estúdio de formas',eyebrow:'FORMAS',description:'Crie formas, materiais e composições com controles de luz e movimento.',icon:Shapes,color:'#a496d6'},
  {id:'center-stage',title:'Estúdio de apresentação',eyebrow:'APRESENTAÇÃO',description:'Monte cenas e apresentações para imagens, produtos e interfaces.',icon:Camera,color:'#d8bdf4'},
 ];
-export default function ToolsPage({path,search='',hash='',theme,navigate,canExport=true,onUpgrade}){
+export default function ToolsPage({path,search='',hash='',theme,navigate,canExport=true,onUpgrade,owner,notify}){
  const id=path.split('/')[2],tool=tools.find(t=>t.id===id);
  const [state,setState]=useState('loading'),[attempt,setAttempt]=useState(0),[message,setMessage]=useState('');
  useEffect(()=>{setState('loading');setMessage('');if(!id)return;const timer=setTimeout(()=>{setState(previous=>previous==='loading'?'error':previous);setMessage(previous=>previous||'A ferramenta demorou para responder. Tente novamente.');},45000);return()=>clearTimeout(timer);},[id,theme,attempt]);
  useEffect(()=>{const receive=event=>{const frame=document.querySelector('.tool-frame');if(event.source!==frame?.contentWindow||event.data?.tool!==id)return;if(event.data.type==='tool:catalog'&&typeof event.data.name==='string')navigate('/?q='+encodeURIComponent(event.data.name));if(event.data.type==='tool:navigate'&&tools.some(t=>t.id===event.data.id))navigate('/tools/'+event.data.id);if(event.data.type==='tool-ready')setState('ready');if(event.data.type==='tool-error'){setMessage(event.data.message);setState('error');}};window.addEventListener('message',receive);return()=>window.removeEventListener('message',receive);},[id,navigate]);
+ if(id==='raio-x')return <Suspense fallback={<main className="loading-page"><Loader2 className="spin"/></main>}><SiteAuditPage owner={owner} navigate={navigate} notify={notify}/></Suspense>;
  if(!id)return <main id="main" className="tools-page"><div className="section-eyebrow">DA IDEIA AO SEU PRÓXIMO PROJETO</div><h1>Mais possibilidades.<br/><span>Um só espaço.</span></h1><p className="page-lead">Experimente som, imagem, movimento e forma. Personalize e leve o resultado com você.</p><div className="tools-grid">{tools.map(({id,title,eyebrow,description,icon:Icon,color})=><a className="tool-card" key={id} href={'/tools/'+id} style={{'--tool-color':color}} onClick={e=>{e.preventDefault();navigate('/tools/'+id);}}><div className="tool-card-art"><div className={'tool-geometry geometry-'+id}><Icon size={46} strokeWidth={1}/></div><ArrowUpRight size={20}/></div><small>{eyebrow}</small><h2>{title}</h2><p>{description}</p><span>Abrir ferramenta <ArrowUpRight size={14}/></span></a>)}</div></main>;
  if(!tool)return <main id="main" className="empty"><h1>Ferramenta não encontrada</h1><button className="button" onClick={()=>navigate('/tools')}>Ver ferramentas</button></main>;
  const query=new URLSearchParams(search);query.set('tool',id);query.set('theme',theme);

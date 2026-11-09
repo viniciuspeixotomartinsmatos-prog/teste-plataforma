@@ -1,3 +1,4 @@
+import {siteAuditService} from './site-audit-service.mjs';
 import {DatabaseSync} from 'node:sqlite';
 import {randomBytes,randomInt} from 'node:crypto';
 import {promises as fs} from 'node:fs';
@@ -105,6 +106,7 @@ export async function createApplication(options={}){
    if(route==='/api/plans')return json({plans:PLANS,mode,available:Boolean(stripe&&Object.values(prices).every(Boolean))});
    if(route==='/api/access'){const current=await session(request);return json(access(current?.user));}
    if(request.method!=='GET'&&request.headers.get('origin')!==origin)throw fail(403,'Origem não autorizada.');
+   if(/^\/api\/site-audit\/(site|lab)$/.test(route)&&request.method==='POST'){const user=await requireUser(request);const kind=route.endsWith('/site')?'site':'lab';return json({ok:true,[kind]:await (options.auditor||siteAuditService).run(kind,user,await readJSONObject(request),{signal:request.signal})});}
    if(route==='/api/privacy/export'&&request.method==='GET'){
     const user=await requireUser(request),workspace=db.prepare('SELECT revision,data,updated_at FROM workspace WHERE user_id=?').get(user.id);
     return json({version:1,exportedAt:new Date().toISOString(),account:{id:user.id,name:user.name,email:user.email},workspace:workspace?{...workspace,data:JSON.parse(workspace.data)}:{revision:0,data:{saved:[],collections:[]}},subscriptions:db.prepare('SELECT status,period_end,cancel_at_period_end FROM subscription WHERE user_id=?').all(user.id)});

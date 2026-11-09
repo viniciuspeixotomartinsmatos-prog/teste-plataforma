@@ -1,3 +1,4 @@
+import {siteAuditService} from './site-audit-service.mjs';
 import {requestClient} from './supabase-client.mjs';
 import {safeNext} from '../src/auth-policy.js';
 import {createPaddleBilling,readPaddleSubscription} from './paddle-billing.mjs';
@@ -13,7 +14,7 @@ function cleanWorkspace(value){
  return{saved:ids(value.saved),collections:(Array.isArray(value.collections)?value.collections:[]).slice(0,500).map(c=>({id:String(c.id||'').slice(0,100),name:String(c.name||'Coleção').slice(0,80),items:ids(c.items)})).filter(c=>c.id)};
 }
 const requestLimit=createRequestLimiter();
-export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientFactory=requestClient,billingEnv=process.env,billingFetch=fetch,limiter=requestLimit,securityLogger=console.info}={}){
+export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientFactory=requestClient,billingEnv=process.env,billingFetch=fetch,limiter=requestLimit,securityLogger=console.info,auditor=siteAuditService}={}){
  const billing=createPaddleBilling({env:billingEnv,fetchImpl:billingFetch});
  async function handleInternal(request){
   let finish=response=>response;
@@ -50,6 +51,9 @@ export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientF
    }
    else if(route==='/api/billing/subscription'&&request.method==='GET'){
     const user=await requireUser();response=json({subscription:billing.config.enabled?await readPaddleSubscription(client,user.id,billing.config.environment):null,billingMode:billing.config.mode});
+   }
+   else if(/^\/api\/site-audit\/(site|lab)$/.test(route)&&request.method==='POST'){
+    const user=await requireUser();response=json({ok:true,[route.endsWith('/site')?'site':'lab']:await auditor.run(route.endsWith('/site')?'site':'lab',user,await body(),{signal:request.signal})});
    }
    else if(route==='/api/privacy/export'&&request.method==='GET'){
     const user=await requireUser();response=json(await exportPersonalData(user,client));

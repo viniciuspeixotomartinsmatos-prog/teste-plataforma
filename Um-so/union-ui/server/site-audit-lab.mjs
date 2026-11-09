@@ -1,0 +1,24 @@
+import {auditError,publicSiteURL,publicAddress,resolvePublic} from './site-audit-network.mjs';
+import {lookup} from 'node:dns/promises';
+import {redactAuditData} from './site-audit-inspect.mjs';
+const finite=value=>typeof value==='number'&&Number.isFinite(value)?value:null;
+export function normalizeLab(payload){
+ const result=payload?.lighthouseResult;if(!result||result.runtimeError)throw auditError('lab_failed','O Google não conseguiu concluir a medição desta página.',502);
+ const audits=result.audits||{},score=id=>finite(result.categories?.[id]?.score),metric=id=>finite(audits[id]?.numericValue);
+ const relevant=['largest-contentful-paint','cumulative-layout-shift','total-blocking-time','first-contentful-paint','speed-index','viewport','target-size','font-size','color-contrast','image-alt','label','button-name','link-name','document-title','meta-description','http-status-code','is-crawlable','robots-txt','canonical','valid-lang','uses-optimized-images','modern-image-formats','uses-responsive-images','image-delivery-insight','render-blocking-resources','render-blocking-insight','unused-javascript','unused-css-rules','total-byte-weight','uses-long-cache-ttl','network-server-latency','lcp-discovery-insight','third-party-summary','third-parties-insight','uses-https'];
+ const clean=value=>String(value||'').replace(/<[^>]*>/g,'').replace(/[\u0000-\u001f]/g,' ').slice(0,400);
+ const checks=relevant.filter(id=>audits[id]).map(id=>{const audit=audits[id];return{id,title:clean(audit.title),description:clean(audit.description),score:finite(audit.score),displayValue:clean(audit.displayValue),scoreDisplayMode:audit.scoreDisplayMode,items:(audit.details?.items||[]).slice(0,8).map(row=>({url:row.url?clean(row.url).split('?')[0]:undefined,label:clean(row.node?.nodeLabel||row.node?.selector||row.label||row.name||''),wastedBytes:finite(row.wastedBytes),wastedMs:finite(row.wastedMs),totalBytes:finite(row.totalBytes)}))};});
+ const image=audits['final-screenshot']?.details?.data,screenshot=typeof image==='string'&&image.length<2500000&&/^data:image\/(?:jpeg|png|webp);base64,[a-z\d+/=]+$/i.test(image)?image:null;
+ return{source:'Google PageSpeed Insights / Lighthouse',strategy:'mobile',at:result.fetchTime||new Date().toISOString(),version:clean(result.lighthouseVersion),scores:Object.fromEntries(['performance','accessibility','seo','best-practices'].map(id=>[id,score(id)===null?null:Math.round(score(id)*100)])),metrics:{lcp:metric('largest-contentful-paint'),cls:metric('cumulative-layout-shift'),tbt:metric('total-blocking-time'),fcp:metric('first-contentful-paint'),speedIndex:metric('speed-index')},bytes:metric('total-byte-weight'),checks,screenshot,warnings:(result.runWarnings||[]).map(clean).slice(0,5)};
+}
+export async function measureSite(value,{signal,fetcher=fetch,resolver=lookup,env=process.env}={}){
+ const url=publicSiteURL(value);let records;try{records=await resolvePublic(url.hostname,{signal,resolver});}catch{throw auditError('dns','Não conseguimos localizar esse domínio.');}
+ if(!records.length||records.some(row=>!publicAddress(row.address)))throw auditError('blocked','O domínio aponta para uma rede privada ou reservada.');
+ const endpoint=new URL('https://www.googleapis.com/pagespeedonline/v5/runPagespeed');endpoint.searchParams.set('url',url.href);endpoint.searchParams.set('strategy','mobile');endpoint.searchParams.set('locale','pt-BR');
+ for(const category of ['performance','accessibility','seo','best-practices'])endpoint.searchParams.append('category',category);
+ if(env.GOOGLE_PAGESPEED_API_KEY)endpoint.searchParams.set('key',env.GOOGLE_PAGESPEED_API_KEY);
+ let response;try{response=await fetcher(endpoint,{signal:signal?AbortSignal.any([signal,AbortSignal.timeout(70000)]):AbortSignal.timeout(70000),headers:{Accept:'application/json'},redirect:'error'});}catch(error){if(signal?.aborted)throw error;throw auditError('lab_timeout','A medição do Google demorou ou ficou indisponível. Os resultados da leitura do site foram preservados.',504);}
+ if(!response.ok){await response.body?.cancel();throw auditError(response.status===429?'lab_quota':'lab_unavailable',response.status===429?'A cota do PageSpeed foi atingida. Tente depois ou configure uma chave de API no servidor.':'O Google não disponibilizou a medição agora. Tente novamente.',response.status===429?429:502);}
+ const reader=response.body.getReader();let size=0;const parts=[];try{while(true){const {done,value}=await reader.read();if(done)break;size+=value.length;if(size>12000000){await reader.cancel();throw auditError('lab_size','A medição ultrapassou o limite de resposta.',502);}parts.push(value);}}finally{reader.releaseLock();}
+ let data;try{data=JSON.parse(Buffer.concat(parts).toString('utf8'));}catch{throw auditError('lab_failed','O Google retornou uma resposta inválida.',502);}return redactAuditData(normalizeLab(data));
+}

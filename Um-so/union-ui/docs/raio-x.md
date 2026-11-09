@@ -1,0 +1,30 @@
+# Raio-X — delivery and operation
+
+Implemented 2026-11-09 at `/tools/raio-x`, through the existing authenticated Tools flow. The original Profitize Pro workflow was exercised with example.com: completion, five-category report, SEO filtering and copy-all correction prompts. Its private backend was not recovered. nitido uses an independently authored analyzer/scoring/prompt engine and closely follows the observed dark/amethyst layout; this is not a claim of identical source, every original rule or pixel-identical output.
+
+## Working flow
+
+1. Submit a public HTTP(S) domain. `/api/site-audit/site` validates URL and DNS, pins one public IP for the socket while preserving hostname/TLS verification, independently checks each redirect, and reads inert HTML. It inspects robots/sitemap, at most three same-origin JavaScript files and the HTTP-to-HTTPS path. No caller cookies, credentials, arbitrary ports or target scripts are executed.
+2. Render static evidence immediately. `/api/site-audit/lab` independently validates its URL/DNS and requests official Google PageSpeed Insights v5, mobile, performance/accessibility/SEO/best-practices, pt-BR. Only whitelisted diagnostics, metrics and a bounded raster screenshot are returned. The URL is sent to Google; the form discloses this before submission.
+3. Show five categories, weighted overall score, severity-sorted findings, expandable evidence, individual/all correction prompts, filtering, JSON download, lab retry and cancellation. Speed stays unscored when unavailable; overall coverage is explicitly partial. Pixel absence is informational unless a concrete configuration is observed. Static consent/tracker checks never claim working events or legal compliance. Prompts are deterministic and need no AI service or paid generation.
+4. Save the last twelve reports locally under account-specific keys, without screenshots. History can be cleared, is not cloud-synced and is not encrypted against another person using this browser. No analysis history, raw HTML or raw secret matches are stored on the server. Candidate secret patterns and sensitive resource query parameters are masked. Detection is limited and cannot certify absence of secrets.
+
+## Bounds and deployment
+
+- HTML 2 MB; resources 250 KB; each same-origin script 500 KB; three scripts; five redirects per request; 30,000 parsed nodes; 300 images; image/script URL length bounded.
+- DNS deadline at most five seconds; socket deadline twelve seconds (probes five seconds); site stage twenty-five seconds. PageSpeed seventy seconds and lab stage seventy-five seconds. Browser total deadline 105 seconds. Cancel aborts the browser fetch; backend cancellation depends on request-signal propagation in the host and its own deadlines always bound work.
+- Three concurrent analyses per Node process, twelve initial inspections/eight lab requests per authenticated user per hour, expiring bounded in-memory counters. These are **not distributed quotas** and reset on cold starts. Verify WAF/provider-wide limits before higher public traffic; account verification and existing CSRF/request bounds remain mandatory.
+- Vercel `api/index.js` has a ninety-second maximum duration, following [Vercel's function duration configuration](https://vercel.com/docs/functions/configuring-functions/duration). No new paid service or billing activation was performed. Existing hosting execution usage still applies.
+- Optional server-only `GOOGLE_PAGESPEED_API_KEY` uses an existing approved Google project with available quota. Never use a `VITE_` variable or commit the key. See [PageSpeed API](https://developers.google.com/speed/docs/insights/v5/get-started) and [runPagespeed](https://developers.google.com/speed/docs/insights/rest/v5/pagespeedapi/runpagespeed). No key was provisioned or quota purchased in this task.
+
+## Evidence
+
+- Full `npm test`: **170 passed**, zero failures, including twelve Raio-X tests for SSRF, mixed DNS, address pinning, redirect pivots, transferred bytes/deadlines, inert parsing, redaction, Lighthouse normalization, quota/failure behavior, authenticated owner/origin boundaries, scoring and UI filter/copy/history/cancel behavior.
+- `npm run build` passed; the final source changes were rebuilt with Vite using the already copied unchanged public directory. `npm run test:sites`: four passed. Existing worker and packaging inputs preserved.
+- `npm audit --omit=dev`: zero known production dependency vulnerabilities at execution time.
+- Authorized IAB, isolated local Better Auth account and SQLite (not customer accounts): real example.com inspection completed, Google quota error preserved a partial report, category filtering, expanded correction, individual/all clipboard contents and downloaded JSON verified. Desktop and 390×844 mobile were inspected, no horizontal overflow, no captured console errors. Evidence screenshots remain in ignored `var/raio-x-browser/desktop.png` and `mobile.png`; downloaded report in the user's Downloads. Tests do not establish every possible site's behavior.
+- The original Profitize service successfully measured example.com; our direct Google call returned HTTP 429 without an API key. **Live successful Google metrics/screenshot retrieval remains unverified in nitido until an approved key with quota is configured.** Normalization/success UI is covered with structured fixtures and explicitly marked fictional demo data, not claimed as a live measurement.
+
+## Remaining boundaries
+
+This is an initial public-page audit. It does not execute target checkout/login, automatically repair a repository, validate ad conversions, certify LGPD compliance, enumerate all routes, or defeat target access restrictions. Blocked/non-HTML/TLS/timeout targets produce a clear error. Client-rendered sites may need a successful Lighthouse run and manual inspection to confirm static findings. A screenshot is displayed only when actually returned by Google. No made-up thumbnails or results replace it. Source skills and design systems remain deferred; this delivery does not claim their acquisition.

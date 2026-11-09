@@ -14,8 +14,8 @@ export async function nodeRequest(req,origin,{headersOnly=false}={}){
  return new Request(new URL(req.url,origin),{method:headersOnly?'GET':req.method,headers,...(body?{body}:{})});
 }
 export async function nodeResponse(response,res){res.statusCode=response.status;for(const [name,value]of response.headers)if(name!=='set-cookie')res.setHeader(name,value);const cookies=response.headers.getSetCookie();if(cookies.length)res.setHeader('Set-Cookie',cookies);res.end(Buffer.from(await response.arrayBuffer()));}
-export function createApplicationPlugin(){return{name:'umso-application',async configureServer(server){
- const app=await createApplication();
+export function createApplicationPlugin(options={}){return{name:'umso-application',async configureServer(server){
+ const app=await createApplication(options);
  server.httpServer?.once('close',()=>app.close());
  server.middlewares.use(async(req,res,next)=>{try{
   const path=decodeURIComponent(new URL(req.url,app.origin).pathname);
