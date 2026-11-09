@@ -70,3 +70,8 @@ Clicking “Copiar o prompt de Kairo” opened the explicit “Assine para copia
 21st exposes Apps, Icons and Video navigation in addition to component/theme/template sections. Existing route discovery does not cover these other products or implementation-only changes; retain this coverage gap for subsequent explicit checks. Shadcnblocks routes increased by 476; 125 new 21st routes were observed. Some newly indexed Shadcnblocks routes already correspond to retained entries (454 total unmatched, not 476 newly missing components). Neither number is a count of new working app entries.
 
 No executable application content changed, no frontend build was necessary for research-only updates. Source checker expanded to include Profitize Motion routes. Both dated reports parse and all ten sources are represented; closing report contains 103 distinct Profitize routes including the two browser-observed Motion entries. Existing Nov 5 bundles still require assembly, media/prompt/download checks and browser validation before publication. Browser inventory and public Profitize rendering worked today; application preview validation was not performed. No Vercel application deployment was requested by this research-only check. Stripe and all payments remain disabled.
+
+
+### Authorized retry after sign-in — 2026-11-09
+
+The user signed into an existing Pro account and asked to retry. Kairo unlocked through the normal site UI; the original prompt was downloaded successfully. Retained in `releases/2026-11-09/profitize/kairo/` with provenance and SHA-256. No application entry was published yet. Other premium items have not been claimed accessible or downloaded.
