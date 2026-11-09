@@ -1,6 +1,8 @@
 import {requestClient} from './supabase-client.mjs';
 import {safeNext} from '../src/auth-policy.js';
 import {createPaddleBilling,readPaddleSubscription} from './paddle-billing.mjs';
+import {createRequestLimiter,readJSONObject,secureResponse,securityEvent} from './security-controls.mjs';
+import {POLICY_VERSION,exportPersonalData,deletePersonalAccount} from './privacy-service.mjs';
 
 const json=(data,status=200)=>Response.json(data,{status,headers:{'Cache-Control':'private, no-store'}});
 const fail=(status,message,code)=>Object.assign(Error(message),{status,code});
@@ -10,9 +12,10 @@ function cleanWorkspace(value){
  const ids=value=>Array.isArray(value)?[...new Set(value.filter(x=>typeof x==='string'&&x.length<200))].slice(0,20000):[];
  return{saved:ids(value.saved),collections:(Array.isArray(value.collections)?value.collections:[]).slice(0,500).map(c=>({id:String(c.id||'').slice(0,100),name:String(c.name||'Coleção').slice(0,80),items:ids(c.items)})).filter(c=>c.id)};
 }
-export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientFactory=requestClient,billingEnv=process.env,billingFetch=fetch}={}){
+const requestLimit=createRequestLimiter();
+export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientFactory=requestClient,billingEnv=process.env,billingFetch=fetch,limiter=requestLimit,securityLogger=console.info}={}){
  const billing=createPaddleBilling({env:billingEnv,fetchImpl:billingFetch});
- async function handle(request){
+ async function handleInternal(request){
   let finish=response=>response;
   try{
    const url=new URL(request.url),route=url.pathname;
@@ -24,9 +27,12 @@ export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientF
    if(route==='/api/billing/config'&&request.method==='GET')return json(billing.publicConfig());
    // An explicit canonical origin prevents request headers controlling email links.
    if(!origin||!/^https?:\/\//.test(origin))throw fail(503,'O acesso está em configuração. Tente novamente mais tarde.','auth_setup_required');
+   if((process.env.NODE_ENV==='production'||process.env.VERCEL)&&!origin.startsWith('https://'))throw fail(503,'O acesso está em configuração.','https_required');
    if(!['GET','HEAD'].includes(request.method)&&request.headers.get('origin')!==origin)throw fail(403,'Origem não autorizada.');
+   if(!['GET','HEAD'].includes(request.method)&&request.headers.get('sec-fetch-site')==='cross-site')throw fail(403,'Origem não autorizada.');
+   limiter(request);
    const context=clientFactory(request);finish=context.finish;const client=context.client;
-   const body=async()=>{const text=await request.text();if(new TextEncoder().encode(text).byteLength>1500000)throw fail(413,'Arquivo muito grande.');try{return JSON.parse(text);}catch{throw fail(400,'Dados inválidos.');}};
+   const body=()=>readJSONObject(request);
    const getUser=async()=>{const {data,error}=await client.auth.getUser();if(error?.status>=500)throw fail(503,'Não foi possível verificar sua sessão. Tente novamente.');return data?.user||null;};
    const requireUser=async()=>{const user=await getUser();if(!user)throw fail(401,'Entre na sua conta para continuar.','sign_in_required');return user;};
    const check=result=>{if(result.error){const code=result.error.code;throw fail(result.error.status===429?429:400,result.error.status===429?'Aguarde um pouco antes de tentar novamente.':code==='email_not_confirmed'?'Confirme seu e-mail antes de entrar.':code==='otp_expired'?'Esse link expirou ou já foi usado. Solicite um novo link.':code==='invalid_credentials'?'E-mail ou senha incorretos.':'Não foi possível concluir. Confira seus dados e tente novamente.',code);}return result.data;};
@@ -44,6 +50,19 @@ export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientF
    }
    else if(route==='/api/billing/subscription'&&request.method==='GET'){
     const user=await requireUser();response=json({subscription:billing.config.enabled?await readPaddleSubscription(client,user.id,billing.config.environment):null,billingMode:billing.config.mode});
+   }
+   else if(route==='/api/privacy/export'&&request.method==='GET'){
+    const user=await requireUser();response=json(await exportPersonalData(user,client));
+    response.headers.set('Content-Disposition','attachment; filename="nitido-meus-dados.json"');
+    securityEvent('privacy_export',200,{logger:securityLogger});
+   }
+   else if(route==='/api/privacy/profile'&&request.method==='PATCH'){
+    await requireUser();const input=await body();
+    if(typeof input.name!=='string'||!input.name.trim()||input.name.length>100||Object.keys(input).some(key=>key!=='name'))throw fail(400,'Informe um nome válido.');
+    const data=check(await client.auth.updateUser({data:{name:input.name.trim()}}));response=json({user:profile(data.user)});
+   }
+   else if(route==='/api/privacy/delete'&&request.method==='POST'){
+    const user=await requireUser();response=json(await deletePersonalAccount(user,client,await body(),{logger:securityLogger}));
    }
    else if(route==='/api/auth/callback'&&request.method==='GET'){
     if(!url.searchParams.get('code'))throw fail(400,'Link inválido ou expirado. Solicite um novo link.');
@@ -63,10 +82,13 @@ export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientF
     response=json({ok:true});
    }else if(route==='/api/auth/sign-up/email'&&request.method==='POST'){
     const input=await body();if(typeof input.name!=='string'||!input.name.trim()||input.name.length>100||typeof input.password!=='string'||input.password.length<12)throw fail(400,'Informe seu nome e uma senha com pelo menos 12 caracteres.');
-    const data=check(await client.auth.signUp({email:input.email,password:input.password,options:{data:{name:input.name.trim()},emailRedirectTo:origin+'/api/auth/callback'}}));
+    if(input.termsAccepted!==true||input.policyVersion!==POLICY_VERSION)throw fail(400,'Leia e aceite os termos atuais.','terms_required');
+    if(typeof input.email!=='string'||input.email.length>254||!/^\S+@\S+\.\S+$/.test(input.email)||input.password.length>1024)throw fail(400,'Informe e-mail e senha válidos.');
+    // Informational acknowledgement, not a trusted entitlement or consent ledger.
+    const data=check(await client.auth.signUp({email:input.email,password:input.password,options:{data:{name:input.name.trim(),terms_version:POLICY_VERSION,privacy_notice_version:POLICY_VERSION},emailRedirectTo:origin+'/api/auth/callback'}}));
     response=json({user:profile(data.user),verificationRequired:!data.session});
    }else if(route==='/api/auth/sign-in/email'&&request.method==='POST'){
-    const input=await body();const data=check(await client.auth.signInWithPassword({email:input.email,password:input.password}));response=json({user:profile(data.user)});
+    const input=await body();if(typeof input.email!=='string'||input.email.length>254||typeof input.password!=='string'||!input.password||input.password.length>1024)throw fail(400,'Informe e-mail e senha válidos.');const data=check(await client.auth.signInWithPassword({email:input.email,password:input.password}));response=json({user:profile(data.user)});
    }else if(route==='/api/auth/sign-out'&&request.method==='POST'){
     check(await client.auth.signOut({scope:'local'}));response=json({ok:true});
    }else if(route==='/api/auth/request-password-reset'&&request.method==='POST'){
@@ -95,7 +117,10 @@ export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientF
   }catch(error){
    // Never expose a raw callback error or reflect the one-time code into a page.
    if(new URL(request.url).pathname==='/api/auth/callback'&&request.method==='GET'&&error.status!==503){const recovery=new URL(request.url).searchParams.get('next')==='/account/reset',missing=error.code==='pkce_code_verifier_not_found';return finish(new Response(null,{status:303,headers:{Location:origin+'/account?auth_error='+(recovery?'recovery_link':missing?'confirmation_browser':'confirmation_link'),'Referrer-Policy':'no-referrer'}}));}
-   return finish(json({error:error.status?error.message:'Não foi possível concluir. Tente novamente.',code:error.code},error.status||500));
+   if(error.status===429)securityEvent('rate_limit',429,{logger:securityLogger});
+   const response=finish(json({error:error.status?error.message:'Não foi possível concluir. Tente novamente.',code:error.code},error.status||500));
+   if(error.status===429)response.headers.set('Retry-After',String(error.retryAfter||60));
+   return response;
   }
  }
  async function isSignedIn(request){const {client}=clientFactory(request);const {data,error}=await client.auth.getUser();return !error&&Boolean(data?.user);}
@@ -106,5 +131,6 @@ export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientF
   if(!billing.config.enabled)return false;
   return Boolean((await readPaddleSubscription(client,data.user.id,billing.config.environment))?.hasAccess);
  }
+ async function handle(request){return secureResponse(await handleInternal(request),request.url);}
  return{handle,isSignedIn,canReadCode:canAccessPlatform,canAccessPlatform,origin,close:()=>{}};
 }

@@ -11,6 +11,7 @@ ENV NODE_ENV=production PORT=4173
 COPY --from=build /app/node_modules ./node_modules
 COPY --from=build /app/package.json ./package.json
 COPY --from=build /app/server ./server
+COPY --from=build /app/src ./src
 COPY --from=build /app/dist/client ./dist/client
 RUN mkdir var && chown node:node var
 USER node

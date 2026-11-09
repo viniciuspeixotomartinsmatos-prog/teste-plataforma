@@ -4,6 +4,16 @@ import {JSDOM} from 'jsdom';
 import React,{act} from 'react';
 import {createRoot} from 'react-dom/client';
 import {useAccountWorkspace} from '../src/account.js';
+
+test('explicit device cleanup cannot resurrect old guest favorites after logout',async()=>{
+ const dom=new JSDOM('<div id="root"></div>',{url:'http://localhost:4173'});
+ for(const key of ['window','document','localStorage'])globalThis[key]=dom.window[key];globalThis.IS_REACT_ACT_ENVIRONMENT=true;
+ localStorage.setItem('union:saved:v1',JSON.stringify(['old-private-reference']));let user={id:'one',name:'Owner',email:'owner@example.test'};
+ globalThis.fetch=async(url)=>{if(url==='/api/auth/get-session')return Response.json({user});if(url==='/api/access')return Response.json({canExport:Boolean(user)});if(url==='/api/workspace')return Response.json({revision:1,data:{saved:['server-item'],collections:[]}});if(url==='/api/auth/sign-out'){user=null;return Response.json({ok:true});}return Response.json({});};
+ let account;function Harness(){account=useAccountWorkspace();return null;}const root=createRoot(document.getElementById('root'));
+ try{await act(async()=>{root.render(React.createElement(Harness));});await act(async()=>{await new Promise(resolve=>setTimeout(resolve,30));});assert.deepEqual(account.saved,['server-item']);await act(async()=>account.signOut({clearLocal:true}));assert.equal(account.user,null);assert.deepEqual(account.saved,[]);assert.deepEqual(JSON.parse(localStorage.getItem('union:saved:v1')),[]);}
+ finally{await act(async()=>root.unmount());dom.window.close();delete globalThis.IS_REACT_ACT_ENVIRONMENT;}
+});
 test('a queued local edit survives an overlapping remote conflict without dropping remote favorites',async()=>{
  const dom=new JSDOM('<div id="root"></div>',{url:'http://localhost:4173'});
  for(const key of ['window','document','localStorage'])globalThis[key]=dom.window[key];

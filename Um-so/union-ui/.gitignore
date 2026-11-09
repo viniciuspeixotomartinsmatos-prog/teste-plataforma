@@ -6,6 +6,11 @@ tests/.app-test-bundle.mjs
 .preview-sources/
 .preview-cache/
 var/
+*.pgdump
+*.pgdump.enc
+*.backup
+*.sqlite
+*.sqlite-*
 
 !.env.example
 

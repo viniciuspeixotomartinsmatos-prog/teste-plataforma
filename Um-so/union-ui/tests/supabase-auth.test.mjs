@@ -8,7 +8,7 @@ const request=(path,body)=>new Request(origin+path,body===undefined?{}:{method:'
 
 test('content and encoded paths are protected; account assets remain public; redirect targets stay internal',()=>{
  for(const path of ['/','/index.html','/tools','/builder','/component/x','/data/catalog-live.json','/code/a.json','/previews/x.html','/tools-runtime/a.js','/code%2fx.json','/assets/demo-cache/a.jpg'])assert.equal(protectedPath(path),true,path);
- for(const path of ['/account','/account/reset','/api/auth/callback','/assets/index-123.js','/assets/union-icon.svg'])assert.equal(protectedPath(path),false,path);
+ for(const path of ['/account','/account/reset','/api/auth/callback','/assets/index-deadbeef.js','/assets/union-icon.svg'])assert.equal(protectedPath(path),false,path);
  for(const next of ['//evil.example','https://evil.example','/\\evil.example','/api/auth/sign-out'])assert.equal(safeNext(next),'/');
  assert.equal(safeNext('/tools?view=1'),'/tools?view=1');
  const redirect=signInResponse(new Request(origin+'/tools',{headers:{accept:'text/html'}}));assert.equal(redirect.status,303);assert.equal(redirect.headers.get('location'),'/account?next=%2Ftools');
@@ -26,6 +26,6 @@ test('Supabase verifies users remotely, refuses foreign mutations and gives expl
 test('signup without a session asks for email verification and does not claim authenticated access',async()=>{
  const client={auth:{signUp:async()=>({data:{user:{id:'one',email:'a@example.test',user_metadata:{name:'Um'}},session:null}})}};
  const app=createSupabaseApplication({origin,clientFactory:()=>({client,finish:r=>r})});
- const response=await app.handle(request('/api/auth/sign-up/email',{name:'Um',email:'a@example.test',password:'twelve_characters_73!'}));
+ const response=await app.handle(request('/api/auth/sign-up/email',{name:'Um',email:'a@example.test',password:'twelve_characters_73!',termsAccepted:true,policyVersion:'2026-11-09'}));
  assert.equal(response.status,200);assert.equal((await response.json()).verificationRequired,true);
 });

@@ -1,8 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-// Optional isolated PostgreSQL WASM harness; never points at the live Supabase account.
-const modulePath=process.env.PADDLE_TEST_PGLITE_MODULE;
+// Isolated PostgreSQL WASM harness; never points at the live Supabase account.
+const modulePath=process.env.PADDLE_TEST_PGLITE_MODULE||'@electric-sql/pglite';
 test('Paddle PostgreSQL RPC ledger is atomic, idempotent, ordered and ownership-bound',{skip:!modulePath},async()=>{
  const {PGlite}=await import(modulePath);const db=new PGlite();
  try{

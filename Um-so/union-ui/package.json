@@ -3,14 +3,16 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "engines": {"node": "24.x"},
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build && node scripts/prepare-sites-build.mjs",
     "preview": "vite preview",
     "test:sites": "node --test tests/sites-worker.test.mjs",
     "test:interactions": "node scripts/audit-interactions.mjs",
-    "test": "node --test tests/catalog.test.mjs tests/runtime.test.mjs tests/export.test.mjs tests/app.test.mjs tests/vue-runtime.test.mjs tests/application.test.mjs tests/workspace-merge.test.mjs tests/http-server.test.mjs tests/tools.test.mjs tests/account-sync.test.mjs tests/catalog-media.test.mjs tests/builder.test.mjs tests/preview-health.test.mjs tests/generated-assets.test.mjs tests/recovered-runtime.test.mjs tests/recovered-export.test.mjs tests/recovered-catalog.test.mjs tests/preview-navigation.test.mjs tests/preview-assets.test.mjs tests/shape-waves.test.mjs tests/auth-required.test.mjs tests/auth-ui.test.mjs tests/supabase-auth.test.mjs tests/email-confirmation.test.mjs tests/vercel-auth-routing.test.mjs tests/21st-release.test.mjs tests/splash-cursor.test.mjs",
+    "test": "node --test --test-concurrency=2 tests/*.test.mjs",
     "audit:previews": "node scripts/audit-preview-files.mjs",
     "catalog:publish": "node scripts/publish-catalog.mjs",
     "previews:build": "node scripts/build-preview-inventory.mjs --retry-blocked --concurrency=2",
@@ -23,7 +25,9 @@
     "media:recover": "node scripts/recover-catalog-media.mjs && node scripts/render-icon-covers.mjs && node scripts/recover-preview-videos.mjs && node scripts/optimize-catalog-covers.mjs --apply && node scripts/publish-catalog.mjs",
     "audit:runtime": "node scripts/preview-audit-server.mjs",
     "audit:resources": "node scripts/audit-demo-resources.mjs",
-    "catalog:recover-profitize": "node scripts/import-profitize.mjs"
+    "catalog:recover-profitize": "node scripts/import-profitize.mjs",
+    "test:security": "node --test tests/security-controls.test.mjs tests/auth-required.test.mjs tests/supabase-auth.test.mjs tests/preview-assets.test.mjs tests/preview-health.test.mjs tests/email-confirmation.test.mjs tests/privacy-database.test.mjs",
+    "backup:encrypted": "node scripts/backup-database.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",
@@ -161,7 +165,6 @@
     "usehooks-ts": "^3.1.1",
     "vaul": "^1.1.2",
     "vgpu": "^0.6.0",
-    "vite": "6.4.2",
     "vue": "^3.5.44",
     "vue-input-otp": "^0.4.0",
     "vue-router": "^4.6.4",
@@ -170,7 +173,13 @@
   },
   "devDependencies": {
     "@babel/parser": "^7.29.7",
+    "@electric-sql/pglite": "0.5.16",
     "jsdom": "^30.1.3",
+    "vite": "6.4.6",
     "web-audio-engine": "^0.13.4"
+  },
+  "overrides": {
+    "postcss-selector-parser": "6.1.5",
+    "@modelcontextprotocol/server": "2.3.0"
   }
 }

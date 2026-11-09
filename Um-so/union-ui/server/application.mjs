@@ -8,11 +8,12 @@ import Stripe from 'stripe';
 import nodemailer from 'nodemailer';
 import {createSupabaseApplication} from './supabase-app.mjs';
 import {supabaseConfig} from './supabase-client.mjs';
+import {readJSONObject,secureResponse} from './security-controls.mjs';
 
 export const PLANS=[
- {id:'monthly',name:'Mensal',amount:8000,currency:'brl',months:1},
- {id:'quarterly',name:'Trimestral',amount:15000,currency:'brl',months:3},
- {id:'annual',name:'Anual',amount:50000,currency:'brl',months:12},
+ {id:'monthly',name:'Mensal',amount:8500,currency:'brl',months:1},
+ {id:'quarterly',name:'Trimestral',amount:16500,currency:'brl',months:3},
+ {id:'annual',name:'Anual',amount:55000,currency:'brl',months:12},
 ];
 const json=(data,status=200)=>new Response(JSON.stringify(data),{status,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}});
 const fail=(status,message,code)=>Object.assign(new Error(message),{status,code});
@@ -24,6 +25,7 @@ function cleanWorkspace(value){
 
 export async function createApplication(options={}){
  if(!options.database&&supabaseConfig().url)return createSupabaseApplication(options);
+ if((options.production??process.env.NODE_ENV==='production')&&!options.database)throw Error('Production requires configured Supabase authentication.');
  const directory=path.resolve(options.directory||'var');await fs.mkdir(directory,{recursive:true});
  const production=options.production??process.env.NODE_ENV==='production';
  const origin=options.origin||process.env.APP_ORIGIN||'http://127.0.0.1:4173';
@@ -94,7 +96,7 @@ export async function createApplication(options={}){
   db.prepare('INSERT OR IGNORE INTO stripe_event(id,processed_at) VALUES(?,?)').run(event.id,new Date().toISOString());
   return json({received:true});
  }
- async function handle(request){
+ async function handleInternal(request){
   const url=new URL(request.url),route=url.pathname;
   try{
    if(route.startsWith('/api/auth/'))return auth.handler(request);
@@ -103,6 +105,18 @@ export async function createApplication(options={}){
    if(route==='/api/plans')return json({plans:PLANS,mode,available:Boolean(stripe&&Object.values(prices).every(Boolean))});
    if(route==='/api/access'){const current=await session(request);return json(access(current?.user));}
    if(request.method!=='GET'&&request.headers.get('origin')!==origin)throw fail(403,'Origem não autorizada.');
+   if(route==='/api/privacy/export'&&request.method==='GET'){
+    const user=await requireUser(request),workspace=db.prepare('SELECT revision,data,updated_at FROM workspace WHERE user_id=?').get(user.id);
+    return json({version:1,exportedAt:new Date().toISOString(),account:{id:user.id,name:user.name,email:user.email},workspace:workspace?{...workspace,data:JSON.parse(workspace.data)}:{revision:0,data:{saved:[],collections:[]}},subscriptions:db.prepare('SELECT status,period_end,cancel_at_period_end FROM subscription WHERE user_id=?').all(user.id)});
+   }
+   if(route==='/api/privacy/profile'&&request.method==='PATCH'){
+    await requireUser(request);const input=await readJSONObject(request);if(typeof input.name!=='string'||!input.name.trim()||input.name.length>100||Object.keys(input).some(key=>key!=='name'))throw fail(400,'Informe um nome válido.');
+    return auth.handler(new Request(origin+'/api/auth/update-user',{method:'POST',headers:request.headers,body:JSON.stringify({name:input.name.trim()})}));
+   }
+   if(route==='/api/privacy/delete'&&request.method==='POST'){
+    await requireUser(request);const input=await readJSONObject(request);if(input.confirmation!=='EXCLUIR'||typeof input.password!=='string'||!input.password||input.password.length>1024)throw fail(400,'Digite EXCLUIR e confirme sua senha atual.');
+    return auth.handler(new Request(origin+'/api/auth/delete-user',{method:'POST',headers:request.headers,body:JSON.stringify({password:input.password})}));
+   }
    if(route==='/api/workspace'){
     const user=await requireUser(request),existing=db.prepare('SELECT revision,data,updated_at FROM workspace WHERE user_id=?').get(user.id);
     if(request.method==='GET')return json(existing?{revision:existing.revision,data:JSON.parse(existing.data),updatedAt:existing.updated_at}:{revision:0,data:{saved:[],collections:[]}});
@@ -139,5 +153,6 @@ export async function createApplication(options={}){
  async function canReadCode(request){const current=await session(request);return access(current?.user).canExport;}
  async function isSignedIn(request){return Boolean((await session(request))?.user);}
  await auth.$context;
+ const handle=async request=>secureResponse(await handleInternal(request),request.url);
  return{handle,auth,db,canReadCode,isSignedIn,origin,close:()=>db.close()};
 }

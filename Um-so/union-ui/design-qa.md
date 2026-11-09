@@ -1,5 +1,14 @@
 # Verificação — Um só.
 
+## Forty security/privacy requirements — 2026-11-09
+
+- Scope: explicit private asset gating, API/body/origin/limiter controls, legal pages, account export/profile/deletion/essential preferences and operator-only encrypted backup tooling. Existing cosmic login artwork and layout preserved; legal links and signup acknowledgement added.
+- Code checks: final full suite 157/157 passed, zero skipped; production build passed with Vite 6.4.6 (full build 2m11s; final source rebundle 3.69s reusing unchanged public files); Sites packaging 4/4; npm audit zero known vulnerabilities. PostgreSQL RLS/WITH CHECK/cascade and Paddle ledger tests use isolated PGlite without remote services.
+- HTTP evidence: anonymous private-media GET/HEAD/Range denied, authenticated Range served with private/no-store, same cookie denied after logout. Account data export/correction/deletion and session revocation exercised locally. Server deletion remains disabled pending remote checks.
+- Browser: latest authorized IAB attempt returned `Local browser use is disabled in Work settings`; no alternate-browser bypass. New privacy controls, legal pages and signup acknowledgement have build/DOM/code evidence, not actual desktop/mobile screenshot or full visual QA.
+- Operational gaps: owning Supabase project unavailable through current connector; Vercel owner scope unavailable; backup schedule/restore, provider contracts, retention, admin MFA, monitoring and supplier identity completion remain pending. Refer to `docs/compliance-40.md`; no legal or exhaustive security certification is claimed.
+- final result: code checks passed; visual and remote operational verification blocked
+
 ## Splash Cursor loading fix — 2026-11-09
 
 - Target flow: `/component/splash-cursor-47c705` opens its actual cursor effect, confirms a presented frame, accepts pointer movement/click and exits loading. A stalled request or renderer must stop with a retry action.

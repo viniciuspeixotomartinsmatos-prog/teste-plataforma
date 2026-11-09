@@ -14,7 +14,7 @@ test('real SDK signup persists HttpOnly PKCE cookies and the callback exchanges 
  const original=globalThis.fetch;let challenge,verifier,redirect;
  globalThis.fetch=async(url,init)=>{const parsed=new URL(url);if(parsed.pathname.endsWith('/signup')){challenge=JSON.parse(init.body).code_challenge;redirect=new URL(parsed.searchParams.get('redirect_to'));return Response.json(user);}if(parsed.pathname.endsWith('/token')){verifier=JSON.parse(init.body).code_verifier;return Response.json(session());}throw Error('Unexpected mock request');};
  try{
-  const app=application(),signup=await app.handle(request('/api/auth/sign-up/email',{name:'Teste',email:user.email,password:'test-password-with-24-characters'}));
+  const app=application(),signup=await app.handle(request('/api/auth/sign-up/email',{name:'Teste',email:user.email,password:'test-password-with-24-characters',termsAccepted:true,policyVersion:'2026-11-09'}));
   assert.equal(signup.status,200);assert.equal((await signup.json()).verificationRequired,true);
   const cookies=signup.headers.getSetCookie();assert.ok(cookies.some(cookie=>cookie.includes('code-verifier=')));
   for(const cookie of cookies){assert.match(cookie,/HttpOnly/);assert.match(cookie,/Secure/);assert.match(cookie,/SameSite=Lax/i);}

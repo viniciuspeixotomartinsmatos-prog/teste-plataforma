@@ -20,7 +20,7 @@ test('bilingual marketing is rendered without session or JavaScript and private 
 test('policy pages have correct language, cross-language URLs and real support contact',()=>{
  for(const route of publicRoutes){
   const html=renderPublicPage(route,{origin});assert.ok(html,route);
-  assert.match(html,/acesso@nitidohig\.com\.br/);assert.match(html,/<main/);
+  assert.match(html,/nitidocompany@gmail\.com/);assert.match(html,/<main/);
   assert.match(html,/rel="canonical"/);assert.doesNotMatch(html,/\bTODO\b|lorem ipsum|Source terms/);
  }
  const html=renderPublicPage('/en/privacy/',{origin});assert.match(html,/Privacy/);assert.match(html,/Supabase/);

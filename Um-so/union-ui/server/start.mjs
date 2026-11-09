@@ -8,19 +8,20 @@ import {createApplication} from './application.mjs';
 import {nodeRequest,nodeResponse} from './application-plugin.mjs';
 import {protectedPath,signInResponse} from './access-policy.mjs';
 import {renderPublicPage,publicSitemap} from './public-site.mjs';
+import {securityHeaders} from './security-controls.mjs';
+import {renderLegalPage} from './legal-pages.mjs';
 const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp','.jpg':'image/jpeg','.jpeg':'image/jpeg','.woff':'font/woff','.woff2':'font/woff2','.mp4':'video/mp4','.webm':'video/webm','.mp3':'audio/mpeg','.wav':'audio/wav','.ogg':'audio/ogg','.wasm':'application/wasm','.zip':'application/zip'};
 export async function createServer(options={}){
  const root=path.resolve(options.root||'dist/client'),app=await createApplication(options);
  await fs.access(path.join(root,'index.html'));
  const server=http.createServer(async(req,res)=>{
-  res.setHeader('X-Content-Type-Options','nosniff');res.setHeader('Referrer-Policy','strict-origin-when-cross-origin');
-  res.setHeader('X-Frame-Options','SAMEORIGIN');
+  for(const [name,value]of Object.entries(securityHeaders(app.origin)))res.setHeader(name,value);
   try{
    const pathname=decodeURIComponent(new URL(req.url,app.origin).pathname);
    if(pathname.includes('\0')||pathname.includes('\\'))throw Object.assign(Error(),{status:400});
    if(pathname.startsWith('/api/'))return await nodeResponse(await app.handle(await nodeRequest(req,app.origin)),res);
    if(!['GET','HEAD'].includes(req.method))throw Object.assign(Error(),{status:405});
-   const publicHtml=pathname==='/sitemap.xml'?publicSitemap():renderPublicPage(pathname);
+   const publicHtml=pathname==='/sitemap.xml'?publicSitemap():renderLegalPage(pathname)??renderPublicPage(pathname);
    if(publicHtml!==null){res.setHeader('Content-Type',pathname==='/sitemap.xml'?'application/xml; charset=utf-8':'text/html; charset=utf-8');res.setHeader('Cache-Control','no-cache');return res.end(req.method==='HEAD'?'':publicHtml);}
    if(pathname.split('/').some(p=>p.startsWith('.'))||/\.(sqlite|toml|log|pem)(?:-|$|\.)/i.test(pathname))throw Object.assign(Error(),{status:404});
    if(protectedPath(pathname)&&!await app.isSignedIn(await nodeRequest(req,app.origin)))return await nodeResponse(signInResponse(await nodeRequest(req,app.origin)),res);
