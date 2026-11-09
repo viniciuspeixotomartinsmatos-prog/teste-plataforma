@@ -7,6 +7,7 @@ import {pipeline} from 'node:stream/promises';
 import {createApplication} from './application.mjs';
 import {nodeRequest,nodeResponse} from './application-plugin.mjs';
 import {protectedPath,signInResponse} from './access-policy.mjs';
+import {renderPublicPage,publicSitemap} from './public-site.mjs';
 const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp','.jpg':'image/jpeg','.jpeg':'image/jpeg','.woff':'font/woff','.woff2':'font/woff2','.mp4':'video/mp4','.webm':'video/webm','.mp3':'audio/mpeg','.wav':'audio/wav','.ogg':'audio/ogg','.wasm':'application/wasm','.zip':'application/zip'};
 export async function createServer(options={}){
  const root=path.resolve(options.root||'dist/client'),app=await createApplication(options);
@@ -19,8 +20,11 @@ export async function createServer(options={}){
    if(pathname.includes('\0')||pathname.includes('\\'))throw Object.assign(Error(),{status:400});
    if(pathname.startsWith('/api/'))return await nodeResponse(await app.handle(await nodeRequest(req,app.origin)),res);
    if(!['GET','HEAD'].includes(req.method))throw Object.assign(Error(),{status:405});
+   const publicHtml=pathname==='/sitemap.xml'?publicSitemap():renderPublicPage(pathname);
+   if(publicHtml!==null){res.setHeader('Content-Type',pathname==='/sitemap.xml'?'application/xml; charset=utf-8':'text/html; charset=utf-8');res.setHeader('Cache-Control','no-cache');return res.end(req.method==='HEAD'?'':publicHtml);}
    if(pathname.split('/').some(p=>p.startsWith('.'))||/\.(sqlite|toml|log|pem)(?:-|$|\.)/i.test(pathname))throw Object.assign(Error(),{status:404});
    if(protectedPath(pathname)&&!await app.isSignedIn(await nodeRequest(req,app.origin)))return await nodeResponse(signInResponse(await nodeRequest(req,app.origin)),res);
+   if(protectedPath(pathname)&&app.canAccessPlatform&&!await app.canAccessPlatform(await nodeRequest(req,app.origin))){const html=req.headers.accept?.includes('text/html');return await nodeResponse(html?new Response(null,{status:303,headers:{Location:'/plans','Cache-Control':'no-store'}}):Response.json({error:'Assinatura necessária.',code:'subscription_required'},{status:402,headers:{'Cache-Control':'no-store'}}),res);}
    if((pathname.startsWith('/code/')||pathname.startsWith('/tools-runtime/'))&&!await app.canReadCode(await nodeRequest(req,app.origin)))return await nodeResponse(new Response(JSON.stringify({error:'Assinatura necessária.',code:'subscription_required'}),{status:403,headers:{'Content-Type':'application/json','Cache-Control':'no-store'}}),res);
    let target=path.resolve(root,'.'+pathname);
    if(target!==root&&!target.startsWith(root+path.sep))throw Object.assign(Error(),{status:404});

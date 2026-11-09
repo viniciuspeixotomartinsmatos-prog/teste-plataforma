@@ -3,6 +3,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { createPreviewPlugin } from "./server/preview-service.mjs";
 import { createApplicationPlugin } from "./server/application-plugin.mjs";
+import {publicSitePlugin} from './server/public-site-plugin.mjs';
 
 export default defineConfig({
   build: {
@@ -22,5 +23,5 @@ export default defineConfig({
       clientFiles: ["./src/main.jsx"],
     },
   },
-  plugins: [createApplicationPlugin(), publicAssetCors(), createPreviewPlugin(), react()],
+  plugins: [publicSitePlugin(),createApplicationPlugin(), publicAssetCors(), createPreviewPlugin(), react()],
 });

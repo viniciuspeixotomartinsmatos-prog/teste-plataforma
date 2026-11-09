@@ -4,7 +4,7 @@ Página comercial independente da plataforma em `../union-ui`. Publicar apenas e
 
 Endereço principal: https://nitido-lp.vercel.app/ (projeto Vercel `nitido-lp`).
 
-O conteúdo descreve a assinatura do software, os três períodos de acesso e os recursos confirmados no código da plataforma. Os botões de plano mostram o valor, o intervalo e a disponibilidade atual. Quando a Kiwify liberar e os três links forem verificados, substituir a consulta ao suporte pelo checkout correspondente.
+O conteúdo descreve a assinatura do software, os três períodos de acesso e os recursos confirmados no código da plataforma. Os botões de plano mostram o valor, o intervalo e a disponibilidade atual. Quando as assinaturas forem liberadas e o checkout testado, direcionar os botões à seleção autenticada de planos do nitido.
 
 Os efeitos Brilho e Contorno adaptam Shine Border e Border Beam dos arquivos `../union-ui/public/code/a/magic/shine-border.json` e `border-beam.json`. São aplicados em um card original da landing page. Os avisos de licença ficam em `licencas.txt`.
 

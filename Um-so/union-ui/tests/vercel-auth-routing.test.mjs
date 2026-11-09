@@ -6,6 +6,7 @@ test('Vercel routes nested auth and workspace requests through a concrete API en
  const config=JSON.parse(await fs.readFile('vercel.json','utf8'));
  const rule=config.rewrites.find(r=>r.source==='/api/:path*');
  assert.equal(rule?.destination,'/api');
+ assert.equal(config.rewrites.find(r=>r.source==='/billing')?.destination,'/index.html');
  const entry=await import('../api/index.js');
  const response=await entry.default.fetch(new Request('https://platform.example/api/auth/get-session'));
  assert.equal(response.status,503);

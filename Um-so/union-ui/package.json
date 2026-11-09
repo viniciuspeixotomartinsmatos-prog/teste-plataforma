@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "engines": {"node": "24.x"},
   "scripts": {
     "dev": "vite",
     "build": "vite build && node scripts/prepare-sites-build.mjs",
@@ -16,6 +17,8 @@
     "start": "node server/start.mjs",
     "build:tools": "node scripts/build-tools.mjs",
     "billing:setup": "node scripts/setup-billing.mjs",
+    "billing:paddle:setup": "node scripts/setup-paddle.mjs",
+    "test:billing": "node --test tests/paddle-billing.test.mjs tests/paddle-database.test.mjs tests/paddle-setup.test.mjs tests/billing-ui.test.mjs tests/public-site.test.mjs",
     "test:tools": "node --test tests/tools.test.mjs && node scripts/audit-tool-ui.mjs && node scripts/audit-tool-ui.mjs background-studio",
     "media:recover": "node scripts/recover-catalog-media.mjs && node scripts/render-icon-covers.mjs && node scripts/recover-preview-videos.mjs && node scripts/optimize-catalog-covers.mjs --apply && node scripts/publish-catalog.mjs",
     "audit:runtime": "node scripts/preview-audit-server.mjs",

@@ -1,2 +1,10 @@
 User-agent: *
-Disallow: /
+Disallow: /account
+Disallow: /plans
+Disallow: /billing
+Disallow: /api/
+Disallow: /data/
+Disallow: /code/
+Disallow: /previews/
+Disallow: /tools-runtime/
+Sitemap: https://teste-plataforma-delta.vercel.app/sitemap.xml

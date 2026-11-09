@@ -1,5 +1,6 @@
 import {requestClient} from './supabase-client.mjs';
 import {safeNext} from '../src/auth-policy.js';
+import {createPaddleBilling,readPaddleSubscription} from './paddle-billing.mjs';
 
 const json=(data,status=200)=>Response.json(data,{status,headers:{'Cache-Control':'private, no-store'}});
 const fail=(status,message,code)=>Object.assign(Error(message),{status,code});
@@ -9,11 +10,18 @@ function cleanWorkspace(value){
  const ids=value=>Array.isArray(value)?[...new Set(value.filter(x=>typeof x==='string'&&x.length<200))].slice(0,20000):[];
  return{saved:ids(value.saved),collections:(Array.isArray(value.collections)?value.collections:[]).slice(0,500).map(c=>({id:String(c.id||'').slice(0,100),name:String(c.name||'Coleção').slice(0,80),items:ids(c.items)})).filter(c=>c.id)};
 }
-export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientFactory=requestClient}={}){
+export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientFactory=requestClient,billingEnv=process.env,billingFetch=fetch}={}){
+ const billing=createPaddleBilling({env:billingEnv,fetchImpl:billingFetch});
  async function handle(request){
   let finish=response=>response;
   try{
    const url=new URL(request.url),route=url.pathname;
+   // Provider callbacks authenticate the exact raw bytes, without browser cookies or Origin.
+   if(route==='/api/billing/webhook'){
+    if(request.method!=='POST')throw fail(405,'Método não permitido.');
+    return json(await billing.webhook(request));
+   }
+   if(route==='/api/billing/config'&&request.method==='GET')return json(billing.publicConfig());
    // An explicit canonical origin prevents request headers controlling email links.
    if(!origin||!/^https?:\/\//.test(origin))throw fail(503,'O acesso está em configuração. Tente novamente mais tarde.','auth_setup_required');
    if(!['GET','HEAD'].includes(request.method)&&request.headers.get('origin')!==origin)throw fail(403,'Origem não autorizada.');
@@ -23,9 +31,20 @@ export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientF
    const requireUser=async()=>{const user=await getUser();if(!user)throw fail(401,'Entre na sua conta para continuar.','sign_in_required');return user;};
    const check=result=>{if(result.error){const code=result.error.code;throw fail(result.error.status===429?429:400,result.error.status===429?'Aguarde um pouco antes de tentar novamente.':code==='email_not_confirmed'?'Confirme seu e-mail antes de entrar.':code==='otp_expired'?'Esse link expirou ou já foi usado. Solicite um novo link.':code==='invalid_credentials'?'E-mail ou senha incorretos.':'Não foi possível concluir. Confira seus dados e tente novamente.',code);}return result.data;};
    let response;
-   if(route==='/api/health')response=json({ok:true,auth:'supabase',billingMode:'disabled'});
+   if(route==='/api/health')response=json({ok:true,auth:'supabase',billingMode:billing.config.mode});
    else if(route==='/api/auth/get-session')response=json({user:profile(await getUser())});
-   else if(route==='/api/access')response=json({canExport:Boolean(await getUser()),requiresSubscription:false,billingMode:'disabled',subscription:null});
+   else if(route==='/api/access'){
+    const user=await getUser(),subscription=user&&billing.config.enabled?await readPaddleSubscription(client,user.id,billing.config.environment):null;
+    response=json({canExport:Boolean(user)&&(!billing.config.requiresSubscription||Boolean(subscription?.hasAccess)),requiresSubscription:billing.config.requiresSubscription,billingMode:billing.config.mode,subscription});
+   }
+   else if(route==='/api/billing/checkout'&&request.method==='POST')response=json(await billing.checkout(await requireUser(),await body()));
+   else if(route==='/api/billing/portal'&&request.method==='POST'){
+    const input=await body();if(!input||typeof input!=='object'||Object.keys(input).length)throw fail(400,'Dados inválidos.');
+    response=json(await billing.portal(await requireUser()));
+   }
+   else if(route==='/api/billing/subscription'&&request.method==='GET'){
+    const user=await requireUser();response=json({subscription:billing.config.enabled?await readPaddleSubscription(client,user.id,billing.config.environment):null,billingMode:billing.config.mode});
+   }
    else if(route==='/api/auth/callback'&&request.method==='GET'){
     if(!url.searchParams.get('code'))throw fail(400,'Link inválido ou expirado. Solicite um novo link.');
     const flowId=url.searchParams.get('sb_flow_id');
@@ -80,5 +99,12 @@ export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientF
   }
  }
  async function isSignedIn(request){const {client}=clientFactory(request);const {data,error}=await client.auth.getUser();return !error&&Boolean(data?.user);}
- return{handle,isSignedIn,canReadCode:isSignedIn,origin,close:()=>{}};
+ async function canAccessPlatform(request){
+  const {client}=clientFactory(request);const {data,error}=await client.auth.getUser();
+  if(error||!data?.user)return false;
+  if(!billing.config.requiresSubscription)return true;
+  if(!billing.config.enabled)return false;
+  return Boolean((await readPaddleSubscription(client,data.user.id,billing.config.environment))?.hasAccess);
+ }
+ return{handle,isSignedIn,canReadCode:canAccessPlatform,canAccessPlatform,origin,close:()=>{}};
 }

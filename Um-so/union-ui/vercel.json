@@ -46,6 +46,10 @@
       "destination": "/index.html"
     },
     {
+      "source": "/billing",
+      "destination": "/index.html"
+    },
+    {
       "source": "/builder/:path*",
       "destination": "/index.html"
     },
