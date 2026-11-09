@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-09T13:22:19.938660+00:00",
+  "checkedAt": "2026-11-09T13:45:33.954926+00:00",
   "paymentsEnabled": false,
   "sources": [
     {
@@ -18293,7 +18293,7 @@
         {
           "url": "https://tailark.com/sitemap.xml",
           "bytes": 92962,
-          "sha256": "86fe9766fa3137a7f2ad484ef498d01bfbb1e676ff9a46a1ecd6e6a3065b7bf5"
+          "sha256": "dcd9a103d9ef3cf60f9cc37076d72d682bcd2a669be9c71f1a777c5481b8fcf8"
         }
       ],
       "limitations": [
@@ -18601,23 +18601,9 @@
       ],
       "scope": "Public route discovery only; sitemap omissions, authenticated content, source-code changes and new functionality require separate checks.",
       "status": "inventory-observed",
-      "integratedRouteCount": 95,
-      "unmatchedRoutes": [
-        "/build/componentes/sticker-slap-footer",
-        "/build/landing-pages/alisio",
-        "/build/landing-pages/arbo",
-        "/build/landing-pages/kairo",
-        "/build/landing-pages/orbo",
-        "/build/landing-pages/patio",
-        "/build/landing-pages/scoopie",
-        "/build/landing-pages/trami",
-        "/build/motion/conhecaoclaude",
-        "/build/motion/estreia"
-      ],
-      "addedSincePreviousCheck": [
-        "/build/motion/conhecaoclaude",
-        "/build/motion/estreia"
-      ],
+      "integratedRouteCount": 103,
+      "unmatchedRoutes": [],
+      "addedSincePreviousCheck": [],
       "previousCheckAvailable": true,
       "publishedByThisCheck": 0
     }

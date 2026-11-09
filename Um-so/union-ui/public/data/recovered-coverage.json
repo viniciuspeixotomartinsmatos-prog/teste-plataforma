@@ -1,9 +1,9 @@
 {
   "capturedAt": "2026-10-29T18:26:20.873Z",
-  "generatedAt": "2026-11-04T13:48:33.991Z",
-  "observed": 95,
-  "published": 95,
-  "newEntries": 79,
+  "generatedAt": "2026-11-09T13:45:33.491Z",
+  "observed": 103,
+  "published": 103,
+  "newEntries": 87,
   "consolidated": [
     {
       "recoveredId": "recovered--animated-mosaic-portrait",
@@ -102,11 +102,11 @@
       "reason": "single-existing-title-retain-id-and-original-pointers"
     }
   ],
-  "executable": 77,
-  "recorded": 18,
+  "executable": 78,
+  "recorded": 25,
   "skipped": [],
   "failed": [],
-  "downloadedAssets": 155,
+  "downloadedAssets": 169,
   "downloadedBytes": 0,
   "items": [
     {
@@ -773,13 +773,69 @@
       "mode": "recorded-video",
       "preview": "/previews/recovered/colina.html",
       "promptOrigin": "reconstructed"
+    },
+    {
+      "id": "recovered--kairo",
+      "name": "Kairo",
+      "mode": "recorded-video",
+      "preview": "/previews/recovered/kairo.html",
+      "promptOrigin": "original"
+    },
+    {
+      "id": "recovered--alisio",
+      "name": "Alísio",
+      "mode": "recorded-video",
+      "preview": "/previews/recovered/alisio.html",
+      "promptOrigin": "original"
+    },
+    {
+      "id": "recovered--trami",
+      "name": "Trami",
+      "mode": "recorded-video",
+      "preview": "/previews/recovered/trami.html",
+      "promptOrigin": "original"
+    },
+    {
+      "id": "recovered--orbo",
+      "name": "ORBO",
+      "mode": "recorded-video",
+      "preview": "/previews/recovered/orbo.html",
+      "promptOrigin": "original"
+    },
+    {
+      "id": "recovered--sticker-slap-footer",
+      "name": "Sticker Slap Footer",
+      "mode": "interactive-component",
+      "preview": "/previews/recovered/sticker-slap-footer.html",
+      "promptOrigin": "original"
+    },
+    {
+      "id": "recovered--scoopie",
+      "name": "Scoopie",
+      "mode": "recorded-video",
+      "preview": "/previews/recovered/scoopie.html",
+      "promptOrigin": "original"
+    },
+    {
+      "id": "recovered--arbo",
+      "name": "Arbo",
+      "mode": "recorded-video",
+      "preview": "/previews/recovered/arbo.html",
+      "promptOrigin": "original"
+    },
+    {
+      "id": "recovered--patio",
+      "name": "Pátio",
+      "mode": "recorded-video",
+      "preview": "/previews/recovered/patio.html",
+      "promptOrigin": "original"
     }
   ],
   "limitations": [
-    "All new prompts are explicitly reconstructed; no original server prompt was extracted.",
+    "Prompt provenance is explicit per item: reconstructed or original authorized download.",
     "Compiled demos are not the original editable project sources.",
     "The recorded-only entries have playable video, not an invented interactive implementation.",
-    "No server-side authentication, billing, database or non-public content was recovered.",
+    "No server-side authentication, billing or database implementation was recovered; authorized original prompts and client source bundles are identified per item.",
     "External media in original demos may still require internet."
   ]
 }

@@ -152,7 +152,7 @@ def main():
             baseline[source].add(route(item['url']))
     # Consolidated Profitize titles keep another source's public catalog identity.
     profitize = json.loads((RESEARCH / 'profitize/catalog.json').read_text(encoding='utf-8'))
-    baseline['profitize'].update('/build/' + ('componentes' if item['type'] == 'component' else 'landing-pages') + '/' + item['slug'] for item in profitize)
+    baseline['profitize'].update('/build/' + {'component': 'componentes', 'landing_page': 'landing-pages', 'motion': 'motion'}[item['type']] + '/' + item['slug'] for item in profitize)
     previous_file = OUT / 'latest.json'
     previous = json.loads(previous_file.read_text(encoding='utf-8')) if previous_file.exists() else {}
     previous_sources = {item['source']: item for item in previous.get('sources', [])}

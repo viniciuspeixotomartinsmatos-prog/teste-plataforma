@@ -34,6 +34,13 @@ test('unified workspace preserves search, categories, collections, comparison an
  await click([...document.querySelectorAll('[role=tab]')].find(el=>el.textContent.startsWith('Código')));
  assert.match(document.querySelector('.code-view').textContent,/<!doctype html>/i);
  await click(button('Copiar prompt'));assert.ok(clipboard.includes('DEMONSTRAÇÃO HTML COMPLETA'));assert.match(clipboard,/<!doctype html>/i);
+ const kairo=JSON.parse(await fs.readFile('public/data/catalog-live.json','utf8')).find(row=>row.id==='recovered--kairo');
+ await act(async()=>{history.pushState({},'','/component/'+kairo.publicSlug);window.dispatchEvent(new dom.window.PopStateEvent('popstate'));});
+ for(let i=0;i<40&&(!button('Copiar prompt')||button('Copiar prompt').disabled);i++)await settle();
+ await click(button('Copiar prompt'));
+ const originalKairo=await fs.readFile('../research/source-checks/releases/2026-11-09/profitize/kairo/PROMPT-ORIGINAL.md','utf8');
+ assert.ok(clipboard.startsWith(originalKairo),'recorded preview copies its original authorized prompt, not a generic HTML reconstruction');
+ assert.match(document.querySelector('.detail-about').textContent,/Prompt original incluído/);
  await act(async()=>root.unmount());
 });
 

@@ -3,6 +3,32 @@ import assert from 'node:assert/strict';
 import {standalonePreview,componentPrompt,componentArchive} from '../src/component-export.js';
 import {unzipSync,strFromU8} from 'fflate';
 
+test('authorized original releases copy their actual prompts and export byte-identical supporting packages',async()=>{
+ const fs=await import('node:fs/promises'),path=await import('node:path'),original=globalThis.fetch;
+ globalThis.fetch=async url=>{try{if(typeof url!=='string'||!url.startsWith('/'))return new Response('',{status:404});const bytes=await fs.readFile(path.join('public',url));return new Response(bytes,{headers:{'content-type':url.endsWith('.mp4')?'video/mp4':url.endsWith('.webp')?'image/webp':url.endsWith('.js')?'text/javascript':'application/octet-stream'}});}catch{return new Response('',{status:404});}};
+ try{
+  const catalog=JSON.parse(await fs.readFile('public/data/catalog-live.json','utf8'));
+  for(const slug of ['kairo','orbo','alisio','patio','scoopie','trami','arbo','sticker-slap-footer']){
+   const item=catalog.find(row=>row.id==='recovered--'+slug);assert.ok(item,slug);
+   const payload=JSON.parse(await fs.readFile('public'+item.codePath,'utf8'));
+   const prompt=await fs.readFile('../research/source-checks/releases/2026-11-09/profitize/'+slug+'/PROMPT-ORIGINAL.md','utf8');
+   assert.equal(await componentPrompt(item,payload),prompt,slug);
+   const archive=unzipSync(await componentArchive(item,payload));
+   assert.equal(strFromU8(archive['src/PROMPT-ORIGINAL.md']),prompt);
+   if(slug==='sticker-slap-footer'){
+    assert.ok(archive['src/components/ui/sticker-slap-footer.tsx']);
+    assert.ok(archive['src/components/sticker-slap-footer-demo.tsx']);
+    assert.ok(!/<script[^>]+src="\/previews\//.test(strFromU8(archive['preview.html'])));
+   }else{
+    assert.deepEqual(archive[slug+'-arquivos.zip'],new Uint8Array(await fs.readFile('../research/source-checks/releases/2026-11-09/profitize/'+slug+'/arquivos.zip')));
+    const embedded=strFromU8(archive['preview.html']).match(/<video[^>]+src="data:video\/mp4;base64,([^"]+)"/)?.[1];assert.ok(embedded,slug);
+    const media=(await fs.readFile('public'+item.previewPath,'utf8')).match(/<video[^>]+src="([^"]+)"/)[1];
+    assert.deepEqual(Buffer.from(embedded,'base64'),await fs.readFile('public'+media));
+   }
+  }
+ }finally{globalThis.fetch=original;}
+});
+
 test('downloaded recovered demos embed their scripts, styles and local media',async()=>{
  const original=globalThis.fetch;
  const values={

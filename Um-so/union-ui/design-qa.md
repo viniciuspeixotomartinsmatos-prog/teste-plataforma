@@ -169,3 +169,19 @@ Final verification: 83 tests passed with two concurrent workers, production buil
 - Browser console check: not completed after final changes because browser access was disabled.
 - Verification results: full suite 83/83 passed with test concurrency 2; production `npm run build` passed (2m31s), including Sites preparation; `npm run test:sites` passed 4/4. `git diff --check` passed. These checks do not substitute for final visual QA.
 - final result: blocked
+
+
+## Profitize November 9 integration
+
+Scope: eight new entries, seven recorded video references and one original interactive React component. Original prompts, guide files and supporting ZIPs preserved. Existing login mock QA status above remains unchanged; this catalog verification does not certify that separate screen.
+
+- Source: original Profitize listing/detail UI under an existing Pro session; retained original prompts and media in `../research/source-checks/releases/2026-11-09/profitize/`.
+- Browser: authorized IAB, local loopback audit server, opaque sandbox startup audit 8/8 without errors after fixing JSX runtime. First failure and fixed rerun are recorded honestly in the acquisition log.
+- Desktop evidence: `var/audits/2026-11-09/sticker-footer.jpg` (full original React footer after replay, approximately 1264px wide). Native keyboard movement changed the sticker's position; Escape reset it; replay and credits expanded correctly. Original code-provided lettering, stickers, copy and colors retained without replacement artwork.
+- Mobile evidence: `var/audits/2026-11-09/sticker-footer-mobile.jpg`, 390px CSS viewport; document scroll width 390px. Source media same subject/crop as original MP4/poster, videos contain-fit with native controls; Kairo tested at 390 × 844. Temporary viewport override reset afterward.
+- Playback evidence: all seven readyState 4, videoWidth 960, no media errors; currentTime advanced for all seven. Originals range from 18.8s to 29.53s.
+- Export evidence: actual copied Kairo prompt exercised through rendered app DOM; all eight prompt outputs preserve original downloaded text. Seven exported support ZIPs byte-compared; exported previews embed identical MP4 bytes. Interactive source export includes both original TSX files and an inlined standalone preview.
+- Limits: authenticated production UI interactions, original support ZIP projects' individual builds and full touch/drag physics are not claimed verified. No server-side application behavior was recovered from a recorded preview. Whole-source inventory differences elsewhere remain pending.
+- final result: passed
+
+- Release validation: 84/84 full-suite tests passed; production build passed in 3m49s; Sites packaging tests passed 4/4. Closing static metadata and all new assets byte-compared with the production build output after source-check bookkeeping.
