@@ -39,7 +39,7 @@ ROUTES = {
     'motion': r'^/docs/[^/]+$',
     'tailark': r'^/(?:blocks|components|templates)/.+',
     'animate': r'^/(?:vue/)?docs/(?:components|primitives|icons|backgrounds|effects)/.+',
-    'profitize': r'^/build/(?:componentes|landing-pages|templates)/[^/]+$',
+    'profitize': r'^/build/(?:componentes|landing-pages|templates|motion)/[^/]+$',
 }
 REGISTRIES = {
     'magic': ('https://raw.githubusercontent.com/magicuidesign/magicui/main/apps/www/public/r/registry.json', 'catalog-a/magic-registry.json'),
@@ -79,7 +79,7 @@ def check(pair):
             if source == 'profitize':
                 # Public HTML contains both regular links and escaped RSC links.
                 text = html.unescape(text.replace('\\"', '"').replace('\\/', '/'))
-                found.update(re.findall(r'/build/(?:componentes|landing-pages|templates)/[a-z0-9-]+', text))
+                found.update(re.findall(r'/build/(?:componentes|landing-pages|templates|motion)/[a-z0-9-]+', text))
             else:
                 root = ET.fromstring(text)
                 locations = [element.text for element in root.iter() if element.tag.endswith('}loc') or element.tag == 'loc']
