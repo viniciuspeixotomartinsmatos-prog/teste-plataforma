@@ -2,6 +2,8 @@
 
 Status: staged, not published. Authorized browser control returned `Local browser use is disabled in Work settings`. No alternative browser was used and no successful browser evidence was fabricated.
 
+Code and retained artifacts pushed to `origin/jorge` in `f50a1963d`. Deployment inspection returned HTTP 403 for the owning Vercel team (`Not authorized`); no deployment success is claimed. Reauthorize team access through the connector when the user is available. Windows Git operations on deeply nested original template resource names may require `git -c core.longpaths=true`; source bytes and evidence hashes are protected by scoped `.gitattributes` rules.
+
 ## Coverage
 
 - All 125 newly observed routes resolved: 92 components, 14 themes and 19 templates. Metadata: `21st-target-metadata.json`.
