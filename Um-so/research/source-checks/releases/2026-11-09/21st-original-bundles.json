@@ -1,0 +1,62 @@
+[
+  {
+    "id": "21st-release-31717",
+    "name": "Liquid Glass Carousel",
+    "status": "blocked",
+    "reason": "Original local dependency not included: @/components/ui/liquid-glass-carousel-utils/webgl-error-boundary",
+    "originalPreviewStatus": "retained-specific-item",
+    "bundleUrl": "https://cdn.21st.dev/componentry/liquid-glass-carousel/default/bundle.1790338489709-86fe21d3-7ab1-49ed-8d8a-5a3a149d8ba1.html",
+    "file": "21st-original-bundles/21st-release-31717.html",
+    "bytes": 890120
+  },
+  {
+    "id": "21st-release-44579",
+    "name": "Geo Traceroute",
+    "status": "blocked",
+    "reason": "Original local dependency not included: @/components/ui/geo-traceroute-utils/canvas; Original local dependency not included: @/components/ui/geo-traceroute-utils/color; Original local dependency not included: @/components/ui/geo-traceroute-utils/geo; Original local dependency not included: @/components/ui/geo-traceroute-utils/geo-data; Original local dependency not included: @/components/ui/geo-traceroute-utils/math; Original local dependency not included: @/components/ui/geo-traceroute-utils/motion; Original local dependency not included: @/components/ui/geo-traceroute-utils/roll-text; Original local dependency not included: @/components/ui/geo-traceroute-utils/sparks; Original local dependency not included: @/components/ui/geo-traceroute-utils/use-controllable-state",
+    "originalPreviewStatus": "retained-specific-item",
+    "bundleUrl": "https://cdn.21st.dev/lumesec/geo-traceroute/default/bundle.1793769838547-4e28ffd1-2e39-46ea-8c13-a8203ad31411.html",
+    "file": "21st-original-bundles/21st-release-44579.html",
+    "bytes": 348119
+  },
+  {
+    "id": "21st-release-18216",
+    "name": "Logo Clouds",
+    "status": "blocked",
+    "reason": "Original local dependency not included: @/components/ui/logo-clouds-utils/logos",
+    "originalPreviewStatus": "retained-specific-item",
+    "bundleUrl": "https://cdn.21st.dev/nexus-ui/logo-clouds/default/bundle.1784460668169-f46bb524-1543-41a7-8e34-77c957079868.html",
+    "file": "21st-original-bundles/21st-release-18216.html",
+    "bytes": 410306
+  },
+  {
+    "id": "21st-release-28391",
+    "name": "Chain of Thought",
+    "status": "blocked",
+    "reason": "Original local dependency not included: @/components/ui/chain-of-thought-utils/use-on-change",
+    "originalPreviewStatus": "retained-specific-item",
+    "bundleUrl": "https://cdn.21st.dev/nexus-ui/chain-of-thought/default/bundle.1789973969240-37a44368-dfca-465b-b466-cfab9770cba3.html",
+    "file": "21st-original-bundles/21st-release-28391.html",
+    "bytes": 281000
+  },
+  {
+    "id": "21st-release-29831",
+    "name": "Interactive Terminal",
+    "status": "blocked",
+    "reason": "Original local dependency not included: @/components/ui/terminal-utils/sprite-audio",
+    "originalPreviewStatus": "retained-specific-item",
+    "bundleUrl": "https://cdn.21st.dev/nexus-ui/terminal/default/bundle.1790125278766-d2c61012-a64b-47ec-b692-afb4e7e37cb6.html",
+    "file": "21st-original-bundles/21st-release-29831.html",
+    "bytes": 428500
+  },
+  {
+    "id": "21st-release-44619",
+    "name": "Orb Flow Background",
+    "status": "blocked",
+    "reason": "Original local dependency not included: @/index.css",
+    "originalPreviewStatus": "retained-specific-item",
+    "bundleUrl": "https://cdn.21st.dev/pmmis-cp/orb-flow-background/default/bundle.1793855583109-52c58494-d332-487d-bc88-afab0fe380f1.html",
+    "file": "21st-original-bundles/21st-release-44619.html",
+    "bytes": 237216
+  }
+]

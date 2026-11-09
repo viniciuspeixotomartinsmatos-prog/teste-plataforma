@@ -1,0 +1,2486 @@
+[
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/1a/1a300fea6e7f3a7e530448dd8277eb31e0f11c2e726f09ccbac310d516f8075f.webp",
+    "local": "/assets/releases/21st/f3420457b98ec0fac306a18d.webp",
+    "bytes": 3444932,
+    "sha256": "1a300fea6e7f3a7e530448dd8277eb31e0f11c2e726f09ccbac310d516f8075f",
+    "uses": [
+      [
+        "21st-release-19204",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/00/00f17e7c8379b3c4629810073d1c1fe0c79946ae0e0660f05aebf7c21b0ebbde.webp",
+    "local": "/assets/releases/21st/bdac624c2621d846bae42ea1.webp",
+    "bytes": 2599598,
+    "sha256": "00f17e7c8379b3c4629810073d1c1fe0c79946ae0e0660f05aebf7c21b0ebbde",
+    "uses": [
+      [
+        "21st-release-19204",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/componentry/scroll-choreography/default/preview.1783712366971.png",
+    "local": "/assets/releases/21st/c671663880ec394fe8a2e1d5.png",
+    "bytes": 7975880,
+    "sha256": "36a74e5693eb6d39c22823b8d2c268d2d73f3a33264fe2546eff8a803b2da7f7",
+    "uses": [
+      [
+        "21st-release-19204",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/d3/d310c7e0904578a268f9b43e56334bbedab73259827f78fa5820bae55938adf0.webp",
+    "local": "/assets/releases/21st/b7d5014b94dfeb0de8f26de1.webp",
+    "bytes": 3449136,
+    "sha256": "d310c7e0904578a268f9b43e56334bbedab73259827f78fa5820bae55938adf0",
+    "uses": [
+      [
+        "21st-release-19204",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/e1/e1a768d91c721771a9095e1079f7ac04e9ce8b81d2264db6f614c42d4cc65a6b.webp",
+    "local": "/assets/releases/21st/a7c0cf3f732d4ad9c7731a92.webp",
+    "bytes": 2896684,
+    "sha256": "e1a768d91c721771a9095e1079f7ac04e9ce8b81d2264db6f614c42d4cc65a6b",
+    "uses": [
+      [
+        "21st-release-19204",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/componentry/split-flap-display/default/preview.1783715052566.png",
+    "local": "/assets/releases/21st/b75bd654fc0d32592c0be85a.png",
+    "bytes": 173053,
+    "sha256": "f37af764e555df6a44abc355345a2ca7dde06d10bb5dfc86b59885bdaa1a9db5",
+    "uses": [
+      [
+        "21st-release-19241",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/componentry/hyper-text/default/preview.1783715127296.png",
+    "local": "/assets/releases/21st/882048acc87f69cb78afa901.png",
+    "bytes": 53421,
+    "sha256": "bde6950817ce29938d93162f76207ff761bd6e7321b95b81fe10d8105e902995",
+    "uses": [
+      [
+        "21st-release-19242",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/componentry/text-repel/default/preview.1785375796746-06c7eceb-0a8a-412a-aa98-6882a8756caf.png",
+    "local": "/assets/releases/21st/0077d87c1bd1786b7a3dcb9c.png",
+    "bytes": 30410,
+    "sha256": "9acaf2a0e1ce661ada37c044f4a2b4591374b33bdd9cbc358c502b07957f4da6",
+    "uses": [
+      [
+        "21st-release-19336",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_registry_componentry_1783513914157/auth-modal/default/preview.1787662841913.png",
+    "local": "/assets/releases/21st/87cebc962b97e8479d525c23.png",
+    "bytes": 39446,
+    "sha256": "487c2ac97afd8efd8aa4d941c9614000ba6bb9c76c0f26984846c1342300dfaf",
+    "uses": [
+      [
+        "21st-release-20038",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/componentry/hero-geometric/default/preview.1785377325332-32ec4070-6de7-4234-9e0f-2c72048919b9.png",
+    "local": "/assets/releases/21st/d7cb0f8fa4eae1c927f3627b.png",
+    "bytes": 2963286,
+    "sha256": "3608f07d70eddb5df740cba5bbd6755edfdb961fc92d4414b2770fed297a2a62",
+    "uses": [
+      [
+        "21st-release-20051",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/5e/5efec6032f888c32fc053d3a3919647449f077e140cdc1ebdd8caeb4487b935a.jpg",
+    "local": "/assets/releases/21st/fc946220ec3a6639b501b73c.jpg",
+    "bytes": 53190,
+    "sha256": "5efec6032f888c32fc053d3a3919647449f077e140cdc1ebdd8caeb4487b935a",
+    "uses": [
+      [
+        "21st-release-20142",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/componentry/collection-surfer/default/preview.1784318033049.png",
+    "local": "/assets/releases/21st/ed5c050a0fd0cc627e710ea8.png",
+    "bytes": 1925662,
+    "sha256": "2f69abcd402db95e070a9e65e38a6226332ac171112cc48a2377856bb413c7b8",
+    "uses": [
+      [
+        "21st-release-20142",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/b8/b82da26c76593525a82a9d613e49e28bde2791786dcf9d332c1ef84923ff4d7c.jpg",
+    "local": "/assets/releases/21st/c824ecc9764c6d3536f5825f.jpg",
+    "bytes": 61956,
+    "sha256": "b82da26c76593525a82a9d613e49e28bde2791786dcf9d332c1ef84923ff4d7c",
+    "uses": [
+      [
+        "21st-release-20142",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/25/25a9810d6b0e32cfbb3df59b0ea7ef90a3fe40d5ec0a359d6add67eba9838ba6.jpg",
+    "local": "/assets/releases/21st/0262493521665edd3f379221.jpg",
+    "bytes": 72972,
+    "sha256": "25a9810d6b0e32cfbb3df59b0ea7ef90a3fe40d5ec0a359d6add67eba9838ba6",
+    "uses": [
+      [
+        "21st-release-20142",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/5a/5a5496500b417c5682fa813fc43085752107f75c28e35b6d9acd6abf3dff5142.jpg",
+    "local": "/assets/releases/21st/71f6c7522cf45e13c34de3fd.jpg",
+    "bytes": 184532,
+    "sha256": "5a5496500b417c5682fa813fc43085752107f75c28e35b6d9acd6abf3dff5142",
+    "uses": [
+      [
+        "21st-release-20142",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/d9/d97d81608375dfd786ff889e19e719f12048bbdc7be9c904e57ef7a495d48701.jpg",
+    "local": "/assets/releases/21st/32240effd921379497e66318.jpg",
+    "bytes": 174573,
+    "sha256": "d97d81608375dfd786ff889e19e719f12048bbdc7be9c904e57ef7a495d48701",
+    "uses": [
+      [
+        "21st-release-20142",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/e2/e2e75b34da100b2beae27db6a1b58a05984b69dfef5eda53599f50ed00e9b4fc.jpg",
+    "local": "/assets/releases/21st/aac504141c0400987b9341d6.jpg",
+    "bytes": 56565,
+    "sha256": "e2e75b34da100b2beae27db6a1b58a05984b69dfef5eda53599f50ed00e9b4fc",
+    "uses": [
+      [
+        "21st-release-20142",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/7e/7ef0e090165479436a4a79f49404e5bf9a810261c6706ef8a86044861b69630e.jpg",
+    "local": "/assets/releases/21st/30d8d47a75fceb0442ade258.jpg",
+    "bytes": 47605,
+    "sha256": "7ef0e090165479436a4a79f49404e5bf9a810261c6706ef8a86044861b69630e",
+    "uses": [
+      [
+        "21st-release-20142",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/07/07e1e5d23c111cacdf5b94c62cde75aeafa20f7b0be302fd5d7cc95011ebcbea.jpg",
+    "local": "/assets/releases/21st/f907c8492cc427c84ff11037.jpg",
+    "bytes": 79277,
+    "sha256": "07e1e5d23c111cacdf5b94c62cde75aeafa20f7b0be302fd5d7cc95011ebcbea",
+    "uses": [
+      [
+        "21st-release-20142",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/68/6887bb08fa8626fd16e7dd5c92f9b920586ae2f7020cdec728e643df621d990c.jpg",
+    "local": "/assets/releases/21st/09b3f67f2e1a11a900966e1c.jpg",
+    "bytes": 197460,
+    "sha256": "6887bb08fa8626fd16e7dd5c92f9b920586ae2f7020cdec728e643df621d990c",
+    "uses": [
+      [
+        "21st-release-20142",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/52/52694d62555561c8bb92f07456e7978637f3b010681bba2461b7e19bd352568a.jpg",
+    "local": "/assets/releases/21st/6f3fed1a4702d1122dd1cc57.jpg",
+    "bytes": 143275,
+    "sha256": "52694d62555561c8bb92f07456e7978637f3b010681bba2461b7e19bd352568a",
+    "uses": [
+      [
+        "21st-release-20142",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/be/bed64a5231f0881163bda21f5a02964868c4be9e49eb37fa26b8add90db59ce1.jpg",
+    "local": "/assets/releases/21st/3b864d9a043f339969d2c546.jpg",
+    "bytes": 120827,
+    "sha256": "bed64a5231f0881163bda21f5a02964868c4be9e49eb37fa26b8add90db59ce1",
+    "uses": [
+      [
+        "21st-release-20142",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/c9/c990b7807031a954614dabff3897872daa7b20d080f951116cdd7f8713b543a8.jpg",
+    "local": "/assets/releases/21st/2928660c046ef34a282115e6.jpg",
+    "bytes": 100466,
+    "sha256": "c990b7807031a954614dabff3897872daa7b20d080f951116cdd7f8713b543a8",
+    "uses": [
+      [
+        "21st-release-20142",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/34/34153efaacb40fceee7c65b5eb2075ef62885a69eecc27e82755abbf71088147.jpg",
+    "local": "/assets/releases/21st/80dbad813eb913633f2ea754.jpg",
+    "bytes": 60573,
+    "sha256": "34153efaacb40fceee7c65b5eb2075ef62885a69eecc27e82755abbf71088147",
+    "uses": [
+      [
+        "21st-release-20142",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/0a/0a7cf0c332ed7319e3f54a7ab3efd6df3d57cf10f899c993ff5486ebb9fba749.jpg",
+    "local": "/assets/releases/21st/2f065d383ff9a810ab7ae17e.jpg",
+    "bytes": 139716,
+    "sha256": "0a7cf0c332ed7319e3f54a7ab3efd6df3d57cf10f899c993ff5486ebb9fba749",
+    "uses": [
+      [
+        "21st-release-20142",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/6d/6da167bca8d72533c86cbf2c9ce2bb871d4047b8221b1682e9b08d58d21fb776.jpg",
+    "local": "/assets/releases/21st/d94f07cc21ceb006906db4c6.jpg",
+    "bytes": 159751,
+    "sha256": "6da167bca8d72533c86cbf2c9ce2bb871d4047b8221b1682e9b08d58d21fb776",
+    "uses": [
+      [
+        "21st-release-20142",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/ae/aea4667afe64fb41f11985b1f4fbb3cf93488043654a8da6c121c3581f7b13f9.jpg",
+    "local": "/assets/releases/21st/cee82fec6dbd8fcf244e7dcf.jpg",
+    "bytes": 91655,
+    "sha256": "aea4667afe64fb41f11985b1f4fbb3cf93488043654a8da6c121c3581f7b13f9",
+    "uses": [
+      [
+        "21st-release-20142",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_registry_componentry_1783513914157/testimonial-marquee/default/preview.1786705778175.webp",
+    "local": "/assets/releases/21st/e808a83ab97c272c34e1118a.webp",
+    "bytes": 33500,
+    "sha256": "df5f2739f9108c84edb817494bed473b5ae502b870f1b07febb177e998f321e6",
+    "uses": [
+      [
+        "21st-release-24457",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/ca/ca0f36cf8a170455b0fa016125cef62c02a68cef1c36afacd22d4dca5350f769.jpg",
+    "local": "/assets/releases/21st/62179b03572912723e538dc5.jpg",
+    "bytes": 55247,
+    "sha256": "ca0f36cf8a170455b0fa016125cef62c02a68cef1c36afacd22d4dca5350f769",
+    "uses": [
+      [
+        "21st-release-27464",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/95/95b797e840b37395e03dfa11825a77f51198e7da5247d5c0d295164b16739585.jpg",
+    "local": "/assets/releases/21st/d2eb1c1da3be314086bcc476.jpg",
+    "bytes": 114952,
+    "sha256": "95b797e840b37395e03dfa11825a77f51198e7da5247d5c0d295164b16739585",
+    "uses": [
+      [
+        "21st-release-27464",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/7c/7c261ad2bd00b747594a1141550b2f7ea432fb27b9d3c381464bb7b2d8d8f65c.jpg",
+    "local": "/assets/releases/21st/1a2ffe1ceb428b24ae32b4cb.jpg",
+    "bytes": 88209,
+    "sha256": "7c261ad2bd00b747594a1141550b2f7ea432fb27b9d3c381464bb7b2d8d8f65c",
+    "uses": [
+      [
+        "21st-release-27464",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/89/89748a64dcaa9afbd7500f0f0070d4d4fa7f3be8fa355c5cce610b74f2dddce2.jpg",
+    "local": "/assets/releases/21st/efdb90bb4c42daf9473f0a4e.jpg",
+    "bytes": 87442,
+    "sha256": "89748a64dcaa9afbd7500f0f0070d4d4fa7f3be8fa355c5cce610b74f2dddce2",
+    "uses": [
+      [
+        "21st-release-27464",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/b2/b24a1113bc22b8fca3bc83abd44eac50be6f0a37e9cd951883e66cabcd9606e7.jpg",
+    "local": "/assets/releases/21st/a02e06a6950b2fcbe6acf196.jpg",
+    "bytes": 68583,
+    "sha256": "b24a1113bc22b8fca3bc83abd44eac50be6f0a37e9cd951883e66cabcd9606e7",
+    "uses": [
+      [
+        "21st-release-27464",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/09/09008b09ebd04014508c6c962db6fe2dcf574b22b21ce56879a0fb908274ad74.jpg",
+    "local": "/assets/releases/21st/1097acddb4b0ebd97f2e9b0d.jpg",
+    "bytes": 80069,
+    "sha256": "09008b09ebd04014508c6c962db6fe2dcf574b22b21ce56879a0fb908274ad74",
+    "uses": [
+      [
+        "21st-release-27464",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/27/27b385d1779efe78b4c9be6c61c89ae819421da9975b2a32c1fba42141c89e3d.jpg",
+    "local": "/assets/releases/21st/bd880db66d1da78c06a4fad3.jpg",
+    "bytes": 72138,
+    "sha256": "27b385d1779efe78b4c9be6c61c89ae819421da9975b2a32c1fba42141c89e3d",
+    "uses": [
+      [
+        "21st-release-27464",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/21/2139e8abfdbbd0b4fb6f4017858e8ef4af678a44d6207e895040328aa310c4c2.jpg",
+    "local": "/assets/releases/21st/22669133804def027913a9ae.jpg",
+    "bytes": 92539,
+    "sha256": "2139e8abfdbbd0b4fb6f4017858e8ef4af678a44d6207e895040328aa310c4c2",
+    "uses": [
+      [
+        "21st-release-27464",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_registry_componentry_1783513914157/image-trail/default/preview.1790724035942.webp",
+    "local": "/assets/releases/21st/a5a9f18b738ea148dd45ca65.webp",
+    "bytes": 10246,
+    "sha256": "7b24a920438d21724aebf260f9fdaba19dcce3b6de39c31e2283417c2813c659",
+    "uses": [
+      [
+        "21st-release-27464",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/componentry/spectral-ribbon/default/preview.1789994840069-cffbc4f1-2d25-40c2-9267-b95471384ac7.png",
+    "local": "/assets/releases/21st/79666997fbfadc870419d79a.png",
+    "bytes": 3942093,
+    "sha256": "807c04046e6071f0c1762b69f93bb701fc33d774d185b84b358fa07a5a281ff3",
+    "uses": [
+      [
+        "21st-release-28647",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/componentry/gradient-hero-01/default/preview.1790269839182-fef762db-5fbe-4b58-b54f-4f2fa1d077ca.png",
+    "local": "/assets/releases/21st/07e551aa665c4deb073a9af1.png",
+    "bytes": 1337777,
+    "sha256": "820c1296e13b923cb124a61408bcad98d427de86a5f5f624c01dcf8772fac008",
+    "uses": [
+      [
+        "21st-release-31116",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/componentry/pixel-image-trail/default/preview.1790306473202-27fd79fb-5957-45f8-b69d-0c877442d8e5.png",
+    "local": "/assets/releases/21st/2276f357b77aaf99631ab79c.png",
+    "bytes": 268895,
+    "sha256": "e7d05536472d92cd87accb9c6824ae40712e7b154520aa5696f3759b09e71072",
+    "uses": [
+      [
+        "21st-release-31491",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/cc/cc526b36e5fb297171b983db891951fd6e6be5231bc30a6533c69ca02bfdb7e6.jpg",
+    "local": "/assets/releases/21st/750cc77659b59b6bd1f5e773.jpg",
+    "bytes": 482830,
+    "sha256": "cc526b36e5fb297171b983db891951fd6e6be5231bc30a6533c69ca02bfdb7e6",
+    "uses": [
+      [
+        "21st-release-31491",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/componentry/wheel-carousel/default/preview.1790310771941-c94a8dc9-d9d4-4a69-bf3c-ef1f3121ea69.png",
+    "local": "/assets/releases/21st/bc0a5b313e7ce4d70d141656.png",
+    "bytes": 412878,
+    "sha256": "f38698ac67c29998838ee9fd69966a2a5862a20545ae239872c6169504aa6ae7",
+    "uses": [
+      [
+        "21st-release-31538",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/componentry/dithered-logo/default/preview.1790313361304-7af6902b-151c-4bbe-ab87-362ac4f6c6b6.png",
+    "local": "/assets/releases/21st/e91284d7f567b6d29555e0de.png",
+    "bytes": 206533,
+    "sha256": "8f871dd320d9a13184ab66d4fa28bac4bc51386c2a906ee0ffab8ae4339ec799",
+    "uses": [
+      [
+        "21st-release-31554",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/componentry/liquid-glass-carousel/default/preview.1790338489709-86fe21d3-7ab1-49ed-8d8a-5a3a149d8ba1.png",
+    "local": "/assets/releases/21st/ed7a5d4b02ff7344c57b603b.png",
+    "bytes": 3682544,
+    "sha256": "8530123b623e917c186c1bc9083fced04f0ead3273e9287d877607ec3c22d3d2",
+    "uses": [
+      [
+        "21st-release-31717",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-api-key-card/default/preview.1793825856166.webp",
+    "local": "/assets/releases/21st/74914ae95707454c55d2a931.webp",
+    "bytes": 35860,
+    "sha256": "d94b1aaf8b48bbcf45cf61bade81e784d0143f4c82c836b5bada22f9f13f8a9b",
+    "uses": [
+      [
+        "21st-release-44491",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-settings-panel/default/preview.1793825771370.webp",
+    "local": "/assets/releases/21st/5b210029dda7b383517b0309.webp",
+    "bytes": 41226,
+    "sha256": "e7b1a0432ff454dcaf994252a7d82c14b79c1fed53b73f0464116d2998504e5e",
+    "uses": [
+      [
+        "21st-release-44492",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-booking-card/default/preview.1793825678219.webp",
+    "local": "/assets/releases/21st/e6ae338558599626d3de3f2e.webp",
+    "bytes": 35270,
+    "sha256": "3ae8d56235860f080eb577fd6842a5bce167bce7f1f044175b21924b95f57315",
+    "uses": [
+      [
+        "21st-release-44493",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-stats-card/default/preview.1793825587112.webp",
+    "local": "/assets/releases/21st/d20e1ab4e519db71eb92ef41.webp",
+    "bytes": 23420,
+    "sha256": "2d4e99c468d7bdcbbb842496292ffbc544a236e910711a1d0c7f7959d0dce6ce",
+    "uses": [
+      [
+        "21st-release-44495",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-signin-alert/default/preview.1793825411340.webp",
+    "local": "/assets/releases/21st/0e09d541d8a6b0d7289e4e2e.webp",
+    "bytes": 45380,
+    "sha256": "61b04b6029b01caa4dd0b50eace066c62d42258bd0c6a1452ff0fd99bca76c92",
+    "uses": [
+      [
+        "21st-release-44497",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-incident-banner/default/preview.1793825317470.webp",
+    "local": "/assets/releases/21st/6023dd9c89348de2f5398de0.webp",
+    "bytes": 52906,
+    "sha256": "ad94bed18c61a6f8f8d56983a2bf8c9c4e7e3f6c733053310fc416c80513929c",
+    "uses": [
+      [
+        "21st-release-44499",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/navedux/illos-webhook-setup/default/preview.1793692635966-1c4b3a15-1bc4-4d4f-a60a-45336ff6d90f.png",
+    "local": "/assets/releases/21st/4f688a347c28b6e73c268b40.png",
+    "bytes": 738045,
+    "sha256": "ee5bf300df433a42d59036cf161ba71396e941d06308d65ed2e56736a04454db",
+    "uses": [
+      [
+        "21st-release-44500",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/navedux/illos-knowledge-sources/default/preview.1793692694911-dfd51bc7-57cc-4b00-81e3-0620a212afcd.png",
+    "local": "/assets/releases/21st/e1bda3722c2fa4ab97596308.png",
+    "bytes": 861119,
+    "sha256": "d6e3dce7cb8a51b5e5afb9da4f529a92ec4e0d50480747df0defa125fad69962",
+    "uses": [
+      [
+        "21st-release-44501",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3LXtau2adFONutOH2La3tAfBneZ/context-window-packer/default/preview.1793823515448.webp",
+    "local": "/assets/releases/21st/d4ff5161876e120caabfe837.webp",
+    "bytes": 28068,
+    "sha256": "d17a7532fd6d8b6b9f64aa3cbac2a12a693315c2ed36f8b92cb64b54d082b5d4",
+    "uses": [
+      [
+        "21st-release-44508",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/kedhareswer/meadow-rise-footer/default/preview.1793707218362-0cf0abe4-6e17-4f0c-8845-fde3a414e98a.jpg",
+    "local": "/assets/releases/21st/3db76a3d17206d269da6bde5.jpg",
+    "bytes": 171955,
+    "sha256": "d690ea63a767ca82204ddbfec479c18d70d951bc8bfcacc863b4f69a79935bad",
+    "uses": [
+      [
+        "21st-release-44510",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/arc-card-carousel/default/preview.1793823154263.webp",
+    "local": "/assets/releases/21st/98d32c9ea1b3eb316bc86a69.webp",
+    "bytes": 41806,
+    "sha256": "dd7bb3f62d9fcddbb86a7ea5a15ee956178cd05ed04cfe96e080d9fbdeaeaba8",
+    "uses": [
+      [
+        "21st-release-44514",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/case-stack-scroll/default/preview.1793822411157.webp",
+    "local": "/assets/releases/21st/f98555ea2f1ddc1021cc3f5d.webp",
+    "bytes": 49786,
+    "sha256": "0f9d5e56a1386db590bb2eaa5f52397317d66d0a456650920a1a506fa22a1aeb",
+    "uses": [
+      [
+        "21st-release-44515",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3LYLgwJ6QI0pqW5236yVVu72Qtj/retro-slide-to-unlock/default/preview.1793821121824.webp",
+    "local": "/assets/releases/21st/577c1a26a295d3a688f8706f.webp",
+    "bytes": 14940,
+    "sha256": "45028eb76cd5666e4b9fdd5a95c74918c02fc146ce9db600363142436c2710a5",
+    "uses": [
+      [
+        "21st-release-44519",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/runway-lookbook/default/preview.1793822924631.webp",
+    "local": "/assets/releases/21st/32b1303251938331e8c7cbc6.webp",
+    "bytes": 56442,
+    "sha256": "ca77eb691e77a60f7acdbac78443f6d0a70d245c3f252d066240eab78d61078a",
+    "uses": [
+      [
+        "21st-release-44528",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/ezam0000/ezpz-type-fold/default/preview.1793744873204-ed5e4c72-4404-4a37-ab37-e27c16782a70.png",
+    "local": "/assets/releases/21st/38d8e278b3e52f2ab9668f91.png",
+    "bytes": 108951,
+    "sha256": "34ac859c9a681c8f85ec0a4dff886327762799fe661962f74a821e93b6c2dd52",
+    "uses": [
+      [
+        "21st-release-44529",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_2y4mAmG5WMonwhwjqKc8LyeecUz/ezpz-type-cube/default/preview.1793822535044.png",
+    "local": "/assets/releases/21st/e2b825012e0b25aff8326381.png",
+    "bytes": 102001,
+    "sha256": "e9bb72048ec978bebc2681a8c1d1b641e6b90edbaae7e5d52111dc21c4059a91",
+    "uses": [
+      [
+        "21st-release-44530",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/ezam0000/ezpz-type-steps/default/preview.1793744873748-c9d5d084-88e2-4bdb-88fe-f5b6bc68ec40.png",
+    "local": "/assets/releases/21st/3dfe78319a9d396f80f27f03.png",
+    "bytes": 100489,
+    "sha256": "3e3242c37c454fc3215503f3f74c33df56f14eb6f55ffa2217a0f49d5de79e2c",
+    "uses": [
+      [
+        "21st-release-44531",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/ezam0000/ezpz-type-tunnel/default/preview.1793755126840-6d21ac09-8a63-4860-a6e5-dc17df971f52.png",
+    "local": "/assets/releases/21st/0a8d7ebea9650721c90fd940.png",
+    "bytes": 212642,
+    "sha256": "9f44ac19a45717b5ed0df4eba1ac7eb2fef80b9b094655ba09d14b0979db264b",
+    "uses": [
+      [
+        "21st-release-44552",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/ezam0000/ezpz-dither-portrait/default/preview.1793755128942-71902db2-86a0-4521-9bb5-d48c2e559f19.png",
+    "local": "/assets/releases/21st/caa481a50b902df382c4f3e3.png",
+    "bytes": 124422,
+    "sha256": "125cdfe80e025d6fabfad08125e3933f98b906a94aa077f036257462b25b6ad4",
+    "uses": [
+      [
+        "21st-release-44553",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/ezam0000/ezpz-chrome-type/default/preview.1793755133867-3992a91d-a4cc-40f9-bd47-669cebc55939.png",
+    "local": "/assets/releases/21st/91e63234f68220e192b13373.png",
+    "bytes": 1280783,
+    "sha256": "19c1b7727ae4b55f304503fe848e9ac425cb921cdaa14deb6299acf2b627eee9",
+    "uses": [
+      [
+        "21st-release-44554",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_registry_miladjoodi_1793377315523/diff/diff-text/preview.1793826409541.png",
+    "local": "/assets/releases/21st/37675cf207e19aadb8c429e8.png",
+    "bytes": 63723,
+    "sha256": "cde53325022cf0e3504bdc88711ac5b3aae73b672a577ebaf17512692c827ac8",
+    "uses": [
+      [
+        "21st-release-44568",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/t01033978876/abyss/default/preview.1793767535140-bf732e66-955a-4022-ab0c-13240e9660d1.webp",
+    "local": "/assets/releases/21st/69198a350c3cba73481662e3.webp",
+    "bytes": 5456,
+    "sha256": "cfc84d15af5f0ed549767cf6aca9e38f67c770f0c7fef1990a15c7b9804c53b3",
+    "uses": [
+      [
+        "21st-release-44569",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_registry_lumesec_1793377338131/geo-traceroute/default/preview.1793826189985.png",
+    "local": "/assets/releases/21st/27569bf7cae4049069e4b86f.png",
+    "bytes": 174397,
+    "sha256": "072fee4a06d233aa3baf9817530e4e2aece774fe21fe756a5e96c762db84352b",
+    "uses": [
+      [
+        "21st-release-44579",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/dish-orbit-carousel/default/preview.1793824300186.webp",
+    "local": "/assets/releases/21st/0c8218ee995b02c946859873.webp",
+    "bytes": 91958,
+    "sha256": "e0216317eba15e3f7ae8a671a15acefe8bb65da461751cf44e99b58d4f073d7b",
+    "uses": [
+      [
+        "21st-release-44583",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/aakashmehra/sniper-scope/default/preview.1793778542039-5edff71a-6be9-4b0a-93fc-0ee3dd16b819.png",
+    "local": "/assets/releases/21st/7301cff02a17051f2d565290.png",
+    "bytes": 3321108,
+    "sha256": "6f398de0b6ca2e7f574de8cb2a128d2c5dfb5457590a89306cbc24e6aeb0bade",
+    "uses": [
+      [
+        "21st-release-44588",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/patrickthomasdunn1988/snake-skin/default/preview.1793792735209-afa6d9c0-b55d-425a-8982-ca3ea04e1e98.webp",
+    "local": "/assets/releases/21st/ec658f031ee28c15272f5628.webp",
+    "bytes": 88752,
+    "sha256": "454cfd1499ae82cb19c34fc1cd8136310edaa4e87ef3043c83e2db6db0ebbb71",
+    "uses": [
+      [
+        "21st-release-44591",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3H2RA3segeqPs3vjtcoMQLrxJTC/ai-chat-input-field/default/preview.1793824957874.webp",
+    "local": "/assets/releases/21st/224409228cc60d5e8a30ec77.webp",
+    "bytes": 12406,
+    "sha256": "cde532c8e910c28259d6e48d4e29034ef9c40812c278ba3174551b20ef8b0a7a",
+    "uses": [
+      [
+        "21st-release-44592",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/patrickthomasdunn1988/blurred-blob/default/preview.1793794534796-bf86374d-21f5-460e-b46e-ddefdf6d06cc.webp",
+    "local": "/assets/releases/21st/bc99338fa7c58a8fb21c32c4.webp",
+    "bytes": 4448,
+    "sha256": "34e34e7aac15dbbe00f3ad15312194b14ad4d85ff954aba9b2d97751f5691745",
+    "uses": [
+      [
+        "21st-release-44594",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/patrickthomasdunn1988/shallow/default/preview.1793794555667-51ad3bf8-2dbc-4546-aa1f-ce664c3ba762.webp",
+    "local": "/assets/releases/21st/9052e19cfc15795b5828044e.webp",
+    "bytes": 170878,
+    "sha256": "b4ac074283cc86c64728420a8853346bfae064f05ede78293cd97bf109520775",
+    "uses": [
+      [
+        "21st-release-44595",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/patrickthomasdunn1988/bars/default/preview.1793794578899-61b51e07-9de4-4eeb-b860-8a2a436fbfc0.webp",
+    "local": "/assets/releases/21st/8142d4abd6e356101e90eb2d.webp",
+    "bytes": 48288,
+    "sha256": "bd0ef1c0340c716e16d4e53a26fbdeb8270ac9a8b7bf6c39bb2531a80785b3b2",
+    "uses": [
+      [
+        "21st-release-44596",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/patrickthomasdunn1988/ominous/default/preview.1793796334772-80e5588e-a759-4f0b-a23b-81f542c8acef.webp",
+    "local": "/assets/releases/21st/0b3ffd1aa2073f7d44a5f9c7.webp",
+    "bytes": 9136,
+    "sha256": "e328e7ce878f659b35cb74a86273ec66accb53df72cfe1d786dabbebb49f8d01",
+    "uses": [
+      [
+        "21st-release-44597",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/patrickthomasdunn1988/copper/default/preview.1793796354856-ee90d157-0b57-4d39-8c8b-cffee2c26759.webp",
+    "local": "/assets/releases/21st/cc753f2e714bc2e58d5767b9.webp",
+    "bytes": 124918,
+    "sha256": "6a3562af76c71ac639506f441466340586debda8d5afa3a99e19c541edfca27d",
+    "uses": [
+      [
+        "21st-release-44598",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/patrickthomasdunn1988/fire/default/preview.1793796375530-79200a73-0067-4458-abc5-89c360a7fc31.webp",
+    "local": "/assets/releases/21st/5fe81bd45361c909feb2b3a9.webp",
+    "bytes": 148020,
+    "sha256": "ccceb6e6d2627e925ef535072a5ac32d5011eb87c9cb6a99e062b29cbdf033ca",
+    "uses": [
+      [
+        "21st-release-44599",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/patrickthomasdunn1988/ribbed/default/preview.1793798139120-b7ce413f-829c-4cd5-b399-0ee46417b811.webp",
+    "local": "/assets/releases/21st/b1a3b0eeed600f2045ab967d.webp",
+    "bytes": 47118,
+    "sha256": "a8014c08dfddf0b86b26d60bfab9daa9f0f28d59bd3b92c4d0319ac1320a0dd4",
+    "uses": [
+      [
+        "21st-release-44601",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/patrickthomasdunn1988/cool-ribs/default/preview.1793798159914-41cb5799-953f-46d8-9a68-d95876bfcc80.webp",
+    "local": "/assets/releases/21st/6ad2395ab39193935cd5effe.webp",
+    "bytes": 52946,
+    "sha256": "7f2c7bba58200dff2d23078c2e153e7020e7ebd2121b7aaee3d13b018fc5d126",
+    "uses": [
+      [
+        "21st-release-44602",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/t01033978876/poppy-delirium/default/preview.1793807135614-fa5dfec7-9796-425b-b8f9-688cd51fb7c9.webp",
+    "local": "/assets/releases/21st/d2b65cf6139285aaebee8262.webp",
+    "bytes": 74174,
+    "sha256": "01abf4099a1eeb783be9a7c72e07cf6dcbf05c7801375d5d8911367f047c8ef3",
+    "uses": [
+      [
+        "21st-release-44605",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/rotating-flavor-slider/default/preview.1793824132234.webp",
+    "local": "/assets/releases/21st/2a7ad61f908f3459ffc523c1.webp",
+    "bytes": 116962,
+    "sha256": "07d9dba707ecb3d099c7112159ebe50b2921fd570c3e8ef2f9b905cd6f93ef8f",
+    "uses": [
+      [
+        "21st-release-44607",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/nexus-ui/logo-clouds/default/preview.1784460668169-f46bb524-1543-41a7-8e34-77c957079868.png",
+    "local": "/assets/releases/21st/005fdaafff37870b3f3350f5.png",
+    "bytes": 113546,
+    "sha256": "cf90683320a9703e8a378b547c6db498b690ea9dd950aaed2b48c695dc943078",
+    "uses": [
+      [
+        "21st-release-18216",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/nexus-ui/cinematic-logo-cloud/default/preview.1784712712559-f552daa0-8218-459e-a326-7bae6930eb4e.png",
+    "local": "/assets/releases/21st/d9c130609e321e14c4d4954d.png",
+    "bytes": 163555,
+    "sha256": "b21d57ef37cf729023ce0592a3a80da63c12aa69820b4f9456f7c43be0174c71",
+    "uses": [
+      [
+        "21st-release-18224",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/26/26faaac3a7d375d5824e8da76fd594e0bdbad2ee4e88d94c6b1fb62a52b642a3.jpg",
+    "local": "/assets/releases/21st/699f46bc7ba1702a392f4472.jpg",
+    "bytes": 63453,
+    "sha256": "26faaac3a7d375d5824e8da76fd594e0bdbad2ee4e88d94c6b1fb62a52b642a3",
+    "uses": [
+      [
+        "21st-release-18284",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/5d/5dfea55e544436a486b6e7aca3291e09cc3cf70029dbce7c270abb6b31910c6d.jpg",
+    "local": "/assets/releases/21st/1bbadd06adc9431f089d479a.jpg",
+    "bytes": 104700,
+    "sha256": "5dfea55e544436a486b6e7aca3291e09cc3cf70029dbce7c270abb6b31910c6d",
+    "uses": [
+      [
+        "21st-release-18284",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/7a/7a7dc1fcb058cacc02200a70503aa8f1234f030611befdf794dc1e97e43e40cd.jpg",
+    "local": "/assets/releases/21st/6c35f5535947cb9bc85c32bb.jpg",
+    "bytes": 105666,
+    "sha256": "7a7dc1fcb058cacc02200a70503aa8f1234f030611befdf794dc1e97e43e40cd",
+    "uses": [
+      [
+        "21st-release-18284",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_registry_nexus-ui_1783492392202/image-trail/default/preview.1786574742037.webp",
+    "local": "/assets/releases/21st/71086ffe72e0b8cbfad740f7.webp",
+    "bytes": 54620,
+    "sha256": "1f902b094232fb63093a456037cf89fa501d4e29a5802d7bcd878b27e5fdc821",
+    "uses": [
+      [
+        "21st-release-18284",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/nexus-ui/beam-sweep-field/default/preview.1783581551869.png",
+    "local": "/assets/releases/21st/9251b580acc3cd6a8c3ed759.png",
+    "bytes": 75635,
+    "sha256": "1459be98374d12b1f313513ec554a98bca210326d0cba5f8e3c317ad62b42651",
+    "uses": [
+      [
+        "21st-release-18354",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/nexus-ui/shooting-stars-grid/default/preview.1783581449869.png",
+    "local": "/assets/releases/21st/c9725c2b6d1af8b11d184dfe.png",
+    "bytes": 1941018,
+    "sha256": "fdc1c6b3a03cb958e1e3e29868c87a60d9ae20c45b1af685e2da861bc22aaf15",
+    "uses": [
+      [
+        "21st-release-18478",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/nexus-ui/hover-highlight-text/default/preview.1784754981567-587baace-6032-413b-9dc0-a0a926cb966c.png",
+    "local": "/assets/releases/21st/b807c00cf1c6dc7fcf6247ca.png",
+    "bytes": 86450,
+    "sha256": "0401c5c7e179ba853b1609d1d50828dea3b96b16e23af7a9ef18a4cf6df34fcc",
+    "uses": [
+      [
+        "21st-release-19231",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/nexus-ui/typewriter-effect/default/preview.1784658490276-8f4a9da7-6d1b-4826-9c93-193d180bef41.png",
+    "local": "/assets/releases/21st/6fde0e3108849eabfcbe8146.png",
+    "bytes": 71773,
+    "sha256": "5ecd0b20b7f7fdfd760c8ac2b40f641c9ddfaa9d3af9af7117cc4787a443a2dd",
+    "uses": [
+      [
+        "21st-release-19234",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/nexus-ui/animated-select-headline/default/preview.1784681111964-60c5f66d-9394-4af7-b0a8-ed9ceb5b56a3.png",
+    "local": "/assets/releases/21st/7f08437bd5f158c427dfbcb0.png",
+    "bytes": 97389,
+    "sha256": "f9681f7ea544b79393ba7508590f192f9d44057161d22cd3c4b4d3300a21e374",
+    "uses": [
+      [
+        "21st-release-19235",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/nexus-ui/text-reveal-card/default/preview.1783718687259.png",
+    "local": "/assets/releases/21st/aa8d1d124b24528f22d2f631.png",
+    "bytes": 101939,
+    "sha256": "0574c4a87c22286c1fe15f0fab49e8dfd0e34ecf9f03a35ee9484a820e9f169d",
+    "uses": [
+      [
+        "21st-release-19313",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_registry_nexus-ui_1783492392202/animated-countdown/default/preview.1784126304541.png",
+    "local": "/assets/releases/21st/26c5483d5ecb809c492f12f8.png",
+    "bytes": 79888,
+    "sha256": "4089cd47a20248858ab671f8f0a1fba0f36105e59fa085a8c86dc2a35ca4c17c",
+    "uses": [
+      [
+        "21st-release-19328",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/nexus-ui/nebula-cta-glow/default/preview.1783728316341.png",
+    "local": "/assets/releases/21st/8cd1e2123734524eaf6048c2.png",
+    "bytes": 85562,
+    "sha256": "3b3493802547c5039dc3424324091bd622f3b2760cbda5a62eb8afa17e8831ef",
+    "uses": [
+      [
+        "21st-release-19349",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/nexus-ui/orbit-footer/default/preview.1783728529715.png",
+    "local": "/assets/releases/21st/c62b9506a4115898a6ed28cf.png",
+    "bytes": 58091,
+    "sha256": "41303a7b7fc3b1684c9005c964c97e473a3220a62a7e8e78e1a8179dbe88131c",
+    "uses": [
+      [
+        "21st-release-19353",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/nexus-ui/dot-grid-hero/default/preview.1785376441104-4f7102ec-4832-4001-8320-82a1eebfce49.png",
+    "local": "/assets/releases/21st/409083706735e1e976cbb4f6.png",
+    "bytes": 310082,
+    "sha256": "6be61453cbad233244e51d9c6102878b2a7e66c3c408e5576442e6eb2626d813",
+    "uses": [
+      [
+        "21st-release-20044",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/nexus-ui/starfield-hero/default/preview.1785377504128-81cfe36d-7c2a-4203-ae2b-4ba932c23844.png",
+    "local": "/assets/releases/21st/ca7f85caec32381c0680b968.png",
+    "bytes": 79271,
+    "sha256": "1088faa34ab53ffea8782a41c14dc9613fce431ea58fb8d831da87f7dceebb25",
+    "uses": [
+      [
+        "21st-release-20053",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/nexus-ui/forge-ai-command-bar/default/preview.1784662285644-d7bdde6c-f039-4f07-b26e-83a33bea76b0.png",
+    "local": "/assets/releases/21st/8adc395c6f1cdc72e2c7e88f.png",
+    "bytes": 55165,
+    "sha256": "4c62e2b534cb3e517832e53abd690fb70e5768c30c643adb2a32d8632d5e8c36",
+    "uses": [
+      [
+        "21st-release-20072",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/nexus-ui/ask-nexus-input/default/preview.1784317887831.png",
+    "local": "/assets/releases/21st/ddcd3a6d80ef16fc4bf5ccb7.png",
+    "bytes": 82735,
+    "sha256": "2bce56f153d7e1298844e72c8df455dbb0a9b57025b1ee3e98f15de893560bd8",
+    "uses": [
+      [
+        "21st-release-20076",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/nexus-ui/chat-messages/default/preview.1784358333941-8fe47408-1d90-4abb-8d79-ab5cb29f46aa.png",
+    "local": "/assets/releases/21st/bb130457028156a7eba207c5.png",
+    "bytes": 447924,
+    "sha256": "b7306672be1ab9920b71bcbe2bdac799a4e4eb910aa0ea5870b4d2b0587e6007",
+    "uses": [
+      [
+        "21st-release-20129",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_registry_nexus-ui_1783492392202/infinite-moving-cards/default/preview.1787340979679.png",
+    "local": "/assets/releases/21st/6c50a091abb7325177a14ee5.png",
+    "bytes": 104415,
+    "sha256": "15c26ab1486ad910f2f450d74b4656df8a363aa0af2e6a11019b85f5c05aae56",
+    "uses": [
+      [
+        "21st-release-20136",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/nexus-ui/circular-carousel/default/preview.1784917780107-1874b319-d482-4189-9cb8-abe5f5bee9c2.png",
+    "local": "/assets/releases/21st/50a5fb1f2e0b08c190063ef6.png",
+    "bytes": 219340,
+    "sha256": "584fff35f6f57c70cab66c3aa8aea27c6f5717e10705894edb9dcc5b2c06d78d",
+    "uses": [
+      [
+        "21st-release-21951",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_registry_nexus-ui_1783492392202/images-badge/default/preview.1787266595549.webp",
+    "local": "/assets/releases/21st/f8a6aa5ce4941cfb2d958069.webp",
+    "bytes": 10586,
+    "sha256": "6bafd7041efb33c766503f6db65392010f1480918810cd8c4635fdfb353f4438",
+    "uses": [
+      [
+        "21st-release-25379",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/b7/b75cc2fc7e8c4da568934effe9524ddc32bc80a2dcdb5009ff642380d7f6b904.svg",
+    "local": "/assets/releases/21st/8323ddc2a8bfd39f7b14699a.svg",
+    "bytes": 1433,
+    "sha256": "b75cc2fc7e8c4da568934effe9524ddc32bc80a2dcdb5009ff642380d7f6b904",
+    "uses": [
+      [
+        "21st-release-25379",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/01/015a963a0572cd2f884758e6269afbc305f7a2fdf9c0b89ce034f71072e3eac1.svg",
+    "local": "/assets/releases/21st/e4d89dfdcebb5ea89019ced4.svg",
+    "bytes": 1402,
+    "sha256": "015a963a0572cd2f884758e6269afbc305f7a2fdf9c0b89ce034f71072e3eac1",
+    "uses": [
+      [
+        "21st-release-25379",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/93/93df5c0062252f382b94884ec8abdd1b257bc0ec345515e55470d72efded4e03.svg",
+    "local": "/assets/releases/21st/e3cac392659980ac7ee33fb2.svg",
+    "bytes": 1488,
+    "sha256": "93df5c0062252f382b94884ec8abdd1b257bc0ec345515e55470d72efded4e03",
+    "uses": [
+      [
+        "21st-release-25379",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/78/78f0b9a9aa207930b9684faece4e4d0033f22c7a6afef8fa0f3fb7f16e00f935.svg",
+    "local": "/assets/releases/21st/8f9e77532b5e2a33a4adee95.svg",
+    "bytes": 1454,
+    "sha256": "78f0b9a9aa207930b9684faece4e4d0033f22c7a6afef8fa0f3fb7f16e00f935",
+    "uses": [
+      [
+        "21st-release-25379",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/52/5265e325bc7c8eeeb92a683747688382fadeeeef1cf0efbe7667129c4f58cbc9.svg",
+    "local": "/assets/releases/21st/1d3a290e71b80cf584a1866d.svg",
+    "bytes": 1403,
+    "sha256": "5265e325bc7c8eeeb92a683747688382fadeeeef1cf0efbe7667129c4f58cbc9",
+    "uses": [
+      [
+        "21st-release-25379",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/5f/5f93a4060ce99f2e7f202b97b78e49d570bb804061830f68d6979bd198c71a9a.svg",
+    "local": "/assets/releases/21st/4a11625621eeed4378c114bf.svg",
+    "bytes": 1457,
+    "sha256": "5f93a4060ce99f2e7f202b97b78e49d570bb804061830f68d6979bd198c71a9a",
+    "uses": [
+      [
+        "21st-release-25379",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_registry_nexus-ui_1783492392202/thread/default/preview.1789037782821.png",
+    "local": "/assets/releases/21st/4fde5311d0e055c11fc3a1dd.png",
+    "bytes": 114047,
+    "sha256": "352c4f2eed3f26834d7134e064c806b5b1f4cf9baf87ff026cca0d379733fff9",
+    "uses": [
+      [
+        "21st-release-26535",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/nexus-ui/suggestions/default/preview.1788813431234-ab3464e9-2338-42fc-bac4-53580d9d7b61.png",
+    "local": "/assets/releases/21st/efc9ded07c0feeaa9ee87f42.png",
+    "bytes": 140141,
+    "sha256": "26b31753851f4dca145bb3647967079104f5e2e69e285fe1d080b17945318447",
+    "uses": [
+      [
+        "21st-release-26546",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/nexus-ui/chain-of-thought/default/preview.1789973969240-37a44368-dfca-465b-b466-cfab9770cba3.png",
+    "local": "/assets/releases/21st/040003b84231b76415c57b6c.png",
+    "bytes": 261041,
+    "sha256": "c7d6b39596a65da8bd3a8abac4f8ae376d914d686d676608a4017c824c8614d6",
+    "uses": [
+      [
+        "21st-release-28391",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/nexus-ui/interactive-globe-explorer/default/preview.1789976931771-168b39bd-899d-4fb8-a04d-9d21a3375e79.png",
+    "local": "/assets/releases/21st/2bebb95461b0a702e81d419b.png",
+    "bytes": 1369447,
+    "sha256": "f25445894323611beb4a9c0b12cfd662e155196d4f2e14893b58fead263e6629",
+    "uses": [
+      [
+        "21st-release-28448",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/localized/228deba2e4b600146bdcb6cfa359b8ead6aacc2b1c13550a29cd82824cfa1c01.jpg",
+    "local": "/assets/releases/21st/9a38bd3a02a202ba9184970c.jpg",
+    "bytes": 1461877,
+    "sha256": "228deba2e4b600146bdcb6cfa359b8ead6aacc2b1c13550a29cd82824cfa1c01",
+    "uses": [
+      [
+        "21st-release-28448",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_registry_nexus-ui_1783492392202/terminal/default/preview.1790154504300.webp",
+    "local": "/assets/releases/21st/9767711823b1a2e14f56a568.webp",
+    "bytes": 9164,
+    "sha256": "e53dcbfd388d618fa6147f97ec3e4faea72873d1fb706909ec6c69031729925c",
+    "uses": [
+      [
+        "21st-release-29831",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3EFgBcaTwAWLVWzXlHvjY47l6Xk/dimensional-workflow-hero/default/preview.1793904719570.png",
+    "local": "/assets/releases/21st/a4d88bb69bef74a2270090b3.png",
+    "bytes": 542359,
+    "sha256": "a2bcc690a7d148c8a205d25aaab75fffd4611242e2c13c9bd6161af8161fd8bd",
+    "uses": [
+      [
+        "21st-release-37555",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/a3/a30b6f9e3594c5496d9b4f2049ccc0bdaefb7e037398a6760782ba3aa67d5e1f.png",
+    "local": "/assets/releases/21st/d8f3be7c3fe5e245d7447c06.png",
+    "bytes": 902210,
+    "sha256": "a30b6f9e3594c5496d9b4f2049ccc0bdaefb7e037398a6760782ba3aa67d5e1f",
+    "uses": [
+      [
+        "21st-release-37555",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/fc/fc84689717cc1be69a14288f7c80bb23691945e5bbc0cbf130794535bea19bfe.jpg",
+    "local": "/assets/releases/21st/185da8dd8ab3fa56837b22f3.jpg",
+    "bytes": 263956,
+    "sha256": "fc84689717cc1be69a14288f7c80bb23691945e5bbc0cbf130794535bea19bfe",
+    "uses": [
+      [
+        "21st-release-40236",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3EFgBcaTwAWLVWzXlHvjY47l6Xk/glassy-coverflow-carousel/default/preview.1793197494860.webp",
+    "local": "/assets/releases/21st/76ee6cfde76049ab6913e621.webp",
+    "bytes": 217366,
+    "sha256": "342cab3318227cdb6386fbca9454766725aecbc52afbd7e7d8bde3341f383015",
+    "uses": [
+      [
+        "21st-release-40236",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/f1/f10c2108f47eb5771ed06592aac142dc67fd7890a23c520d7b35f2ba608894a1.png",
+    "local": "/assets/releases/21st/e28ecf412bb3a1f4b718d895.png",
+    "bytes": 250093,
+    "sha256": "f10c2108f47eb5771ed06592aac142dc67fd7890a23c520d7b35f2ba608894a1",
+    "uses": [
+      [
+        "21st-release-40236",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/2f/2f81e5e65fbf7fb6bbf39c311525f9df8286159ec678902cff19259ceb2923dc.png",
+    "local": "/assets/releases/21st/137b17c732d6973014c3a56f.png",
+    "bytes": 350714,
+    "sha256": "2f81e5e65fbf7fb6bbf39c311525f9df8286159ec678902cff19259ceb2923dc",
+    "uses": [
+      [
+        "21st-release-40236",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/ae/aed0fd6aa0191bebc801afcf8861824afa25373a61a5aec1bdb542aaa7668a25.jpg",
+    "local": "/assets/releases/21st/495d8d5888a598cb5de632c8.jpg",
+    "bytes": 239537,
+    "sha256": "aed0fd6aa0191bebc801afcf8861824afa25373a61a5aec1bdb542aaa7668a25",
+    "uses": [
+      [
+        "21st-release-40236",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/08/082b9906ebb53cd3b6f6d440bef34d2775d595fff6bb594d151b3955b7d6547f.jpg",
+    "local": "/assets/releases/21st/cd12b67c3af8f9387af67794.jpg",
+    "bytes": 149060,
+    "sha256": "082b9906ebb53cd3b6f6d440bef34d2775d595fff6bb594d151b3955b7d6547f",
+    "uses": [
+      [
+        "21st-release-40236",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/fc/fc6c5c2f066101e691c1af692b831dffa3de36bce5560468756291bfdc94a26d.jpg",
+    "local": "/assets/releases/21st/e807c24b7fd76ed409b7e90b.jpg",
+    "bytes": 158141,
+    "sha256": "fc6c5c2f066101e691c1af692b831dffa3de36bce5560468756291bfdc94a26d",
+    "uses": [
+      [
+        "21st-release-40236",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/b8/b8494cc64fa7efcd394d94f33ba4e6ca83bc720343004709a30eb4f62fb74998.jpg",
+    "local": "/assets/releases/21st/ca33ae7e367eaa1ea03a4fda.jpg",
+    "bytes": 201683,
+    "sha256": "b8494cc64fa7efcd394d94f33ba4e6ca83bc720343004709a30eb4f62fb74998",
+    "uses": [
+      [
+        "21st-release-40236",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_33BVOicUp8BXVinjTnIXzbdQeeR/metaball-loader/default/preview.1794100383851.webp",
+    "local": "/assets/releases/21st/ae24aefd9b3354e124769061.webp",
+    "bytes": 10044,
+    "sha256": "e63966de980a8bd124003cd341587b48fd1b9182089a5e1c23d51e22543d88bd",
+    "uses": [
+      [
+        "21st-release-42977",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/dc/dc9c217d638da30d35138cfdab49633d9ee1e0d0c74252e43571039632147aff.svg",
+    "local": "/assets/releases/21st/3c85f7b0e64e4a82cbee44f5.svg",
+    "bytes": 1786,
+    "sha256": "dc9c217d638da30d35138cfdab49633d9ee1e0d0c74252e43571039632147aff",
+    "uses": [
+      [
+        "21st-release-43113",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/17/17160477a475166ad0556e0028e3b0bd0634d70c02e7b920c04a4429ea184ab3.svg",
+    "local": "/assets/releases/21st/04895d083aef6f1abd1af42e.svg",
+    "bytes": 1019,
+    "sha256": "17160477a475166ad0556e0028e3b0bd0634d70c02e7b920c04a4429ea184ab3",
+    "uses": [
+      [
+        "21st-release-43113",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/troyjlorents-gh/interactive-workflow-blueprint/default/preview.1793653508100-7738d204-db3a-4cc1-b614-64e814b2882b.jpg",
+    "local": "/assets/releases/21st/0fdbccc4ff5202e06a67d057.jpg",
+    "bytes": 97389,
+    "sha256": "ddd41e65cd211b7818eecd03c94a8f47e275f736cf1c104727aa540586d3e534",
+    "uses": [
+      [
+        "21st-release-43113",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3GKMi7bWGNUXGraJ6zxK4UK6sUH/newsletter-terminal-card/default/preview.1793825954531.webp",
+    "local": "/assets/releases/21st/6ede0b220270db222f4d3b00.webp",
+    "bytes": 128438,
+    "sha256": "97e5c85390f92c34082c6309b44b3c0093befe4dc8bf28a3a20a6225da3cdd8c",
+    "uses": [
+      [
+        "21st-release-44487",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-team-invite-card/default/preview.1793904984129.webp",
+    "local": "/assets/releases/21st/c263a8cf37e585fd2b1c824c.webp",
+    "bytes": 53048,
+    "sha256": "de1acb102c62d99600f1443f9248c8f270bf4bb01fd18e31c34413184d2b42cb",
+    "uses": [
+      [
+        "21st-release-44488",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/navedux/illos-notifications-popover/default/preview.1793692097873-45309c2f-1bf2-40f3-be28-a64125653b95.png",
+    "local": "/assets/releases/21st/4d36bdd5de64a9dba405e8e1.png",
+    "bytes": 213595,
+    "sha256": "4dfd18ea52b49a1c426de2ac8d299231fecdb3e1db306457bbe913afc5af94a8",
+    "uses": [
+      [
+        "21st-release-44490",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-feature-flag-card/default/preview.1793903903402.webp",
+    "local": "/assets/releases/21st/dee6df555b3d98ad3ca54104.webp",
+    "bytes": 48152,
+    "sha256": "54eda87db8d1b75648aedc3a4f16e2e733f29eb15fee4f209dd25a259d2daef2",
+    "uses": [
+      [
+        "21st-release-44494",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-status-card/default/preview.1793903699127.webp",
+    "local": "/assets/releases/21st/d3947f38f1f7acec5755c734.webp",
+    "bytes": 65772,
+    "sha256": "3b989c63e915743251d6d80c41b7252ce3da20a8d7d30139a641107d5d2b195c",
+    "uses": [
+      [
+        "21st-release-44496",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/illos-audit-log-panel/default/preview.1793902431924.png",
+    "local": "/assets/releases/21st/9bfd0911ce5aa1a178ee27cf.png",
+    "bytes": 692885,
+    "sha256": "0fb0600f3728e011db7014818940218eaa7bf75d5c43e52bedc0d0c031175c41",
+    "uses": [
+      [
+        "21st-release-44498",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/navedux/illos-two-factor-setup/default/preview.1793692751594-c1d3a49a-70a8-4e15-9745-32c78238fa20.png",
+    "local": "/assets/releases/21st/69d15a9209120e1c0e46c6b6.png",
+    "bytes": 400809,
+    "sha256": "32b6671fa85c561eda075cf700978d1024f6ba0c66f157431fb198122e5625d2",
+    "uses": [
+      [
+        "21st-release-44502",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/navedux/illos-maintenance-page/default/preview.1793692806879-77ab1b62-05f6-47d0-b70e-04a56ee76179.png",
+    "local": "/assets/releases/21st/5aa906bf1920109cf1e00713.png",
+    "bytes": 688520,
+    "sha256": "c3b79fbc1dcae0b76ac2d1fb8f0eb83f5d3a8fc9eeae606cd70499bf4c41a9fe",
+    "uses": [
+      [
+        "21st-release-44503",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/split-photo-slider/default/preview.1793901854966.webp",
+    "local": "/assets/releases/21st/1907a2447d650c212b180200.webp",
+    "bytes": 64232,
+    "sha256": "efda13bff7e963702e9d60bf36cdecddab7374cf3ea4c7cb90e0bc7ed62b5475",
+    "uses": [
+      [
+        "21st-release-44582",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/larsen66/glimm-transition/directions/preview.1793833214938-5c260af5-088b-4580-b3c3-f3bae117b7a2.png",
+    "local": "/assets/releases/21st/5a6f79e84bd60fc720c51a66.png",
+    "bytes": 21539,
+    "sha256": "ab18410e7fd45859ab4e4840774fcdf71176eb44618d7772c02437720cc1d85b",
+    "uses": [
+      [
+        "21st-release-44614",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://assets.21st.dev/ascii-recipes/thumbnails/user_3LbkAVcMmNNOBdf8nO2qbSpvDkO/a415e7d3-840e-48d4-9ff5-5de7b5a7a53b.webp",
+    "local": "/assets/releases/21st/cb91932c1aa171529fca0759.webp",
+    "bytes": 41220,
+    "sha256": "1cb001375c2a4c6c73d865f3ec0bdfdd08496095a4c72b9dbf1928958684cffe",
+    "uses": [
+      [
+        "21st-release-44618",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://assets.21st.dev/ascii-recipes/videos/user_3LbkAVcMmNNOBdf8nO2qbSpvDkO/9e321e4e-c88b-4218-908f-96bbc225f217.mp4",
+    "local": "/assets/releases/21st/24093c2ef30b9a60e51327f8.mp4",
+    "bytes": 373235,
+    "sha256": "26cdbfb319915195204bcb7c1507593a119d454c419d35e395308277fe1a4bec",
+    "uses": [
+      [
+        "21st-release-44618",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/silver95/qwdqwd/default/preview.1793838049857-9d67a2eb-39de-4d88-a855-22aeaa4141f5.webp",
+    "local": "/assets/releases/21st/4c98d68c4335c1365fd6aacf.webp",
+    "bytes": 41220,
+    "sha256": "1cb001375c2a4c6c73d865f3ec0bdfdd08496095a4c72b9dbf1928958684cffe",
+    "uses": [
+      [
+        "21st-release-44618",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3LfLMZsT1DADAF0uSKeOmUbXNPN/orb-flow-background/default/preview.1793888951674.webp",
+    "local": "/assets/releases/21st/2f849fc9471cff272932c1ad.webp",
+    "bytes": 41814,
+    "sha256": "c1d48abbba64fdfc73e24935fcf29f2f55506e6dd9ae3670b75b6464d5427966",
+    "uses": [
+      [
+        "21st-release-44619",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3HXZ8yZwEeyMnsdcuMHzruPMNoj/file-upload/default/preview.1793972563833.webp",
+    "local": "/assets/releases/21st/dce000e7affbb8a1a29a44a6.webp",
+    "bytes": 28848,
+    "sha256": "00841bf5d26e516257b960dba18656a83c8792ef8bb822b68255ed02e6c007a9",
+    "uses": [
+      [
+        "21st-release-44632",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3GKMi7bWGNUXGraJ6zxK4UK6sUH/faq-smooth/default/preview.1793901675811.png",
+    "local": "/assets/releases/21st/3b95109ea7d0874cdb5aee2b.png",
+    "bytes": 1538520,
+    "sha256": "cbaa6f874c2c118c714808f45a58c2dc2c97e5be803c276417ddb46de094c815",
+    "uses": [
+      [
+        "21st-release-44638",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3HXZ8yZwEeyMnsdcuMHzruPMNoj/hero-section-01/default/preview.1793901464984.png",
+    "local": "/assets/releases/21st/e477f24502792aeee0b21bad.png",
+    "bytes": 568603,
+    "sha256": "d4a5d00d0cabe4ac24f61ad9da11c846d1fed4afadd45159de2c7b1a98e0adfd",
+    "uses": [
+      [
+        "21st-release-44639",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/9e/9e4feb3e73be27027db03dffc4f83b48115d7c52af67a670e182ae5b7a308a11.png",
+    "local": "/assets/releases/21st/961cc40450fc6bb565f66d6d.png",
+    "bytes": 805737,
+    "sha256": "9e4feb3e73be27027db03dffc4f83b48115d7c52af67a670e182ae5b7a308a11",
+    "uses": [
+      [
+        "21st-release-44639",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3HXZ8yZwEeyMnsdcuMHzruPMNoj/shadcn-studio-hero-section-44/default/preview.1793972541754.webp",
+    "local": "/assets/releases/21st/9dafde1fa510a1385f7a6b28.webp",
+    "bytes": 34248,
+    "sha256": "7bc4beba5908aa856ac9e2767b2257a97d2ea0c54b7913e59a5c998a61259d9d",
+    "uses": [
+      [
+        "21st-release-44640",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/ad/ad5d58b0ab86bd893f0ab4792d68136796a8a319061f9a834bbee109941617c0.png",
+    "local": "/assets/releases/21st/b7b534acd858ea7f138eac78.png",
+    "bytes": 220903,
+    "sha256": "ad5d58b0ab86bd893f0ab4792d68136796a8a319061f9a834bbee109941617c0",
+    "uses": [
+      [
+        "21st-release-44640",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/12/12d892e5bb83131cb52223c9d3052b26e0338a8848d7a2555791b322cc7cdba4.png",
+    "local": "/assets/releases/21st/4781dea5352b60cc3eed69ad.png",
+    "bytes": 1319271,
+    "sha256": "12d892e5bb83131cb52223c9d3052b26e0338a8848d7a2555791b322cc7cdba4",
+    "uses": [
+      [
+        "21st-release-44640",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/dborg741/dither/default/preview.1793886646688-d7331d57-59de-4a1d-a817-4db13c5697d0.webp",
+    "local": "/assets/releases/21st/383744d4b8258cdd3bb806bf.webp",
+    "bytes": 186010,
+    "sha256": "e286e9ed4d456d6204af47dd02436c32a9e7b8ebfa50b817fd6f1951f42a69a7",
+    "uses": [
+      [
+        "21st-release-44641",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://assets.21st.dev/ascii-recipes/thumbnails/user_3EMZZSIFjkeaO3Raon77NDaEBmM/3e049271-b824-4db0-97ba-c8359d5d6e9e.webp",
+    "local": "/assets/releases/21st/ad7a8392813d652503a3c5f8.webp",
+    "bytes": 186010,
+    "sha256": "e286e9ed4d456d6204af47dd02436c32a9e7b8ebfa50b817fd6f1951f42a69a7",
+    "uses": [
+      [
+        "21st-release-44641",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://assets.21st.dev/ascii-recipes/videos/user_3EMZZSIFjkeaO3Raon77NDaEBmM/02943579-7335-4118-9b99-f76e92769c4b.mp4",
+    "local": "/assets/releases/21st/ecd1bab0fe149a4bcd962ea0.mp4",
+    "bytes": 385313,
+    "sha256": "4911f2e4c05a9d21c4da25542255d5f6a1f775938a2c16640771ffbcad2d4f86",
+    "uses": [
+      [
+        "21st-release-44641",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3HXZ8yZwEeyMnsdcuMHzruPMNoj/shadcn-studio-waitlist-01/default/preview.1793889403126.webp",
+    "local": "/assets/releases/21st/7770d9103f50d4cc8186060a.webp",
+    "bytes": 58478,
+    "sha256": "84303a36b6fe6cdcbb59be97919a5c64a310eacb4cf8bc638ebe6e5cca73a9ca",
+    "uses": [
+      [
+        "21st-release-44645",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://assets.21st.dev/ascii-recipes/thumbnails/user_3Fix6InB1bk6aeoacsl7T0fU8kp/ed258d95-c43e-49cb-ae8f-e0419ece1937.png",
+    "local": "/assets/releases/21st/7cd314ad67099ffb8f83cf4a.png",
+    "bytes": 775388,
+    "sha256": "99fb74e7fde7172cde60332975e45566902108a30c16c272ba4424bc8dcfefb5",
+    "uses": [
+      [
+        "21st-release-44647",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/camilleia.pelisson/handart/default/preview.1793888446031-4eeea67e-c2dc-414c-8383-adc1afe99da0.png",
+    "local": "/assets/releases/21st/d1aa7893395e2a5fd2191039.png",
+    "bytes": 775388,
+    "sha256": "99fb74e7fde7172cde60332975e45566902108a30c16c272ba4424bc8dcfefb5",
+    "uses": [
+      [
+        "21st-release-44647",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://assets.21st.dev/ascii-recipes/videos/user_3Fix6InB1bk6aeoacsl7T0fU8kp/d482aba6-6a57-4927-b931-d19785e683b9.mp4",
+    "local": "/assets/releases/21st/0c560ab3d8d4dce9483c7565.mp4",
+    "bytes": 404005,
+    "sha256": "b850ff58fa5658f116cadffd5f6186b1d54d28f57a4eca52996ac9a596aea31c",
+    "uses": [
+      [
+        "21st-release-44647",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://assets.21st.dev/ascii-recipes/thumbnails/user_3Fix6InB1bk6aeoacsl7T0fU8kp/2184bb79-7a23-434f-b246-135cb68c38a4.png",
+    "local": "/assets/releases/21st/0e3b6c0593ae9744dec64c38.png",
+    "bytes": 885486,
+    "sha256": "fa96db6a1d8ced337f3e0c8799296ff89eec1e586b9c1a55905fa625bbb97490",
+    "uses": [
+      [
+        "21st-release-44648",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/camilleia.pelisson/earth/default/preview.1793888455872-1e56cc6c-f362-460a-aadf-8519fe135bbb.png",
+    "local": "/assets/releases/21st/b5acd5869e6cc36727eb8656.png",
+    "bytes": 885486,
+    "sha256": "fa96db6a1d8ced337f3e0c8799296ff89eec1e586b9c1a55905fa625bbb97490",
+    "uses": [
+      [
+        "21st-release-44648",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://assets.21st.dev/ascii-recipes/videos/user_3Fix6InB1bk6aeoacsl7T0fU8kp/57514ef9-f742-4f5b-ad10-14225764d0a9.mp4",
+    "local": "/assets/releases/21st/3f1a8dfe07823c88d2571d32.mp4",
+    "bytes": 455654,
+    "sha256": "61e1c24d8fc12e27f95dea2e173e383bde59d29633ed24c7f8318a444f060862",
+    "uses": [
+      [
+        "21st-release-44648",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/tilt-stack-scroll/default/preview.1793901283151.webp",
+    "local": "/assets/releases/21st/3e34ae25f9c52ba8dcd436d0.webp",
+    "bytes": 68730,
+    "sha256": "08d47ad2970ab49eeb624d2a537105565d682079cf8a6419b0cabfa3ad411612",
+    "uses": [
+      [
+        "21st-release-44650",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/folio-fold-menu/default/preview.1793901167186.webp",
+    "local": "/assets/releases/21st/73f9a07c9b36bc2bf84b8a3b.webp",
+    "bytes": 160476,
+    "sha256": "fd75f86c419cc58ad76858d1c05c1d76e6790f5c9ef2e4bdcfedff8b420f42c3",
+    "uses": [
+      [
+        "21st-release-44651",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/led-matrix-sales/default/preview.1793900811530.webp",
+    "local": "/assets/releases/21st/756caa58c39d0f3a9dcb5385.webp",
+    "bytes": 73982,
+    "sha256": "68fb3b6e00ac06bf817b60292124fdb2f960aa947f2919eef21e7f9377053b7b",
+    "uses": [
+      [
+        "21st-release-44652",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/kedhareswer/sticker-swap-headline/default/preview.1793891299152-10e84444-78a6-4e06-83ad-71edb056c289.png",
+    "local": "/assets/releases/21st/e4feba138a76763fc95c75fb.png",
+    "bytes": 290338,
+    "sha256": "909ef39a303952f31547000ecce8355a3e73a8320a09268d3be8aba646f846af",
+    "uses": [
+      [
+        "21st-release-44653",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/pulse-stripe-hero/default/preview.1793900470851.webp",
+    "local": "/assets/releases/21st/fdcf88de7159e9727f59c847.webp",
+    "bytes": 67166,
+    "sha256": "cd5c2e7ecb483b8fac2e14ba92747b0ceaa1e3afff37672e3294c11ff697a771",
+    "uses": [
+      [
+        "21st-release-44654",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/cell-column-trend/default/preview.1793900161863.png",
+    "local": "/assets/releases/21st/cf0badda3fc1922e8de9b9bd.png",
+    "bytes": 271747,
+    "sha256": "fd41efaf47c095d82b98295b2ab499ff3852a0cbd12fe8a2cc8ca5e6804eb413",
+    "uses": [
+      [
+        "21st-release-44655",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/halftone-flow-hero/default/preview.1793899925396.webp",
+    "local": "/assets/releases/21st/d17de055079b36c8d26ff365.webp",
+    "bytes": 260960,
+    "sha256": "580f018c8b34d492ca19d0f50d744d7f2353e0b027db09381abb0412e4d2bb5a",
+    "uses": [
+      [
+        "21st-release-44656",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/silk-mesh-shader-hero/default/preview.1793899754432.webp",
+    "local": "/assets/releases/21st/41e74720dae558182e47db86.webp",
+    "bytes": 89000,
+    "sha256": "ea1bd13a9753bb3e0bcb87503de69fa3f0ffa37ec572c19d62aee8b9ff504c92",
+    "uses": [
+      [
+        "21st-release-44657",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/sneaker-product-hero/default/preview.1793899556993.webp",
+    "local": "/assets/releases/21st/912ed7f03df82f5fe5d46018.webp",
+    "bytes": 56944,
+    "sha256": "d1beb3331f8ec1f335d1fb1dd50c6e98915d9ebf8b761abee42850432bfd5606",
+    "uses": [
+      [
+        "21st-release-44658",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/pixelfox.webstudio/silk-shader/default/preview.1793893535777-f4d888d9-bfe3-4c58-bf05-bcd1c166be00.webp",
+    "local": "/assets/releases/21st/4b3c6a0982731c744a5f50bf.webp",
+    "bytes": 63510,
+    "sha256": "300bd2c651276cb628f0dccb7f9c54dafc572f5f7c99d42b7f52a530aeb3265b",
+    "uses": [
+      [
+        "21st-release-44659",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3LYLgwJ6QI0pqW5236yVVu72Qtj/liquid-glass-login/default/preview.1793899309317.webp",
+    "local": "/assets/releases/21st/ac19972a6afc36d41ba9f1bb.webp",
+    "bytes": 71026,
+    "sha256": "10d21c706fa566aa69ffbe677feb1861a6ca5cfd50aea4fba82cc1aa408edd14",
+    "uses": [
+      [
+        "21st-release-44660",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3LYLgwJ6QI0pqW5236yVVu72Qtj/sports-car-dashboard-menu/default/preview.1793899168369.webp",
+    "local": "/assets/releases/21st/8a2ea46072dea4e59246608b.webp",
+    "bytes": 34332,
+    "sha256": "77e0b46e790192d23f8b2aa3f655b974970b43abe34785bbff4280ab1297c83f",
+    "uses": [
+      [
+        "21st-release-44661",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/journal-spread-carousel/default/preview.1793905434697.webp",
+    "local": "/assets/releases/21st/d4ba65fd25315d9cbbfc53d0.webp",
+    "bytes": 117760,
+    "sha256": "157b774fed64de6a89e377e0ee5742fe8bf9e6379fe0c956057415b0564ce113",
+    "uses": [
+      [
+        "21st-release-44662",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3J85Tz9o20j9Pzd2PIMzRqGlGBl/matchbox-carousel/default/preview.1793905563895.webp",
+    "local": "/assets/releases/21st/74279cc3c5032e9d644afdba.webp",
+    "bytes": 51014,
+    "sha256": "444eef804801fa908137d0fb7d0dc4372ba0d2df27d45b8bade6b5be5094326b",
+    "uses": [
+      [
+        "21st-release-44663",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/adamstguide/fluted-glass-shader/default/preview.1793907936217-26eab9b9-7745-43f4-a670-782ff7188df6.webp",
+    "local": "/assets/releases/21st/4bac6f725926a1df97bd2436.webp",
+    "bytes": 43068,
+    "sha256": "60b9478a9188fc2af99a2489d09e6c443002811bae432f9b87c07fbfab798439",
+    "uses": [
+      [
+        "21st-release-44664",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/adamstguide/silky-moving-background/default/preview.1793907957584-6090e6d1-61f8-4a6b-9d22-817e4cdde69e.webp",
+    "local": "/assets/releases/21st/5b800b3d562b731f5a872bbd.webp",
+    "bytes": 48458,
+    "sha256": "fddb31a99b24517bd845f3a7e7d7786a3f473163f97c1d93b665f40a24ba6fcf",
+    "uses": [
+      [
+        "21st-release-44665",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_33BVOicUp8BXVinjTnIXzbdQeeR/melt-mark/default/preview.1793972254810.webp",
+    "local": "/assets/releases/21st/6c81c3f92d60db546ef08160.webp",
+    "bytes": 7762,
+    "sha256": "43c15c8ccf8d792c2b7604677b42f7dc139e376a28532b727ec700097d428008",
+    "uses": [
+      [
+        "21st-release-44668",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_33BVOicUp8BXVinjTnIXzbdQeeR/liquid-chrome/default/preview.1794099904851.webp",
+    "local": "/assets/releases/21st/b4116494dfb114cba63ecc66.webp",
+    "bytes": 43774,
+    "sha256": "17983313c3c74e0121a8aa3c5a1cc497e8575b7e409b53bb1b7976258b29baad",
+    "uses": [
+      [
+        "21st-release-44669",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3KgWzslqJFclZ2iRrfddAtKvi27/nexus-3d-animated-login-futuristic-authentication-ui/default/preview.1793972188047.webp",
+    "local": "/assets/releases/21st/43fbef72c9f40730063cd449.webp",
+    "bytes": 59866,
+    "sha256": "229803a102f6f55a6500293e1c09d8b604a4ea475b648c1b61dd50ef9e02efc1",
+    "uses": [
+      [
+        "21st-release-44675",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/aakashmehra/foggy-window-wipe/default/preview.1793942752268-3780ea3f-41d9-497f-aa6d-0b78065edc4e.png",
+    "local": "/assets/releases/21st/939d65425125111731bc6ba2.png",
+    "bytes": 3672646,
+    "sha256": "b254713f23ab4a9a0f4f8d54541154705c572db498d559dc50d4bc4dfb0d661e",
+    "uses": [
+      [
+        "21st-release-44679",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3LYLgwJ6QI0pqW5236yVVu72Qtj/skincare-product-shelf/default/preview.1793972059331.webp",
+    "local": "/assets/releases/21st/1dfce22584edbdd33b7b8fe0.webp",
+    "bytes": 45692,
+    "sha256": "9ce09cb3ef14a50c9eea4fb1e771bbdebbd616fe4032be16dd98c8cfd6363bc6",
+    "uses": [
+      [
+        "21st-release-44681",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/troyjlorents-gh/adjustable-glass-dashboard/default/preview.1793945722449-10a4985d-fea7-4d84-89a3-13fe3849845d.jpg",
+    "local": "/assets/releases/21st/9aa120aeba3462243575c494.jpg",
+    "bytes": 255688,
+    "sha256": "62ed62e8d83f69901c5d68f2c792542847507e8d2d0faf574ab23a0da84db06a",
+    "uses": [
+      [
+        "21st-release-44682",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/assets/mirror/4a/4a0ed73b8ab76bd427aa70ab124329127f3df27cc7f31223a832ed7d28b3dda4.jpg",
+    "local": "/assets/releases/21st/63740e31f5a40584e0c216d9.jpg",
+    "bytes": 1175044,
+    "sha256": "4a0ed73b8ab76bd427aa70ab124329127f3df27cc7f31223a832ed7d28b3dda4",
+    "uses": [
+      [
+        "21st-release-44682",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3LTTe1b2kLfMPUZyyM8NUCFTasL/ding-toast/default/preview.1793971769229.webp",
+    "local": "/assets/releases/21st/9e35ed4f1baabe1b617627bb.webp",
+    "bytes": 3694,
+    "sha256": "649930c238a57399ae8c4f8f2ab9de6af6ed939f97e266abdfb31bc182ee4682",
+    "uses": [
+      [
+        "21st-release-44686",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_3HXZ8yZwEeyMnsdcuMHzruPMNoj/logo-cloud/default/preview.1793971734199.webp",
+    "local": "/assets/releases/21st/f16b5e8313164b0eee802286.webp",
+    "bytes": 29850,
+    "sha256": "1372f0b53158ea5c0dd4efdacc45b04919dce787967d5080c13afd08bc95a10c",
+    "uses": [
+      [
+        "21st-release-44687",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/a00228812/shader-golden-rose/default/preview.1793954735303-8005ccae-fec6-4990-a0b3-aa660f2cbb2f.webp",
+    "local": "/assets/releases/21st/541cabf4e292444933dce90c.webp",
+    "bytes": 38088,
+    "sha256": "1b8c1c50dd01be38f26af0ff26ae34be4c4f2ec7a180d62c400945addfb8c14b",
+    "uses": [
+      [
+        "21st-release-44725",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/zacharywolk05/mesh-drift-shader/default/preview.1793965535041-7c723a4b-53b6-4cae-a72d-866981bb8a91.webp",
+    "local": "/assets/releases/21st/08edf2f6cc8e4e7d75bdc4d3.webp",
+    "bytes": 26716,
+    "sha256": "c7bbaba6b480d6d40ed0ef8e20c48068330fe12a22659fb561197c17f21705bf",
+    "uses": [
+      [
+        "21st-release-44730",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/amiramiro14799/silk-shader/default/preview.1793979935687-12c92636-0e30-4d8a-9f8d-e09cb95d5018.webp",
+    "local": "/assets/releases/21st/0e7eb63aea6956ad5a28843f.webp",
+    "bytes": 46590,
+    "sha256": "a7649a894632c7e7ddbe99617bcef3558515aebeab40857e90fa292d3b2f36de",
+    "uses": [
+      [
+        "21st-release-44736",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/gughigug/liquid-glass-accordion/default/preview.1793984886731-3886b7a1-2b77-417c-aa18-20e754dbc926.png",
+    "local": "/assets/releases/21st/481228ea0ae811852ab1a5bd.png",
+    "bytes": 411391,
+    "sha256": "5e54524b927da452fd716a4482426278ccfc1c34cc263f8c98b4ecbc8de793db",
+    "uses": [
+      [
+        "21st-release-44747",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/pmalay694/balloon-button/default/preview.1793991732087-a40cc068-b167-45f1-890e-5242cc271233.png",
+    "local": "/assets/releases/21st/f6e69802a3abb560b67d7a15.png",
+    "bytes": 270148,
+    "sha256": "f7daeb45003fae1d4f6e37f266ae31d4b74abffa382aa55e7e346952b4fda637",
+    "uses": [
+      [
+        "21st-release-44752",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_36nS5qcL5CiCx9Bfi15Zy7Eroqz/oil-slick/default/preview.1794099982808.webp",
+    "local": "/assets/releases/21st/f23f6b53ada4bd985f24b80b.webp",
+    "bytes": 446604,
+    "sha256": "c12ccf21b37f60f975c8dbe6551fd03797471fb2b7b5cbfb08c1873c60e1f51d",
+    "uses": [
+      [
+        "21st-release-44755",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_36nS5qcL5CiCx9Bfi15Zy7Eroqz/halftone-horizon/default/preview.1794100089287.webp",
+    "local": "/assets/releases/21st/cd2ab56623e368dae413656d.webp",
+    "bytes": 189158,
+    "sha256": "d6dd3ffbb0816cd404b2a24bfc0a4e24021cf17d451f2e49aae4ed42e4fff8c3",
+    "uses": [
+      [
+        "21st-release-44756",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_36nS5qcL5CiCx9Bfi15Zy7Eroqz/ascii-field/default/preview.1794100149966.webp",
+    "local": "/assets/releases/21st/4dd2c6276a1311d967a35155.webp",
+    "bytes": 142766,
+    "sha256": "e0ab31a1025399fec7fd6f1d73d9638e035c9715cdc3b7809bbce861b18d0906",
+    "uses": [
+      [
+        "21st-release-44757",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_36nS5qcL5CiCx9Bfi15Zy7Eroqz/halftone/default/preview.1794100203123.webp",
+    "local": "/assets/releases/21st/0c99841f83fd9a970ace84d2.webp",
+    "bytes": 328622,
+    "sha256": "eb5cec492e75af8a66e167a413406e51cc65d91da55a5df07d9fa1c93082db5a",
+    "uses": [
+      [
+        "21st-release-44758",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_36nS5qcL5CiCx9Bfi15Zy7Eroqz/fold-toolbar/default/preview.1794100242528.webp",
+    "local": "/assets/releases/21st/6ebf8dc67e55e93e3a91368e.webp",
+    "bytes": 7064,
+    "sha256": "936d2c73061b2d4fe09f9cb81152124847cb27c70d88325faf2d8610448c9b53",
+    "uses": [
+      [
+        "21st-release-44759",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_33BVOicUp8BXVinjTnIXzbdQeeR/wave-type/default/preview.1794100297177.webp",
+    "local": "/assets/releases/21st/636d572ec1a0e3575264e430.webp",
+    "bytes": 39746,
+    "sha256": "8bfddaebea008ff0ecad98ebc14ec452785bf60c8cc282358c4ab54b617d9f3e",
+    "uses": [
+      [
+        "21st-release-44765",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_33BVOicUp8BXVinjTnIXzbdQeeR/brick-digits/default/preview.1794100362380.webp",
+    "local": "/assets/releases/21st/9bd3af25220dcb225a781a60.webp",
+    "bytes": 6522,
+    "sha256": "324e0a0a2cdf02a38ba8b8dffe5efb19b0654f273868f694bb33b4a62da510be",
+    "uses": [
+      [
+        "21st-release-44766",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_33BVOicUp8BXVinjTnIXzbdQeeR/lens-clock/default/preview.1794100328702.webp",
+    "local": "/assets/releases/21st/c224bc4580d87342069779e3.webp",
+    "bytes": 34912,
+    "sha256": "5a0fe3ea3d54708dd900aabcebb313d3f7ca767d4012d560206953a8b2a25f98",
+    "uses": [
+      [
+        "21st-release-44767",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/user_33BVOicUp8BXVinjTnIXzbdQeeR/dot-tiles/default/preview.1794100408005.webp",
+    "local": "/assets/releases/21st/f6bebb17cb2d67d6eddddffa.webp",
+    "bytes": 78946,
+    "sha256": "ad596a97eaf76230a0b2a04d57872273c4dc3c167c330e84f32be04322f47d9d",
+    "uses": [
+      [
+        "21st-release-44768",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/marcoaam.moreira/bw-liquid/default/preview.1794008735570-8a938792-b48f-4dc3-8f14-379b84d243e9.webp",
+    "local": "/assets/releases/21st/23372d262d5f84fcd0764a56.webp",
+    "bytes": 50642,
+    "sha256": "2a3c413e749b5f81603b6c3bb978bf2b1cd7eb8919c86a81c00e45d220c8c54a",
+    "uses": [
+      [
+        "21st-release-44773",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://assets.21st.dev/ascii-recipes/videos/user_3DrMKEDK99JLlQBJdGcDDzTziSU/11343539-2bdc-475c-8d06-a1d3acfa9ca1.mp4",
+    "local": "/assets/releases/21st/03f3c168e5408496ba7b1270.mp4",
+    "bytes": 354345,
+    "sha256": "60d58ce8b1c22b61c97aff905e3a689827e0f4135de4d85e9e03a3446cbed2af",
+    "uses": [
+      [
+        "21st-release-44816",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/darkapoparka1/11/default/preview.1794088248975-0023ee43-d974-4be9-85a3-eb513afb07bb.webp",
+    "local": "/assets/releases/21st/16a87840e69abb08e52bc5f0.webp",
+    "bytes": 104334,
+    "sha256": "7659ee94abffbb88cb51f23ede9380b9520fbc8d1d3ead62b0cf25231a29be80",
+    "uses": [
+      [
+        "21st-release-44816",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://assets.21st.dev/ascii-recipes/thumbnails/user_3DrMKEDK99JLlQBJdGcDDzTziSU/743786d5-4a87-4faa-b1e9-edb3431504a5.webp",
+    "local": "/assets/releases/21st/5ddbe0194203839650756eab.webp",
+    "bytes": 104334,
+    "sha256": "7659ee94abffbb88cb51f23ede9380b9520fbc8d1d3ead62b0cf25231a29be80",
+    "uses": [
+      [
+        "21st-release-44816",
+        false
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/designevolve8/shader-25c74d5d/default/preview.1794154534853-32ad5ba1-8cc8-46f5-9c3d-f3725dac9ece.webp",
+    "local": "/assets/releases/21st/311fabbcfd6a38b4904b1135.webp",
+    "bytes": 82024,
+    "sha256": "f4b2e9454cb2c7313b5a9fc9d292406b06688f24b765ebcf74d40e351f08abf4",
+    "uses": [
+      [
+        "21st-release-44871",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/designevolve8/background-water/default/preview.1794161736359-2793fce9-e143-4466-9362-0bb552e643e3.webp",
+    "local": "/assets/releases/21st/ed675f972a57226552ff423b.webp",
+    "bytes": 49722,
+    "sha256": "db6b5685f68007df74ad98c17be445c90443aa613b5a9f653347992d434af958",
+    "uses": [
+      [
+        "21st-release-44881",
+        true
+      ]
+    ]
+  },
+  {
+    "url": "https://cdn.21st.dev/designevolve8/color-panels-opening-shader/default/preview.1794163535319-6021e449-ad84-4794-a978-66c2c3c5f2a3.webp",
+    "local": "/assets/releases/21st/5682167b6c6e88f1d1ba6919.webp",
+    "bytes": 12990,
+    "sha256": "448d3b465f3c6e319df8da570f4fb8a338d9ab846bbfd3f3770cd742a76d62b9",
+    "uses": [
+      [
+        "21st-release-44901",
+        true
+      ]
+    ]
+  }
+]

@@ -1,5 +1,14 @@
 # Verificação — Um só.
 
+## 21st November 9 update stage
+
+- Scope: 168 unpublished candidates, including 144 component examples, 16 independently assembled theme demos and eight compiled template references.
+- Browser result: `Local browser use is disabled in Work settings` opening the local audit page. No alternate browser or screenshot bypass. Startup, visible frames, media decoding, layout and interactions remain unverified for this batch.
+- Code validation: 89/89 tests, production build (3m24s) and 4/4 Sites packaging tests passed. Includes source/media hashes, theme DOM controls and four prompt/archive samples, not all-item export or visual verification.
+- Six components retain original compiled examples because upstream helpers are missing; editable-source limitations are disclosed. Nine template captures incomplete; two hosts return HTTP 402. Those eleven are not candidates.
+- Production catalogs unchanged. Publication requires actual individual browser evidence and matching preview SHA-256 through the guarded publisher.
+- final result: blocked — authorized browser validation unavailable
+
 Atualização: 28/10/2026. URL local: http://127.0.0.1:4173/.
 
 ## Objetivo atual

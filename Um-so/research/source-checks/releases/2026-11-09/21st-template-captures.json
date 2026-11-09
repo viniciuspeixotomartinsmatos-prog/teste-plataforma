@@ -1,0 +1,2271 @@
+[
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1351,
+      "name": "Repair Shop Website Template for Codex: Free HTML Phone and Laptop Repair Site with CSS Scroll Animations, No Libraries",
+      "description": "Free repair shop website template for a phone and laptop repair shop: free diagnosis, price wall, three grades of parts, refurbished stock, business pickups, repair by post and a booking form. One HTML file, CSS scroll-driven animations, no libraries, no build step, MIT; GSAP build included. AGENTS.md and README prompt included. Page: 8b.com/templates/reflow. Source: github.com/8bsite/repair-shop-website-template.",
+      "previewUrl": "https://cdn.21st.dev/user_3KmjaED73wExVzAuo4R9Vve8QQV/templates/repair-shop-website-template-for-codex-free-html-phone-and-l/preview-1793894546797.png",
+      "author": "8b",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3KmjaED73wExVzAuo4R9Vve8QQV/avatar.jpeg",
+      "url": "https://21st.dev/community/templates/repair-shop-website-template-for-codex-free-html-phone-and-laptop-repair-site-with-css-scroll-animations-no-libraries",
+      "price": 0
+    },
+    "status": "retained",
+    "previewPath": "/previews/recovered/demos/21st-template-1351/index.html",
+    "slug": "21st-template-1351",
+    "files": [
+      "external/2fbdfa82/repair-shop-website-template/previews/desktop.png",
+      "external/a127fa0b/s/instrumentsans/v4/pxiTypc9vsFDm051Uf6KVwgkfoSxQ0GsQv8ToedPibnr0She1YmV.woff2",
+      "external/a127fa0b/s/instrumentsans/v4/pxiTypc9vsFDm051Uf6KVwgkfoSxQ0GsQv8ToedPibnr0SZe1Q.woff2",
+      "external/a127fa0b/s/tiktoksans/v8/70kbu7g-Lm8OXGnh_Ow1sUfFMmlnhbRF425wxXH-UGeud7XItbaHtxhggMrrmAvSNAHtMV7v5PpBL2J5Rgbj-Bo7OuHFo1Dp.woff2",
+      "external/a127fa0b/s/tiktoksans/v8/70kbu7g-Lm8OXGnh_Ow1sUfFMmlnhbRF425wxXH-UGeud7XItbaHtxhggMrrmAvSNAHtMV7v5PpBL2J5Rgbj-Bo7OuHFoFDpITI.woff2",
+      "external/a127fa0b/s/tiktoksans/v8/70kbu7g-Lm8OXGnh_Ow1sUfFMmlnhbRF425wxXH-UGeud7XItbaHtxhggMrrmAvSNAHtMV7v5PpBL2J5Rgbj-Bo7OuHFp1DpITI.woff2",
+      "external/a127fa0b/s/tiktoksans/v8/70kbu7g-Lm8OXGnh_Ow1sUfFMmlnhbRF425wxXH-UGeud7XItbaHtxhggMrrmAvSNAHtMV7v5PpBL2J5Rgbj-Bo7OuHFrFDpITI.woff2",
+      "external/a127fa0b/s/tiktoksans/v8/70kbu7g-Lm8OXGnh_Ow1sUfFMmlnhbRF425wxXH-UGeud7XItbaHtxhggMrrmAvSNAHtMV7v5PpBL2J5Rgbj-Bo7OuHFrlDpITI.woff2",
+      "external/a127fa0b/s/tiktoksans/v8/70kbu7g-Lm8OXGnh_Ow1sUfFMmlnhbRF425wxXH-UGeud7XItbaHtxhggMrrmAvSNAHtMV7v5PpBL2J5Rgbj-Bo7OuHFrVDpITI.woff2",
+      "index.html"
+    ],
+    "bytes": 473918,
+    "errors": [],
+    "originalDemoUrl": "https://8b.com/templates/reflow/demo.html"
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1185,
+      "name": "Bistro - Shadcn UI Restaurant Template",
+      "description": "Bistro is a free modern Shadcn UI restaurant template built with Next.js for restaurants, cafés, food brands, designers, and agencies. It includes a hero, menu highlights, featured dishes, chef story, testimonials, offers, and contact sections, with smooth animations, light/dark theme support, and a fully responsive, SEO-friendly layout.",
+      "previewUrl": "https://cdn.21st.dev/user_3HXZ8yZwEeyMnsdcuMHzruPMNoj/templates/bistro-shadcn-ui-restaurant-template/preview-1793896576578.png",
+      "author": "clevision",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3HXZ8yZwEeyMnsdcuMHzruPMNoj/avatar.jpeg",
+      "url": "https://21st.dev/community/templates/bistro-shadcn-ui-restaurant-template",
+      "price": 0
+    },
+    "status": "needs-validation",
+    "previewPath": "/previews/recovered/demos/21st-template-1185/index.html",
+    "slug": "21st-template-1185",
+    "files": [
+      "cdn-cgi/challenge-platform/scripts/jsd/main.js.dbff7388.js",
+      "external/35354578/js/pixel.min.js",
+      "external/35354578/js/psl.min.js",
+      "external/457f3e57/geist.woff2",
+      "external/457f3e57/geist_mono.woff2",
+      "external/457f3e57/images/slack-icon.png",
+      "external/457f3e57/_next-live/feedback/feedback.html.1d24d66f.html",
+      "external/457f3e57/_next-live/feedback/feedback.js",
+      "external/457f3e57/_next-live/feedback/instrument.4918a29dc0ab14365af5.js.7f9195d6.js",
+      "external/4e9b077d/ss-assets/blocks/ecommerce/offer-modal/image-3.png",
+      "external/4e9b077d/ss-assets/blocks/ecommerce/product-category/image-36.png",
+      "external/4e9b077d/ss-assets/blocks/ecommerce/product-category/image-37.png",
+      "external/4e9b077d/ss-assets/blocks/ecommerce/product-category/image-38.png",
+      "external/4e9b077d/ss-assets/blocks/ecommerce/product-category/image-39.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/download/image-09.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/error/image-2.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/features/image-40.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/hero/image-17.png.362340de.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/hero/image-22.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/hero/image-34.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/hero/image-48-dark.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/hero/image-48.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/hero/image-53.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/team/image-103-dark.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/team/image-103.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/team/image-105-dark.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/team/image-105.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/team/image-112.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/testimonials/gradient-bg.png",
+      "external/4e9b077d/ss-assets/brand-logo/astro-icon-dark.png",
+      "external/4e9b077d/ss-assets/brand-logo/astro-icon.png",
+      "external/4e9b077d/ss-assets/brand-logo/figma-icon.png",
+      "external/4e9b077d/ss-assets/brand-logo/nextjs-logo-dark.png",
+      "external/4e9b077d/ss-assets/brand-logo/nextjs-logo.png",
+      "external/4e9b077d/ss-assets/brand-logo/shadcn-logo.png",
+      "external/4e9b077d/ss-assets/brand-logo/tailwind-icon.png",
+      "external/4e9b077d/ss-assets/brand-logo/typescript-icon.png",
+      "external/4e9b077d/ss-assets/favicon/android-chrome-192x192.png",
+      "external/4e9b077d/ss-assets/favicon/android-chrome-512x512.png",
+      "external/4e9b077d/ss-assets/favicon/apple-touch-icon.png",
+      "external/4e9b077d/ss-assets/favicon/favicon-16x16.png",
+      "external/4e9b077d/ss-assets/favicon/favicon-32x32.png",
+      "external/4e9b077d/ss-assets/favicon/favicon.ico",
+      "external/4e9b077d/ss-assets/feature/all-shadcn-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/daily-dev-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/dev-to-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/htmlrev-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/indie-hackers.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/medium-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/microlaunch-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/peerlist-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/product-hunt-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/reddit-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/statichunt-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/tiny-launch-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/uneed-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/y-combinator.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/landing-page/dot-pattern.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/bistro/bistro-landing-page-1.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/bistro/bistro-landing-page-2.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/bistro/bistro-landing-page-3.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/bistro/image-01-large-dark.png.50a703f2.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/bistro/image-01-large.png.50a703f2.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/bistro/image-01-small-dark.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/bistro/image-01-small.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/bistro/image-02-large-dark.png.50a703f2.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/bistro/image-02-large.png.50a703f2.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/bistro/image-02-small-dark.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/bistro/image-02-small.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/bistro/image-03-large-dark.png.50a703f2.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/bistro/image-03-large.png.50a703f2.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/bistro/image-03-small-dark.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/bistro/image-03-small.png",
+      "external/4e9b077d/ss-assets/smm/marketing/shadcn-studio-smm-banner.png",
+      "external/4e9b077d/ss-assets/template/landing-page/matter/image-01.png",
+      "external/4e9b077d/ss-assets/template/landing-page/matter/image-02.png",
+      "external/4e9b077d/ss-assets/template/landing-page/matter/image-03.png",
+      "external/4e9b077d/ss-assets/template/landing-page/matter/image-04.png",
+      "external/4e9b077d/ss-assets/template/landing-page/matter/image-05.png",
+      "external/4e9b077d/ss-assets/template/landing-page/matter/image-06.png",
+      "external/4e9b077d/ss-assets/template/landing-page/neural/image-03.png",
+      "external/a0e02380/js/script.js",
+      "external/ae196df8/free-shadcn-templates.html",
+      "external/ae196df8/images/htmlrev-free-html-templates-og-image.jpg",
+      "index.html",
+      "_next/static/chunks/1099-aed46690115c52a5.js",
+      "_next/static/chunks/11154-8e72e6cc06a265fa.js",
+      "_next/static/chunks/13720-cca1d03560a65327.js",
+      "_next/static/chunks/15965-3ba1b75fd1153ceb.js",
+      "_next/static/chunks/17953-3203c5a88543760b.js",
+      "_next/static/chunks/22195-e9fff2e26c80ea68.js",
+      "_next/static/chunks/26098-e3e263af448d3752.js",
+      "_next/static/chunks/28833-169d8bbdf4a91d2b.js",
+      "_next/static/chunks/28956-d659e4129f680ee8.js",
+      "_next/static/chunks/310-2dadbcaa334b6b59.js",
+      "_next/static/chunks/40979-91b06f2af4beacb2.js",
+      "_next/static/chunks/43280-e251c444000fa096.js",
+      "_next/static/chunks/45704-be67b6202ad7123a.js",
+      "_next/static/chunks/49299-5b7ce3a57185f3d6.js",
+      "_next/static/chunks/52285-0df21aebe4a74a07.js",
+      "_next/static/chunks/55117-3b317ae9a22154e9.js",
+      "_next/static/chunks/57706a6b-106f15357916e37c.js",
+      "_next/static/chunks/60986-cc43adc00eabbf09.js",
+      "_next/static/chunks/62281-26e9636de0af77c6.js",
+      "_next/static/chunks/6355-a93a54f3c40ced8f.js",
+      "_next/static/chunks/6421-a46ca4986378c7cc.js",
+      "_next/static/chunks/6633-d2ac46f665aa25ac.js",
+      "_next/static/chunks/66969-892b6c2d4ecef388.js",
+      "_next/static/chunks/67432-32747e88a4f8acc8.js",
+      "_next/static/chunks/68243-12c20031e21ecbcf.js",
+      "_next/static/chunks/69941-0fa0de6cf1226465.js",
+      "_next/static/chunks/73384-e2f14b08da94964e.js",
+      "_next/static/chunks/76370-0359ac560144dca6.js",
+      "_next/static/chunks/79679-e7f1c86802c7d4f1.js",
+      "_next/static/chunks/80575-97954de7a94dabff.js",
+      "_next/static/chunks/81822-35c780227d9faa98.js",
+      "_next/static/chunks/82946-fd978bb63c15f862.js",
+      "_next/static/chunks/83775-edb4537e45b22795.js",
+      "_next/static/chunks/87587-1d720f0606a18432.js",
+      "_next/static/chunks/8768-23ce1e577a195a0a.js",
+      "_next/static/chunks/92831-c2e7529c61e73e1b.js",
+      "_next/static/chunks/948-e0e1cf3f5ce077b0.js",
+      "_next/static/chunks/96373-3855d4cbc01b6fac.js",
+      "_next/static/chunks/app/layout-1b095f80981495b7.js",
+      "_next/static/chunks/main-app-ddb4a1d4a12e85d3.js",
+      "_next/static/chunks/polyfills-42372ed130431b0a.js",
+      "_next/static/chunks/webpack-650162550b829ba6.js",
+      "_next/static/css/73d3437890816661.css",
+      "_next/static/css/b1a50a0b8e77f06f.css",
+      "_next/static/css/d95482cdcc2b01b0.css",
+      "_next/static/media/013b72fa676f92e0-s.woff2",
+      "_next/static/media/22a5144ee8d83bca-s.p.woff2",
+      "_next/static/media/2b5b02fc7e511755-s.woff2",
+      "_next/static/media/2f968d8fa37d003d-s.woff2",
+      "_next/static/media/402045309214d7f5-s.woff2",
+      "_next/static/media/548d4a6452851abd-s.woff2",
+      "_next/static/media/59086a93cebe8094-s.p.woff2",
+      "_next/static/media/65f03d54ccadf4a8-s.woff2",
+      "_next/static/media/7d4881bb7e1bf84d-s.p.woff2",
+      "_next/static/media/89f9cb1a88b9175b-s.woff2",
+      "_next/static/media/8d3438aba4d874a4-s.p.woff2",
+      "_next/static/media/9766a7e9e2e0ad5a-s.woff2",
+      "_next/static/media/a741d221f759c10d-s.woff2",
+      "_next/static/media/aa016aab0e6d1295-s.woff2",
+      "_next/static/media/b66cf8e69499582a-s.woff2",
+      "_next/static/media/b9408752a0c24fb9-s.woff2",
+      "_next/static/media/bf273aca3d6b346f-s.p.woff2",
+      "_next/static/media/e038a29029a234f2-s.woff2",
+      "_next/static/media/e5a2e5b803e2912d-s.woff2",
+      "_next/static/media/f639721981034f88-s.woff2"
+    ],
+    "bytes": 40138989,
+    "errors": [
+      {
+        "url": "https://cdn.js/",
+        "error": "fetch failed"
+      },
+      {
+        "url": "https://www.googletagmanager.com/gtm.js",
+        "error": "HTTP 400 https://www.googletagmanager.com/gtm.js"
+      },
+      {
+        "url": "https://shadcnstudio.com/r/components.js",
+        "error": "HTTP 404 https://shadcnstudio.com/r/components.js"
+      },
+      {
+        "url": "https://shadcnstudio.com/r/themes/$%7BN%7D.js",
+        "error": "HTTP 404 https://shadcnstudio.com/r/themes/$%7BN%7D.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPrimitive.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPrimitive.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/typeof.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/typeof.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPropertyKey.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPropertyKey.js"
+      },
+      {
+        "url": "https://cdn.affonso.io/js/data/rules.js",
+        "error": "HTTP 404 https://cdn.affonso.io/js/data/rules.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/OverloadYield.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/OverloadYield.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/objectSpread2.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/objectSpread2.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/usingCtx.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/usingCtx.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/asyncIterator.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/asyncIterator.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/defineProperty.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/defineProperty.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/awaitAsyncGenerator.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/awaitAsyncGenerator.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/wrapAsyncGenerator.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/wrapAsyncGenerator.js"
+      },
+      {
+        "url": "https://emoji.slack-edge.com/T0CAQ00TU/parrot-vercel/305a638fce8642f5.gif",
+        "error": "HTTP 404 https://emoji.slack-edge.com/T0CAQ00TU/parrot-vercel/305a638fce8642f5.gif"
+      }
+    ],
+    "originalDemoUrl": "https://shadcnstudio.com/preview/templates/shadcn-nextjs-bistro-landing-page"
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1183,
+      "name": "Ink - Shadcn UI Blog Template",
+      "description": "Ink is a free modern Shadcn UI blog template built with Next.js for writers, SaaS teams, designers, and agencies to publish articles and insights. It includes a hero, featured posts, categories, article grid, blog detail page, related posts, and CTA, with smooth animations, light/dark theme support, and a fully responsive, SEO-friendly layout.",
+      "previewUrl": "https://cdn.21st.dev/user_3HXZ8yZwEeyMnsdcuMHzruPMNoj/templates/ink-shadcn-ui-blog-template/preview-1793896272689.png",
+      "author": "clevision",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3HXZ8yZwEeyMnsdcuMHzruPMNoj/avatar.jpeg",
+      "url": "https://21st.dev/community/templates/ink-shadcn-ui-blog-template",
+      "price": 0
+    },
+    "status": "needs-validation",
+    "previewPath": "/previews/recovered/demos/21st-template-1183/index.html",
+    "slug": "21st-template-1183",
+    "files": [
+      "cdn-cgi/challenge-platform/scripts/jsd/main.js.62a14507.js",
+      "external/35354578/js/pixel.min.js",
+      "external/35354578/js/psl.min.js",
+      "external/457f3e57/geist.woff2",
+      "external/457f3e57/geist_mono.woff2",
+      "external/457f3e57/images/slack-icon.png",
+      "external/457f3e57/_next-live/feedback/feedback.html.1d24d66f.html",
+      "external/457f3e57/_next-live/feedback/feedback.js",
+      "external/457f3e57/_next-live/feedback/instrument.4918a29dc0ab14365af5.js.7f9195d6.js",
+      "external/4e9b077d/ss-assets/blocks/ecommerce/offer-modal/image-3.png",
+      "external/4e9b077d/ss-assets/blocks/ecommerce/product-category/image-36.png",
+      "external/4e9b077d/ss-assets/blocks/ecommerce/product-category/image-37.png",
+      "external/4e9b077d/ss-assets/blocks/ecommerce/product-category/image-38.png",
+      "external/4e9b077d/ss-assets/blocks/ecommerce/product-category/image-39.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/download/image-09.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/error/image-2.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/features/image-40.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/hero/image-17.png.362340de.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/hero/image-22.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/hero/image-34.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/hero/image-48-dark.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/hero/image-48.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/hero/image-53.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/team/image-103-dark.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/team/image-103.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/team/image-105-dark.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/team/image-105.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/team/image-112.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/testimonials/gradient-bg.png",
+      "external/4e9b077d/ss-assets/brand-logo/astro-icon-dark.png",
+      "external/4e9b077d/ss-assets/brand-logo/astro-icon.png",
+      "external/4e9b077d/ss-assets/brand-logo/figma-icon.png",
+      "external/4e9b077d/ss-assets/brand-logo/nextjs-logo-dark.png",
+      "external/4e9b077d/ss-assets/brand-logo/nextjs-logo.png",
+      "external/4e9b077d/ss-assets/brand-logo/shadcn-logo.png",
+      "external/4e9b077d/ss-assets/brand-logo/tailwind-icon.png",
+      "external/4e9b077d/ss-assets/brand-logo/typescript-icon.png",
+      "external/4e9b077d/ss-assets/favicon/android-chrome-192x192.png",
+      "external/4e9b077d/ss-assets/favicon/android-chrome-512x512.png",
+      "external/4e9b077d/ss-assets/favicon/apple-touch-icon.png",
+      "external/4e9b077d/ss-assets/favicon/favicon-16x16.png",
+      "external/4e9b077d/ss-assets/favicon/favicon-32x32.png",
+      "external/4e9b077d/ss-assets/favicon/favicon.ico",
+      "external/4e9b077d/ss-assets/feature/all-shadcn-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/daily-dev-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/dev-to-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/htmlrev-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/indie-hackers.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/medium-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/microlaunch-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/peerlist-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/product-hunt-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/reddit-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/statichunt-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/tiny-launch-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/uneed-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/y-combinator.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/landing-page/dot-pattern.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/ink/ink-landing-page-1.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/ink/ink-landing-page-2.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/ink/ink-landing-page-3.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/ink/image-01-large-dark.png.50a703f2.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/ink/image-01-large.png.50a703f2.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/ink/image-01-small-dark.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/ink/image-01-small.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/ink/image-02-large-dark.png.50a703f2.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/ink/image-02-large.png.50a703f2.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/ink/image-02-small-dark.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/ink/image-02-small.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/ink/image-03-large-dark.png.50a703f2.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/ink/image-03-large.png.50a703f2.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/ink/image-03-small-dark.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/ink/image-03-small.png",
+      "external/4e9b077d/ss-assets/smm/marketing/shadcn-studio-smm-banner.png",
+      "external/4e9b077d/ss-assets/template/landing-page/matter/image-01.png",
+      "external/4e9b077d/ss-assets/template/landing-page/matter/image-02.png",
+      "external/4e9b077d/ss-assets/template/landing-page/matter/image-03.png",
+      "external/4e9b077d/ss-assets/template/landing-page/matter/image-04.png",
+      "external/4e9b077d/ss-assets/template/landing-page/matter/image-05.png",
+      "external/4e9b077d/ss-assets/template/landing-page/matter/image-06.png",
+      "external/4e9b077d/ss-assets/template/landing-page/neural/image-03.png",
+      "external/a0e02380/js/script.js",
+      "external/ae196df8/free-shadcn-templates.html",
+      "external/ae196df8/images/htmlrev-free-html-templates-og-image.jpg",
+      "index.html",
+      "_next/static/chunks/1099-aed46690115c52a5.js",
+      "_next/static/chunks/11154-8e72e6cc06a265fa.js",
+      "_next/static/chunks/13720-cca1d03560a65327.js",
+      "_next/static/chunks/15965-3ba1b75fd1153ceb.js",
+      "_next/static/chunks/17953-3203c5a88543760b.js",
+      "_next/static/chunks/22195-e9fff2e26c80ea68.js",
+      "_next/static/chunks/26098-e3e263af448d3752.js",
+      "_next/static/chunks/28833-169d8bbdf4a91d2b.js",
+      "_next/static/chunks/28956-d659e4129f680ee8.js",
+      "_next/static/chunks/310-2dadbcaa334b6b59.js",
+      "_next/static/chunks/40979-91b06f2af4beacb2.js",
+      "_next/static/chunks/43280-e251c444000fa096.js",
+      "_next/static/chunks/45704-be67b6202ad7123a.js",
+      "_next/static/chunks/49299-5b7ce3a57185f3d6.js",
+      "_next/static/chunks/52285-0df21aebe4a74a07.js",
+      "_next/static/chunks/55117-3b317ae9a22154e9.js",
+      "_next/static/chunks/57706a6b-106f15357916e37c.js",
+      "_next/static/chunks/60986-cc43adc00eabbf09.js",
+      "_next/static/chunks/62281-26e9636de0af77c6.js",
+      "_next/static/chunks/6355-a93a54f3c40ced8f.js",
+      "_next/static/chunks/6421-a46ca4986378c7cc.js",
+      "_next/static/chunks/6633-d2ac46f665aa25ac.js",
+      "_next/static/chunks/66969-892b6c2d4ecef388.js",
+      "_next/static/chunks/67432-32747e88a4f8acc8.js",
+      "_next/static/chunks/68243-12c20031e21ecbcf.js",
+      "_next/static/chunks/69941-0fa0de6cf1226465.js",
+      "_next/static/chunks/73384-e2f14b08da94964e.js",
+      "_next/static/chunks/76370-0359ac560144dca6.js",
+      "_next/static/chunks/79679-e7f1c86802c7d4f1.js",
+      "_next/static/chunks/80575-97954de7a94dabff.js",
+      "_next/static/chunks/81822-35c780227d9faa98.js",
+      "_next/static/chunks/82946-fd978bb63c15f862.js",
+      "_next/static/chunks/83775-edb4537e45b22795.js",
+      "_next/static/chunks/87587-1d720f0606a18432.js",
+      "_next/static/chunks/8768-23ce1e577a195a0a.js",
+      "_next/static/chunks/92831-c2e7529c61e73e1b.js",
+      "_next/static/chunks/948-e0e1cf3f5ce077b0.js",
+      "_next/static/chunks/96373-3855d4cbc01b6fac.js",
+      "_next/static/chunks/app/layout-1b095f80981495b7.js",
+      "_next/static/chunks/main-app-ddb4a1d4a12e85d3.js",
+      "_next/static/chunks/polyfills-42372ed130431b0a.js",
+      "_next/static/chunks/webpack-650162550b829ba6.js",
+      "_next/static/css/73d3437890816661.css",
+      "_next/static/css/b1a50a0b8e77f06f.css",
+      "_next/static/css/d95482cdcc2b01b0.css",
+      "_next/static/media/013b72fa676f92e0-s.woff2",
+      "_next/static/media/22a5144ee8d83bca-s.p.woff2",
+      "_next/static/media/2b5b02fc7e511755-s.woff2",
+      "_next/static/media/2f968d8fa37d003d-s.woff2",
+      "_next/static/media/402045309214d7f5-s.woff2",
+      "_next/static/media/548d4a6452851abd-s.woff2",
+      "_next/static/media/59086a93cebe8094-s.p.woff2",
+      "_next/static/media/65f03d54ccadf4a8-s.woff2",
+      "_next/static/media/7d4881bb7e1bf84d-s.p.woff2",
+      "_next/static/media/89f9cb1a88b9175b-s.woff2",
+      "_next/static/media/8d3438aba4d874a4-s.p.woff2",
+      "_next/static/media/9766a7e9e2e0ad5a-s.woff2",
+      "_next/static/media/a741d221f759c10d-s.woff2",
+      "_next/static/media/aa016aab0e6d1295-s.woff2",
+      "_next/static/media/b66cf8e69499582a-s.woff2",
+      "_next/static/media/b9408752a0c24fb9-s.woff2",
+      "_next/static/media/bf273aca3d6b346f-s.p.woff2",
+      "_next/static/media/e038a29029a234f2-s.woff2",
+      "_next/static/media/e5a2e5b803e2912d-s.woff2",
+      "_next/static/media/f639721981034f88-s.woff2"
+    ],
+    "bytes": 35659734,
+    "errors": [
+      {
+        "url": "https://cdn.js/",
+        "error": "fetch failed"
+      },
+      {
+        "url": "https://www.googletagmanager.com/gtm.js",
+        "error": "HTTP 400 https://www.googletagmanager.com/gtm.js"
+      },
+      {
+        "url": "https://shadcnstudio.com/r/components.js",
+        "error": "HTTP 404 https://shadcnstudio.com/r/components.js"
+      },
+      {
+        "url": "https://shadcnstudio.com/r/themes/$%7BN%7D.js",
+        "error": "HTTP 404 https://shadcnstudio.com/r/themes/$%7BN%7D.js"
+      },
+      {
+        "url": "https://cdn.affonso.io/js/data/rules.js",
+        "error": "HTTP 404 https://cdn.affonso.io/js/data/rules.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/defineProperty.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/defineProperty.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/typeof.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/typeof.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPropertyKey.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPropertyKey.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPrimitive.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPrimitive.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/usingCtx.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/usingCtx.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/awaitAsyncGenerator.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/awaitAsyncGenerator.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/objectSpread2.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/objectSpread2.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/asyncIterator.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/asyncIterator.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/OverloadYield.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/OverloadYield.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/wrapAsyncGenerator.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/wrapAsyncGenerator.js"
+      },
+      {
+        "url": "https://emoji.slack-edge.com/T0CAQ00TU/parrot-vercel/305a638fce8642f5.gif",
+        "error": "HTTP 404 https://emoji.slack-edge.com/T0CAQ00TU/parrot-vercel/305a638fce8642f5.gif"
+      }
+    ],
+    "originalDemoUrl": "https://shadcnstudio.com/preview/templates/shadcn-nextjs-ink-landing-page"
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1184,
+      "name": "Track - Shadcn UI Changelog Template",
+      "description": "Track is a free modern Shadcn UI changelog template built with Next.js for SaaS products, startups, product teams, and indie makers to publish updates and release notes. It includes versioned updates, release summaries, feature additions, improvements, bug fixes, and an FAQ section, with smooth animations, light/dark theme support, and a fully responsive, SEO-friendly layout.",
+      "previewUrl": "https://cdn.21st.dev/user_3HXZ8yZwEeyMnsdcuMHzruPMNoj/templates/track-shadcn-ui-changelog-template/preview-1793898289841.png",
+      "author": "clevision",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3HXZ8yZwEeyMnsdcuMHzruPMNoj/avatar.jpeg",
+      "url": "https://21st.dev/community/templates/track-shadcn-ui-changelog-template",
+      "price": 0
+    },
+    "status": "needs-validation",
+    "previewPath": "/previews/recovered/demos/21st-template-1184/index.html",
+    "slug": "21st-template-1184",
+    "files": [
+      "cdn-cgi/challenge-platform/scripts/jsd/main.js.ab627124.js",
+      "external/35354578/js/pixel.min.js",
+      "external/35354578/js/psl.min.js",
+      "external/457f3e57/geist.woff2",
+      "external/457f3e57/geist_mono.woff2",
+      "external/457f3e57/images/slack-icon.png",
+      "external/457f3e57/_next-live/feedback/feedback.html.1d24d66f.html",
+      "external/457f3e57/_next-live/feedback/feedback.js",
+      "external/457f3e57/_next-live/feedback/instrument.4918a29dc0ab14365af5.js.7f9195d6.js",
+      "external/4e9b077d/ss-assets/blocks/ecommerce/offer-modal/image-3.png",
+      "external/4e9b077d/ss-assets/blocks/ecommerce/product-category/image-36.png",
+      "external/4e9b077d/ss-assets/blocks/ecommerce/product-category/image-37.png",
+      "external/4e9b077d/ss-assets/blocks/ecommerce/product-category/image-38.png",
+      "external/4e9b077d/ss-assets/blocks/ecommerce/product-category/image-39.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/download/image-09.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/error/image-2.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/features/image-40.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/hero/image-17.png.362340de.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/hero/image-22.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/hero/image-34.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/hero/image-48-dark.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/hero/image-48.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/hero/image-53.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/team/image-103-dark.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/team/image-103.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/team/image-105-dark.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/team/image-105.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/team/image-112.png",
+      "external/4e9b077d/ss-assets/blocks/marketing/testimonials/gradient-bg.png",
+      "external/4e9b077d/ss-assets/brand-logo/astro-icon-dark.png",
+      "external/4e9b077d/ss-assets/brand-logo/astro-icon.png",
+      "external/4e9b077d/ss-assets/brand-logo/figma-icon.png",
+      "external/4e9b077d/ss-assets/brand-logo/nextjs-logo-dark.png",
+      "external/4e9b077d/ss-assets/brand-logo/nextjs-logo.png",
+      "external/4e9b077d/ss-assets/brand-logo/shadcn-logo.png",
+      "external/4e9b077d/ss-assets/brand-logo/tailwind-icon.png",
+      "external/4e9b077d/ss-assets/brand-logo/typescript-icon.png",
+      "external/4e9b077d/ss-assets/favicon/android-chrome-192x192.png",
+      "external/4e9b077d/ss-assets/favicon/android-chrome-512x512.png",
+      "external/4e9b077d/ss-assets/favicon/apple-touch-icon.png",
+      "external/4e9b077d/ss-assets/favicon/favicon-16x16.png",
+      "external/4e9b077d/ss-assets/favicon/favicon-32x32.png",
+      "external/4e9b077d/ss-assets/favicon/favicon.ico",
+      "external/4e9b077d/ss-assets/feature/all-shadcn-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/daily-dev-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/dev-to-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/htmlrev-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/indie-hackers.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/medium-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/microlaunch-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/peerlist-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/product-hunt-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/reddit-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/statichunt-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/tiny-launch-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/uneed-logo.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/feature/y-combinator.png.56cd82a7.png",
+      "external/4e9b077d/ss-assets/landing-page/dot-pattern.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/track/image-01-large-dark.png.50a703f2.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/track/image-01-large.png.50a703f2.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/track/image-01-small-dark.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/track/image-01-small.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/track/image-02-large-dark.png.50a703f2.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/track/image-02-large.png.50a703f2.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/track/image-02-small-dark.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/track/image-02-small.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/track/image-03-large-dark.png.50a703f2.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/track/image-03-large.png.50a703f2.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/track/image-03-small-dark.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/templates-detail-page/track/image-03-small.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/track/track-landing-page-1.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/track/track-landing-page-2.png",
+      "external/4e9b077d/ss-assets/landing-page/templates-page/track/track-landing-page-3.png",
+      "external/4e9b077d/ss-assets/smm/marketing/shadcn-studio-smm-banner.png",
+      "external/4e9b077d/ss-assets/template/landing-page/matter/image-01.png",
+      "external/4e9b077d/ss-assets/template/landing-page/matter/image-02.png",
+      "external/4e9b077d/ss-assets/template/landing-page/matter/image-03.png",
+      "external/4e9b077d/ss-assets/template/landing-page/matter/image-04.png",
+      "external/4e9b077d/ss-assets/template/landing-page/matter/image-05.png",
+      "external/4e9b077d/ss-assets/template/landing-page/matter/image-06.png",
+      "external/4e9b077d/ss-assets/template/landing-page/neural/image-03.png",
+      "external/a0e02380/js/script.js",
+      "external/ae196df8/free-shadcn-templates.html",
+      "external/ae196df8/images/htmlrev-free-html-templates-og-image.jpg",
+      "index.html",
+      "_next/static/chunks/1099-aed46690115c52a5.js",
+      "_next/static/chunks/11154-8e72e6cc06a265fa.js",
+      "_next/static/chunks/13720-cca1d03560a65327.js",
+      "_next/static/chunks/15965-3ba1b75fd1153ceb.js",
+      "_next/static/chunks/17953-3203c5a88543760b.js",
+      "_next/static/chunks/22195-e9fff2e26c80ea68.js",
+      "_next/static/chunks/26098-e3e263af448d3752.js",
+      "_next/static/chunks/28833-169d8bbdf4a91d2b.js",
+      "_next/static/chunks/28956-d659e4129f680ee8.js",
+      "_next/static/chunks/310-2dadbcaa334b6b59.js",
+      "_next/static/chunks/40979-91b06f2af4beacb2.js",
+      "_next/static/chunks/43280-e251c444000fa096.js",
+      "_next/static/chunks/45704-be67b6202ad7123a.js",
+      "_next/static/chunks/49299-5b7ce3a57185f3d6.js",
+      "_next/static/chunks/52285-0df21aebe4a74a07.js",
+      "_next/static/chunks/55117-3b317ae9a22154e9.js",
+      "_next/static/chunks/57706a6b-106f15357916e37c.js",
+      "_next/static/chunks/60986-cc43adc00eabbf09.js",
+      "_next/static/chunks/62281-26e9636de0af77c6.js",
+      "_next/static/chunks/6355-a93a54f3c40ced8f.js",
+      "_next/static/chunks/6421-a46ca4986378c7cc.js",
+      "_next/static/chunks/6633-d2ac46f665aa25ac.js",
+      "_next/static/chunks/66969-892b6c2d4ecef388.js",
+      "_next/static/chunks/67432-32747e88a4f8acc8.js",
+      "_next/static/chunks/68243-12c20031e21ecbcf.js",
+      "_next/static/chunks/69941-0fa0de6cf1226465.js",
+      "_next/static/chunks/73384-e2f14b08da94964e.js",
+      "_next/static/chunks/76370-0359ac560144dca6.js",
+      "_next/static/chunks/79679-e7f1c86802c7d4f1.js",
+      "_next/static/chunks/80575-97954de7a94dabff.js",
+      "_next/static/chunks/81822-35c780227d9faa98.js",
+      "_next/static/chunks/82946-fd978bb63c15f862.js",
+      "_next/static/chunks/83775-edb4537e45b22795.js",
+      "_next/static/chunks/87587-1d720f0606a18432.js",
+      "_next/static/chunks/8768-23ce1e577a195a0a.js",
+      "_next/static/chunks/92831-c2e7529c61e73e1b.js",
+      "_next/static/chunks/948-e0e1cf3f5ce077b0.js",
+      "_next/static/chunks/96373-3855d4cbc01b6fac.js",
+      "_next/static/chunks/app/layout-1b095f80981495b7.js",
+      "_next/static/chunks/main-app-ddb4a1d4a12e85d3.js",
+      "_next/static/chunks/polyfills-42372ed130431b0a.js",
+      "_next/static/chunks/webpack-650162550b829ba6.js",
+      "_next/static/css/73d3437890816661.css",
+      "_next/static/css/b1a50a0b8e77f06f.css",
+      "_next/static/css/d95482cdcc2b01b0.css",
+      "_next/static/media/013b72fa676f92e0-s.woff2",
+      "_next/static/media/22a5144ee8d83bca-s.p.woff2",
+      "_next/static/media/2b5b02fc7e511755-s.woff2",
+      "_next/static/media/2f968d8fa37d003d-s.woff2",
+      "_next/static/media/402045309214d7f5-s.woff2",
+      "_next/static/media/548d4a6452851abd-s.woff2",
+      "_next/static/media/59086a93cebe8094-s.p.woff2",
+      "_next/static/media/65f03d54ccadf4a8-s.woff2",
+      "_next/static/media/7d4881bb7e1bf84d-s.p.woff2",
+      "_next/static/media/89f9cb1a88b9175b-s.woff2",
+      "_next/static/media/8d3438aba4d874a4-s.p.woff2",
+      "_next/static/media/9766a7e9e2e0ad5a-s.woff2",
+      "_next/static/media/a741d221f759c10d-s.woff2",
+      "_next/static/media/aa016aab0e6d1295-s.woff2",
+      "_next/static/media/b66cf8e69499582a-s.woff2",
+      "_next/static/media/b9408752a0c24fb9-s.woff2",
+      "_next/static/media/bf273aca3d6b346f-s.p.woff2",
+      "_next/static/media/e038a29029a234f2-s.woff2",
+      "_next/static/media/e5a2e5b803e2912d-s.woff2",
+      "_next/static/media/f639721981034f88-s.woff2"
+    ],
+    "bytes": 32121223,
+    "errors": [
+      {
+        "url": "https://cdn.js/",
+        "error": "fetch failed"
+      },
+      {
+        "url": "https://www.googletagmanager.com/gtm.js",
+        "error": "HTTP 400 https://www.googletagmanager.com/gtm.js"
+      },
+      {
+        "url": "https://shadcnstudio.com/r/components.js",
+        "error": "HTTP 404 https://shadcnstudio.com/r/components.js"
+      },
+      {
+        "url": "https://shadcnstudio.com/r/themes/$%7BN%7D.js",
+        "error": "HTTP 404 https://shadcnstudio.com/r/themes/$%7BN%7D.js"
+      },
+      {
+        "url": "https://cdn.affonso.io/js/data/rules.js",
+        "error": "HTTP 404 https://cdn.affonso.io/js/data/rules.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/defineProperty.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/defineProperty.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPropertyKey.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPropertyKey.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPrimitive.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPrimitive.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/typeof.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/typeof.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/awaitAsyncGenerator.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/awaitAsyncGenerator.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/asyncIterator.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/asyncIterator.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/objectSpread2.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/objectSpread2.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/usingCtx.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/usingCtx.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/OverloadYield.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/OverloadYield.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/wrapAsyncGenerator.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/wrapAsyncGenerator.js"
+      },
+      {
+        "url": "https://emoji.slack-edge.com/T0CAQ00TU/parrot-vercel/305a638fce8642f5.gif",
+        "error": "HTTP 404 https://emoji.slack-edge.com/T0CAQ00TU/parrot-vercel/305a638fce8642f5.gif"
+      }
+    ],
+    "originalDemoUrl": "https://shadcnstudio.com/preview/templates/shadcn-nextjs-track-landing-page"
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1182,
+      "name": "Zolt - Shadcn UI Portfolio Template",
+      "description": "Zolt is a Free modern Shadcn UI Portfolio Template built with Next.js for designers, developers, freelancers, and agencies to create fast, responsive, and SEO-friendly portfolio websites.",
+      "previewUrl": "https://cdn.21st.dev/user_3HXZ8yZwEeyMnsdcuMHzruPMNoj/templates/zolt-shadcn-ui-portfolio-template/preview-1793898108047.png",
+      "author": "clevision",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3HXZ8yZwEeyMnsdcuMHzruPMNoj/avatar.jpeg",
+      "url": "https://21st.dev/community/templates/zolt-shadcn-ui-portfolio-template",
+      "price": 0
+    },
+    "status": "needs-validation",
+    "previewPath": "/previews/recovered/demos/21st-template-1182/index.html",
+    "slug": "21st-template-1182",
+    "files": [
+      "external/259c757b/shadcn-studio-template-theme.js",
+      "external/457f3e57/geist.woff2",
+      "external/457f3e57/geist_mono.woff2",
+      "external/457f3e57/images/slack-icon.png",
+      "external/457f3e57/_next-live/feedback/feedback.html.1d24d66f.html",
+      "external/457f3e57/_next-live/feedback/feedback.js",
+      "external/457f3e57/_next-live/feedback/instrument.4918a29dc0ab14365af5.js.7f9195d6.js",
+      "favicon/android-chrome-192x192.png",
+      "favicon/android-chrome-512x512.png",
+      "favicon/apple-touch-icon.png",
+      "favicon/favicon-16x16.png",
+      "favicon/favicon-32x32.png",
+      "favicon/favicon.ico",
+      "images/3d-card/pin.webp",
+      "images/3d-card/profile.webp",
+      "images/about-me/carousel-01.webp",
+      "images/about-me/carousel-02.webp",
+      "images/about-me/carousel-03.webp",
+      "images/about-me/carousel-04.webp",
+      "images/about-me/eye.webp",
+      "images/about-me/folder-01.webp",
+      "images/about-me/folder-02.webp",
+      "images/about-me/folder-03.webp",
+      "images/about-me/folder-front.webp",
+      "images/about-me/music.webp",
+      "images/about-me/note.webp",
+      "images/cursor/cursor-pointer.webp",
+      "images/cursor/cursor.webp",
+      "images/experience/calendar.webp",
+      "images/experience/img-01.webp",
+      "images/experience/img-02.webp",
+      "images/experience/img-03.webp",
+      "images/experience/img-04.webp",
+      "images/experience/img-05.webp",
+      "images/experience/img-06.webp",
+      "images/experience/img-07.webp",
+      "images/experience/img-08.webp",
+      "images/experience/img-09.webp",
+      "images/experience/img-10.webp",
+      "images/experience/img-11.webp",
+      "images/experience/img-12.webp",
+      "images/experience/img-13.webp",
+      "images/experience/img-14.webp",
+      "images/experience/img-15.webp",
+      "images/experience/img-16.webp",
+      "images/experience/img-17.webp",
+      "images/experience/img-18.webp",
+      "images/experience/img-19.webp",
+      "images/experience/img-20.webp",
+      "images/experience/medal.webp",
+      "images/experience/speaker.webp",
+      "images/features/logo-01.webp",
+      "images/features/logo-02.webp",
+      "images/features/logo-03.webp",
+      "images/features/logo-04.webp",
+      "images/features/page-01.webp",
+      "images/features/page-02.webp",
+      "images/features/page-03.webp",
+      "images/features/page-04.webp",
+      "images/footer/github-logo.webp",
+      "images/footer/gmail.webp",
+      "images/footer/linkedin.webp",
+      "images/footer/signature.webp",
+      "images/footer/tree-seal.webp",
+      "images/footer/twitter.webp",
+      "images/hire-me/card-back-bg.webp",
+      "images/hire-me/profile-star-icon.webp",
+      "images/hire-me/profile.webp",
+      "images/og-image.png",
+      "images/services/service-bg.webp",
+      "images/services/services-profile.webp",
+      "images/services/thumb-01.webp",
+      "images/services/thumb-02.webp",
+      "images/services/thumb-03.webp",
+      "images/services/thumb-04.webp",
+      "images/services/thumb-05.webp",
+      "images/testimonials/avatar-01.webp",
+      "images/testimonials/avatar-02.webp",
+      "images/testimonials/avatar-03.webp",
+      "index.html",
+      "models/lanyard/card.glb",
+      "_next/static/chunks/0569e8c19b646cae.css",
+      "_next/static/chunks/0a26df412bfa274b.js",
+      "_next/static/chunks/2eb04a1115092a4b.js",
+      "_next/static/chunks/2fabb4a38e82d701.js",
+      "_next/static/chunks/36bd10e9e969c211.js",
+      "_next/static/chunks/3f91543f9d7cdb00.js",
+      "_next/static/chunks/40cd62bdb112aab3.js",
+      "_next/static/chunks/4f8530cfbbe38646.js",
+      "_next/static/chunks/675a9c7c0fab1a54.js",
+      "_next/static/chunks/7161629d4b1f23ac.js",
+      "_next/static/chunks/8477e1a848d60b01.js",
+      "_next/static/chunks/89e12d0baec68b6d.js",
+      "_next/static/chunks/8f369fb7c7b5467b.css",
+      "_next/static/chunks/9360c1334eb45c40.js",
+      "_next/static/chunks/a6dad97d9634a72d.js",
+      "_next/static/chunks/caf76447d4e8f3bd.js",
+      "_next/static/chunks/cc06b7aad6352262.js",
+      "_next/static/chunks/d5c8bdbee9299d48.js",
+      "_next/static/chunks/ef2e22b4685b9f4c.js",
+      "_next/static/chunks/f097aa02a94422c2.js",
+      "_next/static/chunks/turbopack-7d2c3a6beaa36ea7.js",
+      "_next/static/media/3986d01d10035dd7-s.d489fa9b.woff2",
+      "_next/static/media/4fa387ec64143e14-s.3b336396.woff2",
+      "_next/static/media/5ce348bf30bf5439-s.56c1f21e.woff2",
+      "_next/static/media/6306c77e7c8268e4-s.e3369375.woff2",
+      "_next/static/media/797e433ab948586e-s.p.29207c2f.woff2",
+      "_next/static/media/7d817b4c03b0c5f1-s.a40b9a8b.woff2",
+      "_next/static/media/bbc41e54d2fcbd21-s.fe42ddf4.woff2",
+      "_next/static/media/f33e08e40fdd2cb2-s.p.50648f4d.woff2",
+      "_next/static/media/satoshi_400-s.p.8b170606.woff2",
+      "_next/static/media/satoshi_500-s.p.eae7bb78.woff2",
+      "_next/static/media/satoshi_700-s.p.fc9d5d15.woff2",
+      "_next/static/media/satoshi_900-s.p.34b6b362.woff2"
+    ],
+    "bytes": 12039295,
+    "errors": [
+      {
+        "url": "https://shadcn-nextjs-zolt-landing-page.vercel.app/manifest.js",
+        "error": "HTTP 404 https://shadcn-nextjs-zolt-landing-page.vercel.app/manifest.js"
+      },
+      {
+        "url": "https://shadcn-nextjs-zolt-landing-page.vercel.app/_next/image?url=%2Fimages%2Fabout-me%2Fmusic.webp",
+        "error": "HTTP 400 https://shadcn-nextjs-zolt-landing-page.vercel.app/_next/image?url=%2Fimages%2Fabout-me%2Fmusic.webp"
+      },
+      {
+        "url": "https://shadcn-nextjs-zolt-landing-page.vercel.app/_next/image?url=%2Fimages%2Fabout-me%2Feye.webp",
+        "error": "HTTP 400 https://shadcn-nextjs-zolt-landing-page.vercel.app/_next/image?url=%2Fimages%2Fabout-me%2Feye.webp"
+      },
+      {
+        "url": "https://shadcn-nextjs-zolt-landing-page.vercel.app/_next/image?url=%2Fimages%2Ffooter%2Ftwitter.webp",
+        "error": "HTTP 400 https://shadcn-nextjs-zolt-landing-page.vercel.app/_next/image?url=%2Fimages%2Ffooter%2Ftwitter.webp"
+      },
+      {
+        "url": "https://shadcn-nextjs-zolt-landing-page.vercel.app/_next/image?url=%2Fimages%2Ffooter%2Flinkedin.webp",
+        "error": "HTTP 400 https://shadcn-nextjs-zolt-landing-page.vercel.app/_next/image?url=%2Fimages%2Ffooter%2Flinkedin.webp"
+      },
+      {
+        "url": "https://shadcn-nextjs-zolt-landing-page.vercel.app/_next/image?url=%2Fimages%2Ffooter%2Fgmail.webp",
+        "error": "HTTP 400 https://shadcn-nextjs-zolt-landing-page.vercel.app/_next/image?url=%2Fimages%2Ffooter%2Fgmail.webp"
+      },
+      {
+        "url": "https://shadcn-nextjs-zolt-landing-page.vercel.app/_next/image?url=%2Fimages%2Ffooter%2Fgithub-logo.webp",
+        "error": "HTTP 400 https://shadcn-nextjs-zolt-landing-page.vercel.app/_next/image?url=%2Fimages%2Ffooter%2Fgithub-logo.webp"
+      },
+      {
+        "url": "https://shadcn-nextjs-zolt-landing-page.vercel.app/px.png",
+        "error": "HTTP 404 https://shadcn-nextjs-zolt-landing-page.vercel.app/px.png"
+      },
+      {
+        "url": "https://shadcn-nextjs-zolt-landing-page.vercel.app/nx.png",
+        "error": "HTTP 404 https://shadcn-nextjs-zolt-landing-page.vercel.app/nx.png"
+      },
+      {
+        "url": "https://shadcn-nextjs-zolt-landing-page.vercel.app/py.png",
+        "error": "HTTP 404 https://shadcn-nextjs-zolt-landing-page.vercel.app/py.png"
+      },
+      {
+        "url": "https://shadcn-nextjs-zolt-landing-page.vercel.app/nz.png",
+        "error": "HTTP 404 https://shadcn-nextjs-zolt-landing-page.vercel.app/nz.png"
+      },
+      {
+        "url": "https://shadcn-nextjs-zolt-landing-page.vercel.app/ny.png",
+        "error": "HTTP 404 https://shadcn-nextjs-zolt-landing-page.vercel.app/ny.png"
+      },
+      {
+        "url": "https://shadcn-nextjs-zolt-landing-page.vercel.app/pz.png",
+        "error": "HTTP 404 https://shadcn-nextjs-zolt-landing-page.vercel.app/pz.png"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPrimitive.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPrimitive.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/defineProperty.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/defineProperty.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/typeof.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/typeof.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPropertyKey.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPropertyKey.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/OverloadYield.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/OverloadYield.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/awaitAsyncGenerator.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/awaitAsyncGenerator.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/usingCtx.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/usingCtx.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/objectSpread2.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/objectSpread2.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/wrapAsyncGenerator.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/wrapAsyncGenerator.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/asyncIterator.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/asyncIterator.js"
+      },
+      {
+        "url": "https://emoji.slack-edge.com/T0CAQ00TU/parrot-vercel/305a638fce8642f5.gif",
+        "error": "HTTP 404 https://emoji.slack-edge.com/T0CAQ00TU/parrot-vercel/305a638fce8642f5.gif"
+      }
+    ],
+    "originalDemoUrl": "https://shadcn-nextjs-zolt-landing-page.vercel.app/"
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1355,
+      "name": "Koira",
+      "description": "Next.js template for an AI agent workspace. Build with agents.",
+      "previewUrl": "https://cdn.21st.dev/user_37TqCAC00s9KcfmZ614YPQ0tnLG/templates/koira/preview-1793897814280.png",
+      "author": "diarmuradi",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_37TqCAC00s9KcfmZ614YPQ0tnLG/avatar.svg+xml",
+      "url": "https://21st.dev/community/templates/koira",
+      "price": 0
+    },
+    "status": "needs-validation",
+    "previewPath": "/previews/recovered/demos/21st-template-1355/index.html",
+    "slug": "21st-template-1355",
+    "files": [
+      "assets/brand/logo/logo.svg",
+      "index.html",
+      "_next/static/chunks/0cz1d0mv5g_q7.js",
+      "_next/static/chunks/0dl2tnwq__f8d.css",
+      "_next/static/chunks/0pn_xt735uyir.js",
+      "_next/static/chunks/0r6mcfrk1yljo.js",
+      "_next/static/chunks/0tb7h552agdkh.js",
+      "_next/static/chunks/1j17xqw471ftr.js",
+      "_next/static/chunks/1_tszcez1e699.js",
+      "_next/static/chunks/22vnr1k2xxl8w.js",
+      "_next/static/chunks/24xxcu91xpgob.js",
+      "_next/static/chunks/2k419u7knlbzr.js",
+      "_next/static/chunks/2khg-zg8q59of.js",
+      "_next/static/chunks/2or9-00boswf3.js",
+      "_next/static/chunks/2ywnpsdndmhu-.js",
+      "_next/static/chunks/34eofenk_-2ld.js",
+      "_next/static/chunks/38k271cleojbv.js",
+      "_next/static/chunks/39n3lag7dsmu3.js",
+      "_next/static/chunks/3gf6b0ex-7qcd.css",
+      "_next/static/chunks/3o-6unvfw_0jf.js",
+      "_next/static/chunks/3r-4r65uyynrw.js",
+      "_next/static/chunks/3yl3vz-tgpnrz.js",
+      "_next/static/chunks/turbopack-0sah5-e4cl526.js",
+      "_next/static/media/02715e17f1e8c73a-s.2nc_whx1bjdk_.woff2",
+      "_next/static/media/04a35ad0dc1a489f-s.2e9u6zki74hmq.woff2",
+      "_next/static/media/04cf1529a51d3fae-s.16dxrfcf0ambw.woff2",
+      "_next/static/media/067b96bbefd5528f-s.3x9s_hxpuc6n6.woff2",
+      "_next/static/media/06a048f659935bdb-s.10vjs6-c_bd43.woff2",
+      "_next/static/media/06afef7df08b8d35-s.42ie3vqp7z48y.woff2",
+      "_next/static/media/06dd1d975f122f7a-s.2jmnw0w2q7m02.woff2",
+      "_next/static/media/0cf5886e9e80966a-s.0qnihiljhtf25.woff2",
+      "_next/static/media/0d2a41c5aa74f691-s.2nt0xjcemnhuj.woff2",
+      "_next/static/media/0dba522b3762bd79-s.1-zh71ngn-4w7.woff2",
+      "_next/static/media/113f927c27f91030-s.1zonec9jsdmb7.woff2",
+      "_next/static/media/12dec905d5ae352e-s.34usi7v6v7e7w.woff2",
+      "_next/static/media/145348400912b296-s.2w1pwtgjnh2u4.woff2",
+      "_next/static/media/15a7a33a98b3b7e4-s.0476-8qhk_lyu.woff2",
+      "_next/static/media/17f9bfe50388ed9a-s.0h9x955910f0r.woff2",
+      "_next/static/media/1816bb676dccef6b-s.0yrt0odxzy5qr.woff2",
+      "_next/static/media/1a5805a6d8145465-s.1j-g3tk4f65p5.woff2",
+      "_next/static/media/1d7863744b078384-s.0z7yc4eekzb5-.woff2",
+      "_next/static/media/1e6189b0d2879bee-s.00jy5b_scs4gt.woff2",
+      "_next/static/media/217f2e7b7b0b77eb-s.3vwp155koyvt_.woff2",
+      "_next/static/media/2300ef6dcc526a5c-s.1d4na1o9iw_4_.woff2",
+      "_next/static/media/23080b6b2e1e98ff-s.2xdz289n76n_e.woff2",
+      "_next/static/media/23ff939f0bd1c4b0-s.0ecmh5rpun-8h.woff2",
+      "_next/static/media/24369194f558713f-s.1nm4bowedy_4r.woff2",
+      "_next/static/media/252b6b475a364c5c-s.30e1hhfpwbcsc.woff2",
+      "_next/static/media/262ab161cbe3c73b-s.33f2cp1tg3fec.woff2",
+      "_next/static/media/31667386388777cf-s.34yys9xt1by9f.woff2",
+      "_next/static/media/31c3db6bfcc18cbf-s.2q0chvb2g2w25.woff2",
+      "_next/static/media/342beb81f8559984-s.44kp0f0w_6i_d.woff2",
+      "_next/static/media/36704076342dc933-s.3n6g10lvm_ofw.woff2",
+      "_next/static/media/377e20027da93340-s.371gd3ovbc934.woff2",
+      "_next/static/media/377e2dfb962fe7f1-s.1_5n9tvl97p5p.woff2",
+      "_next/static/media/37d423ad13098ea8-s.1o5nc08ck6_sq.woff2",
+      "_next/static/media/394cc8e455b65477-s.1hw6mj7553rq3.woff2",
+      "_next/static/media/3a9611f2f6410b84-s.3gl5bsnflrqoz.woff2",
+      "_next/static/media/3d9fd02948e55b35-s.0txvw1ow0rypy.woff2",
+      "_next/static/media/3e69a8447c4f2d40-s.0gdqfiszqflu1.woff2",
+      "_next/static/media/40187acc82ac080b-s.1cvyfca488qhe.woff2",
+      "_next/static/media/415dc90e2f23cf6b-s.41jw5n86bue9u.woff2",
+      "_next/static/media/4410fdaf7620924a-s.0il1y4ivgyy16.woff2",
+      "_next/static/media/4ba4fe18815e84ff-s.3vg-5w-ofisj9.woff2",
+      "_next/static/media/4cd81330ea350cff-s.2uab_wyqldo8z.woff2",
+      "_next/static/media/4fc73c08527140d1-s.0ayp02lpaf-el.woff2",
+      "_next/static/media/4fe629bf19bcbf32-s.2kthhcqunaa0q.woff2",
+      "_next/static/media/50ad6fd89344bf75-s.24lg2c0cg9408.woff2",
+      "_next/static/media/52654165d19bd684-s.2gjp6fi233558.woff2",
+      "_next/static/media/5d64107c10efbb7a-s.2myp7o_t1wm6w.woff2",
+      "_next/static/media/6838913814407489-s.3upgfs7r1lkk_.woff2",
+      "_next/static/media/686c07c1c7910e5c-s.2mm3l4tegbyuh.woff2",
+      "_next/static/media/6969ad94c36fe268-s.405-6liatkira.woff2",
+      "_next/static/media/6c976d9aafcbfeeb-s.1hitpi_osmkgv.woff2",
+      "_next/static/media/6d359906142ec64a-s.3m0zbo55a-z3n.woff2",
+      "_next/static/media/6ddd5c9184964ce5-s.1xtj1w_1n8g6n.woff2",
+      "_next/static/media/6e494a0af6a853b8-s.37cr4aje_526b.woff2",
+      "_next/static/media/70d047ff3cc39dc8-s.36jiy-6s2zmn7.woff2",
+      "_next/static/media/71f655481f173cba-s.3szm3312j1mae.woff2",
+      "_next/static/media/728a96923157fde1-s.1uw1-ufbomfgh.woff2",
+      "_next/static/media/7951692e10b1d497-s.0yad-i667m3zq.woff2",
+      "_next/static/media/7a32e110692558d6-s.350fo7zfzsl_6.woff2",
+      "_next/static/media/7a7a02c531f01251-s.10se02bv-b1ow.woff2",
+      "_next/static/media/7b9278203fae1356-s.0savwslythlo9.woff2",
+      "_next/static/media/7c877e3cade90887-s.0_a1rkr4vboe1.woff2",
+      "_next/static/media/7f266894637fc401-s.2vn22ah5a5r95.woff2",
+      "_next/static/media/83e7a5dec67556fd-s.2vobyu85fy5_y.woff2",
+      "_next/static/media/85e2bfee7b0b2541-s.44tuayoxl34ku.woff2",
+      "_next/static/media/871174c06a2d2e73-s.0_o69pegy3ai7.woff2",
+      "_next/static/media/88b7644543a7e963-s.1t011erhs5r8w.woff2",
+      "_next/static/media/8c4d78d644e35f9a-s.2ub33m9lp627v.woff2",
+      "_next/static/media/90ef6bfc89ee0648-s.0qv-2xf9jp6ss.woff2",
+      "_next/static/media/97f270b1bdde6dc5-s.1t-6e42ukevmm.woff2",
+      "_next/static/media/98b000455da262dc-s.22zxqa2btowse.woff2",
+      "_next/static/media/9a98d34080049a48-s.2hztmn4ndxn6j.woff2",
+      "_next/static/media/9ab3403c5c50a928-s.0vg9je3cg-d2v.woff2",
+      "_next/static/media/9e4e6d3695a98ec0-s.41ln5qvh8cq33.woff2",
+      "_next/static/media/9e63f73515cdf349-s.3vhl8fqonccby.woff2",
+      "_next/static/media/9f1ce8adcbbca55f-s.3ovgf2b2w-lzz.woff2",
+      "_next/static/media/a1af21a69d301361-s.1yp_jar-_z-5v.woff2",
+      "_next/static/media/a25e7dae89c0bb77-s.443xmj7hn42g3.woff2",
+      "_next/static/media/a40b002d83bbbf9d-s.03tq6rlj4n2t6.woff2",
+      "_next/static/media/a50606b7634fa66a-s.44y4zg65_fm0j.woff2",
+      "_next/static/media/a5472f3b54801328-s.0mii3013dvyrz.woff2",
+      "_next/static/media/a5d3b139715e3320-s.16b9r0zlfywly.woff2",
+      "_next/static/media/a95bf238b368e748-s.03cxp513le0di.woff2",
+      "_next/static/media/abdddf2a23f3432a-s.0jbf6fbbkl-w7.woff2",
+      "_next/static/media/ac7954539e7e5659-s.2ez2hw322clde.woff2",
+      "_next/static/media/af6f18e0adfcd425-s.32qlkq04ubnwh.woff2",
+      "_next/static/media/b87de5e4aea5ee68-s.2lyznc5-39est.woff2",
+      "_next/static/media/baa793570e0f7eb4-s.1o6daqz-of9me.woff2",
+      "_next/static/media/bd21388f14bc1b52-s.23zlkto43-_y2.woff2",
+      "_next/static/media/c0c8bb4a15cb4228-s.p.40jux-1z3fj62.woff2",
+      "_next/static/media/c13fb913fd37efcb-s.3cgkwayl6dahm.woff2",
+      "_next/static/media/c1bb3cb322011b07-s.3-hakm5o4u3x6.woff2",
+      "_next/static/media/c3595bc160a2d000-s.1nmzc54f-979l.woff2",
+      "_next/static/media/c45463dd8afb4fe6-s.0r_wb12ojovsp.woff2",
+      "_next/static/media/c8d1773f0d4aab4a-s.15i-cvro2k8vs.woff2",
+      "_next/static/media/c988a325cbde9d68-s.2_5mhztr700d0.woff2",
+      "_next/static/media/cae48a144da8a64f-s.2mvj0zubw5nm7.woff2",
+      "_next/static/media/cb5279f0fb23d419-s.1_65_ic4oj2fe.woff2",
+      "_next/static/media/cde4c12dee58df22-s.1_ziyah-0ymq-.woff2",
+      "_next/static/media/cf528cec4c79dfa2-s.3z-te2wwb4vu7.woff2",
+      "_next/static/media/d0253eb6b65daac1-s.334t90_ngna6q.woff2",
+      "_next/static/media/d291104d6050d56c-s.2bapv6eqm6pij.woff2",
+      "_next/static/media/d5bafaed419ab5ba-s.3wio8vndyfii4.woff2",
+      "_next/static/media/d7457972834ac319-s.0npk2oc8f12ao.woff2",
+      "_next/static/media/d8165efc4ae1515a-s.1v7aiwz6oax1v.woff2",
+      "_next/static/media/d8776ed4e445891a-s.06n_xf3_be1uz.woff2",
+      "_next/static/media/dc873cec7102aa92-s.1wzy3fn3huhkz.woff2",
+      "_next/static/media/de44b6fb6b74dca9-s.40hnyqbaniiex.woff2",
+      "_next/static/media/e13f626e32797f26-s.2lqpjfyeidhpi.woff2",
+      "_next/static/media/e191d5dbac27726b-s.246x9233-2p7z.woff2",
+      "_next/static/media/e1e902619e736bc4-s.1u07rm_de4sew.woff2",
+      "_next/static/media/e635e2afc65cb038-s.2wk-wak4f7r3f.woff2",
+      "_next/static/media/e95f9048d5862d83-s.1pjyd_ax5gr_9.woff2",
+      "_next/static/media/efaee83f61d0c8de-s.05iw_h-x19zb5.woff2",
+      "_next/static/media/f0877a085d893dc4-s.35rvcmmuuyti8.woff2",
+      "_next/static/media/f1011cd0129c837e-s.13q4_spd18-g_.woff2",
+      "_next/static/media/f2e93b981d54998b-s.10kcdwuc8ddbd.woff2",
+      "_next/static/media/f4b4cab4b6014413-s.22hi36s51qtz1.woff2",
+      "_next/static/media/f582c0b12e95faee-s.0vgtm6l_-5vqa.woff2",
+      "_next/static/media/f814740ec4fadf09-s.2v9bg5ws_6c8_.woff2",
+      "_next/static/media/f8ce97e6de503978-s.3tqwez92a1r6m.woff2",
+      "_next/static/media/fda1100c0b727f76-s.0xze9znd0wjej.woff2",
+      "_next/static/media/GeistMono_Variable.p.1fz3wige2_h0o.woff2",
+      "_next/static/media/Geist_Variable-s.p.2hh2rqmrrgs5n.woff2"
+    ],
+    "bytes": 5651868,
+    "errors": [
+      {
+        "url": "https://koira.diarmuradi.com/manifest.webm",
+        "error": "HTTP 404 https://koira.diarmuradi.com/manifest.webm"
+      }
+    ],
+    "originalDemoUrl": "https://koira.diarmuradi.com/"
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1342,
+      "name": "Dashboard 4",
+      "description": "Commerce dashboard with revenue trends, refund rates, category ranking pie, and quick action items.",
+      "previewUrl": "https://cdn.21st.dev/user_2tWTE0rCrloVAVylFPYfp10xU92/templates/dashboard-4/preview-1793895903657.png",
+      "author": "efferd",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2tWTE0rCrloVAVylFPYfp10xU92/avatar.png",
+      "url": "https://21st.dev/community/templates/dashboard-4",
+      "price": 0
+    },
+    "status": "needs-validation",
+    "previewPath": "/previews/recovered/demos/21st-template-1342/index.html",
+    "slug": "21st-template-1342",
+    "files": [
+      "external/10afb30e/og.jpeg",
+      "favicon/32x32.png",
+      "favicon/apple.png",
+      "favicon/dark.ico",
+      "favicon/light.ico",
+      "index.html",
+      "_next/static/immutable/chunks/0-bwt0w2zoa41.css",
+      "_next/static/immutable/chunks/01se7-murzcwd.js",
+      "_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+      "_next/static/immutable/chunks/0cyhgkd-i9x4d.js",
+      "_next/static/immutable/chunks/0d8hicjpps_6k.js",
+      "_next/static/immutable/chunks/0k0hrvifwv6v5.js",
+      "_next/static/immutable/chunks/0ncy6nflkaj38.js",
+      "_next/static/immutable/chunks/0n_fga80m2ozw.js",
+      "_next/static/immutable/chunks/0op287lw1fx15.js",
+      "_next/static/immutable/chunks/0qhqa05gh761e.js",
+      "_next/static/immutable/chunks/0vn_c-qtmgve7.js",
+      "_next/static/immutable/chunks/0zc90coci90pi.css",
+      "_next/static/immutable/chunks/1-7b7v8t1fe5c.js",
+      "_next/static/immutable/chunks/1-x80p9rc06p1.js",
+      "_next/static/immutable/chunks/101xjv281srna.js",
+      "_next/static/immutable/chunks/116u_ip79eact.js",
+      "_next/static/immutable/chunks/178ue-s2vc7kv.js",
+      "_next/static/immutable/chunks/18q85s9rphgoa.js",
+      "_next/static/immutable/chunks/1gk-9c5-l2aiu.js",
+      "_next/static/immutable/chunks/1me5xl-yc71vk.js",
+      "_next/static/immutable/chunks/1or90x7te3rz9.js",
+      "_next/static/immutable/chunks/1rvudn65brkdt.js",
+      "_next/static/immutable/chunks/1y1o76dr6hgn7.js",
+      "_next/static/immutable/chunks/2043w09lats6v.js",
+      "_next/static/immutable/chunks/21bmdlpgts2gg.js",
+      "_next/static/immutable/chunks/269e9x0t2tm8s.js",
+      "_next/static/immutable/chunks/27u6tgkh_6_mf.js",
+      "_next/static/immutable/chunks/296d3i8fljgbd.js",
+      "_next/static/immutable/chunks/2cld8m2jpyyq1.js",
+      "_next/static/immutable/chunks/2npbgl3dpzaf-.js",
+      "_next/static/immutable/chunks/2rxd7ehymz6tk.js",
+      "_next/static/immutable/chunks/2uxflo5c8bs9w.js",
+      "_next/static/immutable/chunks/2vosdjt48n_u9.js",
+      "_next/static/immutable/chunks/2y2zapfxr45xm.js",
+      "_next/static/immutable/chunks/308atn__rw3ks.js",
+      "_next/static/immutable/chunks/30rpy_27n3sc-.js",
+      "_next/static/immutable/chunks/31_g5006ad6qy.js",
+      "_next/static/immutable/chunks/32-0bad_1ofqb.js",
+      "_next/static/immutable/chunks/32foob11bq4p9.js",
+      "_next/static/immutable/chunks/33u-mubn9ld4h.js",
+      "_next/static/immutable/chunks/35ojiudjx6syw.js",
+      "_next/static/immutable/chunks/36efqp6rhqoad.js",
+      "_next/static/immutable/chunks/38hx3e0lo6cyd.js",
+      "_next/static/immutable/chunks/3bfvp1qw6bq2s.js",
+      "_next/static/immutable/chunks/3nn073_uoq8cn.js",
+      "_next/static/immutable/chunks/3vlh0ra34x9dy.js",
+      "_next/static/immutable/chunks/3yukfptkh30mf.js",
+      "_next/static/immutable/chunks/3y_40q726td-k.js",
+      "_next/static/immutable/chunks/3_1txt6cjawsq.js",
+      "_next/static/immutable/chunks/turbopack-3tdvmq4pcwqab.js",
+      "_next/static/immutable/media/02046ca7e906ed9f-s.17af_saccwade.woff2",
+      "_next/static/immutable/media/03fc1b4a8d284b5e-s.p.45487z7p3r8wm.woff2",
+      "_next/static/immutable/media/05ce0245cbf07d46-s.04pt35s93a97i.woff2",
+      "_next/static/immutable/media/0797a9ffe47acb65-s.3udt6308h_uow.woff2",
+      "_next/static/immutable/media/0c89a48fa5027cee-s.p.1ii7211jqpzi_.woff2",
+      "_next/static/immutable/media/0fec32c78403d184-s.26u7v4he067l8.woff2",
+      "_next/static/immutable/media/13bf9871fe164e7f-s.3bz3aq452sydg.woff2",
+      "_next/static/immutable/media/13c8bea787795a91-s.2v19e1tj9utm9.woff2",
+      "_next/static/immutable/media/142d1fb481f1ebcd-s.0qw2satu43egq.woff2",
+      "_next/static/immutable/media/1497d94d4ac5c969-s.180g8ykmerv64.woff2",
+      "_next/static/immutable/media/14e23f9b59180572-s.054a9rxhye2rx.woff2",
+      "_next/static/immutable/media/198d17f2fc7b7e24-s.08m__0qttsjwy.woff2",
+      "_next/static/immutable/media/1b99372b3eaef0c8-s.p.1ay-qk1u8nydy.woff2",
+      "_next/static/immutable/media/1bcd0e671759a44c-s.3o0_l_yqebdng.woff2",
+      "_next/static/immutable/media/1bffadaabf893a1e-s.0szrwpqb9mkwe.woff2",
+      "_next/static/immutable/media/248e1dc0efc99276-s.p.0dq1pb0w2temw.woff2",
+      "_next/static/immutable/media/24ce79ed121239f3-s.1puy2ov14w4rp.woff2",
+      "_next/static/immutable/media/26229c3b890d5b41-s.27k1jrsqo381m.woff2",
+      "_next/static/immutable/media/28868e710e86be81-s.44ks8kcggj012.woff2",
+      "_next/static/immutable/media/2a65768255d6b625-s.p.2r-cuu_7locvx.woff2",
+      "_next/static/immutable/media/2b402d8aebffd579-s.370ev4_4-yiay.woff2",
+      "_next/static/immutable/media/2b4499d915222007-s.44i2_13mz_6e9.woff2",
+      "_next/static/immutable/media/2bbe8d2671613f1f-s.1way2z9fj6cig.woff2",
+      "_next/static/immutable/media/2c55a0e60120577a-s.03ez25a9g3i0n.woff2",
+      "_next/static/immutable/media/2e31362fa3cbeb8b-s.2qbiwh8xd_4q0.woff2",
+      "_next/static/immutable/media/32687112bd2dd8db-s.0v2ipp7s07_p9.woff2",
+      "_next/static/immutable/media/38772d1e0cde909c-s.3dbx4-_3lrmrn.woff2",
+      "_next/static/immutable/media/3fe682a82f50d426-s.200l3jur7oygh.woff2",
+      "_next/static/immutable/media/400bf8aa837fcb7e-s.2u3lqdovtp4z3.woff2",
+      "_next/static/immutable/media/41900da7e74536d5-s.0fqz7ora5--w7.woff2",
+      "_next/static/immutable/media/44fac91e6f2d2b1b-s.3xwp9-ll1pnw_.woff2",
+      "_next/static/immutable/media/47df9ba1c7236d3b-s.p.3__uj2j3k64hq.woff2",
+      "_next/static/immutable/media/4b825e536f0add60-s.40xx_hee_9tzo.woff2",
+      "_next/static/immutable/media/507a47c1876d4ec2-s.16qc705tx6j2a.woff2",
+      "_next/static/immutable/media/53b9e256198e5412-s.2gwoz23eiro2t.woff2",
+      "_next/static/immutable/media/5476f68d60460930-s.1ee5w62fj497l.woff2",
+      "_next/static/immutable/media/57215795b8570f5c-s.0xluf1kzv7x5w.woff2",
+      "_next/static/immutable/media/572c13468b8cff87-s.1mq5s36pj0pak.woff2",
+      "_next/static/immutable/media/58c4895d0a0ef7cc-s.2p5l8hwveaaiz.woff2",
+      "_next/static/immutable/media/5c285b27cdda1fe8-s.p.0lsanbtneewqp.woff2",
+      "_next/static/immutable/media/5cf8828ea9d4dda3-s.p.2sut7fgnosohl.woff2",
+      "_next/static/immutable/media/5d3604dad620f8b2-s.1f98lzvq3aaun.woff2",
+      "_next/static/immutable/media/5fe5f57ee794eff4-s.p.3k6uam93e9kow.woff2",
+      "_next/static/immutable/media/62d4b50592542c9f-s.1u6j2dgtvkhof.woff2",
+      "_next/static/immutable/media/65c558afe41e89d6-s.013x9cty0dvbp.woff2",
+      "_next/static/immutable/media/6ab0db14f70d8ed6-s.2gp_y-cmv6-ey.woff2",
+      "_next/static/immutable/media/6bbcb5b36acd717c-s.1wf5v3xfiu8hu.woff2",
+      "_next/static/immutable/media/6c7c54d92ecafd95-s.2ul13i_kpbu32.woff2",
+      "_next/static/immutable/media/6e8df35dd937fa7a-s.0xa7br5mfity1.woff2",
+      "_next/static/immutable/media/70bc3e132a0a741e-s.p.269kn9uafm0ti.woff2",
+      "_next/static/immutable/media/71b036adf157cdcf-s.343obqi851wr5.woff2",
+      "_next/static/immutable/media/71fbf9c08529c2a5-s.1dgp9w781ejf6.woff2",
+      "_next/static/immutable/media/784d20fa5d5f4c0e-s.3og1mzhekyvib.woff2",
+      "_next/static/immutable/media/797e433ab948586e-s.p.1v5bejj26fx9h.woff2",
+      "_next/static/immutable/media/7c2c7251ac640798-s.30_77yg76sunc.woff2",
+      "_next/static/immutable/media/7fea77d1d19108bf-s.2e4y-bhazgt_v.woff2",
+      "_next/static/immutable/media/8298327da6d5bcce-s.0vdai6er2bzon.woff2",
+      "_next/static/immutable/media/83afe278b6a6bb3c-s.p.45535valc9rzk.woff2",
+      "_next/static/immutable/media/8856956fa550053e-s.3pnxlr_ezl-5l.woff2",
+      "_next/static/immutable/media/89b21bb081cb7469-s.40kcwrf1wub16.woff2",
+      "_next/static/immutable/media/8a480f0b521d4e75-s.3j-a226dh71aj.woff2",
+      "_next/static/immutable/media/8c2eb9ceedecfc8e-s.p.1c4v1kyduoipm.woff2",
+      "_next/static/immutable/media/8fcf71678f67d0c5-s.01pm4i-1drugi.woff2",
+      "_next/static/immutable/media/9056bf441d45cedc-s.3yob337ug4w_n.woff2",
+      "_next/static/immutable/media/90c51ce8fb754fe8-s.3bjsqkuy1d2v8.woff2",
+      "_next/static/immutable/media/94b4a5dc1fe84361-s.2231v6bqe0i5w.woff2",
+      "_next/static/immutable/media/99596c30eb072d3c-s.2nm8vsxf84ypi.woff2",
+      "_next/static/immutable/media/9c72aa0f40e4eef8-s.3i9rha7jpxn0q.woff2",
+      "_next/static/immutable/media/9d30e1ac529a223a-s.0x-5wtyyqn28e.woff2",
+      "_next/static/immutable/media/a0ffaa6a9384d9d3-s.1u_-sc7tcpy__.woff2",
+      "_next/static/immutable/media/a342834df7752944-s.2k_u76ydap2io.woff2",
+      "_next/static/immutable/media/a343f882a40d2cc9-s.p.2ywnh8m32q6p0.woff2",
+      "_next/static/immutable/media/a88409fdd7dc121c-s.41r31qmhr7_rd.woff2",
+      "_next/static/immutable/media/ac34884600cd8d5d-s.444o2y6he09-k.woff2",
+      "_next/static/immutable/media/ad66f9afd8947f86-s.2o7ko1d-5m1xu.woff2",
+      "_next/static/immutable/media/aeacf25a943e1f19-s.2c2tz44gd9xkm.woff2",
+      "_next/static/immutable/media/b49b0d9b851e4899-s.12c_00cnxx2oq.woff2",
+      "_next/static/immutable/media/b4e85636e2ca4056-s.p.41ski4tjpa2j-.woff2",
+      "_next/static/immutable/media/bb835a708696869b-s.3prx-r-zugqyw.woff2",
+      "_next/static/immutable/media/bd177ace3eee3014-s.30bbolbcnns-r.woff2",
+      "_next/static/immutable/media/bfc7db5c00d21bc5-s.1_g-53zz09yvy.woff2",
+      "_next/static/immutable/media/c3cb240f9c892514-s.270md_-rr62el.woff2",
+      "_next/static/immutable/media/c492570a33c2511a-s.108qnbz8mv3a6.woff2",
+      "_next/static/immutable/media/c7f47671e39f7787-s.3wn_q526zaolu.woff2",
+      "_next/static/immutable/media/c825fd02acae0153-s.p.2nh923zyv9e2o.woff2",
+      "_next/static/immutable/media/caa3a2e1cccd8315-s.p.0zr6hhvz-h9nw.woff2",
+      "_next/static/immutable/media/cc545e633e20c56d-s.2sb9jzhmrh7ny.woff2",
+      "_next/static/immutable/media/ccee61546c0358b7-s.3xl3ybfsmj-am.woff2",
+      "_next/static/immutable/media/ccf27e5a7366fb23-s.1wwzpfhzaj2r0.woff2",
+      "_next/static/immutable/media/ce62453a442c7f35-s.p.3l4zvto3p0stf.woff2",
+      "_next/static/immutable/media/cf1514ba67088a5f-s.3zsg0zt63x1y2.woff2",
+      "_next/static/immutable/media/d0daeb77ad486505-s.3e69tg4c48nn6.woff2",
+      "_next/static/immutable/media/d261779aa92de579-s.2a66m7dsu0m6t.woff2",
+      "_next/static/immutable/media/d3fe2f289711ac3f-s.31_i6ngnt52xa.woff2",
+      "_next/static/immutable/media/d829ba9c72f21fd6-s.0lszh-yw5bwm5.woff2",
+      "_next/static/immutable/media/da2446ec5f26383f-s.0r-mzwg7qz0oc.woff2",
+      "_next/static/immutable/media/da8a9dd0d68e512b-s.22-vvcrakukp_.woff2",
+      "_next/static/immutable/media/dc6d2a64e9dbf3bc-s.p.3yrvj83qsyboh.woff2",
+      "_next/static/immutable/media/dcd150d580a10316-s.097t91mu4nbwo.woff2",
+      "_next/static/immutable/media/e15f58668ad64cb8-s.2mglm451ism6l.woff2",
+      "_next/static/immutable/media/e1ccd2766b08c828-s.1trkgqz3-pw7b.woff2",
+      "_next/static/immutable/media/e285ad1a914469f0-s.3ohuq16_8-qtv.woff2",
+      "_next/static/immutable/media/e41d5df559864f9e-s.p.2rlzm4mj5kw8e.woff2",
+      "_next/static/immutable/media/e4505858a30c79c2-s.p.1simdcn5ouyn0.woff2",
+      "_next/static/immutable/media/e557826f452dbd06-s.0hioodceto78-.woff2",
+      "_next/static/immutable/media/e5864b32625b6bc3-s.2xh5j9ig7blp7.woff2",
+      "_next/static/immutable/media/e6c3b2b7c3a61f79-s.3dnpquur9zvda.woff2",
+      "_next/static/immutable/media/e7150917543fc9da-s.0or-mv9rm3-7p.woff2",
+      "_next/static/immutable/media/e8f2fbee2754df70-s.p.1gavkj72q9u43.woff2",
+      "_next/static/immutable/media/e9457141811d41ae-s.0ydhovl1n7s8f.woff2",
+      "_next/static/immutable/media/ec173da4e4ac482c-s.3f00j5la6zyv3.woff2",
+      "_next/static/immutable/media/eca1cc1e672884b5-s.0iudtydy6ujc_.woff2",
+      "_next/static/immutable/media/f06bf9da926bae75-s.p.3uuun_-7zsf1g.woff2",
+      "_next/static/immutable/media/f141b5b7abe57afc-s.p.3bm7l-ln3bnu5.woff2",
+      "_next/static/immutable/media/f7aa21714c1c53f8-s.p.0jgzmitmnoe6_.woff2",
+      "_next/static/immutable/media/f7d6090e8b3debad-s.1rjy8ctfj1__1.woff2",
+      "_next/static/immutable/media/f813d0b748b050e0-s.1jg2wqmry50dw.woff2",
+      "_next/static/immutable/media/fa0520225c6f3d07-s.p.3tasb8qs95n_v.woff2",
+      "_next/static/immutable/media/fad568eea626db0e-s.2420v9bshvb4k.woff2",
+      "_next/static/immutable/media/fb34704f4f4f68ab-s.10xp3ztz64-x5.woff2",
+      "_next/static/immutable/media/fc2699ecc8323b38-s.1svzn21vgh2j9.woff2",
+      "_next/static/immutable/media/fe9e8dd4a2ad4385-s.3s_y9w1wd-27i.woff2",
+      "_next/static/immutable/media/fef07dbb0973bf53-s.00az9qtie3ho1.woff2",
+      "_next/static/immutable/media/ff5be760267bb4bc-s.3qloo4qyhp26g.woff2"
+    ],
+    "bytes": 9245578,
+    "errors": [
+      {
+        "url": "https://efferd.com/_next/static/immutable/media/7178b3e590c64307-s.0i3h3th1vs4m7.woff2",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://efferd.com/_next/static/immutable/media/5ce348bf30bf5439-s.27spqqad3wyeo.woff2",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://efferd.com/_next/static/immutable/media/4fa387ec64143e14-s.3f4zuumv8svu0.woff2",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://efferd.com/_next/static/immutable/media/6306c77e7c8268e4-s.34r5yzckw0h2s.woff2",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://efferd.com/_next/static/immutable/media/7d817b4c03b0c5f1-s.2jyz_zw3a8jit.woff2",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://efferd.com/_next/static/immutable/media/bbc41e54d2fcbd21-s.30bdpjkrtcces.woff2",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://efferd.com/_next/static/immutable/media/b2ea385cb5ae8625-s.3gpqod6e6kd7d.woff2",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://vercel.live/_next-live/feedback/feedback.js",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://va.vercel-scripts.com/v1/script.debug.js",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://efferd.com/_vercel/insights/script.js",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://github.com/shabanhr.png",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://github.com/shabanhr.png",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://github.com/shadcn.png",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://github.com/evilrabbit.png",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://github.com/shabanhr.png",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://github.com/shabanhr.png",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://avatar.vercel.sh/efferd.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://avatar.vercel.sh/shadcn.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://avatar.vercel.sh/new-brand.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://github.com/shabanhr.png",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://github.com/shabanhr.png",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://avatar.vercel.sh/efferd.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://avatar.vercel.sh/shadcn.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/creative/color-bends.webp",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://github.com/shabanhr.png",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://flag.vercel.app/s/$%7Be.country%7D.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://github.com/shadcn.png",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://github.com/evilrabbit.png",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://github.com/shabanhr.png",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://avatar.vercel.sh/new-brand.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://github.com/shabanhr.png",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://flag.vercel.app/s/US.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://flag.vercel.app/s/$%7Be.country%7D.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://avatar.vercel.sh/efferd.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://avatar.vercel.sh/shadcn.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://github.com/shabanhr.png",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://github.com/shabanhr.png",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://avatar.vercel.sh/new-brand.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://github.com/shabanhr.png",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://framerusercontent.com/images/ceBGguIpUU8luwByxuQz79t7To.png",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://framerusercontent.com/images/g0QcWrxr87K0ufOxIUFBakwYA8.png",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/screen/dashboard-light.webp",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/screen/dashboard-dark.webp",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/supabase.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/neon.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/planetscale.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/turso.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/openai.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/copilot.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/polar.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/paypal.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/vercel.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/cloudflare.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/github.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/adobe.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/canva.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/v0.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/notion.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/gmail.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/linear.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/google-maps.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/base-ui.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/dub.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/vercel-wordmark.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/supabase-wordmark.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/openai-wordmark.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/turso-wordmark.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/github-wordmark.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/claude-wordmark.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/nvidia-wordmark.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/clerk-wordmark.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/bolt-wordmark.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/stripe-wordmark.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/dub-wordmark.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://storage.efferd.com/logo/anthropic-wordmark.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://flag.vercel.app/s/$%7Be.country%7D.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      },
+      {
+        "url": "https://avatar.vercel.sh/efferd.svg",
+        "error": "Demo exceeds bounded 180 static resources"
+      }
+    ],
+    "originalDemoUrl": "https://efferd.com/view/dashboard-4"
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1360,
+      "name": "Portfolio template",
+      "description": "A minimal-looking portfolio template with AI",
+      "previewUrl": "https://cdn.21st.dev/user_36CTWW3UmqEeCTlDPyTgz0qIlWT/templates/portfolio-template-2/preview-1793897246623.png",
+      "author": "harshvirani91",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_36CTWW3UmqEeCTlDPyTgz0qIlWT/avatar.png",
+      "url": "https://21st.dev/community/templates/portfolio-template-2",
+      "price": 0
+    },
+    "status": "needs-validation",
+    "previewPath": "/previews/recovered/demos/21st-template-1360/index.html",
+    "slug": "21st-template-1360",
+    "files": [
+      "149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/a-4-a/c.js",
+      "149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/p.js",
+      "apple-icon.png.8e55f740.png",
+      "external/457f3e57/geist.woff2",
+      "external/457f3e57/geist_mono.woff2",
+      "external/457f3e57/images/slack-icon.png",
+      "external/457f3e57/_next-live/feedback/feedback.html.1d24d66f.html",
+      "external/457f3e57/_next-live/feedback/feedback.js",
+      "external/457f3e57/_next-live/feedback/instrument.4918a29dc0ab14365af5.js.7f9195d6.js",
+      "external/b85d9c76/images/h014bgtz/production/588a4ed632ce17af0c6aeebcbfebe1435f88e4ec-1254x1254.jpg",
+      "external/e0ee6469/v1/script.debug.js",
+      "favicon.ico.f34723fe.ico",
+      "figures/flag-and-fill.svg",
+      "figures/pocketpulse.svg",
+      "figures/ssri.svg",
+      "figures/support-agent.svg",
+      "icon.svg.dc1155a8.svg",
+      "index.html",
+      "_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+      "_next/static/immutable/chunks/0g6igpabm5pa2.js",
+      "_next/static/immutable/chunks/0iuekdjz-dlef.js",
+      "_next/static/immutable/chunks/0kcq6fvqsbj66.js",
+      "_next/static/immutable/chunks/0x4fknf5z33hm.js",
+      "_next/static/immutable/chunks/12jodlcegrew-.js",
+      "_next/static/immutable/chunks/1c8z_hrpnl76t.js",
+      "_next/static/immutable/chunks/1ep0h6br0gacx.js",
+      "_next/static/immutable/chunks/2owr1ey4svbkl.js",
+      "_next/static/immutable/chunks/2sdohom_mfjbx.js",
+      "_next/static/immutable/chunks/2wmfl6g1bzwcl.js",
+      "_next/static/immutable/chunks/34c2da6nyx9e4.js",
+      "_next/static/immutable/chunks/3leqc4-cbay7h.js",
+      "_next/static/immutable/chunks/3qk17gh4_jdqq.css",
+      "_next/static/immutable/chunks/turbopack-1byz1flvc-bu1.js",
+      "_next/static/immutable/media/07935285219a259d-s.3j-a226dh71aj.woff2",
+      "_next/static/immutable/media/07a39a8a4660cc7c-s.1v5bejj26fx9h.woff2",
+      "_next/static/immutable/media/125b6750c58ce347-s.1wwzpfhzaj2r0.woff2",
+      "_next/static/immutable/media/2a04751c893bf294-s.30bdpjkrtcces.woff2",
+      "_next/static/immutable/media/2bb852295097cd96-s.34r5yzckw0h2s.woff2",
+      "_next/static/immutable/media/4f6667dd39116621-s.00az9qtie3ho1.woff2",
+      "_next/static/immutable/media/605ce01b664af129-s.p.0zr6hhvz-h9nw.woff2",
+      "_next/static/immutable/media/6e342921ee4dcd9d-s.3f4zuumv8svu0.woff2",
+      "_next/static/immutable/media/77814b00d5ca94a4-s.0i3h3th1vs4m7.woff2",
+      "_next/static/immutable/media/9eb5a876700c0028-s.2jyz_zw3a8jit.woff2",
+      "_next/static/immutable/media/b0c6b664fd57c2c6-s.27spqqad3wyeo.woff2",
+      "_next/static/immutable/media/d902bc2bfdd0a4cb-s.p.2rlzm4mj5kw8e.woff2",
+      "_next/static/immutable/media/e63b65bb308a9351-s.p.3strvg7o-g5v2.woff2",
+      "_next/static/immutable/media/f58031ded4338640-s.2gwoz23eiro2t.woff2",
+      "_next/static/immutable/media/f7095de3000afb68-s.3zvkfbs08rnj_.woff2",
+      "_vercel/insights/script.js"
+    ],
+    "bytes": 5010853,
+    "errors": [
+      {
+        "url": "https://www.harshvirani.dev/manifest.webm",
+        "error": "HTTP 404 https://www.harshvirani.dev/manifest.webm"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/typeof.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/typeof.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPrimitive.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPrimitive.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/defineProperty.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/defineProperty.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPropertyKey.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPropertyKey.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/objectSpread2.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/objectSpread2.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/OverloadYield.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/OverloadYield.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/asyncIterator.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/asyncIterator.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/awaitAsyncGenerator.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/awaitAsyncGenerator.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/wrapAsyncGenerator.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/wrapAsyncGenerator.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/usingCtx.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/usingCtx.js"
+      },
+      {
+        "url": "https://emoji.slack-edge.com/T0CAQ00TU/parrot-vercel/305a638fce8642f5.gif",
+        "error": "HTTP 404 https://emoji.slack-edge.com/T0CAQ00TU/parrot-vercel/305a638fce8642f5.gif"
+      }
+    ],
+    "originalDemoUrl": "https://www.harshvirani.dev"
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1343,
+      "name": "Midnight Lite",
+      "description": "Midnight Lite is a free, dark landing page template for AI and SaaS products, under the MIT license.\n\nNext.js 16, React 19, Tailwind CSS v4, shadcn/ui, TypeScript. One page: a header, a hero with a night sky and an engraved guilloche rosette, product tiles with cited sources, a closing call to action and a footer, laid out separately for phones. Every word sits in one file, and AGENTS.md and DESIGN.md tell your AI editor how the page is built.\n\nThe theme and sections also install one by one with npx shadcn add from the @vilqor registry: midnight-lite.vilqor.com/r/registry.json\n\nCode: github.com/vilqor/midnight-lite\n\nThe full Midnight adds seven more sections, working forms, analytics and a second language: templates.vilqor.com/midnight",
+      "previewUrl": "https://cdn.21st.dev/user_3Kf6bVFeeahTD29rrdgg9TKLqfa/templates/midnight-lite/preview-1793895803702.png",
+      "author": "info_7f581b58",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3Kf6bVFeeahTD29rrdgg9TKLqfa/avatar.png",
+      "url": "https://21st.dev/community/templates/midnight-lite",
+      "price": 0
+    },
+    "status": "retained",
+    "previewPath": "/previews/recovered/demos/21st-template-1343/index.html",
+    "slug": "21st-template-1343",
+    "files": [
+      "apple-icon.png.72accf96.png",
+      "favicon.ico.2afda1d0.ico",
+      "icon.svg.3e8d7f67.svg",
+      "index.html",
+      "og.png",
+      "_next/static/chunks/0cz1d0mv5g_q7.js",
+      "_next/static/chunks/0umf92h1sb77c.js",
+      "_next/static/chunks/0z9lx-tx9zj4p.js",
+      "_next/static/chunks/1-9dyrc39prri.js",
+      "_next/static/chunks/1cgygrk9ti_ru.js",
+      "_next/static/chunks/1td5w8s30f5bd.css",
+      "_next/static/chunks/1x6obpmlu1_c2.js",
+      "_next/static/chunks/2r4s4h5xul1n-.js",
+      "_next/static/chunks/3wbm-994r45kr.js",
+      "_next/static/chunks/turbopack-3-ry682tkyiqk.js",
+      "_next/static/media/0264c3c98799c37c-s.p.0fuf3937kiol3.woff2",
+      "_next/static/media/07935285219a259d-s.1qq4vpdcun5oj.woff2",
+      "_next/static/media/07a39a8a4660cc7c-s.0r6juujl39pe6.woff2",
+      "_next/static/media/2a04751c893bf294-s.1rgnod-3esatf.woff2",
+      "_next/static/media/2bb852295097cd96-s.2dbetqa9o8jxf.woff2",
+      "_next/static/media/4f6667dd39116621-s.3p2_lha1f2xer.woff2",
+      "_next/static/media/4f6d02175fe8de3f-s.3pdm20a023wv-.woff2",
+      "_next/static/media/5151bb70dd75a85b-s.p.1n10e_apdb6ux.woff2",
+      "_next/static/media/605ce01b664af129-s.p.0wgildi0cnwt9.woff2",
+      "_next/static/media/6e342921ee4dcd9d-s.2tuy5pz7dlieh.woff2",
+      "_next/static/media/77814b00d5ca94a4-s.21jp631_3pja2.woff2",
+      "_next/static/media/9819129c77e8d0a0-s.2o1dletpdqcxm.woff2",
+      "_next/static/media/9eb5a876700c0028-s.1uyisp29ctx0d.woff2",
+      "_next/static/media/b0c6b664fd57c2c6-s.31988l_ccedte.woff2",
+      "_next/static/media/bf89ab4b246099fe-s.16191ingcc7md.woff2",
+      "_next/static/media/d2392b6761f3329f-s.3zrb6siod-_f0.woff2",
+      "_next/static/media/f58031ded4338640-s.390ncx5urfkfu.woff2"
+    ],
+    "bytes": 1754095,
+    "errors": [],
+    "originalDemoUrl": "https://midnight-lite.vilqor.com"
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1356,
+      "name": "Craft Beer Product Landing Page Template",
+      "description": "Craft beer product landing page template for an Indian brewery's monsoon IPA: the bottle rides the scroll on a sticky layer while the hero, tasting notes, brewing story, food pairings and a where-to-buy section move past it, all choreographed with GSAP.",
+      "previewUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/templates/craft-beer-product-landing-page-template/preview-1793897513606.png",
+      "author": "kedhareswer",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+      "url": "https://21st.dev/community/templates/craft-beer-product-landing-page-template",
+      "price": 0
+    },
+    "status": "blocked",
+    "reason": "HTTP 402 https://21stdev-my-components-one.vercel.app/#craft-beer-product-template",
+    "bytes": 0,
+    "errors": []
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1352,
+      "name": "Design Studio Website Template",
+      "description": "Design studio website template told as a film: nine full-screen scenes joined by deliberate cuts: a living eye badge, a showreel that grows to full bleed, sideways pastel cards, a self-building product UI, a scroll-lit quote, a 3D text cube and a contact form.",
+      "previewUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/templates/design-studio-website-template/preview-1793897990060.png",
+      "author": "kedhareswer",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+      "url": "https://21st.dev/community/templates/design-studio-website-template",
+      "price": 0
+    },
+    "status": "blocked",
+    "reason": "HTTP 402 https://21stdev-my-components-one.vercel.app/#oriel-studio-template",
+    "bytes": 0,
+    "errors": []
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1347,
+      "name": "Hourline: Scheduling Landing Page with Animated Product UI",
+      "description": "A light landing page for a booking and scheduling product, with nine animated Illos assets drawn as the product's own UI in the page's font and corners. Team tabs and setup tabs that work with the keyboard, a monthly and yearly pricing switch, and an FAQ. Plain HTML, CSS and JS built with Vite. More animated assets at illos.dev.",
+      "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/templates/hourline-scheduling-landing-page-with-animated-product-ui/preview-1793895296748.png",
+      "author": "navedux",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/avatar.png",
+      "url": "https://21st.dev/community/templates/hourline-scheduling-landing-page-with-animated-product-ui",
+      "price": 0
+    },
+    "status": "retained",
+    "previewPath": "/previews/recovered/demos/21st-template-1347/index.html",
+    "slug": "21st-template-1347",
+    "files": [
+      "assets/index-BHivCPor.css",
+      "assets/index-Bnwu9eCC.js",
+      "favicon.svg",
+      "fonts/geist-latin-wght-normal.woff2",
+      "img/desk-800.webp",
+      "img/story-900.webp",
+      "img/support-480.webp",
+      "index.html"
+    ],
+    "bytes": 613160,
+    "errors": [],
+    "originalDemoUrl": "https://illos-hourline-template.vercel.app"
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1346,
+      "name": "Kilnworks: Developer Landing Page with Animated Isometric Assets",
+      "description": "A light landing page for a background jobs and queues product, with ten animated Illos Isometric assets that loop while in view and hold still under reduced motion. Product tabs with keyboard support, stacked step cards with copyable code, a quote wall and pricing. Plain HTML, CSS and JS built with Vite. More animated assets at illos.dev.",
+      "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/templates/kilnworks-developer-landing-page-with-animated-isometric-ass/preview-1793895452018.png",
+      "author": "navedux",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/avatar.png",
+      "url": "https://21st.dev/community/templates/kilnworks-developer-landing-page-with-animated-isometric-assets",
+      "price": 0
+    },
+    "status": "retained",
+    "previewPath": "/previews/recovered/demos/21st-template-1346/index.html",
+    "slug": "21st-template-1346",
+    "files": [
+      "assets/index-C9mFZJA1.css",
+      "assets/index-DlIZvEEb.js",
+      "favicon.svg",
+      "fonts/geist-mono.woff2",
+      "fonts/mona-sans.woff2",
+      "index.html"
+    ],
+    "bytes": 610969,
+    "errors": [],
+    "originalDemoUrl": "https://illos-kilnworks-template.vercel.app"
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1349,
+      "name": "Orrery: AI Model Landing Page with Animated Product UI",
+      "description": "A light landing page for a made-up AI model company, with eleven animated Illos assets in the Interface style: a command bar in the hero, product cards, an answer that cites its sources and an agent that asks before it pays. They loop while in view and hold still under reduced motion. Plain HTML, CSS and JS with a small Node build and no dependencies. More animated assets at illos.dev.",
+      "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/templates/orrery-ai-model-landing-page-with-animated-product-ui/preview-1793894923943.png",
+      "author": "navedux",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/avatar.png",
+      "url": "https://21st.dev/community/templates/orrery-ai-model-landing-page-with-animated-product-ui",
+      "price": 0
+    },
+    "status": "retained",
+    "previewPath": "/previews/recovered/demos/21st-template-1349/index.html",
+    "slug": "21st-template-1349",
+    "files": [
+      "favicon.svg",
+      "img/coast-1280.webp",
+      "img/datacenter-800.webp",
+      "img/hero-1280.webp",
+      "img/office-800.webp",
+      "img/solar-800.webp",
+      "index.html",
+      "main.js",
+      "styles.css"
+    ],
+    "bytes": 761170,
+    "errors": [],
+    "originalDemoUrl": "https://illos-orrery-template.vercel.app"
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1345,
+      "name": "Sounder: AI Search Landing Page with Animated Shader Art",
+      "description": "A light landing page for a vector search and RAG product, with eight animated Illos assets in the Shader style that loop while in view and hold still under reduced motion. Working language tabs, a usage estimate with sliders, and questions that open and close. Plain HTML, CSS and JS built with Vite. More animated assets at illos.dev.",
+      "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/templates/sounder-ai-search-landing-page-with-animated-shader-art/preview-1793895595501.png",
+      "author": "navedux",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/avatar.png",
+      "url": "https://21st.dev/community/templates/sounder-ai-search-landing-page-with-animated-shader-art",
+      "price": 0
+    },
+    "status": "retained",
+    "previewPath": "/previews/recovered/demos/21st-template-1345/index.html",
+    "slug": "21st-template-1345",
+    "files": [
+      "assets/index-ByE3kkOf.js",
+      "assets/index-COzu56-1.css",
+      "favicon.svg",
+      "fonts/geist-mono-latin-var.woff2",
+      "fonts/inter-latin-var.woff2",
+      "index.html"
+    ],
+    "bytes": 297655,
+    "errors": [],
+    "originalDemoUrl": "https://illos-sounder-template.vercel.app"
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1348,
+      "name": "Tollgate: Billing Landing Page with Animated UI Art",
+      "description": "A light landing page for a usage-based billing product, with six animated Illos assets in its own font and corners, a working invoice estimate (plan picker and usage slider), code tabs and pricing with add-ons. The assets loop while in view and hold still under reduced motion. Plain HTML, CSS and JS built with Vite. More animated assets at illos.dev.",
+      "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/templates/tollgate-billing-landing-page-with-animated-ui-art/preview-1793895067904.png",
+      "author": "navedux",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/avatar.png",
+      "url": "https://21st.dev/community/templates/tollgate-billing-landing-page-with-animated-ui-art",
+      "price": 0
+    },
+    "status": "retained",
+    "previewPath": "/previews/recovered/demos/21st-template-1348/index.html",
+    "slug": "21st-template-1348",
+    "files": [
+      "assets/index-CHqA0cE4.css",
+      "assets/index-DKarpu7O.js",
+      "favicon.svg",
+      "fonts/geist-mono.woff2",
+      "fonts/mona-sans.woff2",
+      "img/desk-800.webp",
+      "img/team-800.webp",
+      "index.html"
+    ],
+    "bytes": 527864,
+    "errors": [],
+    "originalDemoUrl": "https://illos-tollgate-template.vercel.app"
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1344,
+      "name": "Wardline: Security Landing Page with Animated HUD Art",
+      "description": "A light landing page for a security monitoring product, with six animated Illos HUD assets floating on deep night gradients. Hero with live status cards, Detect, Respond and Prove rows, a coverage grid, a numbered response rail, a customer story and pricing. Assets loop while in view and hold still under reduced motion. Plain HTML, CSS and JS built with Vite. More at illos.dev.",
+      "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/templates/wardline-security-landing-page-with-animated-hud-art/preview-1793895690492.png",
+      "author": "navedux",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/avatar.png",
+      "url": "https://21st.dev/community/templates/wardline-security-landing-page-with-animated-hud-art",
+      "price": 0
+    },
+    "status": "retained",
+    "previewPath": "/previews/recovered/demos/21st-template-1344/index.html",
+    "slug": "21st-template-1344",
+    "files": [
+      "assets/index-BkvTo96S.css",
+      "assets/index-B_ZFaAju.js",
+      "favicon.svg",
+      "fonts/geist-mono.woff2",
+      "fonts/geist.woff2",
+      "img/quote-800.webp",
+      "index.html"
+    ],
+    "bytes": 350180,
+    "errors": [],
+    "originalDemoUrl": "https://illos-wardline-template.vercel.app"
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1353,
+      "name": "Motoko Base — Production-Ready Next.js SaaS Starter",
+      "description": null,
+      "previewUrl": "https://cdn.21st.dev/user_39720J8FZrHCoGeL23ljF4x20L3/templates/motoko-base-production-ready-next-js-saas-starter/preview-1793894728311.png",
+      "author": "senommu",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_39720J8FZrHCoGeL23ljF4x20L3/avatar.jpeg",
+      "url": "https://21st.dev/community/templates/motoko-base-production-ready-next-js-saas-starter",
+      "price": 0
+    },
+    "status": "needs-validation",
+    "previewPath": "/previews/recovered/demos/21st-template-1353/index.html",
+    "slug": "21st-template-1353",
+    "files": [
+      "apple-touch-icon.png",
+      "external/457f3e57/geist.woff2",
+      "external/457f3e57/geist_mono.woff2",
+      "external/457f3e57/images/slack-icon.png",
+      "external/457f3e57/_next-live/feedback/feedback.html.1d24d66f.html",
+      "external/457f3e57/_next-live/feedback/feedback.js",
+      "external/457f3e57/_next-live/feedback/instrument.4918a29dc0ab14365af5.js.7f9195d6.js",
+      "external/5271f2f8/l.js",
+      "external/e0ee6469/v1/script.debug.js",
+      "external/f2b77859/js/script.js",
+      "favicon-96x96.png",
+      "favicon.ico",
+      "favicon.svg",
+      "index.html",
+      "logo.svg",
+      "og.png",
+      "_next/static/immutable/chunks/0-2d4h9uj0z8l.js",
+      "_next/static/immutable/chunks/0c-qirw03m840.js",
+      "_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+      "_next/static/immutable/chunks/11n04xgnp0agc.js",
+      "_next/static/immutable/chunks/14dez2m-pede2.js",
+      "_next/static/immutable/chunks/170gcc3hk0n3a.js",
+      "_next/static/immutable/chunks/1gn0vbptveqat.js",
+      "_next/static/immutable/chunks/1qf-u_9sj_-a1.js",
+      "_next/static/immutable/chunks/1r-m9zkbgfcu2.js",
+      "_next/static/immutable/chunks/1spzctitgh_3-.js",
+      "_next/static/immutable/chunks/2300jsy-40y-6.js",
+      "_next/static/immutable/chunks/2ap84x7u_areu.js",
+      "_next/static/immutable/chunks/2e4wx5gl30tqm.js",
+      "_next/static/immutable/chunks/2jhlyptgnqlgf.js",
+      "_next/static/immutable/chunks/2kketpy9od92r.css",
+      "_next/static/immutable/chunks/2st7yw-i-1c4v.js",
+      "_next/static/immutable/chunks/2wbq-hztxgjn3.js",
+      "_next/static/immutable/chunks/32zench43b711.js",
+      "_next/static/immutable/chunks/36d08gzj43vmb.js",
+      "_next/static/immutable/chunks/3dgf4msd7fgpr.js",
+      "_next/static/immutable/chunks/3dm483y1o6ao9.js",
+      "_next/static/immutable/chunks/3gqgeru3s3z70.js",
+      "_next/static/immutable/chunks/3iemjyf7olz6t.js",
+      "_next/static/immutable/chunks/401cwjvfcrljb.css",
+      "_next/static/immutable/chunks/turbopack-2_04ewhudzrza.js",
+      "_next/static/immutable/media/ascii_bg.3lbbr7q_e4v-_.webp",
+      "_next/static/immutable/media/better-auth.23dmjd5c97u0e.svg",
+      "_next/static/immutable/media/claude.012hlu_7x95th.svg",
+      "_next/static/immutable/media/cloudflare.3lz0g5x4ov1r_.svg",
+      "_next/static/immutable/media/codex.0lbouuxxb19de.svg",
+      "_next/static/immutable/media/cursor.1zzwg3udis117.svg",
+      "_next/static/immutable/media/drizzle-orm.3fyterqjzv-fl.svg",
+      "_next/static/immutable/media/GeistMono_Variable.p.3x4ptlur59b2g.woff2",
+      "_next/static/immutable/media/Geist_Variable-s.p.2f6gsmzeok7d9.woff2",
+      "_next/static/immutable/media/nextjs.24w31bk_r0ri9.svg",
+      "_next/static/immutable/media/openspec_pixel_dark.0p6rdykqacqh7.svg",
+      "_next/static/immutable/media/polar.1e9hzc_60xlef.svg",
+      "_next/static/immutable/media/postgresql.34pn8havq7hpg.svg",
+      "_next/static/immutable/media/posthog.1ys0-fofzkft0.svg",
+      "_next/static/immutable/media/react.1814w9etpae8b.svg",
+      "_next/static/immutable/media/resend.1q4s_7_l883qx.svg",
+      "_next/static/immutable/media/sentry.3wmcnchb-qlt4.svg",
+      "_next/static/immutable/media/shadcn-ui.0abmcxo5jdmi-.svg",
+      "_next/static/immutable/media/supabase.40y0k1hhwtdqo.svg",
+      "_next/static/immutable/media/tailwind-css.1fcvt3zril_qp.svg",
+      "_next/static/immutable/media/typescript.2tdcgj0mr4y03.svg",
+      "_vercel/insights/script.js"
+    ],
+    "bytes": 5375644,
+    "errors": [
+      {
+        "url": "https://base.motokoui.com/site.webm",
+        "error": "HTTP 404 https://base.motokoui.com/site.webm"
+      },
+      {
+        "url": "https://base.motokoui.com/static/$%7Bt%7D.js?v=${e.version}",
+        "error": "HTTP 404 https://base.motokoui.com/static/$%7Bt%7D.js?v=${e.version}"
+      },
+      {
+        "url": "https://base.motokoui.com/array/$%7Be.config.token%7D/config.js",
+        "error": "HTTP 404 https://base.motokoui.com/array/$%7Be.config.token%7D/config.js"
+      },
+      {
+        "url": "https://base.motokoui.com/static/$%7Be.version%7D/$%7Bt%7D.js",
+        "error": "HTTP 404 https://base.motokoui.com/static/$%7Be.version%7D/$%7Bt%7D.js"
+      },
+      {
+        "url": "https://client.crisp.chat/aiz-core.js",
+        "error": "HTTP 404 https://client.crisp.chat/aiz-core.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/typeof.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/typeof.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPropertyKey.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPropertyKey.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/defineProperty.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/defineProperty.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPrimitive.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPrimitive.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/objectSpread2.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/objectSpread2.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/usingCtx.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/usingCtx.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/awaitAsyncGenerator.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/awaitAsyncGenerator.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/OverloadYield.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/OverloadYield.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/wrapAsyncGenerator.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/wrapAsyncGenerator.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/asyncIterator.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/asyncIterator.js"
+      },
+      {
+        "url": "https://emoji.slack-edge.com/T0CAQ00TU/parrot-vercel/305a638fce8642f5.gif",
+        "error": "HTTP 404 https://emoji.slack-edge.com/T0CAQ00TU/parrot-vercel/305a638fce8642f5.gif"
+      }
+    ],
+    "originalDemoUrl": "https://base.motokoui.com"
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1350,
+      "name": "Cerio Labs",
+      "description": "Premium AI SaaS & B2B Next.js Website Template.\n\nA sophisticated website template for the next generation of AI-powered businesses.\n\nPREVIEW👉\n\nCerio Labs is a modern, beautifully crafted Next.js website template designed for AI startups, SaaS platforms, B2B software companies, and innovative technology brands.\n\n\n\nCombining elegant editorial typography, a refined visual identity, immersive geometric backgrounds, and thoughtfully designed interactions, Cerio Labs helps ambitious software companies establish a distinctive digital presence.\n\n\n\nBuilt with a focus on aesthetics, performance, and flexibility, Cerio Labs provides a polished starting point for launching your next AI product, showcasing your technology, or building a compelling software marketing website.\n\n\n\nHighlights\n\nPremium Visual Design — Elegant typography, sophisticated layouts, and a refined forest-green color palette.\n\nNext.js & Modern Frontend — Built using Next.js, React, TypeScript, and Tailwind CSS.\n\nImmersive Visual Effects — A distinctive geometric network background with a futuristic, technology-inspired aesthetic.\n\nConversion-Focused Layouts — Clear messaging, prominent calls to action, and thoughtfully structured content.\n\nCustomizable Design System — Reusable UI components and design tokens for effortless brand customization.\n\nStatic-Ready Architecture — Designed for fast, efficient static website deployment.\n\n\n\nPerfect For\n\nAI startups, SaaS products, B2B software companies, automation platforms, technology startups, and digital product businesses.",
+      "previewUrl": "https://cdn.21st.dev/user_3LEBkCe07lgqMJ1A0LgFkPmRBhz/templates/cerio-labs-2/preview-1793893631565.png",
+      "author": "vermachaman001",
+      "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zTEVCa0NuV2h6d0ZNaWpXN3JSdE1LMFNSSWgifQ",
+      "url": "https://21st.dev/community/templates/cerio-labs-2",
+      "price": 0
+    },
+    "status": "needs-validation",
+    "previewPath": "/previews/recovered/demos/21st-template-1350/index.html",
+    "slug": "21st-template-1350",
+    "files": [
+      "external/457f3e57/geist.woff2",
+      "external/457f3e57/geist_mono.woff2",
+      "external/457f3e57/images/slack-icon.png",
+      "external/457f3e57/_next-live/feedback/feedback.html.1d24d66f.html",
+      "external/457f3e57/_next-live/feedback/feedback.js",
+      "external/457f3e57/_next-live/feedback/instrument.4918a29dc0ab14365af5.js.7f9195d6.js",
+      "images/about-hero-image.webp",
+      "images/footer-backdrop.svg",
+      "index.html",
+      "_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+      "_next/static/immutable/chunks/0fblwa7q2mjfp.js",
+      "_next/static/immutable/chunks/0n_iie00y84yc.js",
+      "_next/static/immutable/chunks/0r6m3yodh1y-g.js",
+      "_next/static/immutable/chunks/1dqcnc5djrya2.js",
+      "_next/static/immutable/chunks/1rqxh-jtig4j5.js",
+      "_next/static/immutable/chunks/2-qk6wn3pw9-g.js",
+      "_next/static/immutable/chunks/2z6kn3vqjq09b.js",
+      "_next/static/immutable/chunks/32nl3lfhxob25.css",
+      "_next/static/immutable/chunks/3ibfpf9jhu2-u.js",
+      "_next/static/immutable/chunks/40b80m5jqbzx0.js",
+      "_next/static/immutable/chunks/turbopack-1cvbnb3nlabgn.js",
+      "_next/static/immutable/media/cambon_light-s.p.2lh-gllue2u4j.woff2",
+      "_next/static/immutable/media/sohne%20VF-s.p.12ihcyo6a-cq9.woff2",
+      "_next/static/immutable/media/sohne_mono-s.p.10n286-kx3vbl.woff2"
+    ],
+    "bytes": 4530744,
+    "errors": [
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/typeof.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/typeof.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/defineProperty.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/defineProperty.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPrimitive.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPrimitive.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPropertyKey.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPropertyKey.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/usingCtx.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/usingCtx.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/awaitAsyncGenerator.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/awaitAsyncGenerator.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/OverloadYield.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/OverloadYield.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/wrapAsyncGenerator.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/wrapAsyncGenerator.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/objectSpread2.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/objectSpread2.js"
+      },
+      {
+        "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/asyncIterator.js",
+        "error": "HTTP 404 https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/asyncIterator.js"
+      },
+      {
+        "url": "https://emoji.slack-edge.com/T0CAQ00TU/parrot-vercel/305a638fce8642f5.gif",
+        "error": "HTTP 404 https://emoji.slack-edge.com/T0CAQ00TU/parrot-vercel/305a638fce8642f5.gif"
+      }
+    ],
+    "originalDemoUrl": "https://cerio-ai.vercel.app/"
+  }
+]

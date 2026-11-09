@@ -1,0 +1,10 @@
+# Preserve retained release bytes and evidence hashes across Windows checkouts.
+Um-so/research/source-checks/releases/2026-11-09/21st* -text
+Um-so/research/source-checks/releases/2026-11-09/21st*/** -text
+Um-so/research/source-checks/releases/2026-11-09/themes/** -text
+Um-so/union-ui/public/assets/releases/** -text
+Um-so/union-ui/public/code/releases/** -text
+Um-so/union-ui/public/code/runtime/21st-release-*.json -text
+Um-so/union-ui/public/previews/releases/** -text
+Um-so/union-ui/public/previews/runtime/21st-release-*.html -text
+Um-so/union-ui/public/previews/recovered/demos/21st-*/** -text

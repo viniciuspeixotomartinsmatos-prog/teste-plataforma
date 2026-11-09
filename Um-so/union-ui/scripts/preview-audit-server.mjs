@@ -5,7 +5,7 @@ import path from 'node:path';
 import {instrumentPreviewHTML} from '../src/preview-document.js';
 const port=Number(process.env.AUDIT_PORT||4175);
 const root=path.resolve('public'),out=path.resolve('var/audits/browser');await fs.mkdir(out,{recursive:true});
-const rows=JSON.parse(await fs.readFile(path.join(root,'data/catalog-live.json'),'utf8')),byId=new Map(rows.map(r=>[r.id,r])),results=new Map();
+const rows=JSON.parse(await fs.readFile(process.env.AUDIT_CATALOG_FILE||path.join(root,'data/catalog-live.json'),'utf8')),byId=new Map(rows.map(r=>[r.id,r])),results=new Map();
 try{for(const line of (await fs.readFile(path.join(out,'results.ndjson'),'utf8')).split('\n').filter(Boolean)){const r=JSON.parse(line);results.set(r.id,r);}}catch{}
 const affected=new Set(Object.keys(JSON.parse(await fs.readFile(path.join(root,'data/demo-local-assets.json'),'utf8')).items||{}));
 try{for(const id of JSON.parse(await fs.readFile('var/audits/verification-ids.json','utf8')))affected.add(id);}catch{}

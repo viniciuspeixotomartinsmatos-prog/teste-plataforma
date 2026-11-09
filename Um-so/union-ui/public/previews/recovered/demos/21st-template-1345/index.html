@@ -1,0 +1,1229 @@
+<!doctype html>
+<html lang="en">
+<head><base href="https://illos-sounder-template.vercel.app/"><script src="/previews/recovered/compat.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sounder: search and memory for AI apps</title>
+<meta name="description" content="Sounder stores your documents and conversations as vectors and finds the right passages in milliseconds. Hybrid search, filters and cited answers through one API.">
+<meta name="theme-color" content="#f7f9fc">
+<link rel="icon" href="/previews/recovered/demos/21st-template-1345/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/previews/recovered/demos/21st-template-1345/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/previews/recovered/demos/21st-template-1345/fonts/geist-mono-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <script type="module" crossorigin src="/previews/recovered/demos/21st-template-1345/assets/index-ByE3kkOf.js"></script>
+  <link rel="stylesheet" crossorigin href="/previews/recovered/demos/21st-template-1345/assets/index-COzu56-1.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <!-- Hugeicons (free set), stroke 1.5 -->
+  <symbol id="i-copy" viewBox="0 0 24 24" fill="none"><path d="M7.5 14.5C7.5 11.2002 7.5 9.55025 8.52513 8.52513C9.55025 7.5 11.2002 7.5 14.5 7.5C17.7998 7.5 19.4497 7.5 20.4749 8.52513C21.5 9.55025 21.5 11.2002 21.5 14.5C21.5 17.7998 21.5 19.4497 20.4749 20.4749C19.4497 21.5 17.7998 21.5 14.5 21.5C11.2002 21.5 9.55025 21.5 8.52513 20.4749C7.5 19.4497 7.5 17.7998 7.5 14.5Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/><path d="M7.5 16.5C6.10355 16.5 5.40533 16.5 4.84402 16.3036C3.83866 15.9518 3.0482 15.1613 2.69641 14.156C2.5 13.5947 2.5 12.8964 2.5 11.5V9.5C2.5 6.20017 2.5 4.55025 3.52513 3.52513C4.55025 2.5 6.20017 2.5 9.5 2.5H11.5C12.8964 2.5 13.5947 2.5 14.156 2.69641C15.1613 3.0482 15.9518 3.83866 16.3036 4.84402C16.5 5.40533 16.5 6.10355 16.5 7.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></symbol>
+  <symbol id="i-tick" viewBox="0 0 24 24" fill="none"><path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none"><path d="M18.5 12L4.99997 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/><path d="M13 18C13 18 19 13.5811 19 12C19 10.4188 13 6 13 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24" fill="none"><path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none"><path d="M4 8.5L20 8.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/><path d="M4 15.5L20 15.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none"><path d="M18 6L6.00081 17.9992M17.9992 18L6 6.00085" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none"><path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z" stroke="currentColor" stroke-width="1.5"/><path d="M8 12.5L10.5 15L16 9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="top">
+  <div class="wrap nav__in">
+    <a class="logo" href="#top" aria-label="Sounder home">
+      <svg viewBox="0 0 22 22" aria-hidden="true"><rect x="1" y="3" width="3.2" height="9" rx="1.6"/><rect x="6.6" y="3" width="3.2" height="15" rx="1.6"/><rect class="logo__deep" x="12.2" y="3" width="3.2" height="17" rx="1.6"/><rect x="17.8" y="3" width="3.2" height="11" rx="1.6"/></svg>
+      Sounder
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#how">How it works</a>
+      <a href="#code">Developers</a>
+      <a href="#features">Features</a>
+      <a href="#customers">Customers</a>
+      <a href="#pricing">Pricing</a>
+    </nav>
+    <div class="nav__end">
+      <a class="nav__signin" href="#pricing">Sign in</a>
+      <a class="btn btn--primary btn--sm" href="#pricing">Start free</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="sheet" aria-label="Open menu">
+        <svg class="i i--menu"><use href="#i-menu"/></svg>
+        <svg class="i i--close"><use href="#i-close"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="sheet" id="sheet" hidden>
+    <div class="wrap sheet__in">
+      <a href="#how">How it works</a>
+      <a href="#code">Developers</a>
+      <a href="#features">Features</a>
+      <a href="#customers">Customers</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">Questions</a>
+      <div class="sheet__cta">
+        <a class="btn btn--secondary" href="#pricing">Sign in</a>
+        <a class="btn btn--primary" href="#pricing">Start free</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <h1>Give your AI app a memory it can search</h1>
+      <p class="lead">Sounder stores your documents and chats as vectors and finds the right passages in milliseconds. Hybrid search, filters and cited answers, all through one API.</p>
+      <div class="install">
+        <code><span class="install__sign" aria-hidden="true">$</span> npm install sounder</code>
+        <button class="copy" type="button" data-copy="npm install sounder" aria-label="Copy install command">
+          <svg class="i i--copy"><use href="#i-copy"/></svg>
+          <svg class="i i--tick"><use href="#i-tick"/></svg>
+        </button>
+      </div>
+      <div class="actions">
+        <a class="btn btn--primary" href="#pricing">Start free <svg class="i"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn--secondary" href="#code">Read the docs</a>
+      </div>
+      <p class="hero__note">Free for your first million vectors. No card needed.</p>
+    </div>
+    <div class="hero__art">
+      <div class="well well--sky hero__well">
+        <div class="illo" data-illos><svg class="sh-vector-search" xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" fill="none" stroke="#1daf9c" role="img" aria-labelledby="sh-vector-search-t">
+<title id="sh-vector-search-t">Vector search</title>
+<style>@scope (svg.sh-vector-search) {
+:scope{--_ground:#ffffff;--_ink:#2a2a2a;--_ramp-1:#16645a;--_ramp-2:#1daf9c;--_ramp-3:#3fdec9;--_ramp-4:#c2f5ee;--_mark:#178c7d;--_spark:#0b463e}
+@media (prefers-color-scheme: dark){:scope{--_ground:#101112;--_ink:#dadadc;--_ramp-1:#84ebdd;--_ramp-2:#3fdec9;--_ramp-3:#1daf9c;--_ramp-4:#1a7569;--_mark:#3fdec9;--_spark:#ffffff}}
+:scope{stroke:none;--g:var(--illos-ground,var(--_ground));--k:var(--illos-ink,var(--_ink))}
+.b0,.b1,.b2,.b3{fill:none;stroke-dasharray:7 2.4}
+.b0{stroke:var(--illos-ramp-1,var(--_ramp-1))}.b1{stroke:var(--illos-ramp-2,var(--_ramp-2))}.b2{stroke:var(--illos-ramp-3,var(--_ramp-3))}.b3{stroke:var(--illos-ramp-4,var(--_ramp-4));opacity:.55}
+.sc{fill:none;stroke:rgb(from color-mix(in srgb,var(--illos-ramp-4,var(--_ramp-4)) 18%,var(--g)) r g b/clamp(.33,(r + g + b)/382.5,1));stroke-width:.8}
+.bm{fill:none;stroke:var(--illos-ramp-2,var(--_ramp-2));stroke-width:2.4;stroke-dasharray:5 2.4}
+.sp{fill:none;stroke:var(--illos-spark,var(--_spark));stroke-width:1.2;stroke-linecap:round;opacity:.85}
+.gr{stroke:rgb(from color-mix(in srgb,var(--k) 9%,var(--g)) r g b/clamp(.67,(r + g + b)/382.5,1));stroke-width:1}
+.bx,.ln,.lv{fill:none;stroke:var(--illos-mark,var(--_mark));stroke-width:1.2}
+.dot{fill:var(--illos-mark,var(--_mark))}.cf{fill:var(--illos-mark,var(--_mark))}
+.ct{fill:none;stroke:var(--g);stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round}
+@keyframes sh-vector-search_m{0%{opacity:1}7.143%{opacity:1}14.286%{opacity:0}70.238%{opacity:0}77.381%{opacity:1}100%{opacity:1}}
+.m{opacity:1;animation:sh-vector-search_m 4.2s linear both}
+@keyframes sh-vector-search_clock{0%{opacity:0}100%{opacity:0}}
+.sh-clock{animation:sh-vector-search_clock 4.2s linear both}
+*{animation-iteration-count:infinite!important;animation-play-state:var(--illos-play,running)!important}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+}
+</style>
+<g class="sh-still"><path class="sc" d="M4 0V460M11 0V460M18 0V460M25 0V460M32 0V460M39 0V460M46 0V460M53 0V460M60 0V460M67 0V460M74 0V460M81 0V460M88 0V460M95 0V460M102 0V460M109 0V460M116 0V460M123 0V460M130 0V460M137 0V460M144 0V460M151 0V460M158 0V460M165 0V460M172 0V460M179 0V460M186 0V460M193 0V460M200 0V460M207 0V460M214 0V460M221 0V460M228 0V460M235 0V460M242 0V460M249 0V460M256 0V460M263 0V460M270 0V460M277 0V460M284 0V460M291 0V460M298 0V460M305 0V460M312 0V460M319 0V460M326 0V460M333 0V460M340 0V460M347 0V460M354 0V460M361 0V460M368 0V460M375 0V460M382 0V460M389 0V460M396 0V460M403 0V460M410 0V460M417 0V460M424 0V460M431 0V460M438 0V460M445 0V460M452 0V460M459 0V460M466 0V460M473 0V460M480 0V460M487 0V460M494 0V460M501 0V460M508 0V460M515 0V460M522 0V460M529 0V460M536 0V460M543 0V460M550 0V460M557 0V460M564 0V460M571 0V460M578 0V460M585 0V460M592 0V460M599 0V460M606 0V460M613 0V460M620 0V460M627 0V460M634 0V460M641 0V460M648 0V460M655 0V460M662 0V460M669 0V460M676 0V460M683 0V460M690 0V460M697 0V460M704 0V460M711 0V460M718 0V460"/><path class="gr" d="M0 0V460M96 0V460M192 0V460M288 0V460M384 0V460M480 0V460M576 0V460M672 0V460M0 0H720M0 96H720M0 192H720M0 288H720M0 384H720"/><path class="b0" d="M200 216.2V223.2M207 216.2V232.6M214 206.8V232.6M221 216.2V232.6M228 225.6V232.6M277 206.8V213.8M277 225.6V232.6M284 206.8V232.6M291 188V251.4M298 188V251.4M305 197.4V260.8M312 188V260.8M319 188V260.8M326 178.6V260.8M333 188V260.8M340 197.4V260.8M347 188V195M347 206.8V232.6M347 244.4V260.8M354 206.8V213.8M354 225.6V232.6M571 338.4V345.4M578 319.6V345.4M585 329V336M585 347.8V354.8M592 319.6V336" stroke-width="3.6"/><path class="b1" d="M193 216.2V232.6M200 206.8V213.8M200 225.6V242M207 206.8V213.8M214 235V242M221 206.8V213.8M221 235V242M228 206.8V223.2M228 235V242M235 206.8V232.6M256 206.8V213.8M263 206.8V223.2M270 188V242M277 178.6V204.4M277 216.2V223.2M277 235V260.8M284 178.6V204.4M284 235V270.2M291 178.6V185.6M291 253.8V270.2M298 178.6V185.6M298 253.8V270.2M305 159.8V195M305 263.2V279.6M312 159.8V185.6M312 263.2V279.6M319 169.2V185.6M319 263.2V279.6M326 169.2V176.2M326 263.2V270.2M333 178.6V185.6M333 263.2V270.2M340 169.2V195M340 263.2V270.2M347 178.6V185.6M347 197.4V204.4M347 235V242M347 263.2V270.2M354 178.6V204.4M354 216.2V223.2M354 235V270.2M361 197.4V251.4M368 188V204.4M368 216.2V251.4M375 216.2V242M536 94V101M536 122.2V129.2M543 94V101M543 112.8V119.8M543 131.6V138.6M543 329V336M550 94V101M550 112.8V119.8M550 131.6V138.6M550 310.2V317.2M550 329V354.8M557 122.2V129.2M557 310.2V364.2M564 131.6V138.6M564 300.8V354.8M564 366.6V373.6M571 291.4V298.4M571 310.2V336M571 347.8V383M578 291.4V298.4M578 310.2V317.2M578 347.8V383M585 291.4V326.6M585 338.4V345.4M585 357.2V383M592 291.4V317.2M592 338.4V373.6M599 300.8V373.6M606 300.8V373.6M613 300.8V345.4M613 357.2V364.2M620 319.6V364.2M627 329V345.4" stroke-width="2.7"/><path class="b2" d="M32 159.8V166.8M39 451.2V458.2M60 65.8V72.8M109 18.8V25.8M186 216.2V232.6M193 206.8V213.8M200 197.4V204.4M207 197.4V204.4M207 235V251.4M214 197.4V204.4M214 244.4V251.4M221 197.4V204.4M221 244.4V251.4M228 197.4V204.4M228 244.4V251.4M235 197.4V204.4M235 235V242M242 197.4V251.4M249 197.4V242M249 253.8V260.8M256 178.6V204.4M256 216.2V270.2M263 178.6V204.4M263 225.6V270.2M270 159.8V185.6M270 244.4V270.2M277 169.2V176.2M277 263.2V289M284 150.4V176.2M284 272.6V289M291 159.8V176.2M291 272.6V289M298 112.8V119.8M298 150.4V176.2M298 272.6V289M305 150.4V157.4M305 282V289M312 150.4V157.4M312 282V298.4M319 150.4V166.8M319 282V289M319 394.8V411.2M326 150.4V166.8M326 272.6V298.4M326 366.6V420.6M333 150.4V176.2M333 272.6V289M333 376V430M340 159.8V166.8M340 272.6V298.4M340 366.6V430M347 150.4V176.2M347 272.6V289M347 366.6V420.6M354 159.8V176.2M354 272.6V289M354 376V420.6M361 159.8V195M361 253.8V289M361 385.4V420.6M368 169.2V185.6M368 206.8V213.8M368 253.8V279.6M368 385.4V392.4M375 178.6V213.8M375 244.4V270.2M382 188V260.8M389 197.4V204.4M389 216.2V242M508 94V110.4M508 122.2V138.6M515 94V138.6M522 84.6V138.6M522 329V336M529 75.2V157.4M529 300.8V307.8M529 319.6V354.8M536 84.6V91.6M536 103.4V119.8M536 131.6V157.4M536 291.4V364.2M543 75.2V91.6M543 103.4V110.4M543 122.2V129.2M543 141V166.8M543 282V326.6M543 338.4V383M550 75.2V91.6M550 103.4V110.4M550 122.2V129.2M550 141V166.8M550 282V307.8M550 319.6V326.6M550 357.2V383M557 84.6V119.8M557 131.6V148M557 282V307.8M557 366.6V392.4M564 84.6V129.2M564 141V157.4M564 282V298.4M564 357.2V364.2M564 376V392.4M571 84.6V148M571 272.6V289M571 300.8V307.8M571 385.4V401.8M578 94V148M578 272.6V289M578 300.8V307.8M578 385.4V401.8M585 94V110.4M585 122.2V138.6M585 272.6V289M585 385.4V401.8M592 112.8V119.8M592 272.6V289M592 376V392.4M599 272.6V298.4M599 376V392.4M606 282V298.4M606 376V392.4M613 282V298.4M613 347.8V354.8M613 366.6V392.4M620 291.4V317.2M620 366.6V392.4M627 291.4V326.6M627 347.8V383M634 310.2V364.2M641 300.8V307.8M641 319.6V364.2M648 319.6V326.6M655 197.4V213.8M662 197.4V223.2M669 188V213.8M676 197.4V213.8M683 197.4V204.4" stroke-width="1.8"/><path class="b3" d="M18 347.8V354.8M88 235V242M88 263.2V270.2M95 56.4V63.4M130 75.2V82.2M137 282V289M137 310.2V317.2M165 94V101M179 206.8V232.6M186 197.4V213.8M186 235V251.4M193 188V204.4M193 235V251.4M200 188V195M200 244.4V251.4M207 188V195M207 253.8V260.8M214 188V195M214 253.8V260.8M221 65.8V72.8M221 178.6V195M221 253.8V260.8M228 178.6V195M228 253.8V270.2M235 169.2V195M235 244.4V270.2M242 159.8V195M242 253.8V279.6M249 159.8V195M249 244.4V251.4M249 263.2V289M256 150.4V176.2M256 272.6V298.4M263 141V176.2M263 272.6V298.4M270 141V157.4M270 272.6V298.4M277 37.6V44.6M277 131.6V166.8M277 291.4V307.8M284 131.6V148M284 291.4V317.2M291 131.6V157.4M291 291.4V317.2M298 131.6V148M298 291.4V317.2M298 376V411.2M305 131.6V148M305 291.4V317.2M305 366.6V430M312 122.2V148M312 300.8V326.6M312 347.8V439.4M319 122.2V148M319 291.4V326.6M319 357.2V392.4M319 413.6V439.4M326 122.2V148M326 300.8V317.2M326 347.8V364.2M326 423V448.8M333 131.6V148M333 291.4V317.2M333 347.8V373.6M333 432.4V448.8M340 131.6V157.4M340 300.8V326.6M340 347.8V364.2M340 432.4V439.4M347 131.6V148M347 291.4V317.2M347 338.4V364.2M347 423V448.8M354 131.6V157.4M354 291.4V317.2M354 347.8V373.6M354 423V439.4M361 131.6V157.4M361 291.4V307.8M361 347.8V383M361 423V439.4M368 141V166.8M368 282V298.4M368 357.2V383M368 394.8V439.4M375 141V176.2M375 272.6V298.4M375 357.2V430M382 150.4V185.6M382 263.2V289M382 366.6V420.6M389 150.4V195M389 206.8V213.8M389 244.4V289M389 376V411.2M396 159.8V270.2M403 178.6V270.2M410 197.4V242M410 253.8V260.8M417 216.2V232.6M480 103.4V119.8M487 94V138.6M494 75.2V157.4M501 65.8V166.8M501 282V289M501 310.2V364.2M508 65.8V91.6M508 112.8V119.8M508 141V176.2M508 291.4V373.6M515 65.8V91.6M515 141V176.2M515 291.4V383M522 56.4V82.2M522 141V176.2M522 272.6V326.6M522 338.4V401.8M529 56.4V72.8M529 159.8V176.2M529 272.6V298.4M529 310.2V317.2M529 357.2V401.8M536 56.4V82.2M536 159.8V185.6M536 263.2V289M536 366.6V411.2M543 47V72.8M543 169.2V185.6M543 263.2V279.6M543 385.4V420.6M550 56.4V72.8M550 169.2V185.6M550 253.8V279.6M550 385.4V420.6M557 47V82.2M557 150.4V185.6M557 253.8V279.6M557 394.8V420.6M564 56.4V82.2M564 159.8V185.6M564 253.8V279.6M564 394.8V420.6M571 56.4V82.2M571 150.4V185.6M571 253.8V270.2M571 404.2V420.6M578 56.4V91.6M578 150.4V176.2M578 253.8V270.2M578 404.2V420.6M585 37.6V44.6M585 65.8V91.6M585 112.8V119.8M585 141V176.2M585 244.4V270.2M585 404.2V420.6M592 65.8V110.4M592 122.2V166.8M592 253.8V270.2M592 394.8V420.6M599 84.6V166.8M599 244.4V270.2M599 394.8V420.6M606 84.6V138.6M606 253.8V279.6M606 394.8V420.6M613 103.4V119.8M613 253.8V279.6M613 394.8V420.6M620 253.8V289M620 394.8V411.2M627 188V195M627 253.8V289M627 385.4V411.2M634 197.4V213.8M634 272.6V307.8M634 366.6V401.8M641 188V232.6M641 263.2V298.4M641 310.2V317.2M641 366.6V401.8M648 178.6V232.6M648 272.6V317.2M648 329V401.8M655 178.6V195M655 216.2V242M655 282V383M662 178.6V195M662 225.6V242M662 291.4V364.2M669 178.6V185.6M669 216.2V242M669 319.6V326.6M669 347.8V364.2M676 178.6V195M676 216.2V242M683 178.6V195M683 206.8V242M690 188V232.6M697 197.4V223.2" stroke-width="1.1"/><path class="sp" d="M214 209.2v1.2M214 218.6v1.2M277 209.2v1.2M277 228v1.2M284 209.2v1.2M291 190.4v1.2M291 218.6v1.2M291 237.4v1.2M291 246.8v1.2M298 190.4v1.2M298 209.2v1.2M298 237.4v1.2M298 246.8v1.2M305 199.8v1.2M312 190.4v1.2M312 199.8v1.2M312 228v1.2M312 237.4v1.2M319 190.4v1.2M319 209.2v1.2M319 218.6v1.2M319 228v1.2M319 237.4v1.2M319 256.2v1.2M326 181v1.2M326 199.8v1.2M326 209.2v1.2M326 237.4v1.2M326 246.8v1.2M333 190.4v1.2M333 199.8v1.2M333 209.2v1.2M333 246.8v1.2M340 199.8v1.2M340 209.2v1.2M340 218.6v1.2M340 237.4v1.2M340 246.8v1.2M347 190.4v1.2M347 209.2v1.2M347 218.6v1.2M571 340.8v1.2M578 331.4v1.2M578 340.8v1.2M585 331.4v1.2M592 322v1.2M592 331.4v1.2"/></g>
+<path class="bm" d="M25 336.25V341.25M32 333.5V337M39 329.5V333M46 325.5V329M53 321.5V325M60 317.46V321M67 312.64V316.93M74 308.35V312.1M81 304.06V307.81M88 299.23V303.52M95 294.94V298.69M102 290.65V294.4M109 285.82V290.11M116 281.53V285.28M123 277.24V280.99M130 272.41V276.7M137 268.12V271.88M144 263.3V267.59M151 259.01V262.76M158 254.72V258.47M165 249.89V254.18M172 245.6V249.35M179 241.31V245.06M186 236.48V240.77M193 232.19V235.94M200 227.9V231.65M207 223.07V227.36M214 219.77V224.77"/><g class="m"><g class="mb"><path class="bx" pathLength="1" d="M244 148H392V296H244Z"/><circle class="dot" cx="244" cy="148" r="2.2"/><circle class="dot" cx="392" cy="148" r="2.2"/><circle class="dot" cx="244" cy="296" r="2.2"/><circle class="dot" cx="392" cy="296" r="2.2"/><g class="chip"><rect class="cf" x="244" y="148" width="98.32" height="14.9"/><path class="ct" d="M249 158.9L249 152L253.6 158.9L253.6 152M260.96 152L256.36 152L256.36 158.9L260.96 158.9M256.36 155.45L259.81 155.45M263.72 158.9L263.72 154.3L266.02 152L268.32 154.3L268.32 158.9M263.72 156.03L268.32 156.03M271.08 158.9L271.08 152L274.53 152L275.68 153.15L275.68 154.3L274.53 155.45L271.08 155.45M273.38 155.45L275.68 158.9M283.04 152L278.44 152L278.44 158.9L283.04 158.9M278.44 155.45L281.89 155.45M290.4 153.15L289.25 152L286.95 152L285.8 153.15L285.8 154.3L286.95 155.45L289.25 155.45L290.4 156.6L290.4 157.75L289.25 158.9L286.95 158.9L285.8 157.75M293.16 152L297.76 152M295.46 152L295.46 158.9M309.03 152L311.33 152L312.48 153.15L312.48 157.75L311.33 158.9L309.03 158.9L307.88 157.75L307.88 153.15L309.03 152M312.48 153.15L307.88 157.75M316.97 157.75L318.12 157.75L318.12 158.9L316.97 158.9L316.97 157.75M327.2 155.45L323.75 155.45L322.6 154.3L322.6 153.15L323.75 152L326.05 152L327.2 153.15L327.2 157.75L326.05 158.9L323.75 158.9L322.6 157.75M329.96 153.15L331.11 152L333.41 152L334.56 153.15L334.56 154.3L329.96 158.9L334.56 158.9"/></g></g></g>
+<rect class="sh-clock" width="0" height="0"/>
+<metadata class="illos-field" data-cycle="4.2"><![CDATA[float field(vec2 p, float t) {
+  float v = 0.0;
+  vec4 C[4];
+  C[0] = vec4(540.0, 118.0, 52.0, 0.62); C[1] = vec4(585.0, 330.0, 64.0, 0.85);
+  C[2] = vec4(350.0, 398.0, 40.0, 0.5); C[3] = vec4(664.0, 214.0, 32.0, 0.42);
+  for (int i = 0; i < 4; i++) {
+    float ph = TAU * t / T + float(i) * 1.7;
+    v += blob(p, C[i].xy + vec2(7.0 * cos(ph), 6.0 * sin(ph)), C[i].z * (1.0 + 0.08 * sin(2.0 * ph)), C[i].w);
+  }
+  float heat = max(1.0 - sm(0.0, 0.6, t), sm(2.8, 3.3, t));
+  v += blob(p, vec2(318.0, 222.0), 60.0 * (1.0 + 0.06 * heat), 0.8 + 0.45 * heat);
+  vec2 S = vec2(62.0, 318.0); vec2 D = vec2(212.0, 222.0);
+  float u = clamp((t - 0.8) / 1.8, 0.0, 1.0);
+  vec2 q = t < 0.6 ? D : mix(S, D, ease(u));
+  float k = t < 0.6 ? 1.05 * (1.0 - sm(0.0, 0.6, t)) : 1.05 * sm(0.6, 0.9, t);
+  float speed = (u > 0.0 && u < 1.0) ? sin(3.14159 * u) : 0.0;
+  vec2 dir = normalize(D - S);
+  v += blob(p, q, 24.0, k);
+  for (int s = 1; s <= 4; s++) v += blob(p, q - dir * 16.0 * float(s), 24.0 - 4.0 * float(s), k * speed * (0.55 - 0.12 * float(s)));
+  if (t > 2.6 && t < 3.95) {
+    float R = 30.0 + 320.0 * sm(2.6, 3.9, t);
+    v += 0.42 * (1.0 - sm(2.6, 3.95, t)) * exp(-pow(length(p - D) - R, 2.0) / 260.0) * (v > 0.05 ? 1.6 : 1.0);
+  }
+  if (hash(floor(p / vec2(7.0, 9.4)) * vec2(7.0, 3.0)) > 0.992) v = max(v, 0.3);
+  return v;
+}]]></metadata>
+</svg></div>
+      </div>
+      <figure class="snippet" aria-label="A search call and its top three results">
+        <div class="snippet__bar"><span>search.ts</span><span class="chip chip--quiet">38 ms</span></div>
+<pre class="snippet__code"><code><span class="k">const</span> { hits } = <span class="k">await</span> sounder.<span class="f">search</span>({
+  query: <span class="s">"refund after 30 days"</span>,
+  topK: <span class="n">3</span>,
+});</code></pre>
+        <ol class="snippet__hits">
+          <li><span class="score">0.92</span><span class="doc">refunds.md</span><span class="sec">Late returns</span></li>
+          <li><span class="score">0.87</span><span class="doc">billing.md</span><span class="sec">Store credit</span></li>
+          <li><span class="score">0.74</span><span class="doc">faq.md</span><span class="sec">Refund window</span></li>
+        </ol>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="how" aria-labelledby="how-h">
+  <div class="wrap">
+    <div class="head head--split">
+      <h2 id="how-h">From your data to a cited answer</h2>
+      <p>Point Sounder at your sources once. It keeps the index fresh as they change, so answers never quote last month.</p>
+    </div>
+    <ol class="steps">
+      <li class="step">
+        <div class="well well--mint step__art"><div class="illo" data-illos><svg class="sh-data-pipeline" xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" fill="none" stroke="#1daf9c" role="img" aria-labelledby="sh-data-pipeline-t">
+<title id="sh-data-pipeline-t">Data pipeline</title>
+<style>@scope (svg.sh-data-pipeline) {
+:scope{--_ground:#ffffff;--_ink:#2a2a2a;--_ramp-1:#16645a;--_ramp-2:#1daf9c;--_ramp-3:#3fdec9;--_ramp-4:#c2f5ee;--_mark:#178c7d;--_spark:#0b463e}
+@media (prefers-color-scheme: dark){:scope{--_ground:#101112;--_ink:#dadadc;--_ramp-1:#84ebdd;--_ramp-2:#3fdec9;--_ramp-3:#1daf9c;--_ramp-4:#1a7569;--_mark:#3fdec9;--_spark:#ffffff}}
+:scope{stroke:none;--g:var(--illos-ground,var(--_ground));--k:var(--illos-ink,var(--_ink))}
+.b0,.b1,.b2,.b3{fill:none;stroke-dasharray:7 2.4}
+.b0{stroke:var(--illos-ramp-1,var(--_ramp-1))}.b1{stroke:var(--illos-ramp-2,var(--_ramp-2))}.b2{stroke:var(--illos-ramp-3,var(--_ramp-3))}.b3{stroke:var(--illos-ramp-4,var(--_ramp-4));opacity:.55}
+.sc{fill:none;stroke:rgb(from color-mix(in srgb,var(--illos-ramp-4,var(--_ramp-4)) 18%,var(--g)) r g b/clamp(.33,(r + g + b)/382.5,1));stroke-width:.8}
+.bm{fill:none;stroke:var(--illos-ramp-2,var(--_ramp-2));stroke-width:2.4;stroke-dasharray:5 2.4}
+.sp{fill:none;stroke:var(--illos-spark,var(--_spark));stroke-width:1.2;stroke-linecap:round;opacity:.85}
+.gr{stroke:rgb(from color-mix(in srgb,var(--k) 9%,var(--g)) r g b/clamp(.67,(r + g + b)/382.5,1));stroke-width:1}
+.bx,.ln,.lv{fill:none;stroke:var(--illos-mark,var(--_mark));stroke-width:1.2}
+.dot{fill:var(--illos-mark,var(--_mark))}.cf{fill:var(--illos-mark,var(--_mark))}
+.ct{fill:none;stroke:var(--g);stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round}
+
+@keyframes sh-data-pipeline_clock{0%{opacity:0}100%{opacity:0}}
+.sh-clock{animation:sh-data-pipeline_clock 4.2s linear both}
+*{animation-iteration-count:infinite!important;animation-play-state:var(--illos-play,running)!important}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+}
+</style>
+<g class="sh-still"><path class="sc" d="M4 0V460M11 0V460M18 0V460M25 0V460M32 0V460M39 0V460M46 0V460M53 0V460M60 0V460M67 0V460M74 0V460M81 0V460M88 0V460M95 0V460M102 0V460M109 0V460M116 0V460M123 0V460M130 0V460M137 0V460M144 0V460M151 0V460M158 0V460M165 0V460M172 0V460M179 0V460M186 0V460M193 0V460M200 0V460M207 0V460M214 0V460M221 0V460M228 0V460M235 0V460M242 0V460M249 0V460M256 0V460M263 0V460M270 0V460M277 0V460M284 0V460M291 0V460M298 0V460M305 0V460M312 0V460M319 0V460M326 0V460M333 0V460M340 0V460M347 0V460M354 0V460M361 0V460M368 0V460M375 0V460M382 0V460M389 0V460M396 0V460M403 0V460M410 0V460M417 0V460M424 0V460M431 0V460M438 0V460M445 0V460M452 0V460M459 0V460M466 0V460M473 0V460M480 0V460M487 0V460M494 0V460M501 0V460M508 0V460M515 0V460M522 0V460M529 0V460M536 0V460M543 0V460M550 0V460M557 0V460M564 0V460M571 0V460M578 0V460M585 0V460M592 0V460M599 0V460M606 0V460M613 0V460M620 0V460M627 0V460M634 0V460M641 0V460M648 0V460M655 0V460M662 0V460M669 0V460M676 0V460M683 0V460M690 0V460M697 0V460M704 0V460M711 0V460M718 0V460"/><path class="gr" d="M0 0V460M96 0V460M192 0V460M288 0V460M384 0V460M480 0V460M576 0V460M672 0V460M0 0H720M0 96H720M0 192H720M0 288H720M0 384H720"/><path class="b0" d="M235 197.4V204.4M333 253.8V260.8M340 253.8V260.8M438 225.6V232.6M445 225.6V242M452 235V242M543 225.6V232.6M550 225.6V242M557 225.6V242M648 225.6V232.6M655 225.6V232.6M662 225.6V232.6" stroke-width="3.6"/><path class="b1" d="M32 253.8V260.8M32 291.4V298.4M39 235V251.4M116 225.6V242M123 235V242M123 272.6V279.6M130 253.8V260.8M130 282V298.4M137 263.2V279.6M221 169.2V176.2M228 159.8V166.8M228 197.4V213.8M235 169.2V185.6M235 206.8V223.2M242 188V204.4M242 216.2V223.2M249 206.8V213.8M256 206.8V213.8M319 244.4V251.4M326 235V242M326 253.8V270.2M333 235V251.4M333 263.2V270.2M340 235V251.4M347 244.4V260.8M347 282V289M354 253.8V289M424 225.6V232.6M431 216.2V232.6M438 216.2V223.2M438 235V251.4M445 216.2V223.2M445 253.8V260.8M452 225.6V232.6M452 253.8V260.8M459 235V251.4M466 244.4V260.8M473 244.4V251.4M480 235V242M508 206.8V213.8M515 216.2V223.2M522 225.6V232.6M529 225.6V242M536 225.6V242M543 235V242M564 225.6V242M571 225.6V232.6M627 225.6V232.6M634 225.6V242M641 225.6V242M648 235V242M655 235V242M662 235V242M669 225.6V232.6M676 225.6V232.6M683 225.6V232.6M690 225.6V232.6" stroke-width="2.7"/><path class="b2" d="M32 225.6V232.6M32 244.4V251.4M32 263.2V289M32 319.6V326.6M39 216.2V223.2M39 253.8V260.8M39 282V289M46 235V242M46 253.8V279.6M53 216.2V232.6M53 244.4V251.4M60 235V251.4M67 197.4V204.4M67 216.2V242M74 188V195M74 206.8V223.2M81 206.8V213.8M88 169.2V176.2M88 197.4V204.4M95 150.4V157.4M95 188V195M102 169.2V195M109 169.2V176.2M109 197.4V223.2M116 197.4V223.2M116 253.8V260.8M123 206.8V213.8M123 253.8V270.2M123 291.4V298.4M130 225.6V242M130 272.6V279.6M137 235V242M137 310.2V326.6M144 244.4V260.8M144 291.4V298.4M151 235V242M151 272.6V289M151 300.8V307.8M158 235V251.4M165 253.8V270.2M165 282V289M172 244.4V260.8M172 282V289M172 300.8V307.8M179 263.2V270.2M179 282V289M179 300.8V307.8M186 244.4V260.8M193 225.6V232.6M193 272.6V279.6M200 216.2V223.2M200 235V251.4M207 169.2V185.6M214 150.4V176.2M214 188V195M221 150.4V166.8M228 150.4V157.4M228 169.2V185.6M228 225.6V232.6M235 150.4V157.4M235 188V195M235 235V242M242 159.8V166.8M242 206.8V213.8M242 235V251.4M249 169.2V185.6M249 197.4V204.4M256 178.6V195M263 178.6V185.6M263 206.8V223.2M270 188V195M270 216.2V223.2M277 178.6V185.6M277 197.4V232.6M284 206.8V213.8M284 225.6V232.6M291 216.2V232.6M291 244.4V260.8M298 225.6V232.6M298 244.4V251.4M298 263.2V270.2M305 235V242M305 253.8V260.8M305 272.6V279.6M312 244.4V260.8M312 272.6V279.6M319 225.6V232.6M319 272.6V279.6M326 216.2V223.2M333 282V289M340 263.2V279.6M340 291.4V298.4M347 263.2V279.6M354 244.4V251.4M361 235V251.4M361 263.2V270.2M361 282V289M368 216.2V270.2M375 197.4V204.4M375 216.2V242M382 188V223.2M389 197.4V204.4M389 216.2V232.6M396 197.4V232.6M403 197.4V213.8M403 225.6V232.6M410 206.8V242M417 206.8V232.6M424 206.8V223.2M424 235V251.4M438 206.8V213.8M445 206.8V213.8M445 244.4V251.4M452 216.2V223.2M452 244.4V251.4M459 225.6V232.6M459 253.8V260.8M466 263.2V270.2M473 235V242M473 263.2V270.2M480 225.6V232.6M480 244.4V251.4M487 235V242M494 206.8V223.2M494 235V242M501 197.4V204.4M501 216.2V232.6M508 197.4V204.4M508 216.2V223.2M515 206.8V213.8M515 225.6V232.6M522 216.2V223.2M522 235V242M529 216.2V223.2M536 216.2V223.2M543 216.2V223.2M543 244.4V251.4M550 216.2V223.2M557 216.2V223.2M557 244.4V251.4M564 216.2V223.2M571 235V242M578 225.6V242M585 225.6V242M592 225.6V242M599 225.6V242M606 216.2V242M613 216.2V242M620 225.6V242M627 235V242M634 216.2V223.2M641 216.2V223.2M648 216.2V223.2M655 216.2V223.2M662 216.2V223.2M669 216.2V223.2M669 235V242M676 216.2V223.2M676 235V242M683 216.2V223.2M683 235V242M690 235V242" stroke-width="1.8"/><path class="b3" d="M32 216.2V223.2M32 235V242M32 300.8V317.2M32 338.4V345.4M39 206.8V213.8M39 225.6V232.6M39 263.2V279.6M39 291.4V326.6M46 188V232.6M46 244.4V251.4M46 282V298.4M53 178.6V213.8M53 235V242M53 253.8V279.6M60 178.6V232.6M60 253.8V270.2M67 159.8V195M67 206.8V213.8M67 244.4V260.8M74 150.4V185.6M74 197.4V204.4M74 225.6V242M74 263.2V270.2M81 141V204.4M81 216.2V232.6M88 112.8V129.2M88 141V166.8M88 178.6V195M88 206.8V223.2M95 131.6V148M95 159.8V185.6M95 197.4V223.2M102 122.2V129.2M102 141V166.8M102 197.4V213.8M102 235V242M109 141V166.8M109 178.6V195M109 225.6V242M109 253.8V260.8M116 169.2V176.2M116 188V195M116 244.4V251.4M116 263.2V279.6M123 188V204.4M123 216.2V232.6M123 244.4V251.4M123 282V289M123 300.8V317.2M123 329V336M130 206.8V213.8M130 244.4V251.4M130 263.2V270.2M130 300.8V326.6M130 338.4V345.4M137 216.2V232.6M137 244.4V260.8M137 282V307.8M137 329V336M144 206.8V242M144 263.2V289M144 300.8V326.6M144 338.4V345.4M151 225.6V232.6M151 244.4V270.2M151 291.4V298.4M151 310.2V336M158 216.2V232.6M158 253.8V326.6M165 225.6V251.4M165 272.6V279.6M165 291.4V307.8M172 225.6V242M172 263.2V279.6M172 291.4V298.4M172 310.2V326.6M179 235V260.8M179 272.6V279.6M179 291.4V298.4M179 310.2V326.6M186 225.6V242M186 263.2V307.8M186 319.6V326.6M193 206.8V223.2M193 235V270.2M193 282V289M200 188V213.8M200 225.6V232.6M200 253.8V279.6M207 141V148M207 188V251.4M214 131.6V148M214 178.6V185.6M214 197.4V232.6M221 122.2V148M221 178.6V232.6M221 244.4V251.4M228 122.2V148M228 188V195M228 216.2V223.2M228 235V242M228 253.8V260.8M235 159.8V166.8M235 225.6V232.6M235 244.4V270.2M242 141V148M242 169.2V185.6M242 225.6V232.6M249 159.8V166.8M249 188V195M249 216.2V242M249 253.8V260.8M256 150.4V176.2M256 197.4V204.4M256 216.2V251.4M263 159.8V176.2M263 188V204.4M270 150.4V185.6M270 197.4V213.8M270 225.6V242M277 169.2V176.2M277 188V195M277 235V242M284 188V204.4M284 216.2V223.2M284 235V251.4M284 263.2V270.2M291 188V213.8M291 235V242M291 263.2V270.2M298 206.8V223.2M298 235V242M298 253.8V260.8M298 272.6V298.4M305 225.6V232.6M305 244.4V251.4M305 263.2V270.2M305 282V289M312 206.8V213.8M312 225.6V242M312 263.2V270.2M312 282V298.4M319 216.2V223.2M319 235V242M319 253.8V270.2M319 282V289M326 206.8V213.8M326 225.6V232.6M326 244.4V251.4M326 272.6V298.4M333 197.4V232.6M333 272.6V279.6M333 291.4V307.8M340 216.2V232.6M340 282V289M340 300.8V307.8M347 225.6V242M347 291.4V317.2M354 225.6V242M354 291.4V317.2M361 206.8V213.8M361 225.6V232.6M361 253.8V260.8M361 272.6V279.6M361 291.4V307.8M368 197.4V213.8M368 272.6V289M375 178.6V185.6M375 206.8V213.8M375 244.4V251.4M382 225.6V242M389 178.6V195M389 206.8V213.8M389 235V242M396 188V195M403 188V195M403 216.2V223.2M403 235V242M410 197.4V204.4M417 197.4V204.4M417 235V260.8M424 197.4V204.4M424 253.8V260.8M431 197.4V213.8M431 235V260.8M438 197.4V204.4M438 253.8V270.2M445 197.4V204.4M445 263.2V270.2M452 206.8V213.8M452 263.2V270.2M459 216.2V223.2M459 263.2V289M466 216.2V242M466 272.6V289M473 216.2V232.6M473 253.8V260.8M473 272.6V279.6M480 206.8V223.2M480 253.8V260.8M487 206.8V232.6M487 244.4V260.8M494 188V204.4M494 225.6V232.6M494 244.4V251.4M501 188V195M501 206.8V213.8M508 188V195M508 225.6V242M515 188V204.4M515 235V242M522 197.4V213.8M522 244.4V251.4M529 206.8V213.8M529 244.4V251.4M536 244.4V251.4M550 206.8V213.8M550 244.4V251.4M564 244.4V251.4M571 216.2V223.2M571 244.4V251.4M578 216.2V223.2M578 244.4V251.4M585 216.2V223.2M585 244.4V251.4M592 216.2V223.2M592 244.4V251.4M599 216.2V223.2M599 244.4V251.4M606 244.4V251.4M613 244.4V251.4M620 216.2V223.2M620 244.4V251.4M627 216.2V223.2M627 244.4V251.4M634 244.4V251.4M641 206.8V213.8M641 244.4V251.4M648 206.8V213.8M648 244.4V251.4M655 206.8V213.8M655 244.4V251.4M662 206.8V213.8M662 244.4V251.4M669 206.8V213.8M669 244.4V251.4M676 244.4V251.4M683 244.4V251.4M690 216.2V223.2M690 244.4V251.4" stroke-width="1.1"/><path class="sp" d="M438 228v1.2M445 237.4v1.2M543 228v1.2M550 228v1.2M557 228v1.2M655 228v1.2M662 228v1.2"/></g>
+<path class="lv" stroke-dasharray="6 5" d="M240 144V320"/><circle class="dot" cx="240" cy="144" r="2.2"/><circle class="dot" cx="240" cy="320" r="2.2"/><path class="lv" stroke-dasharray="6 5" d="M380 144V320"/><circle class="dot" cx="380" cy="144" r="2.2"/><circle class="dot" cx="380" cy="320" r="2.2"/><path class="lv" stroke-dasharray="6 5" d="M520 144V320"/><circle class="dot" cx="520" cy="144" r="2.2"/><circle class="dot" cx="520" cy="320" r="2.2"/><g class="chip"><rect class="cf" x="36" y="120" width="32.08" height="14.9"/><path class="ct" d="M41 130.9L41 124L44.45 124L45.6 125.15L45.6 126.3L44.45 127.45L41 127.45M43.3 127.45L45.6 130.9M48.36 130.9L48.36 126.3L50.66 124L52.96 126.3L52.96 130.9M48.36 128.03L52.96 128.03M55.72 124L56.87 130.9L58.02 127.45L59.17 130.9L60.32 124"/></g><g class="chip"><rect class="cf" x="620" y="196" width="46.8" height="14.9"/><path class="ct" d="M629.6 201.15L628.45 200L626.15 200L625 201.15L625 205.75L626.15 206.9L628.45 206.9L629.6 205.75M632.36 200L632.36 206.9L636.96 206.9M644.32 200L639.72 200L639.72 206.9L644.32 206.9M639.72 203.45L643.17 203.45M647.08 206.9L647.08 202.3L649.38 200L651.68 202.3L651.68 206.9M647.08 204.03L651.68 204.03M654.44 206.9L654.44 200L659.04 206.9L659.04 200"/></g>
+<rect class="sh-clock" width="0" height="0"/>
+<metadata class="illos-field" data-cycle="4.2"><![CDATA[float field(vec2 p, float t) {
+  if (p.x < 30.0 || p.x > 690.0) return 0.0;
+  float ph = TAU * t / T;
+  // how raw the stream still is: 1 before the first sieve, less after each
+  float raw = 1.0 - 0.34 * step(240.0, p.x) - 0.33 * step(380.0, p.x) - 0.3 * step(520.0, p.x);
+  float soft = 1.0 - 0.34 * sm(220.0, 260.0, p.x) - 0.33 * sm(360.0, 400.0, p.x) - 0.3 * sm(500.0, 540.0, p.x);
+  // turbulence that flows right, periodic in the cycle so the loop closes
+  float wob = sin(p.x * 0.045 - ph * 3.0 + sin(p.x * 0.013 + ph)) * 52.0 + sin(p.x * 0.11 - ph * 5.0) * 18.0;
+  float y = 232.0 + wob * soft;
+  float spread = 14.0 + 40.0 * soft;
+  // grit flows with the stream, 72 columns a cycle, and its pattern repeats over those, so the loop closes
+  float grit = soft > 0.2 ? step(0.55 - 0.3 * (1.0 - soft), hash(vec2(mod(floor((p.x - 504.0 * t / T) / 7.0), 72.0), floor(p.y / 9.4)))) : 1.0;
+  float pulse = 0.55 + 0.45 * pow(0.5 + 0.5 * sin(p.x * 0.06 - ph * 6.0), 3.0);
+  float v = exp(-pow(p.y - y, 2.0) / (spread * spread)) * pulse * (0.55 + 0.45 * grit) * (0.7 + 0.3 * (1.0 - soft));
+  return v;
+}]]></metadata>
+</svg></div></div>
+        <span class="step__no">01</span>
+        <h3>Connect your sources</h3>
+        <p>Sync docs, tickets and chat history from a bucket, a database or the API. Changes arrive in seconds.</p>
+      </li>
+      <li class="step">
+        <div class="well well--mint step__art step__art--ui" aria-hidden="true">
+          <div class="mini">
+            <p class="mini__text">Refunds after 30 days go to store credit, valid for a year.</p>
+            <p class="mini__vec">[0.021, -0.184, 0.377, &hellip;]</p>
+            <div class="mini__tags"><span class="chip">lang: en</span><span class="chip">source: help</span></div>
+          </div>
+        </div>
+        <span class="step__no">02</span>
+        <h3>Embed and index</h3>
+        <p>Sounder splits each document into passages, embeds them with the model you pick and stores them with their metadata.</p>
+      </li>
+      <li class="step">
+        <div class="well well--mint step__art step__art--ui" aria-hidden="true">
+          <div class="mini mini--rank">
+            <div class="rank"><span class="rank__doc">refunds.md</span><span class="rank__bar" style="--w:91%"></span><span class="rank__score">0.92</span></div>
+            <div class="rank"><span class="rank__doc">billing.md</span><span class="rank__bar" style="--w:87%"></span><span class="rank__score">0.87</span></div>
+            <div class="rank"><span class="rank__doc">faq.md</span><span class="rank__bar" style="--w:74%"></span><span class="rank__score">0.74</span></div>
+            <div class="rank rank--dim"><span class="rank__doc">terms.md</span><span class="rank__bar" style="--w:41%"></span><span class="rank__score">0.41</span></div>
+          </div>
+        </div>
+        <span class="step__no">03</span>
+        <h3>Search by meaning</h3>
+        <p>Each query blends vector and keyword ranking, then filters by customer, date or any field you stored.</p>
+      </li>
+      <li class="step">
+        <div class="well well--mint step__art"><div class="illo" data-illos><svg class="sh-streaming-tokens" xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" fill="none" stroke="#1daf9c" role="img" aria-labelledby="sh-streaming-tokens-t">
+<title id="sh-streaming-tokens-t">Streaming tokens</title>
+<style>@scope (svg.sh-streaming-tokens) {
+:scope{--_ground:#ffffff;--_ink:#2a2a2a;--_ramp-1:#16645a;--_ramp-2:#1daf9c;--_ramp-3:#3fdec9;--_ramp-4:#c2f5ee;--_mark:#178c7d;--_spark:#0b463e}
+@media (prefers-color-scheme: dark){:scope{--_ground:#101112;--_ink:#dadadc;--_ramp-1:#84ebdd;--_ramp-2:#3fdec9;--_ramp-3:#1daf9c;--_ramp-4:#1a7569;--_mark:#3fdec9;--_spark:#ffffff}}
+:scope{stroke:none;--g:var(--illos-ground,var(--_ground));--k:var(--illos-ink,var(--_ink))}
+.b0,.b1,.b2,.b3{fill:none;stroke-dasharray:7 2.4}
+.b0{stroke:var(--illos-ramp-1,var(--_ramp-1))}.b1{stroke:var(--illos-ramp-2,var(--_ramp-2))}.b2{stroke:var(--illos-ramp-3,var(--_ramp-3))}.b3{stroke:var(--illos-ramp-4,var(--_ramp-4));opacity:.55}
+.sc{fill:none;stroke:rgb(from color-mix(in srgb,var(--illos-ramp-4,var(--_ramp-4)) 18%,var(--g)) r g b/clamp(.33,(r + g + b)/382.5,1));stroke-width:.8}
+.bm{fill:none;stroke:var(--illos-ramp-2,var(--_ramp-2));stroke-width:2.4;stroke-dasharray:5 2.4}
+.sp{fill:none;stroke:var(--illos-spark,var(--_spark));stroke-width:1.2;stroke-linecap:round;opacity:.85}
+.gr{stroke:rgb(from color-mix(in srgb,var(--k) 9%,var(--g)) r g b/clamp(.67,(r + g + b)/382.5,1));stroke-width:1}
+.bx,.ln,.lv{fill:none;stroke:var(--illos-mark,var(--_mark));stroke-width:1.2}
+.dot{fill:var(--illos-mark,var(--_mark))}.cf{fill:var(--illos-mark,var(--_mark))}
+.ct{fill:none;stroke:var(--g);stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round}
+
+@keyframes sh-streaming-tokens_clock{0%{opacity:0}100%{opacity:0}}
+.sh-clock{animation:sh-streaming-tokens_clock 4.2s linear both}
+*{animation-iteration-count:infinite!important;animation-play-state:var(--illos-play,running)!important}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+}
+</style>
+<g class="sh-still"><path class="sc" d="M4 0V460M11 0V460M18 0V460M25 0V460M32 0V460M39 0V460M46 0V460M53 0V460M60 0V460M67 0V460M74 0V460M81 0V460M88 0V460M95 0V460M102 0V460M109 0V460M116 0V460M123 0V460M130 0V460M137 0V460M144 0V460M151 0V460M158 0V460M165 0V460M172 0V460M179 0V460M186 0V460M193 0V460M200 0V460M207 0V460M214 0V460M221 0V460M228 0V460M235 0V460M242 0V460M249 0V460M256 0V460M263 0V460M270 0V460M277 0V460M284 0V460M291 0V460M298 0V460M305 0V460M312 0V460M319 0V460M326 0V460M333 0V460M340 0V460M347 0V460M354 0V460M361 0V460M368 0V460M375 0V460M382 0V460M389 0V460M396 0V460M403 0V460M410 0V460M417 0V460M424 0V460M431 0V460M438 0V460M445 0V460M452 0V460M459 0V460M466 0V460M473 0V460M480 0V460M487 0V460M494 0V460M501 0V460M508 0V460M515 0V460M522 0V460M529 0V460M536 0V460M543 0V460M550 0V460M557 0V460M564 0V460M571 0V460M578 0V460M585 0V460M592 0V460M599 0V460M606 0V460M613 0V460M620 0V460M627 0V460M634 0V460M641 0V460M648 0V460M655 0V460M662 0V460M669 0V460M676 0V460M683 0V460M690 0V460M697 0V460M704 0V460M711 0V460M718 0V460"/><path class="gr" d="M0 0V460M96 0V460M192 0V460M288 0V460M384 0V460M480 0V460M576 0V460M672 0V460M0 0H720M0 96H720M0 192H720M0 288H720M0 384H720"/><path class="b0" d="M81 216.2V232.6M88 216.2V232.6M95 216.2V242M102 235V242M179 225.6V232.6M256 235V242M326 216.2V223.2M333 216.2V223.2" stroke-width="3.6"/><path class="b1" d="M67 216.2V242M74 206.8V251.4M81 206.8V213.8M81 235V251.4M88 206.8V213.8M88 235V251.4M95 206.8V213.8M95 244.4V251.4M102 216.2V232.6M102 244.4V251.4M109 216.2V232.6M172 225.6V232.6M186 235V242M249 244.4V251.4M256 244.4V251.4M263 235V242M340 225.6V232.6M382 291.4V307.8M389 291.4V298.4M417 159.8V166.8M417 206.8V213.8M417 244.4V251.4M424 159.8V166.8M438 159.8V166.8M438 197.4V213.8M438 244.4V251.4M452 159.8V166.8M452 206.8V213.8M459 206.8V213.8M459 244.4V251.4M466 159.8V166.8M529 159.8V166.8M529 244.4V251.4M543 159.8V166.8M557 159.8V166.8M557 244.4V251.4M564 159.8V166.8M564 244.4V251.4M571 159.8V166.8M592 159.8V166.8M599 159.8V166.8M599 244.4V251.4M634 159.8V166.8M634 206.8V213.8M641 159.8V166.8M641 206.8V213.8" stroke-width="2.7"/><path class="b2" d="M60 216.2V251.4M67 206.8V213.8M67 244.4V260.8M74 253.8V260.8M81 197.4V204.4M81 253.8V260.8M88 197.4V204.4M88 253.8V260.8M95 197.4V204.4M95 253.8V260.8M102 206.8V213.8M102 253.8V260.8M109 206.8V213.8M109 235V251.4M116 206.8V242M123 216.2V242M130 225.6V232.6M137 216.2V223.2M144 216.2V223.2M158 216.2V223.2M165 216.2V223.2M172 216.2V223.2M186 225.6V232.6M200 244.4V251.4M235 253.8V260.8M242 253.8V260.8M249 253.8V260.8M270 225.6V232.6M319 216.2V223.2M333 225.6V232.6M340 216.2V223.2M347 225.6V232.6M354 225.6V232.6M389 150.4V166.8M389 197.4V213.8M389 244.4V260.8M389 300.8V307.8M410 159.8V166.8M410 197.4V213.8M410 244.4V260.8M417 150.4V157.4M417 197.4V204.4M417 253.8V260.8M424 197.4V213.8M424 244.4V260.8M431 150.4V166.8M431 197.4V213.8M431 244.4V260.8M438 150.4V157.4M438 253.8V260.8M445 150.4V166.8M445 197.4V213.8M445 244.4V260.8M452 150.4V157.4M452 197.4V204.4M452 244.4V260.8M459 150.4V166.8M459 197.4V204.4M459 253.8V260.8M466 150.4V157.4M466 197.4V213.8M466 244.4V260.8M480 159.8V166.8M480 197.4V213.8M480 244.4V251.4M487 159.8V166.8M487 206.8V213.8M487 244.4V260.8M501 159.8V166.8M501 197.4V213.8M501 244.4V251.4M508 159.8V166.8M508 206.8V213.8M508 244.4V251.4M522 159.8V166.8M522 197.4V213.8M522 244.4V260.8M529 150.4V157.4M529 197.4V213.8M529 253.8V260.8M543 150.4V157.4M543 197.4V213.8M543 244.4V260.8M557 197.4V213.8M557 253.8V260.8M564 150.4V157.4M564 197.4V213.8M564 253.8V260.8M571 150.4V157.4M571 197.4V213.8M571 244.4V260.8M578 159.8V166.8M578 197.4V213.8M578 244.4V260.8M585 159.8V166.8M585 197.4V213.8M585 244.4V260.8M592 197.4V213.8M592 244.4V260.8M599 150.4V157.4M599 197.4V213.8M599 253.8V260.8M627 150.4V166.8M627 197.4V213.8M627 244.4V260.8M634 150.4V157.4M634 197.4V204.4M634 244.4V260.8M641 150.4V157.4M641 197.4V204.4M641 244.4V260.8" stroke-width="1.8"/><path class="b3" d="M46 225.6V242M53 206.8V251.4M60 197.4V213.8M60 253.8V260.8M67 197.4V204.4M67 263.2V270.2M74 188V204.4M74 263.2V270.2M81 188V195M81 263.2V270.2M88 188V195M88 263.2V270.2M95 188V195M95 263.2V270.2M102 188V204.4M102 263.2V270.2M109 197.4V204.4M109 253.8V270.2M116 197.4V204.4M116 244.4V260.8M123 206.8V213.8M123 244.4V260.8M130 206.8V223.2M130 235V242M137 225.6V232.6M144 225.6V232.6M151 216.2V223.2M165 225.6V232.6M179 216.2V223.2M179 235V242M193 235V251.4M207 244.4V260.8M214 253.8V260.8M221 253.8V270.2M228 253.8V270.2M242 244.4V251.4M249 235V242M263 225.6V232.6M270 235V242M277 216.2V232.6M284 206.8V223.2M291 206.8V223.2M298 206.8V223.2M305 206.8V223.2M312 206.8V223.2M319 206.8V213.8M326 206.8V213.8M326 225.6V232.6M347 216.2V223.2M410 150.4V157.4M417 291.4V298.4M424 150.4V157.4M445 291.4V298.4M480 150.4V157.4M480 253.8V260.8M487 150.4V157.4M487 197.4V204.4M501 150.4V157.4M501 253.8V260.8M508 150.4V157.4M508 197.4V204.4M508 253.8V260.8M522 150.4V157.4M529 291.4V298.4M557 150.4V157.4M571 291.4V298.4M578 150.4V157.4M578 291.4V298.4M585 150.4V157.4M585 291.4V298.4M592 150.4V157.4M627 291.4V298.4" stroke-width="1.1"/><path class="sp" d="M81 218.6v1.2M95 218.6v1.2M95 237.4v1.2M102 237.4v1.2M179 228v1.2"/></g>
+<g class="box"><path class="bx" pathLength="1" d="M44 186H132V274H44Z"/><circle class="dot" cx="44" cy="186" r="2.2"/><circle class="dot" cx="132" cy="186" r="2.2"/><circle class="dot" cx="44" cy="274" r="2.2"/><circle class="dot" cx="132" cy="274" r="2.2"/><g class="chip"><rect class="cf" x="44" y="186" width="46.8" height="14.9"/><path class="ct" d="M49 196.9L49 190L51.3 193.45L53.6 190L53.6 196.9M57.51 190L59.81 190L60.96 191.15L60.96 195.75L59.81 196.9L57.51 196.9L56.36 195.75L56.36 191.15L57.51 190M63.72 190L63.72 196.9L67.17 196.9L68.32 195.75L68.32 191.15L67.17 190L63.72 190M75.68 190L71.08 190L71.08 196.9L75.68 196.9M71.08 193.45L74.53 193.45M78.44 190L78.44 196.9L83.04 196.9"/></g></g><g class="box"><path class="bx" pathLength="1" d="M360 112H670V332H360Z"/><circle class="dot" cx="360" cy="112" r="2.2"/><circle class="dot" cx="670" cy="112" r="2.2"/><circle class="dot" cx="360" cy="332" r="2.2"/><circle class="dot" cx="670" cy="332" r="2.2"/><g class="chip"><rect class="cf" x="360" y="112" width="68.88" height="14.9"/><path class="ct" d="M365 122.9L365 116L368.45 116L369.6 117.15L369.6 118.3L368.45 119.45L365 119.45M367.3 119.45L369.6 122.9M376.96 116L372.36 116L372.36 122.9L376.96 122.9M372.36 119.45L375.81 119.45M384.32 117.15L383.17 116L380.87 116L379.72 117.15L379.72 118.3L380.87 119.45L383.17 119.45L384.32 120.6L384.32 121.75L383.17 122.9L380.87 122.9L379.72 121.75M387.08 122.9L387.08 116L390.53 116L391.68 117.15L391.68 118.3L390.53 119.45L387.08 119.45M395.59 116L397.89 116L399.04 117.15L399.04 121.75L397.89 122.9L395.59 122.9L394.44 121.75L394.44 117.15L395.59 116M401.8 122.9L401.8 116L406.4 122.9L406.4 116M413.76 117.15L412.61 116L410.31 116L409.16 117.15L409.16 118.3L410.31 119.45L412.61 119.45L413.76 120.6L413.76 121.75L412.61 122.9L410.31 122.9L409.16 121.75M421.12 116L416.52 116L416.52 122.9L421.12 122.9M416.52 119.45L419.97 119.45"/></g></g>
+<rect class="sh-clock" width="0" height="0"/>
+<metadata class="illos-field" data-cycle="4.2"><![CDATA[float field(vec2 p, float t) {
+  float ph = TAU * t / T;
+  float v = blob(p, vec2(88.0, 230.0), 30.0, 1.05);
+  // the ribbon: a travelling wave from the model to the response, pulses running along it (six a cycle)
+  if (p.x > 116.0 && p.x < 356.0) {
+    float env = sin(3.14159 * (p.x - 116.0) / 240.0);
+    float y = 230.0 + 30.0 * env * sin(p.x * 0.035 - ph * 2.0);
+    float pulse = pow(0.5 + 0.5 * sin(p.x * 0.08 - ph * 6.0), 4.0);
+    v += exp(-pow(p.y - y, 2.0) / 64.0) * (0.3 + 0.75 * pulse);
+  }
+  // the response: four lines; the last is written by the cursor, then it all scrolls up a line
+  if (p.x > 376.0 && p.x < 654.0 && p.y > 130.0 && p.y < 322.0) {
+    float yy = p.y + 46.0 * sm(3.2, 3.8, t);
+    float idx = floor((yy - 160.0 + 23.0) / 46.0);
+    float ly = 160.0 + 46.0 * idx;
+    float on = step(0.32, hash(vec2(floor(p.x / 7.0), 1.0)));
+    float front = t < 0.3 ? 380.0 : t < 3.0 ? mix(380.0, 650.0, (t - 0.3) / 2.7) : 650.0;
+    float filled = idx < 3.0 ? 1.0 : idx < 4.0 ? (t > 3.0 ? 1.0 : 1.0 - sm(front - 6.0, front + 4.0, p.x)) : 0.0;
+    float band = exp(-pow(yy - ly, 2.0) / 49.0);
+    v += band * (on * (0.55 + 0.35 * hash(vec2(floor(p.x / 7.0), 2.0))) * filled + 0.13 * (1.0 - filled) * on);
+    float cx = t < 3.0 ? front : 380.0;
+    float cyy = t < 3.0 ? 298.0 : 298.0 - 46.0 * sm(3.2, 3.8, t) + 46.0 * step(3.8, t);
+    v += blob(p, vec2(cx + 3.0, cyy), 8.0, 1.2 * (t < 3.0 || t > 3.8 ? 1.0 : 0.0));
+  }
+  return v;
+}]]></metadata>
+</svg></div></div>
+        <span class="step__no">04</span>
+        <h3>Answer with sources</h3>
+        <p>Stream an answer written from the best passages, with a citation on every claim your users can check.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--code" id="code" aria-labelledby="code-h">
+  <div class="wrap code">
+    <div class="code__copy">
+      <h2 id="code-h">Your first search in a few lines</h2>
+      <p>Typed clients for TypeScript and Python, and a plain HTTP API for everything else. The same query works in all three.</p>
+      <ul class="checks">
+        <li><svg class="i"><use href="#i-check"/></svg>Hybrid ranking is on by default</li>
+        <li><svg class="i"><use href="#i-check"/></svg>Filter on any metadata field</li>
+        <li><svg class="i"><use href="#i-check"/></svg>One namespace per customer</li>
+        <li><svg class="i"><use href="#i-check"/></svg>Answers stream as they are written</li>
+      </ul>
+      <a class="link" href="#faq">See what the API covers <svg class="i"><use href="#i-arrow"/></svg></a>
+    </div>
+
+    <div class="panel">
+      <div class="panel__bar">
+        <div class="tabs" role="tablist" aria-label="Language">
+          <button class="tab" type="button" role="tab" id="tab-ts" aria-controls="pane-ts" aria-selected="true">TypeScript</button>
+          <button class="tab" type="button" role="tab" id="tab-py" aria-controls="pane-py" aria-selected="false" tabindex="-1">Python</button>
+          <button class="tab" type="button" role="tab" id="tab-curl" aria-controls="pane-curl" aria-selected="false" tabindex="-1">curl</button>
+        </div>
+        <button class="copy" type="button" aria-label="Copy code">
+          <svg class="i i--copy"><use href="#i-copy"/></svg>
+          <svg class="i i--tick"><use href="#i-tick"/></svg>
+        </button>
+      </div>
+
+      <div class="pane" id="pane-ts" role="tabpanel" aria-labelledby="tab-ts" tabindex="0">
+<pre class="pane__code" data-code><code><span class="k">import</span> { Sounder } <span class="k">from</span> <span class="s">"sounder"</span>;
+
+<span class="k">const</span> sounder = <span class="k">new</span> <span class="f">Sounder</span>({
+  apiKey: process.env.SOUNDER_KEY,
+});
+
+<span class="k">const</span> { hits } = <span class="k">await</span> sounder.<span class="f">search</span>({
+  index: <span class="s">"help-center"</span>,
+  query: <span class="s">"refund after 30 days"</span>,
+  filter: { lang: <span class="s">"en"</span> },
+  topK: <span class="n">3</span>,
+});
+
+console.<span class="f">log</span>(hits);</code></pre>
+        <div class="resp">
+          <div class="resp__bar"><span>Output</span><span class="chip chip--ok">3 hits</span><span class="chip chip--quiet">38 ms</span></div>
+<pre class="resp__code"><code>[
+  { id: <span class="s">"refunds#late"</span>, score: <span class="n">0.92</span> },
+  { id: <span class="s">"billing#credit"</span>, score: <span class="n">0.87</span> },
+  { id: <span class="s">"faq#window"</span>, score: <span class="n">0.74</span> },
+]</code></pre>
+        </div>
+      </div>
+
+      <div class="pane" id="pane-py" role="tabpanel" aria-labelledby="tab-py" tabindex="0" hidden>
+<pre class="pane__code" data-code><code><span class="k">import</span> os
+<span class="k">from</span> sounder <span class="k">import</span> Sounder
+
+sounder = <span class="f">Sounder</span>(api_key=os.environ[<span class="s">"SOUNDER_KEY"</span>])
+
+hits = sounder.<span class="f">search</span>(
+    index=<span class="s">"help-center"</span>,
+    query=<span class="s">"refund after 30 days"</span>,
+    filter={<span class="s">"lang"</span>: <span class="s">"en"</span>},
+    top_k=<span class="n">3</span>,
+)
+
+<span class="k">for</span> hit <span class="k">in</span> hits:
+    <span class="f">print</span>(hit.score, hit.id)</code></pre>
+        <div class="resp">
+          <div class="resp__bar"><span>Output</span><span class="chip chip--ok">3 hits</span><span class="chip chip--quiet">38 ms</span></div>
+<pre class="resp__code"><code><span class="n">0.92</span> refunds#late
+<span class="n">0.87</span> billing#credit
+<span class="n">0.74</span> faq#window</code></pre>
+        </div>
+      </div>
+
+      <div class="pane" id="pane-curl" role="tabpanel" aria-labelledby="tab-curl" tabindex="0" hidden>
+<pre class="pane__code" data-code><code>curl https://api.sounder.dev/v1/indexes/help-center/search \
+  -H <span class="s">"Authorization: Bearer $SOUNDER_KEY"</span> \
+  -H <span class="s">"Content-Type: application/json"</span> \
+  -d <span class="s">'{
+    "query": "refund after 30 days",
+    "filter": { "lang": "en" },
+    "top_k": 3
+  }'</span></code></pre>
+        <div class="resp">
+          <div class="resp__bar"><span>Response</span><span class="chip chip--ok">200 OK</span><span class="chip chip--quiet">38 ms</span></div>
+<pre class="resp__code"><code>{
+  <span class="p">"hits"</span>: [
+    { <span class="p">"id"</span>: <span class="s">"refunds#late"</span>, <span class="p">"score"</span>: <span class="n">0.92</span> },
+    { <span class="p">"id"</span>: <span class="s">"billing#credit"</span>, <span class="p">"score"</span>: <span class="n">0.87</span> },
+    { <span class="p">"id"</span>: <span class="s">"faq#window"</span>, <span class="p">"score"</span>: <span class="n">0.74</span> }
+  ]
+}</code></pre>
+        </div>
+      </div>
+      <p class="sr" aria-live="polite" data-copy-status></p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="features" aria-labelledby="features-h">
+  <div class="wrap">
+    <div class="head head--split">
+      <h2 id="features-h">The parts you would otherwise build yourself</h2>
+      <p>Retrieval is more than a nearest neighbour lookup. Sounder handles the caching, limits and failover that real traffic needs.</p>
+    </div>
+    <div class="bento">
+      <article class="tile tile--a well well--sky">
+        <div class="tile__text">
+          <h3>Answers that cite their sources</h3>
+          <p>Sounder pulls the closest passages, writes the answer and marks where every line came from.</p>
+        </div>
+        <div class="tile__art illo" data-illos><svg class="sh-rag" xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" fill="none" stroke="#1daf9c" role="img" aria-labelledby="sh-rag-t" aria-describedby="sh-rag-d">
+<title id="sh-rag-t">RAG answer</title>
+<desc id="sh-rag-d">A question lands among a field of document pages; the three closest pages light up and are pulled in around it, and an answer page beside them writes itself line by line from those three, each part ending in a citation mark.</desc>
+<style>@scope (svg.sh-rag) {
+:scope{--_ground:#ffffff;--_ink:#2a2a2a;--_ramp-1:#16645a;--_ramp-2:#1daf9c;--_ramp-3:#3fdec9;--_ramp-4:#c2f5ee;--_mark:#178c7d;--_spark:#0b463e}
+@media (prefers-color-scheme: dark){:scope{--_ground:#101112;--_ink:#dadadc;--_ramp-1:#84ebdd;--_ramp-2:#3fdec9;--_ramp-3:#1daf9c;--_ramp-4:#1a7569;--_mark:#3fdec9;--_spark:#ffffff}}
+:scope{stroke:none;--g:var(--illos-ground,var(--_ground));--k:var(--illos-ink,var(--_ink))}
+.b0,.b1,.b2,.b3{fill:none;stroke-dasharray:7 2.4}
+.b0{stroke:var(--illos-ramp-1,var(--_ramp-1))}.b1{stroke:var(--illos-ramp-2,var(--_ramp-2))}.b2{stroke:var(--illos-ramp-3,var(--_ramp-3))}.b3{stroke:var(--illos-ramp-4,var(--_ramp-4));opacity:.55}
+.sc{fill:none;stroke:rgb(from color-mix(in srgb,var(--illos-ramp-4,var(--_ramp-4)) 18%,var(--g)) r g b/clamp(.33,(r + g + b)/382.5,1));stroke-width:.8}
+.bm{fill:none;stroke:var(--illos-ramp-2,var(--_ramp-2));stroke-width:2.4;stroke-dasharray:5 2.4}
+.sp{fill:none;stroke:var(--illos-spark,var(--_spark));stroke-width:1.2;stroke-linecap:round;opacity:.85}
+.gr{stroke:rgb(from color-mix(in srgb,var(--k) 9%,var(--g)) r g b/clamp(.67,(r + g + b)/382.5,1));stroke-width:1}
+.bx,.ln,.lv{fill:none;stroke:var(--illos-mark,var(--_mark));stroke-width:1.2}
+.dot{fill:var(--illos-mark,var(--_mark))}.cf{fill:var(--illos-mark,var(--_mark))}
+.ct{fill:none;stroke:var(--g);stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round}
+.tx{fill:none;stroke:var(--illos-mark,var(--_mark));stroke-width:1;stroke-linecap:round;stroke-linejoin:round}
+@keyframes sh-rag_qn{0%{opacity:1}6.667%{opacity:1;animation-timing-function:cubic-bezier(0.23,1,0.32,1)}9.333%{opacity:0}24.444%{opacity:0;animation-timing-function:cubic-bezier(0.23,1,0.32,1)}28.444%{opacity:1}100%{opacity:1}}
+.qn{opacity:1;animation:sh-rag_qn 4.5s linear both}
+@keyframes sh-rag_clock{0%{opacity:0}100%{opacity:0}}
+.sh-clock{animation:sh-rag_clock 4.5s linear both}
+*{animation-iteration-count:infinite!important;animation-play-state:var(--illos-play,running)!important}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+}
+</style>
+<g class="sh-still"><path class="sc" d="M4 0V460M11 0V460M18 0V460M25 0V460M32 0V460M39 0V460M46 0V460M53 0V460M60 0V460M67 0V460M74 0V460M81 0V460M88 0V460M95 0V460M102 0V460M109 0V460M116 0V460M123 0V460M130 0V460M137 0V460M144 0V460M151 0V460M158 0V460M165 0V460M172 0V460M179 0V460M186 0V460M193 0V460M200 0V460M207 0V460M214 0V460M221 0V460M228 0V460M235 0V460M242 0V460M249 0V460M256 0V460M263 0V460M270 0V460M277 0V460M284 0V460M291 0V460M298 0V460M305 0V460M312 0V460M319 0V460M326 0V460M333 0V460M340 0V460M347 0V460M354 0V460M361 0V460M368 0V460M375 0V460M382 0V460M389 0V460M396 0V460M403 0V460M410 0V460M417 0V460M424 0V460M431 0V460M438 0V460M445 0V460M452 0V460M459 0V460M466 0V460M473 0V460M480 0V460M487 0V460M494 0V460M501 0V460M508 0V460M515 0V460M522 0V460M529 0V460M536 0V460M543 0V460M550 0V460M557 0V460M564 0V460M571 0V460M578 0V460M585 0V460M592 0V460M599 0V460M606 0V460M613 0V460M620 0V460M627 0V460M634 0V460M641 0V460M648 0V460M655 0V460M662 0V460M669 0V460M676 0V460M683 0V460M690 0V460M697 0V460M704 0V460M711 0V460M718 0V460"/><path class="gr" d="M0 0V460M96 0V460M192 0V460M288 0V460M384 0V460M480 0V460M576 0V460M672 0V460M0 0H720M0 96H720M0 192H720M0 288H720M0 384H720"/><path class="b0" d="M207 150.4V157.4M214 150.4V157.4M221 150.4V157.4M228 225.6V242M235 225.6V242M242 225.6V242M249 225.6V242M249 272.6V279.6M256 225.6V242M256 272.6V279.6M263 225.6V232.6M263 272.6V279.6M270 150.4V157.4M270 225.6V232.6M277 150.4V157.4M284 150.4V157.4M620 282V289M634 244.4V251.4M648 206.8V213.8" stroke-width="3.6"/><path class="b1" d="M207 169.2V204.4M214 169.2V204.4M221 178.6V195M228 178.6V195M249 291.4V326.6M256 291.4V326.6M263 291.4V317.2M270 169.2V204.4M270 291.4V317.2M277 169.2V204.4M277 291.4V298.4M284 169.2V176.2M284 188V204.4M291 169.2V176.2M291 197.4V204.4M564 188V195M564 206.8V213.8M564 225.6V232.6M564 244.4V251.4M564 263.2V270.2M564 282V289M571 188V195M571 206.8V213.8M571 225.6V232.6M571 244.4V251.4M571 263.2V270.2M571 282V289M578 188V195M578 206.8V213.8M578 225.6V232.6M578 244.4V251.4M578 263.2V270.2M578 282V289M585 188V195M585 206.8V213.8M585 225.6V232.6M585 244.4V251.4M585 263.2V270.2M585 282V289M592 188V195M592 206.8V213.8M592 225.6V232.6M592 244.4V251.4M592 263.2V270.2M592 282V289M599 188V195M599 206.8V213.8M599 225.6V232.6M599 244.4V251.4M599 263.2V270.2M599 282V289M606 188V195M606 206.8V213.8M606 225.6V232.6M606 244.4V251.4M606 263.2V270.2M606 282V289M613 188V195M613 206.8V213.8M613 225.6V232.6M613 244.4V251.4M613 263.2V270.2M620 188V195M620 206.8V213.8M620 225.6V232.6M620 244.4V251.4M620 263.2V270.2M627 188V195M627 206.8V213.8M627 225.6V232.6M627 263.2V270.2M634 188V195M634 206.8V213.8M634 225.6V232.6M634 263.2V270.2M641 188V195M641 225.6V232.6M641 263.2V270.2M648 188V195" stroke-width="2.7"/><path class="b2" d="M46 282V289M53 47V54M53 65.8V72.8M53 94V101M53 282V289M53 319.6V336M53 376V383M53 423V430M60 47V54M60 65.8V72.8M60 376V383M60 413.6V420.6M67 47V54M67 65.8V72.8M67 394.8V401.8M67 413.6V420.6M74 131.6V138.6M74 150.4V157.4M74 394.8V401.8M81 65.8V72.8M81 131.6V138.6M88 131.6V138.6M123 329V336M130 329V336M130 357.2V364.2M137 28.2V35.2M137 329V336M144 28.2V35.2M144 56.4V63.4M144 75.2V82.2M151 28.2V35.2M151 65.8V72.8M193 376V383M193 394.8V411.2M193 423V430M200 376V383M200 413.6V430M207 376V383M214 423V430M221 159.8V166.8M221 225.6V242M228 159.8V166.8M228 216.2V223.2M228 244.4V260.8M235 37.6V44.6M235 56.4V63.4M235 75.2V91.6M235 169.2V185.6M235 216.2V223.2M235 244.4V260.8M242 37.6V44.6M242 56.4V63.4M242 75.2V91.6M242 216.2V223.2M242 244.4V251.4M249 65.8V72.8M249 216.2V223.2M249 244.4V251.4M256 56.4V72.8M256 216.2V223.2M256 244.4V251.4M263 216.2V223.2M263 244.4V251.4M263 319.6V326.6M270 216.2V223.2M270 244.4V251.4M270 282V289M277 225.6V242M277 310.2V317.2M284 159.8V166.8M291 188V195M298 159.8V166.8M298 178.6V195M340 376V383M340 404.2V411.2M340 423V430M347 376V383M354 376V383M354 413.6V420.6M361 423V430M368 235V242M368 423V430M375 37.6V44.6M375 300.8V307.8M375 319.6V326.6M375 338.4V345.4M382 37.6V44.6M382 235V242M382 300.8V307.8M382 319.6V326.6M389 65.8V91.6M389 150.4V157.4M389 169.2V176.2M389 300.8V307.8M389 347.8V354.8M396 150.4V157.4M396 169.2V176.2M396 197.4V204.4M396 329V336M403 197.4V204.4M410 235V242M438 84.6V91.6M438 131.6V138.6M438 357.2V364.2M445 84.6V91.6M445 103.4V110.4M445 122.2V129.2M445 357.2V364.2M445 385.4V401.8M452 84.6V91.6M452 235V242M452 357.2V364.2M452 404.2V411.2M459 112.8V119.8M466 131.6V138.6M480 235V242M494 235V242M522 235V242" stroke-width="1.8"/><path class="b3" d="M46 291.4V336M53 75.2V91.6M53 291.4V317.2M53 385.4V420.6M60 56.4V63.4M60 75.2V101M60 282V317.2M60 329V336M60 394.8V411.2M60 423V430M67 56.4V63.4M67 75.2V91.6M67 310.2V336M67 376V383M67 404.2V411.2M67 423V430M74 47V72.8M74 94V101M74 159.8V185.6M74 282V317.2M74 376V383M74 404.2V430M81 47V63.4M81 75.2V82.2M81 94V101M81 141V185.6M81 394.8V430M88 150.4V185.6M95 131.6V138.6M95 150.4V157.4M95 178.6V185.6M102 141V176.2M123 347.8V383M130 338.4V354.8M130 366.6V383M137 37.6V82.2M137 338.4V383M144 37.6V54M144 65.8V72.8M144 347.8V354.8M144 366.6V373.6M151 47V54M151 75.2V82.2M151 329V383M158 28.2V35.2M158 47V54M158 65.8V82.2M165 28.2V54M165 65.8V82.2M193 413.6V420.6M200 385.4V411.2M207 159.8V166.8M207 404.2V430M214 159.8V166.8M214 394.8V411.2M221 169.2V176.2M221 197.4V204.4M221 413.6V420.6M228 150.4V157.4M228 169.2V176.2M228 197.4V204.4M235 65.8V72.8M235 150.4V166.8M235 188V204.4M242 65.8V72.8M249 37.6V63.4M249 282V289M256 37.6V44.6M256 75.2V91.6M256 282V289M263 37.6V72.8M263 84.6V91.6M263 282V289M270 159.8V166.8M270 272.6V279.6M270 319.6V326.6M277 159.8V166.8M277 272.6V289M277 300.8V307.8M277 319.6V326.6M284 178.6V185.6M291 150.4V166.8M291 178.6V185.6M298 150.4V157.4M298 169.2V176.2M298 197.4V204.4M298 235V242M312 235V242M326 235V242M340 235V242M340 394.8V401.8M340 413.6V420.6M347 385.4V430M354 235V242M354 394.8V411.2M354 423V430M361 376V383M361 394.8V420.6M368 385.4V392.4M368 404.2V420.6M375 47V91.6M375 310.2V317.2M375 329V336M375 347.8V354.8M382 47V91.6M382 329V354.8M389 159.8V166.8M389 178.6V204.4M389 310.2V317.2M389 329V345.4M396 37.6V44.6M396 75.2V91.6M396 178.6V195M396 235V242M396 310.2V317.2M396 338.4V354.8M403 159.8V185.6M403 300.8V317.2M403 329V345.4M410 150.4V157.4M410 188V204.4M417 159.8V166.8M417 178.6V204.4M424 235V242M438 94V129.2M438 235V242M438 376V411.2M445 94V101M445 112.8V119.8M445 131.6V138.6M445 376V383M445 404.2V411.2M452 94V101M452 112.8V138.6M452 366.6V392.4M459 84.6V110.4M459 131.6V138.6M459 366.6V411.2M466 84.6V110.4M466 122.2V129.2M466 235V242M466 366.6V401.8M508 235V242M557 178.6V298.4M564 178.6V185.6M564 197.4V204.4M564 216.2V223.2M564 235V242M564 253.8V260.8M564 291.4V298.4M571 178.6V185.6M571 197.4V204.4M571 216.2V223.2M571 253.8V260.8M571 272.6V279.6M571 291.4V298.4M578 178.6V185.6M578 197.4V204.4M578 216.2V223.2M578 235V242M578 253.8V260.8M578 272.6V279.6M578 291.4V298.4M585 178.6V185.6M585 197.4V204.4M585 216.2V223.2M585 235V242M585 253.8V260.8M585 272.6V279.6M585 291.4V298.4M592 178.6V185.6M592 197.4V204.4M592 216.2V223.2M592 235V242M592 253.8V260.8M592 291.4V298.4M599 178.6V185.6M599 197.4V204.4M599 235V242M599 272.6V279.6M599 291.4V298.4M606 178.6V185.6M606 197.4V204.4M606 216.2V223.2M606 235V242M606 253.8V260.8M606 272.6V279.6M606 291.4V298.4M613 197.4V204.4M613 216.2V223.2M613 253.8V260.8M613 272.6V279.6M613 291.4V298.4M620 178.6V185.6M620 197.4V204.4M620 216.2V223.2M620 253.8V260.8M620 272.6V279.6M620 291.4V298.4M627 178.6V185.6M627 197.4V204.4M627 216.2V223.2M627 244.4V260.8M627 272.6V298.4M634 178.6V185.6M634 197.4V204.4M634 216.2V223.2M634 235V242M634 253.8V260.8M634 272.6V298.4M641 178.6V185.6M641 197.4V223.2M641 235V260.8M641 282V298.4M648 178.6V185.6M648 197.4V204.4M648 216.2V242M648 253.8V298.4M655 178.6V298.4" stroke-width="1.1"/><path class="sp" d="M228 237.4v1.2M235 237.4v1.2M242 228v1.2M249 237.4v1.2M256 228v1.2M256 275v1.2M263 228v1.2M270 152.8v1.2M284 152.8v1.2M634 246.8v1.2M648 209.2v1.2"/></g>
+<g class="box"><path class="bx" pathLength="1" d="M543 162H674V312.2H543Z"/><circle class="dot" cx="543" cy="162" r="2.2"/><circle class="dot" cx="674" cy="162" r="2.2"/><circle class="dot" cx="543" cy="312.2" r="2.2"/><circle class="dot" cx="674" cy="312.2" r="2.2"/><g class="chip"><rect class="cf" x="543" y="162" width="54.16" height="14.9"/><path class="ct" d="M548 172.9L548 168.3L550.3 166L552.6 168.3L552.6 172.9M548 170.03L552.6 170.03M555.36 172.9L555.36 166L559.96 172.9L559.96 166M567.32 167.15L566.17 166L563.87 166L562.72 167.15L562.72 168.3L563.87 169.45L566.17 169.45L567.32 170.6L567.32 171.75L566.17 172.9L563.87 172.9L562.72 171.75M570.08 166L571.23 172.9L572.38 169.45L573.53 172.9L574.68 166M582.04 166L577.44 166L577.44 172.9L582.04 172.9M577.44 169.45L580.89 169.45M584.8 172.9L584.8 166L588.25 166L589.4 167.15L589.4 168.3L588.25 169.45L584.8 169.45M587.1 169.45L589.4 172.9"/></g></g><path class="tx" d="M52 30L52 34.8L54.4 34.8L55.2 34L55.2 30.8L54.4 30L52 30M57.92 30L59.52 30L60.32 30.8L60.32 34L59.52 34.8L57.92 34.8L57.12 34L57.12 30.8L57.92 30M65.44 30.8L64.64 30L63.04 30L62.24 30.8L62.24 34L63.04 34.8L64.64 34.8L65.44 34M67.36 30L67.36 34L68.16 34.8L69.76 34.8L70.56 34L70.56 30M72.48 34.8L72.48 30L74.08 32.4L75.68 30L75.68 34.8M80.8 30L77.6 30L77.6 34.8L80.8 34.8M77.6 32.4L80 32.4M82.72 34.8L82.72 30L85.92 34.8L85.92 30M87.84 30L91.04 30M89.44 30L89.44 34.8M96.16 30.8L95.36 30L93.76 30L92.96 30.8L92.96 31.6L93.76 32.4L95.36 32.4L96.16 33.2L96.16 34L95.36 34.8L93.76 34.8L92.96 34"/><g class="qn"><path class="tx" d="M168.8 236L170.4 236L171.2 236.8L171.2 240L170.4 240.8L168.8 240.8L168 240L168 236.8L168.8 236M170 239.6L171.2 240.8M173.12 236L173.12 240L173.92 240.8L175.52 240.8L176.32 240L176.32 236M181.44 236L178.24 236L178.24 240.8L181.44 240.8M178.24 238.4L180.64 238.4M186.56 236.8L185.76 236L184.16 236L183.36 236.8L183.36 237.6L184.16 238.4L185.76 238.4L186.56 239.2L186.56 240L185.76 240.8L184.16 240.8L183.36 240M188.48 236L191.68 236M190.08 236L190.08 240.8M194.4 236L196 236M195.2 236L195.2 240.8M194.4 240.8L196 240.8M199.52 236L201.12 236L201.92 236.8L201.92 240L201.12 240.8L199.52 240.8L198.72 240L198.72 236.8L199.52 236M203.84 240.8L203.84 236L207.04 240.8L207.04 236"/></g>
+<rect class="sh-clock" width="0" height="0"/>
+<metadata class="illos-field" data-cycle="4.5"><![CDATA[// A page centred at c: 5 columns by 6 cells. Faint paper that flickers, a title, ragged lines of text; lit brightens it
+// and hot (a read) flashes its text.
+float page(vec2 p, vec2 c, float s, float lit, float hot, float ph) {
+  vec2 q = p - c + vec2(17.5, 28.2);
+  if (q.x < 0.0 || q.x >= 35.0 || q.y < 0.0 || q.y >= 56.4) return 0.0;
+  float lc = floor(q.x / 7.0); float lk = floor(q.y / 9.4);
+  float hs = hash(vec2(lc + s * 5.0, lk + s));
+  float v = mix(0.13, 0.28, lit) + 0.05 * sin(ph + hs * 40.0);
+  if (lk < 0.5) { if (lc < 2.0 + floor(2.0 * hash(vec2(s, 1.0)))) v = mix(0.45, 1.1, lit); }
+  else if (lk > 1.5) { if (lc < 2.0 + floor(3.6 * hash(vec2(s, lk)))) v = mix(0.3, 0.72, lit) + 0.4 * hot; }
+  return v;
+}
+// The question: a speech bubble 9 columns by 4 cells, two lines of words inside its rim, a tail under its left end.
+float bubble(vec2 p, vec2 c, float k) {
+  vec2 q = p - c + vec2(31.5, 18.8);
+  if (q.x < 0.0 || q.x >= 63.0 || q.y < 0.0 || q.y >= 47.0) return 0.0;
+  float lc = floor(q.x / 7.0); float lk = floor(q.y / 9.4);
+  float side = (lc < 0.5 || lc > 7.5) ? 1.0 : 0.0;
+  float v = 0.0;
+  if (lk < 3.5) {
+    if (lk < 0.5 || lk > 2.5) v = side > 0.5 ? 0.0 : 0.45;
+    else if (side > 0.5) v = 0.45;
+    else if (lk < 1.5 || lc < 5.5) v = 1.15;
+  } else if (lc > 0.5 && lc < 2.5) v = 0.45;
+  return v * k;
+}
+float field(vec2 p, float t) {
+  if (p.x < 24.0 || p.x > 696.0 || p.y < 24.0 || p.y > 436.0) return 0.0;
+  float ph = TAU * t / T;
+  float v = 0.0;
+  // the rest of the field, idle
+  v = max(v, page(p, vec2(70.0, 78.0), 4.0, 0.0, 0.0, ph));
+  v = max(v, page(p, vec2(150.0, 58.0), 5.0, 0.0, 0.0, ph));
+  v = max(v, page(p, vec2(250.0, 60.0), 6.0, 0.0, 0.0, ph));
+  v = max(v, page(p, vec2(390.0, 64.0), 7.0, 0.0, 0.0, ph));
+  v = max(v, page(p, vec2(452.0, 108.0), 8.0, 0.0, 0.0, ph));
+  v = max(v, page(p, vec2(90.0, 162.0), 9.0, 0.0, 0.0, ph));
+  v = max(v, page(p, vec2(404.0, 182.0), 10.0, 0.0, 0.0, ph));
+  v = max(v, page(p, vec2(62.0, 310.0), 11.0, 0.0, 0.0, ph));
+  v = max(v, page(p, vec2(134.0, 360.0), 12.0, 0.0, 0.0, ph));
+  v = max(v, page(p, vec2(204.0, 404.0), 13.0, 0.0, 0.0, ph));
+  v = max(v, page(p, vec2(392.0, 330.0), 14.0, 0.0, 0.0, ph));
+  v = max(v, page(p, vec2(352.0, 404.0), 15.0, 0.0, 0.0, ph));
+  v = max(v, page(p, vec2(450.0, 380.0), 16.0, 0.0, 0.0, ph));
+  v = max(v, page(p, vec2(66.0, 400.0), 17.0, 0.0, 0.0, ph));
+  // the three nearest: let go as the next question comes in, lit as the ring reaches them, pulled in, read and sent
+  {
+    float g = t < 1.5 ? 1.0 - ease((t - 0.3) / 0.6) : ease((t - 1.850) / 0.65);
+    float lit = t < 1.0 ? 1.0 - sm(0.3, 0.75, t) : sm(1.379, 1.499, t);
+    float hot = exp(-pow(t - 2.590, 2.0) / 0.006);
+    v = max(v, page(p, mix(vec2(165.0, 175.0), vec2(220.0, 182.0), g), 1.0, lit, hot, ph));
+  }
+  {
+    float g = t < 1.5 ? 1.0 - ease((t - 0.3) / 0.6) : ease((t - 1.910) / 0.65);
+    float lit = t < 1.0 ? 1.0 - sm(0.3, 0.75, t) : sm(1.459, 1.579, t);
+    float hot = exp(-pow(t - 2.840, 2.0) / 0.006);
+    v = max(v, page(p, mix(vec2(300.0, 350.0), vec2(262.0, 302.0), g), 2.0, lit, hot, ph));
+  }
+  {
+    float g = t < 1.5 ? 1.0 - ease((t - 0.3) / 0.6) : ease((t - 1.970) / 0.65);
+    float lit = t < 1.0 ? 1.0 - sm(0.3, 0.75, t) : sm(1.587, 1.707, t);
+    float hot = exp(-pow(t - 3.090, 2.0) / 0.006);
+    v = max(v, page(p, mix(vec2(335.0, 125.0), vec2(282.0, 180.0), g), 3.0, lit, hot, ph));
+  }
+  // the question: the last one fades as the next comes in along the lane and lands
+  v = max(v, bubble(p, vec2(250.0, 238.0), 1.0 - sm(0.3, 0.5, t)));
+  v = max(v, bubble(p, mix(vec2(40.0, 238.0), vec2(250.0, 238.0), ease((t - 0.3) / 0.8)), sm(0.3, 0.45, t)));
+  {
+    float u = clamp((t - 0.3) / 0.8, 0.0, 1.0);
+    float sp = (u > 0.0 && u < 1.0) ? sin(3.14159 * u) : 0.0;
+    vec2 b = mix(vec2(40.0, 238.0), vec2(250.0, 238.0), ease(u));
+    for (int s = 1; s <= 3; s++) v += blob(p, b - vec2(32.0 + 13.0 * float(s), 0.0), 9.0 - 1.5 * float(s), sp * (0.5 - 0.12 * float(s)));
+  }
+  // the search ring
+  if (t > 1.100 && t < 1.750) {
+    float u = (t - 1.100) / 0.650;
+    float R = 14.0 + 136.0 * (1.0 - (1.0 - u) * (1.0 - u));
+    v += 0.5 * (1.0 - u) * exp(-pow(length((p - vec2(250.0, 238.0)) * vec2(1.0, 1.0)) - R, 2.0) / 90.0);
+  }
+  // the line to the answer: dotted, on one row of cells; each part runs down it with a short tail
+  if (abs(p.y - 238.500) < 1.0 && p.x > 290.0 && p.x < 535.0 && mod(floor((p.x - 4.0) / 7.0 + 0.5), 2.0) < 0.5) v = max(v, 0.3);
+  {
+    float u = clamp((t - 2.650) / 0.4, 0.0, 1.0);
+    if (u > 0.0 && u < 1.0) { float x = mix(304.0, 520.0, ease(u)); float k = sm(0.0, 0.1, u) * (1.0 - sm(0.85, 1.0, u)); v += blob(p, vec2(x, 238.500), 9.0, 1.2 * k) + blob(p, vec2(x - 14.0, 238.500), 6.0, 0.45 * k); }
+  }
+  {
+    float u = clamp((t - 2.900) / 0.4, 0.0, 1.0);
+    if (u > 0.0 && u < 1.0) { float x = mix(304.0, 520.0, ease(u)); float k = sm(0.0, 0.1, u) * (1.0 - sm(0.85, 1.0, u)); v += blob(p, vec2(x, 238.500), 9.0, 1.2 * k) + blob(p, vec2(x - 14.0, 238.500), 6.0, 0.45 * k); }
+  }
+  {
+    float u = clamp((t - 3.150) / 0.4, 0.0, 1.0);
+    if (u > 0.0 && u < 1.0) { float x = mix(304.0, 520.0, ease(u)); float k = sm(0.0, 0.1, u) * (1.0 - sm(0.85, 1.0, u)); v += blob(p, vec2(x, 238.500), 9.0, 1.2 * k) + blob(p, vec2(x - 14.0, 238.500), 6.0, 0.45 * k); }
+  }
+  // the answer page: faint paper; six lines, each written left to right by a hot head; a citation mark after each part
+  {
+    vec2 q = p - vec2(556.0, 177.0);
+    if (q.x >= 0.0 && q.x < 105.0 && q.y >= 0.0 && q.y < 122.2) {
+      float lc = floor(q.x / 7.0); float lk = floor(q.y / 9.4);
+      float a = 0.15 + 0.04 * sin(ph + hash(vec2(lc, lk)) * 40.0);
+      float clear = 1.0 - sm(0.3, 0.6, t);
+      for (int j = 0; j < 6; j++) {
+        float fj = float(j);
+        float w = fj < 0.5 ? 3.050 : fj < 1.5 ? 3.210 : fj < 2.5 ? 3.370 : fj < 3.5 ? 3.530 : fj < 4.5 ? 3.690 : 3.850;
+        float len = fj < 0.5 ? 13.0 : fj < 1.5 ? 11.0 : fj < 2.5 ? 12.0 : fj < 3.5 ? 9.0 : fj < 4.5 ? 12.0 : 7.0;
+        if (abs(lk - 1.0 - 2.0 * fj) < 0.5) {
+          float hc = min(len, 1.0 + floor(len * clamp((t - w) / 0.160, 0.0, 1.0)));
+          float on = t < 1.0 ? clear : step(w, t) * step(lc, hc);
+          if (lc >= 1.0 && lc < 1.0 + len) a = max(a, 0.72 * on);
+          if (t > w && t < w + 0.160 && abs(lc - hc) < 0.5) a = max(a, 1.2);
+          // the citation mark, two cells after a part's last line
+          if (mod(fj, 2.0) > 0.5 && abs(lc - len - 2.0) < 0.5) a = max(a, 1.15 * (t < 1.0 ? clear : sm(w + 0.160, w + 0.220, t)));
+        }
+      }
+      v = max(v, a);
+    }
+  }
+  return v;
+}]]></metadata>
+</svg></div>
+      </article>
+      <article class="tile tile--b tile--strong well well--deep">
+        <div class="tile__text">
+          <h3>Repeat questions come back from memory</h3>
+          <p>Popular questions are answered from cache. A write clears only the results it changes.</p>
+        </div>
+        <div class="tile__art illo" data-illos><svg class="sh-cache-layer" xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" fill="none" stroke="#1daf9c" role="img" aria-labelledby="sh-cache-layer-t">
+<title id="sh-cache-layer-t">Cache layer</title>
+<style>@scope (svg.sh-cache-layer) {
+:scope{--_ground:#ffffff;--_ink:#2a2a2a;--_ramp-1:#16645a;--_ramp-2:#1daf9c;--_ramp-3:#3fdec9;--_ramp-4:#c2f5ee;--_mark:#178c7d;--_spark:#0b463e}
+@media (prefers-color-scheme: dark){:scope{--_ground:#101112;--_ink:#dadadc;--_ramp-1:#84ebdd;--_ramp-2:#3fdec9;--_ramp-3:#1daf9c;--_ramp-4:#1a7569;--_mark:#3fdec9;--_spark:#ffffff}}
+:scope{stroke:none;--g:var(--illos-ground,var(--_ground));--k:var(--illos-ink,var(--_ink))}
+.b0,.b1,.b2,.b3{fill:none;stroke-dasharray:7 2.4}
+.b0{stroke:var(--illos-ramp-1,var(--_ramp-1))}.b1{stroke:var(--illos-ramp-2,var(--_ramp-2))}.b2{stroke:var(--illos-ramp-3,var(--_ramp-3))}.b3{stroke:var(--illos-ramp-4,var(--_ramp-4));opacity:.55}
+.sc{fill:none;stroke:rgb(from color-mix(in srgb,var(--illos-ramp-4,var(--_ramp-4)) 18%,var(--g)) r g b/clamp(.33,(r + g + b)/382.5,1));stroke-width:.8}
+.bm{fill:none;stroke:var(--illos-ramp-2,var(--_ramp-2));stroke-width:2.4;stroke-dasharray:5 2.4}
+.sp{fill:none;stroke:var(--illos-spark,var(--_spark));stroke-width:1.2;stroke-linecap:round;opacity:.85}
+.gr{stroke:rgb(from color-mix(in srgb,var(--k) 9%,var(--g)) r g b/clamp(.67,(r + g + b)/382.5,1));stroke-width:1}
+.bx,.ln,.lv{fill:none;stroke:var(--illos-mark,var(--_mark));stroke-width:1.2}
+.dot{fill:var(--illos-mark,var(--_mark))}.cf{fill:var(--illos-mark,var(--_mark))}
+.ct{fill:none;stroke:var(--g);stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round}
+@keyframes sh-cache-layer_hit{0%{opacity:1}39.762%{opacity:1}43.571%{opacity:0}87.381%{opacity:0}91.19%{opacity:1}100%{opacity:1}}
+.hit{opacity:1;animation:sh-cache-layer_hit 4.2s linear both}
+@keyframes sh-cache-layer_miss{0%{opacity:0}39.762%{opacity:0}43.571%{opacity:1}87.381%{opacity:1}91.19%{opacity:0}100%{opacity:0}}
+.miss{opacity:0;animation:sh-cache-layer_miss 4.2s linear both}
+@keyframes sh-cache-layer_clock{0%{opacity:0}100%{opacity:0}}
+.sh-clock{animation:sh-cache-layer_clock 4.2s linear both}
+*{animation-iteration-count:infinite!important;animation-play-state:var(--illos-play,running)!important}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+}
+</style>
+<g class="sh-still"><path class="sc" d="M4 0V460M11 0V460M18 0V460M25 0V460M32 0V460M39 0V460M46 0V460M53 0V460M60 0V460M67 0V460M74 0V460M81 0V460M88 0V460M95 0V460M102 0V460M109 0V460M116 0V460M123 0V460M130 0V460M137 0V460M144 0V460M151 0V460M158 0V460M165 0V460M172 0V460M179 0V460M186 0V460M193 0V460M200 0V460M207 0V460M214 0V460M221 0V460M228 0V460M235 0V460M242 0V460M249 0V460M256 0V460M263 0V460M270 0V460M277 0V460M284 0V460M291 0V460M298 0V460M305 0V460M312 0V460M319 0V460M326 0V460M333 0V460M340 0V460M347 0V460M354 0V460M361 0V460M368 0V460M375 0V460M382 0V460M389 0V460M396 0V460M403 0V460M410 0V460M417 0V460M424 0V460M431 0V460M438 0V460M445 0V460M452 0V460M459 0V460M466 0V460M473 0V460M480 0V460M487 0V460M494 0V460M501 0V460M508 0V460M515 0V460M522 0V460M529 0V460M536 0V460M543 0V460M550 0V460M557 0V460M564 0V460M571 0V460M578 0V460M585 0V460M592 0V460M599 0V460M606 0V460M613 0V460M620 0V460M627 0V460M634 0V460M641 0V460M648 0V460M655 0V460M662 0V460M669 0V460M676 0V460M683 0V460M690 0V460M697 0V460M704 0V460M711 0V460M718 0V460"/><path class="gr" d="M0 0V460M96 0V460M192 0V460M288 0V460M384 0V460M480 0V460M576 0V460M672 0V460M0 0H720M0 96H720M0 192H720M0 288H720M0 384H720"/><path class="b0" d="M81 244.4V260.8M88 244.4V251.4M298 244.4V251.4M305 253.8V260.8" stroke-width="3.6"/><path class="b1" d="M74 235V251.4M81 235V242M81 263.2V270.2M88 235V242M88 253.8V260.8M95 235V260.8M277 253.8V260.8M284 244.4V270.2M291 225.6V270.2M298 225.6V242M298 253.8V270.2M305 225.6V251.4M305 263.2V279.6M312 235V270.2M319 235V260.8M326 253.8V260.8M480 291.4V307.8M487 300.8V307.8M494 263.2V270.2M494 291.4V336M501 263.2V270.2M501 300.8V317.2M501 329V345.4M508 272.6V279.6M508 291.4V298.4M508 310.2V326.6M515 253.8V270.2M515 300.8V354.8M522 263.2V317.2M522 329V354.8M529 291.4V307.8M529 319.6V336M529 347.8V364.2M536 272.6V279.6M536 291.4V307.8M536 319.6V364.2M543 282V289M543 300.8V364.2M550 272.6V317.2M550 329V373.6M557 253.8V260.8M557 272.6V289M557 310.2V326.6M557 338.4V373.6M564 300.8V307.8M564 319.6V373.6M571 291.4V298.4M571 310.2V373.6M578 253.8V260.8M578 291.4V298.4M578 310.2V345.4M578 357.2V373.6M585 253.8V260.8M585 282V307.8M585 319.6V364.2M592 282V364.2M599 272.6V279.6M599 319.6V326.6M599 338.4V364.2M606 253.8V260.8M606 300.8V364.2M613 300.8V326.6M613 338.4V354.8M620 272.6V279.6M620 319.6V354.8M627 253.8V260.8M627 282V345.4M634 282V298.4M634 310.2V336M641 282V307.8M641 319.6V326.6M648 272.6V279.6M648 291.4V307.8M655 272.6V279.6" stroke-width="2.7"/><path class="b2" d="M67 235V260.8M74 253.8V270.2M81 225.6V232.6M88 225.6V232.6M88 263.2V270.2M95 263.2V270.2M102 235V270.2M263 235V270.2M270 225.6V270.2M277 216.2V251.4M277 263.2V289M284 206.8V242M284 272.6V289M291 206.8V223.2M291 272.6V289M298 206.8V223.2M298 272.6V289M305 216.2V223.2M305 282V289M312 206.8V232.6M312 272.6V279.6M319 216.2V232.6M319 263.2V289M326 216.2V251.4M326 263.2V279.6M333 235V270.2M340 235V260.8M473 263.2V289M480 235V289M480 310.2V317.2M487 225.6V298.4M487 310.2V326.6M494 206.8V260.8M494 272.6V289M501 197.4V260.8M501 272.6V298.4M501 319.6V326.6M508 197.4V270.2M508 282V289M508 300.8V307.8M508 329V354.8M515 188V251.4M515 272.6V298.4M522 188V260.8M522 319.6V326.6M522 357.2V364.2M529 188V289M529 310.2V317.2M529 338.4V345.4M536 178.6V270.2M536 282V289M536 310.2V317.2M543 178.6V279.6M543 291.4V298.4M543 366.6V373.6M550 178.6V270.2M550 319.6V326.6M557 169.2V251.4M557 263.2V270.2M557 291.4V307.8M557 329V336M564 178.6V298.4M564 310.2V317.2M571 178.6V289M571 300.8V307.8M578 178.6V251.4M578 263.2V289M578 300.8V307.8M578 347.8V354.8M585 178.6V251.4M585 263.2V279.6M585 310.2V317.2M585 366.6V373.6M592 178.6V279.6M592 366.6V373.6M599 178.6V270.2M599 282V317.2M599 329V336M606 188V251.4M606 263.2V298.4M613 188V298.4M613 329V336M613 357.2V364.2M620 197.4V270.2M620 282V317.2M627 197.4V251.4M627 263.2V279.6M634 206.8V279.6M634 300.8V307.8M641 216.2V279.6M641 310.2V317.2M648 225.6V270.2M648 282V289M648 310.2V317.2M655 253.8V270.2M655 282V298.4" stroke-width="1.8"/><path class="b3" d="M60 235V270.2M67 225.6V232.6M67 263.2V270.2M74 225.6V232.6M74 272.6V279.6M81 216.2V223.2M81 272.6V279.6M88 216.2V223.2M88 272.6V279.6M95 216.2V232.6M95 272.6V279.6M102 225.6V232.6M102 272.6V279.6M109 225.6V270.2M116 235V260.8M242 235V251.4M249 216.2V279.6M256 206.8V289M263 206.8V232.6M263 272.6V298.4M270 197.4V223.2M270 272.6V298.4M277 197.4V213.8M277 291.4V298.4M284 197.4V204.4M284 291.4V307.8M291 188V204.4M291 291.4V307.8M298 188V204.4M298 291.4V307.8M305 197.4V213.8M305 291.4V307.8M312 188V204.4M312 282V307.8M319 197.4V213.8M319 291.4V307.8M326 197.4V213.8M326 282V298.4M333 197.4V232.6M333 272.6V298.4M340 206.8V232.6M340 263.2V298.4M347 216.2V289M354 225.6V279.6M361 244.4V251.4M473 244.4V260.8M473 291.4V307.8M480 225.6V232.6M480 319.6V326.6M487 216.2V223.2M487 329V336M494 338.4V345.4M501 347.8V354.8M508 188V195M515 357.2V364.2M522 178.6V185.6M529 178.6V185.6M529 366.6V373.6M536 169.2V176.2M536 366.6V373.6M543 169.2V176.2M550 169.2V176.2M564 169.2V176.2M571 169.2V176.2M578 169.2V176.2M585 169.2V176.2M592 169.2V176.2M599 366.6V373.6M606 178.6V185.6M613 178.6V185.6M620 188V195M627 347.8V354.8M634 197.4V204.4M634 338.4V345.4M641 206.8V213.8M641 329V336M648 216.2V223.2M648 319.6V326.6M655 235V251.4M655 300.8V307.8" stroke-width="1.1"/><path class="sp" d="M81 246.8v1.2M81 256.2v1.2M88 246.8v1.2M298 246.8v1.2"/></g>
+<g class="box"><path class="bx" pathLength="1" d="M56 220H116V280H56Z"/><circle class="dot" cx="56" cy="220" r="2.2"/><circle class="dot" cx="116" cy="220" r="2.2"/><circle class="dot" cx="56" cy="280" r="2.2"/><circle class="dot" cx="116" cy="280" r="2.2"/><g class="chip"><rect class="cf" x="56" y="220" width="32.08" height="14.9"/><path class="ct" d="M61 230.9L61 226.3L63.3 224L65.6 226.3L65.6 230.9M61 228.03L65.6 228.03M68.36 230.9L68.36 224L71.81 224L72.96 225.15L72.96 226.3L71.81 227.45L68.36 227.45M75.72 230.9L75.72 224L79.17 224L80.32 225.15L80.32 226.3L79.17 227.45L75.72 227.45"/></g></g><path class="bx" d="M248 196H352V304H248Z"/><g class="hit"><g class="chip"><rect class="cf" x="248" y="182" width="105.68" height="14.9"/><path class="ct" d="M257.6 187.15L256.45 186L254.15 186L253 187.15L253 191.75L254.15 192.9L256.45 192.9L257.6 191.75M260.36 192.9L260.36 188.3L262.66 186L264.96 188.3L264.96 192.9M260.36 190.03L264.96 190.03M272.32 187.15L271.17 186L268.87 186L267.72 187.15L267.72 191.75L268.87 192.9L271.17 192.9L272.32 191.75M275.08 186L275.08 192.9M279.68 186L279.68 192.9M275.08 189.45L279.68 189.45M287.04 186L282.44 186L282.44 192.9L287.04 192.9M282.44 189.45L285.89 189.45M297.16 186L297.16 192.9M301.76 186L301.76 192.9M297.16 189.45L301.76 189.45M305.67 186L307.97 186M306.82 186L306.82 192.9M305.67 192.9L307.97 192.9M311.88 186L316.48 186M314.18 186L314.18 192.9M326.6 187.15L327.75 186L330.05 186L331.2 187.15L331.2 188.3L326.6 192.9L331.2 192.9M333.96 192.9L333.96 186L336.26 189.45L338.56 186L338.56 192.9M345.92 187.15L344.77 186L342.47 186L341.32 187.15L341.32 188.3L342.47 189.45L344.77 189.45L345.92 190.6L345.92 191.75L344.77 192.9L342.47 192.9L341.32 191.75"/></g></g><g class="miss"><g class="chip"><rect class="cf" x="248" y="182" width="120.4" height="14.9"/><path class="ct" d="M257.6 187.15L256.45 186L254.15 186L253 187.15L253 191.75L254.15 192.9L256.45 192.9L257.6 191.75M260.36 192.9L260.36 188.3L262.66 186L264.96 188.3L264.96 192.9M260.36 190.03L264.96 190.03M272.32 187.15L271.17 186L268.87 186L267.72 187.15L267.72 191.75L268.87 192.9L271.17 192.9L272.32 191.75M275.08 186L275.08 192.9M279.68 186L279.68 192.9M275.08 189.45L279.68 189.45M287.04 186L282.44 186L282.44 192.9L287.04 192.9M282.44 189.45L285.89 189.45M297.16 192.9L297.16 186L299.46 189.45L301.76 186L301.76 192.9M305.67 186L307.97 186M306.82 186L306.82 192.9M305.67 192.9L307.97 192.9M316.48 187.15L315.33 186L313.03 186L311.88 187.15L311.88 188.3L313.03 189.45L315.33 189.45L316.48 190.6L316.48 191.75L315.33 192.9L313.03 192.9L311.88 191.75M323.84 187.15L322.69 186L320.39 186L319.24 187.15L319.24 188.3L320.39 189.45L322.69 189.45L323.84 190.6L323.84 191.75L322.69 192.9L320.39 192.9L319.24 191.75M337.41 192.9L337.41 186L333.96 190.6L338.56 190.6M342.47 189.45L341.32 188.3L341.32 187.15L342.47 186L344.77 186L345.92 187.15L345.92 188.3L344.77 189.45L342.47 189.45L341.32 190.6L341.32 191.75L342.47 192.9L344.77 192.9L345.92 191.75L345.92 190.6L344.77 189.45M348.68 192.9L348.68 186L350.98 189.45L353.28 186L353.28 192.9M360.64 187.15L359.49 186L357.19 186L356.04 187.15L356.04 188.3L357.19 189.45L359.49 189.45L360.64 190.6L360.64 191.75L359.49 192.9L357.19 192.9L356.04 191.75"/></g></g><g class="box"><path class="bx" pathLength="1" d="M448 142H682V404H448Z"/><circle class="dot" cx="448" cy="142" r="2.2"/><circle class="dot" cx="682" cy="142" r="2.2"/><circle class="dot" cx="448" cy="404" r="2.2"/><circle class="dot" cx="682" cy="404" r="2.2"/><g class="chip"><rect class="cf" x="448" y="142" width="68.88" height="14.9"/><path class="ct" d="M453 146L453 152.9L456.45 152.9L457.6 151.75L457.6 147.15L456.45 146L453 146M460.36 152.9L460.36 148.3L462.66 146L464.96 148.3L464.96 152.9M460.36 150.03L464.96 150.03M467.72 146L472.32 146M470.02 146L470.02 152.9M475.08 152.9L475.08 148.3L477.38 146L479.68 148.3L479.68 152.9M475.08 150.03L479.68 150.03M482.44 146L482.44 152.9L485.89 152.9L487.04 151.75L487.04 150.6L485.89 149.45L482.44 149.45M482.44 146L485.89 146L487.04 147.15L487.04 148.3L485.89 149.45M489.8 152.9L489.8 148.3L492.1 146L494.4 148.3L494.4 152.9M489.8 150.03L494.4 150.03M501.76 147.15L500.61 146L498.31 146L497.16 147.15L497.16 148.3L498.31 149.45L500.61 149.45L501.76 150.6L501.76 151.75L500.61 152.9L498.31 152.9L497.16 151.75M509.12 146L504.52 146L504.52 152.9L509.12 152.9M504.52 149.45L507.97 149.45"/></g></g>
+<rect class="sh-clock" width="0" height="0"/>
+<metadata class="illos-field" data-cycle="4.2"><![CDATA[vec3 drop(float t) {
+  vec2 A = vec2(108.0, 250.0), P = vec2(262.0, 250.0), C = vec2(300.0, 250.0), O = vec2(344.0, 252.0), R = vec2(470.0, 262.0), B = vec2(560.0, 316.0);
+  if (t < 0.15) return vec3(A, 0.0);
+  if (t < 0.5) return vec3(mix(A, P, ease((t - 0.15) / 0.35)), 1.2 * sm(0.15, 0.22, t));
+  if (t < 0.95) return vec3(mix(P, A, ease((t - 0.55) / 0.4)), 1.2 * (1.0 - sm(0.85, 0.95, t)) * step(0.55, t) + 1.2 * step(t, 0.55));
+  if (t < 1.3) return vec3(A, 0.0);
+  if (t < 1.65) return vec3(mix(A, P, ease((t - 1.3) / 0.35)), 1.2 * sm(1.3, 1.37, t));
+  if (t < 1.8) return vec3(mix(P, O, (t - 1.65) / 0.15), 1.2);
+  if (t < 2.4) return vec3(mix(O, R, ease((t - 1.8) / 0.6)), 1.2);
+  if (t < 2.9) return vec3(mix(R, B, 1.0 - pow(1.0 - (t - 2.4) / 0.5, 2.0)), 1.2);
+  if (t < 3.35) return vec3(mix(B, C, ease((t - 2.95) / 0.4)), 1.2 * step(2.95, t));
+  if (t < 3.85) return vec3(mix(C, A, ease((t - 3.4) / 0.45)), 1.2 * (1.0 - sm(3.75, 3.85, t)));
+  return vec3(A, 0.0);
+}
+float ring(vec2 p, vec2 c, float t, float t0, float dur, float rmax, float k) {
+  if (t < t0 || t > t0 + dur) return 0.0;
+  float u = (t - t0) / dur;
+  return k * (1.0 - u) * exp(-pow(length((p - c) * vec2(1.0, 1.6)) - 8.0 - rmax * u, 2.0) / 30.0);
+}
+float field(vec2 p, float t) {
+  vec2 C = vec2(300.0, 250.0);
+  float v = blob(p, vec2(86.0, 250.0), 22.0, 0.95);
+  // the pool: small and hot, its surface rippling where things land
+  float kept = sm(3.3, 3.45, t) * (1.0 - sm(3.6, 4.1, t));
+  v += blob(p, C, 44.0, 0.78 + 0.45 * kept);
+  v += ring(p, C, t, 0.5, 0.6, 52.0, 0.55) + ring(p, C, t, 1.65, 0.45, 40.0, 0.35) + ring(p, C, t, 3.35, 0.55, 52.0, 0.5);
+  // the reservoir: wide and deep, denser the deeper it goes, stirring when something sinks in
+  vec2 d = (p - vec2(565.0, 272.0)) / vec2(108.0, 118.0);
+  float body = exp(-pow(max(0.0, length(d) - 0.82), 2.0) / 0.004) * step(length(d), 1.0);
+  float stir = sm(2.4, 2.6, t) * (1.0 - sm(2.9, 3.4, t));
+  v += body * (0.3 + 0.45 * clamp((p.y - 154.0) / 236.0, 0.0, 1.0) + 0.3 * stir * noise(p * 0.05 + t));
+  v += ring(p, vec2(470.0, 262.0), t, 2.4, 0.7, 70.0, 0.4);
+  vec3 q = drop(t);
+  return v + blob(p, q.xy, 11.0, q.z);
+}]]></metadata>
+</svg></div>
+        <p class="tile__stat"><b>2<small>ms</small></b><span>median answer for a cached question</span></p>
+      </article>
+      <article class="tile tile--c well well--mint">
+        <div class="tile__text">
+          <h3>Fair limits for every tenant</h3>
+          <p>Give each key a budget, so one busy customer never slows the rest.</p>
+        </div>
+        <div class="tile__art illo" data-illos><svg class="sh-rate-limit" xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" fill="none" stroke="#1daf9c" role="img" aria-labelledby="sh-rate-limit-t">
+<title id="sh-rate-limit-t">Rate limiting</title>
+<style>@scope (svg.sh-rate-limit) {
+:scope{--_ground:#ffffff;--_ink:#2a2a2a;--_ramp-1:#16645a;--_ramp-2:#1daf9c;--_ramp-3:#3fdec9;--_ramp-4:#c2f5ee;--_mark:#178c7d;--_spark:#0b463e}
+@media (prefers-color-scheme: dark){:scope{--_ground:#101112;--_ink:#dadadc;--_ramp-1:#84ebdd;--_ramp-2:#3fdec9;--_ramp-3:#1daf9c;--_ramp-4:#1a7569;--_mark:#3fdec9;--_spark:#ffffff}}
+:scope{stroke:none;--g:var(--illos-ground,var(--_ground));--k:var(--illos-ink,var(--_ink))}
+.b0,.b1,.b2,.b3{fill:none;stroke-dasharray:7 2.4}
+.b0{stroke:var(--illos-ramp-1,var(--_ramp-1))}.b1{stroke:var(--illos-ramp-2,var(--_ramp-2))}.b2{stroke:var(--illos-ramp-3,var(--_ramp-3))}.b3{stroke:var(--illos-ramp-4,var(--_ramp-4));opacity:.55}
+.sc{fill:none;stroke:rgb(from color-mix(in srgb,var(--illos-ramp-4,var(--_ramp-4)) 18%,var(--g)) r g b/clamp(.33,(r + g + b)/382.5,1));stroke-width:.8}
+.bm{fill:none;stroke:var(--illos-ramp-2,var(--_ramp-2));stroke-width:2.4;stroke-dasharray:5 2.4}
+.sp{fill:none;stroke:var(--illos-spark,var(--_spark));stroke-width:1.2;stroke-linecap:round;opacity:.85}
+.gr{stroke:rgb(from color-mix(in srgb,var(--k) 9%,var(--g)) r g b/clamp(.67,(r + g + b)/382.5,1));stroke-width:1}
+.bx,.ln,.lv{fill:none;stroke:var(--illos-mark,var(--_mark));stroke-width:1.2}
+.dot{fill:var(--illos-mark,var(--_mark))}.cf{fill:var(--illos-mark,var(--_mark))}
+.ct{fill:none;stroke:var(--g);stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round}
+@keyframes sh-rate-limit_r0{0%{transform:translate(0.00px,0px);opacity:1;animation-timing-function:linear}66.667%{transform:translate(-280.00px,0px);opacity:1;animation-timing-function:linear}73.81%{transform:translate(-310.00px,0px);opacity:0;animation-timing-function:linear}100%{transform:translate(-420.00px,0px);opacity:0;animation-timing-function:linear}}
+.r0{transform:translate(0.00px,0px);opacity:1;animation:sh-rate-limit_r0 4.2s linear both}
+@keyframes sh-rate-limit_r1{0%{transform:translate(420.00px,0px);opacity:0;animation-timing-function:linear}55.952%{transform:translate(185.00px,0px);opacity:0;animation-timing-function:linear}63.095%{transform:translate(155.00px,0px);opacity:1;animation-timing-function:linear}100%{transform:translate(0.00px,0px);opacity:1;animation-timing-function:linear}}
+.r1{transform:translate(420.00px,0px);opacity:0;animation:sh-rate-limit_r1 4.2s linear both}
+@keyframes sh-rate-limit_clock{0%{opacity:0}100%{opacity:0}}
+.sh-clock{animation:sh-rate-limit_clock 4.2s linear both}
+*{animation-iteration-count:infinite!important;animation-play-state:var(--illos-play,running)!important}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+}
+</style>
+<g class="sh-still"><path class="sc" d="M4 0V460M11 0V460M18 0V460M25 0V460M32 0V460M39 0V460M46 0V460M53 0V460M60 0V460M67 0V460M74 0V460M81 0V460M88 0V460M95 0V460M102 0V460M109 0V460M116 0V460M123 0V460M130 0V460M137 0V460M144 0V460M151 0V460M158 0V460M165 0V460M172 0V460M179 0V460M186 0V460M193 0V460M200 0V460M207 0V460M214 0V460M221 0V460M228 0V460M235 0V460M242 0V460M249 0V460M256 0V460M263 0V460M270 0V460M277 0V460M284 0V460M291 0V460M298 0V460M305 0V460M312 0V460M319 0V460M326 0V460M333 0V460M340 0V460M347 0V460M354 0V460M361 0V460M368 0V460M375 0V460M382 0V460M389 0V460M396 0V460M403 0V460M410 0V460M417 0V460M424 0V460M431 0V460M438 0V460M445 0V460M452 0V460M459 0V460M466 0V460M473 0V460M480 0V460M487 0V460M494 0V460M501 0V460M508 0V460M515 0V460M522 0V460M529 0V460M536 0V460M543 0V460M550 0V460M557 0V460M564 0V460M571 0V460M578 0V460M585 0V460M592 0V460M599 0V460M606 0V460M613 0V460M620 0V460M627 0V460M634 0V460M641 0V460M648 0V460M655 0V460M662 0V460M669 0V460M676 0V460M683 0V460M690 0V460M697 0V460M704 0V460M711 0V460M718 0V460"/><path class="gr" d="M0 0V460M96 0V460M192 0V460M288 0V460M384 0V460M480 0V460M576 0V460M672 0V460M0 0H720M0 96H720M0 192H720M0 288H720M0 384H720"/><path class="b0" d="M60 357.2V373.6M60 394.8V401.8M67 357.2V373.6M67 385.4V401.8M74 385.4V401.8M88 394.8V401.8M95 394.8V401.8M116 385.4V401.8M123 385.4V401.8M130 385.4V392.4M137 394.8V401.8M144 376V401.8M151 385.4V401.8M158 385.4V392.4M165 385.4V401.8M172 376V383M172 394.8V401.8M179 366.6V392.4M186 357.2V364.2M186 385.4V392.4M193 376V401.8M200 385.4V392.4M207 394.8V401.8M214 394.8V401.8M228 394.8V401.8M235 385.4V401.8M249 385.4V401.8M256 394.8V401.8M263 394.8V401.8M270 394.8V401.8M277 376V383M277 394.8V401.8M284 385.4V392.4M291 394.8V401.8M298 376V383M298 394.8V401.8M305 376V401.8M312 376V392.4M319 376V383M326 366.6V383M333 385.4V401.8M340 376V401.8M347 385.4V401.8M361 385.4V401.8M368 357.2V392.4M375 366.6V383M382 366.6V373.6M382 385.4V392.4M389 347.8V354.8M389 376V401.8M396 385.4V401.8M403 366.6V373.6M403 385.4V392.4M410 347.8V364.2M410 376V392.4M417 357.2V364.2M417 385.4V392.4M424 385.4V392.4M431 357.2V364.2M431 394.8V401.8M438 338.4V345.4M438 357.2V373.6M438 394.8V401.8M445 347.8V364.2M445 385.4V401.8M452 357.2V364.2M452 376V383M452 394.8V401.8M459 347.8V364.2M459 376V392.4M466 357.2V392.4M473 376V383M480 376V401.8M494 376V392.4M501 394.8V401.8M508 394.8V401.8M515 394.8V401.8M522 394.8V401.8M529 394.8V401.8M536 394.8V401.8M543 385.4V401.8M550 394.8V401.8M557 385.4V401.8M564 385.4V401.8M571 376V401.8M578 376V401.8M585 376V383M585 394.8V401.8M592 394.8V401.8M606 366.6V373.6M606 394.8V401.8M613 376V401.8M620 385.4V401.8M627 394.8V401.8M634 385.4V392.4M641 394.8V401.8M648 385.4V401.8M655 394.8V401.8" stroke-width="3.6"/><path class="b1" d="M60 310.2V354.8M60 376V392.4M67 329V354.8M67 376V383M74 329V383M81 366.6V401.8M88 385.4V392.4M102 385.4V401.8M109 385.4V401.8M116 357.2V383M123 347.8V383M130 338.4V345.4M130 357.2V383M130 394.8V401.8M137 338.4V392.4M144 338.4V345.4M144 366.6V373.6M151 347.8V383M158 338.4V383M158 394.8V401.8M165 338.4V383M172 310.2V326.6M172 338.4V373.6M172 385.4V392.4M179 300.8V307.8M179 319.6V364.2M179 394.8V401.8M186 319.6V354.8M186 366.6V383M186 394.8V401.8M193 319.6V326.6M193 338.4V373.6M200 338.4V345.4M200 357.2V383M200 394.8V401.8M207 366.6V392.4M214 376V392.4M221 385.4V401.8M228 385.4V392.4M235 366.6V383M242 366.6V401.8M249 357.2V383M256 357.2V364.2M256 376V392.4M263 366.6V392.4M270 366.6V392.4M277 385.4V392.4M284 338.4V383M284 394.8V401.8M291 319.6V326.6M291 347.8V392.4M298 319.6V373.6M298 385.4V392.4M305 310.2V317.2M305 329V373.6M312 319.6V373.6M312 394.8V401.8M319 319.6V373.6M319 385.4V401.8M326 347.8V364.2M326 385.4V401.8M333 347.8V383M340 347.8V373.6M347 347.8V383M354 338.4V401.8M361 329V383M368 329V336M368 347.8V354.8M368 394.8V401.8M375 319.6V326.6M375 338.4V364.2M375 385.4V401.8M382 319.6V326.6M382 338.4V364.2M382 376V383M382 394.8V401.8M389 291.4V345.4M389 357.2V373.6M396 291.4V298.4M396 310.2V383M403 253.8V270.2M403 291.4V364.2M403 376V383M403 394.8V401.8M410 216.2V232.6M410 253.8V260.8M410 291.4V345.4M410 366.6V373.6M410 394.8V401.8M417 216.2V232.6M417 263.2V354.8M417 366.6V383M417 394.8V401.8M424 272.6V383M424 394.8V401.8M431 216.2V223.2M431 282V354.8M431 366.6V392.4M438 216.2V232.6M438 272.6V336M438 347.8V354.8M438 376V392.4M445 216.2V232.6M445 253.8V260.8M445 282V345.4M445 366.6V383M452 282V354.8M452 366.6V373.6M452 385.4V392.4M459 282V289M459 300.8V345.4M459 366.6V373.6M459 394.8V401.8M466 300.8V354.8M466 394.8V401.8M473 300.8V373.6M473 385.4V401.8M480 300.8V373.6M487 319.6V401.8M494 357.2V373.6M494 394.8V401.8M501 357.2V392.4M508 385.4V392.4M522 385.4V392.4M529 376V392.4M536 366.6V392.4M543 357.2V383M550 347.8V392.4M557 338.4V383M564 347.8V383M571 338.4V373.6M578 338.4V345.4M578 357.2V373.6M585 329V336M585 347.8V373.6M585 385.4V392.4M592 310.2V392.4M599 319.6V326.6M599 338.4V401.8M606 319.6V364.2M606 376V392.4M613 338.4V373.6M620 347.8V383M627 366.6V392.4M634 394.8V401.8M641 385.4V392.4M648 376V383M655 366.6V392.4" stroke-width="2.7"/><path class="b2" d="M60 272.6V307.8M67 291.4V326.6M74 319.6V326.6M81 347.8V364.2M88 376V383M95 385.4V392.4M109 366.6V383M116 338.4V354.8M123 319.6V345.4M130 319.6V336M130 347.8V354.8M137 319.6V336M144 319.6V336M144 347.8V364.2M151 329V345.4M158 319.6V336M165 310.2V336M172 291.4V307.8M172 329V336M179 282V298.4M179 310.2V317.2M186 282V317.2M193 300.8V317.2M193 329V336M200 329V336M200 347.8V354.8M207 347.8V364.2M221 376V383M228 366.6V383M235 357.2V364.2M242 347.8V364.2M249 338.4V354.8M256 347.8V354.8M256 366.6V373.6M263 357.2V364.2M270 357.2V364.2M277 347.8V373.6M284 329V336M291 300.8V317.2M291 329V345.4M298 282V317.2M305 272.6V307.8M305 319.6V326.6M312 272.6V317.2M319 291.4V317.2M326 319.6V345.4M333 329V345.4M340 338.4V345.4M347 329V345.4M354 310.2V336M361 300.8V326.6M368 291.4V326.6M368 338.4V345.4M375 282V317.2M375 329V336M382 272.6V317.2M382 329V336M389 263.2V289M396 235V289M396 300.8V307.8M403 206.8V213.8M403 225.6V251.4M403 272.6V289M410 206.8V213.8M410 235V251.4M410 263.2V289M417 169.2V185.6M417 235V260.8M424 169.2V176.2M424 188V213.8M424 225.6V270.2M431 169.2V176.2M431 225.6V279.6M438 188V195M438 235V270.2M445 197.4V213.8M445 235V251.4M445 263.2V279.6M452 225.6V279.6M459 225.6V279.6M459 291.4V298.4M466 244.4V298.4M473 253.8V298.4M480 272.6V298.4M487 291.4V317.2M494 319.6V354.8M501 347.8V354.8M508 376V383M515 385.4V392.4M529 366.6V373.6M536 338.4V364.2M543 319.6V354.8M550 319.6V345.4M557 319.6V336M564 319.6V345.4M571 329V336M578 319.6V336M578 347.8V354.8M585 310.2V326.6M585 338.4V345.4M592 291.4V307.8M599 282V317.2M599 329V336M606 282V317.2M613 300.8V336M620 329V345.4M627 347.8V364.2M634 376V383M641 376V383M648 366.6V373.6M655 357.2V364.2" stroke-width="1.8"/><path class="b3" d="M403 197.4V204.4M417 122.2V138.6M417 150.4V157.4M424 112.8V129.2M424 150.4V157.4M431 141V157.4M438 150.4V157.4" stroke-width="1.1"/><path class="sp" d="M60 359.6v1.2M67 359.6v1.2M67 369v1.2M67 387.8v1.2M88 397.2v1.2M116 387.8v1.2M116 397.2v1.2M137 397.2v1.2M144 378.4v1.2M151 387.8v1.2M151 397.2v1.2M172 378.4v1.2M193 378.4v1.2M193 387.8v1.2M193 397.2v1.2M200 387.8v1.2M207 397.2v1.2M228 397.2v1.2M249 387.8v1.2M256 397.2v1.2M263 397.2v1.2M270 397.2v1.2M284 387.8v1.2M291 397.2v1.2M298 378.4v1.2M298 397.2v1.2M305 378.4v1.2M319 378.4v1.2M326 378.4v1.2M333 387.8v1.2M340 378.4v1.2M347 387.8v1.2M368 369v1.2M368 378.4v1.2M368 387.8v1.2M375 378.4v1.2M382 387.8v1.2M389 397.2v1.2M396 387.8v1.2M403 369v1.2M403 387.8v1.2M410 350.2v1.2M410 359.6v1.2M438 340.8v1.2M438 369v1.2M445 359.6v1.2M452 378.4v1.2M459 378.4v1.2M459 387.8v1.2M466 369v1.2M466 378.4v1.2M480 397.2v1.2M494 387.8v1.2M515 397.2v1.2M543 387.8v1.2M543 397.2v1.2M550 397.2v1.2M557 397.2v1.2M564 387.8v1.2M564 397.2v1.2M571 378.4v1.2M571 387.8v1.2M578 387.8v1.2M585 378.4v1.2M592 397.2v1.2M606 369v1.2M634 387.8v1.2M641 397.2v1.2M648 397.2v1.2M655 397.2v1.2"/></g>
+<path class="lv lvl" pathLength="1" d="M50 220H665"/><g class="chip"><rect class="cf" x="50" y="228" width="90.96" height="14.9"/><path class="ct" d="M55 234.3L57.3 232L57.3 238.9M56.15 238.9L58.45 238.9M63.51 232L65.81 232L66.96 233.15L66.96 237.75L65.81 238.9L63.51 238.9L62.36 237.75L62.36 233.15L63.51 232M66.96 233.15L62.36 237.75M70.87 232L73.17 232L74.32 233.15L74.32 237.75L73.17 238.9L70.87 238.9L69.72 237.75L69.72 233.15L70.87 232M74.32 233.15L69.72 237.75M77.08 238.9L81.68 232M89.04 233.15L87.89 232L85.59 232L84.44 233.15L84.44 234.3L85.59 235.45L87.89 235.45L89.04 236.6L89.04 237.75L87.89 238.9L85.59 238.9L84.44 237.75M99.16 232L99.16 238.9L103.76 238.9M107.67 232L109.97 232M108.82 232L108.82 238.9M107.67 238.9L109.97 238.9M113.88 238.9L113.88 232L116.18 235.45L118.48 232L118.48 238.9M122.39 232L124.69 232M123.54 232L123.54 238.9M122.39 238.9L124.69 238.9M128.6 232L133.2 232M130.9 232L130.9 238.9"/></g><g class="r0"><g class="box"><path class="bx" pathLength="1" d="M370 66H470V220H370Z"/><circle class="dot" cx="370" cy="66" r="2.2"/><circle class="dot" cx="470" cy="66" r="2.2"/><circle class="dot" cx="370" cy="220" r="2.2"/><circle class="dot" cx="470" cy="220" r="2.2"/><g class="chip"><rect class="cf" x="370" y="66" width="90.96" height="14.9"/><path class="ct" d="M378.45 76.9L378.45 70L375 74.6L379.6 74.6M382.36 71.15L383.51 70L385.81 70L386.96 71.15L386.96 72.3L382.36 76.9L386.96 76.9M394.32 73.45L390.87 73.45L389.72 72.3L389.72 71.15L390.87 70L393.17 70L394.32 71.15L394.32 75.75L393.17 76.9L390.87 76.9L389.72 75.75M404.44 76.9L404.44 70L407.89 70L409.04 71.15L409.04 72.3L407.89 73.45L404.44 73.45M406.74 73.45L409.04 76.9M416.4 70L411.8 70L411.8 76.9L416.4 76.9M411.8 73.45L415.25 73.45M423.76 70L419.16 70L419.16 76.9M419.16 73.45L422.61 73.45M426.52 70L426.52 75.75L427.67 76.9L429.97 76.9L431.12 75.75L431.12 70M438.48 71.15L437.33 70L435.03 70L433.88 71.15L433.88 72.3L435.03 73.45L437.33 73.45L438.48 74.6L438.48 75.75L437.33 76.9L435.03 76.9L433.88 75.75M445.84 70L441.24 70L441.24 76.9L445.84 76.9M441.24 73.45L444.69 73.45M448.6 70L448.6 76.9L452.05 76.9L453.2 75.75L453.2 71.15L452.05 70L448.6 70"/></g></g></g><g class="r1"><g class="box"><path class="bx" pathLength="1" d="M370 66H470V220H370Z"/><circle class="dot" cx="370" cy="66" r="2.2"/><circle class="dot" cx="470" cy="66" r="2.2"/><circle class="dot" cx="370" cy="220" r="2.2"/><circle class="dot" cx="470" cy="220" r="2.2"/><g class="chip"><rect class="cf" x="370" y="66" width="90.96" height="14.9"/><path class="ct" d="M378.45 76.9L378.45 70L375 74.6L379.6 74.6M382.36 71.15L383.51 70L385.81 70L386.96 71.15L386.96 72.3L382.36 76.9L386.96 76.9M394.32 73.45L390.87 73.45L389.72 72.3L389.72 71.15L390.87 70L393.17 70L394.32 71.15L394.32 75.75L393.17 76.9L390.87 76.9L389.72 75.75M404.44 76.9L404.44 70L407.89 70L409.04 71.15L409.04 72.3L407.89 73.45L404.44 73.45M406.74 73.45L409.04 76.9M416.4 70L411.8 70L411.8 76.9L416.4 76.9M411.8 73.45L415.25 73.45M423.76 70L419.16 70L419.16 76.9M419.16 73.45L422.61 73.45M426.52 70L426.52 75.75L427.67 76.9L429.97 76.9L431.12 75.75L431.12 70M438.48 71.15L437.33 70L435.03 70L433.88 71.15L433.88 72.3L435.03 73.45L437.33 73.45L438.48 74.6L438.48 75.75L437.33 76.9L435.03 76.9L433.88 75.75M445.84 70L441.24 70L441.24 76.9L445.84 76.9M441.24 73.45L444.69 73.45M448.6 70L448.6 76.9L452.05 76.9L453.2 75.75L453.2 71.15L452.05 70L448.6 70"/></g></g></g>
+<rect class="sh-clock" width="0" height="0"/>
+<metadata class="illos-field" data-cycle="4.2"><![CDATA[float rate(float x) {
+  float P = 420.0; float b = 0.0;
+  for (int j = -1; j <= 3; j++) b += exp(-pow(x - 420.0 - float(j) * P, 2.0) / 2116.0);
+  return 70.0 + 36.0 * sin(TAU * 3.0 * x / P + 0.3) + 24.0 * sin(TAU * 7.0 * x / P + 1.0) + 190.0 * b;
+}
+float field(vec2 p, float t) {
+  float X0 = 60.0, X1 = 655.0, FLOOR = 400.0, LIM = 220.0;
+  if (p.x < X0 || p.x > X1 || p.y > FLOOR) return 0.0;
+  float xx = p.x + 420.0 * t / T;
+  float top = FLOOR - rate(xx);
+  if (p.y < top) return 0.0;
+  if (p.y >= LIM) {
+    float flare = top < LIM ? 0.45 * exp(-pow(p.y - LIM, 2.0) / 50.0) : 0.0;
+    return 0.42 + 0.5 * (p.y - max(top, LIM)) / (FLOOR - max(top, LIM)) + flare;
+  }
+  // above the limit: sheared off, breaking into spray that rises and fades. It moves 60 columns and 30 cells a cycle,
+  // and its pattern repeats over exactly those, so the loop closes.
+  float rise = (LIM - p.y) / (LIM - top + 1.0);
+  float spray = step(0.6, hash(vec2(mod(floor(xx / 7.0), 60.0), mod(floor((p.y + 9.4 * 30.0 * t / T) / 9.4), 30.0))));
+  return spray * (0.55 - 0.42 * rise);
+}]]></metadata>
+</svg></div>
+      </article>
+      <article class="tile tile--d tile--strong well well--blue">
+        <div class="tile__text">
+          <h3>Filters run inside the search</h3>
+          <p>Narrow by customer, language or date before ranking, so the top results are always ones you can show.</p>
+        </div>
+        <div class="filter" aria-label="Example filter">
+          <div class="filter__chips"><span>tenant = "acme"</span><span>lang = "en"</span><span>updated &lt; 30d</span></div>
+          <p class="filter__count"><b>41,208</b> passages, <b>3</b> returned</p>
+        </div>
+      </article>
+      <article class="tile tile--e well well--sky">
+        <div class="tile__text">
+          <h3>Two regions, one endpoint</h3>
+          <p>If a region goes down, queries move to the standby before your users notice.</p>
+        </div>
+        <div class="tile__art illo" data-illos><svg class="sh-failover" xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" fill="none" stroke="#1daf9c" role="img" aria-labelledby="sh-failover-t" aria-describedby="sh-failover-d">
+<title id="sh-failover-t">Failover</title>
+<desc id="sh-failover-d">Requests flow through a router to one of two regions of server racks. The primary region loses power, the next request is turned back at its edge, and the router marks it down and sends that request and every one after it to the standby, which takes over; a strip of served requests shows no empty slot.</desc>
+<style>@scope (svg.sh-failover) {
+:scope{--_ground:#ffffff;--_ink:#2a2a2a;--_ramp-1:#16645a;--_ramp-2:#1daf9c;--_ramp-3:#3fdec9;--_ramp-4:#c2f5ee;--_mark:#178c7d;--_spark:#0b463e}
+@media (prefers-color-scheme: dark){:scope{--_ground:#101112;--_ink:#dadadc;--_ramp-1:#84ebdd;--_ramp-2:#3fdec9;--_ramp-3:#1daf9c;--_ramp-4:#1a7569;--_mark:#3fdec9;--_spark:#ffffff}}
+:scope{stroke:none;--g:var(--illos-ground,var(--_ground));--k:var(--illos-ink,var(--_ink))}
+.b0,.b1,.b2,.b3{fill:none;stroke-dasharray:7 2.4}
+.b0{stroke:var(--illos-ramp-1,var(--_ramp-1))}.b1{stroke:var(--illos-ramp-2,var(--_ramp-2))}.b2{stroke:var(--illos-ramp-3,var(--_ramp-3))}.b3{stroke:var(--illos-ramp-4,var(--_ramp-4));opacity:.55}
+.sc{fill:none;stroke:rgb(from color-mix(in srgb,var(--illos-ramp-4,var(--_ramp-4)) 18%,var(--g)) r g b/clamp(.33,(r + g + b)/382.5,1));stroke-width:.8}
+.bm{fill:none;stroke:var(--illos-ramp-2,var(--_ramp-2));stroke-width:2.4;stroke-dasharray:5 2.4}
+.sp{fill:none;stroke:var(--illos-spark,var(--_spark));stroke-width:1.2;stroke-linecap:round;opacity:.85}
+.gr{stroke:rgb(from color-mix(in srgb,var(--k) 9%,var(--g)) r g b/clamp(.67,(r + g + b)/382.5,1));stroke-width:1}
+.bx,.ln,.lv{fill:none;stroke:var(--illos-mark,var(--_mark));stroke-width:1.2}
+.dot{fill:var(--illos-mark,var(--_mark))}.cf{fill:var(--illos-mark,var(--_mark))}
+.ct{fill:none;stroke:var(--g);stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round}
+.tx{fill:none;stroke:var(--illos-mark,var(--_mark));stroke-width:1;stroke-linecap:round;stroke-linejoin:round}
+@keyframes sh-failover_down{0%{opacity:1}6.667%{opacity:1;animation-timing-function:cubic-bezier(0.23,1,0.32,1)}9.333%{opacity:0}73.556%{opacity:0;animation-timing-function:cubic-bezier(0.23,1,0.32,1)}76.222%{opacity:1}100%{opacity:1}}
+.down{opacity:1;animation:sh-failover_down 4.5s linear both}
+@keyframes sh-failover_clock{0%{opacity:0}100%{opacity:0}}
+.sh-clock{animation:sh-failover_clock 4.5s linear both}
+*{animation-iteration-count:infinite!important;animation-play-state:var(--illos-play,running)!important}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+}
+</style>
+<g class="sh-still"><path class="sc" d="M4 0V460M11 0V460M18 0V460M25 0V460M32 0V460M39 0V460M46 0V460M53 0V460M60 0V460M67 0V460M74 0V460M81 0V460M88 0V460M95 0V460M102 0V460M109 0V460M116 0V460M123 0V460M130 0V460M137 0V460M144 0V460M151 0V460M158 0V460M165 0V460M172 0V460M179 0V460M186 0V460M193 0V460M200 0V460M207 0V460M214 0V460M221 0V460M228 0V460M235 0V460M242 0V460M249 0V460M256 0V460M263 0V460M270 0V460M277 0V460M284 0V460M291 0V460M298 0V460M305 0V460M312 0V460M319 0V460M326 0V460M333 0V460M340 0V460M347 0V460M354 0V460M361 0V460M368 0V460M375 0V460M382 0V460M389 0V460M396 0V460M403 0V460M410 0V460M417 0V460M424 0V460M431 0V460M438 0V460M445 0V460M452 0V460M459 0V460M466 0V460M473 0V460M480 0V460M487 0V460M494 0V460M501 0V460M508 0V460M515 0V460M522 0V460M529 0V460M536 0V460M543 0V460M550 0V460M557 0V460M564 0V460M571 0V460M578 0V460M585 0V460M592 0V460M599 0V460M606 0V460M613 0V460M620 0V460M627 0V460M634 0V460M641 0V460M648 0V460M655 0V460M662 0V460M669 0V460M676 0V460M683 0V460M690 0V460M697 0V460M704 0V460M711 0V460M718 0V460"/><path class="gr" d="M0 0V460M96 0V460M192 0V460M288 0V460M384 0V460M480 0V460M576 0V460M672 0V460M0 0H720M0 96H720M0 192H720M0 288H720M0 384H720"/><path class="b0" d="M123 65.8V72.8M137 65.8V72.8M151 65.8V72.8M165 47V54M179 47V54M186 216.2V223.2M193 65.8V72.8M200 216.2V223.2M207 65.8V72.8M221 65.8V72.8M221 216.2V223.2M235 65.8V72.8M249 65.8V72.8M263 65.8V72.8M277 47V54M291 47V54M305 65.8V72.8M319 65.8V72.8M333 65.8V72.8M473 319.6V326.6M480 300.8V307.8M480 319.6V326.6M480 338.4V345.4M480 357.2V364.2M536 338.4V345.4M543 300.8V307.8M543 319.6V326.6M543 338.4V345.4M543 357.2V364.2M606 300.8V307.8M606 319.6V326.6M606 338.4V345.4M606 357.2V364.2" stroke-width="3.6"/><path class="b1" d="M179 216.2V223.2M214 216.2V223.2M221 206.8V213.8M221 225.6V232.6M228 216.2V223.2M235 197.4V204.4M242 216.2V223.2M277 235V242M291 263.2V270.2M298 272.6V279.6M319 310.2V317.2M340 329V336M361 329V336M389 329V336M459 300.8V307.8M459 319.6V326.6M459 338.4V345.4M459 357.2V364.2M466 300.8V307.8M466 319.6V326.6M466 338.4V345.4M466 357.2V364.2M473 300.8V307.8M473 338.4V345.4M473 357.2V364.2M522 300.8V307.8M522 319.6V326.6M522 338.4V345.4M522 357.2V364.2M529 300.8V307.8M529 319.6V326.6M529 357.2V364.2M536 300.8V307.8M536 319.6V326.6M536 357.2V364.2M585 300.8V307.8M585 319.6V326.6M585 338.4V345.4M585 357.2V364.2M592 300.8V307.8M592 319.6V326.6M592 338.4V345.4M592 357.2V364.2M599 300.8V307.8M599 319.6V326.6M599 338.4V345.4M599 357.2V364.2" stroke-width="2.7"/><path class="b2" d="M32 188V195M39 141V148M39 169.2V176.2M39 188V195M39 216.2V223.2M39 291.4V298.4M46 159.8V166.8M46 206.8V213.8M46 225.6V232.6M46 244.4V251.4M46 272.6V279.6M46 300.8V307.8M53 150.4V166.8M53 225.6V232.6M53 244.4V251.4M53 263.2V270.2M53 291.4V298.4M60 188V195M60 206.8V223.2M60 244.4V251.4M60 263.2V270.2M60 282V289M60 300.8V307.8M67 216.2V223.2M67 263.2V270.2M67 310.2V317.2M74 159.8V166.8M74 206.8V213.8M74 253.8V260.8M74 310.2V317.2M81 206.8V213.8M81 282V289M88 188V195M88 244.4V251.4M95 206.8V213.8M95 235V242M158 216.2V223.2M172 216.2V223.2M186 225.6V232.6M193 216.2V223.2M200 206.8V213.8M200 225.6V232.6M207 197.4V204.4M207 235V242M214 197.4V213.8M214 225.6V242M221 197.4V204.4M221 235V242M228 197.4V213.8M228 225.6V242M235 206.8V223.2M235 235V242M242 206.8V213.8M242 225.6V232.6M249 216.2V223.2M256 216.2V223.2M270 225.6V232.6M312 300.8V307.8M326 319.6V326.6M333 319.6V326.6M347 329V336M354 329V336M368 329V336M375 329V336M382 329V336M452 291.4V373.6M459 291.4V298.4M459 366.6V373.6M466 291.4V298.4M466 366.6V373.6M473 291.4V298.4M473 366.6V373.6M480 291.4V298.4M480 366.6V373.6M487 291.4V373.6M501 188V195M501 225.6V232.6M515 291.4V373.6M522 291.4V298.4M522 366.6V373.6M529 291.4V298.4M529 338.4V345.4M529 366.6V373.6M536 291.4V298.4M536 366.6V373.6M543 291.4V298.4M543 366.6V373.6M550 291.4V373.6M578 291.4V373.6M585 291.4V298.4M585 366.6V373.6M592 291.4V298.4M592 366.6V373.6M599 291.4V298.4M599 366.6V373.6M606 291.4V298.4M606 366.6V373.6M613 291.4V373.6" stroke-width="1.8"/><path class="b3" d="M32 169.2V185.6M32 206.8V213.8M32 244.4V251.4M39 159.8V166.8M39 244.4V251.4M39 282V289M46 216.2V223.2M46 235V242M53 169.2V176.2M53 300.8V307.8M60 141V148M60 159.8V176.2M60 253.8V260.8M60 272.6V279.6M60 310.2V317.2M67 141V148M67 188V195M67 206.8V213.8M67 282V289M74 122.2V129.2M74 150.4V157.4M74 169.2V176.2M74 225.6V232.6M74 282V289M81 150.4V166.8M81 178.6V195M81 300.8V307.8M88 141V148M88 159.8V166.8M88 225.6V232.6M88 282V289M95 159.8V166.8M95 178.6V195M95 244.4V251.4M116 216.2V223.2M123 47V54M130 216.2V223.2M137 47V54M144 216.2V223.2M151 47V54M165 65.8V72.8M179 65.8V72.8M179 206.8V213.8M179 225.6V232.6M186 206.8V213.8M193 47V54M193 206.8V213.8M193 225.6V232.6M207 47V54M207 206.8V232.6M221 47V54M235 47V54M235 225.6V232.6M249 47V54M263 47V54M263 216.2V232.6M270 206.8V213.8M277 65.8V72.8M277 206.8V213.8M284 197.4V204.4M291 65.8V72.8M291 188V195M298 178.6V185.6M305 47V54M305 169.2V176.2M312 159.8V166.8M319 47V54M319 150.4V157.4M326 141V148M333 47V54M333 131.6V138.6M340 122.2V129.2M347 122.2V129.2M354 112.8V119.8M361 112.8V119.8M368 112.8V119.8M375 112.8V119.8M382 112.8V119.8M389 112.8V119.8M396 112.8V119.8M403 112.8V119.8M410 112.8V119.8M417 112.8V119.8M431 263.2V279.6M431 310.2V326.6M431 366.6V373.6M438 263.2V279.6M438 291.4V317.2M438 329V336M438 376V383M445 291.4V307.8M445 329V336M445 347.8V354.8M452 75.2V157.4M452 282V289M452 385.4V392.4M459 75.2V82.2M459 150.4V157.4M459 282V289M459 329V336M459 385.4V392.4M466 75.2V82.2M466 150.4V157.4M466 263.2V270.2M466 282V289M466 310.2V317.2M466 347.8V354.8M473 75.2V82.2M473 150.4V157.4M473 310.2V317.2M480 75.2V82.2M480 150.4V157.4M480 263.2V270.2M480 347.8V354.8M480 376V383M487 75.2V157.4M494 282V289M494 329V336M494 385.4V392.4M501 206.8V213.8M501 272.6V279.6M501 291.4V298.4M501 347.8V354.8M501 385.4V392.4M508 282V289M508 310.2V317.2M508 338.4V354.8M508 366.6V373.6M508 385.4V392.4M515 75.2V157.4M515 263.2V270.2M515 385.4V392.4M522 75.2V82.2M522 150.4V157.4M522 263.2V279.6M522 310.2V317.2M522 347.8V354.8M529 75.2V82.2M529 150.4V157.4M536 75.2V82.2M536 150.4V157.4M536 263.2V279.6M536 329V336M536 347.8V354.8M536 376V383M543 75.2V82.2M543 150.4V157.4M543 272.6V289M543 329V336M543 376V383M550 75.2V157.4M550 282V289M550 376V383M557 272.6V289M557 357.2V364.2M564 300.8V317.2M564 385.4V392.4M571 272.6V279.6M571 319.6V326.6M571 347.8V354.8M571 366.6V392.4M578 75.2V157.4M578 385.4V392.4M585 75.2V82.2M585 150.4V157.4M585 282V289M585 310.2V317.2M585 329V336M585 347.8V354.8M585 376V383M592 75.2V82.2M592 150.4V157.4M592 263.2V270.2M592 282V289M592 329V336M592 347.8V354.8M599 75.2V82.2M599 150.4V157.4M599 263.2V289M599 310.2V317.2M606 75.2V82.2M606 150.4V157.4M606 347.8V354.8M606 385.4V392.4M613 75.2V157.4M613 272.6V279.6M620 272.6V279.6M620 300.8V307.8M620 347.8V354.8M620 366.6V373.6M627 263.2V270.2M627 282V289M627 310.2V317.2M627 338.4V345.4M627 366.6V373.6" stroke-width="1.1"/><path class="sp" d="M137 68.2v1.2M165 49.4v1.2M179 49.4v1.2M186 218.6v1.2M263 68.2v1.2M291 49.4v1.2M319 68.2v1.2M480 303.2v1.2M480 340.8v1.2M543 322v1.2M543 340.8v1.2M606 303.2v1.2M606 340.8v1.2M606 359.6v1.2"/></g>
+<path class="tx" d="M646 104.2L646 98.8L648.7 98.8L649.6 99.7L649.6 100.6L648.7 101.5L646 101.5M651.76 104.2L651.76 98.8L654.46 98.8L655.36 99.7L655.36 100.6L654.46 101.5L651.76 101.5M653.56 101.5L655.36 104.2M658.42 98.8L660.22 98.8M659.32 98.8L659.32 104.2M658.42 104.2L660.22 104.2M663.28 104.2L663.28 98.8L665.08 101.5L666.88 98.8L666.88 104.2M669.04 104.2L669.04 100.6L670.84 98.8L672.64 100.6L672.64 104.2M669.04 101.95L672.64 101.95M674.8 104.2L674.8 98.8L677.5 98.8L678.4 99.7L678.4 100.6L677.5 101.5L674.8 101.5M676.6 101.5L678.4 104.2M680.56 98.8L682.36 101.5L684.16 98.8M682.36 101.5L682.36 104.2"/><g class="down"><g class="chip"><rect class="cf" x="646" y="112.8" width="39.44" height="14.9"/><path class="ct" d="M651 116.8L651 123.7L654.45 123.7L655.6 122.55L655.6 117.95L654.45 116.8L651 116.8M659.51 116.8L661.81 116.8L662.96 117.95L662.96 122.55L661.81 123.7L659.51 123.7L658.36 122.55L658.36 117.95L659.51 116.8M665.72 116.8L666.87 123.7L668.02 120.25L669.17 123.7L670.32 116.8M673.08 123.7L673.08 116.8L677.68 123.7L677.68 116.8"/></g></g><g class="box"><path class="bx" pathLength="1" d="M415.5 251.2H642.5V406.8H415.5Z"/><circle class="dot" cx="415.5" cy="251.2" r="2.2"/><circle class="dot" cx="642.5" cy="251.2" r="2.2"/><circle class="dot" cx="415.5" cy="406.8" r="2.2"/><circle class="dot" cx="642.5" cy="406.8" r="2.2"/><g class="chip"><rect class="cf" x="415.5" y="251.2" width="61.52" height="14.9"/><path class="ct" d="M425.1 256.35L423.95 255.2L421.65 255.2L420.5 256.35L420.5 257.5L421.65 258.65L423.95 258.65L425.1 259.8L425.1 260.95L423.95 262.1L421.65 262.1L420.5 260.95M427.86 255.2L432.46 255.2M430.16 255.2L430.16 262.1M435.22 262.1L435.22 257.5L437.52 255.2L439.82 257.5L439.82 262.1M435.22 259.22L439.82 259.22M442.58 262.1L442.58 255.2L447.18 262.1L447.18 255.2M449.94 255.2L449.94 262.1L453.39 262.1L454.54 260.95L454.54 256.35L453.39 255.2L449.94 255.2M457.3 255.2L457.3 262.1L460.75 262.1L461.9 260.95L461.9 259.8L460.75 258.65L457.3 258.65M457.3 255.2L460.75 255.2L461.9 256.35L461.9 257.5L460.75 258.65M464.66 255.2L466.96 258.65L469.26 255.2M466.96 258.65L466.96 262.1"/></g></g>
+<rect class="sh-clock" width="0" height="0"/>
+<metadata class="illos-field" data-cycle="4.5"><![CDATA[vec2 atA(float u) { float x = mix(237.0, 420.0, u); return vec2(x, 219.7000 + -106.9000 * smoothstep(251.0, 370.0, x)); }
+vec2 atB(float u) { float x = mix(237.0, 391.5000, u); return vec2(x, 219.7000 + 109.3000 * smoothstep(251.0, 341.5000, x)); }
+// a rack of 6 columns by 9 cells: rails, caps, four units with a status light each. act is 0 dark, 0.5 standing by,
+// 1 serving; hit flashes its lights.
+float rack(float col, float cell, float c0, float k0, float act, float hit, float ph, float s) {
+  float lc = col - c0; float lr = cell - k0;
+  if (lc < 0.0 || lc > 5.0 || lr < 0.0 || lr > 8.0) return 0.0;
+  float frame = 0.2 + 0.26 * min(act * 2.0, 1.0);
+  if (lc < 0.5 || lc > 4.5 || lr < 0.5 || lr > 7.5) return frame;
+  if (mod(lr, 2.0) < 0.5) return 0.0;
+  if (lc > 3.5) return mix(act, 1.1 + 0.4 * hit, sm(0.6, 0.9, act));
+  return act * (0.68 + 0.08 * sin(2.0 * ph + hash(vec2(lr + s, lc)) * 30.0));
+}
+// a flash of width w round time s, on the cycle: the nearer of s and its copy a cycle away
+float at(float t, float s, float w) { float d = t - s; d -= T * floor(d / T + 0.5); return exp(-d * d / w); }
+// a line's band, at least a column wide and a cell tall
+float band(float d, float k) { return k * (1.0 - sm(3.6, 4.8, abs(d))); }
+float field(vec2 p, float t) {
+  if (p.x < 24.0 || p.x > 696.0 || p.y < 24.0 || p.y > 436.0) return 0.0;
+  float ph = TAU * t / T;
+  float col = floor((p.x - 4.0) / 7.0 + 0.5);
+  float cell = floor(p.y / 9.4);
+  float v = 0.0;
+  // the regions' states: the primary boots, stands by, serves, loses power; the standby serves, stands down, takes over
+  float pa = t < 1.0 ? sm(0.3, 0.8, t) : 1.0 - sm(2.8500, 3.1000, t);
+  float actA = t < 1.0 ? 0.5 * sm(0.3, 0.8, t) : (0.5 + 0.5 * sm(1.6, 1.8, t)) * (1.0 - sm(2.8500, 3.1000, t));
+  float actB = t < 2.6 ? 1.0 - 0.5 * sm(1.95, 2.2, t) : 0.5 + 0.5 * sm(3.3100, 3.5300, t);
+  float flash = exp(-pow(t - 2.8800, 2.0) / 0.0012);
+  float toA = sm(1.6, 1.7, t) * (1.0 - sm(3.3100, 3.4100, t));
+  float hitA = 0.0; float hitB = 0.0;
+  hitB += at(t, 0.5300, 0.006);
+  hitB += at(t, 1.0925, 0.006);
+  hitB += at(t, 1.6550, 0.006);
+  hitA += at(t, 2.2175, 0.006);
+  hitA += at(t, 2.7800, 0.006);
+  hitB += at(t, 3.7600, 0.006);
+  hitB += at(t, 3.9050, 0.006);
+  hitB += at(t, 4.4675, 0.006);
+  // the floors: faint ground; the primary's goes out with its power
+  float hs = hash(floor(p / vec2(7.0, 9.4)) + 5.0);
+  if (col >= 61.0 && col <= 89.0) {
+    if (cell >= 5.0 && cell <= 18.0) v = max(v, step(0.62, hs) * (0.16 + 0.04 * sin(ph + hs * 40.0)) * pa + 0.6 * flash * step(0.62, hs));
+    if (cell >= 28.0 && cell <= 41.0) v = max(v, step(0.62, hs) * (0.16 + 0.04 * sin(ph + hs * 40.0)));
+  }
+  v = max(v, rack(col, cell, 64.0, 8.0, actA, hitA, ph, 0.0) + 0.7 * flash * step(0.1, rack(col, cell, 64.0, 8.0, 1.0, 0.0, ph, 0.0)));
+  v = max(v, rack(col, cell, 64.0, 31.0, actB, hitB, ph, 3.0));
+  v = max(v, rack(col, cell, 73.0, 8.0, actA, 0.0, ph, 1.0) + 0.7 * flash * step(0.1, rack(col, cell, 73.0, 8.0, 1.0, 0.0, ph, 0.0)));
+  v = max(v, rack(col, cell, 73.0, 31.0, actB, 0.0, ph, 4.0));
+  v = max(v, rack(col, cell, 82.0, 8.0, actA, 0.0, ph, 2.0) + 0.7 * flash * step(0.1, rack(col, cell, 82.0, 8.0, 1.0, 0.0, ph, 0.0)));
+  v = max(v, rack(col, cell, 82.0, 31.0, actB, 0.0, ph, 5.0));
+  // the replication line: dotted, from the primary's floor to the standby's box; copies run from the serving region
+  if (abs(p.x - 501.0) < 1.0 && p.y > 184.6000 && p.y < 241.2000) v = max(v, mod(cell, 2.0) < 0.5 ? 0.32 : 0.0);
+  { float u = clamp((t - 0.8000) / 0.25, 0.0, 1.0); if (u > 0.0 && u < 1.0) v += blob(p, vec2(501.0, mix(229.2000, 190.6000, ease(u))), 7.0, 1.0 * sm(0.0, 0.15, u) * (1.0 - sm(0.85, 1.0, u))); }
+  { float u = clamp((t - 1.0500) / 0.25, 0.0, 1.0); if (u > 0.0 && u < 1.0) v += blob(p, vec2(501.0, mix(229.2000, 190.6000, ease(u))), 7.0, 1.0 * sm(0.0, 0.15, u) * (1.0 - sm(0.85, 1.0, u))); }
+  { float u = clamp((t - 1.3000) / 0.25, 0.0, 1.0); if (u > 0.0 && u < 1.0) v += blob(p, vec2(501.0, mix(229.2000, 190.6000, ease(u))), 7.0, 1.0 * sm(0.0, 0.15, u) * (1.0 - sm(0.85, 1.0, u))); }
+  { float u = clamp((t - 2.0) / 0.25, 0.0, 1.0); if (u > 0.0 && u < 1.0) v += blob(p, vec2(501.0, mix(190.6000, 229.2000, ease(u))), 7.0, 1.0 * sm(0.0, 0.15, u) * (1.0 - sm(0.85, 1.0, u))); }
+  { float u = clamp((t - 2.4000) / 0.25, 0.0, 1.0); if (u > 0.0 && u < 1.0) v += blob(p, vec2(501.0, mix(190.6000, 229.2000, ease(u))), 7.0, 1.0 * sm(0.0, 0.15, u) * (1.0 - sm(0.85, 1.0, u))); }
+  // the users: a crowd of faint points that flicker, and the dotted way in to the router
+  {
+    vec2 d = (p - vec2(64.0, 219.7000)) / vec2(38.0, 100.0);
+    if (length(d) < 1.0) v = max(v, step(0.6, hs) * (0.46 + 0.12 * sin(ph + hs * 50.0)) * (1.0 - 0.35 * length(d)));
+  }
+  if (abs(p.y - 219.7000) < 1.0 && p.x > 108.0 && p.x < 201.0) v = max(v, mod(col, 2.0) < 0.5 ? 0.3 : 0.0);
+  // the router: a dense core in a ring, and its two branches; the one it sends down is lit
+  v += blob(p, vec2(221.0, 219.7000), 13.0, 1.1 + 0.4 * exp(-pow(t - 3.3100, 2.0) / 0.003));
+  v += 0.5 * exp(-pow(length(p - vec2(221.0, 219.7000)) - 22.0, 2.0) / 16.0);
+  if (p.x > 237.0 && p.x < 420.0) v = max(v, band(p.y - atA(clamp((p.x - 237.0) / 183.0, 0.0, 1.0)).y, 0.26 + 0.32 * toA));
+  if (p.x > 237.0 && p.x < 391.5000) v = max(v, band(p.y - atB(clamp((p.x - 237.0) / 154.5000, 0.0, 1.0)).y, 0.26 + 0.32 * (1.0 - toA)));
+  // the requests: in from the crowd (one crosses the seam), then down a branch; the one sent to the dead primary is
+  // turned back at its edge, and resent to the standby
+  for (int j = 0; j < 8; j++) for (int w = 0; w <= 1; w++) {
+    float a = 0.0800 + 0.5625 * float(j) + float(w) * T;
+    float u = clamp((t - a + 0.35) / 0.35, 0.0, 1.0);
+    if (u > 0.0 && u < 1.0) v += blob(p, vec2(mix(108.0, 207.0, u), 219.7000), 8.0, 1.15 * sm(0.0, 0.1, u));
+  }
+  { float u = clamp((t - 0.0800) / 0.4000, 0.0, 1.0); if (u > 0.0 && u < 1.0) v += blob(p, atB(ease(u)), 8.0, 1.15 * (1.0 - sm(0.9, 1.0, u))); }
+  { float u = clamp((t - 0.6425) / 0.4000, 0.0, 1.0); if (u > 0.0 && u < 1.0) v += blob(p, atB(ease(u)), 8.0, 1.15 * (1.0 - sm(0.9, 1.0, u))); }
+  { float u = clamp((t - 1.2050) / 0.4000, 0.0, 1.0); if (u > 0.0 && u < 1.0) v += blob(p, atB(ease(u)), 8.0, 1.15 * (1.0 - sm(0.9, 1.0, u))); }
+  { float u = clamp((t - 1.7675) / 0.4000, 0.0, 1.0); if (u > 0.0 && u < 1.0) v += blob(p, atA(ease(u)), 8.0, 1.15 * (1.0 - sm(0.9, 1.0, u))); }
+  { float u = clamp((t - 2.3300) / 0.4000, 0.0, 1.0); if (u > 0.0 && u < 1.0) v += blob(p, atA(ease(u)), 8.0, 1.15 * (1.0 - sm(0.9, 1.0, u))); }
+  { float u = clamp((t - 2.8925) / 0.4000, 0.0, 1.0); if (u > 0.0 && u < 1.0) v += blob(p, atA(ease(u)), 8.0, 1.15);
+    float b = clamp((t - 3.2925) / 0.18, 0.0, 1.0); if (b > 0.0 && b < 1.0) v += blob(p, atA(1.0) - vec2(22.0 * (1.0 - pow(1.0 - b, 3.0)), 0.0), 8.0, 1.15 * (1.0 - b));
+    float r = clamp((t - 3.3100) / 0.4000, 0.0, 1.0); if (r > 0.0 && r < 1.0) v += blob(p, atB(ease(r)), 8.0, 1.15 * (1.0 - sm(0.9, 1.0, r))); }
+  { float u = clamp((t - 3.4550) / 0.4000, 0.0, 1.0); if (u > 0.0 && u < 1.0) v += blob(p, atB(ease(u)), 8.0, 1.15 * (1.0 - sm(0.9, 1.0, u))); }
+  { float u = clamp((t - 4.0175) / 0.4000, 0.0, 1.0); if (u > 0.0 && u < 1.0) v += blob(p, atB(ease(u)), 8.0, 1.15 * (1.0 - sm(0.9, 1.0, u))); }
+  // the strip: a slot opens at the right as each request reaches the router, and fills, in its region's row, once
+  // that request is served
+  float n = 0.0;
+  n += ease((t - 0.0800) / 0.3);
+  n += ease((t - 0.6425) / 0.3);
+  n += ease((t - 1.2050) / 0.3);
+  n += ease((t - 1.7675) / 0.3);
+  n += ease((t - 2.3300) / 0.3);
+  n += ease((t - 2.8925) / 0.3);
+  n += ease((t - 3.4550) / 0.3);
+  n += ease((t - 4.0175) / 0.3);
+  float k = cell - 5.0;
+  if (p.x > 100.0 && p.x < 350.0 && k > -0.5 && k < 2.5 && mod(k, 2.0) < 0.5) {
+    float q = floor(n - 1.0 - (330.0 - p.x) / 14.0 + 0.5);
+    float cx = 330.0 - 14.0 * (n - 1.0 - q);
+    if (abs(p.x - cx) < 3.5 && cx > 106.0 && cx < 344.0) {
+      float j = mod(q, 8.0);
+      float inA = (abs(j - 3.0) < 0.5 || abs(j - 4.0) < 0.5) ? 1.0 : 0.0;
+      float s = j < 0.5 ? 0.4800 : j < 1.5 ? 1.0425 : j < 2.5 ? 1.6050 : j < 3.5 ? 2.1675 : j < 4.5 ? 2.7300 : j < 5.5 ? 3.7100 : j < 6.5 ? 3.8550 : 4.4175;
+      float done = q < -0.5 ? 1.0 : sm(s, s + 0.06, t);
+      float wt = clamp((cx - 106.0) / 14.0, 0.0, 1.0) * clamp((344.0 - cx) / 14.0, 0.0, 1.0);
+      float mine = k < 0.5 ? inA : 1.0 - inA;
+      v = max(v, wt * (0.18 + (mine * 0.92) * done));
+    }
+  }
+  return v;
+}]]></metadata>
+</svg></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="numbers" aria-label="Sounder in numbers">
+  <div class="wrap">
+    <ul class="figures">
+      <li><p class="fig">38<small>ms</small></p><p>Median search across 100M vectors</p></li>
+      <li><p class="fig">99.99<small>%</small></p><p>Uptime over the last 12 months</p></li>
+      <li><p class="fig">2.1<small>B</small></p><p>Vectors stored by 900 teams</p></li>
+      <li><p class="fig">11</p><p>Regions to keep data near users</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="customers" aria-labelledby="customers-h">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="customers-h">Teams that stopped tuning search by hand</h2>
+    </div>
+    <ul class="quotes">
+      <li class="quote">
+        <span class="mark mark--1"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8"/><circle class="cut" cx="10" cy="10" r="3.5"/></svg>Halyard</span>
+        <blockquote>Our support bot stopped making up refund rules the week we moved retrieval to Sounder.</blockquote>
+        <p class="who">Mara Lindqvist, Head of Support Engineering</p>
+      </li>
+      <li class="quote">
+        <span class="mark mark--2"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="2" width="7" height="16" rx="1.5"/><rect x="11" y="6" width="7" height="12" rx="1.5"/></svg>Quarrystone</span>
+        <blockquote>Forty million contract clauses, and search still comes back before the page finishes painting.</blockquote>
+        <p class="who">Dev Raman, Staff Engineer</p>
+      </li>
+      <li class="quote">
+        <span class="mark mark--3"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 16L10 3L18 16Z"/></svg>Kitewing</span>
+        <blockquote>We deleted two services and a cron job. The filters alone paid for the move.</blockquote>
+        <p class="who">Ines Okafor, CTO</p>
+      </li>
+      <li class="quote">
+        <span class="mark mark--4"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="2" width="16" height="16" rx="8"/><rect class="cut" x="2" y="9" width="16" height="2"/></svg>Bramblebook</span>
+        <blockquote>Each customer gets their own namespace, so nobody ever sees another school&rsquo;s notes.</blockquote>
+        <p class="who">Tomas Weller, Platform Lead</p>
+      </li>
+      <li class="quote">
+        <span class="mark mark--5"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4h14v3H3zM3 9h10v3H3zM3 14h6v3H3z"/></svg>Saltmarsh Health</span>
+        <blockquote>Clinicians get an answer with the guideline it came from. That is the only kind they trust.</blockquote>
+        <p class="who">Priya Natarajan, Product Director</p>
+      </li>
+      <li class="quote">
+        <span class="mark mark--6"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="6" cy="10" r="4"/><circle cx="14" cy="10" r="4"/></svg>Ottermail</span>
+        <blockquote>Inbox search went from keyword roulette to finding the thread you meant on the first try.</blockquote>
+        <p class="who">Sam Achterberg, Engineering Manager</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="pricing" aria-labelledby="pricing-h">
+  <div class="wrap">
+    <div class="head head--split">
+      <h2 id="pricing-h">Pay for what you store and search</h2>
+      <p>The first million vectors and 100,000 queries are free every month. After that you pay for usage, and you can see the bill coming.</p>
+    </div>
+    <div class="price">
+      <div class="est" role="group" aria-labelledby="est-h">
+        <h3 id="est-h" class="sr">Estimate your monthly bill</h3>
+        <div class="est__row">
+          <div class="est__label"><label for="vectors">Vectors stored</label><output for="vectors" id="vectors-out">25M</output></div>
+          <input id="vectors" type="range" min="0" max="9" step="1" value="4" aria-valuetext="25 million vectors">
+          <div class="est__scale" aria-hidden="true"><span>1M</span><span>1B</span></div>
+        </div>
+        <div class="est__row">
+          <div class="est__label"><label for="queries">Queries per month</label><output for="queries" id="queries-out">2M</output></div>
+          <input id="queries" type="range" min="0" max="9" step="1" value="4" aria-valuetext="2 million queries">
+          <div class="est__scale" aria-hidden="true"><span>100K</span><span>100M</span></div>
+        </div>
+        <dl class="est__lines">
+          <div><dt>Storage <span>$0.80 per million vectors</span></dt><dd id="cost-store">$19.20</dd></div>
+          <div><dt>Queries <span>$4 per million queries</span></dt><dd id="cost-query">$7.60</dd></div>
+        </dl>
+        <div class="est__total">
+          <p>Estimated monthly bill</p>
+          <output id="total" aria-live="polite">$26.80</output>
+        </div>
+        <div class="est__cta">
+          <a class="btn btn--primary" href="#top">Start free <svg class="i"><use href="#i-arrow"/></svg></a>
+          <a class="link" href="#faq">Over a billion vectors? Talk to us</a>
+        </div>
+      </div>
+      <div class="well well--lilac price__art">
+        <div class="illo" data-illos><svg class="sh-billing-basin" xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" fill="none" stroke="#1daf9c" role="img" aria-labelledby="sh-billing-basin-t" aria-describedby="sh-billing-basin-d">
+<title id="sh-billing-basin-t">Usage billing</title>
+<desc id="sh-billing-basin-d">Usage drops fall into a graduated basin and raise its level a step at a time as the month's days pass; at the month's end the basin drains through a narrow outlet into a meter that prints the invoice slip line by line, and the total shows once it is out.</desc>
+<style>@scope (svg.sh-billing-basin) {
+:scope{--_ground:#ffffff;--_ink:#2a2a2a;--_ramp-1:#16645a;--_ramp-2:#1daf9c;--_ramp-3:#3fdec9;--_ramp-4:#c2f5ee;--_mark:#178c7d;--_spark:#0b463e}
+@media (prefers-color-scheme: dark){:scope{--_ground:#101112;--_ink:#dadadc;--_ramp-1:#84ebdd;--_ramp-2:#3fdec9;--_ramp-3:#1daf9c;--_ramp-4:#1a7569;--_mark:#3fdec9;--_spark:#ffffff}}
+:scope{stroke:none;--g:var(--illos-ground,var(--_ground));--k:var(--illos-ink,var(--_ink))}
+.b0,.b1,.b2,.b3{fill:none;stroke-dasharray:7 2.4}
+.b0{stroke:var(--illos-ramp-1,var(--_ramp-1))}.b1{stroke:var(--illos-ramp-2,var(--_ramp-2))}.b2{stroke:var(--illos-ramp-3,var(--_ramp-3))}.b3{stroke:var(--illos-ramp-4,var(--_ramp-4));opacity:.55}
+.sc{fill:none;stroke:rgb(from color-mix(in srgb,var(--illos-ramp-4,var(--_ramp-4)) 18%,var(--g)) r g b/clamp(.33,(r + g + b)/382.5,1));stroke-width:.8}
+.bm{fill:none;stroke:var(--illos-ramp-2,var(--_ramp-2));stroke-width:2.4;stroke-dasharray:5 2.4}
+.sp{fill:none;stroke:var(--illos-spark,var(--_spark));stroke-width:1.2;stroke-linecap:round;opacity:.85}
+.gr{stroke:rgb(from color-mix(in srgb,var(--k) 9%,var(--g)) r g b/clamp(.67,(r + g + b)/382.5,1));stroke-width:1}
+.bx,.ln,.lv{fill:none;stroke:var(--illos-mark,var(--_mark));stroke-width:1.2}
+.dot{fill:var(--illos-mark,var(--_mark))}.cf{fill:var(--illos-mark,var(--_mark))}
+.ct{fill:none;stroke:var(--g);stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round}
+.tx{fill:none;stroke:var(--illos-mark,var(--_mark));stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round}
+@keyframes sh-billing-basin_tot{0%{opacity:1;transform:scale(1)}50.476%{opacity:1;transform:scale(1);animation-timing-function:cubic-bezier(0.23,1,0.32,1)}54.048%{opacity:0;transform:scale(0.92)}86.19%{opacity:0;transform:scale(0.92);animation-timing-function:cubic-bezier(0.23,1,0.32,1)}90.476%{opacity:1;transform:scale(1)}100%{opacity:1;transform:scale(1)}}
+.tot{opacity:1;transform:scale(1);animation:sh-billing-basin_tot 4.2s linear both}
+.tot{transform-box:view-box;transform-origin:557.7px 447.1px}
+@keyframes sh-billing-basin_clock{0%{opacity:0}100%{opacity:0}}
+.sh-clock{animation:sh-billing-basin_clock 4.2s linear both}
+*{animation-iteration-count:infinite!important;animation-play-state:var(--illos-play,running)!important}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+}
+</style>
+<g class="sh-still"><path class="sc" d="M4 0V460M11 0V460M18 0V460M25 0V460M32 0V460M39 0V460M46 0V460M53 0V460M60 0V460M67 0V460M74 0V460M81 0V460M88 0V460M95 0V460M102 0V460M109 0V460M116 0V460M123 0V460M130 0V460M137 0V460M144 0V460M151 0V460M158 0V460M165 0V460M172 0V460M179 0V460M186 0V460M193 0V460M200 0V460M207 0V460M214 0V460M221 0V460M228 0V460M235 0V460M242 0V460M249 0V460M256 0V460M263 0V460M270 0V460M277 0V460M284 0V460M291 0V460M298 0V460M305 0V460M312 0V460M319 0V460M326 0V460M333 0V460M340 0V460M347 0V460M354 0V460M361 0V460M368 0V460M375 0V460M382 0V460M389 0V460M396 0V460M403 0V460M410 0V460M417 0V460M424 0V460M431 0V460M438 0V460M445 0V460M452 0V460M459 0V460M466 0V460M473 0V460M480 0V460M487 0V460M494 0V460M501 0V460M508 0V460M515 0V460M522 0V460M529 0V460M536 0V460M543 0V460M550 0V460M557 0V460M564 0V460M571 0V460M578 0V460M585 0V460M592 0V460M599 0V460M606 0V460M613 0V460M620 0V460M627 0V460M634 0V460M641 0V460M648 0V460M655 0V460M662 0V460M669 0V460M676 0V460M683 0V460M690 0V460M697 0V460M704 0V460M711 0V460M718 0V460"/><path class="gr" d="M0 0V460M96 0V460M192 0V460M288 0V460M384 0V460M480 0V460M576 0V460M672 0V460M0 0H720M0 96H720M0 192H720M0 288H720M0 384H720"/><path class="b0" d="M67 75.2V82.2M88 75.2V110.4M95 103.4V138.6M102 141V176.2M109 169.2V204.4M116 206.8V242M123 235V270.2M123 291.4V298.4M130 37.6V44.6M130 272.6V298.4M137 37.6V44.6M137 291.4V298.4M144 37.6V44.6M144 291.4V298.4M151 37.6V44.6M151 291.4V298.4M158 37.6V44.6M158 291.4V298.4M165 37.6V44.6M165 291.4V298.4M172 37.6V44.6M172 291.4V298.4M179 37.6V44.6M186 37.6V44.6M186 291.4V298.4M193 37.6V44.6M193 291.4V298.4M193 385.4V392.4M200 37.6V44.6M200 291.4V307.8M207 37.6V44.6M207 291.4V298.4M214 37.6V44.6M214 291.4V298.4M221 37.6V44.6M221 291.4V298.4M228 37.6V44.6M228 291.4V298.4M235 37.6V44.6M235 291.4V298.4M242 37.6V44.6M242 291.4V298.4M249 37.6V44.6M256 37.6V44.6M256 291.4V298.4M263 291.4V298.4M270 272.6V298.4M277 235V270.2M277 291.4V298.4M284 206.8V242M291 169.2V204.4M298 141V176.2M305 103.4V138.6M312 75.2V110.4M333 75.2V82.2M340 75.2V82.2M438 357.2V364.2M445 357.2V364.2M452 357.2V364.2M459 357.2V364.2M487 131.6V138.6M487 178.6V185.6M487 206.8V213.8M487 235V242M487 300.8V307.8M494 131.6V138.6M494 178.6V185.6M494 206.8V213.8M494 235V242M494 300.8V307.8M501 131.6V138.6M501 178.6V185.6M501 300.8V307.8M508 131.6V138.6M508 178.6V185.6M508 206.8V213.8M508 300.8V307.8M515 131.6V138.6M515 178.6V185.6M515 300.8V307.8M522 131.6V138.6M522 178.6V185.6M529 131.6V138.6M536 131.6V138.6M543 300.8V307.8M550 300.8V307.8M557 178.6V185.6M557 206.8V213.8M557 235V242M557 300.8V307.8M564 178.6V185.6M564 206.8V213.8M564 235V242M564 300.8V307.8M571 178.6V185.6M571 206.8V213.8M571 235V242M571 300.8V307.8M578 178.6V185.6M578 206.8V213.8M578 235V242M578 300.8V307.8M606 357.2V364.2M613 357.2V364.2M620 357.2V364.2" stroke-width="3.6"/><path class="b1" d="M60 75.2V82.2M67 122.2V129.2M74 75.2V82.2M74 122.2V129.2M81 75.2V110.4M81 122.2V129.2M81 150.4V157.4M81 178.6V185.6M88 112.8V148M88 178.6V185.6M88 235V242M95 141V185.6M95 206.8V213.8M95 235V242M102 178.6V213.8M102 235V242M102 291.4V298.4M109 206.8V242M109 263.2V270.2M109 291.4V298.4M116 244.4V279.6M116 291.4V298.4M123 272.6V289M123 300.8V307.8M130 300.8V307.8M137 300.8V307.8M144 300.8V307.8M151 300.8V307.8M158 47V54M158 300.8V307.8M165 300.8V307.8M172 300.8V307.8M179 47V54M179 291.4V307.8M186 300.8V307.8M193 300.8V307.8M200 47V54M207 300.8V307.8M214 300.8V307.8M221 47V54M221 300.8V307.8M228 300.8V307.8M235 300.8V307.8M242 47V54M242 300.8V307.8M249 291.4V307.8M256 300.8V307.8M263 300.8V307.8M270 300.8V307.8M277 272.6V289M277 300.8V307.8M284 244.4V279.6M291 206.8V242M298 178.6V213.8M305 141V176.2M312 112.8V148M319 75.2V110.4M326 75.2V82.2M438 366.6V373.6M438 394.8V401.8M445 366.6V373.6M445 394.8V401.8M452 366.6V401.8M459 366.6V373.6M459 394.8V401.8M466 366.6V401.8M473 122.2V138.6M473 150.4V204.4M473 216.2V251.4M473 263.2V279.6M473 300.8V354.8M473 366.6V373.6M473 394.8V401.8M480 122.2V129.2M480 366.6V401.8M487 159.8V166.8M487 272.6V279.6M487 338.4V345.4M487 366.6V373.6M487 394.8V401.8M494 122.2V129.2M494 366.6V401.8M501 122.2V129.2M501 159.8V166.8M501 206.8V213.8M501 235V242M501 338.4V345.4M501 366.6V373.6M501 394.8V401.8M508 122.2V129.2M508 235V242M508 366.6V401.8M515 122.2V129.2M515 159.8V166.8M515 338.4V345.4M515 366.6V373.6M515 394.8V401.8M522 366.6V401.8M529 122.2V129.2M529 159.8V166.8M529 272.6V279.6M529 366.6V373.6M529 394.8V401.8M536 122.2V129.2M536 366.6V401.8M543 159.8V166.8M543 272.6V279.6M543 366.6V373.6M543 394.8V401.8M550 366.6V401.8M557 122.2V129.2M557 159.8V166.8M557 272.6V279.6M557 338.4V345.4M557 366.6V373.6M557 394.8V401.8M564 122.2V138.6M564 366.6V401.8M571 122.2V129.2M571 159.8V166.8M571 272.6V279.6M571 338.4V345.4M571 366.6V373.6M571 394.8V401.8M578 122.2V129.2M578 366.6V401.8M585 272.6V279.6M585 366.6V373.6M585 394.8V401.8M592 131.6V138.6M592 159.8V166.8M592 178.6V204.4M592 216.2V242M592 263.2V336M592 366.6V401.8M599 366.6V373.6M599 394.8V401.8M606 366.6V373.6M606 394.8V401.8M613 366.6V373.6M613 394.8V401.8M620 366.6V401.8" stroke-width="2.7"/><path class="b2" d="M88 150.4V157.4M130 28.2V35.2M137 28.2V35.2M137 47V54M144 28.2V35.2M151 28.2V35.2M158 28.2V35.2M165 28.2V35.2M172 28.2V35.2M179 28.2V35.2M193 28.2V35.2M193 310.2V383M200 28.2V35.2M200 385.4V392.4M207 28.2V35.2M207 310.2V373.6M207 385.4V392.4M214 366.6V373.6M214 385.4V392.4M221 28.2V35.2M221 366.6V373.6M221 385.4V392.4M228 28.2V35.2M228 366.6V373.6M228 385.4V392.4M235 28.2V35.2M235 366.6V373.6M235 385.4V392.4M242 28.2V35.2M242 366.6V373.6M242 385.4V392.4M249 28.2V35.2M249 366.6V373.6M249 385.4V392.4M256 28.2V35.2M256 366.6V373.6M256 385.4V392.4M263 366.6V373.6M263 385.4V392.4M270 366.6V373.6M270 385.4V392.4M277 366.6V373.6M277 385.4V392.4M284 366.6V373.6M284 385.4V392.4M291 366.6V373.6M291 385.4V392.4M298 366.6V373.6M298 385.4V392.4M305 366.6V373.6M305 385.4V392.4M312 366.6V373.6M312 385.4V392.4M319 366.6V373.6M319 385.4V392.4M326 366.6V373.6M326 385.4V392.4M333 366.6V373.6M333 385.4V392.4M340 366.6V373.6M340 385.4V392.4M347 366.6V373.6M347 385.4V392.4M354 366.6V373.6M354 385.4V392.4M361 366.6V373.6M361 385.4V392.4M368 366.6V373.6M368 385.4V392.4M375 366.6V373.6M375 385.4V392.4M382 366.6V373.6M382 385.4V392.4M389 366.6V373.6M389 385.4V392.4M396 366.6V373.6M396 385.4V392.4M403 366.6V373.6M403 385.4V392.4M410 366.6V373.6M410 385.4V392.4M417 366.6V373.6M417 385.4V392.4M424 366.6V373.6M424 385.4V392.4M431 366.6V373.6M431 385.4V392.4M438 376V392.4M445 385.4V392.4M473 141V148M473 206.8V213.8M473 253.8V260.8M473 282V298.4M487 122.2V129.2M501 272.6V279.6M515 272.6V279.6M522 122.2V129.2M529 338.4V345.4M543 122.2V129.2M543 338.4V345.4M543 385.4V392.4M550 122.2V129.2M557 131.6V138.6M557 385.4V392.4M571 131.6V138.6M571 376V392.4M578 131.6V138.6M585 122.2V129.2M585 159.8V166.8M585 338.4V345.4M585 376V383M592 122.2V129.2M592 141V157.4M592 169.2V176.2M592 206.8V213.8M592 244.4V260.8M592 338.4V354.8M606 376V392.4M613 376V392.4" stroke-width="1.8"/><path class="b3" d="M102 423V430M109 423V430M116 122.2V129.2M116 150.4V157.4M116 178.6V185.6M116 423V430M123 423V430M130 122.2V129.2M130 150.4V157.4M130 178.6V185.6M130 206.8V213.8M130 235V242M130 423V430M137 423V430M144 122.2V129.2M144 150.4V157.4M144 178.6V185.6M144 206.8V213.8M144 235V242M144 263.2V270.2M144 423V430M151 423V430M158 122.2V129.2M158 150.4V157.4M158 178.6V185.6M158 206.8V213.8M158 235V242M158 263.2V270.2M158 423V430M165 423V430M172 122.2V129.2M172 150.4V157.4M172 178.6V185.6M172 206.8V213.8M172 235V242M172 263.2V270.2M172 423V430M179 423V430M186 28.2V35.2M186 122.2V129.2M186 150.4V157.4M186 178.6V185.6M186 206.8V213.8M186 235V242M186 263.2V270.2M186 423V430M193 423V430M200 122.2V129.2M200 150.4V157.4M200 178.6V185.6M200 206.8V213.8M200 235V242M200 263.2V270.2M200 423V430M207 423V430M214 28.2V35.2M214 122.2V129.2M214 150.4V157.4M214 178.6V185.6M214 206.8V213.8M214 235V242M214 263.2V270.2M214 423V430M221 423V430M228 122.2V129.2M228 150.4V157.4M228 178.6V185.6M228 206.8V213.8M228 235V242M228 263.2V270.2M228 423V430M235 423V430M242 122.2V129.2M242 150.4V157.4M242 178.6V185.6M242 206.8V213.8M242 235V242M242 263.2V270.2M242 423V430M249 423V430M256 122.2V129.2M256 150.4V157.4M256 178.6V185.6M256 206.8V213.8M256 235V242M256 263.2V270.2M256 423V430M263 423V430M270 122.2V129.2M270 150.4V157.4M270 178.6V185.6M270 206.8V213.8M270 235V242M270 423V430M277 423V430M284 122.2V129.2M284 150.4V157.4M284 178.6V185.6M284 423V430M291 423V430M298 423V430M305 423V430M445 376V383M459 376V392.4M466 357.2V364.2M473 357.2V364.2M473 376V392.4M480 131.6V138.6M480 159.8V176.2M480 206.8V213.8M480 225.6V251.4M480 291.4V326.6M480 347.8V364.2M487 169.2V176.2M487 188V195M487 253.8V260.8M487 319.6V336M487 357.2V364.2M487 376V392.4M494 150.4V166.8M494 188V195M494 216.2V223.2M494 263.2V279.6M494 291.4V298.4M494 310.2V317.2M494 329V336M494 357.2V364.2M501 141V148M501 169.2V176.2M501 188V204.4M501 216.2V232.6M501 244.4V251.4M501 263.2V270.2M501 282V289M501 310.2V317.2M501 329V336M501 357.2V364.2M501 376V392.4M508 141V148M508 159.8V176.2M508 188V195M508 244.4V260.8M508 272.6V279.6M508 291.4V298.4M508 310.2V317.2M508 347.8V364.2M515 188V195M515 206.8V242M515 253.8V270.2M515 310.2V326.6M515 357.2V364.2M515 376V392.4M522 159.8V176.2M522 197.4V204.4M522 225.6V317.2M522 329V336M522 347.8V364.2M529 141V157.4M529 169.2V176.2M529 188V195M529 206.8V251.4M529 291.4V307.8M529 319.6V336M529 357.2V364.2M529 376V392.4M536 159.8V204.4M536 235V242M536 253.8V279.6M536 291.4V307.8M536 319.6V326.6M536 357.2V364.2M543 131.6V138.6M543 150.4V157.4M543 169.2V176.2M543 216.2V232.6M543 244.4V251.4M543 282V289M543 319.6V336M543 357.2V364.2M543 376V383M550 131.6V223.2M550 235V242M550 253.8V298.4M550 310.2V317.2M550 329V336M550 357.2V364.2M557 169.2V176.2M557 188V195M557 225.6V232.6M557 244.4V260.8M557 282V289M557 310.2V326.6M557 357.2V364.2M557 376V383M564 150.4V157.4M564 188V204.4M564 225.6V232.6M564 253.8V270.2M564 357.2V364.2M571 169.2V176.2M571 197.4V204.4M571 253.8V270.2M571 291.4V298.4M571 310.2V326.6M571 347.8V364.2M578 141V148M578 159.8V176.2M578 197.4V204.4M578 253.8V260.8M578 291.4V298.4M578 310.2V336M578 357.2V364.2M585 131.6V157.4M585 169.2V176.2M585 197.4V213.8M585 235V270.2M585 282V307.8M585 329V336M585 347.8V364.2M585 385.4V392.4M592 357.2V364.2M599 357.2V364.2M599 376V392.4" stroke-width="1.1"/><path class="sp" d="M88 87v1.2M88 96.4v1.2M88 105.8v1.2M95 105.8v1.2M95 115.2v1.2M109 171.6v1.2M109 199.8v1.2M116 209.2v1.2M116 218.6v1.2M116 228v1.2M123 237.4v1.2M123 293.8v1.2M130 40v1.2M130 293.8v1.2M137 293.8v1.2M144 40v1.2M151 293.8v1.2M165 40v1.2M172 293.8v1.2M186 40v1.2M186 293.8v1.2M193 293.8v1.2M193 387.8v1.2M200 293.8v1.2M221 40v1.2M228 293.8v1.2M235 40v1.2M249 40v1.2M256 40v1.2M256 293.8v1.2M270 275v1.2M270 284.4v1.2M277 237.4v1.2M277 246.8v1.2M277 256.2v1.2M284 209.2v1.2M284 237.4v1.2M291 171.6v1.2M291 190.4v1.2M298 162.2v1.2M305 105.8v1.2M305 115.2v1.2M305 134v1.2M312 96.4v1.2M333 77.6v1.2M340 77.6v1.2M445 359.6v1.2M487 134v1.2M487 181v1.2M487 303.2v1.2M494 134v1.2M494 209.2v1.2M494 237.4v1.2M508 181v1.2M508 209.2v1.2M508 303.2v1.2M522 134v1.2M522 181v1.2M529 134v1.2M536 134v1.2M557 181v1.2M557 209.2v1.2M557 303.2v1.2M564 181v1.2M564 209.2v1.2M564 237.4v1.2M571 181v1.2M571 209.2v1.2M606 359.6v1.2M613 359.6v1.2"/></g>
+<path class="tx" d="M269 29.2L269 35.2L270.2 36.4L272.6 36.4L273.8 35.2L273.8 29.2M281.48 30.4L280.28 29.2L277.88 29.2L276.68 30.4L276.68 31.6L277.88 32.8L280.28 32.8L281.48 34L281.48 35.2L280.28 36.4L277.88 36.4L276.68 35.2M284.36 36.4L284.36 31.6L286.76 29.2L289.16 31.6L289.16 36.4M284.36 33.4L289.16 33.4M296.84 30.4L295.64 29.2L293.24 29.2L292.04 30.4L292.04 35.2L293.24 36.4L295.64 36.4L296.84 35.2L296.84 32.8L294.44 32.8M304.52 29.2L299.72 29.2L299.72 36.4L304.52 36.4M299.72 32.8L303.32 32.8"/><path class="tx" d="M86.5 291.4L88.9 291.4L90.1 292.6L90.1 297.4L88.9 298.6L86.5 298.6L85.3 297.4L85.3 292.6L86.5 291.4M90.1 292.6L85.3 297.4"/><path class="tx" d="M58.13 236.2L59.33 235L61.73 235L62.93 236.2L62.93 237.4L58.13 242.2L62.93 242.2M67.01 235L69.41 235L70.61 236.2L70.61 241L69.41 242.2L67.01 242.2L65.81 241L65.81 236.2L67.01 235M70.61 236.2L65.81 241M73.49 235L73.49 242.2M78.29 235L73.49 239.8M75.29 238.6L78.29 242.2"/><path class="tx" d="M49.93 185.8L49.93 178.6L46.33 183.4L51.13 183.4M55.21 178.6L57.61 178.6L58.81 179.8L58.81 184.6L57.61 185.8L55.21 185.8L54.01 184.6L54.01 179.8L55.21 178.6M58.81 179.8L54.01 184.6M61.69 178.6L61.69 185.8M66.49 178.6L61.69 183.4M63.49 182.2L66.49 185.8"/><path class="tx" d="M39.33 123.4L38.13 122.2L35.73 122.2L34.53 123.4L34.53 128.2L35.73 129.4L38.13 129.4L39.33 128.2L39.33 127L38.13 125.8L34.53 125.8M43.41 122.2L45.81 122.2L47.01 123.4L47.01 128.2L45.81 129.4L43.41 129.4L42.21 128.2L42.21 123.4L43.41 122.2M47.01 123.4L42.21 128.2M49.89 122.2L49.89 129.4M54.69 122.2L49.89 127M51.69 125.8L54.69 129.4"/><path class="tx" d="M53.6 423L53.6 430.2L57.2 430.2L58.4 429L58.4 424.2L57.2 423L53.6 423M61.28 430.2L61.28 425.4L63.68 423L66.08 425.4L66.08 430.2M61.28 427.2L66.08 427.2M68.96 423L71.36 426.6L73.76 423M71.36 426.6L71.36 430.2M84.32 425.4L86.72 423L86.72 430.2M85.52 430.2L87.92 430.2"/><path class="tx" d="M315 424.2L316.2 423L318.6 423L319.8 424.2L319.8 425.4L318.6 426.6L317.4 426.6M318.6 426.6L319.8 427.8L319.8 429L318.6 430.2L316.2 430.2L315 429M323.88 423L326.28 423L327.48 424.2L327.48 429L326.28 430.2L323.88 430.2L322.68 429L322.68 424.2L323.88 423M327.48 424.2L322.68 429"/><path class="tx" d="M434 446.2L434 439L436.4 442.6L438.8 439L438.8 446.2M446.48 439L441.68 439L441.68 446.2L446.48 446.2M441.68 442.6L445.28 442.6M449.36 439L454.16 439M451.76 439L451.76 446.2M461.84 439L457.04 439L457.04 446.2L461.84 446.2M457.04 442.6L460.64 442.6M464.72 446.2L464.72 439L468.32 439L469.52 440.2L469.52 441.4L468.32 442.6L464.72 442.6M467.12 442.6L469.52 446.2"/><g class="box"><path class="bx" pathLength="1" d="M430 84H628V432H430Z"/><circle class="dot" cx="430" cy="84" r="2.2"/><circle class="dot" cx="628" cy="84" r="2.2"/><circle class="dot" cx="430" cy="432" r="2.2"/><circle class="dot" cx="628" cy="432" r="2.2"/><g class="chip"><rect class="cf" x="430" y="84" width="86.16" height="18.2"/><path class="ct" d="M436.7 88L440.1 88M438.4 88L438.4 98.2M436.7 98.2L440.1 98.2M445.88 98.2L445.88 88L452.68 98.2L452.68 88M456.76 88L460.16 98.2L463.56 88M469.34 88L472.74 88L474.44 89.7L474.44 96.5L472.74 98.2L469.34 98.2L467.64 96.5L467.64 89.7L469.34 88M480.22 88L483.62 88M481.92 88L481.92 98.2M480.22 98.2L483.62 98.2M496.2 89.7L494.5 88L491.1 88L489.4 89.7L489.4 96.5L491.1 98.2L494.5 98.2L496.2 96.5M507.08 88L500.28 88L500.28 98.2L507.08 98.2M500.28 93.1L505.38 93.1"/></g></g><g class="tot"><g class="chip"><rect class="cf" x="487.44" y="438" width="140.56" height="18.2"/><path class="ct" d="M492.44 442L499.24 442M495.84 442L495.84 452.2M505.02 442L508.42 442L510.12 443.7L510.12 450.5L508.42 452.2L505.02 452.2L503.32 450.5L503.32 443.7L505.02 442M514.2 442L521 442M517.6 442L517.6 452.2M525.08 452.2L525.08 445.4L528.48 442L531.88 445.4L531.88 452.2M525.08 447.95L531.88 447.95M535.96 442L535.96 452.2L542.76 452.2M562.82 452.2L562.82 442L557.72 448.8L564.52 448.8M568.6 445.4L572 442L572 452.2M570.3 452.2L573.7 452.2M581.18 447.1L579.48 445.4L579.48 443.7L581.18 442L584.58 442L586.28 443.7L586.28 445.4L584.58 447.1L581.18 447.1L579.48 448.8L579.48 450.5L581.18 452.2L584.58 452.2L586.28 450.5L586.28 448.8L584.58 447.1M592.91 450.5L594.61 450.5L594.61 452.2L592.91 452.2L592.91 450.5M601.24 443.7L602.94 442L606.34 442L608.04 443.7L608.04 445.4L601.24 452.2L608.04 452.2M613.82 442L617.22 442L618.92 443.7L618.92 450.5L617.22 452.2L613.82 452.2L612.12 450.5L612.12 443.7L613.82 442M618.92 443.7L612.12 450.5"/></g></g>
+<rect class="sh-clock" width="0" height="0"/>
+<metadata class="illos-field" data-cycle="4.2"><![CDATA[float xl(float y) { return 90.0 + 45.0 * (y - 80.0) / 215.0; }
+float xr(float y) { return 310.0 - 45.0 * (y - 80.0) / 215.0; }
+// the slip's print at its own row r (0 at the top) and column j (0 to 17)
+float slip(float r, float j) {
+  // pale paper, so the print reads: a header, four line items a row apart, a rule, the total, a torn foot
+  float P = 0.12;
+  float v = P;
+  if (j < 0.5 || j > 16.5 || r < 0.5) v = 0.6; // its edges
+  else if (r < 1.5) v = j > 1.5 && j < 9.5 ? 1.15 : (j > 11.5 && j < 15.5 ? 0.6 : P); // header, date
+  else if (abs(r - 4.0) < 0.5 || abs(r - 16.0) < 0.5) v = mod(j, 2.0) < 0.5 ? 0.6 : P; // rules
+  else if (r > 5.5 && r < 14.5 && mod(r - 6.0, 3.0) < 0.5) { // four line items: what was used, and its amount
+    float len = floor(hash(vec2(r, 3.0)) * 4.0);
+    v = j > 1.5 && j < 5.5 + len ? 0.95 : (j > 11.5 && j < 15.5 ? 1.05 : P);
+  }
+  else if (abs(r - 19.0) < 0.5) v = j > 1.5 && j < 6.5 ? 1.15 : (j > 9.5 && j < 15.5 ? 1.2 : P); // the total
+  else if (abs(r - 23.0) < 0.5) v = mod(j, 2.0) < 0.5 ? 0.6 : 0.0; // torn foot
+  return v;
+}
+float field(vec2 p, float t) {
+  if (p.x < 18.0 || p.x > 702.0 || p.y < 18.0 || p.y > 442.0) return 0.0;
+  float ph = TAU * t / T;
+  float k = floor(p.y / 9.4);
+  float c = floor((p.x - 4.0) / 7.0 + 0.5);
+  float v = 0.0;
+
+  // the level, in graduations: up one per landed drop, down as it drains
+  float lvl = ease((t - 0.47) / 0.15) + ease((t - 0.77) / 0.15) + ease((t - 1.07) / 0.15) + ease((t - 1.37) / 0.15) + ease((t - 1.67) / 0.15) + ease((t - 1.97) / 0.15);
+  float dr = ease((t - 2.3) / 1.1);
+  lvl -= 6.0 * dr;
+  float surf = 31.0 - 3.0 * lvl; // the surface row
+  float draining = step(2.3, t) * step(t, 3.4);
+  float open = sm(2.25, 2.32, t) * (1.0 - sm(3.5, 3.6, t));
+
+  // the feed rail: a churning manifold over a dense bar, six nozzles under it
+  if (p.x > 126.0 && p.x < 262.0) {
+    if (k == 3.0) v += 0.3 + 0.3 * noise(vec2(p.x * 0.09 + 2.0 * cos(ph), 2.0 * sin(ph)));
+    if (k == 4.0) v += 1.05;
+    if (k == 5.0 && mod(c - 19.0, 3.0) < 0.5) v += 0.6;
+  }
+
+  // the basin: slanted walls with a lip, a floor with the outlet in it
+  float L = xl(p.y), R = xr(p.y);
+  if (k >= 8.0 && k <= 30.0) {
+    if ((p.x >= L - 8.0 && p.x < L) || (p.x > R && p.x <= R + 8.0)) v += 1.05;
+    else if ((p.x >= L - 16.0 && p.x < L) || (p.x > R && p.x <= R + 16.0)) v += 0.7;
+    if (k == 8.0 && ((p.x >= L - 30.0 && p.x < L - 16.0) || (p.x > R + 16.0 && p.x <= R + 30.0))) v += 1.0;
+  }
+  if ((k == 31.0 || k == 32.0) && p.x >= L - 16.0 && p.x <= R + 16.0) {
+    if (c == 28.0) v += 1.05 * (1.0 - open) + 0.95 * open;
+    else v += k == 31.0 ? 1.0 : 0.7;
+  }
+  // graduations: ticks out from the left wall, long every other one, and a dotted level line inside at each
+  for (int i = 0; i <= 6; i++) {
+    float gk = 31.0 - 3.0 * float(i);
+    if (k == gk && i > 0) {
+      bool major = mod(float(i), 2.0) < 0.5;
+      if (p.x < L - 16.0 && p.x >= L - 16.0 - (major ? 21.0 : 10.0)) v += major ? 0.7 : 0.6;
+      if (p.x > L + 3.0 && p.x < R - 3.0 && mod(c, 2.0) < 0.5) v += 0.18;
+    }
+    if (k == gk && i == 0 && p.x < L - 16.0 && p.x >= L - 37.0) v += 0.7;
+  }
+  // the contents: a dense surface, denser with depth, streaming toward the outlet while it drains
+  if (k < 31.0 && p.x >= L && p.x <= R && k >= surf - 0.5) {
+    float depth = clamp((k - surf) / 18.0, 0.0, 1.0);
+    v += k < surf + 0.5 ? 1.05 : 0.42 + 0.3 * depth;
+    float d = length((p - vec2(200.0, 294.9)) / vec2(1.0, 1.6));
+    v += draining * 0.35 * step(0.62, fract(d / 26.0 + 5.0 * t)) * sm(2.3, 2.4, t);
+  }
+  {
+    // drop 1: forms at its nozzle, falls gathering speed, lands on the surface, ripples out
+    float u = (t - 0.15) / 0.32;
+    float g = (t - 0.03) / 0.12;
+    if (g > 0.0 && u < 0.0) v += blob(p, vec2(179.0, 58.0), 8.0, 1.1 * g);
+    if (u >= 0.0 && u < 1.0) v += blob(p, vec2(179.0, mix(58.0, 285.4, u * u)), 9.0, 1.15 * (1.0 - sm(0.9, 1.0, u)));
+    float w = (t - 0.47) / 0.4;
+    if (w > 0.0 && w < 1.0) {
+      float sk = 27.0;
+      if (k == sk && p.x > L && p.x < R) v += 0.7 * (1.0 - w) * exp(-pow(abs(p.x - 179.0) - 120.0 * w, 2.0) / 120.0);
+      if (k == sk - 1.0 && w < 0.4 && abs(abs(p.x - 179.0) - 9.0) < 4.0) v += 0.7;
+    }
+  }
+  {
+    // drop 2: forms at its nozzle, falls gathering speed, lands on the surface, ripples out
+    float u = (t - 0.45) / 0.32;
+    float g = (t - 0.33) / 0.12;
+    if (g > 0.0 && u < 0.0) v += blob(p, vec2(221.0, 58.0), 8.0, 1.1 * g);
+    if (u >= 0.0 && u < 1.0) v += blob(p, vec2(221.0, mix(58.0, 257.2, u * u)), 9.0, 1.15 * (1.0 - sm(0.9, 1.0, u)));
+    float w = (t - 0.77) / 0.4;
+    if (w > 0.0 && w < 1.0) {
+      float sk = 24.0;
+      if (k == sk && p.x > L && p.x < R) v += 0.7 * (1.0 - w) * exp(-pow(abs(p.x - 221.0) - 120.0 * w, 2.0) / 120.0);
+      if (k == sk - 1.0 && w < 0.4 && abs(abs(p.x - 221.0) - 9.0) < 4.0) v += 0.7;
+    }
+  }
+  {
+    // drop 3: forms at its nozzle, falls gathering speed, lands on the surface, ripples out
+    float u = (t - 0.75) / 0.32;
+    float g = (t - 0.63) / 0.12;
+    if (g > 0.0 && u < 0.0) v += blob(p, vec2(137.0, 58.0), 8.0, 1.1 * g);
+    if (u >= 0.0 && u < 1.0) v += blob(p, vec2(137.0, mix(58.0, 229.0, u * u)), 9.0, 1.15 * (1.0 - sm(0.9, 1.0, u)));
+    float w = (t - 1.07) / 0.4;
+    if (w > 0.0 && w < 1.0) {
+      float sk = 21.0;
+      if (k == sk && p.x > L && p.x < R) v += 0.7 * (1.0 - w) * exp(-pow(abs(p.x - 137.0) - 120.0 * w, 2.0) / 120.0);
+      if (k == sk - 1.0 && w < 0.4 && abs(abs(p.x - 137.0) - 9.0) < 4.0) v += 0.7;
+    }
+  }
+  {
+    // drop 4: forms at its nozzle, falls gathering speed, lands on the surface, ripples out
+    float u = (t - 1.05) / 0.32;
+    float g = (t - 0.93) / 0.12;
+    if (g > 0.0 && u < 0.0) v += blob(p, vec2(200.0, 58.0), 8.0, 1.1 * g);
+    if (u >= 0.0 && u < 1.0) v += blob(p, vec2(200.0, mix(58.0, 200.8, u * u)), 9.0, 1.15 * (1.0 - sm(0.9, 1.0, u)));
+    float w = (t - 1.37) / 0.4;
+    if (w > 0.0 && w < 1.0) {
+      float sk = 18.0;
+      if (k == sk && p.x > L && p.x < R) v += 0.7 * (1.0 - w) * exp(-pow(abs(p.x - 200.0) - 120.0 * w, 2.0) / 120.0);
+      if (k == sk - 1.0 && w < 0.4 && abs(abs(p.x - 200.0) - 9.0) < 4.0) v += 0.7;
+    }
+  }
+  {
+    // drop 5: forms at its nozzle, falls gathering speed, lands on the surface, ripples out
+    float u = (t - 1.35) / 0.32;
+    float g = (t - 1.23) / 0.12;
+    if (g > 0.0 && u < 0.0) v += blob(p, vec2(242.0, 58.0), 8.0, 1.1 * g);
+    if (u >= 0.0 && u < 1.0) v += blob(p, vec2(242.0, mix(58.0, 172.6, u * u)), 9.0, 1.15 * (1.0 - sm(0.9, 1.0, u)));
+    float w = (t - 1.67) / 0.4;
+    if (w > 0.0 && w < 1.0) {
+      float sk = 15.0;
+      if (k == sk && p.x > L && p.x < R) v += 0.7 * (1.0 - w) * exp(-pow(abs(p.x - 242.0) - 120.0 * w, 2.0) / 120.0);
+      if (k == sk - 1.0 && w < 0.4 && abs(abs(p.x - 242.0) - 9.0) < 4.0) v += 0.7;
+    }
+  }
+  {
+    // drop 6: forms at its nozzle, falls gathering speed, lands on the surface, ripples out
+    float u = (t - 1.65) / 0.32;
+    float g = (t - 1.53) / 0.12;
+    if (g > 0.0 && u < 0.0) v += blob(p, vec2(158.0, 58.0), 8.0, 1.1 * g);
+    if (u >= 0.0 && u < 1.0) v += blob(p, vec2(158.0, mix(58.0, 144.4, u * u)), 9.0, 1.15 * (1.0 - sm(0.9, 1.0, u)));
+    float w = (t - 1.97) / 0.4;
+    if (w > 0.0 && w < 1.0) {
+      float sk = 12.0;
+      if (k == sk && p.x > L && p.x < R) v += 0.7 * (1.0 - w) * exp(-pow(abs(p.x - 158.0) - 120.0 * w, 2.0) / 120.0);
+      if (k == sk - 1.0 && w < 0.4 && abs(abs(p.x - 158.0) - 9.0) < 4.0) v += 0.7;
+    }
+  }
+
+  // the outlet and the pipe: narrow walls, and the flow along them once the outlet is open
+  float wl = 0.42;
+  if (c == 27.0 && k > 32.0 && k <= 41.0) v += wl;
+  if (c == 29.0 && k > 32.0 && k <= 39.0) v += wl;
+  if (k == 39.0 && c > 29.0 && c < 62.0) v += wl;
+  if (k == 41.0 && c >= 27.0 && c < 62.0) v += wl;
+  float sd = -1.0; // how far along the flow's path this cell is
+  if (c == 28.0 && k > 32.0 && k <= 40.0) sd = (k - 32.0) * 9.4;
+  if (k == 40.0 && c > 28.0 && c < 62.0) sd = 75.2 + (c - 28.0) * 7.0;
+  if (sd >= 0.0) {
+    float at = sd / 1566.0;
+    float on = step(2.3 + at, t) * step(t, 3.4 + at);
+    v += on * (fract((sd - 900.0 * t) / 28.0) < 0.55 ? 1.05 : 0.55);
+  }
+
+  // the meter: a slot on top, a body with vents, its intake and a light that is on while it prints
+  float printing = step(2.5, t) * step(t, 3.6);
+  if (c >= 62.0 && c <= 88.0 && k >= 38.0 && k <= 42.0) {
+    if (k == 38.0) v += c >= 66.0 && c <= 85.0 ? 0.2 : 1.0;
+    else if (k == 39.0 || k == 42.0) v += 0.7;
+    else if (c >= 86.0 && c < 88.0) v += 0.42 + 0.68 * printing;
+    else if (c == 62.0) v += 0.42 + 0.63 * step(2.5, t) * step(t, 3.6);
+    else v += mod(c, 2.0) < 0.5 ? 0.7 : 0.3;
+  }
+
+  // the slip: last month's lifts off and fades at the month's end; the new one comes out of the slot a row at a time
+  if (c >= 67.0 && c <= 84.0 && k < 38.0) {
+    float top = 13.0, a = 1.0, rows = 25.0;
+    if (t >= 2.12 && t < 2.5) {
+      float u = clamp((t - 2.12) / 0.28, 0.0, 1.0);
+      top -= floor(2.0 * ease(u) + 0.5);
+      a = 1.0 - ease(u);
+    } else if (t >= 2.5) {
+      rows = floor(25.0 * ease((t - 2.5) / 1.1) + 0.001);
+      top = 38.0 - rows;
+    }
+    float r = k - top;
+    if (r >= 0.0 && r < rows) v += a * slip(r, c - 67.0);
+  }
+
+  // the month: 30 days, each lit as it passes; day 30 the month's end; cleared left to right for the new month
+  if (k == 45.0 && c >= 14.0 && c < 44.0) {
+    float d = c - 13.0;
+    float lit = step(0.15 + 0.065 * d, t) * (1.0 - step(3.62 + 0.006 * d, t));
+    v += 0.2 + lit * (d > 29.5 ? 0.9 : 0.55);
+  }
+  return v;
+}]]></metadata>
+</svg></div>
+        <ul class="price__facts">
+          <li><b>Free</b> 1M vectors and 100K queries each month</li>
+          <li><b>Budgets</b> Email at 80% and 100%, hard caps per key</li>
+          <li><b>Enterprise</b> Private regions, SSO and a 99.99% SLA</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--faq" id="faq" aria-labelledby="faq-h">
+  <div class="wrap faq">
+    <div class="faq__head">
+      <h2 id="faq-h">Questions</h2>
+      <p>Not answered here? <a class="link link--inline" href="mailto:hello@sounder.dev">Write to us</a> and an engineer will reply.</p>
+    </div>
+    <div class="faq__list">
+      <details>
+        <summary>What counts as a vector?<svg class="i"><use href="#i-down"/></svg></summary>
+        <p>One embedded passage with its text and metadata. A 2,000 word document usually becomes 8 to 12 vectors.</p>
+      </details>
+      <details>
+        <summary>Which embedding models can I use?<svg class="i"><use href="#i-down"/></svg></summary>
+        <p>Bring your own vectors, or let Sounder embed for you with one of its hosted open models. You can switch models later and re-embed in the background.</p>
+      </details>
+      <details>
+        <summary>Do I still need a keyword search engine?<svg class="i"><use href="#i-down"/></svg></summary>
+        <p>No. Every query blends vector and keyword ranking, and you can weight one over the other per query.</p>
+      </details>
+      <details>
+        <summary>How fresh is the index?<svg class="i"><use href="#i-down"/></svg></summary>
+        <p>A write is searchable in about a second. Synced sources check for changes every minute, or right away when they send a webhook.</p>
+      </details>
+      <details>
+        <summary>Where is my data stored?<svg class="i"><use href="#i-down"/></svg></summary>
+        <p>In the region you pick, encrypted at rest and in transit. Enterprise plans can run in a private region inside your own cloud account.</p>
+      </details>
+      <details>
+        <summary>What happens if I go over my estimate?<svg class="i"><use href="#i-down"/></svg></summary>
+        <p>Nothing stops. You get an email at 80% and 100% of a budget you set, and you can put a hard cap on any key.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__top">
+      <div class="foot__brand">
+        <a class="logo" href="#top" aria-label="Sounder home">
+          <svg viewBox="0 0 22 22" aria-hidden="true"><rect x="1" y="3" width="3.2" height="9" rx="1.6"/><rect x="6.6" y="3" width="3.2" height="15" rx="1.6"/><rect class="logo__deep" x="12.2" y="3" width="3.2" height="17" rx="1.6"/><rect x="17.8" y="3" width="3.2" height="11" rx="1.6"/></svg>
+          Sounder
+        </a>
+        <p>Search and memory for AI apps.</p>
+        <a class="btn btn--primary" href="#pricing">Start free</a>
+      </div>
+      <nav class="foot__cols" aria-label="Footer">
+        <div><h3>Product</h3><a href="#how">How it works</a><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#customers">Customers</a></div>
+        <div><h3>Developers</h3><a href="#code">Quickstart</a><a href="#code">Client libraries</a><a href="#code">HTTP API</a><a href="#faq">Questions</a></div>
+        <div><h3>Company</h3><a href="#top">About</a><a href="#top">Careers</a><a href="#top">Security</a><a href="mailto:hello@sounder.dev">Contact</a></div>
+      </nav>
+    </div>
+    <div class="foot__legal">
+      <span>&copy; 2026 Sounder</span>
+      <a class="illos-credit" href="https://illos.dev/?utm_source=sounder-template&amp;utm_medium=example" rel="noopener"><svg viewBox="-26.8 0 400 400" aria-hidden="true"><path fill-rule="evenodd" d="M0,253.81 L0,100 L173.21,0 L346.41,100 L346.41,300 L173.21,400 L76.6,344.23 L76.6,204 L116.6,227.09 L116.6,321.13 L173.21,353.81 L306.41,276.91 L306.41,123.09 L173.21,46.19 L40,123.09 L40,276.91 Z M76.6,140 L116.6,163.09 L116.6,203.09 L76.6,180 Z"/></svg>Animated assets by Illos</a>
+      <span class="foot__links"><a href="#top">Privacy</a><a href="#top">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
