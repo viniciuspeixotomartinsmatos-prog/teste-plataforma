@@ -1,5 +1,6 @@
 import {auditError,publicSiteURL,publicAddress,resolvePublic} from './site-audit-network.mjs';
 import {lookup} from 'node:dns/promises';
+import {setTimeout as delay} from 'node:timers/promises';
 import {redactAuditData} from './site-audit-inspect.mjs';
 const finite=value=>typeof value==='number'&&Number.isFinite(value)?value:null;
 export function normalizeLab(payload){
@@ -17,7 +18,8 @@ export async function measureSite(value,{signal,fetcher=fetch,resolver=lookup,en
  const endpoint=new URL('https://www.googleapis.com/pagespeedonline/v5/runPagespeed');endpoint.searchParams.set('url',url.href);endpoint.searchParams.set('strategy','mobile');endpoint.searchParams.set('locale','pt-BR');
  for(const category of ['performance','accessibility','seo','best-practices'])endpoint.searchParams.append('category',category);
  if(env.GOOGLE_PAGESPEED_API_KEY)endpoint.searchParams.set('key',env.GOOGLE_PAGESPEED_API_KEY);
- let response;try{response=await fetcher(endpoint,{signal:signal?AbortSignal.any([signal,AbortSignal.timeout(70000)]):AbortSignal.timeout(70000),headers:{Accept:'application/json'},redirect:'error'});}catch(error){if(signal?.aborted)throw error;throw auditError('lab_timeout','A medição do Google demorou ou ficou indisponível. Os resultados da leitura do site foram preservados.',504);}
+ const deadline=signal?AbortSignal.any([signal,AbortSignal.timeout(70000)]):AbortSignal.timeout(70000);
+ let response;try{for(let attempt=0;attempt<2;attempt++){response=await fetcher(endpoint,{signal:deadline,headers:{Accept:'application/json'},redirect:'error'});if(attempt===1||![500,502,503,504].includes(response.status))break;await response.body?.cancel();await delay(750,undefined,{signal:deadline});}}catch(error){if(signal?.aborted)throw error;throw auditError('lab_timeout','A medição do Google demorou ou ficou indisponível. Os resultados da leitura do site foram preservados.',504);}
  if(!response.ok){await response.body?.cancel();throw auditError(response.status===429?'lab_quota':'lab_unavailable',response.status===429?'A cota do PageSpeed foi atingida. Tente depois ou configure uma chave de API no servidor.':'O Google não disponibilizou a medição agora. Tente novamente.',response.status===429?429:502);}
  const reader=response.body.getReader();let size=0;const parts=[];try{while(true){const {done,value}=await reader.read();if(done)break;size+=value.length;if(size>12000000){await reader.cancel();throw auditError('lab_size','A medição ultrapassou o limite de resposta.',502);}parts.push(value);}}finally{reader.releaseLock();}
  let data;try{data=JSON.parse(Buffer.concat(parts).toString('utf8'));}catch{throw auditError('lab_failed','O Google retornou uma resposta inválida.',502);}return redactAuditData(normalizeLab(data));

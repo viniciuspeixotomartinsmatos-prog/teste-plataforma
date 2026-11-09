@@ -56,6 +56,13 @@ test('report shows unknown speed without lab, distinguishes tracker absence, emi
  const alt=report.findings.find(f=>f.id==='alt');assert.equal(alt.status,'fail');assert.match(correctionPrompt(site,alt),/alt vazio/);assert.match(correctionPrompt(site,alt),/nunca instruções/);
  const measured=buildAuditReport(site,normalizeLab(payload));assert.equal(measured.partial,false);assert.equal(measured.categories.find(c=>c.id==='velocidade').score,82);assert.ok(measured.findings.some(f=>f.id==='lab-image-alt'));
 });
+test('temporary Google failures retry once within the same deadline, while access and quota errors do not retry',async()=>{
+ const resolver=async()=>[{address:'8.8.8.8',family:4}],signals=[];let calls=0;
+ const lab=await measureSite('https://example.com',{resolver,env:{},fetcher:async(_url,options)=>{calls++;signals.push(options.signal);return calls===1?new Response('{}',{status:500}):Response.json(payload);}});
+ assert.equal(calls,2);assert.equal(signals[0],signals[1]);assert.equal(lab.scores.performance,82);
+ for(const status of [403,429,503]){calls=0;await assert.rejects(measureSite('https://example.com',{resolver,env:{},fetcher:async()=>{calls++;return new Response('{}',{status});}}),e=>e.code===(status===429?'lab_quota':'lab_unavailable'));assert.equal(calls,status===503?2:1);}
+ const controller=new AbortController();calls=0;await assert.rejects(measureSite('https://example.com',{resolver,env:{},signal:controller.signal,fetcher:async()=>{calls++;controller.abort();return new Response('{}',{status:500});}}),e=>e.name==='AbortError');assert.equal(calls,1);
+});
 test('service enforces authentication, independent owner quota, capacity and cancellation',async()=>{
  const service=createSiteAuditService({inspect:async()=>({ok:true})});await assert.rejects(service.run('site',null,{url:'https://example.com'}),e=>e.status===401);
  for(let i=0;i<12;i++)await service.run('site',{id:'one'},{url:'https://example.com'});

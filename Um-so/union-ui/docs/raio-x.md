@@ -28,3 +28,9 @@ Implemented 2026-11-09 at `/tools/raio-x`, through the existing authenticated To
 ## Remaining boundaries
 
 This is an initial public-page audit. It does not execute target checkout/login, automatically repair a repository, validate ad conversions, certify LGPD compliance, enumerate all routes, or defeat target access restrictions. Blocked/non-HTML/TLS/timeout targets produce a clear error. Client-rendered sites may need a successful Lighthouse run and manual inspection to confirm static findings. A screenshot is displayed only when actually returned by Google. No made-up thumbnails or results replace it. Source skills and design systems remain deferred; this delivery does not claim their acquisition.
+
+## Provider configuration follow-up — 2026-11-09
+
+The operator supplied a PageSpeed key and authorized server-side use. It was saved through the authenticated Vercel dashboard as a **Secret**, production only, under `GOOGLE_PAGESPEED_API_KEY`; its value is not in the repository. A direct official API call with example.com returned HTTP 200, real Lighthouse category scores and a final screenshot. Subsequent calls returned Google HTTP 500/internalError, so the adapter now retries only HTTP 500/502/503/504 once, after 750 ms, sharing the original seventy-second deadline. Authentication/quota failures are not retried. Thirteen focused audit tests pass, including retry capacity, shared deadline and cancellation. Successful production UI measurement still requires verification after publication.
+
+The first Vercel deployment of commit 122d372 passed its build and then failed while deploying outputs with an internal Vercel error. A production redeploy was initiated using the saved Secret. Do not equate successful compilation or direct provider tests with production availability; inspect the deployment and authenticated report before claiming completion.
