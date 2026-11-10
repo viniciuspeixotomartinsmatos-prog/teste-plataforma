@@ -1,0 +1,17 @@
+# Nítido delivery plan — 2026-11-10
+
+## Current delivery
+1. Finish production verification of Raio-X commit 5adc38b6d, including an actual Eco Park mobile report/capture and copy/history actions. Build and 176 tests passed; Vercel is still cloning the large retained repository.
+2. Match `Interface nitido — Biblioteca Criativa em Vidro.png`: floating glass navigation, two-column hero with layered glass art, full-width search, horizontal controls, glass sidebar and three large preview cards. Keep the same geometry between light/dark themes. Respect reduced motion.
+3. Organize icons like the observed 21st flow: families, semantic categories, variants, search and real SVG/React/Vue/React Native copy/download. Retain original geometry and license notices. Import open upstream data independently; do not claim recovery of gated 21st prompts or private backend.
+4. Strengthen bilingual search, typo tolerance, suggestions and grouping of known legitimate component variants without deleting records or breaking existing routes/collections.
+5. Validate focused regressions, full suite, production build, desktop/mobile screenshots, theme geometry, keyboard actions, safe downloads and publication. Fetch before committing/pushing jorge.
+
+## Source notes
+The user supplied three long pasted documents. Their visual requirements support the active redesign. The strategic and Creators proposals are tracked separately as subsequent stages, as explicitly confirmed by the user; they do not authorize publishing private content, provisioning paid AI/worker services, or changing billing. Keep existing authentication and source protection intact during this delivery.
+
+## Planned files
+`src/App.jsx`, `UI.jsx`, `catalog.js`, new glass/icon/search components and styles, `public/assets/apple.css`, source-icon data/import script and notices, focused tests and project checkpoints. Preserve original demos, source notices, sandbox isolation, retained static repackager and Sites helper files.
+
+## Acceptance
+No fake scores, AI integration, icon count, previews, reviews or verification badges. Existing source/download paths stay usable. Global brand icon remains stationary with only its four-second internal color wave. New hero art is separate decoration. No Stripe or active charges.
