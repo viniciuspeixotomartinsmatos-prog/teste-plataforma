@@ -43,5 +43,6 @@ Detailed requirements and asset limits: `docs/cosmic-login-request.md`. This rem
 - [x] Test real PostgreSQL RLS, denied listing/cross-owner writes, rotation, removal/restoration and cascade.
 - [x] Test real local API and browser guest read/revocation/private component denial.
 - [x] Preserve protected media/code and fail closed when remote setup is absent.
-- [ ] Apply migration to the correct existing Supabase project; access is pending.
-- [ ] Verify exact production share/create/read/revoke flow before marking delivered.
+- [x] Apply sharing migration to existing umso-accounts; schema/RLS/grants and trigger verified.
+- [x] Verify production owner-create, anonymous read, revocation and private asset denial.
+- [ ] Repeat final pagination/mobile polish on the latest cloud build when browser use is available.
