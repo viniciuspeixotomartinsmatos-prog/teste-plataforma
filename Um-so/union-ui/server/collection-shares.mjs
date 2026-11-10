@@ -5,11 +5,13 @@ export const digestShare=token=>{if(typeof token!=='string'||!/^[a-f0-9]{64}$/.t
 export function shareId(value){if(typeof value!=='string'||!value||value.length>100)throw failure(400,'Coleção inválida.');return value;}
 export const newShare=()=>{const token=randomBytes(32).toString('hex');return{token,hash:digestShare(token)};};
 let catalog;
-export async function projectSharedCollection(collection){
+export async function projectSharedCollection(collection,{offset=0}={}){
+ if(!Number.isSafeInteger(offset)||offset<0||offset>20000)throw failure(400,'Página inválida.');
  if(!collection||!Array.isArray(collection.items))throw failure(404,'Este link não está disponível.','share_not_found');
  catalog??=fs.readFile(new URL('../public/data/catalog-live.json',import.meta.url),'utf8').then(JSON.parse).catch(error=>{catalog=null;throw error;});
  const rows=new Map((await catalog).map(row=>[row.id,row]));
- return{name:String(collection.name||'Coleção').slice(0,80),description:String(collection.description||'').slice(0,1000),items:[...new Set(collection.items.filter(id=>typeof id==='string'))].slice(0,20000).map(id=>rows.get(id)).filter(Boolean).map(row=>({name:row.name,category:row.category,href:'/component/'+encodeURIComponent(row.publicSlug||row.id)}))};
+ const known=[...new Set(collection.items.filter(id=>typeof id==='string'))].slice(0,20000).map(id=>rows.get(id)).filter(Boolean);
+ return{total:known.length,nextOffset:offset+96<known.length?offset+96:null,name:String(collection.name||'Coleção').slice(0,80),description:String(collection.description||'').slice(0,1000),items:known.slice(offset,offset+96).map(row=>({name:row.name,category:row.category,href:'/component/'+encodeURIComponent(row.publicSlug||row.id)}))};
 }
 export function sqliteShareStore(db){
  db.exec(`CREATE TABLE IF NOT EXISTS collection_share(user_id TEXT NOT NULL REFERENCES user(id) ON DELETE CASCADE,collection_id TEXT NOT NULL,token_hash TEXT NOT NULL UNIQUE,created_at TEXT NOT NULL,PRIMARY KEY(user_id,collection_id)); CREATE TRIGGER IF NOT EXISTS revoke_removed_local_shares AFTER UPDATE OF data ON workspace BEGIN DELETE FROM collection_share WHERE user_id=NEW.user_id AND collection_id NOT IN (SELECT json_extract(value,'$.id') FROM json_each(NEW.data,'$.collections')); END;`);
@@ -31,7 +33,7 @@ export async function handleCollectionShare(request,{store,requireUser,origin,re
  if(route==='/api/sharing/config'){if(request.method!=='GET')throw failure(405,'Método não permitido.');try{await store.read('0'.repeat(64));return{enabled:true};}catch{return{enabled:false};}}
  if(route==='/api/shared-collection'){
   if(request.method!=='POST')throw failure(405,'Método não permitido.');
-  const input=await readBody();return projectSharedCollection(await store.read(digestShare(input.token)));
+  const input=await readBody();return projectSharedCollection(await store.read(digestShare(input.token)),{offset:input.offset??0});
  }
  if(!['POST','DELETE'].includes(request.method))throw failure(405,'Método não permitido.');
  const user=await requireUser(),input=await readBody(),id=shareId(input.collectionId);

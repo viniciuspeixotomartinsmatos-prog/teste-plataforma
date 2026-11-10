@@ -15,3 +15,5 @@ Authorized local browser created a real link, opened its two-item ordered collec
 ## Production prerequisite
 
 Apply `supabase/migrations/20261110_collection_shares.sql` to the existing `umso-accounts` project, after confirming its existing `workspaces` schema. The connected Supabase tool currently lists unrelated projects; do not apply this migration there. The user is opening the correct dashboard. The migration does not expose the workspace table. Verify the exact deployed app and two-user/anonymous revocation flow after migration. Until then, production sharing remains unavailable and is not marked complete.
+
+Large collections are paged in batches of96 known catalog records, with validated offsets and total/next offset. The client appends real pages, retries a failed page, and clears stale contents when the capability returns404. The API and UI tests cover250 resources across three pages and revocation during pagination. Account exports include only collection ID/creation-time share metadata, never token/hash.
