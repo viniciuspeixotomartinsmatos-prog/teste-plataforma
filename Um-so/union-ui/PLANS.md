@@ -21,3 +21,5 @@ Glass/icon delivery `62d20a084` is READY and production-verified. The final copy
 ## Creators implementation slice
 
 Continue with an authenticated private creator workspace: profile draft, component metadata/source draft, server persistence and optimistic concurrency. Add exact /creators route under Resources; do not change existing authentication or paid services. A submitted source remains inert text. Public profile, upload execution, verification, moderation and publication require the subsequent reviewed pipeline; do not present a saved draft as published or verified. Validate sanitization/bounds, ownership/RLS, concurrency and actual UI input flows; retain limitations when browser is disabled.
+
+Creators file handling: add bounded UTF-8 source import and self-contained private draft ZIP export; never execute imports. Preserve declared license/author/source, sanitize archive paths, and test oversized/invalid input and exact ZIP contents before build/push.
