@@ -14,3 +14,8 @@
 Creators, public catalog access, moderation, semantic service, share links and the strategic/SEO roadmap in the supplied documents. No fake integration or automatic approval.
 
 Source-news checks remain deferred until the user's previously requested work is finished. Operational/legal gaps in `docs/compliance-40.md` and source-plan restrictions remain explicit prerequisites, not completed features.
+
+## Release follow-up
+- [x] Fix missing production deep-link rewrites for icons, comparison and retained resources alias.
+- [x] Verify routing/auth regression without exposing private assets (21 focused tests).
+- [ ] Verify authenticated direct navigation/reload and anonymous denial on the routing follow-up deployment.

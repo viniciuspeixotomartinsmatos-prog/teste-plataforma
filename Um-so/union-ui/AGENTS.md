@@ -78,3 +78,5 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 - On 2026-11-10 the user explicitly prioritized visual design and icons first; Creators, public catalog access and the other strategic proposals are subsequent stages. Finish and publish this visual/icon delivery without widening access or starting those later stages.
 - On 2026-11-10 the user explicitly required finishing previously requested work before checking source updates. The daily source-update automation has the same gate; do not replace delivery work with new catalog acquisition while the approved backlog is pending.
+
+- Preserve the explicit Vercel SPA rewrites for `/icons`, `/compare` and the retained `/sources` alias. Client navigation alone does not validate deep links: test direct authenticated navigation and reload after deploying route changes. Private `/data`, `/code`, `/previews`, `/assets` and `/tools-runtime` paths must never be converted to the SPA fallback.

@@ -23,3 +23,7 @@ The original glass release passed the full 183-test suite and complete productio
 ## Explicit remaining scope
 
 `docs/compliance-40.md` contains concrete legal/operational prerequisites, including supplier identity, backups, MFA, contracts and remote provider checks. Do not claim all 40 are complete. Protected skills/design-system originals remain restricted by the source account plan. Creators/public catalog/moderation/semantic service/share links are subsequent stages, not delivered features. Do not widen catalog access or activate paid services automatically. Preserve the retained-static repackager and Sites helper files.
+
+## Direct-route production regression
+
+Follow-up `99aef9915` reached READY at `dpl_4CdUhn5gGvwQcQ34yVbDHR7hhEdy`. Refreshing its authenticated `/icons` page exposed a genuine Vercel 404: client navigation worked, but the new named SPA route lacked a rewrite. `/compare` and the retained `/sources` alias had the same omission. Exact rewrites now target the existing app entrypoint. A routing regression covers all named SPA entrypoints, query strings and negative private-file namespaces; 21 focused routing/auth/security tests pass. No private asset allowlist or authentication middleware was weakened. The remote collaborator's documentation-only `ae189298a` was incorporated; it records verified SMTP delivery. Final cloud deep-link acceptance remains required after this routing follow-up is deployed.
