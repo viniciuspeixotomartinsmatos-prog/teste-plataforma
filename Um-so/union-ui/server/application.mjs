@@ -21,7 +21,7 @@ const fail=(status,message,code)=>Object.assign(new Error(message),{status,code}
 const cleanIds=value=>Array.isArray(value)?[...new Set(value.filter(x=>typeof x==='string'&&x.length<200))].slice(0,20000):[];
 function cleanWorkspace(value){
  if(!value||typeof value!=='object')throw fail(400,'Dados de coleção inválidos.');
- return{saved:cleanIds(value.saved),collections:(Array.isArray(value.collections)?value.collections:[]).slice(0,500).map(c=>({id:String(c.id||'').slice(0,100),name:String(c.name||'Coleção').slice(0,80),items:cleanIds(c.items)})).filter(c=>c.id)};
+ return{saved:cleanIds(value.saved),collections:(Array.isArray(value.collections)?value.collections:[]).slice(0,500).map(c=>({id:String(c.id||'').slice(0,100),name:String(c.name||'Coleção').slice(0,80),description:String(c.description||'').slice(0,1000),items:cleanIds(c.items)})).filter(c=>c.id)};
 }
 
 export async function createApplication(options={}){

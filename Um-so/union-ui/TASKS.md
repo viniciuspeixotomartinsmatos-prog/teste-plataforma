@@ -19,3 +19,12 @@ Source-news checks remain deferred until the user's previously requested work is
 - [x] Fix missing production deep-link rewrites for icons, comparison and retained resources alias.
 - [x] Verify routing/auth regression without exposing private assets (21 focused tests).
 - [ ] Verify authenticated direct navigation/reload and anonymous denial on the routing follow-up deployment.
+
+## Full requested backlog
+See `docs/requested-delivery.md` for all requests and acceptance gaps. The user now requires the subsequent stages as well, before source news.
+- [x] Implement collection descriptions, editing, removal, order and confirmed deletion.
+- [x] Preserve order/descriptions through concurrent account synchronization; test and browser reload verified.
+- [x] Full combined suite 187/187 and incremental build passed.
+- [ ] Publish collection changes and verify the exact production release.
+- [ ] Implement revocable account-owned share links and read-only views.
+- [ ] Complete the remaining ledger; do not mark Creators, AI verification, public projection or operational prerequisites complete.

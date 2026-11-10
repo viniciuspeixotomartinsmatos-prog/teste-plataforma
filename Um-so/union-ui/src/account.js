@@ -9,10 +9,11 @@ export async function api(path,{method='GET',body}={}){
 const empty={saved:[],collections:[]};
 const equal=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
 function mergeList(base,local,remote){const old=new Set(base),now=new Set(local),removed=new Set(base.filter(x=>!now.has(x)));return [...new Set([...remote.filter(x=>!removed.has(x)),...local.filter(x=>!old.has(x))])];}
+function mergeOrdered(base,local,remote){const combined=mergeList(base,local,remote),retained=new Set(combined),old=new Set(base);const localOrder=local.filter(id=>old.has(id)),baseOrder=base.filter(id=>local.includes(id));return equal(localOrder,baseOrder)?combined:[...local.filter(id=>retained.has(id)),...combined.filter(id=>!local.includes(id))];}
 export function mergeWorkspace(base,local,remote){
  const before=new Map(base.collections.map(c=>[c.id,c])),current=new Map(local.collections.map(c=>[c.id,c])),merged=new Map(remote.collections.map(c=>[c.id,c]));
  for(const id of before.keys())if(!current.has(id))merged.delete(id);
- for(const [id,collection]of current){const initial=before.get(id),other=merged.get(id);if(!initial){merged.set(id,collection);continue;}if(!other){if(!equal(initial,collection))merged.set(id,collection);continue;}merged.set(id,{...other,name:initial.name===collection.name?other.name:collection.name,items:mergeList(initial.items,collection.items,other.items)});}
+ for(const [id,collection]of current){const initial=before.get(id),other=merged.get(id);if(!initial){merged.set(id,collection);continue;}if(!other){if(!equal(initial,collection))merged.set(id,collection);continue;}merged.set(id,{...other,name:initial.name===collection.name?other.name:collection.name,description:(initial.description||'')===(collection.description||'')?(other.description||''):(collection.description||''),items:mergeOrdered(initial.items,collection.items,other.items)});}
  return{saved:mergeList(base.saved,local.saved,remote.saved),collections:[...merged.values()]};
 }
 export function useAccountWorkspace(){

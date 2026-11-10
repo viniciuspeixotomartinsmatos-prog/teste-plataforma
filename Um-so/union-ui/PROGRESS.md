@@ -27,3 +27,11 @@ The original glass release passed the full 183-test suite and complete productio
 ## Direct-route production regression
 
 Follow-up `99aef9915` reached READY at `dpl_4CdUhn5gGvwQcQ34yVbDHR7hhEdy`. Refreshing its authenticated `/icons` page exposed a genuine Vercel 404: client navigation worked, but the new named SPA route lacked a rewrite. `/compare` and the retained `/sources` alias had the same omission. Exact rewrites now target the existing app entrypoint. A routing regression covers all named SPA entrypoints, query strings and negative private-file namespaces; 21 focused routing/auth/security tests pass. No private asset allowlist or authentication middleware was weakened. The remote collaborator's documentation-only `ae189298a` was incorporated; it records verified SMTP delivery. Final cloud deep-link acceptance remains required after this routing follow-up is deployed.
+
+## Collections and complete-backlog continuation
+
+Latest shared HEAD before this work: f9239754d, incorporating the collaborator's supplier identity, verified SMTP and Supabase MFA evidence. The user requires completion of all previously supplied briefs, not just visual/icons. `docs/requested-delivery.md` enumerates the remaining acceptance scope.
+
+Collection management now has name/description editing, original-order display, keyboard-accessible move/remove controls, explicit deletion confirmation and bounded description persistence in both account adapters. Concurrent merge preserves local reorder and remote additions/description changes. JSON import/export preserves descriptions. Browser on isolated local test account created a collection, saved metadata, added actual Aurora/Liquid Glass components, reversed order and confirmed persistence after a full reload. Screenshot: var/glass-qa/collection-editor.png. Full suite 187 passed; incremental build and Sites helper passed with unchanged retained assets. Production rollout is next; sharing remains unimplemented.
+
+The earlier direct-route fix d704d790b is READY. A fresh authorized production session loaded /icons?q=pessoa&family=ph and survived reload. Anonymous direct page requests redirected to login; icon metadata GET and chunk HEAD/Range returned 401/private/no-store. Earlier browser instability was resolved by binding the user-opened IAB tab; do not use unrelated Chrome.

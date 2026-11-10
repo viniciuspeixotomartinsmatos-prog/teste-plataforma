@@ -11,7 +11,7 @@ const profile=user=>user?{id:user.id,email:user.email,name:String(user.user_meta
 function cleanWorkspace(value){
  if(!value||typeof value!=='object')throw fail(400,'Dados de coleção inválidos.');
  const ids=value=>Array.isArray(value)?[...new Set(value.filter(x=>typeof x==='string'&&x.length<200))].slice(0,20000):[];
- return{saved:ids(value.saved),collections:(Array.isArray(value.collections)?value.collections:[]).slice(0,500).map(c=>({id:String(c.id||'').slice(0,100),name:String(c.name||'Coleção').slice(0,80),items:ids(c.items)})).filter(c=>c.id)};
+ return{saved:ids(value.saved),collections:(Array.isArray(value.collections)?value.collections:[]).slice(0,500).map(c=>({id:String(c.id||'').slice(0,100),name:String(c.name||'Coleção').slice(0,80),description:String(c.description||'').slice(0,1000),items:ids(c.items)})).filter(c=>c.id)};
 }
 const requestLimit=createRequestLimiter();
 export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientFactory=requestClient,billingEnv=process.env,billingFetch=fetch,limiter=requestLimit,securityLogger=console.info,auditor=siteAuditService}={}){

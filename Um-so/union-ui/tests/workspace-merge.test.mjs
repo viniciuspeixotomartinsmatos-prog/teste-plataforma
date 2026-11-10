@@ -14,3 +14,10 @@ test('an unchanged local collection does not resurrect a remotely deleted collec
  const initial={saved:[],collections:[{id:'one',name:'Um',items:['a']}]};
  assert.deepEqual(mergeWorkspace(initial,initial,{saved:[],collections:[]}),{saved:[],collections:[]});
 });
+
+test('collection reordering and descriptions survive concurrent remote additions',()=>{
+ const c={id:'one',name:'Design',description:'Antes',items:['a','b','c']};
+ const base={saved:[],collections:[c]},local={saved:[],collections:[{...c,description:'Depois',items:['c','a','b']}]},remote={saved:[],collections:[{...c,items:['a','b','c','d']}]};
+ const merged=mergeWorkspace(base,local,remote).collections[0];assert.equal(merged.description,'Depois');assert.deepEqual(merged.items,['c','a','b','d']);
+ const remoteEdit={saved:[],collections:[{...c,description:'Outro dispositivo',items:['b','a','c']}]};assert.equal(mergeWorkspace(base,base,remoteEdit).collections[0].description,'Outro dispositivo');assert.deepEqual(mergeWorkspace(base,base,remoteEdit).collections[0].items,['b','a','c']);
+});
