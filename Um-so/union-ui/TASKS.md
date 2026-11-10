@@ -28,3 +28,12 @@ See `docs/requested-delivery.md` for all requests and acceptance gaps. The user 
 - [ ] Publish collection changes and verify the exact production release.
 - [ ] Implement revocable account-owned share links and read-only views.
 - [ ] Complete the remaining ledger; do not mark Creators, AI verification, public projection or operational prerequisites complete.
+
+## Queued cosmic login request — 2026-11-10
+- [x] Read the complete new attached request and inspect current illustration/style composition.
+- [x] Preserve its explicit section-14 priority: finish prior work first.
+- [ ] Obtain/prepare faithful isolated astronaut and clean scene layers; compare to the reference.
+- [ ] Implement actual image-sampled spring particles, localized fast-hover disintegration/reconstruction and bounded click pulse.
+- [ ] Implement bounded parallax/float/ambient glow and form focus/Star Border effects without changing auth.
+- [ ] Validate actual frames, interactions, reduced motion, cleanup, performance, mobile/short viewport and zoom.
+Detailed requirements and asset limits: `docs/cosmic-login-request.md`. This remains queued, not shipped.
