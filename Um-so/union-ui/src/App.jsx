@@ -1,3 +1,4 @@
+import {semanticIndex} from './semantic-search.js';
 import Footer from './Footer.jsx';
 import SharedCollection,{CollectionSharing} from './SharedCollection.jsx';
 import CollectionEditor from './CollectionEditor.jsx';
@@ -31,7 +32,17 @@ const subscriptionRequired=Boolean(account.user&&account.access.requiresSubscrip
 const [searchOpen,setSearchOpen]=useState(false),[editingCollection,setEditingCollection]=useState(false),[newCollection,setNewCollection]=useState(false),[collectionName,setCollectionName]=useState(''),[sidebarOpen,setSidebarOpen]=useState(false),[view,setView]=useState('comfortable'),[visible,setVisible]=useState(36),[toast,setToast]=useState('');
 const timer=useRef(null),inputRef=useRef(null),importRef=useRef(null);
 const notify=useCallback(text=>{setToast(text);clearTimeout(timer.current);timer.current=setTimeout(()=>setToast(''),3500);},[]);
-useEffect(()=>{if(account.sessionLoading||!account.user||subscriptionRequired){setRows([]);setLoading(false);return;}setLoading(true);setLoadError('');const a=new AbortController();fetch('/data/catalog-live.json',{signal:a.signal}).then(r=>{if(!r.ok)throw Error('Não foi possível carregar o catálogo.');return r.json();}).then(items=>{setRows(prepareCatalog(items));setLoading(false);}).catch(e=>{if(e.name!=='AbortError'){setLoadError(e.message);setLoading(false);}});return()=>a.abort();},[account.user?.id,account.sessionLoading,subscriptionRequired]);
+useEffect(()=>{if(account.sessionLoading||!account.user||subscriptionRequired){setRows([]);setLoading(false);return;}setLoading(true);setLoadError('');const a=new AbortController();fetch('/data/catalog-live.json',{signal:a.signal}).then(r=>{if(!r.ok)throw Error('Não foi possível carregar o catálogo.');return r.json();}).then(items=>{const prepared=prepareCatalog(items);
+setRows(prepared);setLoading(false);
+fetch('/data/semantic-index.json',{signal:a.signal}).then(response=>{
+ if(!response.ok)throw Error('Índice semântico indisponível');
+ return response.json();
+}).then(model=>{
+ if(a.signal.aborted)return;
+ const indexed=prepared.slice();
+ indexed.semanticSearch=semanticIndex(model);
+ setRows(indexed);
+}).catch(()=>{});}).catch(e=>{if(e.name!=='AbortError'){setLoadError(e.message);setLoading(false);}});return()=>a.abort();},[account.user?.id,account.sessionLoading,subscriptionRequired]);
 useEffect(()=>{const f=()=>setLocation({path:window.location.pathname,search:window.location.search,hash:window.location.hash});window.addEventListener('popstate',f);window.addEventListener('hashchange',f);return()=>{window.removeEventListener('popstate',f);window.removeEventListener('hashchange',f);};},[]);
 const navigate=useCallback((path,{scroll=true}={})=>{history.pushState({},'',path);setLocation({path:window.location.pathname,search:window.location.search,hash:window.location.hash});setSidebarOpen(false);if(scroll)window.scrollTo({top:0,behavior:'instant'});},[]);
 const params=useMemo(()=>new URLSearchParams(location.search),[location.search]);

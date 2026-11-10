@@ -59,7 +59,7 @@ export default function AccountPage({account,navigate,notify,path='/account',sea
      {mode==='signup'&&<label className="auth-policy-ack"><input type="checkbox" required checked={termsAccepted} onChange={event=>setTermsAccepted(event.target.checked)} disabled={busy}/>{locale==='en'?'I accept the ':'Li e aceito os '}<a href="/legal/terms" target="_blank" rel="noopener noreferrer">{locale==='en'?'Terms':'Termos'}</a>{locale==='en'?' and have read the ':' e li a '}<a href="/legal/privacy" target="_blank" rel="noopener noreferrer">{locale==='en'?'Privacy Notice':'Política de Privacidade'}</a>.</label>}
      {(error||account.sessionError)&&<p className="form-error" role="alert">{displayError(error||account.sessionError)}</p>}
      {message&&<p className="form-success" role="status"><Mail size={16}/>{message}</p>}
-     <StarBorder type="submit" className="button auth-submit" theme="light" color="#fff" trailColor="#a5d3ff" backgroundColor="#0071e3" textColor="#fff" radius={28} glow={.15} disabled={busy}>{busy&&<Loader2 className="spin" size={15}/>} {mode==='confirm'?t("Confirmar e continuar"):mode==='resend'?t("Reenviar e-mail"):mode==='signup'?t("Criar conta"):mode==='forgot'?t("Enviar instruções"):mode==='reset'?t("Salvar nova senha"):t("Entrar")}{!busy&&<ArrowRight aria-hidden="true"/>}</StarBorder>
+     <StarBorder type="submit" className="button auth-submit" theme="light" color="#fff" trailColor="#a5d3ff" backgroundColor="#7137dc" textColor="#fff" radius={28} glow={.15} disabled={busy}>{busy&&<Loader2 className="spin" size={15}/>} {mode==='confirm'?t("Confirmar e continuar"):mode==='resend'?t("Reenviar e-mail"):mode==='signup'?t("Criar conta"):mode==='forgot'?t("Enviar instruções"):mode==='reset'?t("Salvar nova senha"):t("Entrar")}{!busy&&<ArrowRight aria-hidden="true"/>}</StarBorder>
     </form>
     <div className="auth-links">
      {mode==='login'?<><p>{t("Ainda não tem uma conta? ")}<button type="button" onClick={()=>changeMode('signup')} disabled={busy}>{t("Criar uma conta")}</button></p><div className="auth-support-links"><button type="button" onClick={()=>changeMode('forgot')} disabled={busy}><KeyRound aria-hidden="true"/>{t("Esqueci minha senha")}</button><span aria-hidden="true" className="auth-support-divider"/><button type="button" onClick={()=>changeMode('resend')} disabled={busy}><Mail aria-hidden="true"/>{t("Reenviar confirmação")}</button></div></>:<p>{mode==='signup'?t("Já tem uma conta? "):''}<button type="button" onClick={()=>changeMode('login')} disabled={busy}>{mode==='signup'?t("Entrar"):t("Voltar para entrar")}</button></p>}
@@ -68,6 +68,6 @@ export default function AccountPage({account,navigate,notify,path='/account',sea
     {languageSwitch}
    </div>
   </section>
-  {locale==='en'?<aside className="auth-art" aria-label="A new universe for your ideas"><blockquote className="auth-art-quote"><p><span className="auth-quote-mark" aria-hidden="true">“</span>Your ideas deserve a new universe.<span className="auth-quote-mark" aria-hidden="true">”</span></p><cite>A universe of possibilities. <strong>nitido.</strong></cite></blockquote></aside>:<AuthIllustration mode={mode}/>}
+  <AuthIllustration locale={locale}/>
  </main>;
 }
