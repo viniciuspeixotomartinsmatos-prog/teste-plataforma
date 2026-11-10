@@ -17,3 +17,7 @@ The user supplied three long pasted documents. Their visual requirements support
 No fake scores, AI integration, icon count, previews, reviews or verification badges. Existing source/download paths stay usable. Global brand icon remains stationary with only its four-second internal color wave. New hero art is separate decoration. No Stripe or active charges.
 
 Glass/icon delivery `62d20a084` is READY and production-verified. The final copy/license follow-up incorporates collaborator `54f35dc95`; combined tests and deployment acceptance remain explicit release gates. New-source/news checks stay deferred until the user's previously requested work is finished.
+
+## Creators implementation slice
+
+Continue with an authenticated private creator workspace: profile draft, component metadata/source draft, server persistence and optimistic concurrency. Add exact /creators route under Resources; do not change existing authentication or paid services. A submitted source remains inert text. Public profile, upload execution, verification, moderation and publication require the subsequent reviewed pipeline; do not present a saved draft as published or verified. Validate sanitization/bounds, ownership/RLS, concurrency and actual UI input flows; retain limitations when browser is disabled.

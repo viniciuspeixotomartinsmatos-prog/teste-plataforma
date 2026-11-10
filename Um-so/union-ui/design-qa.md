@@ -242,3 +242,6 @@ Scope: eight new entries, seven recorded video references and one original inter
 ## Direct-route production regression
 
 Follow-up `99aef9915` reached READY at `dpl_4CdUhn5gGvwQcQ34yVbDHR7hhEdy`. Refreshing its authenticated `/icons` page exposed a genuine Vercel 404: client navigation worked, but the new named SPA route lacked a rewrite. `/compare` and the retained `/sources` alias had the same omission. Exact rewrites now target the existing app entrypoint. A routing regression covers all named SPA entrypoints, query strings and negative private-file namespaces; 21 focused routing/auth/security tests pass. No private asset allowlist or authentication middleware was weakened. The remote collaborator's documentation-only `ae189298a` was incorporated; it records verified SMTP delivery. Final cloud deep-link acceptance remains required after this routing follow-up is deployed.
+
+## Creators private workspace — 10 November 2026
+Form uses existing glass layout and responsive panels; source textarea is inert. DOM acceptance verifies profile/draft save and unsynchronized local recovery. Actual authorized browser inventory returned `Local browser use is disabled in Work settings` again; no alternate browser used. Desktop/mobile composition, keyboard and published save/reload remain unverified.

@@ -101,6 +101,10 @@
     {
       "source": "/shared",
       "destination": "/index.html"
+    },
+    {
+      "source": "/creators",
+      "destination": "/index.html"
     }
   ],
   "functions": {

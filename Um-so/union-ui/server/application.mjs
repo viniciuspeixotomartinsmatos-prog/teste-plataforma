@@ -1,4 +1,5 @@
 import {handleCollectionShare,sqliteShareStore} from './collection-shares.mjs';
+import {creatorWorkspace,sqliteCreatorStore} from './creator-workspaces.mjs';
 import {siteAuditService} from './site-audit-service.mjs';
 import {DatabaseSync} from 'node:sqlite';
 import {randomBytes,randomInt} from 'node:crypto';
@@ -111,7 +112,8 @@ export async function createApplication(options={}){
    if(route==='/api/privacy/export'&&request.method==='GET'){
     const user=await requireUser(request),workspace=db.prepare('SELECT revision,data,updated_at FROM workspace WHERE user_id=?').get(user.id);
     const sharedCollections=db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='collection_share'").get()?db.prepare('SELECT collection_id AS collectionId,created_at AS createdAt FROM collection_share WHERE user_id=?').all(user.id):[];
-    return json({sharedCollections,version:1,exportedAt:new Date().toISOString(),account:{id:user.id,name:user.name,email:user.email},workspace:workspace?{...workspace,data:JSON.parse(workspace.data)}:{revision:0,data:{saved:[],collections:[]}},subscriptions:db.prepare('SELECT status,period_end,cancel_at_period_end FROM subscription WHERE user_id=?').all(user.id)});
+    const creatorRow=db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='creator_workspace'").get()?db.prepare('SELECT revision,data,updated_at FROM creator_workspace WHERE user_id=?').get(user.id):null;
+    return json({creatorWorkspace:creatorRow?{...creatorRow,data:JSON.parse(creatorRow.data)}:null,sharedCollections,version:1,exportedAt:new Date().toISOString(),account:{id:user.id,name:user.name,email:user.email},workspace:workspace?{...workspace,data:JSON.parse(workspace.data)}:{revision:0,data:{saved:[],collections:[]}},subscriptions:db.prepare('SELECT status,period_end,cancel_at_period_end FROM subscription WHERE user_id=?').all(user.id)});
    }
    if(route==='/api/privacy/profile'&&request.method==='PATCH'){
     await requireUser(request);const input=await readJSONObject(request);if(typeof input.name!=='string'||!input.name.trim()||input.name.length>100||Object.keys(input).some(key=>key!=='name'))throw fail(400,'Informe um nome válido.');
@@ -122,6 +124,7 @@ export async function createApplication(options={}){
     return auth.handler(new Request(origin+'/api/auth/delete-user',{method:'POST',headers:request.headers,body:JSON.stringify({password:input.password})}));
    }
    if(['/api/collection-shares','/api/shared-collection','/api/sharing/config'].includes(route))return json(await handleCollectionShare(request,{store:sqliteShareStore(db),requireUser:()=>requireUser(request),origin,readBody:()=>readJSONObject(request)}));
+   if(route==='/api/creator-workspace')return json(await creatorWorkspace(request,{store:sqliteCreatorStore(db),requireUser:()=>requireUser(request),readBody:()=>readJSONObject(request)}));
    if(route==='/api/workspace'){
     const user=await requireUser(request),existing=db.prepare('SELECT revision,data,updated_at FROM workspace WHERE user_id=?').get(user.id);
     if(request.method==='GET')return json(existing?{revision:existing.revision,data:JSON.parse(existing.data),updatedAt:existing.updated_at}:{revision:0,data:{saved:[],collections:[]}});

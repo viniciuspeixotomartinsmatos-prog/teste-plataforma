@@ -46,3 +46,11 @@ Detailed requirements and asset limits: `docs/cosmic-login-request.md`. This rem
 - [x] Apply sharing migration to existing umso-accounts; schema/RLS/grants and trigger verified.
 - [x] Verify production owner-create, anonymous read, revocation and private asset denial.
 - [ ] Repeat final pagination/mobile polish on the latest cloud build when browser use is available.
+
+## Creators private preparation
+- [x] Implement private profile, source/license fields, up to20 drafts, confirmed removal and account-scoped local recovery.
+- [x] Add authenticated APIs, owner RLS migration, optimistic revisions, personal export and device cleanup.
+- [x] Test actual local API, PostgreSQL access/cascade and form save/recovery.
+- [ ] Apply migration to umso-accounts and verify published create/save/reload across sessions.
+- [ ] Verify desktop/mobile UI in authorized browser; Work currently disables it.
+- [ ] Implement isolated submission verification, moderation and reviewed publication; private drafts do not implement these stages.
