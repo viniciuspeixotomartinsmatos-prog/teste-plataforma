@@ -214,3 +214,13 @@ Scope: eight new entries, seven recorded video references and one original inter
 - final result: passed
 
 - Release validation: 84/84 full-suite tests passed; production build passed in 3m49s; Sites packaging tests passed 4/4. Closing static metadata and all new assets byte-compared with the production build output after source-check bookkeeping.
+
+
+## 2026-11-10 — Apple shell, exact supplied identity and Raio-X reference
+
+- Applied the user's Apple-inspired system to the shell, public/translated marketing, legal and account surfaces. Original isolated component art remains independent. Raio-X retains its explicit dark reference palette and semantic score colors.
+- The original 2172×724 PNG is byte-identical to the supplied file (SHA-256 `73b47483deaeee127c511f2ea9b4e5e69643ebde3ce289eda8d58ff093113f4d`). The alpha mask preserves the icon shape and stationary lettering; a periodic four-second gradient moves only within the icon. Authorized browser CSS inspection confirmed four seconds, and emulated reduced motion resolved to `animation-name: none`; the emulation was reset.
+- Authorized IAB: desktop catalog, 390×844 mobile catalog and Raio-X hero/report actions inspected. A real footer overflow was found and fixed; mobile document scroll width equals its 375px content viewport (390px including scrollbar). Phone layout, category cards and visible copy actions remain accessible. Anonymous local login was reloaded and visually checked after fixing exact public CSS boot-module paths; no catalog-media access was broadened.
+- Full suite: 176 passed. Build including all retained public files passed; final incremental source rebuild used the unchanged copied public distribution plus the updated Apple CSS. Sites packaging tests: four passed. Subsequent app/security checks: fifteen passed.
+- Scoring fixture reproduces reference 77 and categories 61/94/75/84/76, including our adapter. Two additional tests cover renderer audit evidence/tracker network requests and robots/probe failures. UI regression verifies that Analyze again refreshes the actual result URL and retains the actual raster screenshot in account-local history.
+- The authorized original service measured Eco Park as 75 today: speed68/mobile84/SEO100/Pixel15/privacy97. Its earlier supplied screenshot was76/speed70. Actual nitido production measurement and release result are recorded in `docs/raio-x.md` after the deployment. A fixture and DOM tests alone are not production screenshot validation.

@@ -25,8 +25,8 @@ function clientFixture({user={id:'owner',email:'owner@example.test',user_metadat
  return{client,calls,user};
 }
 test('only boot assets are public; private sibling media and encoded representations stay gated',()=>{
- for(const url of ['/assets/video/aeroshards.webm','/assets/original/reactbits/test.png','/assets/studio/test.json','/assets/pro/components/test.webp','/assets/releases/21st/test.mp4','/assets/demo-cache/test.jpg','/assets/esbuild.wasm','/assets%2fvideo/test.mp4','/assets/auth%2f..%2fvideo/test.mp4','/assets/auth/x.png/extra','/assets/%252e%252e/private','/assets/%','/assets/auth/\\x.png'])assert.equal(protectedPath(url),true,url);
- for(const url of ['/account','/account/reset','/assets/index-deadbeef.js','/assets/AccountPage-deadbeef.css','/assets/auth/cosmic-login.png','/assets/fonts/GeneralSans-Medium.woff2','/assets/marketing.js','/assets/union-icon.svg','/legal/privacy'])assert.equal(protectedPath(url),false,url);
+ for(const url of ['/assets/video/aeroshards.webm','/assets/original/reactbits/test.png','/assets/studio/test.json','/assets/pro/components/test.webp','/assets/releases/21st/test.mp4','/assets/demo-cache/test.jpg','/assets/esbuild.wasm','/assets%2fvideo/test.mp4','/assets/auth%2f..%2fvideo/test.mp4','/assets/auth/x.png/extra','/assets/%252e%252e/private','/assets/%','/assets/auth/\\x.png','/assets/branding/private.png','/public/assets/demo-cache/private.css','/public/assets/apple.css/extra'])assert.equal(protectedPath(url),true,url);
+ for(const url of ['/account','/account/reset','/assets/index-deadbeef.js','/assets/AccountPage-deadbeef.css','/assets/auth/cosmic-login.png','/assets/fonts/GeneralSans-Medium.woff2','/assets/marketing.js','/assets/union-icon.svg','/legal/privacy','/assets/branding/nitido-company.png','/assets/brand.css','/assets/apple.css','/public/assets/brand.css','/public/assets/apple.css'])assert.equal(protectedPath(url),false,url);
 });
 test('JSON reader bounds streamed bytes, rejects wrong content types, primitives and invalid UTF8',async()=>{
  assert.deepEqual(await readJSONObject(request('/api/x',{name:'A'})),{name:'A'});
@@ -86,7 +86,7 @@ test('historical and sandbox subscriptions cannot block deletion of an account w
 });
 test('legal documents remain explicit drafts with escaped identity and real user-provided contact',()=>{
  for(const url of legalRoutes){const html=renderLegalPage(url,{env:{}});assert.match(html,/nitidocompany@gmail.com/);assert.match(html,/Documento em preparação/);assert.match(html,/60\.317\.226\/0001-42/);assert.match(html,/Campo Grande\/MS/);assert.ok(!html.includes('<script'));}
- const html=renderLegalPage('/legal/provider',{env:{LEGAL_ENTITY_NAME:'<img src=x onerror=alert(1)>'}});assert.ok(!html.includes('<img'));assert.match(html,/&lt;img/);assert.equal(renderLegalPage('/legal/unknown'),null);
+ const html=renderLegalPage('/legal/provider',{env:{LEGAL_ENTITY_NAME:'<img src=x onerror=alert(1)>'}});assert.ok(!html.includes('<img src=x'));assert.match(html,/&lt;img/);assert.equal(renderLegalPage('/legal/unknown'),null);
 });
 test('encrypted backup format authenticates content, rejects tampering and uses unique nonces',()=>{
  const key=backupKey(randomBytes(32).toString('base64')),plain=Buffer.from('private database records: do not store plaintext'),first=encryptBackup(plain,key),second=encryptBackup(plain,key);assert.deepEqual(decryptBackup(first,key),plain);assert.notDeepEqual(first,second);assert.ok(!first.includes(plain));first[20]^=1;assert.throws(()=>decryptBackup(first,key));assert.throws(()=>backupKey('invalid'));

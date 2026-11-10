@@ -15,13 +15,18 @@ test('audit UI filters and copies meaningful corrections, keeps owner-isolated h
  try{
   await act(async()=>root.render(React.createElement(SiteAuditPage,{owner:'one',navigate:()=>{}})));
   await click(button('Ver um exemplo'));assert.match(document.body.textContent,/DADOS FICTÍCIOS/);assert.equal(localStorage.length,0);
-  await click(document.querySelector('.rx-filters button:nth-child(4)'));assert.ok([...document.querySelectorAll('.rx-finding summary')].every(e=>e.textContent.includes('SEO')));
+  await click(document.querySelector('.rx-categories button:nth-child(3)'));assert.ok(document.querySelectorAll('.rx-finding-copy').length>0);
   await click(button('Copiar todas'));assert.match(copied,/Corrija o ponto/);assert.match(copied,/https:\/\/exemplo.nitido.com.br/);
   const fixture=JSON.parse(JSON.stringify({site:{url:'https://example.com/',host:'example.com',title:'Example Domain',description:'',lang:'en',viewport:'width=device-width',robots:'',canonical:null,og:{},h1:['Example'],images:[],scripts:{urls:[]},trackers:[],thirdPartyHosts:[],schema:{count:0,valid:0},found:{},insecure:[],secrets:[],resources:{}},at:new Date().toISOString(),lab:null}));
   globalThis.fetch=async(url,options)=>{calls.push({url,options});return url.endsWith('/site')?Response.json({site:fixture.site}):Response.json({error:'Cota do Google atingida.'},{status:429});};
   const input=document.querySelector('input'),set=Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype,'value').set;await act(async()=>{set.call(input,'https://example.com');input.dispatchEvent(new window.Event('input',{bubbles:true}));});
   await act(async()=>document.querySelector('form').dispatchEvent(new window.Event('submit',{bubbles:true,cancelable:true})));
-  assert.equal(calls.length,2);assert.match(document.body.textContent,/Medição móvel indisponível/);assert.match(document.body.textContent,/Resultado parcial/);assert.equal(JSON.parse(localStorage.getItem('nitido:site-audit:v1:one'))[0].site.host,'example.com');
+  assert.equal(calls.length,2);assert.match(document.body.textContent,/O Google não conseguiu medir agora/);assert.match(document.body.textContent,/Medição incompleta/);assert.equal(JSON.parse(localStorage.getItem('nitido:site-audit:v1:one'))[0].site.host,'example.com');
+  // A fresh run must inspect the result's URL, even if the input was edited.
+  calls=[];globalThis.fetch=async(url,options)=>{calls.push({url,options});return url.endsWith('/site')?Response.json({site:fixture.site}):Response.json({lab:{source:'fixture',strategy:'mobile',scores:{performance:68},metrics:{lcp:4000},checks:[],reference:{},screenshot:'data:image/png;base64,YQ=='}});};
+  await act(async()=>{set.call(input,'https://another.example');input.dispatchEvent(new window.Event('input',{bubbles:true}));});
+  await click(button('Analisar de novo'));assert.equal(calls.length,2);assert.equal(JSON.parse(calls[0].options.body).url,'https://example.com/');assert.equal(JSON.parse(localStorage.getItem('nitido:site-audit:v1:one'))[0].lab.screenshot,'data:image/png;base64,YQ==');
+  await click(button('Histórico'));await click(button('example.com'));assert.equal(document.querySelector('.rx-phone img').getAttribute('src'),'data:image/png;base64,YQ==');
   await act(async()=>root.render(React.createElement(SiteAuditPage,{owner:'two',navigate:()=>{}})));await click(button('Histórico'));assert.match(document.body.textContent,/Nenhuma análise salva/);assert.ok(!document.body.textContent.includes('example.com'));
   globalThis.fetch=(_url,{signal})=>new Promise((_,reject)=>{signal.addEventListener('abort',()=>reject(new DOMException('Canceled','AbortError')));});
   await act(async()=>{set.call(document.querySelector('input'),'https://example.com');document.querySelector('input').dispatchEvent(new window.Event('input',{bubbles:true}));document.querySelector('form').dispatchEvent(new window.Event('submit',{bubbles:true,cancelable:true}));});

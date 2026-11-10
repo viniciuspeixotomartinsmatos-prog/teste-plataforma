@@ -14,7 +14,9 @@ export function protectedPath(path){
  if(accountRoute(decoded)||decoded.startsWith('/api/auth/')||decoded==='/api/health'||decoded==='/api/access')return false;
  // Only boot assets are public. Catalog media, studio files and recovered
  // release assets are account content even when their URLs are guessable.
- if(/^\/assets\/(?:auth\/(?:cosmic-login\.png|[^/]+\.(?:svg|webp|png))|fonts\/[^/]+\.(?:woff2?|ttf)|union-icon\.svg|marketing\.(?:css|js)|[A-Za-z][A-Za-z0-9_-]*-[A-Za-z0-9_-]{8,}\.(?:js|css))$/.test(decoded))return false;
+ // Vite exposes these public boot styles as source modules during local development.
+ if(/^\/public\/assets\/(?:brand|apple)\.css$/.test(decoded))return false;
+ if(/^\/assets\/(?:auth\/(?:cosmic-login\.png|[^/]+\.(?:svg|webp|png))|fonts\/[^/]+\.(?:woff2?|ttf)|branding\/nitido-company\.png|brand\.css|apple\.css|union-icon\.svg|marketing\.(?:css|js)|[A-Za-z][A-Za-z0-9_-]*-[A-Za-z0-9_-]{8,}\.(?:js|css))$/.test(decoded))return false;
  if(decoded.startsWith('/_vercel/')||decoded==='/favicon.ico'||decoded==='/robots.txt')return false;
  return true;
 }

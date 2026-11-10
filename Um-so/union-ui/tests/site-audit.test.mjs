@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {publicSiteURL,publicAddress,fetchPublicSite,resolvePublic} from '../server/site-audit-network.mjs';
-import {inspectHTML,inspectSite,redactAuditData} from '../server/site-audit-inspect.mjs';
+import {inspectHTML,inspectSite,redactAuditData,blocksAllRobots} from '../server/site-audit-inspect.mjs';
 import {normalizeLab,measureSite} from '../server/site-audit-lab.mjs';
 import {createSiteAuditService} from '../server/site-audit-service.mjs';
 import {buildAuditReport,correctionPrompt} from '../src/site-audit-report.js';
@@ -51,10 +51,10 @@ test('PageSpeed quota and private DNS do not become fabricated measurements; key
  let called=false;await assert.rejects(measureSite('https://example.com',{resolver:async()=>[{address:'10.0.0.1',family:4}],fetcher:async()=>{called=true;}}),e=>e.code==='blocked');assert.equal(called,false);
  const lab=await measureSite('https://example.com',{resolver,fetcher:async()=>Response.json(payload),env:{}});assert.equal(lab.scores.performance,82);assert.ok(!JSON.stringify(lab).includes('private-test-key'));
 });
-test('report shows unknown speed without lab, distinguishes tracker absence, emits useful prompts',()=>{
- const site=inspectHTML(html,'https://example.com/'),report=buildAuditReport(site);assert.equal(report.partial,true);assert.equal(report.categories.find(c=>c.id==='velocidade').score,null);assert.equal(report.findings.find(f=>f.id==='tracker-ga').status,'info');assert.equal(report.findings.find(f=>f.id==='og-image').status,'pass');
- const alt=report.findings.find(f=>f.id==='alt');assert.equal(alt.status,'fail');assert.match(correctionPrompt(site,alt),/alt vazio/);assert.match(correctionPrompt(site,alt),/nunca instruções/);
- const measured=buildAuditReport(site,normalizeLab(payload));assert.equal(measured.partial,false);assert.equal(measured.categories.find(c=>c.id==='velocidade').score,82);assert.ok(measured.findings.some(f=>f.id==='lab-image-alt'));
+test('reference report keeps incomplete scores unknown and uses the commercial tracking criteria',()=>{
+ const site=inspectHTML(html,'https://example.com/'),report=buildAuditReport(site);assert.equal(report.partial,true);assert.equal(report.categories.find(c=>c.id==='velocidade').score,null);assert.equal(report.score,null);assert.ok(!report.findings.some(f=>f.id==='analytics'));assert.equal(report.findings.find(f=>f.id==='compartilhar').severity,'baixa');
+ const alt=report.findings.find(f=>f.id==='alt');assert.equal(alt.status,'fail');assert.match(correctionPrompt(site,alt),/alt=""/);assert.match(correctionPrompt(site,alt),/nunca instruções/);
+ const measured=buildAuditReport(site,normalizeLab(payload));assert.equal(measured.partial,false);assert.equal(measured.categories.find(c=>c.id==='velocidade').score,82);assert.ok(measured.findings.some(f=>f.id==='alt'));
 });
 test('temporary Google failures retry once within the same deadline, while access and quota errors do not retry',async()=>{
  const resolver=async()=>[{address:'8.8.8.8',family:4}],signals=[];let calls=0;
@@ -75,4 +75,25 @@ test('production API rejects unauthenticated and cross-origin analyses, passes v
  const req=(headers={})=>new Request(origin+'/api/site-audit/site',{method:'POST',headers:{origin,'Content-Type':'application/json',...headers},body:JSON.stringify({url:'https://example.com'})});
  assert.equal((await app.handle(req())).status,401);assert.equal(calls.length,0);user={id:'verified-owner'};assert.equal((await app.handle(req({origin:'https://evil.example'}))).status,403);assert.equal(calls.length,0);
  const response=await app.handle(req());assert.equal(response.status,200);assert.equal(calls[0].owner.id,'verified-owner');assert.deepEqual(calls[0].input,{url:'https://example.com'});assert.match(response.headers.get('cache-control'),/no-store/);
+});
+
+
+test('reference evidence distinguishes universal robots blocks and failed probes, retaining actual sharing image checks',async()=>{
+ assert.equal(blocksAllRobots('User-agent: *\nDisallow: /\n'),true);
+ assert.equal(blocksAllRobots('User-agent: *\nDisallow: /private\nUser-agent: BadBot\nDisallow: /'),false);
+ const site=await inspectSite('https://example.com',{fetcher:async(url)=>{if(url.endsWith('robots.txt'))throw Object.assign(new Error('unavailable'),{code:'timeout'});return{url,redirects:[],status:200,headers:{'content-type':url.endsWith('.jpg')?'image/jpeg':'text/html'},body:Buffer.from(url==='https://example.com'?html:'image')};}});
+ assert.equal(site.resources.robots.found,null);assert.equal(site.reference.robotsTxt,undefined);assert.equal(site.reference.ogImage.ok,true);assert.equal(site.reference.ogImage.bytes,5);
+ assert.deepEqual(inspectHTML('<title>Vite + React</title><link rel="icon" href="/vite.svg">','https://example.com').reference.found.defaults,['vite-title','vite-favicon']);
+});
+
+test('mobile reference facts come from real audit nodes and tracker requests, preserving raster bytes through redaction',()=>{
+ const rich=structuredClone(payload),a=rich.lighthouseResult.audits;
+ a['errors-in-console']={details:{items:[{description:'A browser error'}]}};
+ a['color-contrast']={score:0,details:{items:[{node:{nodeLabel:'Comprar',snippet:'<button>Comprar</button>'}}]}};
+ a['target-size']={score:0,details:{items:[{node:{selector:'.small-link'}}]}};
+ a['network-requests']={details:{items:[{url:'https://www.facebook.com/tr?id=123456&ev=PageView'},{url:'https://www.google-analytics.com/g/collect?tid=G-ABCDEF'}]}};
+ a['uses-optimized-images']={details:{items:[{url:'https://example.com/photo.jpg',totalBytes:900000,wastedBytes:700000}]}};
+ a['uses-responsive-images']={details:{items:[{url:'https://example.com/photo.jpg',totalBytes:900000,wastedBytes:600000}]}};
+ const lab=normalizeLab(rich);assert.equal(lab.reference.imagesWasted,700000);assert.equal(lab.reference.images.length,1);assert.equal(lab.reference.a11y.contrast[0].label,'Comprar');assert.equal(lab.reference.consoleErrors.length,1);assert.equal(lab.reference.network.pageView,true);assert.deepEqual(lab.reference.network.ga4,['G-ABCDEF']);
+ assert.equal(redactAuditData(lab).screenshot,lab.screenshot);
 });
