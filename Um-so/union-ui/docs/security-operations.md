@@ -29,6 +29,8 @@ Inventariar Supabase (Auth/Postgres), Vercel (hosting/logs), provedor de e-mail 
 
 - [DPA do Supabase](https://supabase.com/legal/customer-resources/data-processing-addendum)
 - [DPA da Vercel](https://vercel.com/legal/dpa)
+- [DPA do Resend](https://resend.com/legal/dpa)
+- [Documentação da API Google PageSpeed Insights](https://developers.google.com/speed/docs/insights/v5/get-started)
 - [Regulamento de Transferência Internacional da ANPD](https://www.gov.br/anpd/pt-br/assuntos/assuntos-internacionais/transferencia-internacional-de-dados)
 - [LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm)
 
@@ -66,7 +68,7 @@ Procedimento proposto:
 
 O painel da conta Supabase conectada mostrou MFA por configurar. O titular precisa cadastrar o fator. Ainda é necessário verificar os demais administradores, proteção da branch e revogação na saída. O papel `authenticated` perdeu `TRUNCATE`, `REFERENCES` e `TRIGGER` em `public.workspaces`. A autorização da aplicação não deriva de `user_metadata`.
 
-O Supabase tem confirmação de e-mail habilitada e SMTP personalizado desligado. O domínio de envio existente foi verificado no Resend. Testar entrega pública em caixa sintética controlada exige configuração de envio e confirmação de recebimento. [SMTP do Supabase](https://supabase.com/docs/guides/auth/auth-smtp)
+O Supabase tem confirmação de e-mail habilitada e usa SMTP do Resend no domínio de envio verificado `nitidohig.com.br`. A credencial é dedicada ao envio e limitada ao domínio. O teste sintético confirmou entrega de cadastro e recuperação no Resend, uso dos dois tokens e troca de senha. Monitorar a franquia de 100 envios diários e 3.000 mensais e rotacionar a credencial pelo processo administrativo. O canal de atendimento a titulares ainda precisa de teste próprio. [SMTP do Supabase](https://supabase.com/docs/guides/auth/auth-smtp)
 
 A Vercel mostrou mitigação automática ativa e firewall personalizado sem configuração. O limite por processo da aplicação e as quotas nativas do Supabase Auth não demonstram um limite distribuído para as rotas do nitido. O limite do WAF sujeito a cobrança por uso não foi ativado. [Preços do WAF da Vercel](https://vercel.com/docs/vercel-firewall/vercel-waf/usage-and-pricing)
 
