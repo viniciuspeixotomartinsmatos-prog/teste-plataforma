@@ -110,7 +110,8 @@ export async function createApplication(options={}){
    if(/^\/api\/site-audit\/(site|lab)$/.test(route)&&request.method==='POST'){const user=await requireUser(request);const kind=route.endsWith('/site')?'site':'lab';return json({ok:true,[kind]:await (options.auditor||siteAuditService).run(kind,user,await readJSONObject(request),{signal:request.signal})});}
    if(route==='/api/privacy/export'&&request.method==='GET'){
     const user=await requireUser(request),workspace=db.prepare('SELECT revision,data,updated_at FROM workspace WHERE user_id=?').get(user.id);
-    return json({version:1,exportedAt:new Date().toISOString(),account:{id:user.id,name:user.name,email:user.email},workspace:workspace?{...workspace,data:JSON.parse(workspace.data)}:{revision:0,data:{saved:[],collections:[]}},subscriptions:db.prepare('SELECT status,period_end,cancel_at_period_end FROM subscription WHERE user_id=?').all(user.id)});
+    const sharedCollections=db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='collection_share'").get()?db.prepare('SELECT collection_id AS collectionId,created_at AS createdAt FROM collection_share WHERE user_id=?').all(user.id):[];
+    return json({sharedCollections,version:1,exportedAt:new Date().toISOString(),account:{id:user.id,name:user.name,email:user.email},workspace:workspace?{...workspace,data:JSON.parse(workspace.data)}:{revision:0,data:{saved:[],collections:[]}},subscriptions:db.prepare('SELECT status,period_end,cancel_at_period_end FROM subscription WHERE user_id=?').all(user.id)});
    }
    if(route==='/api/privacy/profile'&&request.method==='PATCH'){
     await requireUser(request);const input=await readJSONObject(request);if(typeof input.name!=='string'||!input.name.trim()||input.name.length>100||Object.keys(input).some(key=>key!=='name'))throw fail(400,'Informe um nome válido.');
