@@ -1,8 +1,8 @@
-# Cosmic Interactive Experience — queued request, 2026-11-10
+# Cosmic Interactive Experience — specification and validation, 2026-11-10
 
 ## Priority and source
 
-The latest user-supplied request is attachment `9bbe4186-5911-4290-abed-71b3000758ab`, accompanied by `Login Neon com Astronauta em Partículas.png`. Section 14 explicitly preserves the priority of existing work and adds this request to the queue. This document is a specification and preflight, not an implemented or verified effect. Continue the full earlier delivery ledger before this screen. No new paid service is authorized.
+The latest user-supplied request is attachment `9bbe4186-5911-4290-abed-71b3000758ab`, accompanied by `Login Neon com Astronauta em Partículas.png`. Section 14 explicitly preserves the priority of existing work and adds this request to the queue. This document preserves the specification; the Status section records implementation and outstanding verification. Continue the full earlier delivery ledger before this screen. No new paid service is authorized.
 
 ## Visual invariants
 
@@ -10,7 +10,7 @@ Use the supplied neon cosmic login screenshot as the screen-specific reference: 
 
 ## Asset preflight
 
-`src/AuthIllustration.jsx` currently contains a quote only; `src/account.css` uses the composite `/assets/auth/cosmic-login.png`. Later Apple shell overrides hide that art. There is no isolated astronaut mesh/sprite in this component and no supplied 3D model. The new attachment is also a composite raster reference. It cannot directly supply independently moving astronaut, planet, fixed yellow rays and background layers.
+At the original preflight, `src/AuthIllustration.jsx` contained a quote only; `src/account.css` uses the composite `/assets/auth/cosmic-login.png`. Later Apple shell overrides hide that art. There is no isolated astronaut mesh/sprite in this component and no supplied 3D model. The new attachment is also a composite raster reference. It cannot directly supply independently moving astronaut, planet, fixed yellow rays and background layers.
 
 Before implementing localized disintegration, obtain a faithful transparent astronaut layer and matching clean background/planet layers while retaining the supplied originals. Prefer layered original assets if available. Generated separation would be an approximation requiring visual comparison; do not claim exact original geometry or a recovered 3D model. Do not animate the entire raster, apply a global glitch, or retain a second baked astronaut behind dissolving particles. Do not invent an Ollo implementation: that source was not attached here.
 
@@ -36,4 +36,4 @@ Capture baseline and final screen. Verify idle/entrance, slow/fast localized hov
 
 ## Status
 
-Queued behind existing requests. Assets need separation. No particles, frame-rate result, exact-Ollo parity or new login release is claimed.
+Implemented using the retained transparent seated astronaut artwork and sampled spring particles. The form remains functional in both languages. Physics and form regression tests pass. Browser validation, screenshot comparison and device performance measurements are still pending.

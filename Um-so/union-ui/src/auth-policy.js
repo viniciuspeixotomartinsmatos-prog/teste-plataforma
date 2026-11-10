@@ -11,7 +11,7 @@ export function protectedPath(path){
  if(/^\/legal\/(privacy|cookies|terms|refunds|provider|rights|licenses|ai)\/?$/.test(decoded))return false;
  if(/^\/(pt|en)\/(?:contact\/|terms\/|privacy\/|refunds\/)?$/.test(decoded)||/^\/(pt|en)$/.test(decoded)||decoded==='/sitemap.xml')return false;
  if(decoded==='/library-sitemap.xml'||/^\/(?:pt\/biblioteca|en\/library)(?:\/[a-z0-9_-]+)?\/?$/.test(decoded))return false;
- if(decoded==='/shared'||decoded==='/api/shared-collection'||decoded==='/api/sharing/config')return false;
+ if(decoded==='/api/community'||decoded==='/shared'||decoded==='/api/shared-collection'||decoded==='/api/sharing/config')return false;
  if(decoded==='/plans'||decoded==='/billing'||decoded==='/api/billing/config'||decoded==='/api/billing/webhook')return false;
  if(accountRoute(decoded)||decoded.startsWith('/api/auth/')||decoded==='/api/health'||decoded==='/api/access')return false;
  // Only boot assets are public. Catalog media, studio files and recovered

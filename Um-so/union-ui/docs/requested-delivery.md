@@ -30,6 +30,17 @@ The user's latest instruction requires all prior requests, beyond the visual/ico
 | All 40 security/privacy/business/operations items | docs/compliance-40.md, including collaborator's verified supplier, SMTP, MFA and firewall work | Concrete remaining backups, contracts, host log/retention, admin access and incident exercises; no conformity certification |
 | Payments | Disabled by explicit instruction | Keep disabled; no Stripe, subscriptions or new paid services activated |
 
+
+## November 10 implementation update
+
+The cosmic login now uses the retained transparent seated astronaut, sampled tiles with spring dynamics, pointer repulsion, touch/click pulses and a reduced-motion fallback. The simulation return test and existing auth flows pass. Authorized live visual and performance checks are outstanding.
+
+The catalog has a local 64-dimensional latent semantic model trained on its metadata and 13 additional explicitly paired React/Vue families. The bilingual public resource pages expose selected metadata, an anonymous catalog inventory dashboard and a dedicated sitemap. Personal downloads and previews stay gated. Catalog metrics measure inventory rather than visitor activity.
+
+Raio-X extracts hexadecimal colors, font families and structural component recommendations from inline HTML styles and tags. External computed styles are outside this measurement. Tools includes 39 original-source/locally authored packages including the supplied Apple design system; the remaining protected Profitize files still require authorized source downloads.
+
+Creators now has private isolated React/Vue/HTML previews, explicit submission consent, immutable version snapshots, moderated public profiles and versions, review decisions, reports, withdrawal and account exports. The database migrations were applied to hoipjczqezeedflaiams via the project's Vercel-managed Postgres connection with verified TLS. Production checks confirmed draft RLS, denied anonymous draft read and mutation, and allowed only the public gallery RPC for this audience. Local PostgreSQL exercised independent review, versioning and withdrawal. The private metrics dashboard reports owner totals or global totals for trusted moderators. The designated moderator email requires a confirmed Nítido account before elevation. The browser became available again; Profitize opens anonymously and blocks original skill downloads behind the Max/Vitalício login. Authenticated end-to-end acceptance remains pending. The status table above is the earlier baseline.
+
 ## Source documents
 
 Design/discovery/collections brief: supplied attachment 721d25e2-994a-48ce-8710-7ff5b05c5104. Strategy: b118d7bf-daaf-4555-881a-c1e310f5bbce. Creators/master brief: 30b31e08-8793-44a3-b881-4962d6cb3db6. These are reference requirements; embedded prompts do not grant access or authorize purchases.

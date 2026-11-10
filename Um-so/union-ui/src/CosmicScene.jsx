@@ -40,6 +40,9 @@ export function CosmicScene() {
       background.drawImage(image,0,0);
       const pixels = background.getImageData(0,0,w,h);
       const particles = [];
+      const body = document.createElement('canvas');
+      body.width=w;body.height=h;
+      const bodyContext=body.getContext('2d');
       const tile = Math.max(3,Math.ceil(w / (window.innerWidth < 700 ? 85 : 145)));
       for (let y=Math.floor(h*.19); y<h*.84; y+=tile) {
         for (let x=Math.floor(w*.30); x<w*.69; x+=tile) {
@@ -48,15 +51,25 @@ export function CosmicScene() {
           if (a<30 || (r>180 && g>155 && b<130 && (y<h*.25 || y>h*.52))) continue;
           const mass=.65+Math.random()*.7;
           particles.push({homeX:x,homeY:y,x:x+(Math.random()-.5)*85,y:y+Math.random()*65,vx:0,vy:0,release:1200*mass,mass});
+          bodyContext.drawImage(image,x,y,tile,tile,x,y,tile,tile);
           background.clearRect(x,y,tile,tile);
         }
       }
       render = (time,step) => {
         context.clearRect(0,0,w,h);
         context.drawImage(fixed,0,0);
-        const float = Math.sin(time/950)*3;
+        const float = Math.sin(time/950)*4;
+        if(time>3000 && time>pointer.until+2700 && (!pulse||time>pulse.start+3000)){
+          context.drawImage(body,0,Math.round(float));
+          return;
+        }
         for (const p of particles) {
           advanceParticle(p,time,step,pointer,pulse);
+          if(pointer.speed>12 && pointer.until>time && Math.abs(p.vx)+Math.abs(p.vy)>3){
+            context.globalAlpha=.25;
+            context.drawImage(image,p.homeX,p.homeY,tile,tile,Math.round(p.x-p.vx*2),Math.round(p.y+float-p.vy*2),tile,tile);
+            context.globalAlpha=1;
+          }
           context.drawImage(image,p.homeX,p.homeY,tile,tile,Math.round(p.x),Math.round(p.y+float),tile,tile);
         }
       };

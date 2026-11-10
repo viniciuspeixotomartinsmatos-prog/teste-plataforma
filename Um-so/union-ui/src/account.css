@@ -60,7 +60,7 @@
   background:radial-gradient(ellipse at 85% 60%,#46207c66,transparent 42%),
     radial-gradient(ellipse at 42% 95%,#38178288,transparent 30%),#09091c;
 }
-.cosmic-figure {position:absolute;inset:0 0 8%;display:grid;place-content:center;isolation:isolate;}
+.cosmic-figure {grid-template-columns:minmax(0,1fr);position:absolute;inset:0 0 8%;display:grid;place-content:center;isolation:isolate;}
 .cosmic-figure::before {content:"";position:absolute;top:1%;left:3%;width:37%;aspect-ratio:1;border-radius:50%;z-index:-1;background:radial-gradient(at 75% 80%,#0c0a20 50%,#292366 79%,#aaa7ff 96%);box-shadow:-5px -5px 22px #4e49be50;}
 .cosmic-figure img,.cosmic-figure canvas {display:block;width:100%;height:auto;grid-area:1/1;}
 .cosmic-figure [hidden] {display:none;}
@@ -73,3 +73,5 @@
   .cosmic-figure {inset:0;}
   .auth-fuse .auth-art-quote {display:none;}
 }
+
+.account-page.auth-fuse::before {content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.55;background:radial-gradient(circle at 24% 12%,#dcbfff 0 1px,transparent 2px) 0 0/231px 167px,radial-gradient(circle at 81% 69%,#b8bbff 0 1px,transparent 1.6px) 0 0/157px 213px,radial-gradient(ellipse at 69% 15%,#4845aa60,transparent 37%);}

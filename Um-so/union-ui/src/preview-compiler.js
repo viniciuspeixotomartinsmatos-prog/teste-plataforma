@@ -1,9 +1,9 @@
-let initialized;
+import {browserCompiler} from './shared-compiler.js';
 const esc=s=>s.replace(/<\/script/gi,'<\\/script');
 export async function compilePreview(item,payload,theme,compiler){
  if(!payload?.files?.length)throw new Error('O código deste componente não está disponível localmente.');
- const esbuild=compiler||await import('esbuild-wasm');
- if(!compiler){initialized ||= esbuild.initialize({wasmURL:'/assets/esbuild.wasm',worker:true});await initialized;}
+ const esbuild=compiler||await browserCompiler();
+
  const files=payload.files.filter(f=>typeof f.content==='string').map(f=>({...f,path:(f.path||f.name||'component.tsx').replace(/\\/g,'/')}));
  if(payload.demoCode)files.push({path:'union-demo.tsx',content:payload.demoCode});
  if(!payload.demoCode&&item.examples?.[0]?.codePath){try{const demo=await fetch(item.examples[0].codePath).then(r=>r.json());files.push(...(demo.files||[]).map(f=>({...f,path:'example/'+(f.path||f.name)})));}catch{}}

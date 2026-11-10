@@ -1,4 +1,4 @@
-let compilerReady;
+import {browserCompiler} from './shared-compiler.js';
 const groups=/^\/(?:assets|previews|demos|tools-runtime|avatars|mist)\//;
 export function previewAssetURL(value,base){
  try{const url=new URL(String(value),base),origin=new URL(base).origin,pathname=decodeURIComponent(url.pathname);if(url.origin!==origin||!groups.test(pathname)||pathname.includes('\\')||/%(?:2e|2f|5c)/i.test(pathname)||pathname.split('/').some(part=>part.startsWith('.')))return null;return url;}catch{return null;}
@@ -17,7 +17,7 @@ export async function preparePreviewAssets(html,base,{fetcher=fetch,compiler,sig
  html=html.replace(/<link\b[^>]*rel=["'](?:modulepreload|preload)["'][^>]*>/gi,'');
  for(const match of [...html.matchAll(/<link\b[^>]*href=["']([^"']+)["'][^>]*>/gi)]){const url=previewAssetURL(match[1],base);if(!url)continue;if(/rel=["']stylesheet["']/i.test(match[0])){const css=await stylesheet(await text(url.href),url.href);html=html.replace(match[0],()=>'<style>'+css.replace(/<\/style/gi,'<\\/style')+'</style>');}else if(/rel=["'](?:shortcut |apple-touch-)?icon["']/i.test(match[0])){const data=await dataURL(url.href);html=html.replace(match[0],()=>match[0].replace(match[1],data));}}
  async function bundle(url){
-  const engine=compiler||await import('esbuild-wasm');if(!compiler){compilerReady||=engine.initialize({wasmURL:new URL('/assets/esbuild.wasm',base).href,worker:true});await compilerReady;}
+  const engine=compiler||await browserCompiler();
   const options={entryPoints:[url],bundle:true,write:false,outfile:'preview.js',target:'es2022',logLevel:'silent',plugins:[{name:'authenticated-preview',setup(build){
    build.onResolve({filter:/.*/},args=>{const local=previewAssetURL(args.path,args.importer||base);if(local)return {path:local.href,namespace:'preview-static'};if(/^(?:https?:|data:)/.test(args.path))return {path:args.path,external:true};throw Error('Dependência da prévia não encontrada.');});
    build.onLoad({filter:/.*/,namespace:'preview-static'},async args=>{const contents=await text(args.path);return /\.css(?:\?|$)/.test(args.path)?{contents:await stylesheet(contents,args.path),loader:'css'}:{contents:contents.replaceAll('import.meta.url',JSON.stringify(args.path)),loader:'js'};});
