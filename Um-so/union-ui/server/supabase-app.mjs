@@ -1,4 +1,5 @@
 import {handleCollectionShare,supabaseShareStore} from './collection-shares.mjs';
+import {PASSWORD_REQUIREMENTS,validNewPassword} from '../src/password-policy.js';
 import {creatorWorkspace,supabaseCreatorStore} from './creator-workspaces.mjs';
 import {siteAuditService} from './site-audit-service.mjs';
 import {requestClient} from './supabase-client.mjs';
@@ -89,7 +90,8 @@ export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientF
     check(await client.auth.resend({type:'signup',email:input.email,options:{emailRedirectTo:origin+'/api/auth/callback'}}));
     response=json({ok:true});
    }else if(route==='/api/auth/sign-up/email'&&request.method==='POST'){
-    const input=await body();if(typeof input.name!=='string'||!input.name.trim()||input.name.length>100||typeof input.password!=='string'||input.password.length<12)throw fail(400,'Informe seu nome e uma senha com pelo menos 12 caracteres.');
+    const input=await body();if(typeof input.name!=='string'||!input.name.trim()||input.name.length>100)throw fail(400,'Informe um nome válido.');
+    if(!validNewPassword(input.password))throw fail(400,PASSWORD_REQUIREMENTS,'weak_password');
     if(input.termsAccepted!==true||input.policyVersion!==POLICY_VERSION)throw fail(400,'Leia e aceite os termos atuais.','terms_required');
     if(typeof input.email!=='string'||input.email.length>254||!/^\S+@\S+\.\S+$/.test(input.email)||input.password.length>1024)throw fail(400,'Informe e-mail e senha válidos.');
     // Informational acknowledgement, not a trusted entitlement or consent ledger.
@@ -102,7 +104,7 @@ export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientF
    }else if(route==='/api/auth/request-password-reset'&&request.method==='POST'){
     const input=await body();check(await client.auth.resetPasswordForEmail(input.email,{redirectTo:origin+'/api/auth/callback?next=/account/reset'}));response=json({ok:true});
    }else if(route==='/api/auth/reset-password'&&request.method==='POST'){
-    await requireUser();const input=await body();if(typeof input.newPassword!=='string'||input.newPassword.length<12)throw fail(400,'Use pelo menos 12 caracteres.');
+    await requireUser();const input=await body();if(!validNewPassword(input.newPassword)||input.newPassword.length>1024)throw fail(400,PASSWORD_REQUIREMENTS,'weak_password');
     check(await client.auth.updateUser({password:input.newPassword}));check(await client.auth.signOut({scope:'global'}));response=json({ok:true});
    }else if(route==='/api/workspace'){
     const user=await requireUser();

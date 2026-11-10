@@ -6,6 +6,7 @@ import AuthIllustration from './AuthIllustration.jsx';
 import PrivacyPanel from './PrivacyPanel.jsx';
 import {api} from './account.js';
 import {safeNext} from './auth-policy.js';
+import {PASSWORD_MIN_LENGTH,PASSWORD_REQUIREMENTS,validNewPassword} from './password-policy.js';
 import {accountLocale,accountText,accountError} from './account-locale.js';
 import './account.css';
 export function PlansPage({navigate}){return <main className="account-page" id="main"><span className="section-eyebrow">nitido</span><h1>Um espaço inteiro<br/><span>para criar.</span></h1><p className="page-lead">O acesso a esta versão está liberado. Explore as ferramentas e guarde suas ideias nas coleções.</p><button className="button button-primary" onClick={()=>navigate('/tools')}><ArrowRight size={15}/>Explorar ferramentas</button></main>;}
@@ -27,12 +28,15 @@ export default function AccountPage({account,navigate,notify,path='/account',sea
  useEffect(()=>{setShowPassword(false);},[mode]);
  const changeMode=next=>{setMode(next);setError('');setMessage('');setPassword('');};
 
- async function submit(event){event.preventDefault();setBusy(true);setError('');setMessage('');try{
+ async function submit(event){event.preventDefault();setError('');setMessage('');
+ const submittedPassword=event.currentTarget.elements.namedItem('password')?.value??'';
+ if((mode==='signup'||mode==='reset')&&!validNewPassword(submittedPassword)){setError(PASSWORD_REQUIREMENTS);return;}
+ setBusy(true);try{
   if(mode==='confirm'){const result=await api('/api/auth/verify-email',{method:'POST',body:{tokenHash:params.get('token_hash'),type:params.get('type')}});const user=await account.refreshSession();if(!user)throw Error(t("Não foi possível concluir sua entrada. Entre com sua senha."));await account.refreshAccess();notify(t("Link confirmado."));navigate(safeNext(result.next));}
   else if(mode==='resend'){await api('/api/auth/resend-confirmation',{method:'POST',body:{email}});setMessage(t("Se a conta ainda precisar de confirmação, você receberá um novo e-mail. Se já confirmou, entre com sua senha."));}
   else if(mode==='forgot'){await api('/api/auth/request-password-reset',{method:'POST',body:{email,redirectTo:window.location.origin+'/account/reset'}});setMessage(t("Se houver uma conta com esse e-mail, você receberá as instruções para redefinir a senha."));}
-  else if(mode==='reset'){await api('/api/auth/reset-password',{method:'POST',body:{token:params.get('token'),newPassword:password}});await account.refreshSession();setPassword('');setMode('login');setMessage(t("Senha alterada. Entre com a nova senha."));}
-  else{const result=await account.authenticate(mode,{email,password,...(mode==='signup'?{name,termsAccepted,policyVersion:'2026-11-09'}:{})});if(result.verificationRequired){setPassword('');setMode('login');setMessage(t("Confira seu e-mail para confirmar a conta antes de entrar."));}else{notify(mode==='signup'?t("Conta criada."):t("Você entrou na sua conta."));navigate(safeNext(params.get('next')));}}
+  else if(mode==='reset'){await api('/api/auth/reset-password',{method:'POST',body:{token:params.get('token'),newPassword:submittedPassword}});await account.refreshSession();setPassword('');setMode('login');setMessage(t("Senha alterada. Entre com a nova senha."));}
+  else{const result=await account.authenticate(mode,{email,password:submittedPassword,...(mode==='signup'?{name,termsAccepted,policyVersion:'2026-11-09'}:{})});if(result.verificationRequired){setPassword('');setMode('login');setMessage(t("Confira seu e-mail para confirmar a conta antes de entrar."));}else{notify(mode==='signup'?t("Conta criada."):t("Você entrou na sua conta."));navigate(safeNext(params.get('next')));}}
  }catch(failure){setError(failure.message||t("Confira seus dados e tente novamente."));}finally{setBusy(false);}}
 
  if(account.sessionLoading)return <main className="loading-page" id="main"><Loader2 className="spin"/></main>;
@@ -43,14 +47,14 @@ export default function AccountPage({account,navigate,notify,path='/account',sea
   <section className="auth-form-side" aria-labelledby="auth-title">
    <div className="auth-card" key={mode}>
     <header className="auth-form-heading"><div className="auth-emblem" aria-hidden="true"><Brand iconOnly/></div><h1 id="auth-title">{title}</h1><p>{subtitle}</p></header>
-    <form ref={formRef} onSubmit={submit} aria-busy={busy} onInvalid={event=>{if(locale!=='en')return;const input=event.target;input.setCustomValidity(input.validity.valueMissing?'Please fill out this field.':input.validity.typeMismatch?'Please enter a valid email address.':input.validity.tooShort?'Use at least 12 characters.':'Please check this field.');}} onInput={event=>event.target.setCustomValidity?.('')}>
+    <form ref={formRef} onSubmit={submit} aria-busy={busy} onInvalid={event=>{if(locale!=='en')return;const input=event.target;input.setCustomValidity(input.validity.valueMissing?'Please fill out this field.':input.validity.typeMismatch?'Please enter a valid email address.':input.validity.tooShort?t(PASSWORD_REQUIREMENTS):'Please check this field.');}} onInput={event=>event.target.setCustomValidity?.('')}>
      {mode==='confirm'&&<p className="auth-confirm-copy">{t("Confirme para continuar no nitido. Este link será usado uma única vez.")}</p>}
      {mode==='signup'&&<label htmlFor="auth-name">{t("Nome completo")}<input id="auth-name" value={name} onChange={e=>setName(e.target.value)} placeholder={t("Como podemos chamar você?")} autoComplete="name" required maxLength={100} disabled={busy}/></label>}
      {!['reset','confirm'].includes(mode)&&<label htmlFor="auth-email">{t("E-mail")}<span className="auth-email-input"><Mail aria-hidden="true"/><input id="auth-email" type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder={t("voce@exemplo.com")} autoComplete="email" required disabled={busy}/></span></label>}
      {!['forgot','resend','confirm'].includes(mode)&&<div className="auth-password-field">
       <label htmlFor="auth-password">{t("Senha")}</label>
-      <div className="auth-password-input"><LockKeyhole className="auth-field-icon" aria-hidden="true"/><input id="auth-password" type={showPassword?'text':'password'} value={password} onChange={e=>setPassword(e.target.value)} placeholder={mode==='login'?t("Sua senha"):t("Crie uma senha segura")} autoComplete={mode==='login'?'current-password':'new-password'} minLength={mode==='login'?undefined:12} aria-describedby={mode==='login'?undefined:'auth-password-hint'} required disabled={busy}/><button type="button" className="auth-password-toggle" aria-label={showPassword?t("Ocultar senha"):t("Mostrar senha")} aria-pressed={showPassword} onClick={()=>setShowPassword(value=>!value)} disabled={busy}>{showPassword?<EyeOff size={16}/>:<Eye size={16}/>}</button></div>
-      {mode!=='login'&&<small id="auth-password-hint">{t("Use pelo menos 12 caracteres.")}</small>}
+      <div className="auth-password-input"><LockKeyhole className="auth-field-icon" aria-hidden="true"/><input id="auth-password" name="password" type={showPassword?'text':'password'} value={password} onChange={e=>setPassword(e.target.value)} placeholder={mode==='login'?t("Sua senha"):t("Crie uma senha segura")} autoComplete={mode==='login'?'current-password':'new-password'} minLength={mode==='login'?undefined:PASSWORD_MIN_LENGTH} aria-describedby={mode==='login'?undefined:'auth-password-hint'} required disabled={busy}/><button type="button" className="auth-password-toggle" aria-label={showPassword?t("Ocultar senha"):t("Mostrar senha")} aria-pressed={showPassword} onClick={()=>setShowPassword(value=>!value)} disabled={busy}>{showPassword?<EyeOff size={16}/>:<Eye size={16}/>}</button></div>
+      {mode!=='login'&&<small id="auth-password-hint">{t(PASSWORD_REQUIREMENTS)}</small>}
      </div>}
      {mode==='signup'&&<label className="auth-policy-ack"><input type="checkbox" required checked={termsAccepted} onChange={event=>setTermsAccepted(event.target.checked)} disabled={busy}/>{locale==='en'?'I accept the ':'Li e aceito os '}<a href="/legal/terms" target="_blank" rel="noopener noreferrer">{locale==='en'?'Terms':'Termos'}</a>{locale==='en'?' and have read the ':' e li a '}<a href="/legal/privacy" target="_blank" rel="noopener noreferrer">{locale==='en'?'Privacy Notice':'Política de Privacidade'}</a>.</label>}
      {(error||account.sessionError)&&<p className="form-error" role="alert">{displayError(error||account.sessionError)}</p>}
