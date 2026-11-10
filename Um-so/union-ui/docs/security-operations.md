@@ -66,7 +66,7 @@ Procedimento proposto:
 
 ## Administração, dependências e revisão
 
-O painel da conta Supabase conectada mostrou MFA por configurar. O titular precisa cadastrar o fator. Ainda é necessário verificar os demais administradores, proteção da branch e revogação na saída. O papel `authenticated` perdeu `TRUNCATE`, `REFERENCES` e `TRIGGER` em `public.workspaces`. A autorização da aplicação não deriva de `user_metadata`.
+O titular cadastrou MFA na conta administrativa Supabase usada nesta revisão. A existência do fator foi confirmada ao reabrir o painel. Ainda é necessário verificar os demais administradores, proteção da branch e revogação na saída. O papel `authenticated` perdeu `TRUNCATE`, `REFERENCES` e `TRIGGER` em `public.workspaces`. A autorização da aplicação não deriva de `user_metadata`.
 
 O Supabase tem confirmação de e-mail habilitada e usa SMTP do Resend no domínio de envio verificado `nitidohig.com.br`. A credencial é dedicada ao envio e limitada ao domínio. O teste sintético confirmou entrega de cadastro e recuperação no Resend, uso dos dois tokens e troca de senha. Monitorar a franquia de 100 envios diários e 3.000 mensais e rotacionar a credencial pelo processo administrativo. O canal de atendimento a titulares ainda precisa de teste próprio. [SMTP do Supabase](https://supabase.com/docs/guides/auth/auth-smtp)
 
