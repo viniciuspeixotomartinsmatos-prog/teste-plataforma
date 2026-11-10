@@ -8,8 +8,11 @@ test('actual PostgreSQL workspace policies enforce owner isolation, WITH CHECK a
  try{
   await db.exec(`create role anon;create role authenticated;create schema auth;create table auth.users(id uuid primary key);create function auth.uid() returns uuid language sql as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;grant usage on schema auth to authenticated;grant execute on function auth.uid() to authenticated;`);
   await db.exec(await fs.readFile('supabase/migrations/20261104_accounts.sql','utf8'));
+  await db.exec('grant truncate, references, trigger on public.workspaces to authenticated');
+  await db.exec(await fs.readFile('supabase/migrations/20261110_workspace_grants.sql','utf8'));
   await db.query('insert into auth.users values($1),($2),($3)',[one,two,other]);
   await db.exec('set role authenticated');await db.query("select set_config('request.jwt.claim.sub',$1,false)",[one]);
+  await assert.rejects(db.exec('truncate public.workspaces'),error=>error.code==='42501');
   const malicious="<script>fetch('/api/secrets')</script>');delete from auth.users;--";
   await db.query('insert into public.workspaces(user_id,revision,data) values($1,1,$2)',[one,JSON.stringify({saved:[],collections:[{id:'one',name:malicious,items:[]}]})]);
   assert.equal((await db.query('select data from public.workspaces')).rows[0].data.collections[0].name,malicious);

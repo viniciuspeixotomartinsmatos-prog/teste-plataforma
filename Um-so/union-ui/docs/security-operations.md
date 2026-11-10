@@ -1,8 +1,8 @@
-# Segurança, privacidade e operação — 9 de novembro de 2026
+# Segurança, privacidade e operação — 10 de novembro de 2026
 
 ## Estado real
 
-Controles de código estão implementados e testados localmente. Esta documentação não comprova configurações remotas, contratos assinados, serviço de atendimento ativo ou conformidade jurídica. O projeto Supabase `umso-accounts` não aparece na conexão disponível, e a conexão Vercel não tem acesso à equipe proprietária. Não foram inspecionados dados de clientes, segredos ou configurações privadas por meios alternativos.
+O navegador autorizado deu acesso ao Supabase `umso-accounts`, na região `sa-east-1`, e a CLI confirmou a Vercel na equipe proprietária. A matriz de 40 requisitos registra o que foi comprovado com metadados, requisições anônimas e contas sintéticas. Contratos efetivos, atendimento, retenção, monitoramento e operação jurídica continuam sujeitos a validação.
 
 O contato público informado pelo responsável é `nitidocompany@gmail.com`; a titularidade e o recebimento dessa caixa ainda não foram verificados. O CNPJ informado tem dígitos verificadores válidos. Razão social e CEP não foram confirmados. Não preencher por suposição. Os documentos públicos permanecem identificados como preparação até identificação completa e revisão jurídica.
 
@@ -18,6 +18,7 @@ O contato público informado pelo responsável é `nitidocompany@gmail.com`; a t
 | Atendimento aos titulares | Pedido, contato e prova proporcional de titularidade | Arts. 7º, II e V; arts. 18 e 19 | Canal informado e operador de e-mail a confirmar | Definir responsável, registro de solicitações, prazo e descarte. Não pedir documento por padrão. |
 | Incidentes | Cronologia, categorias afetadas, impacto e comunicações | Obrigação legal e proteção de direitos | Repositório privado de incidentes, não este Git público | Registro por pelo menos cinco anos conforme RCIS; acesso restrito. Configuração e responsável pendentes. |
 | Cobrança futura | Identificadores de transação e assinatura, sem cartão completo | Contrato/obrigação legal quando aplicável | Paddle, atualmente desativado | Rever contratos, direitos do catálogo, política fiscal, cancelamento/reembolso e retenção antes de ativar. |
+| Análise de site solicitada | URL pública informada, relatório e eventual imagem do Lighthouse. O app envia a URL ao PageSpeed Insights, como indicado no formulário. | Execução solicitada pelo usuário, sujeita à revisão do tratamento e da transferência | Vercel e Google PageSpeed Insights; destino e instrumento de transferência ainda a verificar | O app não persiste histórico no servidor. Histórico de até 12 relatórios fica no navegador, por conta, até limpeza ou substituição. A retenção do operador e dos logs do host ainda precisa ser verificada. |
 | Publicidade / analytics opcionais | Nenhuma finalidade opcional ativada | Não aplicável nesta versão | Nenhum provedor adicionado | Preferências são essenciais somente. Futuro consentimento precisa ser específico, revogável e comprovável; metadados editáveis de usuário não são um registro imutável. |
 
 Minimização não significa apagar registros obrigatórios: confirmar aplicabilidade dos logs de acesso do Marco Civil e respectivas restrições antes de definir retenção no host. Não presumir prazo de seis meses para todo dado, nem aplicar cinco anos indiscriminadamente a todas as contas. Criar avaliação de legítimo interesse e, se aplicável, relatório de impacto antes de ampliar finalidades ou dados tratados.
@@ -28,6 +29,7 @@ Inventariar Supabase (Auth/Postgres), Vercel (hosting/logs), provedor de e-mail 
 
 - [DPA do Supabase](https://supabase.com/legal/customer-resources/data-processing-addendum)
 - [DPA da Vercel](https://vercel.com/legal/dpa)
+- [Regulamento de Transferência Internacional da ANPD](https://www.gov.br/anpd/pt-br/assuntos/assuntos-internacionais/transferencia-internacional-de-dados)
 - [LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm)
 
 ## Exclusão e direitos
@@ -42,7 +44,7 @@ Aceite de termos e ciência da política são separados de marketing. A versão 
 
 `npm run backup:encrypted` é uma ferramenta operacional preparada, não um backup agendado em funcionamento. Exige `pg_dump` instalado, conexão PostgreSQL restrita e TLS `verify-full`, diretório absoluto fora do checkout e chave AES-256-GCM de 32 bytes em base64 separada do backup. Credenciais entram no ambiente do processo, não na linha de comando. Nenhum dump em texto aberto é escrito; falhas removem apenas o arquivo recém-criado. Não registrar conexão, chave ou conteúdo. Usar armazenamento restrito e verificar ACLs no Windows: modos POSIX sozinhos não comprovam ACL NTFS.
 
-O ambiente atual não dispõe de `pg_dump`; não foi feito backup real nem teste de restauração de banco. Os testes cobrem autenticação criptográfica, detecção de adulteração e nonces únicos. Supabase pode oferecer backups diários conforme o plano; a conexão atual não permite confirmar plano, retenção ou restauração. Não contratar PITR ou armazenamento adicional sem autorização.
+O painel do `umso-accounts` informa que o plano Free não inclui backups gerenciados. O ambiente atual não dispõe de `pg_dump` nem de um executor recorrente validado. Um ensaio local cifrou e restaurou um snapshot PostgreSQL WASM descartável com duas contas sintéticas, preservando dados, RLS, grants e cascata. O ensaio não usou dump do Supabase. Sem agenda, armazenamento e alertas validados, a operação continua pendente. [Backups do Supabase](https://supabase.com/docs/guides/platform/backups)
 
 Definir RPO/RTO, janela, agenda no ambiente já contratado, cópia externa, retenção e alerta de falhas. Antes da ativação, testar restauração em banco descartável, integridade, isolamento de produção, acesso às chaves e aplicação de pedidos de exclusão depois de restaurar. A ausência desses ensaios bloqueia marcar o requisito de backup como concluído.
 
@@ -62,7 +64,11 @@ Procedimento proposto:
 
 ## Administração, dependências e revisão
 
-Ativar/verificar MFA para administradores GitHub, Vercel e Supabase; contas individuais, menor privilégio, inventário de acessos e revogação na saída. Não compartilhar sessões/chaves. Acesso administrativo remoto e proteção da branch não foram alterados sem evidência das permissões e do fluxo do colaborador. A autorização de acesso ao app nunca deriva de `user_metadata`.
+O painel da conta Supabase conectada mostrou MFA por configurar. O titular precisa cadastrar o fator. Ainda é necessário verificar os demais administradores, proteção da branch e revogação na saída. O papel `authenticated` perdeu `TRUNCATE`, `REFERENCES` e `TRIGGER` em `public.workspaces`. A autorização da aplicação não deriva de `user_metadata`.
+
+O Supabase tem confirmação de e-mail habilitada e SMTP personalizado desligado. O domínio de envio existente foi verificado no Resend. Testar entrega pública em caixa sintética controlada exige configuração de envio e confirmação de recebimento. [SMTP do Supabase](https://supabase.com/docs/guides/auth/auth-smtp)
+
+A Vercel mostrou mitigação automática ativa e firewall personalizado sem configuração. O limite por processo da aplicação e as quotas nativas do Supabase Auth não demonstram um limite distribuído para as rotas do nitido. O limite do WAF sujeito a cobrança por uso não foi ativado. [Preços do WAF da Vercel](https://vercel.com/docs/vercel-firewall/vercel-waf/usage-and-pricing)
 
 O audit npm retornou zero alertas conhecidos após Vite 6.4.6 e overrides compatíveis para parser 6.1.5 e MCP server 2.3.0. Isso não prova ausência de vulnerabilidades, nem substitui revisão dos runtimes adquiridos. Lockfile preservado, scripts de instalação não aprovados indiscriminadamente. Dependabot cria propostas de atualização para `jorge`; o workflow de revisão é manual, com ações fixadas por commit, permissões só de leitura e sem execução agendada de runners.
 

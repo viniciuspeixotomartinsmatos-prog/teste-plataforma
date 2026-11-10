@@ -65,6 +65,15 @@ test('personal export and correction use the verified owner and exclude credenti
  assert.equal((await app.handle(request('/api/privacy/profile',{name:'Updated'},'PATCH'))).status,200);
  const anonymous=createSupabaseApplication({origin,clientFactory:()=>({client:clientFixture({user:null}).client,finish:r=>r}),limiter:()=>{}});assert.equal((await anonymous.handle(request('/api/privacy/export'))).status,401);
 });
+test('export tolerates an unprovisioned Paddle ledger only while billing is disabled',async()=>{
+ const {client,user}=clientFixture(),from=client.from.bind(client);
+ let code='PGRST205';
+ client.from=table=>table==='paddle_subscriptions'?{select(){return this;},eq(){return Promise.resolve({error:{code}});}}:from(table);
+ assert.deepEqual((await exportPersonalData(user,client)).subscriptions,[]);
+ await assert.rejects(exportPersonalData(user,client,{requiresBillingLedger:true}),{code:'privacy_export_unavailable'});
+ code='42501';
+ await assert.rejects(exportPersonalData(user,client),{code:'privacy_export_unavailable'});
+});
 test('account deletion fails closed until configured and requires reauth, no active subscription and global revocation',async()=>{
  const input={password:'Strong password!123',confirmation:'EXCLUIR'},fixture=clientFixture();
  await assert.rejects(deletePersonalAccount(fixture.user,fixture.client,input,{env:{}}),error=>error.code==='deletion_setup_required');assert.equal(fixture.calls.length,0);

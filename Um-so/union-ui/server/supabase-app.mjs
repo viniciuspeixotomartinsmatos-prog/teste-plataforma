@@ -56,7 +56,7 @@ export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientF
     const user=await requireUser();response=json({ok:true,[route.endsWith('/site')?'site':'lab']:await auditor.run(route.endsWith('/site')?'site':'lab',user,await body(),{signal:request.signal})});
    }
    else if(route==='/api/privacy/export'&&request.method==='GET'){
-    const user=await requireUser();response=json(await exportPersonalData(user,client));
+    const user=await requireUser();response=json(await exportPersonalData(user,client,{requiresBillingLedger:billing.config.requiresSubscription}));
     response.headers.set('Content-Disposition','attachment; filename="nitido-meus-dados.json"');
     securityEvent('privacy_export',200,{logger:securityLogger});
    }

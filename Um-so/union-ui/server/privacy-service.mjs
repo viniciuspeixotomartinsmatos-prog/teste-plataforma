@@ -1,11 +1,12 @@
 import {securityEvent} from './security-controls.mjs';
 const fail=(status,message,code)=>Object.assign(Error(message),{status,code});
 export const POLICY_VERSION='2026-11-09';
-export async function exportPersonalData(user,client){
+export async function exportPersonalData(user,client,{requiresBillingLedger=false}={}){
  const workspace=await client.from('workspaces').select('revision,data,updated_at').eq('user_id',user.id).maybeSingle();
  if(workspace.error)throw fail(503,'Não foi possível exportar suas coleções.','privacy_export_unavailable');
  const subscriptions=await client.from('paddle_subscriptions').select('environment,status,plan_id,paid_through,cancel_at_period_end').eq('user_id',user.id);
- if(subscriptions.error&&subscriptions.error.code!=='42P01')throw fail(503,'Não foi possível exportar sua assinatura.','privacy_export_unavailable');
+ const ledgerAbsent=['42P01','PGRST205'].includes(subscriptions.error?.code);
+ if(subscriptions.error&&(requiresBillingLedger||!ledgerAbsent))throw fail(503,'Não foi possível exportar sua assinatura.','privacy_export_unavailable');
  return{version:1,exportedAt:new Date().toISOString(),account:{id:user.id,email:user.email,name:user.user_metadata?.name||'',createdAt:user.created_at,emailConfirmedAt:user.email_confirmed_at},workspace:workspace.data||{revision:0,data:{saved:[],collections:[]}},subscriptions:subscriptions.data||[],scope:'Dados de conta, coleções e assinaturas armazenados por esta aplicação. Projetos locais deste navegador e registros mantidos por operadores possuem canais próprios de acesso.'};
 }
 export async function deletePersonalAccount(user,client,input,{env=process.env,fetchImpl=fetch,logger=console.info}={}){
