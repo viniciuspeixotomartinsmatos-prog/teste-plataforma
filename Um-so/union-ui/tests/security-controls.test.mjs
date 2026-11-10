@@ -94,6 +94,11 @@ test('historical and sandbox subscriptions cannot block deletion of an account w
  await assert.rejects(deletePersonalAccount(fixture.user,fixture.client,{password:'Strong password!123',confirmation:'EXCLUIR'},options),error=>error.status===409);
 });
 test('legal documents remain explicit drafts with escaped identity and real user-provided contact',()=>{
+ const provider=renderLegalPage('/legal/provider',{env:{}});
+ assert.match(provider,/VINICIUS PEIXOTO MARTINS MATOS/);
+ assert.match(provider,/Rua Sacadura Cabral, 988 — Campo Grande\/MS — CEP 79036-060/);
+ assert.doesNotMatch(provider,/CEP pendente|Nome\/razão social pendente/);
+ assert.match(renderLegalPage('/legal/privacy',{env:{}}),/Resend.*Google PageSpeed Insights/s);
  for(const url of legalRoutes){const html=renderLegalPage(url,{env:{}});assert.match(html,/nitidocompany@gmail.com/);assert.match(html,/Documento em preparação/);assert.match(html,/60\.317\.226\/0001-42/);assert.match(html,/Campo Grande\/MS/);assert.ok(!html.includes('<script'));}
  const html=renderLegalPage('/legal/provider',{env:{LEGAL_ENTITY_NAME:'<img src=x onerror=alert(1)>'}});assert.ok(!html.includes('<img src=x'));assert.match(html,/&lt;img/);assert.equal(renderLegalPage('/legal/unknown'),null);
 });

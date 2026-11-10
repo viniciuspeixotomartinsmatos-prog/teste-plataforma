@@ -24,6 +24,11 @@ test('policy pages have correct language, cross-language URLs and real support c
   assert.match(html,/rel="canonical"/);assert.doesNotMatch(html,/\bTODO\b|lorem ipsum|Source terms/);
  }
  const html=renderPublicPage('/en/privacy/',{origin});assert.match(html,/Privacy/);assert.match(html,/Supabase/);
+ for(const locale of ['pt','en']){
+  const privacy=renderPublicPage('/'+locale+'/privacy/',{origin});
+  assert.match(privacy,/href="\/legal\/provider"/);
+  assert.match(privacy,/Resend.*Google PageSpeed Insights/s);
+ }
 });
 test('noindex staging has no sitemap URLs; launch sitemap contains only intentional public pages',()=>{
  assert.equal(publicSitemap({origin}).match(/<loc>/g),null);

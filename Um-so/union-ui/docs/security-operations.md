@@ -4,7 +4,7 @@
 
 O navegador autorizado deu acesso ao Supabase `umso-accounts`, na região `sa-east-1`, e a CLI confirmou a Vercel na equipe proprietária. A matriz de 40 requisitos registra o que foi comprovado com metadados, requisições anônimas e contas sintéticas. Contratos efetivos, atendimento, retenção, monitoramento e operação jurídica continuam sujeitos a validação.
 
-O contato público informado pelo responsável é `nitidocompany@gmail.com`; a titularidade e o recebimento dessa caixa ainda não foram verificados. O CNPJ informado tem dígitos verificadores válidos. Razão social e CEP não foram confirmados. Não preencher por suposição. Os documentos públicos permanecem identificados como preparação até identificação completa e revisão jurídica.
+O titular informou VINICIUS PEIXOTO MARTINS MATOS, CNPJ 60.317.226/0001-42, Rua Sacadura Cabral, 988, Campo Grande/MS, CEP 79036-060, e `nitidocompany@gmail.com` como canal de privacidade. O teste de SMTP confirmou a entrega dos e-mails transacionais em um alias dessa caixa. Conferência cadastral, atendimento de solicitações e revisão jurídica continuam pendentes. Os documentos públicos permanecem identificados como preparação.
 
 ## Registro de tratamento
 
@@ -70,7 +70,7 @@ O painel da conta Supabase conectada mostrou MFA por configurar. O titular preci
 
 O Supabase tem confirmação de e-mail habilitada e usa SMTP do Resend no domínio de envio verificado `nitidohig.com.br`. A credencial é dedicada ao envio e limitada ao domínio. O teste sintético confirmou entrega de cadastro e recuperação no Resend, uso dos dois tokens e troca de senha. Monitorar a franquia de 100 envios diários e 3.000 mensais e rotacionar a credencial pelo processo administrativo. O canal de atendimento a titulares ainda precisa de teste próprio. [SMTP do Supabase](https://supabase.com/docs/guides/auth/auth-smtp)
 
-A Vercel mostrou mitigação automática ativa e firewall personalizado sem configuração. O limite por processo da aplicação e as quotas nativas do Supabase Auth não demonstram um limite distribuído para as rotas do nitido. O limite do WAF sujeito a cobrança por uso não foi ativado. [Preços do WAF da Vercel](https://vercel.com/docs/vercel-firewall/vercel-waf/usage-and-pricing)
+A Vercel mantém mitigação automática e uma regra WAF ativa no plano Hobby. A regra limita POSTs em `/api/auth/` a 60 requisições por IP por janela de 60 segundos. O excesso retornou 429 no teste controlado. Os limites do app por processo e as quotas do Supabase Auth continuam complementares. As demais rotas ficam fora dessa regra. [Rate limiting da Vercel](https://vercel.com/docs/vercel-firewall/vercel-waf/rate-limiting)
 
 O audit npm retornou zero alertas conhecidos após Vite 6.4.6 e overrides compatíveis para parser 6.1.5 e MCP server 2.3.0. Isso não prova ausência de vulnerabilidades, nem substitui revisão dos runtimes adquiridos. Lockfile preservado, scripts de instalação não aprovados indiscriminadamente. Dependabot cria propostas de atualização para `jorge`; o workflow de revisão é manual, com ações fixadas por commit, permissões só de leitura e sem execução agendada de runners.
 
