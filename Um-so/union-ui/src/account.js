@@ -1,7 +1,7 @@
 import {useState,useEffect,useRef,useCallback} from 'react';
 import {safeStored} from './catalog.js';
-export async function api(path,{method='GET',body}={}){
- const response=await fetch(path,{method,credentials:'same-origin',...(body!==undefined?{headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}:{})});
+export async function api(path,{method='GET',body,signal}={}){
+ const response=await fetch(path,{method,credentials:'same-origin',signal,...(body!==undefined?{headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}:{})});
  const data=await response.json().catch(()=>({}));
  if(!response.ok)throw Object.assign(new Error(data.error?.message||data.error||data.message||'Não foi possível concluir.'),{status:response.status,code:data.code});
  return data;

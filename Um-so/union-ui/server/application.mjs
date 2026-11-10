@@ -1,3 +1,4 @@
+import {handleCollectionShare,sqliteShareStore} from './collection-shares.mjs';
 import {siteAuditService} from './site-audit-service.mjs';
 import {DatabaseSync} from 'node:sqlite';
 import {randomBytes,randomInt} from 'node:crypto';
@@ -119,6 +120,7 @@ export async function createApplication(options={}){
     await requireUser(request);const input=await readJSONObject(request);if(input.confirmation!=='EXCLUIR'||typeof input.password!=='string'||!input.password||input.password.length>1024)throw fail(400,'Digite EXCLUIR e confirme sua senha atual.');
     return auth.handler(new Request(origin+'/api/auth/delete-user',{method:'POST',headers:request.headers,body:JSON.stringify({password:input.password})}));
    }
+   if(['/api/collection-shares','/api/shared-collection','/api/sharing/config'].includes(route))return json(await handleCollectionShare(request,{store:sqliteShareStore(db),requireUser:()=>requireUser(request),origin,readBody:()=>readJSONObject(request)}));
    if(route==='/api/workspace'){
     const user=await requireUser(request),existing=db.prepare('SELECT revision,data,updated_at FROM workspace WHERE user_id=?').get(user.id);
     if(request.method==='GET')return json(existing?{revision:existing.revision,data:JSON.parse(existing.data),updatedAt:existing.updated_at}:{revision:0,data:{saved:[],collections:[]}});

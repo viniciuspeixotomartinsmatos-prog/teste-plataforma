@@ -11,7 +11,7 @@ test('all named SPA entrypoints survive direct navigation without rewriting priv
    ?path===rule.source.slice(0,-7)||path.startsWith(rule.source.slice(0,-7)+'/')
    :path===rule.source)?.destination;
  };
- for(const route of ['/icons?q=pessoa&family=ph','/compare','/sources','/resources','/component/example','/collections','/collections/example','/tools','/tools/raio-x','/builder','/account','/account/reset','/plans','/billing']){
+ for(const route of ['/shared','/icons?q=pessoa&family=ph','/compare','/sources','/resources','/component/example','/collections','/collections/example','/tools','/tools/raio-x','/builder','/account','/account/reset','/plans','/billing']){
   assert.equal(destination(route),'/index.html',route+' must open the existing app on a full navigation or refresh');
  }
  for(const path of ['/data/icon-library/index.json','/data/icon-library/chunks/ph-0.json','/code/example.json','/previews/example.html','/assets/catalog-cover.webp','/tools-runtime/example.html']){
