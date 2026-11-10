@@ -23,7 +23,7 @@ test('English login, signup constraints, language switching and safe requested d
   assert.equal(document.querySelector('h1').textContent,'Sign in to your account');
   assert.match(document.querySelector('.auth-art-quote').textContent,/Your ideas deserve a new universe/);
   await ui.click('Show password');assert.equal(document.getElementById('auth-password').type,'text');
-  await ui.click('Create an account');assert.equal(document.getElementById('auth-password').minLength,12);assert.equal(document.getElementById('auth-name').maxLength,100);
+  await ui.click('Create an account');assert.equal(document.getElementById('auth-password').minLength,8);assert.equal(document.getElementById('auth-name').maxLength,100);
   assert.match(document.querySelector('label').textContent,/Full name/);
   await ui.click('Sign in');await ui.submit();assert.equal(ui.destination(),'/plans?lang=en');
   await ui.click('Português');assert.equal(document.querySelector('h1').textContent,'Entre na sua conta');assert.equal(localStorage.getItem('nitido:locale'),'pt-BR');
@@ -32,7 +32,7 @@ test('English login, signup constraints, language switching and safe requested d
 test('English failures are safe and pending signup preserves the language without storing credentials',async()=>{
  let pending=false;const ui=await mount({account:{authenticate:async()=>{if(pending)return{verificationRequired:true};throw Error('Não foi possível confirmar sua sessão. Tente novamente.');}}});
  try{await ui.submit();assert.match(document.querySelector('[role=alert]').textContent,/try again/i);assert.doesNotMatch(document.querySelector('[role=alert]').textContent,/Não/);
- pending=true;await ui.click('Create an account');await ui.submit();assert.match(document.querySelector('[role=status]').textContent,/Check your email/);assert.equal(localStorage.getItem('nitido:locale'),'en');assert.equal(localStorage.length,1);
+ pending=true;await ui.click('Create an account');document.getElementById('auth-password').value='abcdefgh';await ui.submit();assert.match(document.querySelector('[role=alert]').textContent,/uppercase letter and a number/);document.getElementById('auth-password').value='ABCDEFG1';await ui.submit();assert.match(document.querySelector('[role=status]').textContent,/Check your email/);assert.equal(localStorage.getItem('nitido:locale'),'en');assert.equal(localStorage.length,1);
  }finally{await ui.close();}
 });
 test('English recovery and callback errors use stored language across return links',async()=>{
@@ -53,7 +53,7 @@ test('English signed-in panels and errors remain English',async()=>{
 test('English reset and resend retain localized success messages and POST fields',async()=>{
  const original=globalThis.fetch;const requests=[];globalThis.fetch=async(url,options)=>{requests.push({url,body:JSON.parse(options.body)});return Response.json({});};
  const ui=await mount({path:'/account/reset',search:'?lang=en&token=reset-token'});
- try{assert.equal(document.querySelector('h1').textContent,'Set your new password');assert.equal(document.getElementById('auth-password').minLength,12);await ui.submit();assert.equal(requests[0].url,'/api/auth/reset-password');assert.equal(requests[0].body.token,'reset-token');assert.match(document.querySelector('[role=status]').textContent,/Password changed/);await ui.click('Resend confirmation');await ui.submit();assert.equal(requests[1].url,'/api/auth/resend-confirmation');assert.match(document.querySelector('[role=status]').textContent,/still needs confirmation/);}finally{await ui.close();globalThis.fetch=original;}
+ try{assert.equal(document.querySelector('h1').textContent,'Set your new password');assert.equal(document.getElementById('auth-password').minLength,8);document.getElementById('auth-password').value='ABCDEFG1';await ui.submit();assert.equal(requests[0].url,'/api/auth/reset-password');assert.equal(requests[0].body.token,'reset-token');assert.match(document.querySelector('[role=status]').textContent,/Password changed/);await ui.click('Resend confirmation');await ui.submit();assert.equal(requests[1].url,'/api/auth/resend-confirmation');assert.match(document.querySelector('[role=status]').textContent,/still needs confirmation/);}finally{await ui.close();globalThis.fetch=original;}
 });
 test('English validation messages clear when switching back to Portuguese',async()=>{
  const ui=await mount();try{const input=document.getElementById('auth-email');await act(async()=>input.dispatchEvent(new Event('invalid',{bubbles:false,cancelable:true})));assert.equal(input.validationMessage,'Please fill out this field.');await ui.click('Português');assert.notEqual(input.validationMessage,'Please fill out this field.');}finally{await ui.close();}

@@ -6,6 +6,8 @@ import {randomBytes,randomInt} from 'node:crypto';
 import {promises as fs} from 'node:fs';
 import path from 'node:path';
 import {betterAuth} from 'better-auth';
+import {APIError,createAuthMiddleware} from 'better-auth/api';
+import {PASSWORD_MIN_LENGTH,PASSWORD_REQUIREMENTS,validNewPassword} from '../src/password-policy.js';
 import {getMigrations} from 'better-auth/db/migration';
 import Stripe from 'stripe';
 import nodemailer from 'nodemailer';
@@ -48,7 +50,11 @@ export async function createApplication(options={}){
  const authOptions={
   database:db,secret,baseURL:origin,basePath:'/api/auth',trustedOrigins:[origin],
   advanced:{ipAddress:{ipAddressHeaders:['x-umso-client-ip']}},
-  emailAndPassword:{enabled:true,minPasswordLength:12,requireEmailVerification:production,revokeSessionsOnPasswordReset:true,sendResetPassword:async({user,url})=>mail({to:user.email,subject:'Redefinir sua senha — nitido',text:'Use este link para redefinir sua senha: '+url})},
+  emailAndPassword:{enabled:true,minPasswordLength:PASSWORD_MIN_LENGTH,requireEmailVerification:production,revokeSessionsOnPasswordReset:true,sendResetPassword:async({user,url})=>mail({to:user.email,subject:'Redefinir sua senha — nitido',text:'Use este link para redefinir sua senha: '+url})},
+  hooks:{before:createAuthMiddleware(async ctx=>{
+   const field=ctx.path==='/sign-up/email'?'password':['/reset-password','/change-password','/set-password'].includes(ctx.path)?'newPassword':null;
+   if(field&&!validNewPassword(ctx.body?.[field]))throw new APIError('BAD_REQUEST',{message:PASSWORD_REQUIREMENTS});
+  })},
   emailVerification:{sendOnSignUp:production,autoSignInAfterVerification:true,sendVerificationEmail:async({user,url})=>mail({to:user.email,subject:'Confirme seu e-mail — nitido',text:'Confirme sua conta: '+url})},
   user:{deleteUser:{enabled:true,beforeDelete:async user=>{const active=db.prepare("SELECT id FROM subscription WHERE user_id=? AND status IN ('active','trialing','past_due','unpaid')").all(user.id);if(active.length&&!stripe)throw Error('Não foi possível cancelar sua assinatura. Tente novamente.');for(const subscription of active)await stripe.subscriptions.cancel(subscription.id);}}},
   session:{expiresIn:60*60*24*30,updateAge:60*60*24},

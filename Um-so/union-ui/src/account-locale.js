@@ -46,7 +46,7 @@ const english = {
   "Nome completo": "Full name",
   "E-mail": "Email",
   "Senha": "Password",
-  "Use pelo menos 12 caracteres.": "Use at least 12 characters.",
+  "Use pelo menos 8 caracteres, com uma letra maiúscula e um número.": "Use at least 8 characters, including an uppercase letter and a number.",
   "Ainda não tem uma conta? ": "Don’t have an account? ",
   "Criar uma conta": "Create an account",
   "Esqueci minha senha": "Forgot my password",

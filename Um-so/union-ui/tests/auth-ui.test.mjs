@@ -47,7 +47,7 @@ test('reference account layout preserves password visibility, signup constraints
   await act(async()=>root.render(React.createElement(App)));await settle();
   assert.ok(document.querySelector('.auth-fuse'));assert.match(document.querySelector('.auth-art-quote').textContent,/Suas ideias merecem um novo universo/);assert.ok(document.querySelector('.auth-emblem'));
   await click('Mostrar senha');assert.equal(document.getElementById('auth-password').type,'text');assert.equal(document.querySelector('[aria-label="Ocultar senha"]').getAttribute('aria-pressed'),'true');
-  await click('Criar uma conta');assert.equal(document.getElementById('auth-password').type,'password');assert.equal(document.getElementById('auth-password').minLength,12);assert.equal(document.getElementById('auth-name').maxLength,100);assert.ok(document.querySelector('.auth-art-quote'));
+  await click('Criar uma conta');assert.equal(document.getElementById('auth-password').type,'password');assert.equal(document.getElementById('auth-password').minLength,8);assert.equal(document.getElementById('auth-name').maxLength,100);assert.ok(document.querySelector('.auth-art-quote'));
   await click('Entrar');await click('Esqueci minha senha');assert.equal(document.getElementById('auth-password'),null);assert.match(document.querySelector('h1').textContent,/Recuperar acesso/);
   await click('Voltar para entrar');await click('Reenviar confirmação');assert.equal(document.getElementById('auth-password'),null);assert.match(document.querySelector('h1').textContent,/Reenviar confirmação/);
  }finally{await act(async()=>root.unmount());globalThis.fetch=original;dom.window.close();delete globalThis.IS_REACT_ACT_ENVIRONMENT;}
@@ -78,7 +78,7 @@ test('pending signup does not revalidate a missing or stale session and erase it
  const settle=()=>act(async()=>{await new Promise(resolve=>setTimeout(resolve,50));});
  try{
   await act(async()=>root.render(React.createElement(App)));await settle();
-  const before=reads;await act(async()=>[...document.querySelectorAll('button')].find(button=>button.textContent==='Criar uma conta').click());
+  const before=reads;await act(async()=>[...document.querySelectorAll('button')].find(button=>button.textContent==='Criar uma conta').click());document.getElementById('auth-password').value='ABCDEFG1';
   await act(async()=>document.querySelector('form').dispatchEvent(new Event('submit',{bubbles:true,cancelable:true})));await settle();
   assert.equal(signups,1);assert.equal(reads,before);assert.match(document.querySelector('[role=status]').textContent,/Confira seu e-mail/);
  }finally{await act(async()=>root.unmount());globalThis.fetch=original;dom.window.close();delete globalThis.IS_REACT_ACT_ENVIRONMENT;}

@@ -9,7 +9,10 @@ test('login is required even with billing disabled; a revoked cookie cannot read
  try{
   assert.equal((await (await app.handle(request('/api/access'))).json()).canExport,false);
   assert.equal(await app.canReadCode(request('/code/item.json')),false);
-  const result=await app.handle(request('/api/auth/sign-up/email',{method:'POST',headers:{origin,'Content-Type':'application/json'},body:JSON.stringify({name:'Teste',email:'auth-required@example.test',password:'Required_password_73!'})}));
+  const signup=password=>app.handle(request('/api/auth/sign-up/email',{method:'POST',headers:{origin,'Content-Type':'application/json'},body:JSON.stringify({name:'Teste',email:'auth-required@example.test',password})}));
+  assert.equal((await signup('abcdefgh1234')).status,400);
+  assert.equal((await signup('ABCDEFGHIJKL')).status,400);
+  const result=await signup('ABCDEFG1');
   assert.equal(result.status,200);
   const cookie=result.headers.getSetCookie().map(c=>c.split(';')[0]).join('; ');
   assert.equal(await app.canReadCode(request('/code/item.json',{headers:{cookie}})),true);

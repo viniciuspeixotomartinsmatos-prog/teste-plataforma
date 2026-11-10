@@ -61,6 +61,7 @@
 - Restauração local de snapshot cifrado de PostgreSQL WASM com dados sintéticos aprovada. O ensaio verificou as duas linhas, isolamento RLS, recusa de truncamento e cascata após restaurar.
 - Validação local em Node 24: 184 testes aprovados, zero falhos e zero ignorados. Build de produção aprovado com Vite 6.4.6, reempacotamento de templates e geração dos arquivos Sites. A auditoria npm do lockfile retornou zero alertas conhecidos.
 - Após aprovação do titular, foi publicada a regra `nitido-auth-post-rate-limit` no projeto `teste-plataforma`. Em um teste controlado, 60 POSTs com origem inválida retornaram 403 da aplicação e o 61º retornou 429 do WAF. O health check continuou em 200 com cobrança desativada. Nenhum login ou e-mail foi disparado.
+- Por solicitação do titular, cadastro e redefinição no app exigem pelo menos oito caracteres, uma maiúscula e um número. No Supabase `umso-accounts`, uma conta sintética alterou a senha para oito caracteres (maiúsculas e números) e entrou com a nova senha. A conta foi removida, sem envio de e-mail nem alteração no painel.
 - O plano do projeto na Vercel é Hobby. As regras do provedor restringem esse plano a uso não comercial. A elegibilidade da hospedagem precisa ser resolvida antes da operação paga. [Política de uso da Vercel](https://vercel.com/docs/limits/fair-use-guidelines)
 
 ## Validação de 9 de novembro
