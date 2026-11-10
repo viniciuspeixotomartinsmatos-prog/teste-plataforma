@@ -54,3 +54,22 @@
 @media(prefers-reduced-motion:reduce){.auth-fuse .auth-card input,.auth-fuse .auth-submit{transition:none}}
 
 .auth-fuse .auth-card label.auth-policy-ack{display:block;font-size:12px;line-height:1.5}.auth-fuse .auth-card .auth-policy-ack input[type=checkbox]{display:inline-block;width:16px;min-width:16px;min-height:16px;height:16px;padding:0;margin:0 8px 0 0;vertical-align:middle}.auth-policy-links{font-size:12px;text-align:center}.auth-policy-ack a,.auth-policy-links a{color:var(--auth-purple,var(--accent))}.account-panel details{margin:18px 0}.account-panel details>summary{cursor:pointer}.account-panel form{display:grid;gap:10px;margin:18px 0;max-width:480px}.account-panel label{display:block}.account-panel input:not([type=checkbox]){display:block;width:100%;padding:10px;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:8px}
+
+.account-page.auth-fuse {
+  --auth-unit:clamp(12px,1vw,17px);
+  background:radial-gradient(ellipse at 85% 60%,#46207c66,transparent 42%),
+    radial-gradient(ellipse at 42% 95%,#38178288,transparent 30%),#09091c;
+}
+.cosmic-figure {position:absolute;inset:0 0 8%;display:grid;place-content:center;isolation:isolate;}
+.cosmic-figure::before {content:"";position:absolute;top:1%;left:3%;width:37%;aspect-ratio:1;border-radius:50%;z-index:-1;background:radial-gradient(at 75% 80%,#0c0a20 50%,#292366 79%,#aaa7ff 96%);box-shadow:-5px -5px 22px #4e49be50;}
+.cosmic-figure img,.cosmic-figure canvas {display:block;width:100%;height:auto;grid-area:1/1;}
+.cosmic-figure [hidden] {display:none;}
+.auth-fuse .auth-emblem .nitido-brand {width:68%;height:auto;}
+.auth-fuse .auth-art-quote {bottom:1rem;}
+.auth-fuse .auth-card {align-self:center;}
+@media(max-width:900px) {
+  .account-page.auth-fuse {display:flex;flex-direction:column;align-items:center;gap:1rem;}
+  .auth-fuse .auth-art {display:block;width:min(92vw,430px);aspect-ratio:4/3;}
+  .cosmic-figure {inset:0;}
+  .auth-fuse .auth-art-quote {display:none;}
+}

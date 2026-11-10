@@ -1,3 +1,4 @@
+import {renderLibrary,librarySitemap,libraryRoutes} from './public-library.mjs';
 import http from 'node:http';
 import {createReadStream} from 'node:fs';
 import fs from 'node:fs/promises';
@@ -21,8 +22,8 @@ export async function createServer(options={}){
    if(pathname.includes('\0')||pathname.includes('\\'))throw Object.assign(Error(),{status:400});
    if(pathname.startsWith('/api/'))return await nodeResponse(await app.handle(await nodeRequest(req,app.origin)),res);
    if(!['GET','HEAD'].includes(req.method))throw Object.assign(Error(),{status:405});
-   const publicHtml=pathname==='/sitemap.xml'?publicSitemap():renderLegalPage(pathname)??renderPublicPage(pathname);
-   if(publicHtml!==null){res.setHeader('Content-Type',pathname==='/sitemap.xml'?'application/xml; charset=utf-8':'text/html; charset=utf-8');res.setHeader('Cache-Control','no-cache');return res.end(req.method==='HEAD'?'':publicHtml);}
+   const publicHtml=pathname==='/sitemap.xml'?publicSitemap():pathname==='/library-sitemap.xml'?librarySitemap():renderLibrary(pathname)??renderLegalPage(pathname)??renderPublicPage(pathname);
+   if(publicHtml!==null){res.setHeader('Content-Type',pathname.endsWith('sitemap.xml')?'application/xml; charset=utf-8':'text/html; charset=utf-8');res.setHeader('Cache-Control','no-cache');return res.end(req.method==='HEAD'?'':publicHtml);}
    if(pathname.split('/').some(p=>p.startsWith('.'))||/\.(sqlite|toml|log|pem)(?:-|$|\.)/i.test(pathname))throw Object.assign(Error(),{status:404});
    if(protectedPath(pathname)&&!await app.isSignedIn(await nodeRequest(req,app.origin)))return await nodeResponse(signInResponse(await nodeRequest(req,app.origin)),res);
    if(protectedPath(pathname)&&app.canAccessPlatform&&!await app.canAccessPlatform(await nodeRequest(req,app.origin))){const html=req.headers.accept?.includes('text/html');return await nodeResponse(html?new Response(null,{status:303,headers:{Location:'/plans','Cache-Control':'no-store'}}):Response.json({error:'Assinatura necessária.',code:'subscription_required'},{status:402,headers:{'Cache-Control':'no-store'}}),res);}

@@ -9,8 +9,9 @@ const featuredNames=['Aurora','Shader Animation','3D Card Hover Tilt Effect','Ma
 export function prepareCatalog(rows){return rows.map((r,i)=>({...r,_order:i,_featuredRank:r.image&&featuredNames.includes(r.name)?featuredNames.indexOf(r.name):-1,_concepts:concepts([r.name,r.description,r.slug,r.category,...r.tags||[]].join(' ')),_search:normalize([r.name,r.description,r.slug,r.sourceId,sourceNames[r.sourceId],r.author,r.category,...r.tags||[]].join(' '))}));}
 export function searchCatalog(rows,{q='',source='all',category='all',kind='all',codeOnly=false,savedOnly=false,saved=[],sort='featured'}={}){
  const words=queryTerms(q),ranks=new Map();
+ const related=words.length ? rows.semanticSearch?.(words) : null;
  const savedSet=new Set(saved);
- const list=rows.filter(r=>(source==='all'||r.sourceId===source)&&(category==='all'||r.category===category)&&(kind==='all'||r.kind===kind)&&(!codeOnly||r.availability==='code')&&(!savedOnly||savedSet.has(r.id))&&(()=>{const rank=matchIntent(r._search,r._concepts||concepts(r._search),words,q);ranks.set(r.id,rank);return rank>0;})());
+ const list=rows.filter(r=>(source==='all'||r.sourceId===source)&&(category==='all'||r.category===category)&&(kind==='all'||r.kind===kind)&&(!codeOnly||r.availability==='code')&&(!savedOnly||savedSet.has(r.id))&&(()=>{const rank=matchIntent(r._search,r._concepts||concepts(r._search),words,q) || related?.get(r.id) || 0;ranks.set(r.id,rank);return rank>0;})());
  if(sort==='name')list.sort((a,b)=>a.name.localeCompare(b.name));
  else if(sort==='source')list.sort((a,b)=>a.sourceId.localeCompare(b.sourceId)||a.name.localeCompare(b.name));
  else if(sort==='recent')list.sort((a,b)=>(b.updated||'').localeCompare(a.updated||''));
@@ -26,5 +27,10 @@ export function sourceOf(sources,id){return sources.find(s=>s.id===id)||{id,name
 
 // Explicitly reviewed families; a matching generic title alone never merges arbitrary records.
 const variantNames=new Set(['aurora','orb','split text','spotlight card','dusk hero section 8']);
-export function catalogVariants(item,rows){if(!item||!variantNames.has(normalize(item.name)))return item?[item]:[];return rows.filter(row=>normalize(row.name)===normalize(item.name)&&row.kind===item.kind&&row.category===item.category);}
-export function groupCatalogResults(rows){const seen=new Map(),result=[];for(const row of rows){const key=variantNames.has(normalize(row.name))?[normalize(row.name),row.kind,row.category].join(':'):row.id;const existing=seen.get(key);if(existing){existing._variants.push(row);continue;}const entry={...row,_variants:[row]};seen.set(key,entry);result.push(entry);}return result;}
+const pairedVariants = new Map();
+for (const slug of ['backgrounds-bubble','backgrounds-fireworks','backgrounds-glyph','backgrounds-gradient','backgrounds-gravity-stars','backgrounds-hexagon','backgrounds-stars','backgrounds-topography','buttons-flip','buttons-github-stars','buttons-liquid','buttons-theme-toggler','components-code-block']) {
+  pairedVariants.set('animate-'+slug,slug);
+  pairedVariants.set('animate-vue-'+slug,slug);
+}
+export function catalogVariants(item,rows){if(item && pairedVariants.has(item.id))return rows.filter(row=>pairedVariants.get(row.id)===pairedVariants.get(item.id));if(!item||!variantNames.has(normalize(item.name)))return item?[item]:[];return rows.filter(row=>normalize(row.name)===normalize(item.name)&&row.kind===item.kind&&row.category===item.category);}
+export function groupCatalogResults(rows){const seen=new Map(),result=[];for(const row of rows){const key=pairedVariants.get(row.id) || (variantNames.has(normalize(row.name))?[normalize(row.name),row.kind,row.category].join(':'):row.id);const existing=seen.get(key);if(existing){existing._variants.push(row);continue;}const entry={...row,_variants:[row]};seen.set(key,entry);result.push(entry);}return result;}
