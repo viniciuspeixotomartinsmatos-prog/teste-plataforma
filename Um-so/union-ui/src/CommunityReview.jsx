@@ -11,7 +11,7 @@ async function command(action,input={}){
  finally{clearTimeout(timer);}
 }
 const labels={pending:'Em análise',approved:'Publicado · Nítido Verified',rejected:'Rejeitado',archived:'Versão anterior',withdrawn:'Retirado'};
-export default function CommunityReview({draft,dirty}){
+export default function CommunityReview({draft,dirty,onRestore}){
  const [list,setList]=useState(null),[item,setItem]=useState(null),[reports,setReports]=useState([]),[message,setMessage]=useState(''),[busy,setBusy]=useState(false);
  const [metrics,setMetrics]=useState(null);
  const [consent,setConsent]=useState(false),[reason,setReason]=useState(''),[tested,setTested]=useState(false),[licensed,setLicensed]=useState(false),[offset,setOffset]=useState(0);
@@ -47,6 +47,7 @@ export default function CommunityReview({draft,dirty}){
  {list.rows.length===100&&<button onClick={()=>run(()=>refresh(offset+100))}>Próxima</button>}</>}
  {reports.map((row,i)=><p key={row.version_id+i}><button onClick={()=>run(()=>inspect({id:row.version_id,status:'approved'}))}>{row.name}</button> · {row.reason}</p>)}
  {item&&<article><h3>{item.source.name}</h3><p>{item.source.description}</p><p>{item.source.author} · {item.source.license}</p>
+ {onRestore&&<button className="button" onClick={()=>{onRestore(item.source);setItem(null);}}>Usar esta versão no editor</button>}
  {item.source.analysis&&<section aria-label="Verificação automática"><h4>Preparação técnica: {item.source.analysis.score}/100</h4><p>{item.source.analysis.scope}</p><p>Verificado em {new Date(item.source.analysis.checkedAt).toLocaleString()}.</p><ul>{item.source.analysis.findings.map((finding,i)=><li key={i}>{finding.level==='error'?'Corrigir':'Revisar'}: {finding.message}</li>)}</ul><small>Esta nota mede os critérios técnicos descritos. Não é certificação de segurança ou originalidade.</small></section>}
  {item.source.analysis?.exactMatches?.length>0&&<section><h4>Correspondências de código para revisão</h4><p>O texto normalizado coincide com versões de outros criadores. Isso não prova cópia indevida; confira autoria e licença.</p><ul>{item.source.analysis.exactMatches.map(match=><li key={match.id}><button onClick={()=>run(()=>inspect(match))}>{match.name} · v{match.version}</button></li>)}</ul></section>}
  <CreatorPreview draft={item.source}/><details><summary>Revisar código</summary><pre style={{whiteSpace:'pre-wrap'}}>{item.source.source}</pre></details>

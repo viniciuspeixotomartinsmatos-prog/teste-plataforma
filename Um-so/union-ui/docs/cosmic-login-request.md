@@ -37,3 +37,5 @@ Capture baseline and final screen. Verify idle/entrance, slow/fast localized hov
 ## Status
 
 Implemented using the retained transparent seated astronaut artwork and sampled spring particles. The form remains functional in both languages. Physics and form regression tests pass. Browser validation, screenshot comparison and device performance measurements are still pending.
+
+The final revision renders only the right art region of the supplied original neon reference (retained unchanged) rather than the earlier lower-resolution transparent illustration. The form remains real application controls. Bright body-region tiles move over a cleared raster region; the background is not a recovered independent scene/model. Reference fidelity, crop boundaries and device performance remain browser acceptance items.
