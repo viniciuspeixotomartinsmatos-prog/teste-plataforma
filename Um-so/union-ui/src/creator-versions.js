@@ -3,7 +3,7 @@ export function restoreCreatorVersion(drafts,source,newId){
  const current=drafts.find(draft=>draft.id===source.id),own=Boolean(current);
  const needsBackup=own&&current.source!==source.source;
  if((!own||needsBackup)&&drafts.length>=20)throw Error('Limite de 20 rascunhos. Exporte ou remova um antes de criar outra variante.');
- const {analysis,publication,...original}=source;
+ const {analysis,publication,nitidoVersion,...original}=source;
  const draft={...structuredClone(original),id:own?source.id:newId,status:'draft',rightsConfirmed:own&&source.rightsConfirmed===true};
  if(!own)draft.name=(draft.name+' · variante').slice(0,100);
  const next=own?drafts.map(value=>value.id===draft.id?draft:value):[...drafts,draft];

@@ -11,6 +11,10 @@ test('public community paths are explicit, escaped and canonical without exposin
  assert.equal(protectedPath('/community/admin'),true);
  assert.equal(protectedPath('/data/creator-runtime/react.js'),true);
  assert.throws(()=>communityTarget(new URL('https://example.test/community?offset=-1')));
+ assert.throws(()=>communityTarget(new URL('https://example.test/community?kind=unknown')));
+ assert.equal(communityTarget(new URL('https://example.test/community?q=counter&kind=react')).query,'counter');
+ const filtered=renderCommunity({origin:'https://example.test',query:'<script>',kind:'react'});
+ assert.match(filtered,/noindex,follow/);assert.match(filtered,/name="kind"/);assert.doesNotMatch(filtered,/value="<script>"/);
  const html=renderCommunity({item:{id,creator:id,name:'</script><script>alert(1)</script>',description:'<img src=x onerror=alert(1)>',display_name:'Author',version:2,reviewed_at:'2026-11-10T13:00:00Z'},origin:'https://example.test'});
  assert.match(html,/rel="canonical" href="https:\/\/example.test\/community\/component\//);
  assert.match(html,/CreativeWork/);assert.doesNotMatch(html,/<script>alert\(1\)/);assert.doesNotMatch(html,/<img src=x/);

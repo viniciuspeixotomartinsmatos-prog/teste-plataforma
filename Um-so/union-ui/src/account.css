@@ -80,3 +80,4 @@
 .cosmic-figure--reference{overflow:hidden;border-radius:24px;mask-image:linear-gradient(to bottom,transparent,#000 5%,#000 95%,transparent)}.cosmic-figure--reference::before{display:none}.cosmic-figure .cosmic-reference{width:172.413793%;max-width:none;transform:translateX(-42%)}
 
 @media(max-width:900px){.auth-fuse .auth-art{aspect-ratio:1.03}}
+.creator-panel section[aria-label] dl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.creator-panel section[aria-label] dl>div{padding:18px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}.creator-panel section[aria-label] dt{font-size:12px;color:var(--muted)}.creator-panel section[aria-label] dd{font-size:34px;letter-spacing:-.04em;margin:6px 0 0}@media(max-width:650px){.creator-panel section[aria-label] dl{grid-template-columns:repeat(2,minmax(0,1fr))}}

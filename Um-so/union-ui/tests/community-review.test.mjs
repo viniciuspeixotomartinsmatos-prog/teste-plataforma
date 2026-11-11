@@ -17,7 +17,7 @@ test('submission freezes source and a different moderator controls verified publ
  const gallery=async()=>(await db.query('select public.creator_gallery() as value')).rows[0].value;
  try{
    await db.exec("create role anon;create role authenticated;create schema auth;create table auth.users(id uuid primary key,raw_app_meta_data jsonb default '{}'::jsonb);create function auth.uid() returns uuid language sql as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;create function auth.jwt() returns jsonb language sql as $$select current_setting('request.jwt.claims',true)::jsonb$$;grant usage on schema auth to authenticated;");
-   for(const name of ['20261110_creator_workspaces.sql','20261111_creator_review.sql','20261111_creator_metrics.sql','20261111_creator_role_audit.sql','20261111_creator_similarity.sql','20261111_creator_public_item.sql'])await db.exec(await readFile('supabase/migrations/'+name,'utf8'));
+   for(const name of ['20261110_creator_workspaces.sql','20261111_creator_review.sql','20261111_creator_metrics.sql','20261111_creator_role_audit.sql','20261111_creator_similarity.sql','20261111_creator_public_item.sql','20261111_creator_discovery_reports.sql','20261111_creator_activity.sql'])await db.exec(await readFile('supabase/migrations/'+name,'utf8'));
    await db.query('insert into auth.users(id) values ($1),($2)',[author,reviewer]);
    await identity(author);
    const workspace={profile:{displayName:'Test author',bio:'Public bio'},drafts:[{id:draft,name:'Button',source:'original source',license:'Own',rightsConfirmed:true}]};
@@ -46,7 +46,13 @@ test('submission freezes source and a different moderator controls verified publ
    const published=await gallery();
    assert.equal(published[0].display_name,'Test author');assert.equal(published[0].version,1);
    const publicItem=(await db.query('select public.creator_public_item($1) as p',[v1.id])).rows[0].p;
-   assert.equal(publicItem.name,'Button');assert.equal(publicItem.source,undefined);assert.equal(publicItem.owner_id,undefined);
+   assert.equal(publicItem.name,'Button');
+   await db.query("select public.creator_event($1,'open')",[v1.id]);
+   await db.query("select set_config('request.jwt.claim.sub','',false)");await assert.rejects(db.query("select public.creator_event($1,'copy')",[v1.id]));
+   await identity(reviewer,true);await db.exec('reset role;set role authenticated');
+   const usage=(await db.query('select public.creator_metrics() as m')).rows[0].m.activity;
+   assert.equal(usage.opens,1);assert.equal(usage.copies,0);
+   await db.exec('reset role;set role anon');assert.equal(publicItem.source,undefined);assert.equal(publicItem.owner_id,undefined);
    assert.equal(published[0].snapshot,undefined);assert.equal(published[0].owner_id,undefined);
    await assert.rejects(command('source',{id:v1.id}));
    await db.exec('reset role;set role authenticated');await identity(author);
@@ -57,6 +63,14 @@ test('submission freezes source and a different moderator controls verified publ
    await command('report',{id:v1.id,reason:'Review this record'});
    assert.equal((await command('export')).versions.length,2);
    await identity(reviewer,true);assert.equal((await command('reports')).length,1);
+   const report=(await db.query('select public.creator_reports() as p')).rows[0].p[0];
+   await identity(author);await assert.rejects(db.query('select public.creator_resolve_report($1,$2,$3)',[report.id,'Review completed',report.created_at]));
+   await identity(reviewer,true);await assert.rejects(db.query('select public.creator_resolve_report($1,$2,$3)',[report.id,'Stale view cannot close a report','2000-01-01T00:00:00Z']));await db.query('select public.creator_resolve_report($1,$2,$3)',[report.id,'Inspected synthetic report and recorded decision.',report.created_at]);
+   assert.deepEqual((await db.query('select public.creator_reports() as p')).rows[0].p,[]);
+   assert.equal((await db.query("select public.creator_browse(null,0,'Button','react') as p")).rows[0].p.length,0);
+   assert.equal((await db.query("select public.creator_browse(null,0,'button','') as p")).rows[0].p.length,1);
+   await identity(author);await command('report',{id:v1.id,reason:'Reopened report with new evidence'});
+   await identity(reviewer,true);assert.equal((await db.query('select public.creator_reports() as p')).rows[0].p.length,1);
    await command('review',{...approval,id:v2.id});
    assert.equal((await gallery())[0].version,2);
    await command('withdraw',{id:v2.id,reason:'Withdraw technical test'});

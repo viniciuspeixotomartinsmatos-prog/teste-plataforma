@@ -1,6 +1,7 @@
 import {securityEvent} from './security-controls.mjs';
 const fail=(status,message,code)=>Object.assign(Error(message),{status,code});
-export const POLICY_VERSION='2026-11-09';
+import {POLICY_VERSION} from '../src/legal-policy.js';
+export {POLICY_VERSION};
 export async function exportPersonalData(user,client,{requiresBillingLedger=false}={}){
  const workspace=await client.from('workspaces').select('revision,data,updated_at').eq('user_id',user.id).maybeSingle();
  if(workspace.error)throw fail(503,'Não foi possível exportar suas coleções.','privacy_export_unavailable');

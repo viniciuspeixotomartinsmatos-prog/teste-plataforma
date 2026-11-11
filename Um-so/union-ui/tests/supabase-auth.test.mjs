@@ -1,3 +1,4 @@
+import {POLICY_VERSION} from '../src/legal-policy.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createSupabaseApplication} from '../server/supabase-app.mjs';
@@ -26,14 +27,14 @@ test('Supabase verifies users remotely, refuses foreign mutations and gives expl
 test('signup without a session asks for email verification and does not claim authenticated access',async()=>{
  const client={auth:{signUp:async()=>({data:{user:{id:'one',email:'a@example.test',user_metadata:{name:'Um'}},session:null}})}};
  const app=createSupabaseApplication({origin,clientFactory:()=>({client,finish:r=>r})});
- const response=await app.handle(request('/api/auth/sign-up/email',{name:'Um',email:'a@example.test',password:'ABCDEFG1',termsAccepted:true,policyVersion:'2026-11-09'}));
+ const response=await app.handle(request('/api/auth/sign-up/email',{name:'Um',email:'a@example.test',password:'ABCDEFG1',termsAccepted:true,policyVersion:POLICY_VERSION}));
  assert.equal(response.status,200);assert.equal((await response.json()).verificationRequired,true);
 });
 test('new passwords require eight characters, an uppercase letter and a digit without changing login',async()=>{
  const user={id:'one',email:'a@example.test'},calls=[];
  const client={auth:{getUser:async()=>({data:{user}}),signUp:async input=>{calls.push(['signup',input.password]);return {data:{user}};},updateUser:async input=>{calls.push(['reset',input.password]);return {data:{user}};},signOut:async()=>({}),signInWithPassword:async input=>{calls.push(['login',input.password]);return {data:{user}};}}};
  const app=createSupabaseApplication({origin,clientFactory:()=>({client,finish:r=>r}),limiter:()=>{}});
- for(const [route,key,extra] of [['sign-up/email','password',{name:'Um',email:user.email,termsAccepted:true,policyVersion:'2026-11-09'}],['reset-password','newPassword',{}]]){
+ for(const [route,key,extra] of [['sign-up/email','password',{name:'Um',email:user.email,termsAccepted:true,policyVersion:POLICY_VERSION}],['reset-password','newPassword',{}]]){
   for(const password of ['ABCDEF1','abcdefg1','ABCDEFGH'])assert.equal((await app.handle(request('/api/auth/'+route,{...extra,[key]:password}))).status,400,password);
   assert.equal((await app.handle(request('/api/auth/'+route,{...extra,[key]:'ABCDEFG1'}))).status,200);
  }

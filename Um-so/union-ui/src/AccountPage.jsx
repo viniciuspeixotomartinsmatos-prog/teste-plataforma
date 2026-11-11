@@ -1,3 +1,4 @@
+import {POLICY_VERSION} from './legal-policy.js';
 import Brand from './Brand.jsx';
 import StarBorder from './StarBorder.jsx';
 import React,{useState,useEffect,useRef} from 'react';
@@ -36,7 +37,7 @@ export default function AccountPage({account,navigate,notify,path='/account',sea
   else if(mode==='resend'){await api('/api/auth/resend-confirmation',{method:'POST',body:{email}});setMessage(t("Se a conta ainda precisar de confirmação, você receberá um novo e-mail. Se já confirmou, entre com sua senha."));}
   else if(mode==='forgot'){await api('/api/auth/request-password-reset',{method:'POST',body:{email,redirectTo:window.location.origin+'/account/reset'}});setMessage(t("Se houver uma conta com esse e-mail, você receberá as instruções para redefinir a senha."));}
   else if(mode==='reset'){await api('/api/auth/reset-password',{method:'POST',body:{token:params.get('token'),newPassword:submittedPassword}});await account.refreshSession();setPassword('');setMode('login');setMessage(t("Senha alterada. Entre com a nova senha."));}
-  else{const result=await account.authenticate(mode,{email,password:submittedPassword,...(mode==='signup'?{name,termsAccepted,policyVersion:'2026-11-09'}:{})});if(result.verificationRequired){setPassword('');setMode('login');setMessage(t("Confira seu e-mail para confirmar a conta antes de entrar."));}else{notify(mode==='signup'?t("Conta criada."):t("Você entrou na sua conta."));navigate(safeNext(params.get('next')));}}
+  else{const result=await account.authenticate(mode,{email,password:submittedPassword,...(mode==='signup'?{name,termsAccepted,policyVersion:POLICY_VERSION}:{})});if(result.verificationRequired){setPassword('');setMode('login');setMessage(t("Confira seu e-mail para confirmar a conta antes de entrar."));}else{notify(mode==='signup'?t("Conta criada."):t("Você entrou na sua conta."));navigate(safeNext(params.get('next')));}}
  }catch(failure){setError(failure.message||t("Confira seus dados e tente novamente."));}finally{setBusy(false);}}
 
  if(account.sessionLoading)return <main className="loading-page" id="main"><Loader2 className="spin"/></main>;
