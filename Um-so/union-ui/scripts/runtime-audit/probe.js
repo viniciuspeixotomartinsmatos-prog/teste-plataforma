@@ -1,7 +1,11 @@
 // Runs only inside the same opaque sandbox as the original demo. It observes
 // first paint, decoding and bounded tab/canvas interactions, not business APIs.
 export function runtimeAuditProbe(id){
- const errors=[],started=performance.now();let finished=false,interaction=null;
+ const errors=[],requests=[],started=performance.now(),videoSamples=new WeakMap();let finished=false,interaction=null;
+ const safeURL=value=>{try{const url=new URL(value,document.baseURI);return /^(?:blob:|data:)$/.test(url.protocol)?url.protocol+'[embedded]':url.origin+url.pathname;}catch{return '';}};
+ const capabilities=video=>({nativeHls:video.canPlayType('application/vnd.apple.mpegurl')||video.canPlayType('audio/mpegurl'),avc:video.canPlayType('video/mp4; codecs="avc1.42E01E"'),mseAvc:globalThis.MediaSource?.isTypeSupported('video/mp4; codecs="avc1.42E01E"')??null,vp9:video.canPlayType('video/webm; codecs="vp9"')});
+ const fetchOriginal=window.fetch.bind(window);
+ window.fetch=async(input,options)=>{try{const response=await fetchOriginal(input,options);if(!response.ok&&requests.length<24)requests.push({url:safeURL(input?.url||input),status:response.status});return response;}catch(error){if(requests.length<24)requests.push({url:safeURL(input?.url||input),error:error.name});throw error;}};
  addEventListener('error',event=>{if(event.target===window&&!/^ResizeObserver loop/.test(event.message))errors.push(event.message);},true);
  addEventListener('unhandledrejection',event=>errors.push(String(event.reason?.message||event.reason)));
  const scopes=()=>{const result=[document.body];for(let i=0;i<result.length;i++)for(const node of result[i]?.querySelectorAll('*')||[])if(node.shadowRoot)result.push(node.shadowRoot);return result.filter(Boolean);};
@@ -22,10 +26,12 @@ export function runtimeAuditProbe(id){
   const images=all('img').filter(node=>node.getAttribute('src')||node.getAttribute('srcset'));
   for(const image of images)image.loading='eager';
   const videos=all('video');
-  if((images.some(image=>!image.complete)||videos.some(video=>video.readyState<2&&!video.error))&&performance.now()-started<12000)return setTimeout(inspect,150);
+  for(const video of videos)if(!videoSamples.has(video))videoSamples.set(video,{time:video.currentTime,at:performance.now()});
+  const advanced=video=>Math.abs(video.currentTime-videoSamples.get(video).time)>.03;
+  if((images.some(image=>!image.complete)||videos.some(video=>!video.error&&(video.readyState<2||!advanced(video)&&performance.now()-videoSamples.get(video).at<1500)))&&performance.now()-started<12000)return setTimeout(inspect,150);
   finished=true;
   const after=interaction.kind==='canvas'?pixels(interaction.node):interaction.kind==='tab'?interaction.node.getAttribute('aria-selected'):null;
-  parent.postMessage({type:'nitido:runtime-audit',id,errors:[...new Set(errors)],images:images.map(image=>({src:(image.currentSrc||image.src).replace(/^(data:|blob:).*/,'$1[embedded]'),loaded:image.complete&&image.naturalWidth>0})),videos:videos.map(video=>({loaded:video.readyState>=2,width:video.videoWidth,height:video.videoHeight,error:Boolean(video.error),errorCode:video.error?.code,errorMessage:video.error?.message,src:(video.currentSrc||video.src).replace(/^(data:|blob:).*/,'$1[embedded]')})),canvases:all('canvas').map(canvas=>({width:canvas.width,height:canvas.height,...pixels(canvas)})),svg:all('svg').filter(node=>node.getBoundingClientRect().width>0).length,text:(document.body?.innerText||'').trim().slice(0,160),interaction:{kind:interaction.kind,before:interaction.before,after,changed:interaction.kind==='tab'?after!==interaction.before:interaction.kind==='canvas'&&interaction.before.signature!==undefined&&after.signature!==undefined?after.signature!==interaction.before.signature:null}},'*');
+  parent.postMessage({type:'nitido:runtime-audit',id,errors:[...new Set(errors)],requests,images:images.map(image=>({src:safeURL(image.currentSrc||image.src),loaded:image.complete&&image.naturalWidth>0})),videos:videos.map(video=>({loaded:video.readyState>=2,advanced:advanced(video),before:videoSamples.get(video).time,time:video.currentTime,width:video.videoWidth,height:video.videoHeight,error:Boolean(video.error),errorCode:video.error?.code,errorMessage:video.error?.message,src:safeURL(video.currentSrc||video.src),capabilities:capabilities(video)})),canvases:all('canvas').map(canvas=>({width:canvas.width,height:canvas.height,...pixels(canvas)})),svg:all('svg').filter(node=>node.getBoundingClientRect().width>0).length,text:(document.body?.innerText||'').trim().slice(0,160),interaction:{kind:interaction.kind,before:interaction.before,after,changed:interaction.kind==='tab'?after!==interaction.before:interaction.kind==='canvas'&&interaction.before.signature!==undefined&&after.signature!==undefined?after.signature!==interaction.before.signature:null}},'*');
  }
  addEventListener('message',event=>{if(event.source===parent&&event.data?.type==='nitido:audit-inspect'&&event.data.id===id)setTimeout(inspect,300);});
  setTimeout(inspect,28000);

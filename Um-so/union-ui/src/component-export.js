@@ -1,5 +1,6 @@
 import {addPlaygroundBridge} from './playground-bridge.js';
 import {injectDemoAssets} from './demo-asset-bridge.js';
+import {adaptRetainedPreview,retainedVideoVariant} from './retained-preview-compat.js';
 let localAssets;
 async function assetMapping(id){localAssets??=fetch('/data/demo-local-assets.json').then(r=>r.ok?r.json():{items:{}}).catch(()=>({items:{}}));return(await localAssets).items?.[id]||{};}
 async function embedMedia(html,ancestors=new Set()){
@@ -38,7 +39,7 @@ export async function standalonePreview(item,theme='dark',config,settings){
  const local=item.runtimePreviewPath||item.previewPath;
  if(!local)throw Error('Demonstração indisponível.');
  const url=theme==='light'&&local.startsWith('/previews/runtime/')?local.replace(/\.html$/,'.light.html'):local;
- let html=await fetchText(url);const mapping={...await assetMapping(item.id),...item.previewAssets};html=injectDemoAssets(html,mapping);
+ let html=await fetchText(url);const mapping={...await assetMapping(item.id),...item.previewAssets};html=adaptRetainedPreview(injectDemoAssets(html,mapping),url);
  if(local.startsWith('/previews/recovered/')){
   // Retain stylesheet contents before embedding their media and font references.
   for(const match of [...html.matchAll(/<link\b[^>]*href=["'](\/previews\/recovered\/[^"']+\.css)["'][^>]*>/g)]){const css=await fetchText(match[1]);html=html.replace(match[0],()=>'<style>'+css.replace(/<\/style/gi,'<\\/style')+'</style>');}
@@ -93,6 +94,8 @@ export async function componentArchive(item,payload,{name,theme='dark',config,se
   const response=await fetch(file.url);if(!response.ok)throw Error('Pacote original indisponível.');entries[file.path]=new Uint8Array(await response.arrayBuffer());
  }
  const mapping={...await assetMapping(item.id),...item.previewAssets},media=new Set(Object.values(mapping));
+ const variant=retainedVideoVariant(item.runtimePreviewPath||item.previewPath||'');
+ if(variant){media.add(variant.original);media.add(variant.compatible);}
  const sourceText=[...(payload?.files||[]).map(file=>file.content||''),payload?.demoCode||''].join('\n');
  for(const match of sourceText.matchAll(/["'(](\/(?!\/)[^\s"'()<>`\\]+\.(?:png|jpe?g|webp|avif|svg|gif|mp4|webm|mp3|wav|ogg|glb|gltf|hdr|exr))/gi))media.add(mapping[match[1]]||match[1]);
  for(const url of media){if(typeof url!=='string'||!url.startsWith('/')||url.split('/').includes('..'))continue;const response=await fetch(url);if(response.ok)entries['public'+url.split('?')[0]]=new Uint8Array(await response.arrayBuffer());}
@@ -100,6 +103,7 @@ export async function componentArchive(item,payload,{name,theme='dark',config,se
  if(settings)entries['visual-settings.json']=strToU8(JSON.stringify(settings,null,2));
  if(config)entries['preview-settings.json']=strToU8(JSON.stringify(config,null,2));
  entries['README.md']=strToU8(`# ${name||item.name}\n\n${recoveredDemo?'Execute node serve.mjs nesta pasta e abra http://127.0.0.1:4175. O servidor local é necessário para os módulos JavaScript e seus imports circulares.':'Abra preview.html no navegador para experimentar a demonstração. JavaScript e CSS locais estão incorporados no HTML.'} Imagens, vídeos ou fontes externos usados pelo exemplo podem precisar de internet.\n\n${payload?.promptOrigin==='original'&&payload?.downloadFiles?.length?'O prompt e o guia originais estão em src/. O ZIP original de apoio está na raiz; extraia-o para obter os arquivos citados pelo prompt. Preserve seus avisos e licenças.':item.availability==='code'?'Os arquivos em src/ contêm o código disponível para integração ao seu projeto '+framework+'. Preserve os caminhos de importação ou adapte os aliases.':'Este pacote contém a demonstração HTML compilada. Os arquivos editáveis ainda não foram recuperados para este item.'}\n\nDependências: ${(payload?.dependencies||item.dependencies||[]).join(', ')}\n`);
+ if(variant)entries['VIDEO-COMPATIBILITY.md']=strToU8('O MP4 original permanece no pacote, sem alteração. A prévia pode usar a versão WebM/VP9 de compatibilidade gerada a partir dos mesmos quadros.\n\nOriginal: public'+variant.original+'\nCompatibilidade: public'+variant.compatible+'\n');
  const notices=await fetchText('/licenses/ATTRIBUTIONS.md');
  entries['LICENSE-NOTICES.md']=strToU8(notices+'\n\n'+(typeof payload?.license==='string'?payload.license:JSON.stringify(payload?.license||item.license||{})));
  const licenses=await (await fetch('/licenses/manifest.json')).json();

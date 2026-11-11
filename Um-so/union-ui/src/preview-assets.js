@@ -1,4 +1,5 @@
 import {browserCompiler} from './shared-compiler.js';
+import {adaptRetainedPreview} from './retained-preview-compat.js';
 const groups=/^\/(?:assets|previews|demos|tools-runtime|avatars|mist)\//;
 export function previewAssetURL(value,base){
  try{const url=new URL(String(value),base),origin=new URL(base).origin,pathname=decodeURIComponent(url.pathname);if(url.origin!==origin||!groups.test(pathname)||pathname.includes('\\')||/%(?:2e|2f|5c)/i.test(pathname)||pathname.split('/').some(part=>part.startsWith('.')))return null;return url;}catch{return null;}
@@ -9,6 +10,7 @@ const mimeFor=url=>({woff2:'font/woff2',woff:'font/woff',ttf:'font/ttf',svg:'ima
 // Read protected resources in the authenticated parent. The iframe keeps its
 // opaque origin and receives executable HTML without anonymous script imports.
 export async function preparePreviewAssets(html,base,{fetcher=fetch,compiler,signal}={}){
+ html=adaptRetainedPreview(html,base);
  const cache=new Map();
  const read=url=>{if(!cache.has(url))cache.set(url,(async()=>{const response=await fetcher(url,{credentials:'same-origin',signal});if(!response.ok)throw Error('Não foi possível carregar um recurso da prévia.');return {bytes:new Uint8Array(await response.arrayBuffer()),mime:response.headers.get('content-type')};})());return cache.get(url);};
  const text=async url=>new TextDecoder().decode((await read(url)).bytes);

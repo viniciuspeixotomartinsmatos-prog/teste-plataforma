@@ -4,6 +4,46 @@ import {JSDOM} from 'jsdom';
 import * as compiler from 'esbuild';
 import {preparePreviewAssets,createPreviewAssetResponder,addPreviewAssetClient} from '../src/preview-assets.js';
 import {injectDemoAssets} from '../src/demo-asset-bridge.js';
+import fs from 'node:fs/promises';
+
+test('the retained HLS demo prefers MSE when native HLS reports only maybe',async()=>{
+ const path='/previews/expanded/21st-8712cd5ba9a6.html';
+ const original=await fs.readFile('public'+path,'utf8');
+ const prepared=await preparePreviewAssets(original,'https://app.example'+path,{fetcher:async()=>new Response('')});
+ const nativeProbe=prepared.match(/function ux\(\)\{[^}]+\}/)?.[0];
+ assert.ok(nativeProbe);
+ const choose=(native,mse)=>new Function('window','document','globalThis',nativeProbe+';return ux()')({}, {createElement:()=>({canPlayType:()=>native})}, {MediaSource:{isTypeSupported:()=>mse}});
+ assert.equal(choose('maybe',true),false);
+ assert.equal(choose('probably',true),true);
+ assert.equal(choose('maybe',false),true);
+ assert.equal(choose('',false),false);
+});
+
+test('Mosaik resolves Draco decoder files from protected paths also present in its ZIP manifest',async()=>{
+ const base='/previews/recovered/demos/mosaik/';
+ const manifest=JSON.parse(await fs.readFile('public/data/recovered-demo-assets.json','utf8')).mosaik;
+ const js=await fs.readFile('public'+base+'assets/MosaikLogo3D-B9wrQNt1.js','utf8');
+ assert.ok(js.includes('"'+base+'draco/"'));
+ for(const file of ['draco_wasm_wrapper.js','draco_decoder.wasm','draco_decoder.js','LICENSE']){
+  assert.ok(manifest.includes('draco/'+file),file);
+  const bytes=await fs.readFile('public'+base+'draco/'+file);assert.ok(bytes.length>100,file);
+  if(file.endsWith('.wasm'))assert.deepEqual([...bytes.subarray(0,4)],[0,97,115,109]);
+ }
+});
+
+test('retained ASCII demos use compatible WebM without removing the original MP4',async()=>{
+ for(const [id,asset] of [['21st-84b5c4cf7d2f','c721f302e4673e41bbd2b395'],['21st-000947d76d8c','a173a27bb35f6ab1e3f1fa8f']]){
+  const path='/previews/expanded/'+id+'.html',original=await fs.readFile('public'+path,'utf8');
+  const prepared=await preparePreviewAssets(original,'https://app.example'+path,{fetcher:async()=>new Response('')});
+  const selector=prepared.match(/:\(([^;]+?)\),?["}]/)?.[1];
+  const actual=prepared.match(/\(document\.createElement\("video"\)\.canPlayType\('[^']+'\)\?"\/assets\/demo-cache\/[^"]+":"\/assets\/demo-cache\/[^"]+"\)/)?.[0];
+  assert.ok(actual,selector);
+  const chosen=support=>new Function('document','return '+actual)({createElement:()=>({canPlayType:()=>support})});
+  assert.equal(chosen(''),'/assets/demo-cache/'+asset+'.mp4');
+  const alternative=chosen('probably');assert.equal(alternative,'/assets/demo-cache/'+asset+'.compat.webm');
+  assert.deepEqual([...((await fs.readFile('public'+alternative)).subarray(0,4))],[0x1a,0x45,0xdf,0xa3]);
+ }
+});
 
 test('protected classic scripts and styles load through the parent before entering the opaque sandbox',async()=>{
  const files={
