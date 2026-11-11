@@ -17,7 +17,7 @@ test('submission freezes source and a different moderator controls verified publ
  const gallery=async()=>(await db.query('select public.creator_gallery() as value')).rows[0].value;
  try{
    await db.exec("create role anon;create role authenticated;create schema auth;create table auth.users(id uuid primary key,raw_app_meta_data jsonb default '{}'::jsonb);create function auth.uid() returns uuid language sql as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;create function auth.jwt() returns jsonb language sql as $$select current_setting('request.jwt.claims',true)::jsonb$$;grant usage on schema auth to authenticated;");
-   for(const name of ['20261110_creator_workspaces.sql','20261111_creator_review.sql','20261111_creator_metrics.sql','20261111_creator_role_audit.sql'])await db.exec(await readFile('supabase/migrations/'+name,'utf8'));
+   for(const name of ['20261110_creator_workspaces.sql','20261111_creator_review.sql','20261111_creator_metrics.sql','20261111_creator_role_audit.sql','20261111_creator_similarity.sql','20261111_creator_public_item.sql'])await db.exec(await readFile('supabase/migrations/'+name,'utf8'));
    await db.query('insert into auth.users(id) values ($1),($2)',[author,reviewer]);
    await identity(author);
    const workspace={profile:{displayName:'Test author',bio:'Public bio'},drafts:[{id:draft,name:'Button',source:'original source',license:'Own',rightsConfirmed:true}]};
@@ -32,10 +32,21 @@ test('submission freezes source and a different moderator controls verified publ
    await identity(author,true);await assert.rejects(command('review',approval));
    await identity(reviewer);await assert.rejects(command('source',{id:v1.id}));
    await identity(reviewer,true);await assert.rejects(command('review',{...approval,tested:false}));await command('review',approval);
+   const sameDraft='00000000-0000-4000-8000-000000000004';
+   await db.exec('reset role');
+   await db.query('insert into public.creator_workspaces(user_id,revision,data) values($1,1,$2)',[reviewer,JSON.stringify({profile:{displayName:'Reviewer'},drafts:[{...workspace.drafts[0],id:sameDraft}]})]);
+   await db.exec('set role authenticated');
+   const duplicate=await command('submit',{draft:sameDraft,consent:true});
+   const matches=(await db.query('select public.creator_similarity($1) as m',[duplicate.id])).rows[0].m;
+   assert.equal(matches[0].id,v1.id);
+   await identity(author);await assert.rejects(db.query('select public.creator_similarity($1)',[duplicate.id]));
+   await identity(reviewer,true);
    assert.equal((await db.query('select public.creator_metrics() as m')).rows[0].m.published,1);
    await db.exec('reset role;set role anon');
    const published=await gallery();
    assert.equal(published[0].display_name,'Test author');assert.equal(published[0].version,1);
+   const publicItem=(await db.query('select public.creator_public_item($1) as p',[v1.id])).rows[0].p;
+   assert.equal(publicItem.name,'Button');assert.equal(publicItem.source,undefined);assert.equal(publicItem.owner_id,undefined);
    assert.equal(published[0].snapshot,undefined);assert.equal(published[0].owner_id,undefined);
    await assert.rejects(command('source',{id:v1.id}));
    await db.exec('reset role;set role authenticated');await identity(author);
@@ -50,6 +61,7 @@ test('submission freezes source and a different moderator controls verified publ
    assert.equal((await gallery())[0].version,2);
    await command('withdraw',{id:v2.id,reason:'Withdraw technical test'});
    assert.deepEqual(await gallery(),[]);
+   assert.equal((await db.query('select public.creator_public_item($1) as p',[v2.id])).rows[0].p,null);
    await db.exec('reset role');
    assert.ok((await db.query('select count(*)::int as n from nitido_community.audit')).rows[0].n>=5);
    await db.query("update auth.users set raw_app_meta_data='{}' where id=$1",[reviewer]);

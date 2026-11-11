@@ -1,22 +1,28 @@
-const escape = value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+import {communityPath,communityTarget,renderCommunity} from './community-pages.mjs';
 export async function community(request,client,readBody,requireUser){
  const url=new URL(request.url);
- if(url.pathname==='/api/community'&&request.method==='GET'){
-   const profile=url.searchParams.get('profile');
-   const offset=Number(url.searchParams.get('offset')||0);
-   if((profile&&!/^[\da-f-]{36}$/i.test(profile))||!Number.isInteger(offset)||offset<0||offset>100000)return new Response('Página inválida',{status:400});
-   const result=await client.rpc('creator_gallery',{creator:profile,page_offset:offset});
+ if((url.pathname==='/api/community'||communityPath(url.pathname))&&request.method==='GET'){
+   const {profile,version,offset}=communityTarget(url);
+   const result=version?await client.rpc('creator_public_item',{version_id:version}):await client.rpc('creator_gallery',{creator:profile,page_offset:offset});
    if(result.error)return new Response('A comunidade ainda não está disponível.',{status:503});
-   const rows=result.data;
-   const title=profile&&rows.length?rows[0].display_name:'Comunidade Creators';
-   const content=rows.map(row=>'<article><h2>'+escape(row.name)+'</h2><p>'+escape(row.description)+'</p><a href="?profile='+row.creator+'">'+escape(row.display_name)+'</a> · v'+Number(row.version)+' · Nítido Verified<p><a href="/creators?version='+row.id+'">Abrir versão ou denunciar</a></p></article>').join('');
-   const page=n=>'?'+new URLSearchParams({...profile?{profile}:{},offset:String(n)});
-   const html='<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+escape(title)+' · nitido</title><link rel="stylesheet" href="/assets/marketing.css"></head><body class="marketing"><main class="policy"><nav><a href="/api/community">Comunidade</a> · <a href="/creators">Meus envios</a></nav><h1>'+escape(title)+'</h1>'+(profile&&rows.length?'<p>'+escape(rows[0].bio)+'</p>':'')+(content||'<p>Nenhuma versão publicada.</p>')+(offset?'<a href="'+escape(page(Math.max(offset-30,0)))+'">Anterior</a> ':'')+(rows.length===30?'<a href="'+escape(page(offset+30))+'">Próxima</a>':'')+'</main></body></html>';
+   if(version&&!result.data||profile&&!result.data?.length)return new Response('Publicação indisponível.',{status:404});
+   const html=renderCommunity({rows:version?[]:result.data,item:version?result.data:null,profile,offset,origin:new URL(process.env.APP_ORIGIN||request.url).origin});
    return new Response(html,{headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':'private, no-store'}});
  }
  await requireUser();
  if(request.method!=='POST')return new Response(null,{status:405});
  const {action,input={}}=await readBody();
+ if(action==='source'||action==='review'&&input.decision==='approved'){
+   const original=await client.rpc('creator_command',{action:'source',input:{id:input.id}});
+   if(original.error)throw Object.assign(Error('Versão indisponível.'),{status:400});
+   const {analyzeCreator}=await import('./creator-analysis.mjs');
+   const analysis=analyzeCreator(original.data);
+   const matches=await client.rpc('creator_similarity',{version_id:input.id});
+   if(matches.error)throw Object.assign(Error('Não foi possível conferir correspondências. Tente novamente.'),{status:503});
+   analysis.exactMatches=matches.data;
+   if(action==='source')return Response.json({...original.data,analysis},{headers:{'Cache-Control':'private, no-store'}});
+   if(!analysis.passed)throw Object.assign(Error('Corrija os erros da verificação automática antes de publicar.'),{status:400});
+ }
  const result=action==='metrics'?await client.rpc('creator_metrics'):await client.rpc('creator_command',{action,input});
  if(result.error){
    const setup=['42883','PGRST202','42P01'].includes(result.error.code);

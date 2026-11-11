@@ -1,12 +1,36 @@
 const policy = "default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; font-src data:; form-action 'none'; base-uri 'none'; object-src 'none'; frame-src 'none'";
 const head = '<!doctype html><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="'+policy+'"><meta name="viewport" content="width=device-width,initial-scale=1">';
 const script = value => '<script>'+value.replace(/<\/script/gi,'<\\/script')+'<\/script>';
+function monitor(){
+ let finished=false;
+ const send=(status,message='')=>{if(finished)return;finished=true;parent.postMessage({type:'nitido-creator-preview',status,message},'*');};
+ addEventListener('error',event=>send('error',event.message||'Falha ao executar a prévia.'));
+ addEventListener('unhandledrejection',()=>send('error','A prévia encontrou uma operação inválida.'));
+ const deadline=Date.now()+12000;
+ function probe(){
+  if(finished)return;
+  const root=document.getElementById('preview')||document.body;
+  const visible=root&&[...root.querySelectorAll('*')].some(node=>{
+   if(['SCRIPT','STYLE','LINK','META'].includes(node.tagName))return false;
+   const rect=node.getBoundingClientRect(),style=getComputedStyle(node);
+   if(rect.width<2||rect.height<2||style.visibility==='hidden'||style.display==='none'||Number(style.opacity)===0)return false;
+   if(node instanceof HTMLCanvasElement){try{const context=node.getContext('2d');if(!context)return false;return context.getImageData(0,0,node.width,node.height).data.some((n,i)=>i%4===3&&n>0);}catch{return false;}}
+   if(node instanceof HTMLImageElement)return node.complete&&node.naturalWidth>0;
+   if(node instanceof SVGElement)return Boolean(node.closest('svg')?.querySelector('path,circle,rect,polygon,line,ellipse,text'));
+   return ['BUTTON','INPUT','SELECT','TEXTAREA','VIDEO'].includes(node.tagName)||Boolean(node.textContent.trim());
+  });
+  if(visible)return requestAnimationFrame(()=>requestAnimationFrame(()=>send('ready')));
+  if(Date.now()>deadline)return send('error','A prévia não apresentou conteúdo visível. Confira o exemplo.');
+  setTimeout(probe,150);
+ }
+ addEventListener('DOMContentLoaded',probe,{once:true});
+}
 async function defaultCompiler(){return (await import('./shared-compiler.js')).browserCompiler();}
 export async function creatorPreview(draft,signal,loadCompiler=defaultCompiler){
   if(!draft.source?.trim())throw Error('Adicione o código antes de abrir a prévia.');
   if(draft.framework==='html'){
     if(/\.css$/i.test(draft.filename))throw Error('Inclua o HTML do exemplo junto com o CSS para visualizar.');
-    return head+draft.source;
+    return head+script('('+monitor.toString()+')();')+draft.source;
   }
   const framework=draft.framework==='vue'?'vue':'react';
   const response=await fetch('/data/creator-runtime/'+framework+'.js',{signal});
@@ -37,6 +61,6 @@ export async function creatorPreview(draft,signal,loadCompiler=defaultCompiler){
   const compiler=await loadCompiler();
   const compiled=await compiler.transform(source,{loader:'tsx',format:'cjs',jsx:'transform'});
   signal.throwIfAborted();
-  const boot="window.addEventListener('error',event=>{const error=document.createElement('pre');error.textContent=event.message;document.body.append(error);});const module={exports:{}};const exports=module.exports;function require(name){if(name==='react')return window.React;if(name==='vue')return window.Vue;throw Error('Dependência indisponível na prévia: '+name);}";
-  return head+'<style>'+css.replace(/<\/style/gi,'<\\/style')+'</style><div id="preview"></div>'+script(runtime)+script(boot)+script(compiled.code+'\nwindow.mountCreator(module.exports.default||module.exports);');
+  const boot="const module={exports:{}};const exports=module.exports;function require(name){if(name==='react')return window.React;if(name==='vue')return window.Vue;throw Error('Dependência indisponível na prévia: '+name);}";
+  return head+'<style>'+css.replace(/<\/style/gi,'<\\/style')+'</style><div id="preview"></div>'+script('('+monitor.toString()+')();')+script(runtime)+script(boot)+script(compiled.code+'\nwindow.mountCreator(module.exports.default||module.exports);');
 }

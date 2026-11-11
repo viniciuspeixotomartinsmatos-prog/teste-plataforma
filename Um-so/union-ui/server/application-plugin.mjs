@@ -1,3 +1,4 @@
+import {communityPath} from './community-pages.mjs';
 import {createApplication} from './application.mjs';
 import {protectedPath,signInResponse} from './access-policy.mjs';
 function subscriptionResponse(req){return req.headers.accept?.includes('text/html')?new Response(null,{status:303,headers:{Location:'/plans','Cache-Control':'no-store'}}):Response.json({error:'Assinatura necessária.',code:'subscription_required'},{status:402,headers:{'Cache-Control':'no-store'}});}
@@ -19,7 +20,7 @@ export function createApplicationPlugin(options={}){return{name:'umso-applicatio
  server.httpServer?.once('close',()=>app.close());
  server.middlewares.use(async(req,res,next)=>{try{
   const path=decodeURIComponent(new URL(req.url,app.origin).pathname);
-  if(path.startsWith('/api/')&&!path.startsWith('/api/preview'))return nodeResponse(await app.handle(await nodeRequest(req,app.origin)),res);
+  if(path.startsWith('/api/')&&!path.startsWith('/api/preview')||communityPath(path))return nodeResponse(await app.handle(await nodeRequest(req,app.origin)),res);
   const development=path.startsWith('/src/')||path.startsWith('/node_modules/')||path.startsWith('/@')||path.startsWith('/__');
   if(!development&&protectedPath(path)){
    const request=await nodeRequest(req,app.origin,{headersOnly:true});

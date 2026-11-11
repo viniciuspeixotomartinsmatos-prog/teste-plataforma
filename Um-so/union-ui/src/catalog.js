@@ -1,4 +1,4 @@
-import {concepts,queryTerms,matchIntent} from './search-language.js';
+import {concepts,queryTerms,matchIntent,semanticIntent} from './search-language.js';
 export const categoryLabels = {'Heroes':'Hero sections','Backgrounds':'Backgrounds & shaders','Text effects':'Efeitos de texto','Buttons':'Botões','Navigation':'Navegação','Cards':'Cards & bento','AI & inputs':'IA, inputs & forms','Galleries':'Galerias & carrosséis','Pricing':'Preços','Testimonials':'Depoimentos','Footers':'Rodapés','Dashboards':'Dashboards','Authentication':'Autenticação','Interactions':'Motion & interações','Icons':'Ícones animados','Utilities':'Utilitários','Components':'Outros componentes'};
 export const kindLabels={all:'Tudo',component:'Componentes',block:'Blocos',template:'Templates',theme:'Temas',shader:'Shaders',icon:'Ícones',app:'Apps',page:'Páginas',hook:'Hooks',motion:'Motion design'};
 export const formatCount=n=>new Intl.NumberFormat('pt-BR').format(n||0);
@@ -11,7 +11,7 @@ export function searchCatalog(rows,{q='',source='all',category='all',kind='all',
  const words=queryTerms(q),ranks=new Map();
  const related=words.length ? rows.semanticSearch?.(words) : null;
  const savedSet=new Set(saved);
- const list=rows.filter(r=>(source==='all'||r.sourceId===source)&&(category==='all'||r.category===category)&&(kind==='all'||r.kind===kind)&&(!codeOnly||r.availability==='code')&&(!savedOnly||savedSet.has(r.id))&&(()=>{const rank=matchIntent(r._search,r._concepts||concepts(r._search),words,q) || related?.get(r.id) || 0;ranks.set(r.id,rank);return rank>0;})());
+ const list=rows.filter(r=>(source==='all'||r.sourceId===source)&&(category==='all'||r.category===category)&&(kind==='all'||r.kind===kind)&&(!codeOnly||r.availability==='code')&&(!savedOnly||savedSet.has(r.id))&&(()=>{const rank=matchIntent(r._search,r._concepts||concepts(r._search),words,q) || (semanticIntent(r,words)?related?.get(r.id):0) || 0;ranks.set(r.id,rank);return rank>0;})());
  if(sort==='name')list.sort((a,b)=>a.name.localeCompare(b.name));
  else if(sort==='source')list.sort((a,b)=>a.sourceId.localeCompare(b.sourceId)||a.name.localeCompare(b.name));
  else if(sort==='recent')list.sort((a,b)=>(b.updated||'').localeCompare(a.updated||''));

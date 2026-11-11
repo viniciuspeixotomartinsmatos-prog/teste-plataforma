@@ -1,4 +1,5 @@
 import {community} from './community.mjs';
+import {communityPath} from './community-pages.mjs';
 import {handleCollectionShare,supabaseShareStore} from './collection-shares.mjs';
 import {PASSWORD_REQUIREMENTS,validNewPassword} from '../src/password-policy.js';
 import {creatorWorkspace,supabaseCreatorStore} from './creator-workspaces.mjs';
@@ -42,7 +43,7 @@ export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientF
    const requireUser=async()=>{const user=await getUser();if(!user)throw fail(401,'Entre na sua conta para continuar.','sign_in_required');return user;};
    const check=result=>{if(result.error){const code=result.error.code;throw fail(result.error.status===429?429:400,result.error.status===429?'Aguarde um pouco antes de tentar novamente.':code==='email_not_confirmed'?'Confirme seu e-mail antes de entrar.':code==='otp_expired'?'Esse link expirou ou já foi usado. Solicite um novo link.':code==='invalid_credentials'?'E-mail ou senha incorretos.':'Não foi possível concluir. Confira seus dados e tente novamente.',code);}return result.data;};
    let response;
-   if(route==='/api/community'||route==='/api/creator-command')return finish(await community(request,client,body,requireUser));
+   if(route==='/api/community'||route==='/api/creator-command'||communityPath(route))return finish(await community(request,client,body,requireUser));
    if(['/api/collection-shares','/api/shared-collection','/api/sharing/config'].includes(route))response=json(await handleCollectionShare(request,{store:supabaseShareStore(client),requireUser,origin,readBody:body}));
    else if(route==='/api/creator-workspace')response=json(await creatorWorkspace(request,{store:supabaseCreatorStore(client),requireUser,readBody:body}));
    else if(route==='/api/health')response=json({ok:true,auth:'supabase',billingMode:billing.config.mode});

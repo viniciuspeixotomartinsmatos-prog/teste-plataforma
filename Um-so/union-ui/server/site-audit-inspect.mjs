@@ -28,6 +28,11 @@ export async function inspectSite(value,{signal,fetcher=fetchPublicSite}={}){
  const started=Date.now(),response=await fetcher(value,{signal,maxBytes:2000000});
  if(!/text\/html|application\/xhtml\+xml/i.test(response.headers['content-type']||''))throw auditError('not_html','O endereço não retornou uma página HTML.');
  const site=inspectHTML(response.body.toString('utf8'),response.url);site.reference.status=response.status;site.reference.xRobots=response.headers['x-robots-tag']||null;site.responseMs=Date.now()-started;site.redirects=response.redirects;
+ const tree=parse(response.body.toString('utf8')),designNodes=[],pending=[tree];
+ while(pending.length){const node=pending.pop();if(node.tagName)designNodes.push(node);pending.push(...(node.childNodes||[]));}
+ const stylesheets=[...new Set(designNodes.filter(node=>node.tagName==='link'&&attr(node,'rel').split(/\s+/).includes('stylesheet')).map(node=>{try{return new URL(attr(node,'href'),response.url).href;}catch{return null;}}).filter(url=>url&&new URL(url).origin===new URL(response.url).origin))].slice(0,3);
+ const css=[];site.coverage.stylesheets={requested:stylesheets.length,scanned:0,limit:3,computedStyles:false};
+ const stylesTask=Promise.all(stylesheets.map(async url=>{try{const sheet=await fetcher(url,{signal,maxBytes:250000,timeoutMs:5000});if(!/^text\/css\b/i.test(sheet.headers['content-type']||''))return;css.push({url,source:sheet.body.toString('utf8')});site.coverage.stylesheets.scanned++;}catch{}}));
  const base=new URL(response.url),tasks=[['robots',new URL('/robots.txt',base).href],['sitemap',new URL('/sitemap.xml',base).href]];
  site.resources={};
  await Promise.all(tasks.map(async([kind,url])=>{try{const r=await fetcher(url,{signal,maxBytes:250000,timeoutMs:5000});const content=r.body.toString('utf8');if(kind==='robots')site.reference.robotsTxt={blocksAll:blocksAllRobots(content)};site.resources[kind]={found:kind==='robots'?/user-agent\s*:/i.test(content):/<(?:urlset|sitemapindex)[\s>]/i.test(content),status:r.status};}catch(error){site.resources[kind]={found:null,error:error.code||'unavailable'};}}));
@@ -35,6 +40,9 @@ export async function inspectSite(value,{signal,fetcher=fetchPublicSite}={}){
  const candidates=site.scripts.urls.filter(url=>new URL(url).origin===base.origin).slice(0,3);
  await Promise.all(candidates.map(async(url)=>{try{const r=await fetcher(url,{signal,maxBytes:500000,timeoutMs:5000});if(!/javascript|text\/plain/i.test(r.headers['content-type']||''))return;site.scripts.scanned++;const source=r.body.toString('utf8');for(const [key,rx]of [['metaPixel',/fbq\s*\(\s*['"]init['"]\s*,\s*['"](\d{5,})/g],['ga4',/\b(G-[A-Z\d]{5,})\b/g],['gtm',/\b(GTM-[A-Z\d]+)\b/g],['pixelEvents',/fbq\s*\(\s*['"]track(?:Custom)?['"]\s*,\s*['"]([^'"]+)/g]])site.reference.found[key]=[...new Set([...site.reference.found[key],...[...source.matchAll(rx)].map(m=>m[1])])].slice(0,20);site.reference.found.fbq ||= /fbq\s*\(/.test(source);site.secrets.push(...secretCandidates(r.body.toString('utf8'),new URL(url).pathname));}catch{}}));
  if(base.protocol==='https:'){try{const r=await fetcher(new URL(base.href.replace(/^https:/,'http:')).href,{signal,maxBytes:100000,timeoutMs:5000});site.httpToHttps=new URL(r.url).protocol==='https:';}catch{site.httpToHttps=null;}}
+ await stylesTask;
+ site.design=designEvidence(designNodes,css.sort((a,b)=>stylesheets.indexOf(a.url)-stylesheets.indexOf(b.url)).map(sheet=>sheet.source));
+ site.design.coverage={stylesheets:site.coverage.stylesheets.scanned,computedStyles:false,scope:'HTML e até três folhas de estilo do mesmo domínio; sem executar o site ou resolver todos os estilos calculados.'};
  site.secrets=site.secrets.slice(0,10);return redactAuditData(site);
 }
 

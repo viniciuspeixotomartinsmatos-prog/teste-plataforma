@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import {advanceParticle} from '../src/cosmic-motion.js';
 import {inspectHTML} from '../server/site-audit-inspect.mjs';
 import {semanticIndex} from '../src/semantic-search.js';
-import {catalogVariants} from '../src/catalog.js';
+import {catalogVariants,prepareCatalog,searchCatalog} from '../src/catalog.js';
 import {renderLibrary,librarySitemap} from '../server/public-library.mjs';
 import {protectedPath} from '../src/auth-policy.js';
 
@@ -27,6 +27,13 @@ test('audit derives inline evidence and recommends existing live component ids',
 test('catalog-trained retrieval returns ranked results and ignores unknown tokens',()=>{
  const search=semanticIndex(JSON.parse(fs.readFileSync('public/data/semantic-index.json')));
  assert.ok(search(['pricing']).size>0);assert.equal(search(['zxqwv123']).size,0);
+});
+test('semantic fallback respects requested component types and does not flood unrelated queries with icons',()=>{
+ const rows=prepareCatalog([{id:'price',name:'Pricing plans',kind:'block',category:'Pricing'},{id:'icon',name:'Kanban',kind:'icon',category:'Icons'},{id:'navigation',name:'Dock',kind:'component',category:'Navigation'}]);
+ rows.semanticSearch=()=>new Map(rows.map(row=>[row.id,.95]));
+ assert.deepEqual(searchCatalog(rows,{q:'premium pricing'}).map(row=>row.id),['price']);
+ assert.ok(!searchCatalog(rows,{q:'sparkle'}).some(row=>row.id==='icon'));
+ assert.ok(searchCatalog(rows,{q:'Kanban'}).some(row=>row.id==='icon'));
 });
 test('public library exposes metadata with canonical language links and gates downloads',()=>{
  const html=renderLibrary('/pt/biblioteca/magic--dock/');

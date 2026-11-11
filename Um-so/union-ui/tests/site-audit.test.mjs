@@ -8,6 +8,19 @@ import {buildAuditReport,correctionPrompt} from '../src/site-audit-report.js';
 import {createSupabaseApplication} from '../server/supabase-app.mjs';
 import {EventEmitter} from 'node:events';
 const html='<!doctype html><html lang="pt-BR"><head><title>Uma loja com título real</title><meta name="description" content="Descrição real para um site de teste, com dados de uma coleção de objetos."><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="canonical" href="/loja"><meta property="og:image" content="/capa.jpg"></head><body><h1>Coleção real</h1><img src="/produto.jpg"><a href="/privacidade">Privacidade</a><script src="/main.js"></script><script>fbq("init","123");window.untrusted="never execute";</script></body></html>';
+test('design extraction reads bounded same-origin CSS without executing assets or following CSS imports',async()=>{
+ const calls=[];
+ const result=await inspectSite('https://example.com',{fetcher:async(url,options)=>{
+  calls.push(String(url));
+  const page=String(url)==='https://example.com';
+  return {url:String(url),status:200,redirects:[],headers:{'content-type':page?'text/html':'text/css'},body:Buffer.from(page?'<link rel="stylesheet" href="/design.css"><link rel="stylesheet" href="https://other.example/style.css"><h1>Example</h1>':String(url).endsWith('/design.css')?'@import "https://untrusted.example/never.css";:root{--ink:#123456}h1{color:var(--ink);font-family:"Inter",sans-serif}':'')};
+ }});
+ assert.equal(result.design.colors[0].value,'#123456');
+ assert.equal(result.design.fonts[0].value,'Inter');
+ assert.equal(result.design.coverage.stylesheets,1);
+ assert.equal(result.design.coverage.computedStyles,false);
+ assert.ok(!calls.some(url=>url.includes('other.example')||url.includes('untrusted.example')));
+});
 const payload={lighthouseResult:{fetchTime:'2026-11-09T12:00:00Z',lighthouseVersion:'13',categories:{performance:{score:.82},accessibility:{score:.9},seo:{score:.75},'best-practices':{score:1}},audits:{'largest-contentful-paint':{numericValue:3000},'cumulative-layout-shift':{numericValue:.04},'total-blocking-time':{numericValue:100},'total-byte-weight':{numericValue:2000000},'image-alt':{title:'Imagens precisam de alt',score:0,description:'Diagnóstico real',details:{items:[{node:{selector:'img',nodeLabel:'Produto'}}]}},'final-screenshot':{details:{data:'data:image/jpeg;base64,YQ=='}}}}};
 test('audit URL boundary rejects local/private endpoints, credentials, tokens, encodings and custom ports',()=>{
  for(const url of ['http://127.0.0.1','http://[::1]','http://2130706433','http://0x7f000001','http://localhost','http://metadata.google.internal','file:///etc/passwd','https://user:pass@example.com','https://example.com:444','https://example.com/?token=x','https://example.com/?code=x','https://example.com\\@evil.com','https://example.com\n.evil.com'])assert.throws(()=>publicSiteURL(url),undefined,url);

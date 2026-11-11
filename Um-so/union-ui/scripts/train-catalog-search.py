@@ -13,6 +13,9 @@ from sklearn.preprocessing import normalize
 
 directory = Path("public/data")
 rows = json.loads((directory / "catalog-live.json").read_text(encoding="utf8"))
+# Icon families have their own explorer. Near-identical icon descriptions must
+# not dominate the semantic space used for components and page sections.
+rows = [row for row in rows if row.get("kind") != "icon"]
 documents = [" ".join([row["name"]] * 3 + [row.get("description", ""), row["category"], *row.get("tags", [])]) for row in rows]
 vectorizer = TfidfVectorizer(strip_accents="unicode", stop_words="english", min_df=2, max_features=6000)
 matrix = vectorizer.fit_transform(documents)

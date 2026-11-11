@@ -55,6 +55,10 @@
       "destination": "/api"
     },
     {
+      "source": "/community/:path*",
+      "destination": "/api"
+    },
+    {
       "source": "/component/:path*",
       "destination": "/index.html"
     },

@@ -7,5 +7,10 @@ export const canonical=word=>dictionary.get(word)||word;
 export function queryTerms(value){return [...new Set(terms(value).filter(word=>!stop.has(word)).map(word=>{if(dictionary.has(word))return canonical(word);if(word.length>=4){const hit=[...dictionary.keys()].find(key=>key[0]===word[0]&&distance(word,key)===1);if(hit)return canonical(hit);}return word;}))];}
 export const concepts=value=>new Set(terms(value).map(canonical));
 const primary=['icon','button','background','card','navigation','hero','form','gallery','carousel','dashboard','chart','pricing','footer','testimonial','login'];
+export function semanticIntent(row,words){
+ if(row.kind==='icon'&&!words.includes('icon'))return false;
+ const requested=words.filter(word=>primary.includes(word));
+ return requested.every(word=>row._concepts?.has(word)||row._search.includes(word));
+}
 export function matchIntent(text,bag,query,raw){if(!query.length)return 1;const hits=query.map(word=>bag.has(word)||text.includes(word));const exact=fold(raw).trim();if(exact&&text.includes(exact))return 100+hits.filter(Boolean).length;const isLong=terms(raw).length>5,anchor=isLong?query.find(word=>primary.includes(word)):null;if(anchor&&!bag.has(anchor)&&!text.includes(anchor))return 0;if(!anchor&&!hits.every(Boolean))return 0;return hits.filter(Boolean).length*10+(anchor?10:0);}
 export function realSuggestions(rows,q,limit=6){const query=queryTerms(q);if(!query.length)return[];return rows.map(row=>({row,score:matchIntent(row._search||fold(row.name),row._concepts||concepts(row.name),query,q)})).filter(hit=>hit.score>0).sort((a,b)=>b.score-a.score).filter((hit,i,all)=>all.findIndex(other=>fold(other.row.name)===fold(hit.row.name))===i).slice(0,limit).map(hit=>hit.row);}

@@ -4,7 +4,12 @@ import CreatorPreview from './CreatorPreview.jsx';
 import {creatorDraftZip} from './creator-files.js';
 import {downloadBlob} from './catalog.js';
 
-const command=(action,input={})=>api('/api/creator-command',{method:'POST',body:{action,input}});
+async function command(action,input={}){
+ const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),20000);
+ try{return await api('/api/creator-command',{method:'POST',body:{action,input},signal:controller.signal});}
+ catch(error){if(error.name==='AbortError')throw Error('A operação demorou para responder. Confira a conexão e tente novamente.');throw error;}
+ finally{clearTimeout(timer);}
+}
 const labels={pending:'Em análise',approved:'Publicado · Nítido Verified',rejected:'Rejeitado',archived:'Versão anterior',withdrawn:'Retirado'};
 export default function CommunityReview({draft,dirty}){
  const [list,setList]=useState(null),[item,setItem]=useState(null),[reports,setReports]=useState([]),[message,setMessage]=useState(''),[busy,setBusy]=useState(false);
@@ -30,7 +35,7 @@ export default function CommunityReview({draft,dirty}){
  async function change(action,input){
    await command(action,input);setItem(null);setMessage('Alteração registrada.');await refresh();
  }
- return <section className="creator-panel"><h2>Comunidade Creators</h2><a href="/api/community">Explorar perfis e publicações</a>
+ return <section className="creator-panel"><h2>Comunidade Creators</h2><a href="/community">Explorar perfis e publicações</a>
  <fieldset disabled={busy} className="creator-form">
  {draft&&<div><label><input type="checkbox" checked={consent} onChange={e=>setConsent(e.target.checked)}/> Autorizo publicar esta versão, meu nome de exibição e biografia após revisão.</label>
  <button className="button" disabled={dirty||!consent} onClick={()=>run(async()=>{const result=await command('submit',{draft:draft.id,consent});setConsent(false);await refresh();setMessage('Versão '+result.version+' enviada para revisão.');})}>Enviar versão salva</button></div>}
@@ -42,13 +47,15 @@ export default function CommunityReview({draft,dirty}){
  {list.rows.length===100&&<button onClick={()=>run(()=>refresh(offset+100))}>Próxima</button>}</>}
  {reports.map((row,i)=><p key={row.version_id+i}><button onClick={()=>run(()=>inspect({id:row.version_id,status:'approved'}))}>{row.name}</button> · {row.reason}</p>)}
  {item&&<article><h3>{item.source.name}</h3><p>{item.source.description}</p><p>{item.source.author} · {item.source.license}</p>
+ {item.source.analysis&&<section aria-label="Verificação automática"><h4>Preparação técnica: {item.source.analysis.score}/100</h4><p>{item.source.analysis.scope}</p><p>Verificado em {new Date(item.source.analysis.checkedAt).toLocaleString()}.</p><ul>{item.source.analysis.findings.map((finding,i)=><li key={i}>{finding.level==='error'?'Corrigir':'Revisar'}: {finding.message}</li>)}</ul><small>Esta nota mede os critérios técnicos descritos. Não é certificação de segurança ou originalidade.</small></section>}
+ {item.source.analysis?.exactMatches?.length>0&&<section><h4>Correspondências de código para revisão</h4><p>O texto normalizado coincide com versões de outros criadores. Isso não prova cópia indevida; confira autoria e licença.</p><ul>{item.source.analysis.exactMatches.map(match=><li key={match.id}><button onClick={()=>run(()=>inspect(match))}>{match.name} · v{match.version}</button></li>)}</ul></section>}
  <CreatorPreview draft={item.source}/><details><summary>Revisar código</summary><pre style={{whiteSpace:'pre-wrap'}}>{item.source.source}</pre></details>
  <button className="button" onClick={()=>downloadBlob(new Blob([creatorDraftZip(item.source)],{type:'application/zip'}),'componente.zip')}>Baixar arquivos da versão</button>
  <label>Motivo ou observação<textarea maxLength={1000} value={reason} onChange={e=>setReason(e.target.value)}/></label>
  {item.status==='approved'&&<button disabled={reason.trim().length<5} onClick={()=>run(()=>change('report',{id:item.id,reason}))}>Denunciar</button>}
  {list?.moderator&&item.status==='pending'&&<div><label><input type="checkbox" checked={tested} onChange={e=>setTested(e.target.checked)}/> Testei a renderização e as interações desta versão.</label>
  <label><input type="checkbox" checked={licensed} onChange={e=>setLicensed(e.target.checked)}/> Conferi autoria e licença.</label>
- <button disabled={!tested||!licensed} onClick={()=>run(()=>change('review',{id:item.id,decision:'approved',tested,licensed,reason}))}>Aprovar e publicar</button>
+ <button disabled={!tested||!licensed||!item.source.analysis?.passed} onClick={()=>run(()=>change('review',{id:item.id,decision:'approved',tested,licensed,reason}))}>Aprovar e publicar</button>
  <button disabled={reason.trim().length<5} onClick={()=>run(()=>change('review',{id:item.id,decision:'rejected',reason}))}>Rejeitar com motivo</button></div>}
  {list?.rows.some(row=>row.id===item.id)&&<button onClick={()=>run(()=>change('withdraw',{id:item.id,reason}))}>Retirar versão</button>}
  </article>}</fieldset>{message&&<p role="status">{message}</p>}</section>;
