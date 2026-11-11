@@ -13,7 +13,11 @@ O [lote prioritário](../reports/catalog-priority-audit-2026-11-11.json) passou 
 | Mine e Oval Eggs | Os MP4s locais são idênticos aos servidos pela origem e foram preservados nos ZIPs. Chromium falhava com código 3; o decodificador FFmpeg registrou avisos de parâmetros AVC. Os derivados VP9 sem perdas mantêm os 18 e 20 quadros, respectivamente, com MD5 de pixels idêntico para cada quadro decodificado. O relógio avançou no iframe e nos dois HTMLs extraídos. |
 | Mosaik | O erro do ensaio vinha das requisições de Draco para `/draco/`, não de uma chamada de login. Os decodificadores públicos Draco 1.5.5 e sua licença passaram a integrar a rota autenticada e o ZIP. O modelo 3D apareceu no pacote executado com `serve.mjs`; clique real em `How it works` mudou a âncora para `#how`. A aplicação original de workspace e seu backend permanecem fora da recuperação; o host Supabase original não resolveu no ensaio. |
 
-O [lote de 60](../reports/catalog-runtime-batch-0000-0060-2026-11-11.json) acrescentou 59 aprovações de triagem e uma pendência: Glyph Matrix atingiu o prazo sem sinal de prontidão. Próximo passo: repetir isoladamente, verificar pixels e a inicialização do renderizador. O relatório anterior de 103 casos tem escopo e data próprios; não somar aprovações sem deduplicar IDs e conferir hashes.
+Os lotes [0–59](../reports/catalog-runtime-batch-0000-0060-2026-11-11.json), [60–209](../reports/catalog-runtime-batch-0060-0210-2026-11-11.json) e [210–359](../reports/catalog-runtime-batch-0210-0360-2026-11-11.json) completaram 360 triagens, com 320 aprovações e 40 pendências. Com os nove prioritários, são 369 IDs distintos nesta rodada: 329 aprovados na triagem e 40 pendentes. Glyph Matrix atingiu o prazo sem sinal de prontidão; repetir isoladamente, verificar pixels e a inicialização do renderizador. O relatório anterior de 103 casos tem escopo e data próprios; não somar aprovações sem deduplicar IDs e conferir hashes.
+
+Produção: `c68978f05` em READY, alias `teste-plataforma-delta.vercel.app`. A [verificação HTTP autenticada](../reports/catalog-production-audit-2026-11-11.json) registra nove rotas, nove ZIPs gerados com os dados servidos pelo domínio, igualdade de SHA-256 nos cinco arquivos selecionados, Range autenticado `206` e GET/HEAD/Range anônimos `401` nos cinco caminhos protegidos. Nenhum e-mail enviado; a conta sintética foi removida. Cobrança desativada. A evidência de execução no navegador acima é local.
+
+Verificação de código: suíte base 222/222, testes focados finais 29/29, build final e Sites 4/4. Na primeira suíte completa do candidato, 224/225 passaram; o teste de empacotamento Sites tentou ler `dist/client/index.html` enquanto o build recriava a pasta. Sites 4/4 passou após o build; o resultado do teste concorrente não é contado como suíte completa aprovada.
 
 Para reproduzir a integridade estática a partir da aplicação:
 
@@ -24,7 +28,7 @@ node scripts/audit-preview-files.mjs reports/catalog-static-inventory-2026-11-11
 Para continuar a triagem por faixas estáveis do mesmo catálogo, gere lotes de até 150, use a rota protegida do servidor normal e baixe um checkpoint por lote:
 
 ```sh
-node scripts/runtime-audit/build.mjs --start=60 --limit=150
+node scripts/runtime-audit/build.mjs --start=360 --limit=150
 ```
 
 A rota é `/tools/runtime-audit/index.html`; exige sessão. O relatório traz faixa, commit, hash do catálogo e hashes do documento bruto e preparado. Preserve o hash do catálogo ou refaça a fila por ID. `passed` nessa ferramenta significa apenas triagem. Para aceitação completa, confira página real, aparência desktop/mobile, interações aplicáveis com entrada real, prompt e clipboard, conteúdo e execução do ZIP e publicação autenticada. Resultados ausentes continuam pendentes.

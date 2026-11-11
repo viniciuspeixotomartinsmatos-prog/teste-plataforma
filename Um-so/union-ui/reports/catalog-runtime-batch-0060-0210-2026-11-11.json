@@ -1,0 +1,4645 @@
+{
+  "checkedAt": "2026-11-11T18:57:40.310Z",
+  "environment": "http://127.0.0.1:4411",
+  "batch": {
+    "start": 60,
+    "end": 210,
+    "selected": 10679,
+    "total": 10679,
+    "catalogSha256": "c4524292c21b673537bb561eaa7c1dc2cb3c8fac4d068037faea08bd7e477e07",
+    "commit": "1214db1fa5700bb5ba9537cba5c1775f6e9edce9"
+  },
+  "scope": "First paint, video time advancing and bounded synthetic tab/canvas events; not complete manual interaction acceptance.",
+  "records": [
+    {
+      "id": "magic--safari",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "magicui.design",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Safari",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:48:10.746Z",
+      "sourceDocumentSha256": "fbeabeba864d9c0960ee1763c6a0ba22261600dc1cbd744ff0bb84372bb5c279",
+      "preparedDocumentSha256": "6d3d69e7d1142181d0d69ba6f2bd47349cbc2da83e6024722d1c46daf49d800e",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--iphone",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "iPhone",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:48:10.764Z",
+      "sourceDocumentSha256": "806430563824cc80f98e7fc7fd78d03845331e031d4618ee47fca7c73ca77775",
+      "preparedDocumentSha256": "b79fe7afe663485814f3c2164d73a6ea306b13859ffa5531e2cbe7f11c8c36b1",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--blur-fade",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Blur Fade",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:48:10.862Z",
+      "sourceDocumentSha256": "e2454e387f20336f38c9aca3df065f91a95718fc8e3b0ddb3b4f2a4bd15d96e0",
+      "preparedDocumentSha256": "243b8206a3cd87bf8fc362c86d94e7a9faa4c136c54fe94be4baf30f5118f425",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--interactive-hover-button",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "Hover Me\nHover Me",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Interactive Hover Button",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:48:13.928Z",
+      "sourceDocumentSha256": "9c0ecce22c37377564a79b8df7886222d6fc3ba0b89053b0203d9c61d64b5ed2",
+      "preparedDocumentSha256": "7884321364f6004a6fa90513f39ddc8d3099d97b3f45d83d6b0f9abecc062b23",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--rainbow-button",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Get Unlimited Access",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Rainbow Button",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:48:13.942Z",
+      "sourceDocumentSha256": "7c0c2b51b04eea7b44c37e28d10783088e092f17ca3d6cdaeb919c07ec4866e7",
+      "preparedDocumentSha256": "e1c918cfc0839ae7993fbd08b408a55a7820deb6d3672d7e3ff1d9417c307186",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--terminal",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "> pnpm dlx shad\n✔ Preflight checks.\n✔ Verifying framework. Found Next.js.\n✔ Validating Tailwind CSS.\n✔ Validating import alias.\n✔ Writing components.json.\n✔ Che",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Terminal",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:48:13.956Z",
+      "sourceDocumentSha256": "bf1be452471757c11244567fdc9bf8147107adfa718d24eeeb2904dcc2be9376",
+      "preparedDocumentSha256": "ac194e1c44c5eb931bf5b0651ac624c12c6ae74abc0c98be195f874fa84534dd",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--highlighter",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 2,
+      "text": "The Magic UI Highlighter\n makes important \ntext stand out effortlessly.",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Text Highlighter",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:48:16.867Z",
+      "sourceDocumentSha256": "dfb0aefd0ec73eb7ccc388b12763de8a567e313336f05486c7db3072a0443317",
+      "preparedDocumentSha256": "396e2f169c25b976aa3e9f6711becee1b4ecb5fb6d123b7185f4f0e6c5e2b7b6",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--animated-theme-toggler",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "Toggle theme",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Theme Toggler",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:48:20.202Z",
+      "sourceDocumentSha256": "119043b8ee2da8aa33c3db2837db279af845c05bf84de1037ffa33320a899db4",
+      "preparedDocumentSha256": "564a6f0844ebee6903c3c1f134a771336f8d46d8ad70b71e1c02ab8f498c8d71",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--light-rays",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "AMBIENT GLOW\nLight Rays\n\nDrop this component into any container and it will fill the space with softly animated light rays shining from above.",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Light Rays",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:48:22.878Z",
+      "sourceDocumentSha256": "4cd84b926e182badba520e997095a0c945fc7bc631f18fd510c16c40063cfbdc",
+      "preparedDocumentSha256": "873b8da1f19d3bf2a1a2a3794628785870ab6065aff0241d6dca08b7228ad6fe",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--dotted-map",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "Seoul\nNYC",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Dotted Map",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:48:30.417Z",
+      "sourceDocumentSha256": "30e5006fba12908a505ba8e3e05c8477e66e649fca41f434fd18579ce6a44892",
+      "preparedDocumentSha256": "b5ff39a29c408751a12ee3498b9c49523558348befac254f4617e7d671697795",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--backlight",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [
+        {
+          "loaded": true,
+          "advanced": true,
+          "before": 0.3103,
+          "time": 0.4666,
+          "width": 480,
+          "height": 720,
+          "error": false,
+          "src": "blob:[embedded]",
+          "capabilities": {
+            "nativeHls": "maybe",
+            "avc": "probably",
+            "mseAvc": true,
+            "vp9": "probably"
+          }
+        }
+      ],
+      "canvases": [],
+      "svg": 0,
+      "text": "Reproduza o vídeo e observe a luz ao redor.",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Backlight",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:48:33.002Z",
+      "sourceDocumentSha256": "6ef94fb05f54758fc041c4d2a1df1f5d7794807eb67b1889e1009f34a6dda013",
+      "preparedDocumentSha256": "70a3d98bd65e16021b030d80fe71ea7e49cd18b80d7927a0ff5541732bc0ee0a",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--kinetic-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "N\no\ns\nt\na\nl\ng\ni\na\nNostalgia",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Kinetic Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:48:35.593Z",
+      "sourceDocumentSha256": "749f845bb77f0e373eaa4492328d930bb123f030c94fde39146dd59b35dab8bc",
+      "preparedDocumentSha256": "154d7ae36e39a907763f3aafcac5b61707a98c9569677c9323b1795ec6ea4a76",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--text-3d-flip",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Stay hungry, stay foolish\nS\nS\nt\nt\na\na\ny\ny\n \nh\nh\nu\nu\nn\nn\ng\ng\nr\nr\ny\ny\n,\n,\n \ns\ns\nt\nt\na\na\ny\ny\n \nf\nf\no\no\no\no\nl\nl\ni\ni\ns\ns\nh\nh",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Text 3D Flip",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:48:38.183Z",
+      "sourceDocumentSha256": "4ca7db79961e2f3ca40effae6a79173755b79bfcdf8963312088aac76e6baa0b",
+      "preparedDocumentSha256": "8cf44d4aee6b1cf19958782d2206971a56c2d6c347e48d9412197d3aed4e5e56",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--floating-3d-particles",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1198,
+          "height": 623,
+          "signature": 0,
+          "lit": 0
+        }
+      ],
+      "svg": 1,
+      "text": "Build something magical\n\nA pseudo-3D particle background that stays behind your content with continuous rotation and buoyant drift.\n\nGet Started",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "signature": 2894840819,
+          "lit": 5
+        },
+        "after": {
+          "signature": 0,
+          "lit": 0
+        },
+        "changed": true
+      },
+      "name": "Floating 3D Particles",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:48:40.709Z",
+      "sourceDocumentSha256": "be9f762c2921e810d38ef6ffbcc233f9b254d979ffe9797c9e564af88576da30",
+      "preparedDocumentSha256": "e42ad9b647d82c7f000c8a31360363847741a189bac3a76d963806740911a325",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--animated-content",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Ship it before lunch\n\nEvery child animates in turn.",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Animated Content",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:48:43.692Z",
+      "sourceDocumentSha256": "fdbda869d4a8270a592f29d9429f6480fb557984afdfa105768bf8fc4798b665",
+      "preparedDocumentSha256": "42eaa7f5811c5b055287b5af3e7370e5d6e2b16ccf107f0660b04b5cecdc14a7",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--video-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [
+        {
+          "loaded": false,
+          "advanced": false,
+          "before": 0,
+          "time": 0,
+          "width": 0,
+          "height": 0,
+          "error": false,
+          "src": "http://127.0.0.1:4411/previews/runtime/magic--video-text.html",
+          "capabilities": {
+            "nativeHls": "maybe",
+            "avc": "probably",
+            "mseAvc": true,
+            "vp9": "probably"
+          }
+        }
+      ],
+      "canvases": [],
+      "svg": 0,
+      "text": "OCEAN",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Video Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:48:50.947Z",
+      "sourceDocumentSha256": "991059418b56a7d3d13049a7aba14f1394e20ad8f70cc9d47b09dc47d081f8be",
+      "preparedDocumentSha256": "002e91ca1fcb7be302696d85aa4fce82df36f91a9db4a86a01511e887546d0dd",
+      "ready": false,
+      "passed": false,
+      "reason": "deadline"
+    },
+    {
+      "id": "magic--pixel-image",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:4411/pixel-image-demo.jpg",
+          "loaded": false
+        },
+        {
+          "src": "http://127.0.0.1:4411/pixel-image-demo.jpg",
+          "loaded": false
+        },
+        {
+          "src": "http://127.0.0.1:4411/pixel-image-demo.jpg",
+          "loaded": false
+        },
+        {
+          "src": "http://127.0.0.1:4411/pixel-image-demo.jpg",
+          "loaded": false
+        },
+        {
+          "src": "http://127.0.0.1:4411/pixel-image-demo.jpg",
+          "loaded": false
+        },
+        {
+          "src": "http://127.0.0.1:4411/pixel-image-demo.jpg",
+          "loaded": false
+        },
+        {
+          "src": "http://127.0.0.1:4411/pixel-image-demo.jpg",
+          "loaded": false
+        },
+        {
+          "src": "http://127.0.0.1:4411/pixel-image-demo.jpg",
+          "loaded": false
+        },
+        {
+          "src": "http://127.0.0.1:4411/pixel-image-demo.jpg",
+          "loaded": false
+        },
+        {
+          "src": "http://127.0.0.1:4411/pixel-image-demo.jpg",
+          "loaded": false
+        },
+        {
+          "src": "http://127.0.0.1:4411/pixel-image-demo.jpg",
+          "loaded": false
+        },
+        {
+          "src": "http://127.0.0.1:4411/pixel-image-demo.jpg",
+          "loaded": false
+        },
+        {
+          "src": "http://127.0.0.1:4411/pixel-image-demo.jpg",
+          "loaded": false
+        },
+        {
+          "src": "http://127.0.0.1:4411/pixel-image-demo.jpg",
+          "loaded": false
+        },
+        {
+          "src": "http://127.0.0.1:4411/pixel-image-demo.jpg",
+          "loaded": false
+        },
+        {
+          "src": "http://127.0.0.1:4411/pixel-image-demo.jpg",
+          "loaded": false
+        },
+        {
+          "src": "http://127.0.0.1:4411/pixel-image-demo.jpg",
+          "loaded": false
+        },
+        {
+          "src": "http://127.0.0.1:4411/pixel-image-demo.jpg",
+          "loaded": false
+        },
+        {
+          "src": "http://127.0.0.1:4411/pixel-image-demo.jpg",
+          "loaded": false
+        },
+        {
+          "src": "http://127.0.0.1:4411/pixel-image-demo.jpg",
+          "loaded": false
+        },
+        {
+          "src": "http://127.0.0.1:4411/pixel-image-demo.jpg",
+          "loaded": false
+        },
+        {
+          "src": "http://127.0.0.1:4411/pixel-image-demo.jpg",
+          "loaded": false
+        },
+        {
+          "src": "http://127.0.0.1:4411/pixel-image-demo.jpg",
+          "loaded": false
+        },
+        {
+          "src": "http://127.0.0.1:4411/pixel-image-demo.jpg",
+          "loaded": false
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Pixel Image",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:48:50.964Z",
+      "sourceDocumentSha256": "bbaa2a9ca993eeb8589a17439ec11703b4ca0e034feb2e62ea0ad9aee386d8d2",
+      "preparedDocumentSha256": "cfddcc3f878df804c64b5cf80586c25043ba25c95030485c5ab444e65e017bef",
+      "ready": false,
+      "passed": false,
+      "reason": "deadline"
+    },
+    {
+      "id": "reactbits--click-spark",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Clique para criar faíscas.",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Click Spark",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:48:53.535Z",
+      "sourceDocumentSha256": "c2252f9ae642951e8e8f5cb567de57084c463eda86726a035c0e03bedebc8270",
+      "preparedDocumentSha256": "cd4f2ce7dfeaf2435d272be384437095f3d102f89eb57487a21544d54dca3115",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--cubes",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1140,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Cubes",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:48:54.708Z",
+      "sourceDocumentSha256": "a301a75ab89371487bff64503adeddb851ad862d2bb68c3ce6c8541dba5bae4b",
+      "preparedDocumentSha256": "3f2d29c78ce2d7e137d7c9d99cdc21ccb153040fd347723b673688c70fc24f12",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--electric-border",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 535,
+          "height": 610,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "Your content",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Electric Border",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:48:57.529Z",
+      "sourceDocumentSha256": "4f18b8a3f28102c90f4244e101aa975e40a53a8d2c025e54bc5d0ec8c6c4d9ff",
+      "preparedDocumentSha256": "d2486242d7427f30b7285b7be8f4e651e1c049da93220f6aaf37fb2cd10cf80a",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--fade-content",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Slow light over the bay\n\nEvery child fades in turn.",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Fade Content",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:48:57.826Z",
+      "sourceDocumentSha256": "30f5e2a4eaaf5550e84ffc81d562e622bcfb87e8a11aeb3fabdc4c43c5296fca",
+      "preparedDocumentSha256": "bfdbe768e25f53d0bb0c6943a8854ec9c7aa8671d8afbf3c49221d795744e68f",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--glare-hover",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Glare Hover",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:49:00.486Z",
+      "sourceDocumentSha256": "752001fe3b8f5b5b16a829e752f35ed43c67b66249031b7f29f495dbd35c3796",
+      "preparedDocumentSha256": "ad86ae4d5267d49bf8cd94584ac800600c5a73fab2912799496ed8ca5fe80574",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--gradual-blur",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Uma ideia, um novo horizonte.\n\nRole para experimentar o desfoque gradual sobre o conteúdo.\n\nUma ideia, um novo horizonte.\n\nRole para experimentar o desfoque gra",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Gradual Blur",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:49:00.592Z",
+      "sourceDocumentSha256": "68aa843bda4692ed3e35b25053bcd21d1838f8b6f8559fa2da1b86e3d7161bdb",
+      "preparedDocumentSha256": "b8de7d9f166a1f6d72aec0669fd4f57bcbb59dda98a97b3f1cc5fbc67f7ddbbe",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--crystalized-ball",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1140,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Crystalized Ball",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:49:11.954Z",
+      "sourceDocumentSha256": "870a3f2b7a4270fc533d78f3ad02a28fba6cd3fed30abf891c5607ecbe3fe1fb",
+      "preparedDocumentSha256": "4f750dabc656f7708594f5f6fc0ee1a5c51c55d3f22ac54d5f13d2360fb63608",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--dither-veil",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1140,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Dither Veil",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:49:14.662Z",
+      "sourceDocumentSha256": "947ae9e451f2948c0426b325e4e2e5b6b4d0076696f3456841e5e8c3c648273e",
+      "preparedDocumentSha256": "d4329b29200a7386cf26427c593c87559778f8fdd75599f8b6aa8c25492e73d1",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--blob-cursor",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1,
+          "height": 625,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Blob Cursor",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:49:20.715Z",
+      "sourceDocumentSha256": "95f40212e459a53292e166f4b24ae56c8af8d4245e98cfb46a9bd50837fe9631",
+      "preparedDocumentSha256": "08ed72297a18f9e27f20ce5ac4d9f0bafd289d2204dcad7d9295fd2d8b1ba3ef",
+      "ready": false,
+      "passed": false,
+      "reason": "deadline"
+    },
+    {
+      "id": "reactbits--electric-logo",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1140,
+          "height": 600,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Electric Logo",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:49:37.605Z",
+      "sourceDocumentSha256": "83a3d3c98e38be5f6c16f2ff62756a840e0858420e66b8521ef145095bb54bef",
+      "preparedDocumentSha256": "0a8818472f2736ee1d8a06d509792732d1dbba820d2503272365de959d6ee12f",
+      "ready": false,
+      "passed": false,
+      "reason": "deadline"
+    },
+    {
+      "id": "reactbits--image-trail",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Image Trail",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:49:40.192Z",
+      "sourceDocumentSha256": "8a3406befb921e6ba5f13206b5663d4c1e12ab831eab53b997375be8832f40e5",
+      "preparedDocumentSha256": "48e736ed26b33d979dcc9ff4b9097bdf801dbc93ca93535da0779e9f84567581",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--magnet",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Star React Bits on GitHub",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Magnet",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:49:42.556Z",
+      "sourceDocumentSha256": "1e9f6cf418b798c9a71d6b94a3c0551ee94ccab2c5c894b5065834808eefebf2",
+      "preparedDocumentSha256": "59ecacac3976550f572c32f021481465272534b7f6c80fd53a0f3648058e7d78",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--meta-balls",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1140,
+          "height": 600,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Meta Balls",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:49:44.813Z",
+      "sourceDocumentSha256": "d990df527db7afc799eabc8e7d810b4b270682ab0257f0e47409624da4ca08fa",
+      "preparedDocumentSha256": "475ac9e03b38741497c463ba76faafb7e2f806a08502a32ff7436022606ab16e",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--noise",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1140,
+          "height": 625,
+          "signature": 0,
+          "lit": 0
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "signature": 0,
+          "lit": 0
+        },
+        "after": {
+          "signature": 0,
+          "lit": 0
+        },
+        "changed": false
+      },
+      "name": "Noise",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:49:46.941Z",
+      "sourceDocumentSha256": "1587409f85f9824c5f26f1981e1f102409f73a5660f1acc954429e0d7ef4eb87",
+      "preparedDocumentSha256": "e535de9d28019e1a988220242eadd1e2e2be8d79d8bd1739edfdd16ec348d145",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--glow-cursor",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1140,
+          "height": 625,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Glow Cursor",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:49:51.682Z",
+      "sourceDocumentSha256": "5c1c963365d3280b51631969e07f448b46de5a1a65b9f3cdc069ea1574bcd7fe",
+      "preparedDocumentSha256": "0ef2c4e6f591e2cb05fc0fa07da7a5a90963be4a6b204fc174be0c0d0f3701b7",
+      "ready": false,
+      "passed": false,
+      "reason": "deadline"
+    },
+    {
+      "id": "reactbits--pixel-transition",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 375,
+          "height": 469,
+          "signature": 0,
+          "lit": 0
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "signature": 0,
+          "lit": 0
+        },
+        "after": {
+          "signature": 0,
+          "lit": 0
+        },
+        "changed": false
+      },
+      "name": "Pixel Transition",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:49:54.040Z",
+      "sourceDocumentSha256": "4fe1d65a80bc307cfcb939faa26f9ea33df3ad57da820d23beec1262ec225fff",
+      "preparedDocumentSha256": "50e7cc12eb710e4159d38ca3fef5df9272785ad5fe96c649caceab68a97cbe99",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--pixel-swap",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Pixel Swap",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:49:56.179Z",
+      "sourceDocumentSha256": "c9745a903695f165af94a271e93f2538eb62515486621ffc80e1ac4b443176a6",
+      "preparedDocumentSha256": "94a2a76cf2de1fc21c5ca11c24fd507c9157d5a1ec28b170472c4a145e3a4781",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--ghost-cursor",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1140,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Ghost Cursor",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:49:57.745Z",
+      "sourceDocumentSha256": "1fae35440c3dea2cfce7e1ec480ed6f9af47645aedb2d8633db73da8dbe4ef27",
+      "preparedDocumentSha256": "e6084aad3e953b857c774196c6d8f5cc804c2aeefa3b81dd3d60eb0d9230948f",
+      "ready": false,
+      "passed": false,
+      "reason": "deadline"
+    },
+    {
+      "id": "reactbits--pixel-trail",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1140,
+          "height": 625,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Pixel Trail",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:50:23.954Z",
+      "sourceDocumentSha256": "5d780c515e1e3b5913d360200e08f51b0033c02e53b5b21c79a96b44a063ef51",
+      "preparedDocumentSha256": "11dbe9308d0c332bb702a9e6deb8f077c793121a9df8369b5ce35a5a171b7158",
+      "ready": false,
+      "passed": false,
+      "reason": "deadline"
+    },
+    {
+      "id": "reactbits--splash-cursor",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1181,
+          "height": 900,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Splash Cursor",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:50:26.916Z",
+      "sourceDocumentSha256": "5e360f39f7f8d9dafc569995272a1742b40a65704d9d23057a5089df0e23df51",
+      "preparedDocumentSha256": "ae7d1436b99abb985dea2017c2825f0a26646086c4204a0e646a9a6e78d076b0",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--star-border",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 286,
+          "height": 180,
+          "signature": 702583029,
+          "lit": 7
+        }
+      ],
+      "svg": 0,
+      "text": "Get started",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "signature": 3637128648,
+          "lit": 7
+        },
+        "after": {
+          "signature": 702583029,
+          "lit": 7
+        },
+        "changed": true
+      },
+      "name": "Star Border",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:50:29.213Z",
+      "sourceDocumentSha256": "6b4040cd441371451bd3210a04dca8465efbe16b197b8acfe4b289aa8f49527a",
+      "preparedDocumentSha256": "530edf29e3226e510b7334cf6a9b3d05e3b27df7e378d5d945118bf806249962",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--ribbons",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1140,
+          "height": 625,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Ribbons",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:50:33.197Z",
+      "sourceDocumentSha256": "898ba82e16bb7e93f1114918f2cf42ff151a4fa4a59a57f0b2bce44fe6b1580e",
+      "preparedDocumentSha256": "3603526a9c6532e49faf636952ee94bc36d760b1a0a9d0900fe108861b7a21d4",
+      "ready": false,
+      "passed": false,
+      "reason": "deadline"
+    },
+    {
+      "id": "reactbits--shape-blur",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1,
+          "height": 625,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Shape Blur",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:50:34.794Z",
+      "sourceDocumentSha256": "1e9c7f4acc646f3bc8eec6a2ae9c92b4a133cfc81328392132153612a43dd9ef",
+      "preparedDocumentSha256": "79d3d8906f04be347335b791c25ed5a0d3e7a5fcde40416d7c7abcea8535f69d",
+      "ready": false,
+      "passed": false,
+      "reason": "deadline"
+    },
+    {
+      "id": "reactbits--orbit-images",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 2,
+      "text": "Moments",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Orbit Images",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:50:37.412Z",
+      "sourceDocumentSha256": "d20059859da5eb19c3c727275cae9de4ef2779b3d4083e5b61c538916db5729b",
+      "preparedDocumentSha256": "5fddf819ea4544c667152a34477210aeb655a7d1ba7a9acf8e665b5e2c61d466",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--antigravity",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 500,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Antigravity",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:50:42.639Z",
+      "sourceDocumentSha256": "0b081c8adfdb37ce75bfd4f6068dbbac1e1db6028d538c022814a1179ae39614",
+      "preparedDocumentSha256": "6ef611aa88b5912a4893dc61da1aad143b6402a12b8db4bdb61226dbb5cd93b0",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--blur-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Isn't this so cool?!\nIsn't \nthis \nso \ncool?!",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Blur Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:50:45.538Z",
+      "sourceDocumentSha256": "b36901f7090d7a6312b7183841da71b362566f23ce1274da53a9433a007e9ec9",
+      "preparedDocumentSha256": "e6bb3f8505d6bb47641a664d174f0c44949e981d00b3270eee49c75612a99f57",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--circular-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "R\nE\nA\nC\nT\n*\nB\nI\nT\nS\n*\nC\nO\nM\nP\nO\nN\nE\nN\nT\nS\n*",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Circular Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:50:48.257Z",
+      "sourceDocumentSha256": "0d177b360f13f7804cfe8dada7793d3962650de8b66fc9b19e72831a08980c00",
+      "preparedDocumentSha256": "9509f66d96367398969b9aebaa814b2309b4104cc769304d285e273a97309bee",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--count-up",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "100",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Count Up",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:50:50.820Z",
+      "sourceDocumentSha256": "05ec1f0f6b6ac83bf363a9dd0e9937ceecf2601b4521c22db0119b8a07c7b3ee",
+      "preparedDocumentSha256": "552e91668491e3d61f34b7d5b3db5fc3863d50954d5c0697b9fa02ffd1e7332b",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--curved-loop",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "BE ✦ CREATIVE ✦ WITH ✦ REACT ✦ BITS ✦ BE ✦ CREATIVE ✦ WITH ✦ REACT ✦ BITS ✦ BE ✦ CREATIVE ✦ WITH ✦ REACT ✦ BITS ✦",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Curved Loop",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:50:53.212Z",
+      "sourceDocumentSha256": "18310a297b06f1f8205c645a90b896530f8cd3a3e31ffc51b3e784128cc5ae67",
+      "preparedDocumentSha256": "2350ee384ee8082d7ce3e5f06108927928eb50d9cbe9fc484e2fabffd8eabe3c",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--decrypted-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Hacking into the mainframe...\nHacking into the mai\nl\nC\nd\nh\ns\na\nL\nk\nV",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Decrypted Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:50:55.755Z",
+      "sourceDocumentSha256": "51da7d92b73cbdd239f43046ac9e14555db77e63440bd86d5cd72fec4b3a77d7",
+      "preparedDocumentSha256": "43efd87f8b372998f078f457ca82b165ae4dbe4fc275e570998dc56359b52a27",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--falling-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Some sentences are built to last. This one falls apart on contact.",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Falling Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:50:58.463Z",
+      "sourceDocumentSha256": "bf1be4f2561bd3f5f6bc50bc0f479a38a870125bf99f0c5b526f646b20738338",
+      "preparedDocumentSha256": "5d49988779cc51127e018d5bc7269aa9a218c2a93288f4dca751eb34998d78b4",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--fuzzy-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 332,
+          "height": 73,
+          "signature": 3355000194,
+          "lit": 16
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "signature": 4256421198,
+          "lit": 23
+        },
+        "after": {
+          "signature": 3355000194,
+          "lit": 16
+        },
+        "changed": true
+      },
+      "name": "Fuzzy Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:01.284Z",
+      "sourceDocumentSha256": "c2c0154f06dad69a697cb0a2322386325d2cd021cf46a7458c03a6bdc21724c5",
+      "preparedDocumentSha256": "1ba0670bfc64f46a7c7117b8f574e39000116e4644d24a1962a4f8966165018f",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--glitch-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "React Bits\nReact Bits\nReact Bits",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Glitch Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:03.605Z",
+      "sourceDocumentSha256": "724b23275529e8b80590b6ffff3d0924ded7a1f49246dbc18a44c1bfb77fc776",
+      "preparedDocumentSha256": "3e38a09fcd4b539a63477db473b1a9a813df496ed54f7be30e61b6a4eeb87366",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--gradient-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Add a splash of color!\nAdd a splash of color!",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Gradient Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:05.928Z",
+      "sourceDocumentSha256": "0c30e43d42c857f36320789c7b0f5b02bc9fd27707fcb65ea9fed6e0a4d416c1",
+      "preparedDocumentSha256": "3066598c6afc60a33cd784852548b11992ad346fe61ad23329eb055f0704c57f",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--sticker-peel",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 531,
+          "height": 531,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Sticker Peel",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:06.230Z",
+      "sourceDocumentSha256": "2608733531c773284bb389419f16968a64caf0eae85ec32a59a5c188f5cab731",
+      "preparedDocumentSha256": "5826a9fed93a42ef5d9a58d767492aa288c2309151f80a8c8407f858567301ae",
+      "ready": false,
+      "passed": false,
+      "reason": "deadline"
+    },
+    {
+      "id": "reactbits--rotating-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "React\nR\ne\na\nc\nt",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Rotating Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:08.770Z",
+      "sourceDocumentSha256": "0caff23eca3a5a4c9cdcbc0a562cc80e29f287fb53082e89dc73f9babbababab",
+      "preparedDocumentSha256": "ddd4a19a11548784f505ba9e060994f0c1b39d7af01751305f5e8fc24a997554",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--scrambled-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique pariatur dignissimos porro eius quam doloremque et enim velit nobis maxime.\n\nL\no\nr\ne\nm\n \ni\np\n",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Scrambled Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:08.923Z",
+      "sourceDocumentSha256": "5fc27aae4b6d9a5fabc4d2a3e6244666fb4ec2979431de5ba9fe23414ae7ca12",
+      "preparedDocumentSha256": "cd515c66189d4bcc828b709a91b4ce98590258ee884372a3187baf5968fdda96",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--scroll-float",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "React Bits\nReact Bits",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Scroll Float",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:11.839Z",
+      "sourceDocumentSha256": "929dd0851c9d60b45779075208eb4972b46a43b54e648c427440991dfbc77ec9",
+      "preparedDocumentSha256": "e508f3e8dd80103969a58254afbbbd25147c4eb753c27a0115214044c625d460",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--scroll-reveal",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "When does a man die? When he is hit by a bullet? No! When he suffers a disease? No! When he ate a soup made out of a poisonous mushroom? No! A man dies when he ",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Scroll Reveal",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:11.956Z",
+      "sourceDocumentSha256": "a71c4902452df92aa01b7506e60a50f22f788b668521744348460c70f8ee3793",
+      "preparedDocumentSha256": "9563d1a03565b2286734d33a4bfd6f9fe070f9c699a95261b02e3e8aac8f5feb",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--ascii-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1140,
+          "height": 550,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Ascii Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:14.434Z",
+      "sourceDocumentSha256": "c2f9f290f19f979af8fa04158bbc5bbd5c98660a7d4e532e05e7787ea4d536a0",
+      "preparedDocumentSha256": "54fed53785407abdf64520b2329010407e807ab009d5dca46b0bdfa2e0675021",
+      "ready": false,
+      "passed": false,
+      "reason": "deadline"
+    },
+    {
+      "id": "reactbits--shiny-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Shiny Text Effect",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Shiny Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:14.530Z",
+      "sourceDocumentSha256": "a0fd9efbe2c70a79991bd0a896007cb3d9ecf612bdc6442601ed259f31ccf8e3",
+      "preparedDocumentSha256": "34c8886c0b2627c4a038e87446206fbea8e69d1bc1df4073644a20b7fe720da8",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--scroll-velocity",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "React Bits \nReact Bits \nReact Bits \nReact Bits \nReact Bits \nReact Bits \nScroll Down \nScroll Down \nScroll Down \nScroll Down \nScroll Down \nScroll Down",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Scroll Velocity",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:14.615Z",
+      "sourceDocumentSha256": "b99a937da8dd1055554ca5d55a1bf0de3c9750e2a3a6b1f62d1e2d5e53f74f98",
+      "preparedDocumentSha256": "cbc7a1445ac2e8c3c982560d5f44909b664b8c2b10f0915af9d83f6fe1769ccf",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--text-cursor",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Mova o cursor nesta área.",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Text Cursor",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:17.510Z",
+      "sourceDocumentSha256": "d603817184554a1256ac7cb8bede262d85aa18bff4051ba7cd9c3ac9168497ac",
+      "preparedDocumentSha256": "673c754be5e446c6be01a26004c178f20be556cab1800871e90b74b765bae812",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--text-pressure",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "H\nE\nL\nL\nO\n!",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Text Pressure",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:17.593Z",
+      "sourceDocumentSha256": "f56fc0aac653372620f71abd3bddc41537b33ac359c5bbc18f4e4eca820c486c",
+      "preparedDocumentSha256": "ec54ea2a5707e0345a95eee88483bbc472ba3f7b89d6d175dbdddec0ae19ea81",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--split-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Hello, GSAP!",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Split Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:17.737Z",
+      "sourceDocumentSha256": "6cb704c8403c106d88edfc45b1af9ae87d5fb900317c0ebf56ebf6d5613c4f61",
+      "preparedDocumentSha256": "66792d684dd14fcd4c9cd88e2ac444e47f7308b3c4ad32a2b741b34235724124",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--variable-proximity",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Hover me! And then star React \nBits on GitHub, or else...\nHover me! And then star React Bits on GitHub, or else...",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Variable Proximity",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:28.308Z",
+      "sourceDocumentSha256": "17a275cf24f86a01c0ef8262ca3a13da150f4d1f74ed5b43211c74268d5f3439",
+      "preparedDocumentSha256": "f6d76945f2c16814d6838affd15afc46b720c6ed4eddaa66ddb6e39e07214e56",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--text-type",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Text typing effect for your websites Happy coding!\nText typing e​",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Text Type",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:28.402Z",
+      "sourceDocumentSha256": "69c0349556da08079d4140d87d388f37e211268c78361b9b08633349cb944507",
+      "preparedDocumentSha256": "532b6e51f5ab3f9164193a307734e040141bc75b2a7d643f0e1b9b9bc4a74acd",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--particle-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 450,
+          "signature": 2119752178,
+          "lit": 9
+        }
+      ],
+      "svg": 0,
+      "text": "Launch Faster",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "signature": 673823801,
+          "lit": 38
+        },
+        "after": {
+          "signature": 2119752178,
+          "lit": 9
+        },
+        "changed": true
+      },
+      "name": "Particle Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:32.261Z",
+      "sourceDocumentSha256": "480486bfede22ae65960d218e4adc81ad76f1985995ce71fc88947e36fa8353a",
+      "preparedDocumentSha256": "12659085a454f3131d67247bc6db9bc8cfccab7bfd63bf6b042ab7c6b6cc5bbf",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--shuffle",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "HELLO WORLD",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Shuffle",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:33.143Z",
+      "sourceDocumentSha256": "3d8c499c7a030c904da9cc8def91e46633d7426811d626283a7d0115adf05857",
+      "preparedDocumentSha256": "9f0f2749b2a44dfc28186b4bda1dd522369e6bc250374df66e177fb9f2bb71aa",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--true-focus",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "True\nFocus",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "True Focus",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:33.439Z",
+      "sourceDocumentSha256": "b51eb908607c353978dd0445b41c8ad194798b67f2970e6cdfbf5bccc85c3c83",
+      "preparedDocumentSha256": "3e8c813d0242e3f3f5c3087168cb4c171cedf220fc8bf08ab4b24907ffc04120",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--split-flap-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "LAUNCH READY\nW\nJ\nJ\nW\nR\nI\nI\nR\n3\nZ\nZ\n3\n8\nI\nI\n8\nT\nD\nD\nT\nS\nE\nE\nS\n \n \nQ\nK\nK\nQ\nT\nK\nK\nT\n5\n8\n8\n5\nU\n2\n2\nU\n3\nH\nH\n3",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Split Flap Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:37.781Z",
+      "sourceDocumentSha256": "d4a1ff7a9ae2dbaba8c1092bcdd117fca0de2a11f2c4026f96983d7860e3042c",
+      "preparedDocumentSha256": "43f714f46fef17f384ffeb35dfe8efb9d3d8a04dd94f1e2cb5302f82b7d21619",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--warp-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1140,
+          "height": 400,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Warp Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:38.997Z",
+      "sourceDocumentSha256": "0d3791a0551ced4372604222fc7aece9399d090cf06792c687e37d2ebe818f00",
+      "preparedDocumentSha256": "59e345c5ed37249148e6101a797dbf89f1cbdd6394b4f66b67fab160436d2d98",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--tech-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1140,
+          "height": 600,
+          "signature": 4145347082,
+          "lit": 2
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "signature": 1832733509,
+          "lit": 3
+        },
+        "after": {
+          "signature": 4145347082,
+          "lit": 2
+        },
+        "changed": true
+      },
+      "name": "Tech Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:41.509Z",
+      "sourceDocumentSha256": "3bfd561c2e955707366f2b1f72fcba764f10869d95227452c69e0c6148b54192",
+      "preparedDocumentSha256": "2c763c27d4b838261e734d1c2c4e18eee1ecdbe97f731df605485a75052bfe94",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--depth-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Elevate\nElevate\nElevate\nElevate\nElevate\nElevate\nElevate\nElevate\nElevate\nElevate\nElevate\nElevate\nElevate\nElevate\nElevate\nElevate\nElevate\nElevate\nElevate\nElevate\n",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Depth Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:43.939Z",
+      "sourceDocumentSha256": "458000353274350dff9b28c1a34f4aae18c366228ae5dda3cf3a1ca9fe189941",
+      "preparedDocumentSha256": "75724bd33b3e3d2ac55e167bde4754da097a999aedbc98988c93fc076f37e569",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--stroke-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "Draw Attention\nDraw Attention",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Stroke Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:45.642Z",
+      "sourceDocumentSha256": "f24fbbf25de4e1d4fe83dd373efc2f1790940f96d44c4c38256e8bc2811507b9",
+      "preparedDocumentSha256": "4060c5b66fc69df2de0fc7ae6b1e1c7ada8d5eee39b6b699dedbe0243bcaa55e",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--echo-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Motion Echo\nMotion Echo\nMotion Echo\nMotion Echo\nMotion Echo\nMotion Echo\nMotion Echo\nMotion Echo\nMotion Echo\nMotion Echo\nMotion Echo\nMotion Echo\nMotion Echo",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Echo Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:48.095Z",
+      "sourceDocumentSha256": "eb9853f56fff30fff9752f059df07dc5280ef6ec670c50b018e62ddc64d4c79a",
+      "preparedDocumentSha256": "a90252438282785af3acd91025d603cd2a897424e453f7d6191d595c6f8d7ce2",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--fold-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Launch with clarity\nLaunch with clarity",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Fold Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:48.187Z",
+      "sourceDocumentSha256": "d6ddf329d322f51b38e3f1dad56b71d1bb3812b540c5a4441c5602e99a32d3c2",
+      "preparedDocumentSha256": "175a5a1c3216438962f7a1ac36f598eaa516fc8a426cfdf0b46632b23e1f162e",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--masked-heading",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [
+        {
+          "loaded": true,
+          "advanced": false,
+          "before": 0,
+          "time": 0,
+          "width": 1280,
+          "height": 720,
+          "error": false,
+          "src": "blob:[embedded]",
+          "capabilities": {
+            "nativeHls": "maybe",
+            "avc": "probably",
+            "mseAvc": true,
+            "vp9": "probably"
+          }
+        }
+      ],
+      "canvases": [],
+      "svg": 1,
+      "text": "Shotonlocation\nS\nh\no\nt\no\nn\nl\no\nc\na\nt\ni\no\nn\nS\nh\no\nt\no\nn\nl\no\nc\na\nt\ni\no\nn",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Masked Heading",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:52.506Z",
+      "sourceDocumentSha256": "7026002d50645611e073c1d881d7500d9f6e9c3795960fc25aebbea3b121e359",
+      "preparedDocumentSha256": "bee68479d9789e9416171e5e776f029e25ea9bba6e8c3a153bc6d2941e0533c4",
+      "ready": true,
+      "passed": false
+    },
+    {
+      "id": "reactbits--text-loop",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "REACT ✦ BITS ✦ REACT ✦ BITS ✦ REACT ✦ BITS ✦ REACT ✦ BITS ✦ REACT ✦ BITS ✦ REACT ✦ BITS ✦ \nREACT ✦ BITS ✦ REACT ✦ BITS ✦ REACT ✦ BITS ✦ REACT ✦ BITS ✦ REACT ✦ B",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Text Loop",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:54.545Z",
+      "sourceDocumentSha256": "d5687a5364844305d0296dd1911361b0d707420272fcb1964e21dedf38970c14",
+      "preparedDocumentSha256": "1a34f3b8ab7be62270715f45116019e0ff458f5bfedc7b8a340aa66133111a40",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--animated-list",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Brand assets\n24 files\n2m\nLaunch hero.png\n2.4 MB\n18m\nProduct tour.mp4\n148 MB\n1h\nPricing notes\n1,240 words\n3h",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Animated List",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:55.648Z",
+      "sourceDocumentSha256": "a4b4c0da16f4fbe8342a73744f84fdf9d2aaa5190828068803d7bdeec9bdd202",
+      "preparedDocumentSha256": "7274124c2950aab0cc38eebadf94c5aa61b1e149e956ab52322dde30ebe8203b",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--card-nav",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "data:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 12,
+      "text": "Menu\nClose\nGet started",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Card Nav",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:59.011Z",
+      "sourceDocumentSha256": "f1892f866e423d1382b1873870dceeb7fea4fc62715dea85813850b459a2e19d",
+      "preparedDocumentSha256": "0993f7849c9b1f83411090e0e8950a70ff6408796e4542534b9ab99b237c8bb8",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--bounce-cards",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Bounce Cards",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:59.028Z",
+      "sourceDocumentSha256": "4552140b907b34c6681e39d5e935b908f2ac343b4f2eb2186e24d6f594d2d6fe",
+      "preparedDocumentSha256": "705fd8cc75d6d40eb3d2306d43f4ed7f202fcc612081ad590133affe4f3a2009",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--bubble-menu",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "RB",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Bubble Menu",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:51:59.388Z",
+      "sourceDocumentSha256": "e6a21c298310e8076064f1df6c13e3085b1fc8a4bb8f83ef3ff4548df0226eca",
+      "preparedDocumentSha256": "d455286ba5430ae811b54ac9da3ef5005bf38137b5e0a34446464456a6aabc47",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--carousel",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Open fields\n\nBright skies over rapeseed in full bloom.",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Carousel",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:52:03.060Z",
+      "sourceDocumentSha256": "9de55c876383ad77c949d5c266e320a02a5640459eed3d90c457410e45c86836",
+      "preparedDocumentSha256": "dc53c8c79360b2481b759976c8c7914890790d27945c3cce6c16ab5929483f11",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--chroma-grid",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Canola Field\nMidday\nThe Pier\nClear sky",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Chroma Grid",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:52:03.077Z",
+      "sourceDocumentSha256": "a7dd4e5e4b12efcdc45418308ec25b823b8557660c74c5bf3552a779ca05f495",
+      "preparedDocumentSha256": "5875f32b39de33979f178a48883109cc4c1d68435107df55fd2dab7e8950772c",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--holo-card",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "data:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 400,
+          "height": 558,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Holo Card",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:52:03.355Z",
+      "sourceDocumentSha256": "439f5c7fe5e8e8f2a188c58164276248fa80e6ff95e03964e198f162cfd39ec5",
+      "preparedDocumentSha256": "93b08bbb52e4fc34ff01ec298383617fd5faeb0e360af73b017f7ff05ede14ef",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--flex-carousel",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1140,
+          "height": 700,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "Iridescence, 1 of 3",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Flex Carousel",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:52:06.423Z",
+      "sourceDocumentSha256": "80112165bc29ba20d5b8bca7247897c2fd7870472ba98ebb612fa553b18fa7f4",
+      "preparedDocumentSha256": "17dd86daf56bdea8d8807b6980ea0a3e797bb32fa555892467b7d4e3ac32e097",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--depth-carousel",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 2,
+      "text": "",
+      "interaction": {
+        "kind": "tab",
+        "before": "false",
+        "after": "true",
+        "changed": true
+      },
+      "name": "Depth Carousel",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:52:06.579Z",
+      "sourceDocumentSha256": "973da48392112f609c23e0e84051721b63840314b6d2eb1832935bc06052d1d4",
+      "preparedDocumentSha256": "739a757a4b85f44a2f4106e7378033616263f51753227f82f960fe04e708368c",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--circular-carousel",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Valley\nLandscape\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n/\n03\nValley, 1 of 3",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Circular Carousel",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:52:06.731Z",
+      "sourceDocumentSha256": "42e307e79bc1209700523e61aa4a6899468ee7ac41f5cd9f2d2c36f6e98af1cb",
+      "preparedDocumentSha256": "97ce40ec59de502a2d63577aba1a6e6f4a3a5a230bdb51e4d6bc100802d6e6ce",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--circular-gallery",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1140,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 1,
+      "text": "Bridge\nDesk Setup\nWaterfall\nStrawberries\nDeep Diving\nTrain Track\nNew York\nGood Boy\nCoastline\nPalm Trees\nBridge\nDesk Setup\nWaterfall\nStrawberries\nDeep Diving\nTra",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Circular Gallery",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:52:10.376Z",
+      "sourceDocumentSha256": "073536e89839b0a7c7cfb254235618fd21968d46e764dc31f0cc7b3b0b5f61f8",
+      "preparedDocumentSha256": "3edbc065500097a9976302d27ac6352e4a25c5d2aea46cb12ce838c076906d49",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--accordion-gallery",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Canyon\nRidgeline\nFalls\nHarbour\nSkyline",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Accordion Gallery",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:52:10.418Z",
+      "sourceDocumentSha256": "c51fe25080657444f98c7375697613265d0eb69a65501aa0a7b43ad0506336f0",
+      "preparedDocumentSha256": "a406fa3c8d4e978d3b0e5be73f7e420bb88bb890e36168799b884e864e39c8b8",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--counter",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "1,284\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n,\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Counter",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:52:13.623Z",
+      "sourceDocumentSha256": "cefc3021582e6f4c1bc327f0bcb680ed4a0f320ea8bb0fbdd56a7452808e4e0f",
+      "preparedDocumentSha256": "eca3bbb8e43288a2467744889dd015e7f23d55c5a10d8cbf2502e840813277ec",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--decay-card",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 465,
+          "height": 620,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "Afterglow",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Decay Card",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:52:13.652Z",
+      "sourceDocumentSha256": "7c730bc291a80761e44c90480894ed530ae89c3ed21f8d971d4d796a64561e2f",
+      "preparedDocumentSha256": "3d05a7b4f449dc415dc7bd53b283ac5112d9715ef064c7b3573051695157122b",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--elastic-slider",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 2,
+      "text": "50",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Elastic Slider",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:52:16.082Z",
+      "sourceDocumentSha256": "de9f17ed9131b6c94b3a859b7aacc87dee27d2d392573426ba658b236b49d395",
+      "preparedDocumentSha256": "d717ca46f3a2b21bd7f4ef4e5e57ca695a078486e9bf3307534a36072f1c9bc9",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--dock",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 5,
+      "text": "Home\n3\nMail\nMusic\nSettings\nTrash",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Dock",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:52:16.193Z",
+      "sourceDocumentSha256": "6065a04cdff9ea1c755021bdc43bc7f644a01b31513b9d27f5ad4c78583a6933",
+      "preparedDocumentSha256": "e391d6fcc1096d202817924faee08478bf1563fd84e31e5b5820a8d5925c6551",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--flowing-menu",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Mojave\nMojave\nMojave\nMojave\nMojave\nSonoma\nSonoma\nSonoma\nSonoma\nSonoma\nMonterey\nSequoia",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Flowing Menu",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:52:18.774Z",
+      "sourceDocumentSha256": "befb2842036664d1e63b7ab01c81089b01c5dc03e7ab23770ab567f728fb948a",
+      "preparedDocumentSha256": "1b80d1c66740dc17706ba2b21a92e98cd7cdf8dd7024da526c035651a098356b",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--fluid-glass",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1140,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "Look closer.",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Fluid Glass",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:52:18.869Z",
+      "sourceDocumentSha256": "a545053155286020e62efe9102f06c22b34bbddd1824b42919d723a31ff07cba",
+      "preparedDocumentSha256": "1c41783875df1ab281f3bb9caaa482a362adf2bfef4904c34c7da90b6e4fa7a0",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--drift-wall",
+      "name": "Drift Wall",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:52:43.606Z",
+      "sourceDocumentSha256": "9bb8d8ad7e2bb48f53a9fa1c0eb74f10493f76d7954ada01ed34ea0657f5c591",
+      "preparedDocumentSha256": "4e692ffda31db553f815682c65270dc0badb945f652313c1ba4403650d5daacd",
+      "ready": false,
+      "passed": false,
+      "reason": "deadline",
+      "errors": []
+    },
+    {
+      "id": "reactbits--flying-posters",
+      "name": "Flying Posters",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:52:55.795Z",
+      "sourceDocumentSha256": "1706d7bda19b0f99a560fd96f4e664a095fb086b2b5221996bd65b9723bf3608",
+      "preparedDocumentSha256": "20ac10c643f77633d2fc967f32ef41932eec720c86906f065293de1cc53a684b",
+      "ready": false,
+      "passed": false,
+      "reason": "deadline",
+      "errors": []
+    },
+    {
+      "id": "reactbits--glass-icons",
+      "name": "Glass Icons",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:52:55.886Z",
+      "sourceDocumentSha256": "53e4c392f7c2faa9ad8f4fed60273231e729d51a71eb1e3fecd768d77b5c45a1",
+      "preparedDocumentSha256": "374229703417b815a1cf2853a9367d047dcc33a2448d308815e178709c342e65",
+      "ready": false,
+      "passed": false,
+      "reason": "deadline",
+      "errors": []
+    },
+    {
+      "id": "reactbits--gooey-nav",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 565,
+          "height": 223,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "Home\nWork\nAbout\nContact\nHome\nWork\nAbout\nContact",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Gooey Nav",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:52:57.887Z",
+      "sourceDocumentSha256": "e1e2b7bb7e036f7a9b425af622656efa23834e43737b5861074fc731f442b3bf",
+      "preparedDocumentSha256": "66859726913d76fe92a1122f27ca52f5ae101b4bb3c3c4039e08e1309821948f",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--infinite-spiral",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Infinite Spiral",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:52:58.487Z",
+      "sourceDocumentSha256": "2e28f2d7e3d8985e743ff426059714f2cf51e4928d217cc80e8e4ec7c25d7f40",
+      "preparedDocumentSha256": "0ec9fbf45b4f453b4fcf28dc61cf3cb91a978b3130124d3bf46c478e696bfb98",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--infinite-menu",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1140,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 1,
+      "text": "The Pier\n\nConcrete and open water under a bright morning sky.",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Infinite Menu",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:52:58.551Z",
+      "sourceDocumentSha256": "e1596aa8a54f26dcb75faa4dd55df965524db91b57831b1fbd427db85af9c21e",
+      "preparedDocumentSha256": "14f21f0a14a02f42ab3c1e01817084357cf50978a391d05fae7db404219de83b",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--magic-bento",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 16,
+      "text": "12.4k\n+18%\nAnalytics\n\nTrack user behavior\n\n$48.2k\nWeekly\nDashboard\n\nCentralized data view\n\nLaunch plan\nMaya\nLeo\nCollaboration\n\nWork together seamlessly\n\nPush to",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Magic Bento",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:53:03.614Z",
+      "sourceDocumentSha256": "e299d0f0904d015e34fda1e9afa43f12cceaa2c79aab9a6af6045dc22c1a64be",
+      "preparedDocumentSha256": "d1b563ef06d40844c05b14355afd616315eed667f421c309f8dcf8a79da4687b",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--masonry",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Alexey Topolyanskiy\nRoberto Nickson",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Masonry",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:53:03.985Z",
+      "sourceDocumentSha256": "e5a740b53a1746087288b0c3a293030c8973a50491c6ea130485ddea7c71440e",
+      "preparedDocumentSha256": "c41be857238d7cd950d003c37542ebb827cd2b25932672da473762615214af13",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--lanyard",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1140,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Lanyard",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:53:04.473Z",
+      "sourceDocumentSha256": "66abc78adaa9e7d9457ee7bb2ccc9cce6c61cbaa4c3fad45d12c180df751a353",
+      "preparedDocumentSha256": "31a1e52953375f24f4112e9a3aca76f991c2b395a109d41f9dc051365725cf9a",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--pill-nav",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "data:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Home\nHome\nJournal\nJournal\nPhotos\nPhotos\nAbout\nAbout",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Pill Nav",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:53:06.376Z",
+      "sourceDocumentSha256": "e0002a4d4cfa16fa0991e67e172825594bcee985d7abc34bc994d6ba0d2656f4",
+      "preparedDocumentSha256": "9e57f2be216c24b361b58f4f32feb51edb4af216edd00d523c23ba9af61a1aed",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--pixel-card",
+      "errors": [
+        "YourIcon is not defined"
+      ],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "The original example could not finish rendering: YourIcon is not defined",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Pixel Card",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:53:06.914Z",
+      "sourceDocumentSha256": "0f8ee2a3d76133ca39868648d8d252f365f804316f19f5bde46ce7a7a1b5b1c9",
+      "preparedDocumentSha256": "bf1ac4e68f157cc6dff2ad0b292f2e1b166c2306f202f0a73d82f891c1a624e4",
+      "ready": true,
+      "passed": false
+    },
+    {
+      "id": "reactbits--profile-card",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "Javi A. Torres\n\nSoftware Engineer\n\n@javicodes\nOnline\nContact",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Profile Card",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:53:10.236Z",
+      "sourceDocumentSha256": "eee8e3b9d32fc30f9a6f66bdf6549cd8d50884dc97c6b3df8ce1d8f6d0c12615",
+      "preparedDocumentSha256": "e312c9d6caaedec222d22a18fad3d292b525a8995169525c8df91665bc84cf68",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--model-viewer",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 625,
+          "height": 625,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Model Viewer",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:53:10.599Z",
+      "sourceDocumentSha256": "1edfba7c2e73bebe04a30fd7d20e107d36f9123b7083b63eeae55a3d36dadea2",
+      "preparedDocumentSha256": "65e96584977098c5765a107e9c1040362deb38febe44a0f2571f1d675aba7b87",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--scroll-stack",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Card 1\n\nThis is the first card in the stack\n\nCard 2\n\nThis is the second card in the stack\n\nCard 3\n\nThis is the third card in the stack",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Scroll Stack",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:53:10.622Z",
+      "sourceDocumentSha256": "87611f10f6f1f8e26a6b0cd84e8333ae3a7b01900d5d929d1ca81b48950ca132",
+      "preparedDocumentSha256": "184e6658319bab92138ab7fe133b849c389b0ff8bc8be2f96146b727d2e42550",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--spotlight-card",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Ethan Harrison\n\nProduct designer\n\nGet in touch",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Spotlight Card",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:53:13.016Z",
+      "sourceDocumentSha256": "b7edc11d4e07512333bb889bf1a577ae5627146e4a914c4e0b860643b2a53ab4",
+      "preparedDocumentSha256": "0375d15c78651f806a0a2e195aa12fbc57a2b4ff6ac35b0ea70b1d315f712137",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--line-sidebar",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "01\nOverview\n02\nComponents\n03\nAnimations\n04\nBackgrounds\n05\nShowcase",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Line Sidebar",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:53:13.186Z",
+      "sourceDocumentSha256": "ec2d314b9d59610c06c8e7bce489f7971f02e8510d07e09791eebe4c6102525f",
+      "preparedDocumentSha256": "cec1b5f7728a10f58e652a669ceaca0e56583dba94e5a93b2159f813c356f698",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--border-glow",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Your Content Here\n\nHover near the edges to see the glow.",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Border Glow",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:53:13.258Z",
+      "sourceDocumentSha256": "a8d090c945e30c90d1342c8478785b16bdc87507ebc4753f8713c0d4c2832004",
+      "preparedDocumentSha256": "52083f6a0dc03bbfac0379f2b8992cbe130369ce3c1477678c78c4be8663ac77",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--option-wheel",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Ambient\nHouse\nTechno\nJazz\nLo-Fi\nSynthwave",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Option Wheel",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:53:19.051Z",
+      "sourceDocumentSha256": "515ef7f6ed13b4927e572a781e6d04d54dd57da06b12fdbb40aea22d6c02d48e",
+      "preparedDocumentSha256": "4fed4bb32eb562b6d2772fe7fa5ca78c84770b142e9410dfb1d493aaec9d4221",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--specular-button",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 278,
+          "height": 128,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "Get Started",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Specular Button",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:53:19.080Z",
+      "sourceDocumentSha256": "5894ba543228943e859df2892e09d48e159ef59546d00eba02c535c77643be0c",
+      "preparedDocumentSha256": "4b954cf36e14a4a744e54370af146d923b5313d53ca424f0bbddbd30f9f9507c",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--ripple-distortion",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 750,
+          "height": 500,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Ripple Distortion",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:53:19.376Z",
+      "sourceDocumentSha256": "e337653d194e7e5bd90f2280bc5791bb7681fd3e747dc641734f41d1fe69d4bf",
+      "preparedDocumentSha256": "f39dd3321cd5dce66120a643b169d76b3974f215770cd1dbec56c9fe2485026e",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--cursor-grid",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1140,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Cursor Grid",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:53:25.694Z",
+      "sourceDocumentSha256": "9e85a1850f2f401f66e811322d65c4160ac251f8fd1ce666cb1353c41c14abd9",
+      "preparedDocumentSha256": "282f29d27336253a33b8e2641298681b31096dd34b774b3ad699f3d2067939cd",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--swarm-cursor",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1140,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Swarm Cursor",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:53:26.083Z",
+      "sourceDocumentSha256": "3deb777ec112813b59abe5a05b5c61027576483520db7106c0738ff715adf5ac",
+      "preparedDocumentSha256": "e8662427c7aed29414ef1af6bf30503a9113cbd43d0545d0563dbf7a72cc6675",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--halftone-reveal",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1140,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Halftone Reveal",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:53:26.996Z",
+      "sourceDocumentSha256": "878af4b9a65b91832112055cac6fd2483a3bbebab807d6b2fac293dcdae27d36",
+      "preparedDocumentSha256": "9418947560034b8138ec58be17c4a13128537fab45e8643ace7861b136057b7a",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--stepper",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 2,
+      "text": "1\nWelcome\n2\nPlan\n3\nProfile\n4\nReview\nWelcome aboard\n\nSet up your workspace in a few quick steps.\n\nContinue",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Stepper",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:53:30.812Z",
+      "sourceDocumentSha256": "39c1ec35f473d39412763e346ae54198e646db8bb5354ba661de619a7b731856",
+      "preparedDocumentSha256": "f566349fe8cde3869d842ed2346a7b124c307b257bd081e0cf3985db69e4879c",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--stack",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Stack",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:53:30.877Z",
+      "sourceDocumentSha256": "b0cbb398fc33a6488c3a15bb834b190758790054eb21ee014064d0197b2ac143",
+      "preparedDocumentSha256": "36d4413b407321eafe0259c123ff2c6d1cc37fe681fb770b374f1c2b7c1d6b84",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--tilted-card",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Afterglow\n\nThe back of the card\n\nAfterglow",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Tilted Card",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:53:31.260Z",
+      "sourceDocumentSha256": "ef48983d60d0265567ebfd3b15bc5979392409405a355ff10f6110dee6742968",
+      "preparedDocumentSha256": "1f3c4de75f958c506ce2e549b6bda016b1e4b305670634493b2b7ad64f97b2d7",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--staggered-menu",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Menu\nClose\nHOME\nABOUT\nSERVICES\nCONTACT\nSocials\nTwitter\nGitHub\nLinkedIn",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Staggered Menu",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:53:47.163Z",
+      "sourceDocumentSha256": "3255ca2b03b1e81df76d0462f29f151b3001811e1030d5c99d23e37c3cb7f1e3",
+      "preparedDocumentSha256": "5452fbebdc5eb9ff4f51f2154cfe4cd9f1530338b51d199e66b56588acff5ed5",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--reflective-card",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [
+        {
+          "loaded": true,
+          "advanced": true,
+          "before": 0,
+          "time": 0.4903,
+          "width": 480,
+          "height": 720,
+          "error": false,
+          "src": "blob:[embedded]",
+          "capabilities": {
+            "nativeHls": "maybe",
+            "avc": "probably",
+            "mseAvc": true,
+            "vp9": "probably"
+          }
+        },
+        {
+          "loaded": false,
+          "advanced": false,
+          "before": 0,
+          "time": 0,
+          "width": 0,
+          "height": 0,
+          "error": false,
+          "src": "http://127.0.0.1:4411/previews/runtime/reactbits--reflective-card.html",
+          "capabilities": {
+            "nativeHls": "maybe",
+            "avc": "probably",
+            "mseAvc": true,
+            "vp9": "probably"
+          }
+        }
+      ],
+      "canvases": [
+        {
+          "width": 400,
+          "height": 625,
+          "gpu": true
+        }
+      ],
+      "svg": 2,
+      "text": "Verified\nActive\nAlexander Doe\n\nSenior Developer\n\nID number\n8901 2345 6789",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Reflective Card",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:53:47.789Z",
+      "sourceDocumentSha256": "912e26ff18b65787a33204d471c7e512064d41fd76b83d8365ac9f20c03a684d",
+      "preparedDocumentSha256": "76d7b6d7eee1cd4ebb7526cf9e9ac971cf6faa21dc5047c19e10116fa57a84a3",
+      "ready": true,
+      "passed": false
+    },
+    {
+      "id": "reactbits--pattern-waves",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Pattern Waves",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:53:48.117Z",
+      "sourceDocumentSha256": "0461e8bc1397cfafe8504933a951659a426279b35f8c814d9f88be4cae33f7a3",
+      "preparedDocumentSha256": "32b6cd9ea228106c7b7ed3580a031a0f695928e59d65df92577cd8a35116f47b",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--shape-waves",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "signature": 2497412096,
+          "lit": 0
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "signature": 2497412096,
+          "lit": 0
+        },
+        "after": {
+          "signature": 2497412096,
+          "lit": 0
+        },
+        "changed": false
+      },
+      "name": "Shape Waves",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:53:56.852Z",
+      "sourceDocumentSha256": "7e74c9bf98c88a348c9a89d400057d6d05ef8fba1b8dee7453e3f5061f71dbe5",
+      "preparedDocumentSha256": "69cdfb3996912cbcf2c375988a85e5b917731851acc9a91db4f739b68a1835fe",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--micro-slats",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Micro Slats",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:53:58.552Z",
+      "sourceDocumentSha256": "0015e57665d9d4daa5167fb1c8ec0c31ff9640a93c1a80c338b0e87177c70b6e",
+      "preparedDocumentSha256": "99076aa8b5a5b442a60e029c5d8e19d7ae38ad2e09551455be079cd4cdb50e49",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--aurora",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Aurora",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:54:03.347Z",
+      "sourceDocumentSha256": "8d30427af027e339105dc3982bf123a2d9183070cbdbac96400ad465891da67a",
+      "preparedDocumentSha256": "059bd889381e6cbeb60e0ad803a38077608811e0b1af14b8d534d08e557b927b",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--balatro",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 600,
+          "height": 375,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Balatro",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:54:05.969Z",
+      "sourceDocumentSha256": "ea6a572502422f0d458e350087c1e70e5de5503526e01a6dbbb4a4cdb201bf9e",
+      "preparedDocumentSha256": "d393fd3c263d2492d77d4ec017330311516b3629feec72a71be266d571b51118",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--ballpit",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 625,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Ballpit",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:54:10.742Z",
+      "sourceDocumentSha256": "db834fc2c106e635508dfa2b78514ede50fbfd5612cc8136e1bf10458091a683",
+      "preparedDocumentSha256": "d79a2b7062e04ed7c078385e7e5035edbb1c33ae7e9dd130b0d34707e2f7a403",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--beams",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Beams",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:54:15.742Z",
+      "sourceDocumentSha256": "d06ecf2634cca99d537431e0f7331be16793f8e08bd35813e1302aebbf56feab",
+      "preparedDocumentSha256": "bb269f4de37f19e5f482846c3a5209335fe71b1af8a4aa0dac9b3aa17c659ae9",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--color-bends",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 900,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Color Bends",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:54:19.449Z",
+      "sourceDocumentSha256": "c86afda0d1839b0dd763861bd3d709205b305383aa3317dc5e7e79d948f8fbe3",
+      "preparedDocumentSha256": "f19e25a37065479508fa0ce18ff73d9f9253e96898587beb6aa3bcbb8531693a",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--aero-shards",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Aero Shards",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:54:25.136Z",
+      "sourceDocumentSha256": "25ba1fa3ad98967ac8c7767e05d6dbc5cf90c04e11d38a6a3bb05af4da3cdd61",
+      "preparedDocumentSha256": "401a77f513525d059123d0a2ccbaf5a05a3c59f1236e22a4faaa5752342d294b",
+      "ready": false,
+      "passed": false,
+      "reason": "deadline"
+    },
+    {
+      "id": "reactbits--ghost-fibers",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Ghost Fibers",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:54:33.878Z",
+      "sourceDocumentSha256": "20f42a5aa76c49613ee9652467807ce203a4e3dd4b94dde12f6efd9b918061c9",
+      "preparedDocumentSha256": "896ea7cb69bf46fb5cd4f6337e94154e38b571727bf9649a60aaec2e1bd2b7d9",
+      "ready": false,
+      "passed": false,
+      "reason": "deadline"
+    },
+    {
+      "id": "reactbits--crt-warp",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Crt Warp",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:54:37.701Z",
+      "sourceDocumentSha256": "87cebdd3e9df335c2165e450992e8aba50e0e963286d0a33f50fd4d1111af49e",
+      "preparedDocumentSha256": "1d2da8d1d6ea6e1e6fb70c3a4d0cbb5f2d80b4fcaf6bea585b59c7fa58e437ad",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--dot-field",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Dot Field",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:54:44.984Z",
+      "sourceDocumentSha256": "86dd82193b3a8bd0aed35f5367b143854b6e0c0ae411a7d7829241500c932408",
+      "preparedDocumentSha256": "be034bcc0c67c54caa1d1f493b8a55f298bf90702a033353b09ffc476df3694e",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--dot-grid",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Dot Grid",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:54:49.276Z",
+      "sourceDocumentSha256": "cb7b6825bffd8c1c66fe5e63e14a50369dd324d47a048efc9a4fc2c340ae42d6",
+      "preparedDocumentSha256": "f68e8a507f2e269396a4dfcf00ad278cd894513f03da4852c97265c25f670bd3",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--dark-veil",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Dark Veil",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:54:56.080Z",
+      "sourceDocumentSha256": "3694aff8d2588a307ba35fb290a9492bd27ae41cc0a44f7f36af5c570ea6f80f",
+      "preparedDocumentSha256": "c7f4eadaf06cf7efde3926cbb325d7fdad5288d1fd838b24c29ca4abee45652b",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--faulty-terminal",
+      "name": "Faulty Terminal",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:55:09.296Z",
+      "sourceDocumentSha256": "549acd0afb3b20277ef2ab323806da603025b8b33c3431a314057986fbb95a8e",
+      "ready": false,
+      "passed": false,
+      "reason": "A prévia demorou para carregar. Tente novamente.",
+      "errors": []
+    },
+    {
+      "id": "reactbits--dither",
+      "name": "Dither",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:55:10.908Z",
+      "sourceDocumentSha256": "5dbdd05c2f8158c2cb0181c511220c3d21a2b44658062c7a5f29664188b6dc14",
+      "preparedDocumentSha256": "43bc540bc74449d70f53df040752439fa6dc143049d178ffcf4f7f86ab5e4d62",
+      "ready": false,
+      "passed": false,
+      "reason": "deadline",
+      "errors": []
+    },
+    {
+      "id": "reactbits--gradient-blinds",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Gradient Blinds",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:55:18.124Z",
+      "sourceDocumentSha256": "2f83c9b688077d5f2343133e1f414cc50087f2bc9a92c6224c64700b67c9272a",
+      "preparedDocumentSha256": "ea83b54963a02a0459862ede016499135c9a5f245a570a5a3c786675ec73725b",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--galaxy",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Galaxy",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:55:19.602Z",
+      "sourceDocumentSha256": "314a4f83adb9f710b8a5b1c7dc7015c392e1aaa0a0002bcd8d9bb6df758eb16b",
+      "preparedDocumentSha256": "165ffe8f1814e5e5c2d058233f43acddd397cceca0deb6019dbb3442194a7b8f",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--flux-lines",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Flux Lines",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:55:29.514Z",
+      "sourceDocumentSha256": "689ccc58a342f04f580b60473e2adb3afb34521bc516fa1bd21378d2a7d51cd5",
+      "preparedDocumentSha256": "e57f06898f8a41a88166d702060f212148ae9bb2fa0dcfe428a852be1a1ff626",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--molten-metal",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Molten Metal",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:55:34.987Z",
+      "sourceDocumentSha256": "58f45732e282caa877503cfaa07950fcb1e3172f5fa57d6b5c43e2f480019113",
+      "preparedDocumentSha256": "1b340ecaa75c387d197feea6bce9f87061d3c7978784733d5c7781f2c6f878a1",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--gradient-waves",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Gradient Waves",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:55:39.162Z",
+      "sourceDocumentSha256": "041817541f62e84dbd9ca8a5ba7b155fc35b13349d6d3d41c425028d2c6e0ab4",
+      "preparedDocumentSha256": "a660373655818407ebf4a3e8dddb4e8ced07386b6bec8c124b35de0f1f4e7152",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--web-threads",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Web Threads",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:55:43.714Z",
+      "sourceDocumentSha256": "d99684d1c0ad01203eb71e133f9e8693be7b60a216d75f15690c5d3c3af7499f",
+      "preparedDocumentSha256": "8435cefd3e83fb5d7af4155aa7c17b3e0e1245c75fb06d7443a045e80eebb195",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--lightfall",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Lightfall",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:55:47.932Z",
+      "sourceDocumentSha256": "fbcd38493d255ec0efe464106f60404836b1c5bab71ee8b3f1b8afc61db48a50",
+      "preparedDocumentSha256": "e7983ece1c5a85705b38547c847fcd29ce1467915efd87390d7b5a3a6ed32936",
+      "ready": false,
+      "passed": false,
+      "reason": "deadline"
+    },
+    {
+      "id": "reactbits--light-tunnel",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Light Tunnel",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:55:54.877Z",
+      "sourceDocumentSha256": "b7880771afdf13f861d7402467908a6bfb134768fc67aaeeed03ac0850684cb5",
+      "preparedDocumentSha256": "d27ccc9ec775e4e8d1ed8f6fcc6b0d0ee2aa3022b123f823218a7268b2f90d87",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--ferrofluid",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Ferrofluid",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:55:56.622Z",
+      "sourceDocumentSha256": "cc3e71715a0b593929d1f658f492768713a79b48fbd0f5fc5c39c90a65711dc3",
+      "preparedDocumentSha256": "fca12c0ca6614a91b39cd975772c971ca9ca3b3fddbaa1b73c92014ea4d5edca",
+      "ready": false,
+      "passed": false,
+      "reason": "deadline"
+    },
+    {
+      "id": "reactbits--acid-squares",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Acid Squares",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:56:02.196Z",
+      "sourceDocumentSha256": "5ef0f3fa4a8d22350aff9fa9b0924768e47c1e37841c8c9749aeac83939a43df",
+      "preparedDocumentSha256": "5fc1d5bec4f3d4d4898f9c13ad415f2649722e536c816ae1b7de6860b311ef52",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--topography",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Topography",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:56:10.737Z",
+      "sourceDocumentSha256": "fb82b397f4e7eb8932e629e9172fa3e3073181b7275d7f9c5dad2b9bfe18e947",
+      "preparedDocumentSha256": "47263065bfca38a6407a4106f8331a149f300affbec452bfedef2cc1c1424c1f",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--sliced-waves",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Sliced Waves",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:56:17.400Z",
+      "sourceDocumentSha256": "fa3158d2a3463aa4e75083aab2470cead9ecdbba8885cc4fa3b601cec62281fb",
+      "preparedDocumentSha256": "e977d254f86488e51762060a847c032765fb07bb6beb06de19c0590071989935",
+      "ready": true,
+      "passed": true
+    }
+  ]
+}

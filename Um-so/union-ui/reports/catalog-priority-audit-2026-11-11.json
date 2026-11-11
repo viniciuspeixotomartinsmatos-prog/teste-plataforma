@@ -67,7 +67,11 @@
         "previewSha256": "94e6a62230aedfa007bdffa242a7b849c2dc53bccd976657fe906f6392601648"
       },
       "manual": {
-        "standalone": "Opened the extracted preview at a separate origin; actual rendered pixels were visually observed. Progress showed the filled segment with value 30 of 100."
+        "standalone": "Opened the extracted preview at a separate origin; actual rendered pixels were visually observed. Progress showed the filled segment with value 30 of 100.",
+        "viewport": {
+          "desktop": 1179,
+          "mobile": 388
+        }
       },
       "acceptance": "partial",
       "next": "Confirm remaining manual interactions, responsive layouts, clipboard, standalone packages and production for this item."
@@ -131,7 +135,12 @@
       "manual": {
         "visual": "Authenticated component page displayed the gradient; selected the mobile preview control.",
         "clipboard": "Actual Copy prompt button returned a string containing Liquid Aurora (230751 characters on baseline).",
-        "standalone": "Opened the extracted preview at a separate origin; actual rendered pixels were visually observed. Progress showed the filled segment with value 30 of 100."
+        "standalone": "Opened the extracted preview at a separate origin; actual rendered pixels were visually observed. Progress showed the filled segment with value 30 of 100.",
+        "appDownload": "Actual ZIP action wrote liquid-aurora-cf2df7.zip (90,693 bytes).",
+        "viewport": {
+          "desktop": 1179,
+          "mobile": 388
+        }
       },
       "acceptance": "partial",
       "next": "Confirm remaining manual interactions, responsive layouts, clipboard, standalone packages and production for this item."
@@ -193,7 +202,11 @@
         "previewSha256": "c66fad3513b5e2e881e72ad6476175c2e1244043e9b3328a2f3e747186690978"
       },
       "manual": {
-        "standalone": "Opened the extracted preview at a separate origin; actual rendered pixels were visually observed. Progress showed the filled segment with value 30 of 100."
+        "standalone": "Opened the extracted preview at a separate origin; actual rendered pixels were visually observed. Progress showed the filled segment with value 30 of 100.",
+        "viewport": {
+          "desktop": 1179,
+          "mobile": 388
+        }
       },
       "acceptance": "partial",
       "next": "Confirm remaining manual interactions, responsive layouts, clipboard, standalone packages and production for this item."
@@ -292,7 +305,11 @@
         "previewSha256": "5b6cef0fb2266d4a354a1f8cc70d64ba4a912f523eec19f9fc4483516216b2bd"
       },
       "manual": {
-        "standalone": "Extracted preview ran at a separate local origin with no application session. The video decoded at 640px wide and reached 6.66s; original Mux network source required."
+        "standalone": "Extracted preview ran at a separate local origin with no application session. The video decoded at 640px wide and reached 6.66s; original Mux network source required.",
+        "viewport": {
+          "desktop": 1179,
+          "mobile": 388
+        }
       },
       "acceptance": "partial",
       "next": "Confirm remaining manual interactions, responsive layouts, clipboard, standalone packages and production for this item."
@@ -392,7 +409,12 @@
         "originalAndCompatibleVideo": true
       },
       "manual": {
-        "standalone": "Extracted preview used embedded WebM at a separate local origin, readyState 4, width 960, playback observed at 2.30s."
+        "standalone": "Extracted preview used embedded WebM at a separate local origin, readyState 4, width 960, playback observed at 2.30s.",
+        "clipboard": "Actual Copy prompt action returned 7,158,410 characters including the Mine introduction.",
+        "appDownload": "Actual ZIP action wrote mine-e601be.zip (9,965,002 bytes).",
+        "viewport": {
+          "mobileSelected": true
+        }
       },
       "acceptance": "partial",
       "next": "Confirm remaining manual interactions, responsive layouts, clipboard, standalone packages and production for this item."
@@ -454,7 +476,11 @@
         "previewSha256": "fb47bf591cad988ef48c1ba029839dc31c03a70bf519e18f9d1675259b6725d4"
       },
       "manual": {
-        "standalone": "Opened the extracted preview at a separate origin; actual rendered pixels were visually observed. Progress showed the filled segment with value 30 of 100."
+        "standalone": "Opened the extracted preview at a separate origin; actual rendered pixels were visually observed. Progress showed the filled segment with value 30 of 100.",
+        "viewport": {
+          "desktop": 1179,
+          "mobile": 388
+        }
       },
       "acceptance": "partial",
       "next": "Confirm remaining manual interactions, responsive layouts, clipboard, standalone packages and production for this item."
@@ -554,7 +580,11 @@
         "originalAndCompatibleVideo": true
       },
       "manual": {
-        "standalone": "Extracted preview used embedded WebM at a separate local origin, readyState 4, width 960, playback advanced from 0 to 2.08s."
+        "standalone": "Extracted preview used embedded WebM at a separate local origin, readyState 4, width 960, playback advanced from 0 to 2.08s.",
+        "viewport": {
+          "mobile": 388
+        },
+        "clipboard": "UI reported Copiado; exact clipboard contents not independently confirmed."
       },
       "acceptance": "partial",
       "next": "Confirm remaining manual interactions, responsive layouts, clipboard, standalone packages and production for this item."
@@ -616,7 +646,10 @@
         "previewSha256": "987ab0bfd5e12c4cd31dee060407ab74d8157ca0a0ccf0bea0e20eac26336f08"
       },
       "manual": {
-        "standalone": "Opened the extracted preview at a separate origin; actual rendered pixels were visually observed. Progress showed the filled segment with value 30 of 100."
+        "standalone": "Opened the extracted preview at a separate origin; actual rendered pixels were visually observed. Progress showed the filled segment with value 30 of 100.",
+        "viewport": {
+          "mobile": 388
+        }
       },
       "acceptance": "partial",
       "next": "Confirm remaining manual interactions, responsive layouts, clipboard, standalone packages and production for this item."
@@ -725,7 +758,11 @@
       },
       "manual": {
         "standalone": "Ran the ZIP-provided serve.mjs. Rendered the visible 3D logo; clicked How it works, URL changed to #how; no Draco or fetch error observed on landing.",
-        "limit": "Compiled landing only. Original service host cgociqdhdcpkqltaicmu.supabase.co did not resolve. No original authentication or workspace backend recovered or tested."
+        "limit": "Compiled landing only. Original service host cgociqdhdcpkqltaicmu.supabase.co did not resolve. No original authentication or workspace backend recovered or tested.",
+        "viewport": {
+          "desktop": 1179,
+          "mobile": 388
+        }
       },
       "acceptance": "partial",
       "next": "Confirm remaining manual interactions, responsive layouts, clipboard, standalone packages and production for this item."
@@ -771,67 +808,82 @@
     {
       "file": "src/retained-preview-compat.js",
       "sha256": "7c5cf0f8227ec80d3486f8f47f4ba944c446d97c8fb09b69546242adfba1db11",
-      "bytes": 1727
+      "bytes": 1727,
+      "releaseGitSha256": "7c5cf0f8227ec80d3486f8f47f4ba944c446d97c8fb09b69546242adfba1db11"
     },
     {
       "file": "src/preview-assets.js",
       "sha256": "12d3bcf449eacbbc1ce8b7ac85fdbff548735d1f74894884008916ca81275258",
-      "bytes": 10367
+      "bytes": 10367,
+      "releaseGitSha256": "3885d219200a2d87d5c32cf9cd3fa091c673e41744924c952628abfeb4bdebcf"
     },
     {
       "file": "src/component-export.js",
       "sha256": "ff05c14cf8e60c2d5e49ffa7af6b6c560ef9ad71383a3b2ecbdcea749eefaeb3",
-      "bytes": 15166
+      "bytes": 15166,
+      "releaseGitSha256": "ff05c14cf8e60c2d5e49ffa7af6b6c560ef9ad71383a3b2ecbdcea749eefaeb3"
     },
     {
       "file": "public/data/recovered-demo-assets.json",
       "sha256": "022e22f4a16c1c394d42a32867d327d3177500e7adc8791c2e9b46900167fb1c",
-      "bytes": 41045
+      "bytes": 41045,
+      "releaseGitSha256": "022e22f4a16c1c394d42a32867d327d3177500e7adc8791c2e9b46900167fb1c"
     },
     {
       "file": "public/previews/recovered/demos/mosaik/assets/MosaikLogo3D-B9wrQNt1.js",
       "sha256": "e16b61ad824295990c6d574cb9fe43e4c24a19f916437268076361ca35a10afd",
-      "bytes": 1036031
+      "bytes": 1036031,
+      "releaseGitSha256": "693b2f9480bd8fabf14ac0e476b18030a530aad4ffb7eea20ba49899ffad0941"
     },
     {
       "file": "public/previews/recovered/demos/mosaik/draco/draco_decoder.js",
       "sha256": "6604be0104930049a96f5b30e2c17928fb13daca25c1f088349730eb0c6db3c8",
-      "bytes": 709590
+      "bytes": 709590,
+      "releaseGitSha256": "6604be0104930049a96f5b30e2c17928fb13daca25c1f088349730eb0c6db3c8"
     },
     {
       "file": "public/previews/recovered/demos/mosaik/draco/draco_decoder.wasm",
       "sha256": "0103c8bff79532c2f1a496dd9ea0764ac692ed8585d9136596ef9f043873a61f",
-      "bytes": 283091
+      "bytes": 283091,
+      "releaseGitSha256": "0103c8bff79532c2f1a496dd9ea0764ac692ed8585d9136596ef9f043873a61f"
     },
     {
       "file": "public/previews/recovered/demos/mosaik/draco/draco_wasm_wrapper.js",
       "sha256": "b93f6384147828f857456c84845f4dbceada5b7a8455991109c853e236a1f018",
-      "bytes": 58916
+      "bytes": 58916,
+      "releaseGitSha256": "b93f6384147828f857456c84845f4dbceada5b7a8455991109c853e236a1f018"
     },
     {
       "file": "public/previews/recovered/demos/mosaik/draco/LICENSE",
       "sha256": "d3709b0fb4b8a94bbb1d02b8a2e484f258b0d9c5c5a01f940391f3fe662cd1a4",
-      "bytes": 13898
+      "bytes": 13898,
+      "releaseGitSha256": "d3709b0fb4b8a94bbb1d02b8a2e484f258b0d9c5c5a01f940391f3fe662cd1a4"
     },
     {
       "file": "public/assets/demo-cache/c721f302e4673e41bbd2b395.mp4",
       "sha256": "3a2391e037b8aa6fed540b4c3e0f66da6028b1e893b6cbc9f17444bdb8fa40bf",
-      "bytes": 212959
+      "bytes": 212959,
+      "releaseGitSha256": "3a2391e037b8aa6fed540b4c3e0f66da6028b1e893b6cbc9f17444bdb8fa40bf"
     },
     {
       "file": "public/assets/demo-cache/c721f302e4673e41bbd2b395.compat.webm",
       "sha256": "44143820a1e4a199379732dd73b5a17eaae0ee847d80b275398f2c93c127f227",
-      "bytes": 4170453
+      "bytes": 4170453,
+      "releaseGitSha256": "44143820a1e4a199379732dd73b5a17eaae0ee847d80b275398f2c93c127f227"
     },
     {
       "file": "public/assets/demo-cache/a173a27bb35f6ab1e3f1fa8f.mp4",
       "sha256": "b790b0939aff65074355a1f0f9e854be432ed62721d72c1dbf35a211f50ab37f",
-      "bytes": 272282
+      "bytes": 272282,
+      "releaseGitSha256": "b790b0939aff65074355a1f0f9e854be432ed62721d72c1dbf35a211f50ab37f"
     },
     {
       "file": "public/assets/demo-cache/a173a27bb35f6ab1e3f1fa8f.compat.webm",
       "sha256": "e0e1a118aeb7445578c5c09b65f1f05473e4e2e4d2933b9b856bdada767f6e09",
-      "bytes": 3574906
+      "bytes": 3574906,
+      "releaseGitSha256": "e0e1a118aeb7445578c5c09b65f1f05473e4e2e4d2933b9b856bdada767f6e09"
     }
-  ]
+  ],
+  "releaseCandidate": "c68978f050f573a4a8d15f9f8ff62b3379ecd45e",
+  "productionEvidence": "reports/catalog-production-audit-2026-11-11.json"
 }
