@@ -1,4 +1,7 @@
 const english = {
+  "Privacidade": "Privacy",
+  "Termos": "Terms",
+  "Cookies": "Cookies",
   "Não foi possível concluir a entrada automática neste navegador. Seu e-mail pode já estar confirmado: entre com sua senha. Se ainda precisar confirmar, solicite um novo e-mail.": "Automatic sign-in failed in this browser. Your email may already be confirmed: sign in with your password, or request a new confirmation email.",
   "Esse link não pôde ser validado. Entre com sua senha ou solicite um novo e-mail de confirmação.": "This link could not be verified. Sign in with your password or request a new confirmation email.",
   "Não foi possível validar a recuperação neste navegador. Solicite novas instruções abaixo.": "Password recovery could not be verified in this browser. Request new instructions below.",

@@ -21,6 +21,7 @@ test('English login, signup constraints, language switching and safe requested d
  const ui=await mount({search:'?lang=en&next='+encodeURIComponent('/plans?lang=en')});
  try{
   assert.equal(document.querySelector('h1').textContent,'Sign in to your account');
+  assert.equal(document.querySelector('.auth-policy-links a').textContent,'Privacy');
   assert.match(document.querySelector('.auth-art-quote').textContent,/Your ideas deserve a new universe/);
   await ui.click('Show password');assert.equal(document.getElementById('auth-password').type,'text');
   await ui.click('Create an account');assert.equal(document.getElementById('auth-password').minLength,8);assert.equal(document.getElementById('auth-name').maxLength,100);

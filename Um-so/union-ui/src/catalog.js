@@ -1,4 +1,5 @@
 import {concepts,queryTerms,matchIntent,semanticIntent} from './search-language.js';
+import iconVariantSlugs from './catalog-icon-variants.json' with {type:'json'};
 export const categoryLabels = {'Heroes':'Hero sections','Backgrounds':'Backgrounds & shaders','Text effects':'Efeitos de texto','Buttons':'Botões','Navigation':'Navegação','Cards':'Cards & bento','AI & inputs':'IA, inputs & forms','Galleries':'Galerias & carrosséis','Pricing':'Preços','Testimonials':'Depoimentos','Footers':'Rodapés','Dashboards':'Dashboards','Authentication':'Autenticação','Interactions':'Motion & interações','Icons':'Ícones animados','Utilities':'Utilitários','Components':'Outros componentes'};
 export const kindLabels={all:'Tudo',component:'Componentes',block:'Blocos',template:'Templates',theme:'Temas',shader:'Shaders',icon:'Ícones',app:'Apps',page:'Páginas',hook:'Hooks',motion:'Motion design'};
 export const formatCount=n=>new Intl.NumberFormat('pt-BR').format(n||0);
@@ -28,9 +29,9 @@ export function sourceOf(sources,id){return sources.find(s=>s.id===id)||{id,name
 // Explicitly reviewed families; a matching generic title alone never merges arbitrary records.
 const variantNames=new Set(['aurora','orb','split text','spotlight card','dusk hero section 8']);
 const pairedVariants = new Map();
-for (const slug of ['backgrounds-bubble','backgrounds-fireworks','backgrounds-glyph','backgrounds-gradient','backgrounds-gravity-stars','backgrounds-hexagon','backgrounds-stars','backgrounds-topography','buttons-flip','buttons-github-stars','buttons-liquid','buttons-theme-toggler','components-code-block']) {
-  pairedVariants.set('animate-'+slug,slug);
-  pairedVariants.set('animate-vue-'+slug,slug);
+for (const slug of [...iconVariantSlugs,'backgrounds-bubble','backgrounds-fireworks','backgrounds-glyph','backgrounds-gradient','backgrounds-gravity-stars','backgrounds-hexagon','backgrounds-stars','backgrounds-topography','buttons-flip','buttons-github-stars','buttons-liquid','buttons-theme-toggler','components-code-block']) {
+  pairedVariants.set('animate-'+slug,'framework-variant:'+slug);
+  pairedVariants.set('animate-vue-'+slug,'framework-variant:'+slug);
 }
 export function catalogVariants(item,rows){if(item && pairedVariants.has(item.id))return rows.filter(row=>pairedVariants.get(row.id)===pairedVariants.get(item.id));if(!item||!variantNames.has(normalize(item.name)))return item?[item]:[];return rows.filter(row=>normalize(row.name)===normalize(item.name)&&row.kind===item.kind&&row.category===item.category);}
 export function groupCatalogResults(rows){const seen=new Map(),result=[];for(const row of rows){const key=pairedVariants.get(row.id) || (variantNames.has(normalize(row.name))?[normalize(row.name),row.kind,row.category].join(':'):row.id);const existing=seen.get(key);if(existing){existing._variants.push(row);continue;}const entry={...row,_variants:[row]};seen.set(key,entry);result.push(entry);}return result;}

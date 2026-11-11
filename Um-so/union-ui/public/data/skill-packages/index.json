@@ -211,7 +211,7 @@
   },
   {
     "id": "hyperframes-project-guide",
-    "name": "HyperFrames Â· guia de projeto",
+    "name": "HyperFrames · guia de projeto",
     "group": "hyperframes",
     "files": 1,
     "guide": "CLAUDE.md"
@@ -224,14 +224,14 @@
   },
   {
     "id": "valyu-mcp",
-    "name": "Valyu Â· pesquisa",
+    "name": "Valyu · pesquisa",
     "group": "MCP",
     "files": 2,
     "guide": "README.md"
   },
   {
     "id": "profitize-direcao-de-arte",
-    "name": "DireÃ§Ã£o de Arte",
+    "name": "Direção de Arte",
     "files": 40,
     "description": "Composição, tipografia e direção visual.",
     "kind": "skill",
@@ -249,7 +249,7 @@
   },
   {
     "id": "profitize-trafego-pago",
-    "name": "TrÃ¡fego Pago",
+    "name": "Tráfego Pago",
     "files": 1,
     "description": "Planejamento e otimização de campanhas.",
     "kind": "skill",
@@ -258,7 +258,7 @@
   },
   {
     "id": "profitize-anuncios-concorrencia",
-    "name": "AnÃºncios da ConcorrÃªncia",
+    "name": "Anúncios da Concorrência",
     "files": 1,
     "description": "Análise de anúncios e posicionamento.",
     "kind": "skill",
@@ -285,7 +285,7 @@
   },
   {
     "id": "profitize-jogos",
-    "name": "CriaÃ§Ã£o de Jogos",
+    "name": "Criação de Jogos",
     "files": 11,
     "description": "Desenvolvimento de jogos 2D e 3D.",
     "kind": "skill",
@@ -294,7 +294,7 @@
   },
   {
     "id": "profitize-apresentacoes",
-    "name": "ApresentaÃ§Ãµes PowerPoint",
+    "name": "Apresentações PowerPoint",
     "files": 111,
     "description": "Criação e revisão de apresentações.",
     "kind": "skill",

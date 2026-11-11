@@ -65,7 +65,7 @@ export default function AccountPage({account,navigate,notify,path='/account',sea
     <div className="auth-links">
      {mode==='login'?<><p>{t("Ainda não tem uma conta? ")}<button type="button" onClick={()=>changeMode('signup')} disabled={busy}>{t("Criar uma conta")}</button></p><div className="auth-support-links"><button type="button" onClick={()=>changeMode('forgot')} disabled={busy}><KeyRound aria-hidden="true"/>{t("Esqueci minha senha")}</button><span aria-hidden="true" className="auth-support-divider"/><button type="button" onClick={()=>changeMode('resend')} disabled={busy}><Mail aria-hidden="true"/>{t("Reenviar confirmação")}</button></div></>:<p>{mode==='signup'?t("Já tem uma conta? "):''}<button type="button" onClick={()=>changeMode('login')} disabled={busy}>{mode==='signup'?t("Entrar"):t("Voltar para entrar")}</button></p>}
     </div>
-    <p className="auth-policy-links"><a href="/legal/privacy">Privacidade</a> · <a href="/legal/terms">Termos</a> · <a href="/legal/cookies">Cookies</a></p>
+    <p className="auth-policy-links"><a href="/legal/privacy">{t('Privacidade')}</a> · <a href="/legal/terms">{t('Termos')}</a> · <a href="/legal/cookies">{t('Cookies')}</a></p>
     {languageSwitch}
    </div>
   </section>

@@ -5,6 +5,7 @@
 .auth-topbar .brand>svg{width:37px;height:37px;color:#d3a4ff;stroke-width:2}
 .auth-topbar .icon-button{width:49px;height:46px;border:1px solid #39334f;border-radius:19px;color:#eee9ff;background:#0e0e2370}
 .auth-topbar .icon-button svg{width:27px;height:27px;stroke-width:1.6}
+.auth-topbar .nitido-brand .nitido-brand__word{display:block;background:#f8f7ff}
 .account-page.auth-fuse{--auth-unit:min(1vw,1.777svh);--auth-ink:#f8f7ff;--auth-muted:#c4c0db;--auth-purple:#d1a5ff;position:relative;isolation:isolate;max-width:none;width:100%;min-height:100svh;margin:0;padding:calc(7.12 * var(--auth-unit)) 0 calc(6.1 * var(--auth-unit));display:grid;grid-template-columns:51.3% 48.7%;gap:0;align-items:stretch;color:var(--auth-ink);background:#08091c url('/assets/auth/cosmic-login.png') center center/cover no-repeat;font-family:Inter,system-ui,sans-serif}
 .auth-fuse .auth-form-side{display:flex;align-items:center;justify-content:flex-start;padding-left:calc(7.89 * var(--auth-unit));min-width:0}
 .auth-fuse .auth-card{width:calc(35.53 * var(--auth-unit));padding:calc(2.27 * var(--auth-unit)) calc(2.69 * var(--auth-unit)) calc(3.1 * var(--auth-unit)) calc(3.29 * var(--auth-unit));min-height:calc(43.06 * var(--auth-unit));margin:0;border:1px solid #8176bb50;border-radius:calc(2.87 * var(--auth-unit));background:linear-gradient(150deg,#121124cf 0%,#131226e8 72%,#27204ed9 100%);box-shadow:inset 2px 2px 3px -1px #d4b5ff, inset -12px -15px 32px -24px #a275ff,0 22px 70px #05051650;position:relative}
@@ -57,6 +58,9 @@
 
 .account-page.auth-fuse {
   --auth-unit:clamp(12px,1vw,17px);
+  /* The Star Border canvas deliberately bleeds past its button. Keep only
+     decorative horizontal bleed from widening the mobile layout viewport. */
+  overflow-x:clip;
   background:radial-gradient(ellipse at 85% 60%,#46207c66,transparent 42%),
     radial-gradient(ellipse at 42% 95%,#38178288,transparent 30%),#09091c;
 }

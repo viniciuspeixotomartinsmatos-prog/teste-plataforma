@@ -25,3 +25,15 @@ test('React and Vue source compile and handle a click with packaged local runtim
    }
  }finally{globalThis.fetch=original;}
 });
+
+test('a painted CSS-only example is ready while an empty transparent box remains unready',async()=>{
+ for(const [background,ready]of [['linear-gradient(135deg, #7135ff, #e3d7ff)',true],['rgb(255, 0, 0)',true],['rgb(0, 0, 0)',true],['rgba(255, 0, 0, 0)',false],['transparent',false]]){
+  const statuses=[];
+  const html=await creatorPreview({framework:'html',source:'<div style="width:160px;height:160px;background:'+background+'"></div>'},AbortSignal.timeout(10000));
+  const dom=new JSDOM(html,{runScripts:'dangerously',pretendToBeVisual:true,beforeParse(window){
+   window.HTMLElement.prototype.getBoundingClientRect=()=>({width:160,height:160});
+   window.addEventListener('message',event=>statuses.push(event.data.status));
+  }});
+  try{await new Promise(resolve=>setTimeout(resolve,200));assert.equal(statuses.includes('ready'),ready,background);}finally{dom.window.close();}
+ }
+});

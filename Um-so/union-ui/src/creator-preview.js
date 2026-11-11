@@ -17,7 +17,11 @@ function monitor(){
    if(node instanceof HTMLCanvasElement){try{const context=node.getContext('2d');if(!context)return false;return context.getImageData(0,0,node.width,node.height).data.some((n,i)=>i%4===3&&n>0);}catch{return false;}}
    if(node instanceof HTMLImageElement)return node.complete&&node.naturalWidth>0;
    if(node instanceof SVGElement)return Boolean(node.closest('svg')?.querySelector('path,circle,rect,polygon,line,ellipse,text'));
-   return ['BUTTON','INPUT','SELECT','TEXTAREA','VIDEO'].includes(node.tagName)||Boolean(node.textContent.trim());
+   const opaque=color=>Boolean(color)&&color!=='transparent'&&
+    !/^rgba\([^,]+,[^,]+,[^,]+,\s*0(?:\.0+)?\s*\)$/.test(color)&&!/\/\s*0(?:\.0+)?%?\s*\)$/.test(color);
+   const painted=opaque(style.backgroundColor)||(style.backgroundImage&&style.backgroundImage!=='none')||
+    ['Top','Right','Bottom','Left'].some(side=>parseFloat(style['border'+side+'Width'])>0&&style['border'+side+'Style']!=='none'&&opaque(style['border'+side+'Color']));
+   return ['BUTTON','INPUT','SELECT','TEXTAREA','VIDEO'].includes(node.tagName)||Boolean(node.textContent.trim())||painted;
   });
   if(visible)return requestAnimationFrame(()=>requestAnimationFrame(()=>send('ready')));
   if(Date.now()>deadline)return send('error','A prévia não apresentou conteúdo visível. Confira o exemplo.');

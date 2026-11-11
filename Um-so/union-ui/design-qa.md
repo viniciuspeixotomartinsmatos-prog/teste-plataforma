@@ -245,3 +245,21 @@ Follow-up `99aef9915` reached READY at `dpl_4CdUhn5gGvwQcQ34yVbDHR7hhEdy`. Refre
 
 ## Creators private workspace — 10 November 2026
 Form uses existing glass layout and responsive panels; source textarea is inert. DOM acceptance verifies profile/draft save and unsynchronized local recovery. Actual authorized browser inventory returned `Local browser use is disabled in Work settings` again; no alternate browser used. Desktop/mobile composition, keyboard and published save/reload remain unverified.
+
+## 2026-11-11 — Authorized browser acceptance and corrections
+
+The in-app browser became available with the existing production session. Tested Shape Waves (visible geometry and canvas click), Splash Cursor (a real colored ink response after clicking the canvas), and Circular Carousel (decoded photography and selection changed to Valley, 1 of 3). Shape Waves prompt copying reported success and its actual downloaded ZIP contains source and a README. These are representative runtime checks, not certification of every catalog preview.
+
+Production Creators loaded the current moderator's queue and aggregate metrics. The empty public gallery is intentional: synthetic publications used in the previous production end-to-end test were withdrawn and their test accounts removed. Public search/framework submission preserves the query and marks the faceted result noindex. No customer draft or public publication was created in this browser run.
+
+Production icons: combined Portuguese `pessoa`, Lucide and Pessoas filters returned 46 drawings/46 variants. Opening user, keyboard size 48 to 52, actual clipboard readback of the exported React function, and ZIP download passed. The ZIP contains LICENSE.txt, README.md, SVG, React, Vue and native React files. Skill gallery filters, original Apple guide and real ZIP download passed; the downloaded Apple ZIP is byte-identical to the retained original. The browser revealed seven garbled package titles and an invisible search boundary caused by nonexistent CSS tokens; both are corrected without modifying original ZIPs/guides.
+
+The local, separate synthetic account exercised actual sign-in, React counter click 0 to 1, private save/reload, unsaved local recovery and a handled runtime exception. The browser exposed a false negative for a visible CSS-only gradient; the readiness probe now recognizes painted backgrounds/borders while continuing to reject empty transparent boxes and removing failed frames.
+
+Login acceptance used the built local distribution at 1440 by 900 and a 390 by 844 mobile layout. Fixed the light-theme wordmark becoming dark over the cosmic background and the decorative Star Border canvas adding eight pixels of horizontal overflow. After correction, mobile clientWidth and scrollWidth both equal 390. English legal links now follow the chosen language. Real editable fields, signup constraints, password visibility and local sign-in remain functional.
+
+At rest, the rendered astronaut crop equals its original reference in all 3,651,080 pixel channels. A click changed 18,145 pixels in the measured astronaut region. Reduced motion hides the simulation and displays the retained static crop; emulation is reset after testing. One local desktop animation-frame sample measured 89 intervals, mean 10.61 ms and p95 14 ms. This is a single-device sample, not a guarantee of 60fps on every phone. The image is still a raster-region treatment, not independently recovered scene layers.
+
+Evidence remains outside tracked files in `var/qa-2026-11-11/`: login-desktop.png, login-particle-pulse.png, login-reduced-motion.png, login-mobile.png, signup-mobile-en.png, creators-react-mobile.png, creators-css-ready-mobile.png, shape-waves-production.png, splash-cursor-production.png, circular-carousel-production.png, icons-production.png and community-production.png. Earlier images can illustrate a pre-correction state; login-mobile.png and login-desktop.png capture the corrected states specified above.
+
+Validation: 216 tests passed with no failures/skips. Full public-copy build passed, followed by final source recompilation and four Sites checks. No new dependency or paid service was added. Final cloud publication is verified after the commit; do not infer it from this local result alone.
