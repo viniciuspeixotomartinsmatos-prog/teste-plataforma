@@ -7,14 +7,18 @@ test('submission freezes source and a different moderator controls verified publ
  const db=new PGlite();
  const author='00000000-0000-4000-8000-000000000001',reviewer='00000000-0000-4000-8000-000000000002',draft='00000000-0000-4000-8000-000000000003';
  const identity=async(id,moderator=false)=>{
+   const role=(await db.query('select current_user as name')).rows[0].name;
+   await db.exec('reset role');
+   await db.query('update auth.users set raw_app_meta_data=$1 where id=$2',[JSON.stringify({nitido_moderator:moderator}),id]);
+   if(['anon','authenticated'].includes(role))await db.exec('set role '+role);
    await db.query("select set_config('request.jwt.claim.sub',$1,false),set_config('request.jwt.claims',$2,false)",[id,JSON.stringify({app_metadata:{nitido_moderator:moderator}})]);
  };
  const command=async(action,input={})=>(await db.query('select public.creator_command($1,$2) as value',[action,JSON.stringify(input)])).rows[0].value;
  const gallery=async()=>(await db.query('select public.creator_gallery() as value')).rows[0].value;
  try{
-   await db.exec("create role anon;create role authenticated;create schema auth;create table auth.users(id uuid primary key);create function auth.uid() returns uuid language sql as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;create function auth.jwt() returns jsonb language sql as $$select current_setting('request.jwt.claims',true)::jsonb$$;grant usage on schema auth to authenticated;");
-   for(const name of ['20261110_creator_workspaces.sql','20261111_creator_review.sql','20261111_creator_metrics.sql'])await db.exec(await readFile('supabase/migrations/'+name,'utf8'));
-   await db.query('insert into auth.users values ($1),($2)',[author,reviewer]);
+   await db.exec("create role anon;create role authenticated;create schema auth;create table auth.users(id uuid primary key,raw_app_meta_data jsonb default '{}'::jsonb);create function auth.uid() returns uuid language sql as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;create function auth.jwt() returns jsonb language sql as $$select current_setting('request.jwt.claims',true)::jsonb$$;grant usage on schema auth to authenticated;");
+   for(const name of ['20261110_creator_workspaces.sql','20261111_creator_review.sql','20261111_creator_metrics.sql','20261111_creator_role_audit.sql'])await db.exec(await readFile('supabase/migrations/'+name,'utf8'));
+   await db.query('insert into auth.users(id) values ($1),($2)',[author,reviewer]);
    await identity(author);
    const workspace={profile:{displayName:'Test author',bio:'Public bio'},drafts:[{id:draft,name:'Button',source:'original source',license:'Own',rightsConfirmed:true}]};
    await db.query('insert into public.creator_workspaces(user_id,revision,data) values ($1,1,$2)',[author,JSON.stringify(workspace)]);
@@ -46,5 +50,12 @@ test('submission freezes source and a different moderator controls verified publ
    assert.equal((await gallery())[0].version,2);
    await command('withdraw',{id:v2.id,reason:'Withdraw technical test'});
    assert.deepEqual(await gallery(),[]);
+   await db.exec('reset role');
+   assert.ok((await db.query('select count(*)::int as n from nitido_community.audit')).rows[0].n>=5);
+   await db.query("update auth.users set raw_app_meta_data='{}' where id=$1",[reviewer]);
+   await db.exec('set role authenticated');
+   // The old JWT still claims moderator; live metadata revocation must win.
+   assert.equal((await command('list')).moderator,false);
+   await assert.rejects(db.query('select * from nitido_community.audit'));
  } finally{await db.close();}
 });
