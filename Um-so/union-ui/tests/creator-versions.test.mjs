@@ -12,5 +12,7 @@ test('restoration preserves immutable snapshots and unrelated drafts while forks
  restored.drafts[0].source='edited';assert.equal(snapshot.source,'previous');
  const fork=restoreCreatorVersion([],snapshot,'fork');
  assert.equal(fork.id,'fork');assert.equal(fork.drafts[0].rightsConfirmed,false);assert.equal(fork.drafts[0].license,'MIT');
+ const metadataOnly=restoreCreatorVersion([{...snapshot,license:'Updated license'}],snapshot,'metadata-backup');
+ assert.equal(metadataOnly.drafts[1].license,'Updated license');assert.equal(metadataOnly.drafts[0].license,'MIT');
  assert.throws(()=>restoreCreatorVersion(Array.from({length:20},(_,i)=>({id:String(i)})),snapshot,'new'),/Limite/);
 });

@@ -1,7 +1,8 @@
 // Restore editable source; publishing always creates a new reviewed snapshot.
 export function restoreCreatorVersion(drafts,source,newId){
  const current=drafts.find(draft=>draft.id===source.id),own=Boolean(current);
- const needsBackup=own&&current.source!==source.source;
+ const editable=value=>Object.fromEntries(Object.entries(value).filter(([key])=>!['analysis','publication','nitidoVersion','status','exportedAt'].includes(key)).sort(([a],[b])=>a<b?-1:a>b?1:0));
+ const needsBackup=own&&JSON.stringify(editable(current))!==JSON.stringify(editable(source));
  if((!own||needsBackup)&&drafts.length>=20)throw Error('Limite de 20 rascunhos. Exporte ou remova um antes de criar outra variante.');
  const {analysis,publication,nitidoVersion,...original}=source;
  const draft={...structuredClone(original),id:own?source.id:newId,status:'draft',rightsConfirmed:own&&source.rightsConfirmed===true};
