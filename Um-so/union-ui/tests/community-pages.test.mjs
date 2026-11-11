@@ -20,6 +20,9 @@ test('public community paths are explicit, escaped and canonical without exposin
  assert.match(html,/CreativeWork/);assert.doesNotMatch(html,/<script>alert\(1\)/);assert.doesNotMatch(html,/<img src=x/);
  const denied=await community(new Request('https://example.test/community/component/'+id),{rpc:async()=>({data:null})},null,()=>{throw Error('Public projection should not require login');});
  assert.equal(denied.status,404);
+ const calls=[];
+ const head=await community(new Request('https://example.test/community/component/'+id,{method:'HEAD'}),{rpc:async(name)=>{calls.push(name);return {data:{id,creator:id,name:'Public component',display_name:'Author',version:1}};}},null,()=>{throw Error('Public HEAD should not require login');});
+ assert.equal(head.status,200);assert.equal(await head.text(),'');assert.deepEqual(calls,['creator_public_item']);
 });
 
 test('publication API refuses an invalid compiled example even if a moderator marks it tested',async()=>{

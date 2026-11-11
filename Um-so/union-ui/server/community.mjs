@@ -1,18 +1,18 @@
 import {communityPath,communityTarget,renderCommunity} from './community-pages.mjs';
 export async function community(request,client,readBody,requireUser){
  const url=new URL(request.url);
- if((url.pathname==='/api/community'||communityPath(url.pathname))&&request.method==='GET'){
+ if((url.pathname==='/api/community'||communityPath(url.pathname))&&['GET','HEAD'].includes(request.method)){
    const {profile,version,offset,query,kind}=communityTarget(url);
    const result=version?await client.rpc('creator_public_item',{version_id:version}):await client.rpc('creator_browse',{creator:profile,page_offset:offset,query,kind});
    if(result.error)return new Response('A comunidade ainda não está disponível.',{status:503});
    if(version&&!result.data||profile&&!query&&!kind&&!result.data?.length)return new Response('Publicação indisponível.',{status:404});
-   if(version){
+   if(version&&request.method==='GET'){
      let event=client.rpc('creator_event',{version_id:version,event_kind:'open'});
      if(event.abortSignal)event=event.abortSignal(AbortSignal.timeout(2000));
      try{await event;}catch{} // Statistics must never prevent opening a publication.
    }
    const html=renderCommunity({rows:version?[]:result.data,item:version?result.data:null,profile,offset,query,kind,origin:new URL(process.env.APP_ORIGIN||request.url).origin});
-   return new Response(html,{headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':'private, no-store'}});
+   return new Response(request.method==='HEAD'?null:html,{headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':'private, no-store'}});
  }
  await requireUser();
  if(request.method!=='POST')return new Response(null,{status:405});
