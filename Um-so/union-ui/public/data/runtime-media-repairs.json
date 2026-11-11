@@ -1,0 +1,583 @@
+{
+  "version": 1,
+  "checkedAt": "2026-11-11T15:32:33.532Z",
+  "scope": "Exact original publicly reachable demo images missing from the retained runtime; no substitute photography.",
+  "items": [
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/camiseta-ocre-costas.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/camiseta-ocre-costas.webp",
+      "sha256": "733625b55848668aefbb0833ab4ae7ee792488b79553fc9a523483e720b4a058",
+      "bytes": 9966,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/camiseta-ocre-frente.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/camiseta-ocre-frente.webp",
+      "sha256": "39a9157ffbe14f844ab409f769878a74614023d362b2472ebf6503c5faa7d466",
+      "bytes": 9490,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/camiseta-ocre-lado.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/camiseta-ocre-lado.webp",
+      "sha256": "b01e39e4b8c1e08746aefd2bf3073d37d473a04682c9ad5087a83772e82707bd",
+      "bytes": 6152,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/camiseta-osso-costas.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/camiseta-osso-costas.webp",
+      "sha256": "1fb64854ef28bf915261797424b7199bf385f15660e685e082ce8550a71c9e5b",
+      "bytes": 9422,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/camiseta-osso-frente.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/camiseta-osso-frente.webp",
+      "sha256": "f52a449bc927ec71799234ce1c6f75a365221854dcf2bd4627d7339dae234232",
+      "bytes": 8828,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/camiseta-osso-lado.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/camiseta-osso-lado.webp",
+      "sha256": "bbfe168c0e0993528da655df14a8754f009d8a54ccc6b5e6db9520bce05b707f",
+      "bytes": 4914,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/camiseta-preta-costas.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/camiseta-preta-costas.webp",
+      "sha256": "29f478aeae66b4463b9007894d92d670be99f088ee2514cf32e9373c93ded1dc",
+      "bytes": 6490,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/camiseta-preta-frente.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/camiseta-preta-frente.webp",
+      "sha256": "d9cda5afe77970704d78313461032a4e4c059fd04d4a8cb2ac2330bdde6c7570",
+      "bytes": 7466,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/camiseta-preta-lado.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/camiseta-preta-lado.webp",
+      "sha256": "b5c399e2f40a2c2e52dc38f98fa0c6f7bd59936e9c6168e26cf2dcdf422bddb8",
+      "bytes": 4464,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/cardiga-oliva-costas.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/cardiga-oliva-costas.webp",
+      "sha256": "1d149a39d690260ae4a10de11ab798fe788a4a17e81ad412882f23c16eb13b3b",
+      "bytes": 11130,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/cardiga-oliva-frente.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/cardiga-oliva-frente.webp",
+      "sha256": "2c18f490559e995b0ce07aa1a8171f527f39e3dcd601a9c06b1c14e179e88bbb",
+      "bytes": 13574,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/cardiga-oliva-lado.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/cardiga-oliva-lado.webp",
+      "sha256": "a9bcedc0dc438d08f77fab20d9c60ef54282286716a98d58e60549f3a89f0bda",
+      "bytes": 6880,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/henley-tijolo-costas.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/henley-tijolo-costas.webp",
+      "sha256": "06f192c5c0d0400d3a652c814a06860d65e523afdffc343d9a1f2236a7ac9a6b",
+      "bytes": 10916,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/henley-tijolo-frente.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/henley-tijolo-frente.webp",
+      "sha256": "50d00caabd80297b2e8285701cb99156f8d59407198f012dcb6a39036ad604cf",
+      "bytes": 11274,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/henley-tijolo-lado.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/henley-tijolo-lado.webp",
+      "sha256": "349b28bf248416fe554807893e59c7fa4ee4229b090927bb1a17d244b828a29e",
+      "bytes": 5848,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/listrada-costas.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/listrada-costas.webp",
+      "sha256": "f920ae86787705531f3715ae89b6f45e317dbd8f2dd339204c3e85a213237dcd",
+      "bytes": 17426,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/listrada-frente.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/listrada-frente.webp",
+      "sha256": "2aa1dc5dfa13b6c62979c05fb9ce526d59d8d9f6929f015f1702c34964292f87",
+      "bytes": 17340,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/listrada-lado.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/listrada-lado.webp",
+      "sha256": "3d1b6a0aa93e4ce567c703f4e45146a550033b84c5e7da72cf1fef21369c0dab",
+      "bytes": 7758,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/moletom-lilas-costas.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/moletom-lilas-costas.webp",
+      "sha256": "e8077b347bf42a8a4d977c8750a93375533067f767fb05638735d21cf61c7437",
+      "bytes": 11424,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/moletom-lilas-frente.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/moletom-lilas-frente.webp",
+      "sha256": "cbd213b7a28785ab2e8111abc472bd569ef210d5d6f9ebd08fd3ecabea75fad2",
+      "bytes": 12726,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/moletom-lilas-lado.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/moletom-lilas-lado.webp",
+      "sha256": "dc770456ddeef40886acf04d3451f77edd912d01d8e077e9b229f729f7809fb0",
+      "bytes": 5754,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/moletom-mescla-costas.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/moletom-mescla-costas.webp",
+      "sha256": "eeaa467bf64411677970cf6d735a1dd87e931c10b3ed87f247fc37095295fee8",
+      "bytes": 12694,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/moletom-mescla-frente.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/moletom-mescla-frente.webp",
+      "sha256": "d4679562de3da408ca52742f6d308b9f87cc18b940c8c2a555cf1fc3fd27c9ab",
+      "bytes": 14526,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/moletom-mescla-lado.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/moletom-mescla-lado.webp",
+      "sha256": "933368793903f0d97a9e577081b89516a1da0985ed27c0c37409d24f40a05777",
+      "bytes": 6184,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/oxford-ceu-costas.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/oxford-ceu-costas.webp",
+      "sha256": "9d757749cee127087abda4ff1205beb129e0a47a3df12c1c177e51630667c2b5",
+      "bytes": 10306,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/oxford-ceu-frente.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/oxford-ceu-frente.webp",
+      "sha256": "04b905cf0052e61b96a7f83e39c2518d05b4c43ba850d6bec8a1d7f8da7b3f9d",
+      "bytes": 10776,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/oxford-ceu-lado.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/oxford-ceu-lado.webp",
+      "sha256": "1e7522280d40f010227ab221dc6ffbe938e9e0dcd484ce640f2f556e0337dbd4",
+      "bytes": 6156,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/polo-floresta-costas.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/polo-floresta-costas.webp",
+      "sha256": "4f02a933fd8f669026ee7e423ec026cd4cea2e8584e80e7457c6826400e28836",
+      "bytes": 8446,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/polo-floresta-frente.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/polo-floresta-frente.webp",
+      "sha256": "f9b068d7c188f267e0a44d2bb004d54321b48b025fd85a4d37d98a15233ef52e",
+      "bytes": 8084,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "local": "/previews/recovered/build/componentes/clothing-rail-hero/260w/polo-floresta-lado.webp",
+      "source": "https://profitize.com.br/build/componentes/clothing-rail-hero/260w/polo-floresta-lado.webp",
+      "sha256": "e9f9f05e4ec4be316fb3a860b507f091fcce772367c6a4682f8cffd0e0e2fa97",
+      "bytes": 5068,
+      "width": 260,
+      "height": 403
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/metodo-rascunho.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/metodo-rascunho.webp",
+      "sha256": "8a6e74701d39816cd1152564338145edcbdcc96de9385be2d9cffbb7ddafc1f6",
+      "bytes": 156240,
+      "width": 1000,
+      "height": 1500
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/metodo-rua.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/metodo-rua.webp",
+      "sha256": "7f01b6d4b108aa7aee42742db81dec6b2953832953e5324d9ab1dc67b57c5af2",
+      "bytes": 67250,
+      "width": 683,
+      "height": 1024
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/metodo-sistema.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/metodo-sistema.webp",
+      "sha256": "d0f825a51d495b595dc5e6bd612650d2fe34733043257426256021904bdffde6",
+      "bytes": 112426,
+      "width": 1000,
+      "height": 1500
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/preamar.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/preamar.webp",
+      "sha256": "3cef077d20d9692a9e0fd1125e55ce2db6f632bcdff1634bb890c2b8d1529c3b",
+      "bytes": 132320,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/restinga.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/restinga.webp",
+      "sha256": "889a9f2a503f2ba2e6429d2b0a148b3a98c529e6c3f6b985af997644dfff22b4",
+      "bytes": 127380,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/sol.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/sol.webp",
+      "sha256": "b7f4d0c0c5bafae0a0ac01af90e29e72e8da271002a9bcadfc4eed52993737ca",
+      "bytes": 136674,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/t01.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/t01.webp",
+      "sha256": "be67796cfe4cdfaba288dfebd92227a78dc497c0ec3307e3305151216a012e24",
+      "bytes": 118410,
+      "width": 744,
+      "height": 496
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/t02.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/t02.webp",
+      "sha256": "b60641ad26b3ddd10cd651d48237f3e95739790fd1b8587cd7ae1fbcb2ded7ed",
+      "bytes": 72416,
+      "width": 496,
+      "height": 496
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/t03.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/t03.webp",
+      "sha256": "d40e77be9247967c14f209aaa509f35c7356772d94801bbf2948a079f2dfe258",
+      "bytes": 52218,
+      "width": 397,
+      "height": 496
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/t04.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/t04.webp",
+      "sha256": "815208afccaeb45ce694221cc2d7d61550d89582c31defa5dedcc1efe6b56d06",
+      "bytes": 81014,
+      "width": 744,
+      "height": 496
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/t05.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/t05.webp",
+      "sha256": "0983aa1d421206e8bcb723ed4b367c337536846846692a4b6ad4e85e636a74b3",
+      "bytes": 19834,
+      "width": 397,
+      "height": 496
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/t06.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/t06.webp",
+      "sha256": "c9acb38fa39fcafd9a8daeb90c8b121e37eb00e4ca46c50e2a4280f0961a7a11",
+      "bytes": 21718,
+      "width": 496,
+      "height": 496
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/t07.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/t07.webp",
+      "sha256": "9e28a4f6f1dfa6b92d5fe62c13f8e15609fe8364f18f2cba01f3a3f75caa6284",
+      "bytes": 45720,
+      "width": 744,
+      "height": 496
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/t08.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/t08.webp",
+      "sha256": "5839ea3caf2b7329a1d1464fce5e0fd0da34d1f83c9bb49c7759f2ac6cad6bda",
+      "bytes": 33706,
+      "width": 744,
+      "height": 496
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/t09.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/t09.webp",
+      "sha256": "dfeb221980986541b48b47d48c62161eba352c29f0901b8187ebfb663de48092",
+      "bytes": 50654,
+      "width": 496,
+      "height": 496
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/t10.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/t10.webp",
+      "sha256": "d4beb95990e3bd7e8c2539bc3a5b2de0209012c663e852c1d13e5700d26a3948",
+      "bytes": 13184,
+      "width": 397,
+      "height": 496
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/t11.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/t11.webp",
+      "sha256": "37717df77604df7a4ca81387588200b9070339c0aecf29c74c174791e9e7e4e6",
+      "bytes": 64134,
+      "width": 744,
+      "height": 496
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/t12.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/t12.webp",
+      "sha256": "88a0aa1ab26a8eb54350b406739039107147a3a06cde096d8818ad949eaa8bd1",
+      "bytes": 31832,
+      "width": 397,
+      "height": 496
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/t13.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/t13.webp",
+      "sha256": "643ccea74c6009eaac842e31e74dd59c2ec4bea59ed917f76b208c1b691ab54c",
+      "bytes": 35954,
+      "width": 496,
+      "height": 496
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/t14.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/t14.webp",
+      "sha256": "d3ec8bb3c587502758c849847af7ea48266cc6bff9b39369912c05a6b4b9e38a",
+      "bytes": 42140,
+      "width": 744,
+      "height": 496
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/t15.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/t15.webp",
+      "sha256": "5109afdc8e7a2d388173bde72834963d1dc502f1e68281561b77ae3251f4f75b",
+      "bytes": 27968,
+      "width": 744,
+      "height": 496
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/t16.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/t16.webp",
+      "sha256": "d91229c17f754e647413930e31887d188f19fa00ae1372dda7ca5d1727f5b46c",
+      "bytes": 23416,
+      "width": 496,
+      "height": 496
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/t17.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/t17.webp",
+      "sha256": "d10773fb257e3eaa5886dd629ad55ca78a0555f1eba395e80475c816fdca8df4",
+      "bytes": 27832,
+      "width": 397,
+      "height": 496
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/t18.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/t18.webp",
+      "sha256": "cdf55d9250251e953fe85123923acd7f5439821a5b02aac2c93bffa552672023",
+      "bytes": 64758,
+      "width": 744,
+      "height": 496
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/t19.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/t19.webp",
+      "sha256": "aacb1d252edd514e80aebcbe848e025972504c67d5d037d022d75c03f92a06ed",
+      "bytes": 43242,
+      "width": 397,
+      "height": 496
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/t20.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/t20.webp",
+      "sha256": "765b4694b41faf53366a2967c8c67f36fe2a758babd29ce35206f2ebd94c74af",
+      "bytes": 19560,
+      "width": 496,
+      "height": 496
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/t21.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/t21.webp",
+      "sha256": "52f19ad16a357ab9337abe9538afb043522996549015ea97c0ebb19a04e5390b",
+      "bytes": 71016,
+      "width": 744,
+      "height": 496
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/t22.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/t22.webp",
+      "sha256": "b6aad45b785fe1cf4e720c5b79dd292fed37bd0f85e7085917b6d400cadd0586",
+      "bytes": 33588,
+      "width": 744,
+      "height": 496
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/t23.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/t23.webp",
+      "sha256": "8df9bfdb2f13b0a3f310d41373974b1a7786d0ce03d2007ec59dfa3fa8506fb1",
+      "bytes": 31542,
+      "width": 496,
+      "height": 496
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/t24.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/t24.webp",
+      "sha256": "0e42c7a9109965e5ac16b617635d371035d2132a6bb90e784322ea65b87193e3",
+      "bytes": 21964,
+      "width": 397,
+      "height": 496
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/t25.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/t25.webp",
+      "sha256": "1adfc8b7a5eb6e0571c4f48a9d23ff023267027f856e7a6a83ce06e9ce44c2a3",
+      "bytes": 33102,
+      "width": 744,
+      "height": 496
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/t26.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/t26.webp",
+      "sha256": "87ab5cd70ea9d1e831f5d0fd5650fc1bcc8f1decc05d95caf2bc8f1b3ba5aaf3",
+      "bytes": 19566,
+      "width": 397,
+      "height": 496
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/t27.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/t27.webp",
+      "sha256": "174c1eae8b4be265e432b2c30b649b089f7a6aca8c2a23bc189eb36134fae053",
+      "bytes": 29282,
+      "width": 496,
+      "height": 496
+    },
+    {
+      "id": "recovered--margem",
+      "local": "/previews/recovered/demos/margem/trabalhos/t28.webp",
+      "source": "https://margem-demo-omega.vercel.app/trabalhos/t28.webp",
+      "sha256": "7d40511e7403c79caf958d1ac62d990e854635086bbe3c2b40d6bf4d5cf6ca8c",
+      "bytes": 37542,
+      "width": 744,
+      "height": 496
+    }
+  ]
+}

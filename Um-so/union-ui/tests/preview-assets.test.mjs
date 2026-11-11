@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {JSDOM} from 'jsdom';
 import * as compiler from 'esbuild';
 import {preparePreviewAssets,createPreviewAssetResponder,addPreviewAssetClient} from '../src/preview-assets.js';
+import {injectDemoAssets} from '../src/demo-asset-bridge.js';
 
 test('protected classic scripts and styles load through the parent before entering the opaque sandbox',async()=>{
  const files={
@@ -47,4 +48,29 @@ test('relayed image sources remain decodable and are not overridden by unauthent
   w.postMessage=data=>{if(data.type==='preview:asset')queueMicrotask(()=>w.dispatchEvent(new w.MessageEvent('message',{source:w,data:{type:'preview:asset-result',id:'demo',requestId:data.requestId,status:200,mime:'image/webp',bytes:new w.Uint8Array([1,2]).buffer}})));};
  }});
  try{await new Promise(resolve=>dom.window.document.addEventListener('DOMContentLoaded',resolve,{once:true}));await new Promise(resolve=>setTimeout(resolve,0));const image=dom.window.document.querySelector('img');assert.equal(image.getAttribute('srcset'),null);const pending=new dom.window.Image();pending.src='/previews/demo/next.webp';assert.equal(await pending.decode(),'blob:null/verified-image');}finally{dom.window.close();}
+});
+
+test('video and poster keep distinct live blobs and dynamic retained scripts use authenticated bytes',async()=>{
+ const created=[],revoked=[],requests=[];
+ const mapping={'https://original.example/movie.mp4':'/assets/movie.mp4','https://original.example/poster.webp':'/assets/poster.webp'};
+ const base='https://app.example/previews/demo/index.html';
+ const html=addPreviewAssetClient(injectDemoAssets('<html><head></head><body><video></video></body></html>',mapping),'demo',base);
+ const dom=new JSDOM(html,{url:base,runScripts:'dangerously',beforeParse(w){
+  w.URL.createObjectURL=blob=>{const url='blob:null/resource-'+created.length;created.push({url,type:blob.type});return url;};
+  w.URL.revokeObjectURL=url=>revoked.push(url);
+  w.postMessage=data=>{if(data.type!=='preview:asset')return;requests.push(data.url);queueMicrotask(()=>w.dispatchEvent(new w.MessageEvent('message',{source:w,data:{type:'preview:asset-result',id:'demo',requestId:data.requestId,status:200,mime:data.url.endsWith('.mp4')?'video/mp4':data.url.endsWith('.webp')?'image/webp':'text/javascript',bytes:new w.Uint8Array([1,2]).buffer}})));};
+ }});
+ try{
+  const w=dom.window,video=w.document.querySelector('video');video.src='https://original.example/movie.mp4';video.poster='https://original.example/poster.webp';
+  const script=w.document.createElement('script');script.src='/assets/renderer.js';
+  await new Promise(resolve=>setTimeout(resolve,30));
+  assert.equal(created.find(x=>x.url===video.getAttribute('src'))?.type,'video/mp4');
+  assert.equal(created.find(x=>x.url===video.getAttribute('poster'))?.type,'image/webp');
+  assert.equal(created.find(x=>x.url===script.getAttribute('src'))?.type,'text/javascript');
+  assert.deepEqual(revoked,[],'setting a poster must not revoke the playing video');
+  const oldVideo=video.getAttribute('src'),oldPoster=video.getAttribute('poster');video.src='/assets/another.mp4';
+  await new Promise(resolve=>setTimeout(resolve,30));
+  assert.deepEqual(revoked,[oldVideo]);assert.equal(video.getAttribute('poster'),oldPoster);
+  assert.ok(requests.every(url=>url.startsWith('https://app.example/assets/')));
+ }finally{dom.window.close();}
 });

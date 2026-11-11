@@ -9,6 +9,9 @@ const getHTML=async id=>{const row=rows.find(r=>r.id===id);const file='public'+(
  const {file,html}=await getHTML('21st-fa6fb3a3c735');const scripts=[...html.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/g)].sort((a,b)=>b[1].length-a[1].length);const original=scripts[0];
  if(/from "react-markdown"/.test(original[1])){const built=await esbuild.build({stdin:{contents:original[1],resolveDir:process.cwd(),sourcefile:'recovered-markdown.jsx',loader:'jsx'},bundle:true,write:false,format:'iife',minify:true});let next=html.replace(original[0],()=>'<script>'+built.outputFiles[0].text.replace(/<\/script/gi,'<\\/script')+'</script>');next=next.replace(/<script type="importmap">[\s\S]*?<\/script>/,'').replace(/<script src=['"]https:\/\/cdn.tailwindcss.com['"]><\/script>/,'');next=next.replace('</head>','<style>body{margin:0;font:16px system-ui;background:#09090b;color:#fafafa}#root>div{min-height:100vh;display:grid;place-items:center;padding:24px;box-sizing:border-box}.an-markdown{max-width:42rem}pre{padding:16px;background:#18181b;border-radius:10px}h1{font-size:2rem}h2{font-size:1.4rem}</style></head>');await fs.writeFile(file,next);console.log('Locally bundled Markdown');}
 }
+// The retained CSS no longer uses the removed Tailwind CDN configuration.
+{const {file,html}=await getHTML('21st-fa6fb3a3c735');await fs.writeFile(file,html.replace(/<script>tailwind\.config=[\s\S]*?<\/script>/g,''));}
+
 // The upstream ASCII renderer starts its frame loop before its first size
 // effect. Initialize from the canvas, then skip zero-size resize frames.
 {

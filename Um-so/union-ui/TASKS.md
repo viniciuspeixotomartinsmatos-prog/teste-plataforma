@@ -54,3 +54,12 @@ Detailed requirements and asset limits: `docs/cosmic-login-request.md`. This rem
 - [ ] Apply migration to umso-accounts and verify published create/save/reload across sessions.
 - [ ] Verify desktop/mobile UI in authorized browser; Work currently disables it.
 - [ ] Implement isolated submission verification, moderation and reviewed publication; private drafts do not implement these stages.
+
+
+## November 11 current runtime follow-through (supersedes older acceptance checkboxes)
+- [x] Run authenticated first-paint/media batch for 103 selected entries; retain scoped report.
+- [x] Retain and hash 64 exact original images; include native template images in ZIP manifest.
+- [x] Repair stale Markdown config, dynamic renderer loading, blob lifetimes and decorative canvas readiness.
+- [x] Test CSS/native progress, canvas evidence, explicit startup markers and media lifecycle.
+- [ ] Revalidate the final loader/media changes and nine pending records in the authorized browser; Work blocks it again.
+- [ ] Complete individual catalog interaction acceptance, independent login scene layers, richer computed design extraction and the external operational/legal prerequisites in docs/compliance-40.md.

@@ -1,0 +1,14 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {build} from 'esbuild';
+const root=fileURLToPath(new URL('../../',import.meta.url)),output=path.join(root,'dist/client/tools/runtime-audit');
+const rows=JSON.parse(await fs.readFile(path.join(root,'public/data/catalog-live.json'),'utf8'));
+const file=process.argv[2];
+const ids=file?new Set(JSON.parse(await fs.readFile(path.resolve(file),'utf8')).map(row=>typeof row==='string'?row:row.id)):null;
+const queue=rows.filter(row=>!ids||ids.has(row.id)).map(({id,name,previewPath,runtimePreviewPath})=>({id,name,previewPath,runtimePreviewPath}));
+await fs.mkdir(output,{recursive:true});
+await build({entryPoints:[path.join(root,'scripts/runtime-audit/client.js')],outfile:path.join(output,'audit.js'),bundle:true,format:'esm',target:'es2022',logLevel:'silent'});
+const html='<!doctype html><html lang="pt-BR"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Auditoria local de prévias · nitido</title><style>body{background:#0c0a14;color:#f5f3fa;font:15px system-ui;margin:24px}h1{font-size:30px}button{padding:12px 18px;border:1px solid #504367;border-radius:22px;background:#241a39;color:inherit;margin:6px}#frames{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}section{overflow:hidden;height:440px;border:1px solid #514367;border-radius:18px}h2{font-size:12px;margin:10px}iframe{border:0;width:960px;height:720px;transform:scale(.55);transform-origin:top left}#log{overflow-wrap:anywhere}</style><h1>Auditoria local de prévias</h1><p>Usa sua sessão, o carregador autenticado e o sandbox opaco do aplicativo. Este diagnóstico não publica componentes.</p><button id="start">Iniciar revisão</button><button id="stop">Interromper</button><button id="download" disabled>Baixar relatório</button><p id="status"></p><p id="log"></p><div id="frames"></div><script type="application/json" id="queue">'+JSON.stringify(queue).replace(/</g,'\\u003c')+'</script><script type="module" src="/tools/runtime-audit/audit.js"></script></html>';
+await fs.writeFile(path.join(output,'index.html'),html);
+console.log(JSON.stringify({queue:queue.length,path:'/tools/runtime-audit/index.html',authentication:'existing protected /tools namespace; no alternate static server'}));

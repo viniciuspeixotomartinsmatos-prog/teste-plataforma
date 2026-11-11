@@ -43,7 +43,7 @@ test('every recovered asset mapping resolves to a nonempty public file',async()=
 });
 test('restored model remains binary GLB and captured Markdown no longer requires remote modules',async()=>{
  const manifest=JSON.parse(await fs.readFile('public/data/demo-local-assets.json','utf8')),model=manifest.items['21st-d0e4067d93f1']['https://danielcodepen.s3.us-east-1.amazonaws.com/figma.fbx.glb'];assert.equal((await fs.readFile(path.join('public',model))).subarray(0,4).toString(),'glTF');
- const rows=JSON.parse(await fs.readFile('public/data/catalog-live.json','utf8')),markdown=rows.find(r=>r.id==='21st-fa6fb3a3c735'),html=await fs.readFile(path.join('public',markdown.previewPath),'utf8');assert.ok(!html.includes('https://esm.sh/'));assert.ok(!html.includes('https://cdn.tailwindcss.com'));assert.match(html,/Release notes/);
+ const rows=JSON.parse(await fs.readFile('public/data/catalog-live.json','utf8')),markdown=rows.find(r=>r.id==='21st-fa6fb3a3c735'),html=await fs.readFile(path.join('public',markdown.previewPath),'utf8');assert.ok(!html.includes('https://esm.sh/'));assert.ok(!html.includes('https://cdn.tailwindcss.com'));assert.ok(!html.includes('tailwind.config='));assert.match(html,/Release notes/);
 });
 
 test('readiness sees controls inside an open custom-element shadow root',async()=>{
@@ -55,4 +55,34 @@ test('portable Energy Beam includes its renderer, scene JSON and nested original
  const rows=JSON.parse(await fs.readFile('public/data/catalog-live.json','utf8')),item=rows.find(r=>r.id==='21st-c31b2034c9ea'),previous=globalThis.fetch;
  globalThis.fetch=async url=>{try{const file=path.join('public',String(url).split('?')[0]),bytes=await fs.readFile(file),ext=path.extname(file);return new Response(bytes,{headers:{'content-type':{'.js':'text/javascript','.json':'application/json','.png':'image/png','.webp':'image/webp'}[ext]||'application/octet-stream'}});}catch{return new Response('',{status:404});}};
  try{const html=await standalonePreview(item),scene=html.match(/data:application\/json;base64,([A-Za-z0-9+/=]+)/)?.[1];assert.match(html,/data:text\/javascript;base64,/);assert.ok(scene);assert.match(Buffer.from(scene,'base64').toString(),/data:image\//);assert.ok(!html.includes('/assets/demo-recovered/'));}finally{globalThis.fetch=previous;}
+});
+
+test('readiness accepts native progress, side-border and generated CSS paint while rejecting an untouched canvas',async()=>{
+ const cases=[['<progress value="30" max="100"></progress>',true],['<div style="opacity:1;border-right:4px solid #241535"></div>',true],['<div data-pseudo="true"></div>',true],['<canvas aria-hidden="true" width="100" height="80"></canvas>',false],['<div style="opacity:1;background:#241535"><canvas width="100" height="80"></canvas></div>',false],['<div></div>',false]];
+ for(const [body,expected]of cases){
+  const messages=[];
+  const dom=new JSDOM(instrumentPreviewHTML('<html><head></head><body>'+body+'</body></html>','paint','http://localhost/test'),{runScripts:'dangerously',pretendToBeVisual:true,beforeParse(w){
+   w.postMessage=data=>messages.push(data);const native=w.getComputedStyle.bind(w);
+   w.getComputedStyle=(node,pseudo)=>pseudo?(node.hasAttribute('data-pseudo')&&pseudo==='::before'?{content:'""',width:'30px',height:'30px',visibility:'visible',display:'block',opacity:'1',backgroundColor:'rgb(42, 157, 143)',backgroundImage:'none',boxShadow:'none'}:{content:'none'}):native(node);
+   w.Element.prototype.getBoundingClientRect=()=>({width:100,height:80});
+  }});
+  try{Object.defineProperty(dom.window.document.body,'innerText',{value:''});await wait(180);assert.equal(messages.some(m=>m.type==='preview-ready'&&m.checked),expected,body);}finally{dom.window.close();}
+ }
+});
+
+test('video readiness waits for a decoded frame and reports a decoding failure',async()=>{
+ const messages=[],dom=new JSDOM(instrumentPreviewHTML('<html><head></head><body><video src="/assets/original.mp4"></video></body></html>','video','http://localhost/test'),{runScripts:'dangerously',pretendToBeVisual:true,beforeParse(w){w.postMessage=data=>messages.push(data);w.Element.prototype.getBoundingClientRect=()=>({width:640,height:360});}});
+ try{
+  const w=dom.window,video=w.document.querySelector('video');let state=0,error=null;Object.defineProperty(w.document.body,'innerText',{value:''});Object.defineProperty(video,'readyState',{get:()=>state});Object.defineProperty(video,'error',{get:()=>error});
+  await wait(180);assert.ok(!messages.some(m=>m.type==='preview-ready'));
+  state=2;video.dispatchEvent(new w.Event('loadeddata',{bubbles:true}));assert.ok(messages.some(m=>m.type==='preview-ready'));
+  error={code:3};video.dispatchEvent(new w.Event('error',{bubbles:true}));await wait(130);assert.ok(messages.some(m=>m.type==='preview-media-error'));
+ }finally{dom.window.close();}
+});
+
+test('repaired originals decode, retain exact hashes and are included in native template downloads',async()=>{
+ const {createHash}=await import('node:crypto'),manifest=JSON.parse(await fs.readFile('public/data/runtime-media-repairs.json','utf8')),packages=JSON.parse(await fs.readFile('public/data/recovered-demo-assets.json','utf8'));
+ for(const item of manifest.items){const bytes=await fs.readFile('public'+item.local),image=await loadImage(bytes);assert.equal(createHash('sha256').update(bytes).digest('hex'),item.sha256,item.local);assert.equal(image.width,item.width);assert.equal(image.height,item.height);if(item.id==='recovered--margem')assert.ok(packages.margem.includes(item.local.replace('/previews/recovered/demos/margem/','')),item.local);}
+ const native=await fs.readFile('public/previews/recovered/demos/margem/assets/index-BvEEheFd.js','utf8');
+ for(const match of native.matchAll(/["'`](trabalhos\/[a-z0-9-]+\.webp)["'`]/g))assert.ok(packages.margem.includes(match[1]),match[1]);
 });
