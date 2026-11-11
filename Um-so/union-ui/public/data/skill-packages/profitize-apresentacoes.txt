@@ -1,0 +1,231 @@
+---
+name: apresentacoes
+description: "Use esta skill sempre que houver um arquivo .pptx envolvido de qualquer forma: como entrada, como saída ou as duas coisas. Isso inclui: criar decks de slides, pitch decks ou apresentações; ler, interpretar ou extrair texto de qualquer arquivo .pptx (mesmo que o conteúdo extraído vá ser usado em outro lugar, como num e-mail ou num resumo); editar, modificar ou atualizar apresentações existentes; juntar ou dividir arquivos de slides; trabalhar com templates, layouts, anotações do orador ou comentários. Acione sempre que o usuário falar em \"deck\", \"slides\", \"apresentação\" ou citar um arquivo .pptx, não importa o que ele pretenda fazer com o conteúdo depois. Se um arquivo .pptx precisar ser aberto, criado ou mexido, use esta skill."
+---
+
+# Skill de PPTX
+
+## Referência rápida
+
+| Tarefa | Guia |
+|------|-------|
+| Ler/analisar o conteúdo | `python -m markitdown presentation.pptx` |
+| Editar ou criar a partir de um template | Leia [editing.md](editing.md) |
+| Criar do zero | Leia [pptxgenjs.md](pptxgenjs.md) |
+
+---
+
+## Ler o conteúdo
+
+```bash
+# Extração de texto
+python -m markitdown presentation.pptx
+
+# Visão geral visual
+python scripts/thumbnail.py presentation.pptx
+
+# XML bruto
+python scripts/office/unpack.py presentation.pptx unpacked/
+```
+
+---
+
+## Fluxo de edição
+
+**Leia [editing.md](editing.md) para os detalhes completos.**
+
+1. Analise o template com `thumbnail.py`
+2. Desempacote → manipule os slides → edite o conteúdo → limpe → empacote
+
+---
+
+## Criar do zero
+
+**Leia [pptxgenjs.md](pptxgenjs.md) para os detalhes completos.**
+
+Use quando não houver template nem apresentação de referência.
+
+---
+
+## Ideias de design
+
+**Não crie slides sem graça.** Tópicos simples num fundo branco não impressionam ninguém. Considere ideias desta lista para cada slide.
+
+### Antes de começar
+
+- **Escolha uma paleta de cores ousada, guiada pelo conteúdo**: a paleta deve parecer feita para ESTE tema. Se trocar suas cores para uma apresentação completamente diferente ainda "funcionaria", suas escolhas não foram específicas o bastante.
+- **Dominância em vez de igualdade**: uma cor deve dominar (60–70% do peso visual), com 1 ou 2 tons de apoio e uma cor de destaque marcante. Nunca dê o mesmo peso a todas as cores.
+- **Contraste escuro/claro**: fundos escuros nos slides de título e de conclusão, claros nos de conteúdo (estrutura "sanduíche"). Ou adote o escuro do começo ao fim, para um ar premium.
+- **Assuma um motivo visual**: escolha UM elemento marcante e repita: molduras de imagem arredondadas, ícones em círculos coloridos, bordas grossas num lado só. Leve-o a todos os slides.
+
+### Paletas de cores
+
+Escolha cores que combinem com o tema; não caia no azul genérico por padrão. Use estas paletas como inspiração:
+
+| Tema | Primária | Secundária | Destaque |
+|-------|---------|-----------|--------|
+| **Executivo Meia-Noite** | `1E2761` (azul-marinho) | `CADCFC` (azul-gelo) | `FFFFFF` (branco) |
+| **Floresta e Musgo** | `2C5F2D` (floresta) | `97BC62` (musgo) | `F5F5F5` (creme) |
+| **Energia Coral** | `F96167` (coral) | `F9E795` (dourado) | `2F3C7E` (azul-marinho) |
+| **Terracota Quente** | `B85042` (terracota) | `E7E8D1` (areia) | `A7BEAE` (sálvia) |
+| **Gradiente Oceano** | `065A82` (azul profundo) | `1C7293` (azul-petróleo) | `21295C` (meia-noite) |
+| **Carvão Minimalista** | `36454F` (carvão) | `F2F2F2` (branco-gelo) | `212121` (preto) |
+| **Confiança Petróleo** | `028090` (azul-petróleo) | `00A896` (verde-mar) | `02C39A` (menta) |
+| **Frutas Vermelhas e Creme** | `6D2E46` (amora) | `A26769` (rosé antigo) | `ECE2D0` (creme) |
+| **Sálvia Serena** | `84B59F` (sálvia) | `69A297` (eucalipto) | `50808E` (ardósia) |
+| **Cereja Ousada** | `990011` (cereja) | `FCF6F5` (branco-gelo) | `2F3C7E` (azul-marinho) |
+
+### Para cada slide
+
+**Todo slide precisa de um elemento visual**: imagem, gráfico, ícone ou forma. Slide só de texto cai no esquecimento.
+
+**Opções de layout:**
+- Duas colunas (texto à esquerda, ilustração à direita)
+- Linhas de ícone + texto (ícone em círculo colorido, título em negrito, descrição embaixo)
+- Grade 2x2 ou 2x3 (imagem de um lado, grade de blocos de conteúdo do outro)
+- Imagem sangrada num lado (o lado esquerdo ou direito inteiro) com o conteúdo por cima
+
+**Exibição de dados:**
+- Números em destaque grandes (números de 60–72 pt com rótulos pequenos embaixo)
+- Colunas de comparação (antes/depois, prós/contras, opções lado a lado)
+- Linha do tempo ou fluxo de processo (etapas numeradas, setas)
+
+**Acabamento visual:**
+- Ícones em pequenos círculos coloridos ao lado dos títulos de seção
+- Texto de destaque em itálico para números-chave ou slogans
+
+### Tipografia
+
+**Escolha uma combinação de fontes interessante**: não caia no Arial por padrão. Escolha uma fonte de título com personalidade e combine com uma fonte de corpo limpa.
+
+| Fonte do título | Fonte do corpo |
+|-------------|-----------|
+| Georgia | Calibri |
+| Arial Black | Arial |
+| Calibri | Calibri Light |
+| Cambria | Calibri |
+| Trebuchet MS | Calibri |
+| Impact | Arial |
+| Palatino | Garamond |
+| Consolas | Calibri |
+
+| Elemento | Tamanho |
+|---------|------|
+| Título do slide | 36–44 pt negrito |
+| Título de seção | 20–24 pt negrito |
+| Texto do corpo | 14–16 pt |
+| Legendas | 10–12 pt discreto |
+
+### Espaçamento
+
+- Margens de no mínimo 0,5"
+- 0,3–0,5" entre blocos de conteúdo
+- Deixe respiro: não ocupe cada centímetro
+
+### Evite (Erros comuns)
+
+- **Não repita o mesmo layout**: varie colunas, cards e destaques entre os slides
+- **Não centralize o texto do corpo**: alinhe parágrafos e listas à esquerda; centralize só os títulos
+- **Não economize no contraste de tamanho**: títulos precisam de 36 pt ou mais para se destacar do corpo de 14–16 pt
+- **Não caia no azul por padrão**: escolha cores que reflitam o tema específico
+- **Não misture espaçamentos ao acaso**: escolha espaços de 0,3" ou 0,5" e use sempre o mesmo
+- **Não estilize um slide e deixe o resto simples**: assuma o estilo por inteiro ou mantenha tudo simples
+- **Não crie slides só de texto**: acrescente imagens, ícones, gráficos ou elementos visuais; evite o simples título + tópicos
+- **Não esqueça a margem interna da caixa de texto**: ao alinhar linhas ou formas com as bordas do texto, defina `margin: 0` na caixa de texto ou desloque a forma para compensar a margem
+- **Não use elementos de baixo contraste**: ícones E texto precisam de contraste forte com o fundo; evite texto claro em fundo claro ou texto escuro em fundo escuro
+- **NUNCA use linhas de destaque embaixo dos títulos**: elas são a marca registrada de slides gerados por IA; use espaço em branco ou cor de fundo no lugar
+
+---
+
+## QA (obrigatório)
+
+**Parta do princípio de que há problemas. Seu trabalho é encontrá-los.**
+
+Sua primeira renderização quase nunca está certa. Encare o QA (controle de qualidade) como uma caça aos bugs, não como uma etapa de confirmação. Se não achou nenhum problema na primeira inspeção, é porque não procurou direito.
+
+### QA do conteúdo
+
+```bash
+python -m markitdown output.pptx
+```
+
+Confira se falta conteúdo, se há erros de digitação ou ordem errada.
+
+**Ao usar templates, confira se sobrou texto de placeholder:**
+
+```bash
+python -m markitdown output.pptx | grep -iE "xxxx|lorem|ipsum|this.*(page|slide).*layout"
+```
+
+Se o grep devolver resultados, corrija-os antes de dar o trabalho como concluído.
+
+### QA visual
+
+**⚠️ USE SUBAGENTES**, mesmo para 2 ou 3 slides. Você passou o tempo todo olhando o código e vai ver o que espera, não o que está lá. Subagentes têm olhos descansados.
+
+Converta os slides em imagens (veja [Converter em imagens](#converter-em-imagens)) e depois use este prompt:
+
+```
+Inspecione visualmente estes slides. Parta do princípio de que há problemas e encontre-os.
+
+Procure:
+- Elementos sobrepostos (texto atravessando formas, linhas cortando palavras, elementos empilhados)
+- Texto transbordando ou cortado nas bordas/limites da caixa
+- Linhas decorativas posicionadas para um título de uma linha, mas o título quebrou em duas
+- Citações de fonte ou rodapés colidindo com o conteúdo acima
+- Elementos próximos demais (espaços < 0,3") ou cards/seções quase encostando
+- Espaços irregulares (área vazia grande num lugar, apertado em outro)
+- Margem insuficiente em relação às bordas do slide (< 0,5")
+- Colunas ou elementos parecidos sem alinhamento consistente
+- Texto de baixo contraste (ex.: texto cinza-claro em fundo creme)
+- Ícones de baixo contraste (ex.: ícones escuros em fundo escuro sem um círculo que contraste)
+- Caixas de texto estreitas demais, causando quebras de linha em excesso
+- Conteúdo de placeholder que sobrou
+
+Para cada slide, liste os problemas ou pontos de atenção, mesmo os pequenos.
+
+Leia e analise estas imagens:
+1. /path/to/slide-01.jpg (Esperado: [descrição breve])
+2. /path/to/slide-02.jpg (Esperado: [descrição breve])
+
+Relate TODOS os problemas encontrados, inclusive os pequenos.
+```
+
+### Ciclo de verificação
+
+1. Gere os slides → Converta em imagens → Inspecione
+2. **Liste os problemas encontrados** (se não achar nenhum, olhe de novo com mais rigor)
+3. Corrija os problemas
+4. **Verifique de novo os slides afetados**: uma correção muitas vezes cria outro problema
+5. Repita até uma passada completa não revelar nenhum problema novo
+
+**Não dê o trabalho como concluído antes de completar pelo menos um ciclo de corrigir e verificar.**
+
+---
+
+## Converter em imagens
+
+Converta as apresentações em imagens individuais de cada slide para a inspeção visual:
+
+```bash
+python scripts/office/soffice.py --headless --convert-to pdf output.pptx
+pdftoppm -jpeg -r 150 output.pdf slide
+```
+
+Isso cria `slide-01.jpg`, `slide-02.jpg` etc.
+
+Para renderizar de novo slides específicos depois das correções:
+
+```bash
+pdftoppm -jpeg -r 150 -f N -l N output.pdf slide-fixed
+```
+
+---
+
+## Dependências
+
+- `pip install "markitdown[pptx]"`: extração de texto
+- `pip install Pillow`: grades de miniaturas
+- `npm install -g pptxgenjs`: criar do zero
+- LibreOffice (`soffice`): conversão para PDF (configurado automaticamente para ambientes em sandbox via `scripts/office/soffice.py`)
+- Poppler (`pdftoppm`): PDF para imagens

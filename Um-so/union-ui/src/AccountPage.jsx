@@ -23,7 +23,7 @@ export default function AccountPage({account,navigate,notify,path='/account',sea
  const initialMode=reset?'reset':confirmation?'confirm':callbackError==='recovery_link'?'forgot':'login';
  const [mode,setMode]=useState(initialMode),[name,setName]=useState(''),[email,setEmail]=useState(''),[password,setPassword]=useState(''),[busy,setBusy]=useState(false),[error,setError]=useState(callbackMessages[callbackError]||''),[message,setMessage]=useState('');
  const [showPassword,setShowPassword]=useState(false);
- const languageSwitch=<div className="auth-links" role="group" aria-label={locale==='en'?'Language':'Idioma'}><button type="button" aria-label="Português" aria-pressed={locale==='pt-BR'} onClick={()=>{setLocale('pt-BR');setError('');setMessage('');}} disabled={busy}>PT</button><span aria-hidden="true"> / </span><button type="button" aria-label="English" aria-pressed={locale==='en'} onClick={()=>{setLocale('en');setError('');setMessage('');}} disabled={busy}>EN</button></div>;
+ const languageSwitch=<div className="auth-links auth-language" role="group" aria-label={locale==='en'?'Language':'Idioma'}><button type="button" aria-label="Português" aria-pressed={locale==='pt-BR'} onClick={()=>{setLocale('pt-BR');setError('');setMessage('');}} disabled={busy}>PT</button><span aria-hidden="true"> / </span><button type="button" aria-label="English" aria-pressed={locale==='en'} onClick={()=>{setLocale('en');setError('');setMessage('');}} disabled={busy}>EN</button></div>;
  useEffect(()=>{setMode(initialMode);setError(callbackMessages[callbackError]||'');setMessage('');},[initialMode,callbackError]);
  useEffect(()=>{setShowPassword(false);},[mode]);
  const changeMode=next=>{setMode(next);setError('');setMessage('');setPassword('');};

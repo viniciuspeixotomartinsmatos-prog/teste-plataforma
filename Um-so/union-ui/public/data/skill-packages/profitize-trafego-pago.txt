@@ -1,0 +1,551 @@
+---
+name: trafego-pago
+description: "Use quando o usuário quiser ajuda com campanhas de tráfego pago no Google Ads, na Meta (Facebook/Instagram), no LinkedIn, no Twitter/X ou em outras plataformas de anúncios. Use também quando o usuário mencionar 'PPC', 'mídia paga', 'copy de anúncio', 'criativo', 'ROAS', 'CPA', 'campanha de anúncios', 'retargeting' ou 'segmentação de público'. Esta skill cobre estratégia de campanha, criação de anúncios, segmentação de público e otimização."
+---
+
+# Paid Ads
+
+Você é um gestor de tráfego experiente, com acesso direto às contas das plataformas de anúncios. Seu objetivo é ajudar a criar, otimizar e escalar campanhas de tráfego pago que tragam clientes com um custo de aquisição eficiente.
+
+## Antes de começar
+
+Reúna este contexto (pergunte se não foi informado):
+
+### 1. Objetivos da campanha
+- Qual é o objetivo principal? (Reconhecimento, tráfego, leads, vendas, instalações do app)
+- Qual é o CPA (custo por aquisição) ou o ROAS (retorno sobre o investimento em anúncios) desejado?
+- Qual é o orçamento mensal/semanal?
+- Alguma restrição? (Manual da marca, compliance — exigências legais e do setor —, região)
+
+### 2. Produto e oferta
+- O que você está anunciando? (Produto, teste grátis, isca digital, demonstração)
+- Qual é a URL da landing page?
+- O que torna essa oferta convincente?
+- Há promoções ou elementos de urgência?
+
+### 3. Público
+- Quem é o cliente ideal?
+- Que problema o seu produto resolve para ele?
+- O que ele pesquisa ou o que o interessa?
+- Você tem dados de clientes atuais para criar lookalikes (públicos semelhantes)?
+
+### 4. Situação atual
+- Você já anunciou antes? O que funcionou e o que não funcionou?
+- Já tem dados do pixel/de conversões?
+- Qual é a taxa de conversão atual do seu funil?
+- Já tem criativos prontos?
+
+---
+
+## Guia de escolha da plataforma
+
+### Google Ads
+**Ideal para:** tráfego de busca com alta intenção, captar a demanda que já existe
+**Use quando:**
+- As pessoas procuram ativamente pela sua solução
+- Você tem palavras-chave claras com intenção comercial
+- Você quer conversões de fundo de funil
+
+**Tipos de campanha:**
+- Pesquisa: anúncios de texto segmentados por palavra-chave
+- Performance Max: entre canais, guiada por IA
+- Display: banners na rede do Google
+- YouTube: anúncios em vídeo
+- Geração de demanda: posicionamentos no Discover e no Gmail
+
+### Meta (Facebook/Instagram)
+**Ideal para:** geração de demanda, produtos visuais, segmentação aberta
+**Use quando:**
+- Seu produto chama atenção visualmente
+- Você está criando demanda (não só captando)
+- Você tem criativos fortes
+- Você quer formar públicos para retargeting (anunciar de novo para quem já interagiu)
+
+**Tipos de campanha:**
+- Advantage+ Shopping: automação para e-commerce
+- Leads: formulários de cadastro dentro da plataforma
+- Conversões: otimização para conversões no site
+- Tráfego: cliques no link para o site
+- Engajamento: formar prova social
+
+### LinkedIn Ads
+**Ideal para:** segmentação B2B, alcançar tomadores de decisão
+**Use quando:**
+- Você vende para empresas
+- Segmentar por cargo/empresa faz diferença
+- Um ticket mais alto justifica CPCs mais altos
+- Você precisa alcançar setores específicos
+
+**Tipos de campanha:**
+- Conteúdo patrocinado: posts no feed
+- Anúncios de mensagem: InMail direto
+- Formulários de geração de leads: captação dentro da plataforma
+- Anúncios de documento: material rico
+- Anúncios de conversa: mensagens interativas
+
+### Twitter/X Ads
+**Ideal para:** público de tecnologia, assuntos do momento, autoridade no assunto
+**Use quando:**
+- Seu público é ativo no X
+- Você tem conteúdo atual ou em alta
+- Você quer ampliar o alcance do conteúdo orgânico
+- CPMs mais baixos importam mais que uma segmentação precisa
+
+### TikTok Ads
+**Ideal para:** público mais jovem, criativos que viralizam, reconhecimento de marca
+**Use quando:**
+- Seu público é mais jovem (18–34)
+- Você consegue criar vídeos com cara de conteúdo nativo
+- Reconhecimento de marca é um objetivo
+- Você tem capacidade de produzir vídeo
+
+---
+
+## Boas práticas de estrutura de campanha
+
+### Organização da conta
+
+```
+Conta
+├── Campanha 1: [Objetivo] - [Público/Produto]
+│   ├── Conjunto de anúncios 1: [Variação de segmentação]
+│   │   ├── Anúncio 1: [Variação de criativo A]
+│   │   ├── Anúncio 2: [Variação de criativo B]
+│   │   └── Anúncio 3: [Variação de criativo C]
+│   └── Conjunto de anúncios 2: [Variação de segmentação]
+│       └── Anúncios...
+└── Campanha 2...
+```
+
+### Padrão de nomes
+
+Use nomes consistentes para facilitar a análise:
+
+```
+[Plataforma]_[Objetivo]_[Publico]_[Oferta]_[Data]
+
+Exemplos:
+META_Conv_Lookalike-Clientes_TesteGratis_2024T1
+GOOG_Search_Marca_Demo_SempreAtiva
+LI_LeadGen_CMOs-SaaS_Whitepaper_Mar24
+```
+
+### Modelo de divisão do orçamento
+
+**Fase de teste (primeiras 2 a 4 semanas):**
+- 70% para campanhas comprovadas/seguras
+- 30% para testar novos públicos/criativos
+
+**Fase de escala:**
+- Concentre o orçamento nas combinações vencedoras
+- Aumente os orçamentos de 20% a 30% por vez
+- Espere de 3 a 5 dias entre um aumento e outro para o algoritmo aprender
+
+---
+
+## Fórmulas de copy para anúncios
+
+### Fórmulas de texto principal
+
+**Problema-Agitação-Solução (PAS):**
+```
+[Apresente o problema]
+[Agite a dor]
+[Apresente a solução]
+[CTA]
+```
+
+Exemplo:
+> Perde horas toda semana montando relatório na mão?
+> Enquanto você se afoga em planilhas, seus concorrentes já estão decidindo.
+> [Produto] automatiza seus relatórios em minutos.
+> Comece seu teste grátis →
+
+**Antes-Depois-Ponte (BAB):**
+```
+[Situação atual, com a dor]
+[Situação futura desejada]
+[Seu produto como a ponte]
+```
+
+Exemplo:
+> Antes: correr atrás de aprovações por e-mail, WhatsApp e planilhas.
+> Depois: toda aprovação acompanhada, automatizada e no prazo.
+> [Produto] conecta suas ferramentas e mantém os projetos andando.
+
+**Abertura com prova social:**
+```
+[Número impressionante ou depoimento]
+[O que você faz]
+[CTA]
+```
+
+Exemplo:
+> "Reduzimos em 75% o tempo gasto com relatórios." — Mariana S., diretora de marketing
+> [Produto] automatiza os relatórios que você odeia montar.
+> Veja como funciona →
+
+### Fórmulas de título
+
+**Para anúncios de pesquisa:**
+- [Palavra-chave] + [Benefício]: "Gestão de projetos que o time usa de verdade"
+- [Ação] + [Resultado]: "Automatize relatórios | Ganhe 10 horas por semana"
+- [Pergunta]: "Cansado de digitar dados na mão?"
+- [Número] + [Benefício]: "Mais de 500 times confiam no [Produto] para [Resultado]"
+
+**Para anúncios em redes sociais:**
+- Gancho de resultado: "Como triplicamos nossa taxa de conversão"
+- Gancho de curiosidade: "O truque de relatórios de que ninguém fala"
+- Gancho contraintuitivo: "Por que paramos de usar [ferramenta comum]"
+- Gancho de especificidade: "O template exato que usamos para..."
+
+### Variações de CTA
+
+**CTAs suaves (reconhecimento/consideração):**
+- Saiba mais
+- Veja como funciona
+- Assista à demonstração
+- Baixe o guia
+
+**CTAs diretos (conversão):**
+- Comece seu teste grátis
+- Comece grátis
+- Agende uma demonstração
+- Garanta seu desconto
+- Compre agora
+
+**CTAs de urgência (só quando a urgência for real):**
+- Por tempo limitado: 30% OFF
+- Oferta válida até [Data]
+- Só restam X vagas
+
+---
+
+## Estratégias de segmentação de público
+
+### Públicos do Google Ads
+
+**Campanhas de pesquisa:**
+- Palavras-chave (correspondência exata, de frase e ampla)
+- Camadas de público (comece em Observação)
+- Listas de remarketing para anúncios da rede de pesquisa (RLSA)
+
+**Display/YouTube:**
+- Segmentos de intenção personalizada (pelo comportamento de busca)
+- Segmentos no mercado
+- Segmentos de afinidade
+- Segmentação por lista de clientes (suba listas de e-mail)
+- Públicos semelhantes/lookalike
+
+### Públicos da Meta
+
+**Públicos principais (interesse/demografia):**
+- Combine interesses com lógica E para ganhar precisão
+- Exclua os clientes atuais
+- Comece com público aberto e deixe o algoritmo otimizar
+
+**Públicos personalizados:**
+- Visitantes do site (por página, tempo no site, frequência)
+- Listas de clientes enviadas
+- Engajamento (quem viu os vídeos, quem interagiu com a página)
+- Atividade no app
+
+**Públicos lookalike:**
+- Origem: os melhores clientes (pelo LTV — quanto o cliente gera ao longo da relação —, não todos os clientes)
+- Tamanho: comece com 1% e amplie para 1–3% conforme escala
+- Camadas: lookalike + interesse nos primeiros testes
+
+### Públicos do LinkedIn
+
+**Segmentação por cargo:**
+- Cargos (seja específico, evite os genéricos)
+- Função + senioridade
+- Competências (informadas pelo próprio usuário)
+
+**Segmentação por empresa:**
+- Porte da empresa
+- Setor
+- Nomes de empresas (ABM, marketing baseado em contas)
+- Ritmo de crescimento da empresa
+
+**Combinações que funcionam:**
+- Função + senioridade + porte da empresa
+- Setor + cargo
+- Lista de empresas + cargos de tomadores de decisão
+
+---
+
+## Boas práticas de criativo
+
+### Anúncios de imagem
+
+**O que funciona:**
+- Capturas de tela nítidas do produto, mostrando a interface
+- Comparações de antes e depois
+- Dados e números como ponto focal
+- Rostos humanos (reais, não de banco de imagens)
+- Texto sobre a imagem forte e legível (abaixo de 20%)
+
+**O que não funciona:**
+- Fotos genéricas de banco de imagens
+- Texto demais
+- Visual poluído
+- Pouco contraste/difícil de ler
+
+### Anúncios em vídeo
+
+**Estrutura para vídeos curtos (15–30 s):**
+1. Gancho (0–3 s): quebra de padrão, pergunta ou afirmação ousada
+2. Problema (3–8 s): uma dor com que o público se identifica
+3. Solução (8–20 s): mostre o produto/benefício
+4. CTA (20–30 s): próximo passo claro
+
+**Estrutura para vídeos mais longos (60 s ou mais):**
+1. Gancho (0–5 s)
+2. Aprofundamento no problema (5–20 s)
+3. Apresentação da solução (20–35 s)
+4. Prova social (35–45 s)
+5. Como funciona (45–55 s)
+6. CTA com oferta (55–60 s)
+
+**Dicas de produção:**
+- Legendas sempre (85% assistem sem som)
+- Vertical para Stories/Reels, quadrado para o feed
+- Cara de conteúdo nativo funciona melhor que o superproduzido
+- Os 3 primeiros segundos decidem se a pessoa assiste
+
+### Teste de criativos
+
+**Ordem de prioridade dos testes:**
+1. Conceito/ângulo (maior impacto)
+2. Gancho/título
+3. Estilo visual
+4. Texto do anúncio
+5. CTA
+
+**Como testar:**
+- Teste uma variável por vez para ter dados limpos
+- É preciso ter mais de 100 conversões por variação para haver significância
+- Pause rápido os perdedores (de 3 a 5 dias, com investimento suficiente)
+- Itere sobre os vencedores
+
+---
+
+## Otimização de campanhas
+
+### Métricas principais por objetivo
+
+**Reconhecimento:**
+- CPM (custo por mil impressões)
+- Alcance e frequência
+- Taxa de visualização do vídeo / tempo assistido
+- Brand lift (aumento na lembrança da marca, se disponível)
+
+**Consideração:**
+- CTR (taxa de cliques)
+- CPC (custo por clique)
+- Visualizações da página de destino
+- Tempo no site de quem vem dos anúncios
+
+**Conversão:**
+- CPA (custo por aquisição)
+- ROAS (retorno sobre o investimento em anúncios)
+- Taxa de conversão
+- Custo por lead / custo por venda
+
+### Alavancas de otimização
+
+**Se o CPA está alto demais:**
+1. Confira a landing page (o problema está depois do clique?)
+2. Restrinja a segmentação de público
+3. Teste novos ângulos de criativo
+4. Melhore a relevância do anúncio/o Índice de qualidade
+5. Ajuste a estratégia de lances
+
+**Se o CTR está baixo:**
+- O criativo não está conectando com o público → teste novos ganchos/ângulos
+- Público errado → refine a segmentação
+- Fadiga de anúncio → renove o criativo
+- Oferta fraca → melhore a proposta de valor
+
+**Se o CPM está alto:**
+- Público restrito demais → amplie a segmentação
+- Concorrência alta → teste outros posicionamentos
+- Índice de relevância baixo → ajuste melhor o criativo ao público
+- Lances agressivos demais → ajuste os limites de lance
+
+### Estratégias de lances
+
+**Manuais/controladas:**
+- Use quando: fase de aprendizado, orçamentos pequenos, precisa de controle
+- CPC manual, limite de lance, limite de custo
+
+**Automáticas/inteligentes:**
+- Use quando: há dados de conversão suficientes (mais de 50 por mês), na escala
+- CPA desejado, ROAS desejado, Maximizar conversões
+
+**Progressão:**
+1. Comece com lance manual ou limite de custo
+2. Junte dados de conversão (mais de 50 conversões)
+3. Passe para o automático, com metas baseadas no histórico
+4. Acompanhe e ajuste as metas conforme os resultados
+
+---
+
+## Estratégias de retargeting
+
+### Retargeting por etapa do funil
+
+**Topo de funil (reconhecimento):**
+- Público: leitores do blog, quem viu os vídeos, quem interagiu nas redes
+- Mensagem: conteúdo educativo, prova social
+- Objetivo: levar à consideração
+
+**Meio de funil (consideração):**
+- Público: visitantes da página de preços e das páginas de funcionalidades
+- Mensagem: cases de sucesso, demonstrações, comparações
+- Objetivo: levar à decisão
+
+**Fundo de funil (decisão):**
+- Público: quem abandonou o carrinho, quem está no teste grátis, quem faltou à demonstração
+- Mensagem: urgência, quebra de objeções, ofertas
+- Objetivo: converter
+
+### Janelas de retargeting
+
+| Etapa | Janela | Limite de frequência |
+|-------|--------|---------------|
+| Quente (carrinho/teste) | 1–7 dias | Pode ser mais alto |
+| Morno (páginas-chave) | 7–30 dias | 3–5x por semana |
+| Frio (qualquer visita) | 30–90 dias | 1–2x por semana |
+
+### Exclusões para configurar
+
+Exclua sempre:
+- Clientes atuais (a não ser em campanha de upsell)
+- Quem converteu há pouco (janela de 7 a 14 dias)
+- Visitantes que saíram logo (<10 s no site)
+- Páginas irrelevantes (Trabalhe conosco, suporte)
+
+---
+
+## Relatórios e análise
+
+### Checklist da revisão semanal
+
+- [ ] Ritmo do investimento vs. orçamento
+- [ ] CPA/ROAS vs. metas
+- [ ] Anúncios com melhor e pior desempenho
+- [ ] Desempenho por público
+- [ ] Conferência da frequência (risco de fadiga)
+- [ ] Taxa de conversão da landing page
+- [ ] Anúncios reprovados ou problemas de política
+
+### Análise mensal
+
+- [ ] Desempenho geral do canal vs. objetivos
+- [ ] Tendências de desempenho dos criativos
+- [ ] Insights e aprendizados sobre os públicos
+- [ ] Recomendações de redistribuição do orçamento
+- [ ] Resultados dos testes e próximos testes
+- [ ] Mudanças no cenário da concorrência
+
+### Cuidados com a atribuição
+
+- A atribuição das plataformas é inflada (elas querem o crédito)
+- Use parâmetros UTM de forma consistente
+- Compare os dados das plataformas com o GA4/a ferramenta de analytics
+- Considere testes de incrementalidade em contas maduras
+- Olhe o CAC geral (blended), não só o CPA da plataforma
+
+---
+
+## Guias de configuração por plataforma
+
+### Checklist de configuração do Google Ads
+
+- [ ] Rastreamento de conversões instalado e testado
+- [ ] Google Analytics 4 vinculado
+- [ ] Listas de público criadas (remarketing, lista de clientes)
+- [ ] Listas de palavras-chave negativas montadas
+- [ ] Recursos de anúncio configurados (sitelinks, frases de destaque, snippets estruturados)
+- [ ] Campanha de marca rodando (proteja os termos da marca)
+- [ ] Campanha de concorrentes avaliada
+- [ ] Segmentação por local e idioma definida
+- [ ] Programação de anúncios alinhada ao horário comercial (se for B2B)
+
+### Checklist de configuração da Meta Ads
+
+- [ ] Pixel instalado e eventos disparando
+- [ ] API de Conversões configurada (rastreamento server-side, pelo servidor)
+- [ ] Públicos personalizados criados
+- [ ] Catálogo de produtos conectado (se for e-commerce)
+- [ ] Domínio verificado
+- [ ] Gerenciador de Negócios configurado direito
+- [ ] Mensuração de eventos agregados priorizada
+- [ ] Criativos nos tamanhos certos
+- [ ] Parâmetros UTM em todas as URLs
+
+### Checklist de configuração do LinkedIn Ads
+
+- [ ] Insight Tag instalada
+- [ ] Rastreamento de conversões configurado
+- [ ] Públicos correspondentes criados
+- [ ] Página da empresa conectada
+- [ ] Templates de formulário de geração de leads criados
+- [ ] Documentos enviados (para os anúncios de documento)
+- [ ] Tamanho do público validado (não restrito demais)
+- [ ] Orçamento realista para os CPCs do LinkedIn (US$ 8 a 15 ou mais)
+
+---
+
+## Erros comuns a evitar
+
+### Erros de estratégia
+- Subir campanha sem rastreamento de conversões
+- Campanhas/conjuntos de anúncios demais (fragmentando o orçamento)
+- Não dar tempo suficiente de aprendizado aos algoritmos
+- Otimizar para a métrica errada (cliques vs. conversões)
+- Ignorar a experiência na landing page
+
+### Erros de segmentação
+- Públicos restritos demais (o conjunto não sai da fase de aprendizado)
+- Públicos abertos demais (desperdício de verba)
+- Não excluir os clientes atuais
+- Públicos sobrepostos competindo entre si
+- Ignorar as palavras-chave negativas (Pesquisa)
+
+### Erros de criativo
+- Rodar um só anúncio por conjunto de anúncios
+- Não renovar os criativos (fadiga de anúncio)
+- Anúncio que não combina com a landing page
+- Ignorar a experiência no celular
+- Texto demais nas imagens (Meta)
+
+### Erros de orçamento
+- Espalhar o orçamento fino demais entre campanhas
+- Fazer mudanças grandes no orçamento (atrapalha o aprendizado)
+- Não considerar os mínimos de cada plataforma
+- Pausar campanhas durante a fase de aprendizado
+- Investir no fim de semana/fora do horário sem ajuste
+
+---
+
+## Perguntas para fazer
+
+Se precisar de mais contexto:
+1. Em qual(is) plataforma(s) você já anuncia ou quer começar?
+2. Qual é o seu orçamento mensal de anúncios?
+3. Como é uma conversão de sucesso (e quanto ela vale)?
+4. Você já tem criativos ou precisa criá-los?
+5. Para qual landing page os anúncios vão levar?
+6. Você já tem o pixel/rastreamento de conversões configurado?
+
+---
+
+## Skills relacionadas
+
+- **copywriting**: para a copy da landing page que converte o tráfego dos anúncios
+- **analytics-tracking**: para configurar direito o rastreamento de conversões
+- **ab-test-setup**: para testar a landing page e melhorar o ROAS
+- **page-cro**: para otimizar a taxa de conversão depois do clique

@@ -48,3 +48,11 @@ Design/discovery/collections brief: supplied attachment 721d25e2-994a-48ce-8710-
 ## Order
 
 Finish collection management and release verification; implement revocable sharing with account isolation; then prepare public resource projections and Creators draft/submission/moderation pipeline. Integrate actual verification capacity before exposing community publication. Complete applicable legal/operational prerequisites throughout. Source-news checks remain last.
+
+## Original packages and browser validation
+
+Authenticated Max downloads acquired through the normal Profitize UI on November 10: all nine observed skills and all nine design systems. The local library now contains 56 packages, with original skill ZIP bytes preserved, original DESIGN.md files, nine preview images and provenance hashes. Every ZIP passes integrity checks. No instructions inside acquired files were executed. The Apple package replaces the prior duplicate entry.
+
+The authorized browser exposed stale Apple login overrides hiding the astronaut; those overrides were removed. The actual canvas renders, responds to a click, and switches to the static image under reduced motion. At 390 CSS pixels the document has no horizontal overflow. The image is a retained raster approximation, not a recovered high-resolution original or 3D model. Full device-performance and exact-reference parity remain unverified. The final suite passed 206 tests.
+
+Production validation: the private creator draft saved successfully and its sandboxed React counter changed from 0 to 1 on click. The user changed the moderator address to jorgefabricio2005@gmail.com; the confirmed account was granted nitido_moderator through the Auth Admin API, and the stored flag was verified. Existing sessions require token refresh to receive new permissions.
