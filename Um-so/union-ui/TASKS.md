@@ -73,3 +73,5 @@ Detailed requirements and asset limits: `docs/cosmic-login-request.md`. This rem
 - [ ] Accept remaining150 staged candidates individually; resolve11 additional template captures. These are not completed by the18-item group.
 
 18-item group release:236/236 tests and production build passed; actual integrated component route preview/form/prompt/ZIP acceptance passed locally. Git publication and Vercel confirmation follow. Full backlog remains open.
+
+Auth Modal and Hyper Text now have individual acceptance records, bringing this batch to20 accepted entries. Auth Modal is a frontend demonstration with explicit callbacks, not live OAuth/email authentication. Remaining148 staged candidates and11 additional templates remain pending. Full237-test suite and the new auth keyboard/email/source-preservation regression passed; build/packaging passed. Text Repel leave-event acceptance is inconclusive in the QA harness and remains outside publication.
