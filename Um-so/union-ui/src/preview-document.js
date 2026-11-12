@@ -1,6 +1,8 @@
+import {installPreviewForms} from './preview-forms.js';
 import {injectPreviewEnvironment} from './preview-environment.js';
 import {observePreviewCanvas} from './preview-canvas.js';
-function inspectPreview(id,dependencyWarning,observeCanvas){
+function inspectPreview(id,dependencyWarning,observeCanvas,installForms){
+ installForms(window);
  let failed=false,sent=false,lastMedia='';
  const observedCanvases=observeCanvas(inspect);
  const send=(type,message)=>parent.postMessage({type,id,message,checked:true},'*');
@@ -57,6 +59,6 @@ export function instrumentPreviewHTML(html,id,baseURL){
  html=injectPreviewEnvironment(html);
  const base=String(baseURL).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
  html=html.replace(/new URL\(window.location.href\)(\.searchParams\.get\((["'])theme\2\))/g,'new URL(document.baseURI)$1');
- const script='<base href="'+base+'"><script>('+inspectPreview.toString()+')('+JSON.stringify(id).replace(/</g,'\\u003c')+','+html.includes('data-recovery-notice')+',('+observePreviewCanvas.toString()+'));</script>';
+ const script='<base href="'+base+'"><script>('+inspectPreview.toString()+')('+JSON.stringify(id).replace(/</g,'\\u003c')+','+html.includes('data-recovery-notice')+',('+observePreviewCanvas.toString()+'),('+installPreviewForms.toString()+'));</script>';
  return /<head(?:\s[^>]*)?>/i.test(html)?html.replace(/<head(?:\s[^>]*)?>/i,match=>match+script):script+html;
 }

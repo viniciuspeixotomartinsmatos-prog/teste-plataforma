@@ -33,7 +33,8 @@ test('theme demonstrations preserve original CSS and their controls work',async(
  const themes=await read(release+'/21st-theme-candidates.json');assert.equal(themes.length,16);
  for(const item of themes){
   const payload=await read('public'+item.codePath);assert.ok(payload.files.find(file=>file.path==='theme.css').content.includes(':root'));
-  const html=await fs.readFile('public'+item.previewPath,'utf8'),dom=new JSDOM(html,{runScripts:'dangerously',virtualConsole:new VirtualConsole()});
+  const html=await fs.readFile('public'+item.previewPath,'utf8');if(item.id==='21st-theme-d85d5236-fa81-4abf-ad30-ceed37fdb932'){assert.match(html,/--foreground:hsl\(0 0% 100%\)/);assert.equal(payload.files.find(file=>file.path==='theme.css').content,':root{--background:0 0% 100%;--foreground:0 0% 0%}.dark{--background:0 0% 0%;--foreground:0 0% 100%}');}
+  const dom=new JSDOM(html,{runScripts:'dangerously',virtualConsole:new VirtualConsole()});
   try{const doc=dom.window.document;doc.querySelector('#theme').click();assert.ok(doc.documentElement.classList.contains('dark'));doc.querySelector('#save').click();assert.match(doc.querySelector('#status').textContent,/salvo/);doc.querySelector('input').value='Example';doc.querySelector('#reset').click();assert.equal(doc.querySelector('input').value,'');assert.equal(doc.querySelectorAll('script').length,1);}finally{dom.window.close();}
  }
 });
@@ -55,7 +56,7 @@ test('candidate prompt and portable downloads work without claiming missing edit
 
 test('publication refuses candidates without actual browser evidence and leaves shipped catalog intact',async()=>{
  const before=await fs.readFile('public/data/catalog-live.json');
- const result=spawnSync(process.execPath,['scripts/publish-21st-release.mjs'],{encoding:'utf8'});
+ const result=spawnSync(process.execPath,['scripts/publish-21st-release.mjs','--evidence=var/absent-browser-evidence.json'],{encoding:'utf8'});
  assert.notEqual(result.status,0);assert.match(result.stderr,/browser validation is missing/);
  assert.deepEqual(await fs.readFile('public/data/catalog-live.json'),before);
 });

@@ -4,7 +4,8 @@ import crypto from 'node:crypto';
 const root='../research/source-checks/releases/2026-11-09';
 const read=async file=>JSON.parse(await fs.readFile(file,'utf8'));
 const candidates=await read(root+'/21st-candidate-catalog.json');
-const evidence=await read(root+'/21st-browser-validation.json').catch(()=>[]);
+const evidencePath=process.argv.find(arg=>arg.startsWith('--evidence='))?.slice('--evidence='.length)||root+'/21st-browser-validation.json';
+const evidence=await read(evidencePath).catch(()=>[]);
 if(!evidence.length)throw Error('Authorized browser validation is missing; no entries published.');
 const accepted=[];
 for(const proof of evidence){

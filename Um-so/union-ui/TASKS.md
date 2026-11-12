@@ -63,3 +63,13 @@ Detailed requirements and asset limits: `docs/cosmic-login-request.md`. This rem
 - [x] Test CSS/native progress, canvas evidence, explicit startup markers and media lifecycle.
 - [ ] Revalidate the final loader/media changes and nine pending records in the authorized browser; Work blocks it again.
 - [ ] Complete individual catalog interaction acceptance, independent login scene layers, richer computed design extraction and the external operational/legal prerequisites in docs/compliance-40.md.
+
+## November12 current acceptance
+- [x] Verify published Raio-X copy and actual DESIGN-observado.md download with owner history in the authorized browser.
+- [x] Complete six-part acceptance for16 CSS themes and2 Illos frontend examples; preserve exact source/download notices.
+- [x] Repair terminal HSL declarations in the theme demo adapter; retain original CSS.
+- [x] Run real form submission in the opaque preview without enabling native sandbox forms; add validity/cancellation/keyboard regressions.
+- [ ] Finish final combined regression and Git/Vercel publication for this18-item group.
+- [ ] Accept remaining150 staged candidates individually; resolve11 additional template captures. These are not completed by the18-item group.
+
+18-item group release:236/236 tests and production build passed; actual integrated component route preview/form/prompt/ZIP acceptance passed locally. Git publication and Vercel confirmation follow. Full backlog remains open.

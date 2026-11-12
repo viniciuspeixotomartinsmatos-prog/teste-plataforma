@@ -1,0 +1,22 @@
+{
+  "records": [
+    {
+      "id": "21st-release-44491",
+      "name": "Illos Api Key Card",
+      "zipBytes": 463302,
+      "zipSha256": "2de78eece9a838c471ed48aeefc55c1d4afb40a89050727a3a65ac4636895648",
+      "sourceSha256": "788b28109d285855391f49bcd0f3c0f5c5fcf0c128702834ca04ed4ebd3a97b2",
+      "scope": "Created a browser-only demonstration key; showed/hidden it, activated copy with live-status confirmation, completed reveal, confirmed revoke and saw removal. No real credential/service/access created."
+    },
+    {
+      "id": "21st-release-44492",
+      "name": "Illos Settings Panel",
+      "zipBytes": 479921,
+      "zipSha256": "02d1c1753878b6f9bf420e50fea54fa77a559b12cbdf7e508d684fbfeb2b655e",
+      "sourceSha256": "016b3463e5bf0b2ed80ffe522a9a49412b300b5df0c4a6ee643c0f688db84bf9",
+      "scope": "Toggled settings, saw unsaved state, discarded, toggled again, saved and saw Changes saved plus disabled save action. No account settings were changed."
+    }
+  ],
+  "screenshot": "var/audits/illos-manual.png",
+  "limits": "Local demonstration state only; no actual authentication, API key provisioning or settings backend. Card copy confirms source UI status, not a credential integration."
+}
