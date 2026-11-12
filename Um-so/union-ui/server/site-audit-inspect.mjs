@@ -1,3 +1,4 @@
+import {designSnapshot} from './design-snapshot.mjs';
 import {designEvidence} from './design-evidence.mjs';
 import {parse} from 'parse5';
 import {fetchPublicSite,auditError} from './site-audit-network.mjs';
@@ -42,6 +43,7 @@ export async function inspectSite(value,{signal,fetcher=fetchPublicSite}={}){
  if(base.protocol==='https:'){try{const r=await fetcher(new URL(base.href.replace(/^https:/,'http:')).href,{signal,maxBytes:100000,timeoutMs:5000});site.httpToHttps=new URL(r.url).protocol==='https:';}catch{site.httpToHttps=null;}}
  await stylesTask;
  site.design=designEvidence(designNodes,css.sort((a,b)=>stylesheets.indexOf(a.url)-stylesheets.indexOf(b.url)).map(sheet=>sheet.source));
+ site.design.snapshot=designSnapshot(designNodes,css.map(sheet=>sheet.source));
  site.design.coverage={stylesheets:site.coverage.stylesheets.scanned,computedStyles:false,scope:'HTML e até três folhas de estilo do mesmo domínio; sem executar o site ou resolver todos os estilos calculados.'};
  site.secrets=site.secrets.slice(0,10);return redactAuditData(site);
 }

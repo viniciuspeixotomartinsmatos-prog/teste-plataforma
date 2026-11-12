@@ -1,3 +1,4 @@
+import {cosmicPointer,idleCosmicPointer} from './cosmic-pointer.js';
 import React, {useEffect, useRef} from 'react';
 import {advanceParticle} from './cosmic-motion.js';
 
@@ -14,7 +15,7 @@ export function CosmicScene() {
     if (!window.matchMedia || !window.IntersectionObserver) return;
     const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
     let frame = 0, visible = false, render, previous = 0, elapsed = 0;
-    let pointer = {x:-1000, y:-1000, speed:0, until:0}, pulse;
+    let pointer = idleCosmicPointer(), pulse;
     function sync() {
       cancelAnimationFrame(frame);
       frame = 0;
@@ -87,6 +88,7 @@ export function CosmicScene() {
       const speed = Math.min(38,Math.hypot(pointer.x-at.x,pointer.y-at.y));
       pointer = {...at,speed,until:elapsed+90};
     }
+    function leave(){pointer=idleCosmicPointer();}
     function click(event) {
       if (!pulse || elapsed-pulse.start>500) pulse={...coordinates(event),start:elapsed};
     }
@@ -99,6 +101,8 @@ export function CosmicScene() {
     canvas.addEventListener('contextrestored',initialize);
     canvas.addEventListener('pointermove',move);
     canvas.addEventListener('pointerdown',click);
+    canvas.addEventListener('pointerleave',leave);
+    canvas.addEventListener('pointercancel',leave);
     document.addEventListener('visibilitychange',sync);
     motion.addEventListener('change',changeMotion);
     if(image.complete) initialize();
@@ -108,6 +112,8 @@ export function CosmicScene() {
       image.removeEventListener('load',initialize);
       canvas.removeEventListener('pointermove',move);
       canvas.removeEventListener('pointerdown',click);
+      canvas.removeEventListener('pointerleave',leave);
+      canvas.removeEventListener('pointercancel',leave);
       canvas.removeEventListener('contextlost',loss);
       canvas.removeEventListener('contextrestored',initialize);
       document.removeEventListener('visibilitychange',sync);

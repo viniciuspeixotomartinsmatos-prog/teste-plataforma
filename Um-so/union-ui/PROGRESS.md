@@ -73,3 +73,14 @@ Creators source follow-up: bounded UTF-8 import accepts JS/JSX/TS/TSX/Vue/HTML/C
 
 ## November 11 runtime repair release
 Authenticated 103-item batch: 94 scoped first-paint/media passes and nine unresolved; report in reports/runtime-followthrough-2026-11-11.json. Recovered 64 exact original images and fixed native-template/Clothing Rail downloads, Markdown config, authenticated dynamic scripts, video/poster blob lifetimes and renderer readiness. 222 tests, full build, final incremental build, four Sites checks and six export checks passed. Browser disabled again before final CSS/media follow-up acceptance. Preserve pending items and legal/operational gaps. No news acquisition or payments.
+
+
+## Items 3/4/5 follow-through — November 11
+
+Synchronized collaborator commits through 7b1a9f7b0 before changes; items 1/2 remain owned by the other account. All 168 staged 21st candidates were exercised in the normal authenticated server and opaque frames in four batches. 165 passed the bounded startup/media/event probe; Dithered Logo (21st-release-31554) and Brick Digits (21st-release-44766) timed out; Midnight Lite (21st-template-1343) threw a null.replace runtime error. reports/21st-candidate-triage-2026-11-11.json preserves the records and explicitly corrects the first three batches' metadata-path mixup. This is not the six-part publisher evidence: manual visual/interactions plus prompt/archive checks remain required, and none of these candidates was published by this pass. Eleven other templates remain incomplete/inaccessible from the retained source report.
+
+Raio-X now reconstructs an inert bounded HTML/CSS sample and calculates colors, font declarations, radii and spacing in a network-denied opaque iframe. Original scripts, event attributes, URLs, images and form behavior are excluded. Browser fixture confirmed purple rgb(109,63,209), 20px radius and 24px/16px spacing. This measures the reconstructed collected styles, not original JS-hydrated states, downloaded webfonts, external CDN CSS or visual AI similarity. It must not be labelled exact backend parity. Snapshot is discarded before saving history.
+
+Astronaut pointer physics now measures time-normalized velocity, eliminates first-entry impulses, and resets on pointerleave/cancel with cleanup. The reference bitmap remains unchanged. Independent source layers for the neon astronaut/clean scenery were not supplied; the existing smaller transparent asset also contains yellow rays and scenery and is not an exact isolated neon body. The full independent depth/glitch/ambient scene remains open; no generated replacement or cost was activated.
+
+Validation: full combined suite 227/227, incremental production build passed, computed-style sandbox browser fixture passed. Final original-page end-to-end design extraction and full independent scene acceptance remain open.
