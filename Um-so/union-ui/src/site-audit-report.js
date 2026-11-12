@@ -1,5 +1,7 @@
-import {referenceAudit,referenceCategories,referenceCorrection,hasReferenceCorrection} from './site-audit-reference-rules.js';
-export const auditCategories=[{id:'velocidade',label:'Velocidade',hint:'No celular, no 4G',weight:25,icon:'bolt'},{id:'celular',label:'Celular',hint:'Tela, toque e leitura',weight:20,icon:'phone'},{id:'seo',label:'SEO',hint:'Google e compartilhamento',weight:20,icon:'search'},{id:'pixel',label:'Pixel',hint:'Anúncios e métricas',weight:15,icon:'megaphone'},{id:'privacidade',label:'Privacidade',hint:'Privacidade e segurança',weight:20,icon:'shield'}];
+import {referenceAudit,referenceCorrection,hasReferenceCorrection} from './site-audit-reference-rules.js';
+import {indexabilityFindings} from './site-indexability.js';
+export const auditCriteriaVersion='nitido-indexability-2026-11-12';
+export const auditCategories=[{id:'velocidade',label:'Velocidade',hint:'No celular, no 4G',weight:25,icon:'bolt'},{id:'celular',label:'Celular',hint:'Tela, toque e leitura',weight:20,icon:'phone'},{id:'seo',label:'SEO',hint:'Google e indexação',weight:30,icon:'search'},{id:'pixel',label:'Pixel',hint:'Anúncios e métricas',weight:5,icon:'megaphone'},{id:'privacidade',label:'Privacidade',hint:'Privacidade e segurança',weight:20,icon:'shield'}];
 export const severityOrder=['alta','media','baixa','info','ok'];
 const value=text=>String(text||'').slice(0,600);
 const seconds=ms=>(ms/1000).toFixed(1).replace('.',',')+' s';
@@ -74,13 +76,23 @@ export function referenceInput(site,lab){
 }
 export function buildAuditReport(site,lab=null){
  const input=referenceInput(site,lab),raw=referenceAudit(input.site,input.lab,!lab);
- const findings=raw.findings.map(f=>{let steps=[];if(hasReferenceCorrection(f))try{steps=referenceCorrection(f,input.site,input.lab).steps.split(/\n(?=\d+\. )/).map(s=>s.replace(/^\d+\. /,''));}catch{}
+ let findings=raw.findings.map(f=>{let steps=[];if(hasReferenceCorrection(f))try{steps=referenceCorrection(f,input.site,input.lab).steps.split(/\n(?=\d+\. )/).map(s=>s.replace(/^\d+\. /,''));}catch{}
   const evidence=(f.items||[]).slice(0,8).map(v=>secretSafe(typeof v==='string'?v:JSON.stringify(v)));
   if(f.id==='pixel')steps.push('Antes de instalar rastreadores, confirme finalidade, base legal e consentimento aplicável. Não dispare eventos antes da escolha necessária.');
   if(f.id==='cnpj')f={...f,detail:'Confira a identificação real do fornecedor e as regras aplicáveis ao negócio. Não invente dados empresariais.'};
   if(f.id==='chaves'&&f.severity==='ok')f={...f,title:'Nenhum padrão de segredo encontrado no escopo lido',detail:'A leitura é limitada ao HTML e aos scripts informados. Não certifica ausência de segredos.'};
   return {...f,steps,evidence,status:f.severity==='ok'?'pass':'fail'};
  });
- const categories=referenceCategories.map(c=>({...c,icon:auditCategories.find(a=>a.id===c.id)?.icon,...raw.categories.find(v=>v.id===c.id),issues:findings.filter(f=>f.category===c.id&&f.status==='fail').length,coverage:!lab?'pending':c.id==='pixel'?'static-detection':'measured'}));
- return {...raw,score:lab?raw.score:null,provisionalScore:raw.score,categories,findings,counts:Object.fromEntries(['alta','media','baixa','info','ok'].map(s=>[s,findings.filter(f=>f.severity===s).length])),criteriaVersion:'reference-2026-11-09',coverage:'Perfil comercial da referência, com pesos por gravidade. HTML e Lighthouse móvel; ausência de Pixel afeta a nota. Não certifica conformidade jurídica nem funcionamento de conversões. Medições variam entre execuções.'};
+ const indexing=indexabilityFindings(site,lab),replaced=new Set(indexing.map(f=>f.id));
+ findings=[...findings.filter(f=>!replaced.has(f.id)).map(f=>f.category==='pixel'&&f.severity!=='ok'?{...f,severity:'baixa',detail:f.detail+' Ausência ou configuração de rastreador é uma melhoria leve; confirme a necessidade antes de instalar.'}:f),...indexing];
+ findings.sort((a,b)=>severityOrder.indexOf(a.severity)-severityOrder.indexOf(b.severity)||b.weight-a.weight);
+ const factors={ok:1,baixa:.7,media:.35,alta:0};
+ const categories=auditCategories.map(c=>{
+  const rows=findings.filter(f=>f.category===c.id&&f.weight>0&&!['info','unknown'].includes(f.status));
+  const denominator=rows.reduce((n,f)=>n+f.weight,0);
+  const score=c.id==='velocidade'?lab?.scores.performance??null:c.id==='celular'&&!lab?null:denominator?Math.round(100*rows.reduce((n,f)=>n+f.weight*(factors[f.severity]??0),0)/denominator):null;
+  return {...c,score,issues:findings.filter(f=>f.category===c.id&&f.status==='fail').length,coverage:c.id==='pixel'?'static-detection':c.id==='seo'?'technical-indexability':!lab?'pending':'measured'};
+ });
+ const scored=categories.filter(c=>c.score!==null),total=scored.reduce((n,c)=>n+c.weight,0),provisionalScore=total?Math.round(scored.reduce((n,c)=>n+c.weight*c.score,0)/total):null;
+ return {...raw,score:lab?provisionalScore:null,provisionalScore,categories,findings,indexation:{scope:'URL analisada e regras públicas. Não é um relatório de cobertura do domínio nem uma conexão ao Search Console.',googleStatus:'not-verified',checks:indexing.map(f=>({id:f.id,title:f.title,status:f.status,severity:f.severity})),weights:{seo:30,pixel:5}},counts:Object.fromEntries(['alta','media','baixa','info','ok'].map(s=>[s,findings.filter(f=>f.severity===s).length])),criteriaVersion:auditCriteriaVersion,coverage:'Critérios Nítido: velocidade 25%, celular 20%, SEO e indexabilidade 30%, Pixel 5%, privacidade 20%. Falhas de Pixel são leves. Situação real no Google não verificada; rastreamento permitido não confirma indexação. HTML e Lighthouse móvel; não certifica conformidade jurídica ou conversões. Medições variam entre execuções.'};
 }

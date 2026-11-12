@@ -15,6 +15,9 @@ test('audit UI filters and copies meaningful corrections, keeps owner-isolated h
  try{
   await act(async()=>root.render(React.createElement(SiteAuditPage,{owner:'one',navigate:()=>{}})));
   await click(button('Ver um exemplo'));assert.match(document.body.textContent,/DADOS FICTÍCIOS/);assert.equal(localStorage.length,0);
+  assert.ok(document.querySelector('[aria-label="Indexação e rastreamento"]'));
+  await click(document.querySelector('button[aria-label="Copiar prompt de indexação: Situação real no Google não verificada"]'));
+  assert.match(copied,/Search Console/);assert.match(copied,/Não invente contagens/);
   await click(document.querySelector('.rx-categories button:nth-child(3)'));assert.ok(document.querySelectorAll('.rx-finding-copy').length>0);
   await click(button('Copiar todas'));assert.match(copied,/Corrija o ponto/);assert.match(copied,/https:\/\/exemplo.nitido.com.br/);
   const fixture=JSON.parse(JSON.stringify({site:{url:'https://example.com/',host:'example.com',title:'Example Domain',description:'',lang:'en',viewport:'width=device-width',robots:'',canonical:null,og:{},h1:['Example'],images:[],scripts:{urls:[]},trackers:[],thirdPartyHosts:[],schema:{count:0,valid:0},found:{},insecure:[],secrets:[],resources:{}},at:new Date().toISOString(),lab:null}));
