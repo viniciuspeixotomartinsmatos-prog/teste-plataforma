@@ -47,3 +47,9 @@ test('parallel render resources reserve the remaining byte budget before fetchin
  }});
  assert.deepEqual(relayed,[60,30]);assert.equal(result.coverage.bytes,100);assert.equal(result.coverage.blocked,1);
 });
+
+test('browser subprocess retains packaged native-library paths without application credentials',async()=>{
+ const {designBrowserEnvironment}=await import('../server/rendered-design.mjs');
+ const result=designBrowserEnvironment({PATH:'/usr/bin',HOME:'/tmp',LD_LIBRARY_PATH:'/tmp/al2023/lib:/lib64',FONTCONFIG_PATH:'/tmp/fonts',SUPABASE_SERVICE_ROLE_KEY:'private',GOOGLE_PAGESPEED_API_KEY:'private',VERCEL_OIDC_TOKEN:'private'});
+ assert.equal(result.LD_LIBRARY_PATH,'/tmp/al2023/lib:/lib64');assert.equal(result.FONTCONFIG_PATH,'/tmp/fonts');assert.equal(Object.keys(result).length,4);assert.ok(!JSON.stringify(result).includes('private'));
+});

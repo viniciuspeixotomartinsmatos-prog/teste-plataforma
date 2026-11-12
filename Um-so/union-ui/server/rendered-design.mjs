@@ -3,6 +3,9 @@ import {sampleRenderedDesign} from './rendered-design-sample.mjs';
 import {redactAuditData} from './site-audit-inspect.mjs';
 
 export const renderLimits=Object.freeze({requests:64,bytes:24000000,perResource:2500000,timeoutMs:30000,nodes:1800});
+export function designBrowserEnvironment(source=process.env){
+ return Object.fromEntries(['PATH','SystemRoot','SYSTEMROOT','TEMP','TMP','HOME','LANG','LD_LIBRARY_PATH','FONTCONFIG_PATH'].filter(key=>source[key]).map(key=>[key,source[key]]));
+}
 const tracking=/^(?:[^.]+\.)*(?:google-analytics\.com|googletagmanager\.com|facebook\.com|facebook\.net|doubleclick\.net|clarity\.ms|tiktok\.com)$/i;
 export function allowedRenderRequest(request,mainURL){
  if(request.method()!=='GET')return false;
@@ -15,6 +18,7 @@ export function allowedRenderRequest(request,mainURL){
  return url;
 }
 export async function launchDesignBrowser(){
+ try{
  const {chromium}=await import('playwright-core');
  let args=[],executablePath=process.env.NITIDO_CHROMIUM_EXECUTABLE;
  if(process.platform==='linux'){
@@ -24,8 +28,14 @@ export async function launchDesignBrowser(){
  if(!executablePath)throw auditError('render_unavailable','A captura renderizada não está configurada neste ambiente.',503);
  // Do not pass the server's Supabase, mail, Google or billing credentials to
  // the browser subprocess. Every website gets a fresh ephemeral context.
- const env=Object.fromEntries(['PATH','SystemRoot','SYSTEMROOT','TEMP','TMP','HOME','LANG'].filter(key=>process.env[key]).map(key=>[key,process.env[key]]));
- return chromium.launch({executablePath,headless:true,env,timeout:15000,args:[...args,'--disable-background-networking','--disable-extensions','--disable-component-update','--disable-sync','--no-first-run','--force-webrtc-ip-handling-policy=disable_non_proxied_udp','--proxy-server=http://127.0.0.1:9','--proxy-bypass-list=<-loopback>']});
+ const env=designBrowserEnvironment();
+ return await chromium.launch({executablePath,headless:true,env,timeout:15000,args:[...args,'--disable-background-networking','--disable-extensions','--disable-component-update','--disable-sync','--no-first-run','--force-webrtc-ip-handling-policy=disable_non_proxied_udp','--proxy-server=http://127.0.0.1:9','--proxy-bypass-list=<-loopback>']});}
+ catch(error){
+  if(error.status)throw error;
+  const message=String(error.message),reason=/shared libraries|\.so:/.test(message)?'native_library':/ENOENT|does not exist/.test(message)?'missing_binary':/Cannot find package|MODULE_NOT_FOUND/.test(message)?'runtime_dependency':'browser_start';
+  console.error(JSON.stringify({event:'render_browser_start_failed',reason}));
+  throw auditError('render_'+reason,'A captura renderizada está indisponível neste ambiente. Sua análise anterior foi preservada.',503);
+ }
 }
 export async function renderDesign(value,{signal,fetcher=fetchPublicSite,launch=launchDesignBrowser,limits=renderLimits}={}){
  const controller=new AbortController(),abort=()=>controller.abort();signal?.addEventListener('abort',abort,{once:true});
