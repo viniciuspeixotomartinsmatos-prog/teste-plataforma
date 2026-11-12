@@ -75,7 +75,38 @@ export function installPreviewAssetClient(id,base,adaptChunk){
  addEventListener('message',event=>{const data=event.data;if(event.source!==parent||data?.type!=='preview:asset-result'||data.id!==id)return;const entry=pending.get(data.requestId);if(!entry)return;pending.delete(data.requestId);clearTimeout(entry.timer);if(data.error)entry.reject(Error(data.error));else entry.resolve(data);});
  const nativeFetch=window.fetch?.bind(window);if(nativeFetch)window.fetch=async(input,options)=>{const url=local(input?.url||input),method=options?.method||input?.method||'GET';if(!url||!['GET','HEAD'].includes(method.toUpperCase()))return nativeFetch(input,options);const resource=await request(url);return new Response(resource.bytes,{status:resource.status,headers:{'content-type':resource.mime}});};
  const nativeSet=Element.prototype.setAttribute,nativeRemove=Element.prototype.removeAttribute,assigned=new WeakMap(),blobs=new WeakMap(),loading=new WeakMap();
- function assign(node,name,value){const url=local(value);if(!url)return nativeSet.call(node,name,value);let attributes=assigned.get(node);if(!attributes)assigned.set(node,attributes={});if(attributes[name]===url)return;attributes[name]=url;const work=request(url).then(resource=>{if(attributes[name]!==url)return;if(resource.status<200||resource.status>=300)throw Error('Mídia da prévia indisponível.');let nodeBlobs=blobs.get(node);if(!nodeBlobs)blobs.set(node,nodeBlobs={});const previous=nodeBlobs[name];if(previous)URL.revokeObjectURL(previous);const bytes=node.tagName==='SCRIPT'&&adaptChunk?adaptChunk(new TextDecoder().decode(resource.bytes),url):resource.bytes;const blob=URL.createObjectURL(new Blob([bytes],{type:resource.mime}));nodeBlobs[name]=blob;if(node.tagName==='IMG'&&name==='src'){nativeRemove.call(node,'srcset');for(const source of node.closest('picture')?.querySelectorAll('source')||[])nativeRemove.call(source,'srcset');}nativeSet.call(node,name,blob);}).catch(()=>{nativeSet.call(node,name,value);});loading.set(node,work);}
+ function assign(node, name, value) {
+  const url = local(value);
+  if (!url) return nativeSet.call(node, name, value);
+  let attributes = assigned.get(node);
+  if (!attributes) assigned.set(node, attributes = {});
+  if (attributes[name] === url) return;
+  attributes[name] = url;
+  const work = request(url).then(resource => {
+   if (attributes[name] !== url) return;
+   if (resource.status < 200 || resource.status >= 300) throw Error('Mídia da prévia indisponível.');
+   let nodeBlobs = blobs.get(node);
+   if (!nodeBlobs) blobs.set(node, nodeBlobs = {});
+   const previous = nodeBlobs[name];
+   if (previous) URL.revokeObjectURL(previous);
+   const bytes = node.tagName === 'SCRIPT' && adaptChunk
+    ? adaptChunk(new TextDecoder().decode(resource.bytes), url)
+    : resource.bytes;
+   const blob = URL.createObjectURL(new Blob([bytes], {type: resource.mime}));
+   nodeBlobs[name] = blob;
+   if (node.tagName === 'IMG' && name === 'src') {
+    nativeRemove.call(node, 'srcset');
+    for (const source of node.closest('picture')?.querySelectorAll('source') || []) nativeRemove.call(source, 'srcset');
+   }
+   nativeSet.call(node, name, blob);
+   // The initial source scan may finish before an authenticated child URL arrives.
+   if (node.tagName === 'SOURCE' && name === 'src') {
+    const media = node.parentElement;
+    if (media instanceof HTMLMediaElement && media.networkState === media.NETWORK_NO_SOURCE) media.load();
+   }
+  }).catch(() => { nativeSet.call(node, name, value); });
+  loading.set(node, work);
+ }
  Element.prototype.setAttribute=function(name,value){if(name==='srcset'&&this.tagName==='IMG'&&assigned.has(this)){nativeRemove.call(this,name);return;}if((name==='src'||name==='poster')&&/^(IMG|VIDEO|AUDIO|SOURCE|SCRIPT)$/.test(this.tagName)&&local(value)){assign(this,name,value);return;}return nativeSet.call(this,name,value);};
  for(const Type of [HTMLImageElement,HTMLMediaElement,HTMLSourceElement,HTMLScriptElement]){const descriptor=Object.getOwnPropertyDescriptor(Type.prototype,'src');if(descriptor?.set)Object.defineProperty(Type.prototype,'src',{...descriptor,set(value){if(local(value))assign(this,'src',value);else descriptor.set.call(this,value);}});}
  const decode=HTMLImageElement.prototype.decode;if(decode)HTMLImageElement.prototype.decode=function(...args){return Promise.resolve(loading.get(this)).then(()=>decode.apply(this,args));};

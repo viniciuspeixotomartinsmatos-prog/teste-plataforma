@@ -115,6 +115,40 @@ test('video and poster keep distinct live blobs and dynamic retained scripts use
  }finally{dom.window.close();}
 });
 
+test('a late authenticated source restarts an unloaded media element only', async () => {
+ const base = 'https://app.example/previews/demo/index.html';
+ const html = addPreviewAssetClient('<html><head></head><body><video></video><audio></audio></body></html>', 'demo', base);
+ const reloaded = [];
+ const dom = new JSDOM(html, {url: base, runScripts: 'dangerously', beforeParse(w) {
+  w.URL.createObjectURL = () => 'blob:null/authenticated-media';
+  w.HTMLMediaElement.prototype.load = function () { reloaded.push(this.tagName); };
+  Object.defineProperty(w.HTMLMediaElement.prototype, 'networkState', {
+   get() { return this.tagName === 'VIDEO' ? this.NETWORK_NO_SOURCE : this.NETWORK_IDLE; },
+  });
+  w.postMessage = data => {
+   if (data.type !== 'preview:asset') return;
+   queueMicrotask(() => w.dispatchEvent(new w.MessageEvent('message', {
+    source: w,
+    data: {type: 'preview:asset-result', id: 'demo', requestId: data.requestId, status: 200,
+     mime: 'video/webm', bytes: new w.Uint8Array([1, 2]).buffer},
+   })));
+  };
+ }});
+ try {
+  const {document} = dom.window;
+  for (const media of document.querySelectorAll('video, audio')) {
+   const source = document.createElement('source');
+   source.src = '/assets/movie.webm';
+   media.append(source);
+  }
+  await new Promise(resolve => setTimeout(resolve, 0));
+  assert.equal(document.querySelector('video source').getAttribute('src'), 'blob:null/authenticated-media');
+  assert.deepEqual(reloaded, ['VIDEO']);
+ } finally {
+  dom.window.close();
+ }
+});
+
 test('retained Turbopack chunks keep their original identity when classic scripts are deferred and inlined',async()=>{
  const source='(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,[]]);window.literal="document.currentScript";';
  const html=await preparePreviewAssets('<html><head><script defer src="/previews/demo/chunk.js"></script></head><body></body></html>','https://app.example/previews/demo/index.html',{fetcher:async()=>new Response(source,{headers:{'content-type':'text/javascript'}})});

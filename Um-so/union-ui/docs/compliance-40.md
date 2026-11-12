@@ -79,16 +79,14 @@
 - Consulta pública de `/api/health` confirmou Supabase e cobrança desativada na versão então implantada. `/api/billing/config` respondeu 401; não foi contornado. Isso não confirma que o commit final já está no ar.
 - Verificação de fornecedores não aconteceu: Supabase do app não consta da conexão, Vercel do projeto negou escopo. Estes bloqueios impedem marcar itens operacionais como concluídos.
 
-## Fontes de referência verificadas
-
-### Revalidação de produção em 12 de novembro
+## Revalidação de produção em 12 de novembro
 
 - O alias de produção do projeto `teste-plataforma` apontava para o commit `7bb8c8966` no deploy `dpl_ECNExTzxBnferq9sHxn4MwV4Bnbc`, com status Ready. O endpoint de saúde confirmou Supabase e `billingMode=disabled`.
 - Uma conta sintética iniciou sessão e validou cinco caminhos privados, nove páginas de detalhe e nove arquivos ZIP. Sem sessão, os cinco caminhos privados responderam 401 nos testes repetidos. A conta sintética foi removida após o ensaio.
 - A documentação oficial confirma que o plano Free do Supabase requer rotina própria de exportação e que um backup de banco não inclui objetos do Storage. O ensaio local existente é sintético. A matriz mantém pendentes a rotina remota, o armazenamento, a retenção, o alerta e o ensaio de restauração operacional. [Backups do Supabase](https://supabase.com/docs/guides/platform/backups)
 - A ANPD mantém o regulamento de transferências internacionais e as cláusulas-padrão brasileiras. Ainda falta verificar o mecanismo aplicável a cada fluxo e os contratos efetivos. [Resolução CD/ANPD nº 19/2024](https://www.gov.br/anpd/pt-br/acesso-a-informacao/institucional/atos-normativos/regulamentacoes_anpd/resolucao-cd-anpd-no-19-de-23-de-agosto-de-2024)
 
-### Referências gerais
+## Fontes de referência verificadas
 
 - [LGPD — bases, direitos, segurança e responsabilidade](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm)
 - [ANPD — comunicação de incidentes](https://www.gov.br/anpd/pt-br/canais_atendimento/agente-de-tratamento/comunicado-de-incidente-de-seguranca-cis)
