@@ -38,7 +38,24 @@ function inspectPreview(id,dependencyWarning,observeCanvas,installForms){
   // presented decorative renderers must be accepted after their first frame.
   const presented=select('[data-preview-presented="true"],canvas').some(node=>{const r=node.getBoundingClientRect(),s=getComputedStyle(node);return (observedCanvases.has(node)||node.getAttribute('data-preview-presented')==='true'||node.tagName==='CANVAS'&&node.closest('[data-preview-pending="false"]'))&&r.width>0&&r.height>0&&s.display!=='none'&&s.visibility!=='hidden';});
   const content=root&&((typeof root.innerText==='string'?root.innerText:root.textContent)?.trim()||select('svg,img,video,iframe,button,input,textarea,select,progress,meter,[role=slider],[role=progressbar]').some(node=>{const r=node.getBoundingClientRect();return r.width>0&&r.height>0&&!node.closest('[aria-hidden=true]')&&!awaitingRenderer(node);})||select('div,span,main,section').some(painted));
-  if(!content&&!presented){setTimeout(inspect,150);return;}
+  // Decorative SVGs can be the entire demo. Definitions alone do not draw.
+  const drawnSvg = !content && !presented && select('svg').some(svg => {
+   const bounds = svg.getBoundingClientRect();
+   if (bounds.width <= 1 || bounds.height <= 1 || awaitingRenderer(svg)) return false;
+   const style = getComputedStyle(svg);
+   if (style.display === 'none' || style.visibility === 'hidden' || style.opacity === '0') return false;
+   return [...svg.querySelectorAll('path[d], rect, circle, ellipse, line, polygon[points], polyline[points], use, text')].some(shape => {
+    if (shape.closest('defs, symbol, mask, clipPath, pattern, marker')) return false;
+    const box = shape.getBoundingClientRect();
+    if (!box.width && !box.height) return false;
+    const paint = getComputedStyle(shape);
+    if (paint.display === 'none' || paint.visibility === 'hidden' || paint.opacity === '0') return false;
+    const fill = paint.fill || 'black';
+    return (shape.localName !== 'line' && fill !== 'none' && opaque(fill) && paint.fillOpacity !== '0')
+     || (paint.stroke !== 'none' && opaque(paint.stroke) && paint.strokeOpacity !== '0' && parseFloat(paint.strokeWidth) !== 0);
+   });
+  });
+  if(!content&&!presented&&!drawnSvg){setTimeout(inspect,150);return;}
   const images=select('img').filter(image=>image.getAttribute('src')||image.getAttribute('srcset'));
   const videos=select('video').filter(video=>video.getAttribute('src')||video.querySelector('source[src]'));
   const broken=images.filter(image=>image.complete&&!image.naturalWidth);

@@ -58,7 +58,11 @@ test('portable Energy Beam includes its renderer, scene JSON and nested original
 });
 
 test('readiness accepts native progress, side-border and generated CSS paint while rejecting an untouched canvas',async()=>{
- const cases=[['<progress value="30" max="100"></progress>',true],['<div style="opacity:1;border-right:4px solid #241535"></div>',true],['<div data-pseudo="true"></div>',true],['<canvas aria-hidden="true" width="100" height="80"></canvas>',false],['<div style="opacity:1;background:#241535"><canvas width="100" height="80"></canvas></div>',false],['<div></div>',false]];
+ const cases=[['<progress value="30" max="100"></progress>',true],['<div style="opacity:1;border-right:4px solid #241535"></div>',true],['<div data-pseudo="true"></div>',true],['<canvas aria-hidden="true" width="100" height="80"></canvas>',false],['<div style="opacity:1;background:#241535"><canvas width="100" height="80"></canvas></div>',false],['<div></div>',false],
+  ['<svg aria-hidden="true" style="opacity:1"><path d="M0 0L10 10" style="opacity:1;stroke:red"/></svg>',true],
+  ['<svg aria-hidden="true" style="opacity:1"><defs><path d="M0 0L10 10" style="opacity:1;stroke:red"/></defs></svg>',false],
+  ['<svg aria-hidden="true" style="opacity:1"><path d="M0 0L10 10" style="opacity:0;stroke:red"/></svg>',false]
+ ];
  for(const [body,expected]of cases){
   const messages=[];
   const dom=new JSDOM(instrumentPreviewHTML('<html><head></head><body>'+body+'</body></html>','paint','http://localhost/test'),{runScripts:'dangerously',pretendToBeVisual:true,beforeParse(w){
