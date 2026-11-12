@@ -29,6 +29,7 @@ export async function preparePreviewAssets(html,base,{fetcher=fetch,compiler,sig
  }
  for(const match of [...html.matchAll(/<script\b([^>]*?)src=["']([^"']+)["']([^>]*)>\s*<\/script>/gi)]){
   const url=previewAssetURL(match[2],base);if(!url)continue;const module=/type\s*=\s*["']module["']/i.test(match[1]+match[3]);const compiled=module?await bundle(url.href):{code:await text(url.href)};
+  if(!module&&compiled.code.includes('TURBOPACK'))compiled.code=compiled.code.replace(/(\["object"\s*==\s*typeof document\s*\?)document\.currentScript(\s*:\s*void 0)/g,(_match,before,after)=>before+JSON.stringify(url.href)+after);
   const deferred=(module||/\bdefer\b/i.test(match[1]+match[3]))&&!compiled.module;
   const code=deferred?`(()=>{const run=()=>{${compiled.code}\n};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run,{once:true});else run();})();`:compiled.code;
   html=html.replace(match[0],()=> (compiled.css?'<style>'+compiled.css.replace(/<\/style/gi,'<\\/style')+'</style>':'')+'<script'+(compiled.module?' type="module"':'')+'>'+escapeScript(code)+'</script>');

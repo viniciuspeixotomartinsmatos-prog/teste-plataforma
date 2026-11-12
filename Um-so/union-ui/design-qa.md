@@ -274,3 +274,11 @@ Repairs retain 64 exact original WebP images with source URLs, SHA-256, byte cou
 Before the final CSS/media-readiness revisions, the authorized browser was disabled again by Work. Their final visual acceptance remains pending. The remaining nine records are Hls Video Player, Liquid Aurora, Loader, Loader 10, Mine, Oval Eggs, Progress, Rising Ball and Mosaik. Mosaik reports an unavailable original external service; its private backend has not been recovered. Mine/Oval's original MP4 containers parse with 960x540 AVC frames and real encoded packets, but that does not resolve the browser decoding failures. Do not label them verified.
 
 The audit command now generates a temporary protected /tools/runtime-audit harness under the normal application. It no longer starts the old unauthenticated static audit server. No alternate browser, authentication bypass, billing or source-news acquisition was used.
+
+## November 12 local browser evidence
+
+Layered login: var/audits/cosmic-layered-final.png, cosmic-layered-pulse.png, cosmic-layered-mobile.png and cosmic-layered-performance.json. Isolated loopback account screen, actual click, reduced motion and390x844 layout; no fresh errors. Whole reference is unchanged; active edited layers are approximate.
+
+Visual recommendations replay: var/audits/visual-recommendations-browser.png. Actual previous measured Eco Park screenshot; six selected covers decoded. No new PageSpeed run in this fixture.
+
+Three repaired staged exports: var/audits/three-exported-browser.png; reports/21st-followthrough-2026-11-12.json contains separate source-preview, ZIP-browser and all168 archive records. Native ZIP's static mount prefix was translated only in the private test mount; original ZIP bytes were retained. Readiness/media evidence does not prove every original interaction. None published in this pass.

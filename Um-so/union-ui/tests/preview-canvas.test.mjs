@@ -23,3 +23,9 @@ test('offscreen GPU draws do not prove a presented frame; the real default frame
  f.setColor([90,30,200,255]);f.setFramebuffer({offscreen:true});gl.drawElements(4,6,5123,0);f.flush();assert.equal(observed.has(f.canvas),false);
  f.setFramebuffer(null);assert.equal(gl.drawElements(4,6,5123,0),17);f.flush();assert.equal(observed.has(f.canvas),true);assert.deepEqual(f.received(),[4,6,5123,0]);
 });
+
+test('black ink on a transparent canvas is visible paint, unlike an empty or uniformly black surface',()=>{
+ const f=fixture(),observed=observePreviewCanvas(()=>{},f.win),ctx=f.canvas.getContext('2d');
+ ctx.getImageData=(x,y)=>({data:x>40&&x<60&&y>30&&y<50?[0,0,0,255]:[0,0,0,0]});
+ ctx.fillRect(40,30,20,20);f.flush();assert.equal(observed.has(f.canvas),true);
+});

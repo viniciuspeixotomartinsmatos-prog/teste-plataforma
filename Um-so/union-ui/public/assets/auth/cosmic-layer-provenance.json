@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-12",
+  "source": "/assets/auth/login-neon-reference.png",
+  "method": "Built-in Image Gen edits: transparent seated body extraction and clean cosmic background plate. Approximate reconstruction, not recovered original layers or a 3D model.",
+  "items": [
+    {
+      "file": "/assets/auth/cosmic-body-layer.png",
+      "sha256": "84af6e1b42900b906b0431680ba60c2b03ac23c3938b8d08cef4e6f2962103ba",
+      "bytes": 1834275
+    },
+    {
+      "file": "/assets/auth/cosmic-clean-plate.png",
+      "sha256": "fd4a6f71c921f51f488aae3befd88a71fe45bf4c5c7d2694bde78116a8a71e5b",
+      "bytes": 1657832
+    }
+  ]
+}

@@ -118,3 +118,10 @@ Raio-X now reconstructs an inert bounded HTML/CSS sample and calculates colors, 
 Astronaut pointer physics now measures time-normalized velocity, eliminates first-entry impulses, and resets on pointerleave/cancel with cleanup. The reference bitmap remains unchanged. Independent source layers for the neon astronaut/clean scenery were not supplied; the existing smaller transparent asset also contains yellow rays and scenery and is not an exact isolated neon body. The full independent depth/glitch/ambient scene remains open; no generated replacement or cost was activated.
 
 Validation: full combined suite 227/227, incremental production build passed, computed-style sandbox browser fixture passed. Final original-page end-to-end design extraction and full independent scene acceptance remain open.
+
+## November 12 acceptance update
+
+- Layered particle login implemented with generated transparent body and clean cosmic plate. Reference remains unchanged. Browser desktop/click/reduced-motion/mobile checks passed within the documented scope. Full brief/device acceptance remains partial; see PROGRESS.md.
+- Visual screenshot recommendations implemented over 6,301 actual cover descriptors. Six covers decoded in authorized browser replay. This is local deterministic similarity, not external AI or original JS-hydrated design extraction.
+- Three staged runtime failures repaired and exported previews start. All 168 prompt/ZIP structural checks pass. Per-item complete manual acceptance and guarded publication remain open. Two of eleven incomplete template sources return HTTP 402; nine require runtime validation. No unvalidated capture was added to the live catalog.
+- Items 1/2 remain assigned to the other account. Legal/operational evidence gaps from compliance-40.md remain unchanged. No all-backlog completion claim.

@@ -1,9 +1,9 @@
 import {cosmicPointer,idleCosmicPointer} from './cosmic-pointer.js';
 import React, {useEffect, useRef} from 'react';
-import {advanceParticle} from './cosmic-motion.js';
+import {createLayeredCosmicRenderer} from './cosmic-layer-renderer.js';
 
-// Retain the supplied bitmap unchanged. Only its art region is rendered; the
-// screenshot's form and wordmark never replace the actual application controls.
+// Preserve the supplied bitmap as the static/reduced-motion fallback. Active
+// animation composes edited independent body/background assets in its art crop.
 const artwork = '/assets/auth/login-neon-reference.png';
 const cropLeft=.42;
 
@@ -15,7 +15,8 @@ export function CosmicScene() {
     if (!window.matchMedia || !window.IntersectionObserver) return;
     const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
     let frame = 0, visible = false, render, previous = 0, elapsed = 0;
-    let pointer = idleCosmicPointer(), pulse;
+    let pointer = idleCosmicPointer(), pulse, disposed=false;
+    const body=new Image(),plate=new Image();body.decoding='async';plate.decoding='async';
     function sync() {
       cancelAnimationFrame(frame);
       frame = 0;
@@ -35,48 +36,8 @@ export function CosmicScene() {
     }
     function initialize() {
       if (!image.naturalWidth || motion.matches) return sync();
-      const start=Math.round(image.naturalWidth*cropLeft);
-      const w = canvas.width = image.naturalWidth-start, h = canvas.height = image.naturalHeight;
-      const context = canvas.getContext('2d');
-      if (!context) return;
-      const fixed = document.createElement('canvas');
-      fixed.width = w; fixed.height = h;
-      const background = fixed.getContext('2d');
-      const sprite=document.createElement('canvas');sprite.width=w;sprite.height=h;
-      sprite.getContext('2d').drawImage(image,start,0,w,h,0,0,w,h);
-      background.drawImage(sprite,0,0);
-      const pixels = background.getImageData(0,0,w,h);
-      const particles = [];
-      const tile = Math.max(3,Math.ceil(w / (window.innerWidth < 700 ? 85 : 145)));
-      for (let y=Math.floor(h*.19); y<h*.84; y+=tile) {
-        for (let x=Math.floor(w*.29); x<w*.82; x+=tile) {
-          const index = 4*(Math.min(h-1,y+(tile>>1))*w+x+(tile>>1));
-          const [r,g,b,a] = pixels.data.subarray(index,index+4);
-          if (a<30 || Math.max(r,g,b)<145 || (r>180 && g>155 && b<130 && (y<h*.25 || y>h*.52))) continue;
-          const mass=.65+Math.random()*.7;
-          particles.push({homeX:x,homeY:y,x:x+(Math.random()-.5)*85,y:y+Math.random()*65,vx:0,vy:0,release:1200*mass,mass});
-          background.clearRect(x,y,tile,tile);
-        }
-      }
-      render = (time,step) => {
-        context.clearRect(0,0,w,h);
-        if(time>3000 && time>pointer.until+2700 && (!pulse||time>pulse.start+3000)){
-          // Restoring the exact crop avoids tile seams and keeps the yellow rays
-          // fixed. Only the active particle response displaces sampled pixels.
-          context.drawImage(sprite,0,0);
-          return;
-        }
-        context.drawImage(fixed,0,0);
-        for (const p of particles) {
-          advanceParticle(p,time,step,pointer,pulse);
-          if(pointer.speed>12 && pointer.until>time && Math.abs(p.vx)+Math.abs(p.vy)>3){
-            context.globalAlpha=.25;
-            context.drawImage(sprite,p.homeX,p.homeY,tile,tile,Math.round(p.x-p.vx*2),Math.round(p.y-p.vy*2),tile,tile);
-            context.globalAlpha=1;
-          }
-          context.drawImage(sprite,p.homeX,p.homeY,tile,tile,Math.round(p.x),Math.round(p.y),tile,tile);
-        }
-      };
+      if(!body.complete||!body.naturalWidth||!plate.complete||!plate.naturalWidth)return sync();
+      try{elapsed=0;previous=0;const engine=createLayeredCosmicRenderer(canvas,{plate,body,width:Math.round(image.naturalWidth*(1-cropLeft)),height:image.naturalHeight,mobile:window.innerWidth<700});render=(time,step)=>engine.draw(time,step,pointer,pulse);}catch{render=null;}
       sync();
     }
     function coordinates(event) {
@@ -85,8 +46,7 @@ export function CosmicScene() {
     }
     function move(event) {
       const at = coordinates(event);
-      const speed = Math.min(38,Math.hypot(pointer.x-at.x,pointer.y-at.y));
-      pointer = {...at,speed,until:elapsed+90};
+      pointer = cosmicPointer(pointer,at,performance.now(),elapsed);
     }
     function leave(){pointer=idleCosmicPointer();}
     function click(event) {
@@ -97,6 +57,7 @@ export function CosmicScene() {
     const observer = new IntersectionObserver(([entry])=>{visible=entry.isIntersecting;sync();});
     observer.observe(canvas.parentElement);
     image.addEventListener('load',initialize);
+    const assetReady=()=>{if(!disposed)initialize();};body.onload=plate.onload=assetReady;body.src='/assets/auth/cosmic-body-layer.png';plate.src='/assets/auth/cosmic-clean-plate.png';
     canvas.addEventListener('contextlost',loss);
     canvas.addEventListener('contextrestored',initialize);
     canvas.addEventListener('pointermove',move);
@@ -107,6 +68,7 @@ export function CosmicScene() {
     motion.addEventListener('change',changeMotion);
     if(image.complete) initialize();
     return () => {
+      disposed=true;body.onload=plate.onload=null;body.src=plate.src='';
       cancelAnimationFrame(frame);
       observer.disconnect();
       image.removeEventListener('load',initialize);

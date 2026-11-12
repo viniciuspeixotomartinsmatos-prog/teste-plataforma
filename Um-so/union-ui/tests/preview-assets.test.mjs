@@ -114,3 +114,9 @@ test('video and poster keep distinct live blobs and dynamic retained scripts use
   assert.ok(requests.every(url=>url.startsWith('https://app.example/assets/')));
  }finally{dom.window.close();}
 });
+
+test('retained Turbopack chunks keep their original identity when classic scripts are deferred and inlined',async()=>{
+ const source='(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,[]]);window.literal="document.currentScript";';
+ const html=await preparePreviewAssets('<html><head><script defer src="/previews/demo/chunk.js"></script></head><body></body></html>','https://app.example/previews/demo/index.html',{fetcher:async()=>new Response(source,{headers:{'content-type':'text/javascript'}})});
+ const dom=new JSDOM(html,{runScripts:'dangerously'});try{await new Promise(resolve=>dom.window.document.addEventListener('DOMContentLoaded',resolve,{once:true}));assert.equal(dom.window.TURBOPACK[0][0],'https://app.example/previews/demo/chunk.js');assert.equal(dom.window.literal,'document.currentScript');}finally{dom.window.close();}
+});
