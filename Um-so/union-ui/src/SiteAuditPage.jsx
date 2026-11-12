@@ -1,3 +1,4 @@
+import {copyAuditText} from './audit-clipboard.js';
 import {visualRecommendations} from './visual-recommendations.js';
 import {computeDesignSnapshot} from './computed-design.js';
 import React,{useEffect,useMemo,useRef,useState} from 'react';
@@ -26,7 +27,7 @@ export default function SiteAuditPage({owner,navigate,notify=()=>{}}){
   finally{clearTimeout(timer);if(ticket===generation.current){setStage('');active.current=null;}}
  }
  function sample(){generation.current++;active.current?.abort();setStage('');setError('');setLabError('');setFilter('all');setResult(example());setShowHistory(false);}
- async function copy(text,id){try{await navigator.clipboard.writeText(text);setCopied(id);clearTimeout(copyTimer.current);copyTimer.current=setTimeout(()=>setCopied(''),2000);}catch{notify('Não foi possível copiar. Use o download do relatório.');}}
+ async function copy(text,id){try{await copyAuditText(text);setCopied(id);clearTimeout(copyTimer.current);copyTimer.current=setTimeout(()=>setCopied(''),2000);}catch{notify('Não foi possível copiar. Use o download do relatório.');}}
  function download(){const blob=new Blob([JSON.stringify({...result,report,prompts:report.findings.filter(f=>f.status==='fail').map(f=>correctionPrompt(result.site,f))},null,2)],{type:'application/json'}),link=document.createElement('a'),href=URL.createObjectURL(blob);link.href=href;link.download='raio-x-'+result.site.host.replace(/[^a-z0-9.-]/gi,'-')+'.json';link.click();setTimeout(()=>URL.revokeObjectURL(href),1000);}
  const findings=report?.findings.filter(row=>(filter==='all'||row.category===filter)&&row.severity!=='ok')||[],oks=report?.findings.filter(row=>row.severity==='ok'&&!row.quiet)||[];
  const tone=score=>score==null?'none':score>=90?'good':score>=50?'warn':'poor';
