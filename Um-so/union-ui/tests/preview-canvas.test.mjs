@@ -29,3 +29,17 @@ test('black ink on a transparent canvas is visible paint, unlike an empty or uni
  ctx.getImageData=(x,y)=>({data:x>40&&x<60&&y>30&&y<50?[0,0,0,255]:[0,0,0,0]});
  ctx.fillRect(40,30,20,20);f.flush();assert.equal(observed.has(f.canvas),true);
 });
+
+test('sparse 2D lettering between sample points still establishes a presented frame', () => {
+ const f = fixture();
+ const observed = observePreviewCanvas(() => {}, f.win);
+ const context = f.canvas.getContext('2d');
+ context.getImageData = (_x, _y, width, height) => {
+  const data = new Uint8ClampedArray(width * height * 4);
+  if (width > 1) data.set([112, 114, 128, 70], 8);
+  return {data};
+ };
+ context.fillRect(40, 30, 2, 2);
+ f.flush();
+ assert.equal(observed.has(f.canvas), true);
+});

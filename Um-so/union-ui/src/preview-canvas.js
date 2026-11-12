@@ -24,6 +24,25 @@ export function observePreviewCanvas(onPresented,win=window){
     transparent ||= rgba[3]===0;ink ||= rgba[3]>0;
     if(rgba[3]>0&&rgba[0]+rgba[1]+rgba[2]>15)lit=true;
    }lit ||= transparent&&ink;}
+   // A regular grid can line up with the gaps in monospace lettering.
+   // Read one small region so sparse ink is not mistaken for a blank frame.
+   if (!lit && !gpu) {
+    const width = Math.min(canvas.width, 48);
+    const height = Math.min(canvas.height, 48);
+    const left = Math.floor((canvas.width - width) / 2);
+    const top = Math.floor((canvas.height - height) / 2);
+    const pixels = context.getImageData(left, top, width, height).data;
+    for (let i = 0; i < pixels.length; i += 4) {
+     const alpha = pixels[i + 3];
+     transparent ||= alpha === 0;
+     ink ||= alpha > 0;
+     if (alpha && pixels[i] + pixels[i + 1] + pixels[i + 2] > 15) {
+      lit = true;
+      break;
+     }
+    }
+    lit ||= transparent && ink;
+   }
    if(lit){scheduled.add(canvas);win.requestAnimationFrame(()=>win.requestAnimationFrame(()=>{scheduled.delete(canvas);presented.add(canvas);onPresented();}));}
   }catch{ /* A tainted/unreadable surface is not evidence of a presented frame. */ }
  }
