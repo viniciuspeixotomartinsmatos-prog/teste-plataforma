@@ -4,9 +4,10 @@ import {addPlaygroundBridge} from './playground-bridge.js';
 import {instrumentPreviewHTML} from './preview-document.js';
 import {addPreviewAssetClient,createPreviewAssetResponder} from './preview-assets.js';
 import {loadPreviewDocument} from './preview-loading.js';
-export function Preview({item,theme='dark',width='desktop',config,onStatus,settings,onInspect}){
+export function Preview({item,theme='dark',width='desktop',config,onStatus,settings,onInspect,onViewCode,onDownload}){
  const [attempt,setAttempt]=useState(0),[state,setState]=useState('loading'),[message,setMessage]=useState(''),[mediaError,setMediaError]=useState(''),[documentHTML,setDocumentHTML]=useState('');
- const frame=useRef(null);
+ const frame=useRef(null),[showVideo,setShowVideo]=useState(false);
+ useEffect(()=>setShowVideo(false),[item.id,attempt]);
  const local=item.runtimePreviewPath||item.previewPath;
  const src=local?(theme==='light'&&local.startsWith('/previews/runtime/')?local.replace(/\.html$/,'.light.html'):local):'/api/preview/'+encodeURIComponent(item.id)+'?theme='+theme;
  useEffect(()=>{setState('loading');setMessage('');setMediaError('');setDocumentHTML('');const controller=new AbortController(),base=new URL(src+(src.includes('?')?'&':'?')+'theme='+theme,window.location.href).href;loadPreviewDocument(src,base,{signal:controller.signal}).then(prepared=>{if(!controller.signal.aborted)setDocumentHTML(addPlaygroundBridge(addPreviewAssetClient(instrumentPreviewHTML(prepared,item.id,base),item.id,base),item.id));}).catch(error=>{if(!controller.signal.aborted&&error.name!=='AbortError'){setState('error');setMessage(error.message);}});return()=>controller.abort();},[item.id,src,attempt]);
@@ -19,8 +20,8 @@ export function Preview({item,theme='dark',width='desktop',config,onStatus,setti
 
  return <div className={'preview-stage '+(theme==='light'?'preview-light':'')}><div className={'preview-device device-'+width}>
  <iframe ref={frame} key={item.id+attempt+theme} title={'Preview interativo de '+item.name} srcDoc={documentHTML||undefined} sandbox="allow-scripts allow-downloads" allow="autoplay; clipboard-write"/>
- {state==='loading'&&<div className="preview-loading"><Loader2 className="spin"/><p>Preparando sua prévia</p><small>O componente já está sendo carregado.</small></div>}
+ {state==='loading'&&<div className="preview-loading" role="status"><Loader2 className="spin"/><p>Preparando sua prévia</p><small>O componente já está sendo carregado.</small></div>}
  {mediaError&&state!=='error'&&<div className='preview-media-warning' role='alert'>{mediaError}<button onClick={()=>setAttempt(v=>v+1)}>Tentar novamente</button></div>}
- {state==='error'&&<div className="preview-runtime-error" role="alert"><p>Não foi possível concluir o carregamento.</p><button className="button" onClick={()=>setAttempt(v=>v+1)}><RotateCcw size={14}/> Tentar novamente</button><details><summary>Detalhes técnicos</summary><code>{message.slice(0,400)}</code></details></div>}
- </div><button className="preview-refresh icon-button" title="Reiniciar preview" onClick={()=>setAttempt(v=>v+1)}><RefreshCw size={15}/></button>{state==='ready'&&<div className="preview-interaction-hint"><MousePointer2 size={11}/> {item.recoveryMode==='recorded-video'?'Reproduza a prévia':'Interaja com a prévia'}</div>}</div>;
+ {state==='error'&&<div className="preview-runtime-error" role="alert"><p>Não foi possível concluir o carregamento.</p><small>Você pode tentar novamente ou consultar os arquivos sem perder suas escolhas.</small><button className="button" onClick={()=>setAttempt(v=>v+1)}><RotateCcw size={14}/> Tentar novamente</button><div className="experience-actions">{onViewCode&&<button className="button" onClick={onViewCode}>Ver arquivos</button>}{onDownload&&<button className="button" onClick={onDownload}>Baixar pacote</button>}{item.video&&<button className="button" onClick={()=>setShowVideo(v=>!v)}>{showVideo?'Fechar vídeo':'Ver vídeo demonstrativo'}</button>}</div>{showVideo&&<div><p>Referência gravada, sem interação com o componente.</p><video className="preview-fallback-video" src={item.video} poster={item.image} controls muted playsInline preload="metadata"/></div>}<details><summary>Detalhes técnicos</summary><code>{message.slice(0,400)}</code></details></div>}
+ </div><button className="preview-refresh icon-button" title="Reiniciar preview" aria-label="Reiniciar preview" onClick={()=>setAttempt(v=>v+1)}><RefreshCw size={15}/></button>{state==='ready'&&<div className="preview-interaction-hint"><MousePointer2 size={11}/> {item.recoveryMode==='recorded-video'?'Reproduza a prévia':'Interaja com a prévia'}</div>}</div>;
 }

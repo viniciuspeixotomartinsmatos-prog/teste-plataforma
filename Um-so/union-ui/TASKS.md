@@ -81,3 +81,14 @@ Auth Modal and Hyper Text now have individual acceptance records, bringing this 
 - [x] Reduce Pixel to light severity and5% overall weight; increase SEO/indexability to30%; verify score and history behavior.
 - [x] Pass248 full regressions, focused UI/copy tests and production compilation.
 - [ ] Validate the new panel visually at desktop/mobile and production; chat browser became unavailable again.
+
+## November12 — authorized UX scope
+- [x] Restore library/collection query, filters, expanded list, view and card anchor after details; owner/session-scoped recent resources.
+- [x] Clear preview/source/reference labels; goal shortcuts, real framework filtering and active-filter removal.
+- [x] Integration guide with format/dependencies/declared license/limits and real prompt/source/download actions.
+- [x] Bounded retryable file errors and preview recovery alternatives preserving sandbox and access checks.
+- [x] Shared keyboard focus, drawer Tab/Escape/trigger restoration, mobile target sizing and reduced motion improvements.
+- [x] Real top-three audit corrections, impact/qualitative effort, copy prompts and measured same-URL history comparison.
+- [x]260 full regressions and20 affected regressions after collaborator merge; production compilation.
+- [ ] Browser visual desktop/mobile acceptance: authorized browser currently unavailable. No complete accessibility certification or actual-user research claimed.
+- [ ] Whole-catalog preview review: explicitly excluded from this task by user; no sweep executed.

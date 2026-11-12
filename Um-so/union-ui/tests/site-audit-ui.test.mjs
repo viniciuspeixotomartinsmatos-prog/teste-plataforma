@@ -32,6 +32,9 @@ test('audit UI filters and copies meaningful corrections, keeps owner-isolated h
   calls=[];globalThis.fetch=async(url,options)=>{calls.push({url,options});return url.endsWith('/site')?Response.json({site:fixture.site}):Response.json({lab:{source:'fixture',strategy:'mobile',scores:{performance:68},metrics:{lcp:4000},checks:[],reference:{},screenshot:'data:image/png;base64,YQ=='}});};
   await act(async()=>{set.call(input,'https://another.example');input.dispatchEvent(new window.Event('input',{bubbles:true}));});
   await click(button('Analisar de novo'));assert.equal(calls.length,2);assert.equal(JSON.parse(calls[0].options.body).url,'https://example.com/');assert.equal(JSON.parse(localStorage.getItem('nitido:site-audit:v1:one'))[0].lab.screenshot,'data:image/png;base64,YQ==');
+  await click(button('Analisar de novo'));
+  const runs=JSON.parse(localStorage.getItem('nitido:site-audit:v1:one')).filter(row=>row.site.url==='https://example.com/');
+  assert.equal(runs.length,2);assert.ok(runs.every(row=>row.lab));assert.match(document.body.textContent,/Nota anterior:/);assert.match(document.body.textContent,/não comprovam efeito causal/);
   await click(button('Histórico'));await click(button('example.com'));assert.equal(document.querySelector('.rx-phone img').getAttribute('src'),'data:image/png;base64,YQ==');
   await act(async()=>root.render(React.createElement(SiteAuditPage,{owner:'two',navigate:()=>{}})));await click(button('Histórico'));assert.match(document.body.textContent,/Nenhuma análise salva/);assert.ok(!document.body.textContent.includes('example.com'));
   globalThis.fetch=(_url,{signal})=>new Promise((_,reject)=>{signal.addEventListener('abort',()=>reject(new DOMException('Canceled','AbortError')));});
