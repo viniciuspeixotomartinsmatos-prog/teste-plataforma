@@ -32,3 +32,24 @@ node scripts/runtime-audit/build.mjs --start=360 --limit=150
 ```
 
 A rota é `/tools/runtime-audit/index.html`; exige sessão. O relatório traz faixa, commit, hash do catálogo e hashes do documento bruto e preparado. Preserve o hash do catálogo ou refaça a fila por ID. `passed` nessa ferramenta significa apenas triagem. Para aceitação completa, confira página real, aparência desktop/mobile, interações aplicáveis com entrada real, prompt e clipboard, conteúdo e execução do ZIP e publicação autenticada. Resultados ausentes continuam pendentes.
+
+## Continuação em 12 de novembro
+
+O commit `44c2fea92` contém 10.697 entradas. A comparação por ID e SHA-256 do HTML permitiu reaproveitar 329 aprovações de triagem. A fila restante tem 10.368 entradas, incluindo as 40 pendências anteriores. O [checkpoint versionado](../reports/catalog-sweep-checkpoint-2026-11-12.json) registra os resultados obtidos até a data de gravação. O inventário e a triagem visual são etapas da auditoria integral.
+
+O modo `--sweep` usa o mesmo servidor e a mesma sessão sintética das prévias. O servidor grava checkpoints JSONL em disco a cada cinco itens. Ao reabrir a fila, o navegador recupera os IDs já processados. Quando a prévia fica pronta, o diagnóstico mede a largura e o conteúdo que ultrapassa a área visível em 960 px e 390 px. Esses valores orientam a revisão visual.
+
+Para reproduzir a retomada, passe os quatro relatórios anteriores para `queue.mjs` e gere a fila com `build.mjs`.
+
+```sh
+node scripts/runtime-audit/queue.mjs var/catalog-remaining.json reports/catalog-runtime-batch-0000-0060-2026-11-11.json reports/catalog-runtime-batch-0060-0210-2026-11-11.json reports/catalog-runtime-batch-0210-0360-2026-11-11.json reports/catalog-priority-audit-2026-11-11.json
+node scripts/runtime-audit/build.mjs var/catalog-remaining.json --sweep
+```
+
+`serve.mjs` recebe a raiz do build, a pasta dos checkpoints e a porta local. A credencial da conta sintética vem de `NITIDO_AUDIT_PASSWORD`. Depois de entrar na rota de auditoria, use **Iniciar revisão**. Após completar a fila, `?retry=1` reabre os casos pendentes com uma prévia por vez. `packages.mjs` recebe o endereço local, o JSON de IDs e um caminho JSONL para verificar rota HTTP, geração de prompt e estrutura do ZIP com o exportador do app. `--retry-failures` permite repetir registros com erro. A execução das prévias extraídas e a conferência de clipboard continuam tarefas próprias.
+
+O endpoint local devolveu `401` sem sessão, `200` com sessão, `403` para escrita de origem externa e `400` para ID inválido. Os 29 testes focados de prévias, formulários e exportação passaram.
+
+A [varredura estática de 12 de novembro](../reports/catalog-static-inventory-2026-11-12.jsonl) encontrou os 10.697 documentos esperados, sem arquivos ausentes ou inválidos nas verificações do inventário. A revisão isolada de Glyph Matrix confirmou prévia vazia durante o carregamento e a exibição do botão **Tentar novamente** após o prazo.
+
+O commit do colaborador `771b5bb57` acrescentou 21st Auth Modal e Hyper Text. A comparação das listas confirmou que os 10.697 registros anteriores permaneceram iguais. Os dois novos itens passaram pela conferência de arquivos no [complemento do inventário](../reports/catalog-static-delta-2026-11-12.json), totalizando 10.699 registros estáticos conferidos. As evidências de navegador do colaborador estão nos relatórios de [Auth Modal](../reports/21st-auth-modal-acceptance-2026-11-12.json) e [Hyper Text](../reports/21st-hyper-text-acceptance-2026-11-12.json).

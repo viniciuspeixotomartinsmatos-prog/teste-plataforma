@@ -10,6 +10,7 @@ export function runtimeAuditProbe(id){
  addEventListener('unhandledrejection',event=>errors.push(String(event.reason?.message||event.reason)));
  const scopes=()=>{const result=[document.body];for(let i=0;i<result.length;i++)for(const node of result[i]?.querySelectorAll('*')||[])if(node.shadowRoot)result.push(node.shadowRoot);return result.filter(Boolean);};
  const all=selector=>scopes().flatMap(scope=>[...scope.querySelectorAll(selector)]);
+ const layout=()=>({width:innerWidth,height:innerHeight,scrollWidth:document.documentElement.scrollWidth,scrollHeight:document.documentElement.scrollHeight});
  function pixels(canvas){try{const context=canvas.getContext('2d');if(!context)return {gpu:true};const w=canvas.width,h=canvas.height;if(!w||!h)return {empty:true};let signature=0,lit=0;for(let y=0;y<8;y++)for(let x=0;x<8;x++){const rgba=context.getImageData(Math.floor(x*w/8),Math.floor(y*h/8),1,1).data;signature=(signature*31+rgba[0]*3+rgba[1]*5+rgba[2]*7+rgba[3])>>>0;if(rgba[3]&&(rgba[0]+rgba[1]+rgba[2]>15))lit++;}return {signature,lit};}catch{return {unreadable:true};}}
  function interact(){
   const canvas=all('canvas').find(node=>node.getBoundingClientRect().width>2);
@@ -31,8 +32,14 @@ export function runtimeAuditProbe(id){
   if((images.some(image=>!image.complete)||videos.some(video=>!video.error&&(video.readyState<2||!advanced(video)&&performance.now()-videoSamples.get(video).at<1500)))&&performance.now()-started<12000)return setTimeout(inspect,150);
   finished=true;
   const after=interaction.kind==='canvas'?pixels(interaction.node):interaction.kind==='tab'?interaction.node.getAttribute('aria-selected'):null;
-  parent.postMessage({type:'nitido:runtime-audit',id,errors:[...new Set(errors)],requests,images:images.map(image=>({src:safeURL(image.currentSrc||image.src),loaded:image.complete&&image.naturalWidth>0})),videos:videos.map(video=>({loaded:video.readyState>=2,advanced:advanced(video),before:videoSamples.get(video).time,time:video.currentTime,width:video.videoWidth,height:video.videoHeight,error:Boolean(video.error),errorCode:video.error?.code,errorMessage:video.error?.message,src:safeURL(video.currentSrc||video.src),capabilities:capabilities(video)})),canvases:all('canvas').map(canvas=>({width:canvas.width,height:canvas.height,...pixels(canvas)})),svg:all('svg').filter(node=>node.getBoundingClientRect().width>0).length,text:(document.body?.innerText||'').trim().slice(0,160),interaction:{kind:interaction.kind,before:interaction.before,after,changed:interaction.kind==='tab'?after!==interaction.before:interaction.kind==='canvas'&&interaction.before.signature!==undefined&&after.signature!==undefined?after.signature!==interaction.before.signature:null}},'*');
+  parent.postMessage({type:'nitido:runtime-audit',id,layout:layout(),errors:[...new Set(errors)],requests,images:images.map(image=>({src:safeURL(image.currentSrc||image.src),loaded:image.complete&&image.naturalWidth>0})),videos:videos.map(video=>({loaded:video.readyState>=2,advanced:advanced(video),before:videoSamples.get(video).time,time:video.currentTime,width:video.videoWidth,height:video.videoHeight,error:Boolean(video.error),errorCode:video.error?.code,errorMessage:video.error?.message,src:safeURL(video.currentSrc||video.src),capabilities:capabilities(video)})),canvases:all('canvas').map(canvas=>({width:canvas.width,height:canvas.height,...pixels(canvas)})),svg:all('svg').filter(node=>node.getBoundingClientRect().width>0).length,text:(document.body?.innerText||'').trim().slice(0,160),interaction:{kind:interaction.kind,before:interaction.before,after,changed:interaction.kind==='tab'?after!==interaction.before:interaction.kind==='canvas'&&interaction.before.signature!==undefined&&after.signature!==undefined?after.signature!==interaction.before.signature:null}},'*');
  }
- addEventListener('message',event=>{if(event.source===parent&&event.data?.type==='nitido:audit-inspect'&&event.data.id===id)setTimeout(inspect,300);});
+ addEventListener('message',event=>{
+  if(event.source!==parent||event.data?.id!==id)return;
+  if(event.data.type==='nitido:audit-inspect')setTimeout(inspect,300);
+  if(event.data.type==='nitido:audit-layout')setTimeout(()=>{
+   parent.postMessage({type:'nitido:audit-layout-result',id,layout:layout()},'*');
+  },300);
+ });
  setTimeout(inspect,28000);
 }
