@@ -1,0 +1,86 @@
+{
+  "catalogCommit": "771b5bb57",
+  "catalogSha256": "2ba59702c04ba2ffcf6e6b1859ce695fe6ea5fde2ee15da56de3fe44422e24b8",
+  "published": 10699,
+  "baseStaticInventory": "catalog-static-inventory-2026-11-12.jsonl",
+  "items": [
+    {
+      "id": "21st-release-20038",
+      "name": "Auth Modal",
+      "route": "/component/auth-modal-903445",
+      "preview": "/previews/runtime/21st-release-20038.html",
+      "sha256": "ae5bbf39f800416d9c70203703e284c2acd7edb0a6580fa6b19a33b6c6885610",
+      "files": [
+        {
+          "url": "/previews/runtime/21st-release-20038.html",
+          "sha256": "ae5bbf39f800416d9c70203703e284c2acd7edb0a6580fa6b19a33b6c6885610",
+          "bytes": 7777
+        },
+        {
+          "url": "/previews/runtime/21st-release-20038.light.html",
+          "sha256": "73d2434164183eaeb9ad129b7f92769c85061ddebd48c4b685b16f2d3f6e5694",
+          "bytes": 7780
+        },
+        {
+          "url": "/code/runtime/21st-release-20038.json",
+          "sha256": "6d3261743ace9c37d9556f39fe9f1102b7af3e622cf7a340d8f01082831bdaff",
+          "bytes": 26102
+        },
+        {
+          "url": "/assets/releases/21st/87cebc962b97e8479d525c23.png",
+          "sha256": "487c2ac97afd8efd8aa4d941c9614000ba6bb9c76c0f26984846c1342300dfaf",
+          "bytes": 39446
+        },
+        {
+          "url": "/assets/preview.css",
+          "sha256": "7f23caac2a7389729f57389d8b92ecdbae5d23144ef0482b0d89a527fe5e09c5",
+          "bytes": 1293148
+        },
+        {
+          "url": "/previews/runtime/a8fde7c86416b186ef0d2d3b.js",
+          "sha256": "d29d464c63fe63e68390fc02b76a18f9372ee0277e977b0891a116160c68605b",
+          "bytes": 380008
+        }
+      ]
+    },
+    {
+      "id": "21st-release-19242",
+      "name": "Hyper Text",
+      "route": "/component/hyper-text-5d519b",
+      "preview": "/previews/runtime/21st-release-19242.html",
+      "sha256": "ca81052d934e3f0371aa2418036307a3d11c20a25cbc72451ec751ec38ef2429",
+      "files": [
+        {
+          "url": "/previews/runtime/21st-release-19242.html",
+          "sha256": "ca81052d934e3f0371aa2418036307a3d11c20a25cbc72451ec751ec38ef2429",
+          "bytes": 7749
+        },
+        {
+          "url": "/previews/runtime/21st-release-19242.light.html",
+          "sha256": "228d5f03e0355ed693795444b330bcfdaf6ee0b21d3e9cc11c118da0ca8d92c8",
+          "bytes": 7752
+        },
+        {
+          "url": "/code/runtime/21st-release-19242.json",
+          "sha256": "37bdf6165cc7178fd46845d5f90fa715c08fb301feca157240cdf312fe5c1505",
+          "bytes": 3419
+        },
+        {
+          "url": "/assets/releases/21st/882048acc87f69cb78afa901.png",
+          "sha256": "bde6950817ce29938d93162f76207ff761bd6e7321b95b81fe10d8105e902995",
+          "bytes": 53421
+        },
+        {
+          "url": "/assets/preview.css",
+          "sha256": "7f23caac2a7389729f57389d8b92ecdbae5d23144ef0482b0d89a527fe5e09c5",
+          "bytes": 1293148
+        },
+        {
+          "url": "/previews/runtime/5d1ac5d5b8646a1e1cf70d6b.js",
+          "sha256": "9117fbd8b994360525c0438fd4d2c684033662cea07dab857e6677d15173fb24",
+          "bytes": 228866
+        }
+      ]
+    }
+  ]
+}
