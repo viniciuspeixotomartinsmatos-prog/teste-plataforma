@@ -60,8 +60,8 @@ export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientF
    else if(route==='/api/billing/subscription'&&request.method==='GET'){
     const user=await requireUser();response=json({subscription:billing.config.enabled?await readPaddleSubscription(client,user.id,billing.config.environment):null,billingMode:billing.config.mode});
    }
-   else if(/^\/api\/site-audit\/(site|lab)$/.test(route)&&request.method==='POST'){
-    const user=await requireUser();response=json({ok:true,[route.endsWith('/site')?'site':'lab']:await auditor.run(route.endsWith('/site')?'site':'lab',user,await body(),{signal:request.signal})});
+   else if(/^\/api\/site-audit\/(site|lab|render)$/.test(route)&&request.method==='POST'){
+    const user=await requireUser();response=json({ok:true,[route.split('/').at(-1)]:await auditor.run(route.split('/').at(-1),user,await body(),{signal:request.signal})});
    }
    else if(route==='/api/privacy/export'&&request.method==='GET'){
     const user=await requireUser();response=json(await exportPersonalData(user,client,{requiresBillingLedger:billing.config.requiresSubscription}));

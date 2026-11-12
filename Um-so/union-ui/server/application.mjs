@@ -114,7 +114,7 @@ export async function createApplication(options={}){
    if(route==='/api/plans')return json({plans:PLANS,mode,available:Boolean(stripe&&Object.values(prices).every(Boolean))});
    if(route==='/api/access'){const current=await session(request);return json(access(current?.user));}
    if(request.method!=='GET'&&request.headers.get('origin')!==origin)throw fail(403,'Origem não autorizada.');
-   if(/^\/api\/site-audit\/(site|lab)$/.test(route)&&request.method==='POST'){const user=await requireUser(request);const kind=route.endsWith('/site')?'site':'lab';return json({ok:true,[kind]:await (options.auditor||siteAuditService).run(kind,user,await readJSONObject(request),{signal:request.signal})});}
+   if(/^\/api\/site-audit\/(site|lab|render)$/.test(route)&&request.method==='POST'){const user=await requireUser(request);const kind=route.split('/').at(-1);return json({ok:true,[kind]:await (options.auditor||siteAuditService).run(kind,user,await readJSONObject(request),{signal:request.signal})});}
    if(route==='/api/privacy/export'&&request.method==='GET'){
     const user=await requireUser(request),workspace=db.prepare('SELECT revision,data,updated_at FROM workspace WHERE user_id=?').get(user.id);
     const sharedCollections=db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='collection_share'").get()?db.prepare('SELECT collection_id AS collectionId,created_at AS createdAt FROM collection_share WHERE user_id=?').all(user.id):[];

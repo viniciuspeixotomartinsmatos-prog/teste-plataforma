@@ -113,7 +113,8 @@
   ],
   "functions": {
     "api/index.js": {
-      "maxDuration": 90
+      "maxDuration": 90,
+      "includeFiles": "node_modules/@sparticuz/chromium/bin/**"
     }
   }
 }
