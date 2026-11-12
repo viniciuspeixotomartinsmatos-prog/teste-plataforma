@@ -232,5 +232,31 @@
     "previewSha256": "1e5d970dd1c5459a52226a9aa9242cff527ab6653e322ce243ebfff03d004ccb",
     "notes": "Authenticated loopback, opaque iframe. Toggled settings, saw unsaved state, discarded, toggled again, saved and saw Changes saved plus disabled save action. No account settings were changed. Source SVG illustrations render; no network API in either component source. Prompt copy confirmed; actual browser ZIP downloaded and exact source files/notices checked. Source code and separate illustration notices preserved. Form compatibility dispatches local submit handlers without enabling sandbox forms.",
     "errors": []
+  },
+  {
+    "id": "21st-release-20038",
+    "startupVerified": true,
+    "visualConfirmed": true,
+    "interactionVerified": true,
+    "mediaVerified": true,
+    "promptVerified": true,
+    "downloadVerified": true,
+    "checkedAt": "2026-11-12T15:07:00.433Z",
+    "previewSha256": "ae5bbf39f800416d9c70203703e284c2acd7edb0a6580fa6b19a33b6c6885610",
+    "notes": "Authorized opaque-frame review: actual animated modal rendered. Required/invalid email blocks callback; valid email click and Enter emit explicit demo status. All five provider callbacks tested without external authentication. Tab/Shift+Tab contain focus, Escape closes and restores trigger focus; close button labelled. Generated integration prompt copied, actual ZIP downloaded/unzipped and original acquisition plus all adapted source files verified byte-for-byte. Only a frontend demonstration; not real OAuth/email authentication. Original source and adaptation notes retained.",
+    "errors": []
+  },
+  {
+    "id": "21st-release-19242",
+    "startupVerified": true,
+    "visualConfirmed": true,
+    "interactionVerified": true,
+    "mediaVerified": true,
+    "promptVerified": true,
+    "downloadVerified": true,
+    "checkedAt": "2026-11-12T15:09:35.718Z",
+    "previewSha256": "ca81052d934e3f0371aa2418036307a3d11c20a25cbc72451ec751ec38ef2429",
+    "notes": "Authorized opaque-frame browser review. Actual text rendered; pointer entry scrambled characters and then restored exact original text. No image/video assets are required by this text effect. Generated integration prompt copied and actual browser ZIP downloaded/unzipped; all source files preserved exact with notices. Source unchanged. Screenshot and measured text states retained in the scoped report.",
+    "errors": []
   }
 ]
