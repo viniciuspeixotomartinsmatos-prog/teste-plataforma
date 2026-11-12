@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {JSDOM} from 'jsdom';
 import * as compiler from 'esbuild';
-import {preparePreviewAssets,createPreviewAssetResponder,addPreviewAssetClient} from '../src/preview-assets.js';
+import {preparePreviewAssets,createPreviewAssetResponder,addPreviewAssetClient,adaptTurbopackChunk} from '../src/preview-assets.js';
 import {injectDemoAssets} from '../src/demo-asset-bridge.js';
 import fs from 'node:fs/promises';
 
@@ -119,4 +119,34 @@ test('retained Turbopack chunks keep their original identity when classic script
  const source='(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,[]]);window.literal="document.currentScript";';
  const html=await preparePreviewAssets('<html><head><script defer src="/previews/demo/chunk.js"></script></head><body></body></html>','https://app.example/previews/demo/index.html',{fetcher:async()=>new Response(source,{headers:{'content-type':'text/javascript'}})});
  const dom=new JSDOM(html,{runScripts:'dangerously'});try{await new Promise(resolve=>dom.window.document.addEventListener('DOMContentLoaded',resolve,{once:true}));assert.equal(dom.window.TURBOPACK[0][0],'https://app.example/previews/demo/chunk.js');assert.equal(dom.window.literal,'document.currentScript');}finally{dom.window.close();}
+});
+
+test('Next runtime startup resolves retained chunk registrations before enabling controls',async()=>{
+ const chunk='(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,123,()=>{}]);';
+ // Model the real runtime contract: string identities are already relative;
+ // registrations resolve the same chunk keys requested by runtime entries.
+ const runtime='(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,{otherChunks:["static/chunks/control.js"]}]);let base="/_next/";let registered=new Set(TURBOPACK.filter(r=>typeof r[1]==="number").map(r=>base+r[0]));let startup=TURBOPACK.find(r=>r[1]?.otherChunks);if(startup[1].otherChunks.every(p=>registered.has(base+p))){document.getElementById("control").onclick=()=>document.getElementById("result").textContent="interactive";}';
+ const root='https://app.example/previews/recovered/demos/example/_next/';
+ const html=await preparePreviewAssets('<html><head><script defer src="'+root+'static/chunks/control.js"></script><script defer src="'+root+'static/chunks/runtime.js"></script></head><body><button id="control">Test</button><p id="result"></p></body></html>',root+'../index.html',{fetcher:async url=>new Response(String(url).endsWith('control.js')?chunk:runtime,{headers:{'content-type':'text/javascript'}})});
+ const dom=new JSDOM(html,{runScripts:'dangerously'});
+ try{await new Promise(resolve=>dom.window.document.addEventListener('DOMContentLoaded',resolve,{once:true}));dom.window.document.getElementById('control').click();assert.equal(dom.window.document.getElementById('result').textContent,'interactive');assert.equal(dom.window.TURBOPACK[0][0],'static/chunks/control.js');}finally{dom.window.close();}
+});
+
+test('Next metadata and router use a hierarchical retained base without changing path tests',()=>{
+ const url='https://app.example/previews/recovered/demos/example/_next/static/chunks/bootstrap.js';
+ const source='globalThis.TURBOPACK=[];function metadata(){let e=document.currentScript;if(!(e instanceof HTMLScriptElement))throw Error("Expected document.currentScript");return new URL(e.src).pathname.indexOf("/_next/");}let base="/_next/";const router=new URL("/page","undefined"==typeof window?"http://n":window.location.href);window.proof={index:metadata(),base,router:router.href};';
+ const adapted=adaptTurbopackChunk(source,url);
+ const dom=new JSDOM('<base href="https://app.example/previews/example/index.html"><script>'+adapted+'</script>',{runScripts:'dangerously'});
+ try{assert.ok(dom.window.proof.index>0);assert.equal(dom.window.proof.base,'/previews/recovered/demos/example/_next/');assert.equal(dom.window.proof.router,'https://app.example/page');assert.equal(dom.window.document.querySelectorAll('script[src]').length,0);}finally{dom.window.close();}
+});
+
+test('dynamic Turbopack blobs preserve chunk identity and never register their blob URL',async()=>{
+ const source='(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,12,()=>{}]);';
+ const base='https://app.example/previews/recovered/demos/example/index.html',created=[];
+ const dom=new JSDOM(addPreviewAssetClient('<html><head></head><body></body></html>','dynamic',base),{url:base,runScripts:'dangerously',beforeParse(w){
+  w.TextDecoder=TextDecoder;w.Blob=Blob;
+  w.URL.createObjectURL=blob=>{created.push(blob);return 'blob:null/dynamic';};w.URL.revokeObjectURL=()=>{};
+  w.postMessage=data=>{if(data.type!=='preview:asset')return;queueMicrotask(()=>w.dispatchEvent(new w.MessageEvent('message',{source:w,data:{type:'preview:asset-result',id:'dynamic',requestId:data.requestId,status:200,mime:'text/javascript',bytes:new TextEncoder().encode(source).buffer}})));};
+ }});
+ try{const script=dom.window.document.createElement('script');script.src='/previews/recovered/demos/example/_next/static/chunks/dynamic.js';await new Promise(resolve=>setTimeout(resolve,20));assert.equal(created.length,1);const retained=await created[0].text();dom.window.eval(retained);assert.equal(dom.window.TURBOPACK[0][0],'static/chunks/dynamic.js');assert.equal(script.src,'blob:null/dynamic');}finally{dom.window.close();}
 });

@@ -1,0 +1,537 @@
+{
+  "checkedAt": "2026-11-12T15:42:07.873Z",
+  "scope": "Retry of the existing eleven incomplete template captures only; isolated output in ignored var/template-captures, no published capture/registry overwritten. Public static GET only with existing pinned DNS, redirect, TLS, file/count/byte limits. No authentication/402 access restriction bypass.",
+  "records": [
+    {
+      "id": 1185,
+      "name": "Bistro - Shadcn UI Restaurant Template",
+      "status": "needs-validation",
+      "originalDemoUrl": "https://shadcnstudio.com/preview/templates/shadcn-nextjs-bistro-landing-page",
+      "files": 152,
+      "bytes": 40156586,
+      "errors": [
+        {
+          "url": "https://www.googletagmanager.com/gtm.js",
+          "error": "O site respondeu com erro HTTP 400."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/typeof.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPrimitive.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPropertyKey.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/defineProperty.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/asyncIterator.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/OverloadYield.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/objectSpread2.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/usingCtx.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/wrapAsyncGenerator.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/awaitAsyncGenerator.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://emoji.slack-edge.com/T0CAQ00TU/parrot-vercel/305a638fce8642f5.gif",
+          "error": "O site respondeu com erro HTTP 404."
+        }
+      ]
+    },
+    {
+      "id": 1183,
+      "name": "Ink - Shadcn UI Blog Template",
+      "status": "needs-validation",
+      "originalDemoUrl": "https://shadcnstudio.com/preview/templates/shadcn-nextjs-ink-landing-page",
+      "files": 152,
+      "bytes": 35676927,
+      "errors": [
+        {
+          "url": "https://www.googletagmanager.com/gtm.js",
+          "error": "O site respondeu com erro HTTP 400."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/typeof.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPropertyKey.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPrimitive.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/defineProperty.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/objectSpread2.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/usingCtx.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/awaitAsyncGenerator.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/asyncIterator.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/OverloadYield.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/wrapAsyncGenerator.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://emoji.slack-edge.com/T0CAQ00TU/parrot-vercel/305a638fce8642f5.gif",
+          "error": "O site respondeu com erro HTTP 404."
+        }
+      ]
+    },
+    {
+      "id": 1184,
+      "name": "Track - Shadcn UI Changelog Template",
+      "status": "needs-validation",
+      "originalDemoUrl": "https://shadcnstudio.com/preview/templates/shadcn-nextjs-track-landing-page",
+      "files": 152,
+      "bytes": 32141639,
+      "errors": [
+        {
+          "url": "https://www.googletagmanager.com/gtm.js",
+          "error": "O site respondeu com erro HTTP 400."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPrimitive.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/typeof.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/defineProperty.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPropertyKey.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/objectSpread2.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/OverloadYield.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/usingCtx.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/asyncIterator.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/wrapAsyncGenerator.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/awaitAsyncGenerator.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://emoji.slack-edge.com/T0CAQ00TU/parrot-vercel/305a638fce8642f5.gif",
+          "error": "O site respondeu com erro HTTP 404."
+        }
+      ]
+    },
+    {
+      "id": 1182,
+      "name": "Zolt - Shadcn UI Portfolio Template",
+      "status": "needs-validation",
+      "originalDemoUrl": "https://shadcn-nextjs-zolt-landing-page.vercel.app/",
+      "files": 122,
+      "bytes": 12098727,
+      "errors": [
+        {
+          "url": "https://shadcn-nextjs-zolt-landing-page.vercel.app/px.png",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://shadcn-nextjs-zolt-landing-page.vercel.app/py.png",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://shadcn-nextjs-zolt-landing-page.vercel.app/nx.png",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://shadcn-nextjs-zolt-landing-page.vercel.app/ny.png",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://shadcn-nextjs-zolt-landing-page.vercel.app/nz.png",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://shadcn-nextjs-zolt-landing-page.vercel.app/pz.png",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/typeof.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/defineProperty.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPrimitive.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPropertyKey.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/objectSpread2.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/usingCtx.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/asyncIterator.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/awaitAsyncGenerator.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/OverloadYield.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/wrapAsyncGenerator.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://emoji.slack-edge.com/T0CAQ00TU/parrot-vercel/305a638fce8642f5.gif",
+          "error": "O site respondeu com erro HTTP 404."
+        }
+      ]
+    },
+    {
+      "id": 1355,
+      "name": "Koira",
+      "status": "retained",
+      "originalDemoUrl": "https://koira.diarmuradi.com/",
+      "files": 147,
+      "bytes": 5652235,
+      "errors": []
+    },
+    {
+      "id": 1342,
+      "name": "Dashboard 4",
+      "status": "needs-validation",
+      "originalDemoUrl": "https://efferd.com/view/dashboard-4",
+      "files": 240,
+      "bytes": 14204751,
+      "errors": [
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/typeof.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPropertyKey.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPrimitive.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/defineProperty.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/usingCtx.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/objectSpread2.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/asyncIterator.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/awaitAsyncGenerator.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/wrapAsyncGenerator.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/OverloadYield.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://emoji.slack-edge.com/T0CAQ00TU/parrot-vercel/305a638fce8642f5.gif",
+          "error": "O site respondeu com erro HTTP 404."
+        }
+      ]
+    },
+    {
+      "id": 1360,
+      "name": "Portfolio template",
+      "status": "needs-validation",
+      "originalDemoUrl": "https://www.harshvirani.dev",
+      "files": 49,
+      "bytes": 5018515,
+      "errors": [
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/typeof.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPropertyKey.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPrimitive.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/defineProperty.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/objectSpread2.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/usingCtx.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/asyncIterator.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/awaitAsyncGenerator.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/OverloadYield.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/wrapAsyncGenerator.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://emoji.slack-edge.com/T0CAQ00TU/parrot-vercel/305a638fce8642f5.gif",
+          "error": "O site respondeu com erro HTTP 404."
+        }
+      ]
+    },
+    {
+      "id": 1356,
+      "name": "Craft Beer Product Landing Page Template",
+      "status": "blocked",
+      "files": 0,
+      "bytes": 0,
+      "reason": "O site respondeu com erro HTTP 402.",
+      "errors": []
+    },
+    {
+      "id": 1352,
+      "name": "Design Studio Website Template",
+      "status": "blocked",
+      "files": 0,
+      "bytes": 0,
+      "reason": "O site respondeu com erro HTTP 402.",
+      "errors": []
+    },
+    {
+      "id": 1353,
+      "name": "Motoko Base — Production-Ready Next.js SaaS Starter",
+      "status": "needs-validation",
+      "originalDemoUrl": "https://base.motokoui.com",
+      "files": 63,
+      "bytes": 5380497,
+      "errors": [
+        {
+          "url": "https://client.crisp.chat/aiz-core.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/typeof.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPropertyKey.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPrimitive.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/defineProperty.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/asyncIterator.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/OverloadYield.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/objectSpread2.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/wrapAsyncGenerator.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/usingCtx.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/awaitAsyncGenerator.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://emoji.slack-edge.com/T0CAQ00TU/parrot-vercel/305a638fce8642f5.gif",
+          "error": "O site respondeu com erro HTTP 404."
+        }
+      ]
+    },
+    {
+      "id": 1350,
+      "name": "Cerio Labs",
+      "status": "needs-validation",
+      "originalDemoUrl": "https://cerio-ai.vercel.app/",
+      "files": 24,
+      "bytes": 4535597,
+      "errors": [
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPrimitive.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/typeof.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPropertyKey.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/defineProperty.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/asyncIterator.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/usingCtx.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/objectSpread2.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/OverloadYield.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/wrapAsyncGenerator.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://vercel.live/node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/awaitAsyncGenerator.js",
+          "error": "O site respondeu com erro HTTP 404."
+        },
+        {
+          "url": "https://emoji.slack-edge.com/T0CAQ00TU/parrot-vercel/305a638fce8642f5.gif",
+          "error": "O site respondeu com erro HTTP 404."
+        }
+      ]
+    }
+  ],
+  "browser": {
+    "templateId": 1182,
+    "initial": "Source HTML, images and first paint appeared while controls remained inert. This was not functional acceptance.",
+    "repair": "Aligned Next Turbopack registration keys and local chunk base for inline and dynamic blob scripts; supplied detached source metadata to appBootstrap; resolved the initial router URL against document.baseURI inside srcdoc.",
+    "controlsVerified": [
+      "Design System Setup selects and enables Next step",
+      "Next step opens Choose Time / Step 2 of 3 calendar",
+      "Toggle theme changes html to dark",
+      "Design Systems accordion expands",
+      "Original rotating heading and timer run"
+    ],
+    "limitation": "Later resource failure remains. Template has not passed all controls, prompt/download, navigation or backend acceptance and is NOT published. Browser console history contains errors from earlier failed attempts; no clean-run claim.",
+    "screenshot": "var/audits/zolt-hydrated-controls.png"
+  },
+  "publication": {
+    "acceptedEntries": 20,
+    "remainingCandidates": 148,
+    "additionalTemplatesPending": 11,
+    "commit": "771b5bb577c2c6533e39cda9738534872f95263a",
+    "deploymentId": "dpl_DfGdthQ5YFWq65BRfhjVqbeWNx6Y",
+    "deploymentStatus": "READY",
+    "productionAuthVerified": true,
+    "productionScreenshot": "var/audits/release-20-production.png"
+  },
+  "tests": {
+    "command": "npm test",
+    "passed": 243,
+    "failed": 0,
+    "skipped": 0
+  },
+  "noSourceNews": true,
+  "billingDisabled": true
+}

@@ -7,6 +7,27 @@ export function previewAssetURL(value,base){
 const escapeScript=text=>text.replace(/<\/script/gi,'<\\/script');
 const mimeFor=url=>({woff2:'font/woff2',woff:'font/woff',ttf:'font/ttf',svg:'image/svg+xml',png:'image/png',webp:'image/webp',avif:'image/avif',jpg:'image/jpeg',jpeg:'image/jpeg',gif:'image/gif',mp4:'video/mp4',webm:'video/webm',js:'text/javascript',mjs:'text/javascript'}[new URL(url).pathname.split('.').pop()]||'application/octet-stream');
 
+export function adaptTurbopackChunk(code,value){
+ const url=new URL(value);
+ if(!code.includes('TURBOPACK'))return code;
+   const marker=url.pathname.lastIndexOf('/_next/');
+   // Next's runtime treats a string registration as a chunk-relative identity.
+   // An absolute URL here leaves its startup dependency promises unresolved.
+   const identity=marker<0?url.href:decodeURIComponent(url.pathname.slice(marker+7));
+   code=code.replace(/(\["object"\s*==\s*typeof document\s*\?)document\.currentScript(\s*:\s*void 0)/g,(_match,before,after)=>before+JSON.stringify(identity)+after);
+   if(marker>=0){
+    const chunkBase=url.pathname.slice(0,marker+7);
+    // A srcdoc document has no hierarchical location URL. Next's router
+    // must resolve its initial canonical path against the retained base.
+    code=code.replaceAll('"undefined"==typeof window?"http://n":window.location.href','"undefined"==typeof window?"http://n":document.baseURI');
+    code=code.replace(/(\b(?:let|const|var)\s+[\w$]+\s*=\s*)(["'])\/_next\/\2/g,(_match,before)=>before+JSON.stringify(chunkBase));
+    // appBootstrap separately reads currentScript.src to derive its asset
+    // prefix. Supply detached metadata; never append or fetch another script.
+    if(code.includes('Expected document.currentScript'))code=code.replace(/(\b(?:let|const|var)\s+[\w$]+\s*=\s*)document\.currentScript(?=[,;])/g,(_match,before)=>before+'(()=>{const metadata=document.createElement("script");Object.defineProperty(metadata,"src",{value:'+JSON.stringify(url.href)+'});return metadata;})()');
+   }
+ return code;
+}
+
 // Read protected resources in the authenticated parent. The iframe keeps its
 // opaque origin and receives executable HTML without anonymous script imports.
 export async function preparePreviewAssets(html,base,{fetcher=fetch,compiler,signal}={}){
@@ -29,7 +50,7 @@ export async function preparePreviewAssets(html,base,{fetcher=fetch,compiler,sig
  }
  for(const match of [...html.matchAll(/<script\b([^>]*?)src=["']([^"']+)["']([^>]*)>\s*<\/script>/gi)]){
   const url=previewAssetURL(match[2],base);if(!url)continue;const module=/type\s*=\s*["']module["']/i.test(match[1]+match[3]);const compiled=module?await bundle(url.href):{code:await text(url.href)};
-  if(!module&&compiled.code.includes('TURBOPACK'))compiled.code=compiled.code.replace(/(\["object"\s*==\s*typeof document\s*\?)document\.currentScript(\s*:\s*void 0)/g,(_match,before,after)=>before+JSON.stringify(url.href)+after);
+  if(!module)compiled.code=adaptTurbopackChunk(compiled.code,url.href);
   const deferred=(module||/\bdefer\b/i.test(match[1]+match[3]))&&!compiled.module;
   const code=deferred?`(()=>{const run=()=>{${compiled.code}\n};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run,{once:true});else run();})();`:compiled.code;
   html=html.replace(match[0],()=> (compiled.css?'<style>'+compiled.css.replace(/<\/style/gi,'<\\/style')+'</style>':'')+'<script'+(compiled.module?' type="module"':'')+'>'+escapeScript(code)+'</script>');
@@ -47,14 +68,14 @@ export function createPreviewAssetResponder(frame,id,base,fetcher=fetch){
  };
 }
 
-export function installPreviewAssetClient(id,base){
+export function installPreviewAssetClient(id,base,adaptChunk){
  const pending=new Map();let counter=0;const origin=new URL(base).origin;
  const local=value=>{try{const url=new URL(String(value),base);return url.origin===origin&&/^\/(?:assets|previews|demos|tools-runtime|avatars|mist)\//.test(url.pathname)?url.href:null;}catch{return null;}};
  const request=url=>new Promise((resolve,reject)=>{const requestId=String(++counter),timer=setTimeout(()=>{pending.delete(requestId);reject(Error('Tempo limite ao carregar recurso da prévia.'));},30000);pending.set(requestId,{resolve,reject,timer});parent.postMessage({type:'preview:asset',id,requestId,url},'*');});
  addEventListener('message',event=>{const data=event.data;if(event.source!==parent||data?.type!=='preview:asset-result'||data.id!==id)return;const entry=pending.get(data.requestId);if(!entry)return;pending.delete(data.requestId);clearTimeout(entry.timer);if(data.error)entry.reject(Error(data.error));else entry.resolve(data);});
  const nativeFetch=window.fetch?.bind(window);if(nativeFetch)window.fetch=async(input,options)=>{const url=local(input?.url||input),method=options?.method||input?.method||'GET';if(!url||!['GET','HEAD'].includes(method.toUpperCase()))return nativeFetch(input,options);const resource=await request(url);return new Response(resource.bytes,{status:resource.status,headers:{'content-type':resource.mime}});};
  const nativeSet=Element.prototype.setAttribute,nativeRemove=Element.prototype.removeAttribute,assigned=new WeakMap(),blobs=new WeakMap(),loading=new WeakMap();
- function assign(node,name,value){const url=local(value);if(!url)return nativeSet.call(node,name,value);let attributes=assigned.get(node);if(!attributes)assigned.set(node,attributes={});if(attributes[name]===url)return;attributes[name]=url;const work=request(url).then(resource=>{if(attributes[name]!==url)return;if(resource.status<200||resource.status>=300)throw Error('Mídia da prévia indisponível.');let nodeBlobs=blobs.get(node);if(!nodeBlobs)blobs.set(node,nodeBlobs={});const previous=nodeBlobs[name];if(previous)URL.revokeObjectURL(previous);const blob=URL.createObjectURL(new Blob([resource.bytes],{type:resource.mime}));nodeBlobs[name]=blob;if(node.tagName==='IMG'&&name==='src'){nativeRemove.call(node,'srcset');for(const source of node.closest('picture')?.querySelectorAll('source')||[])nativeRemove.call(source,'srcset');}nativeSet.call(node,name,blob);}).catch(()=>{nativeSet.call(node,name,value);});loading.set(node,work);}
+ function assign(node,name,value){const url=local(value);if(!url)return nativeSet.call(node,name,value);let attributes=assigned.get(node);if(!attributes)assigned.set(node,attributes={});if(attributes[name]===url)return;attributes[name]=url;const work=request(url).then(resource=>{if(attributes[name]!==url)return;if(resource.status<200||resource.status>=300)throw Error('Mídia da prévia indisponível.');let nodeBlobs=blobs.get(node);if(!nodeBlobs)blobs.set(node,nodeBlobs={});const previous=nodeBlobs[name];if(previous)URL.revokeObjectURL(previous);const bytes=node.tagName==='SCRIPT'&&adaptChunk?adaptChunk(new TextDecoder().decode(resource.bytes),url):resource.bytes;const blob=URL.createObjectURL(new Blob([bytes],{type:resource.mime}));nodeBlobs[name]=blob;if(node.tagName==='IMG'&&name==='src'){nativeRemove.call(node,'srcset');for(const source of node.closest('picture')?.querySelectorAll('source')||[])nativeRemove.call(source,'srcset');}nativeSet.call(node,name,blob);}).catch(()=>{nativeSet.call(node,name,value);});loading.set(node,work);}
  Element.prototype.setAttribute=function(name,value){if(name==='srcset'&&this.tagName==='IMG'&&assigned.has(this)){nativeRemove.call(this,name);return;}if((name==='src'||name==='poster')&&/^(IMG|VIDEO|AUDIO|SOURCE|SCRIPT)$/.test(this.tagName)&&local(value)){assign(this,name,value);return;}return nativeSet.call(this,name,value);};
  for(const Type of [HTMLImageElement,HTMLMediaElement,HTMLSourceElement,HTMLScriptElement]){const descriptor=Object.getOwnPropertyDescriptor(Type.prototype,'src');if(descriptor?.set)Object.defineProperty(Type.prototype,'src',{...descriptor,set(value){if(local(value))assign(this,'src',value);else descriptor.set.call(this,value);}});}
  const decode=HTMLImageElement.prototype.decode;if(decode)HTMLImageElement.prototype.decode=function(...args){return Promise.resolve(loading.get(this)).then(()=>decode.apply(this,args));};
@@ -62,4 +83,4 @@ export function installPreviewAssetClient(id,base){
  new MutationObserver(records=>{for(const record of records)if(record.type==='attributes')inspect(record.target);else for(const node of record.addedNodes)if(node.nodeType===1)inspect(node);}).observe(document.documentElement,{childList:true,subtree:true,attributes:true,attributeFilter:['src','poster']});
 }
 
-export function addPreviewAssetClient(html,id,base){const script='<script data-preview-assets>('+installPreviewAssetClient.toString()+')('+JSON.stringify(id).replace(/</g,'\\u003c')+','+JSON.stringify(base).replace(/</g,'\\u003c')+');</script>';return html.replace(/<head(?:\s[^>]*)?>/i,match=>match+script);}
+export function addPreviewAssetClient(html,id,base){const script='<script data-preview-assets>('+installPreviewAssetClient.toString()+')('+JSON.stringify(id).replace(/</g,'\\u003c')+','+JSON.stringify(base).replace(/</g,'\\u003c')+','+adaptTurbopackChunk.toString()+');</script>';return html.replace(/<head(?:\s[^>]*)?>/i,match=>match+script);}

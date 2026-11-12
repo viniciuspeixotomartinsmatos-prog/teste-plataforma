@@ -69,8 +69,8 @@ Detailed requirements and asset limits: `docs/cosmic-login-request.md`. This rem
 - [x] Complete six-part acceptance for16 CSS themes and2 Illos frontend examples; preserve exact source/download notices.
 - [x] Repair terminal HSL declarations in the theme demo adapter; retain original CSS.
 - [x] Run real form submission in the opaque preview without enabling native sandbox forms; add validity/cancellation/keyboard regressions.
-- [ ] Finish final combined regression and Git/Vercel publication for this18-item group.
-- [ ] Accept remaining150 staged candidates individually; resolve11 additional template captures. These are not completed by the18-item group.
+- [x] Finish final combined regression and Git/Vercel publication for the18-item group; production route verified.
+- [ ] Accept remaining148 staged candidates individually; resolve11 additional template captures. Twenty accepted entries are now published and their release is READY.
 
 18-item group release:236/236 tests and production build passed; actual integrated component route preview/form/prompt/ZIP acceptance passed locally. Git publication and Vercel confirmation follow. Full backlog remains open.
 
