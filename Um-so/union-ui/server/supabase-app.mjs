@@ -74,7 +74,7 @@ export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientF
     const data=check(await client.auth.updateUser({data:{name:input.name.trim()}}));response=json({user:profile(data.user)});
    }
    else if(route==='/api/privacy/delete'&&request.method==='POST'){
-    const user=await requireUser();response=json(await deletePersonalAccount(user,client,await body(),{logger:securityLogger}));
+    const user=await requireUser();response=json(await deletePersonalAccount(user,client,await body(),{logger:securityLogger,requiresBillingLedger:billing.config.enabled||billing.config.requiresSubscription}));
    }
    else if(route==='/api/auth/callback'&&request.method==='GET'){
     if(!url.searchParams.get('code'))throw fail(400,'Link inválido ou expirado. Solicite um novo link.');

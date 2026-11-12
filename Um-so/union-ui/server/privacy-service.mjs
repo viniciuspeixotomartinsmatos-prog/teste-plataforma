@@ -17,7 +17,7 @@ export async function exportPersonalData(user,client,{requiresBillingLedger=fals
  if(community.error&&!['42883','PGRST202','42P01'].includes(community.error.code))throw fail(503,'Não foi possível exportar os envios à comunidade.','privacy_export_unavailable');
  return{community:community.data||null,creatorWorkspace:creator.data||null,sharedCollections,version:1,exportedAt:new Date().toISOString(),account:{id:user.id,email:user.email,name:user.user_metadata?.name||'',createdAt:user.created_at,emailConfirmedAt:user.email_confirmed_at},workspace:workspace.data||{revision:0,data:{saved:[],collections:[]}},subscriptions:subscriptions.data||[],scope:'Dados de conta, coleções, compartilhamentos, perfil de criador, rascunhos e assinaturas armazenados por esta aplicação. Projetos locais deste navegador e registros mantidos por operadores possuem canais próprios de acesso.'};
 }
-export async function deletePersonalAccount(user,client,input,{env=process.env,fetchImpl=fetch,logger=console.info}={}){
+export async function deletePersonalAccount(user,client,input,{env=process.env,fetchImpl=fetch,logger=console.info,requiresBillingLedger=true}={}){
  if(input.confirmation!=='EXCLUIR'||typeof input.password!=='string'||!input.password||input.password.length>1024)throw fail(400,'Digite EXCLUIR e confirme sua senha atual.','deletion_confirmation_required');
  // Never partially erase an account before the operator has verified cascading
  // ownership, billing records, session revocation and backup retention remotely.
@@ -25,7 +25,10 @@ export async function deletePersonalAccount(user,client,input,{env=process.env,f
  // Sandbox entries and superseded ledger rows are not current live obligations.
  // Remote provider/ledger consistency still needs verification before activation.
  const subscription=await client.from('paddle_subscriptions').select('status').eq('user_id',user.id).eq('environment','live').eq('is_current',true).in('status',['active','trialing','past_due','paused']).limit(1);
- if(subscription.error)throw fail(503,'Não foi possível verificar suas assinaturas.','deletion_billing_unavailable');
+ // A never-provisioned ledger is compatible with explicitly disabled billing.
+ // Permission errors, unknown failures and enabled billing must still fail closed.
+ const ledgerAbsent=['42P01','PGRST205'].includes(subscription.error?.code);
+ if(subscription.error&&(requiresBillingLedger||!ledgerAbsent))throw fail(503,'Não foi possível verificar suas assinaturas.','deletion_billing_unavailable');
  if(subscription.data?.length)throw fail(409,'Cancele a renovação e conclua as pendências da assinatura antes de excluir a conta.','active_subscription');
  const verified=await client.auth.signInWithPassword({email:user.email,password:input.password});
  if(verified.error||verified.data?.user?.id!==user.id)throw fail(401,'Senha atual incorreta.','reauthentication_required');

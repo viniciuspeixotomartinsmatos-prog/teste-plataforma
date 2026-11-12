@@ -122,3 +122,10 @@ test('local account data export, correction and deletion preserve ownership and 
   assert.equal((await app.handle(own('/api/privacy/export'))).status,401);assert.equal(app.db.prepare('SELECT count(*) AS count FROM user').get().count,0);
  }finally{app.close();await fs.rm(directory,{recursive:true,force:true});}
 });
+
+test('disabled billing tolerates only an absent deletion ledger; enabled billing and permission errors fail closed',async()=>{
+ const env={ACCOUNT_DELETION_READY:'true',SUPABASE_SERVICE_ROLE_KEY:'test-only',SUPABASE_URL:'https://mock.supabase.co'},input={password:'Strong password!123',confirmation:'EXCLUIR'};
+ function fixture(code){const value=clientFixture(),original=value.client.from.bind(value.client);value.client.from=table=>table==='paddle_subscriptions'?{select(){return this;},eq(){return this;},in(){return this;},limit:async()=>({error:{code}})}:original(table);return value;}
+ for(const code of ['42P01','PGRST205']){const one=fixture(code);const result=await deletePersonalAccount(one.user,one.client,input,{env,requiresBillingLedger:false,logger:()=>{},fetchImpl:async()=>new Response('{}')});assert.equal(result.deleted,true);const two=fixture(code);await assert.rejects(deletePersonalAccount(two.user,two.client,input,{env,requiresBillingLedger:true}),{code:'deletion_billing_unavailable'});assert.equal(two.calls.length,0);}
+ const denied=fixture('42501');await assert.rejects(deletePersonalAccount(denied.user,denied.client,input,{env,requiresBillingLedger:false}),{code:'deletion_billing_unavailable'});assert.equal(denied.calls.length,0);
+});

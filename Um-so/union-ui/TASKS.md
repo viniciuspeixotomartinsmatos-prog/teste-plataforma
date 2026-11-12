@@ -92,3 +92,9 @@ Auth Modal and Hyper Text now have individual acceptance records, bringing this 
 - [x]260 full regressions and20 affected regressions after collaborator merge; production compilation.
 - [ ] Browser visual desktop/mobile acceptance: authorized browser currently unavailable. No complete accessibility certification or actual-user research claimed.
 - [ ] Whole-catalog preview review: explicitly excluded from this task by user; no sweep executed.
+
+## November12 active items1–4 acceptance
+- [x] Implement independent raster scene depth, adaptive paint resolution and lifecycle/failure protections; focused pixel/React checks pass.
+- [x] Implement authenticated original-public-JavaScript computed-design capture; production capture200 with448 observed Eco Park elements and explicit partial coverage.
+- [x] Implement contextual structure + existing local LSA/visual recommendations with actual catalog IDs and integration prompts; six production-evidence recommendations verified.
+- [ ] Complete final desktop/mobile visual, performance, zoom/touch/keyboard and published main-flow acceptance. Authorized browser remains unavailable for this chat despite re-enable report. This also prevents closing all device acceptance for the scene. See PROGRESS.md; do not claim all1–4 complete.
