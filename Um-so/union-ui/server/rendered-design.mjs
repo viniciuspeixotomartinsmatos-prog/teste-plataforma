@@ -30,7 +30,7 @@ export async function launchDesignBrowser(){
 export async function renderDesign(value,{signal,fetcher=fetchPublicSite,launch=launchDesignBrowser,limits=renderLimits}={}){
  const controller=new AbortController(),abort=()=>controller.abort();signal?.addEventListener('abort',abort,{once:true});
  const timer=setTimeout(abort,limits.timeoutMs);if(signal?.aborted)abort();
- let browser,context,requests=0,bytes=0,blocked=0;const failures=[],errors=[];
+ let browser,context,requests=0,bytes=0,reservedBytes=0,blocked=0;const failures=[],errors=[];
  const stop=()=>{void context?.close().catch(()=>{});};controller.signal.addEventListener('abort',stop,{once:true});
  try{
   const initial=await fetcher(publicSiteURL(value).href,{signal:controller.signal,maxBytes:limits.perResource,timeoutMs:8000});
@@ -43,14 +43,20 @@ export async function renderDesign(value,{signal,fetcher=fetchPublicSite,launch=
   await context.setOffline(true);
   await context.routeWebSocket('**/*',socket=>socket.close());
   await context.route('**/*',async route=>{
+   let reservation=0;
    try{
     const target=allowedRenderRequest(route.request(),main);if(!target||controller.signal.aborted||requests>=limits.requests){blocked++;return await route.abort();}
+    reservation=Math.min(limits.perResource,limits.bytes-bytes-reservedBytes);
+    if(reservation<=0){blocked++;return await route.abort();}
+    reservedBytes+=reservation;
     requests++;
-    const response=target.href===main.href?initial:await fetcher(target.href,{signal:controller.signal,maxBytes:limits.perResource,timeoutMs:6000});
-    bytes+=response.body.length;if(bytes>limits.bytes)throw Error('Limite de recursos da captura atingido.');
+    const response=target.href===main.href?initial:await fetcher(target.href,{signal:controller.signal,maxBytes:reservation,timeoutMs:6000});
+    if(response.body.length>reservation)throw Error('Limite de recursos da captura atingido.');
+    bytes+=response.body.length;
     const headers=Object.fromEntries(Object.entries(response.headers).filter(([key])=>['content-type','content-security-policy','x-content-type-options','access-control-allow-origin','access-control-allow-methods','cross-origin-resource-policy'].includes(key)).map(([key,value])=>[key,String(value)]));
     await route.fulfill({status:response.status,headers,body:response.body});
    }catch(error){failures.push(String(error.code||error.message).slice(0,100));await route.abort().catch(()=>{});}
+   finally{reservedBytes-=reservation;}
   });
   const page=await context.newPage();page.on('pageerror',error=>{if(errors.length<8)errors.push(String(error.message).slice(0,200));});
   await page.goto(main.href,{waitUntil:'domcontentloaded',timeout:18000});

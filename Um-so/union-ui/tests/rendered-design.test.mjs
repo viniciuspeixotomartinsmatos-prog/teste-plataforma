@@ -35,3 +35,15 @@ test('render endpoint remains authenticated and Origin-protected in production a
  assert.equal((await app.handle(req(origin))).status,401);user={id:'owner'};assert.equal((await app.handle(req('https://evil.example'))).status,403);
  const response=await app.handle(req(origin));assert.equal(response.status,200);assert.equal(calls,1);assert.equal((await response.json()).render.url,main.href);
 });
+
+test('parallel render resources reserve the remaining byte budget before fetching',async()=>{
+ let handler;const relayed=[];
+ const route=url=>({request:()=>request(url),abort:async()=>{},fulfill:async()=>{}});
+ const page={on(){},goto:async()=>{await handler(route(main.href));await Promise.all(['a.js','b.js','c.js'].map(name=>handler(route(new URL(name,main).href))));},waitForLoadState:async()=>{},evaluate:async fn=>fn.name==='sampleRenderedDesign'?{sampledElements:1,scope:'fixture'}:null};
+ const context={setOffline:async()=>{},routeWebSocket:async()=>{},route:async(_pattern,callback)=>{handler=callback;},newPage:async()=>page,close:async()=>{}};
+ const result=await renderDesign(main.href,{limits:{requests:8,bytes:100,perResource:60,timeoutMs:1000,nodes:1},launch:async()=>({newContext:async()=>context,close:async()=>{}}),fetcher:async(url,options)=>{
+  if(url===main.href)return {url,status:200,headers:{'content-type':'text/html'},body:Buffer.alloc(10)};
+  relayed.push(options.maxBytes);await new Promise(resolve=>setImmediate(resolve));return {url,status:200,headers:{'content-type':'application/javascript'},body:Buffer.alloc(options.maxBytes)};
+ }});
+ assert.deepEqual(relayed,[60,30]);assert.equal(result.coverage.bytes,100);assert.equal(result.coverage.blocked,1);
+});
