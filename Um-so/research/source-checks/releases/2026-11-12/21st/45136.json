@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 45136,
+    "name": "Sketchy Blueprint Text",
+    "description": "An interactive, hand-drawn SVG blueprint typography component built with React, Tailwind CSS, and Framer Motion.",
+    "previewUrl": "https://cdn.21st.dev/daiwiikharihar/sketchy-blueprint-text/default/preview.1794392110922-6c7f5d4d-9679-4871-b4af-7d394a44138c.webp",
+    "videoUrl": "https://cdn.21st.dev/daiwiikharihar/sketchy-blueprint-text/default/video.1794392110922-6c7f5d4d-9679-4871-b4af-7d394a44138c.mp4",
+    "author": "daiwiikharihar",
+    "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_332oxzW8MyPod4IDIdKq9rbPYuk/avatar.jpeg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/daiwiikharihar/sketchy-blueprint-text?api_key=REDACTED\"",
+    "url": "https://21st.dev/@daiwiikharihar/components/sketchy-blueprint-text"
+  },
+  "requestedRoute": "/@daiwiikharihar/components/sketchy-blueprint-text",
+  "checkedAt": "2026-11-12T21:14:50.379Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 45136,
+    "componentId": 26100,
+    "authorUserId": "user_332oxzW8MyPod4IDIdKq9rbPYuk",
+    "name": "Sketchy Blueprint Text",
+    "demoName": "Default",
+    "description": "An interactive, hand-drawn SVG blueprint typography component built with React, Tailwind CSS, and Framer Motion.",
+    "previewUrl": "https://cdn.21st.dev/daiwiikharihar/sketchy-blueprint-text/default/preview.1794392110922-6c7f5d4d-9679-4871-b4af-7d394a44138c.webp",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/daiwiikharihar/sketchy-blueprint-text?api_key=REDACTED\"",
+    "componentCode": "// components/SketchyBlueprintText.tsx\n\"use client\";\nimport { motion } from \"framer-motion\";\n\nconst words = [\n    { text: \"Be\", size: \"text-5xl sm:text-6xl\", rotate: -2 },\n    { text: \"ENOUGH\", size: \"text-6xl sm:text-7xl\", rotate: 1 },\n    { text: \"FOR\", size: \"text-5xl sm:text-6xl\", rotate: -1 },\n    { text: \"YOURSELF\", size: \"text-5xl sm:text-6xl\", rotate: 1.5 },\n    { text: \"First\", size: \"text-5xl sm:text-6xl\", rotate: -2 },\n];\n\nexport default function SketchyBlueprintText() {\n    return (\n        <div className=\"relative flex flex-col items-center justify-center p-8 sm:p-16 bg-slate-50 dark:bg-[#070c1b] border border-slate-200 dark:border-blue-950/60 rounded-3xl shadow-xl dark:shadow-[0_0_50px_rgba(14,165,233,0.06)] overflow-hidden transition-colors duration-500 w-full max-w-2xl mx-auto\">\n            {/* Background Architectural Grid Pattern */}\n            <div className=\"absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none\" />\n\n            {/* SVG Filter for Hand-Drawn Pencil Boil Effect */}\n            <svg className=\"hidden\">\n                <defs>\n                    <filter id=\"pencil-sketch\">\n                        <feTurbulence\n                            type=\"fractalNoise\"\n                            baseFrequency=\"0.04\"\n                            numOctaves=\"3\"\n                            result=\"noise\"\n                        />\n                        <feDisplacementMap\n                            in=\"SourceGraphic\"\n                            in2=\"noise\"\n                            scale=\"3.5\"\n                            xChannelSelector=\"R\"\n                            yChannelSelector=\"G\"\n                        />\n                    </filter>\n                </defs>\n            </svg>\n\n            <div\n                style={{ filter: \"url(#pencil-sketch)\" }}\n                className=\"relative z-10 flex flex-col items-center space-y-3 sm:space-y-4 select-none w-full\"\n            >\n                {words.map((item, idx) => (\n                    <motion.div\n                        key={idx}\n                        initial={{ opacity: 0, y: 20, scale: 0.9, rotate: item.rotate + 3 }}\n                        animate={{ opacity: 1, y: 0, scale: 1, rotate: item.rotate }}\n                        whileHover={{\n                            scale: 1.06,\n                            rotate: 0,\n                            transition: { type: \"spring\", stiffness: 400, damping: 12 }\n                        }}\n                        whileTap={{ scale: 0.96 }}\n                        transition={{\n                            delay: idx * 0.15,\n                            type: \"spring\",\n                            stiffness: 220,\n                            damping: 14,\n                        }}\n                        className=\"relative px-6 py-1 cursor-pointer group text-center\"\n                    >\n                        {/* Architectural Drafting Construction Lines */}\n                        <motion.span\n                            initial={{ scaleX: 0 }}\n                            animate={{ scaleX: 1 }}\n                            transition={{ delay: idx * 0.15 + 0.2, duration: 0.6, ease: \"easeOut\" }}\n                            className=\"absolute inset-x-0 top-0 h-[2px] bg-blue-600/30 dark:bg-cyan-400/40 origin-left group-hover:bg-blue-600 dark:group-hover:bg-cyan-400 transition-colors duration-300\"\n                        />\n                        <motion.span\n                            initial={{ scaleX: 0 }}\n                            animate={{ scaleX: 1 }}\n                            transition={{ delay: idx * 0.15 + 0.25, duration: 0.6, ease: \"easeOut\" }}\n                            className=\"absolute inset-x-0 bottom-0 h-[2px] bg-blue-600/30 dark:bg-cyan-400/40 origin-right group-hover:bg-blue-600 dark:group-hover:bg-cyan-400 transition-colors duration-300\"\n                        />\n                        <span className=\"absolute inset-y-0 left-2 w-[1.5px] bg-blue-600/20 dark:bg-cyan-400/20\" />\n                        <span className=\"absolute inset-y-0 right-2 w-[1.5px] bg-blue-600/20 dark:bg-cyan-400/20\" />\n\n                        {/* Sketchy Blue/Cyan Typography */}\n                        <span\n                            className={`block font-black tracking-tight text-blue-700 dark:text-cyan-400 ${item.size} drop-shadow-[2px_3px_0px_rgba(37,99,235,0.15)] dark:drop-shadow-[2px_3px_0px_rgba(6,182,212,0.25)] transition-colors duration-300`}\n                        >\n                            {item.text}\n                        </span>\n                    </motion.div>\n                ))}\n            </div>\n        </div>\n    );\n}",
+    "demoCode": "// This is a file with a demo for your component\n// That's what users will see in the preview\n// Create new files in this directory to add more demos\n\nimport SketchyBlueprintText from \"@/components/ui/sketchy-blueprint-text\";\n\n// ONLY DEFAULT EXPORT WILL BE TREATED AS A DEMO\nexport default function DemoOne() {\n  return (\n    <main className=\"min-h-screen w-full bg-[#ECECEC] dark:bg-[#05070E] transition-colors duration-500 flex flex-col md:flex-row items-center justify-center gap-8 p-4 sm:p-8\">\n      <SketchyBlueprintText /> \n    </main>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": "user_332oxzW8MyPod4IDIdKq9rbPYuk"
+  }
+}

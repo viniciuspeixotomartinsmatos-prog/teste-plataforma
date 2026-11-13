@@ -1,0 +1,215 @@
+{
+  "checkedAt": "2026-11-12T21:18:45.564Z",
+  "scope": "Public original registry source only; no rendering, interaction, media or portable-export acceptance.",
+  "published": 0,
+  "records": [
+    {
+      "source": "aceternity",
+      "name": "burn-carousel",
+      "url": "https://ui.aceternity.com/registry/burn-carousel.json",
+      "status": "unavailable",
+      "reason": "HTTP_401",
+      "published": false
+    },
+    {
+      "source": "aceternity",
+      "name": "liquid-carousel",
+      "url": "https://ui.aceternity.com/registry/liquid-carousel.json",
+      "status": "unavailable",
+      "reason": "HTTP_401",
+      "published": false
+    },
+    {
+      "source": "aceternity",
+      "name": "pixel-prompt-button",
+      "url": "https://ui.aceternity.com/registry/pixel-prompt-button.json",
+      "status": "unavailable",
+      "reason": "HTTP_401",
+      "published": false
+    },
+    {
+      "source": "kokonut",
+      "name": "ai-attachment",
+      "url": "https://kokonutui.com/r/ai-attachment.json",
+      "status": "retained_unvalidated",
+      "sha256": "d091c2b8b2a58c152fb036b9d3e41b1515ec232dd922f935f2f8b984a9e37d1e",
+      "bytes": 15421,
+      "files": 1,
+      "published": false
+    },
+    {
+      "source": "kokonut",
+      "name": "ai-checkout",
+      "url": "https://kokonutui.com/r/ai-checkout.json",
+      "status": "retained_unvalidated",
+      "sha256": "5b00b9882d7c083b5ec012b588cb77aa9549fcfb70ca15046fd142bcdcafac0f",
+      "bytes": 18565,
+      "files": 1,
+      "published": false
+    },
+    {
+      "source": "kokonut",
+      "name": "ai-code-run",
+      "url": "https://kokonutui.com/r/ai-code-run.json",
+      "status": "retained_unvalidated",
+      "sha256": "42465a910301e29a1ebc4b2637334bd8e5b9c15ede6b1fee454b66717b6db446",
+      "bytes": 15122,
+      "files": 1,
+      "published": false
+    },
+    {
+      "source": "kokonut",
+      "name": "ai-connect",
+      "url": "https://kokonutui.com/r/ai-connect.json",
+      "status": "retained_unvalidated",
+      "sha256": "8d92730cc72e0e1050c0e405663faacdc995f62d5f49f0a97eaca0be31068794",
+      "bytes": 20961,
+      "files": 1,
+      "published": false
+    },
+    {
+      "source": "kokonut",
+      "name": "ai-handoff",
+      "url": "https://kokonutui.com/r/ai-handoff.json",
+      "status": "retained_unvalidated",
+      "sha256": "3a2bd8b019793f95f82299fa90dece2bb77c87846d4833f268fa3b6f56ccaf8c",
+      "bytes": 17534,
+      "files": 1,
+      "published": false
+    },
+    {
+      "source": "kokonut",
+      "name": "ai-order-status",
+      "url": "https://kokonutui.com/r/ai-order-status.json",
+      "status": "retained_unvalidated",
+      "sha256": "7469851b0adf731d4bbe23fd240a5ec6a3e61145cfe283c40e2bc7542ca5c246",
+      "bytes": 13899,
+      "files": 1,
+      "published": false
+    },
+    {
+      "source": "kokonut",
+      "name": "ai-schedule",
+      "url": "https://kokonutui.com/r/ai-schedule.json",
+      "status": "retained_unvalidated",
+      "sha256": "78f98ccca56350a0804c4a9259ed3ca0a2a8ab4f233789a4da5405639404d24e",
+      "bytes": 18527,
+      "files": 1,
+      "published": false
+    },
+    {
+      "source": "kokonut",
+      "name": "ai-send",
+      "url": "https://kokonutui.com/r/ai-send.json",
+      "status": "retained_unvalidated",
+      "sha256": "9254822086bc8bd156239a3ddbec140bc5fa8cc918d9a237a605bb617b49998c",
+      "bytes": 13466,
+      "files": 1,
+      "published": false
+    },
+    {
+      "source": "kokonut",
+      "name": "ai-tool-calls",
+      "url": "https://kokonutui.com/r/ai-tool-calls.json",
+      "status": "retained_unvalidated",
+      "sha256": "d7e5528c4c862c473aad82109a004342d17660c11910b4e37fffca3db4e5ee89",
+      "bytes": 12501,
+      "files": 1,
+      "published": false
+    },
+    {
+      "source": "kokonut",
+      "name": "empty-state",
+      "url": "https://kokonutui.com/r/empty-state.json",
+      "status": "retained_unvalidated",
+      "sha256": "227c37eeb0d7a42d32ebcda9d5a37cbfe1b55680b0d7a982f24de24b856be3db",
+      "bytes": 16048,
+      "files": 1,
+      "published": false
+    },
+    {
+      "source": "kokonut",
+      "name": "helpful-rating",
+      "url": "https://kokonutui.com/r/helpful-rating.json",
+      "status": "retained_unvalidated",
+      "sha256": "4f594e2043bb8dcd1696c2f28dc3830fb1c30012a0d84ca03412c8002c661862",
+      "bytes": 17568,
+      "files": 1,
+      "published": false
+    },
+    {
+      "source": "kokonut",
+      "name": "inline-alert",
+      "url": "https://kokonutui.com/r/inline-alert.json",
+      "status": "retained_unvalidated",
+      "sha256": "992ea38552375390f67e70ef36420f5f8211430e2b73aa896d99a89a581330c7",
+      "bytes": 18911,
+      "files": 1,
+      "published": false
+    },
+    {
+      "source": "kokonut",
+      "name": "promise-toast",
+      "url": "https://kokonutui.com/r/promise-toast.json",
+      "status": "retained_unvalidated",
+      "sha256": "50f566cabe6c824061fc31e259d89d292f4f8f4dba5811b81f45250ce65ea47f",
+      "bytes": 20029,
+      "files": 1,
+      "published": false
+    },
+    {
+      "source": "kokonut",
+      "name": "save-status",
+      "url": "https://kokonutui.com/r/save-status.json",
+      "status": "retained_unvalidated",
+      "sha256": "af0e7fdf88fecf62aff26dc49632687b24db606e308ff42c483a62d29c21559f",
+      "bytes": 14564,
+      "files": 1,
+      "published": false
+    },
+    {
+      "source": "magic",
+      "name": "code-comparison",
+      "url": "https://magicui.design/r/code-comparison.json",
+      "status": "retained_unvalidated",
+      "sha256": "c54641d916cf012a6956190969f5602bed74d13c3a114f67c3d6dba3261bedd1",
+      "bytes": 6992,
+      "files": 1,
+      "published": false,
+      "sourceChanged": true
+    },
+    {
+      "source": "magic",
+      "name": "magic-card",
+      "url": "https://magicui.design/r/magic-card.json",
+      "status": "retained_unvalidated",
+      "sha256": "5d7bf1dc21ed7d83dc61dc83ebd8934996d34a722b9aa18c7ae809a8ecac0398",
+      "bytes": 6604,
+      "files": 1,
+      "published": false,
+      "sourceChanged": true
+    },
+    {
+      "source": "magic",
+      "name": "magic-card-demo",
+      "url": "https://magicui.design/r/magic-card-demo.json",
+      "status": "retained_unvalidated",
+      "sha256": "b8e88d10acd21d25c92ffd944a366373c565a16e31fdbdf308c446153e003a1d",
+      "bytes": 2236,
+      "files": 1,
+      "published": false,
+      "sourceChanged": false
+    },
+    {
+      "source": "magic",
+      "name": "magic-card-demo-2",
+      "url": "https://magicui.design/r/magic-card-demo-2.json",
+      "status": "retained_unvalidated",
+      "sha256": "03b4abddfbabfece733c8210a91111d321d9509ec37eed8065c131df4aec0614",
+      "bytes": 5452,
+      "files": 1,
+      "published": false,
+      "sourceChanged": false
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "route": "/@alihamza91/components/dusk-crossing",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45072,
+      "name": "Dusk Crossing",
+      "description": "Pure CSS gradient background in the Silk Blend style, made with the 21st.dev Gradient Builder. 4-color palette (#8295D4, #4A7AE8, #FF6A00, #7E56C2). Features: film grain. A drop-in, zero-dependency React component for hero sections, cards, and page backgrounds.",
+      "previewUrl": "https://cdn.21st.dev/alihamza91/dusk-crossing/default/preview.1794324333457-04ef88bd-1762-4e08-b2cd-f9ad5be5fabd.webp",
+      "videoUrl": null,
+      "author": "alihamza91",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3FFpdySEWasaDxnJKRelu2qkAth/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/alihamza91/dusk-crossing?api_key=REDACTED\"",
+      "url": "https://21st.dev/@alihamza91/components/dusk-crossing"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@aloksivastava1025/components/astryx-alert-dialog",
+    "type": "component",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@aloksivastava1025/components/astryx-avatar-group-overflow",
+    "type": "component",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@aloksivastava1025/components/astryx-base-typeahead",
+    "type": "component",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@aloksivastava1025/components/astryx-bottom-sheet-switcher",
+    "type": "component",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@aloksivastava1025/components/astryx-breadcrumb-item",
+    "type": "component",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@aloksivastava1025/components/astryx-calendar",
+    "type": "component",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@aloksivastava1025/components/astryx-carousel",
+    "type": "component",
+    "status": "metadata_unresolved"
+  }
+]

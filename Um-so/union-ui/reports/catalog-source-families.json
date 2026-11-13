@@ -1,0 +1,627 @@
+{
+  "checkedAt": "2026-11-12T21:19:35.579Z",
+  "scope": "Source/package comparison only; no runtime-equivalence, authorship or license-clearance certification.",
+  "total": 10699,
+  "reviewed": 1875,
+  "exactGroups": 0,
+  "nearGroups": 69,
+  "groups": [],
+  "candidates": [
+    {
+      "fingerprint": "f386aa4604d9f2a7c598a96ddb0dd9eba2d958fbefe074227fa65c60002476f1",
+      "ids": [
+        "tailark-base-dusk-call-to-action-1",
+        "tailark-base-dusk-landing-5-landing-page",
+        "tailark-base-dusk-landing-9-landing-page",
+        "tailark-base-dusk-landing-1-landing-page",
+        "tailark-base-dusk-landing-7-landing-page",
+        "tailark-base-dusk-landing-3-landing-page"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "fd82ba8b8a7ea3589d9a43d7bf71a7d5ac993f0a7cf5dec101105ed9934d7124",
+      "ids": [
+        "tailark-base-dusk-call-to-action-2",
+        "tailark-base-dusk-landing-8-landing-page",
+        "tailark-base-dusk-landing-4-landing-page",
+        "tailark-base-dusk-landing-6-landing-page",
+        "tailark-base-dusk-landing-10-landing-page",
+        "tailark-base-dusk-landing-2-landing-page"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "32cac10e994ff0443fae255188655e7f8a3b944ccae18b2776c9126d34a681ab",
+      "ids": [
+        "tailark-base-dusk-content-4",
+        "tailark-radix-dusk-content-4"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "f7877b46ab08dd8b75ac00388093eed15e69572e76b3099c875f611e0e5b5bc6",
+      "ids": [
+        "tailark-base-dusk-content-3",
+        "tailark-radix-dusk-content-3"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "2cf39ab6bc116472cd35a57ade9b7eb80458968020e4337afa1fca0793132cb2",
+      "ids": [
+        "tailark-base-dusk-features-5",
+        "tailark-radix-dusk-features-5"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "d655e70d8bb76e160af56d3b854833a9580b3b20f713cb73506a3ae60b772c6d",
+      "ids": [
+        "tailark-base-dusk-features-6",
+        "tailark-radix-dusk-features-6"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "0074fb901a660111af574b612972fdbacaea183e169f2ff8740bb1373c196f59",
+      "ids": [
+        "tailark-base-dusk-hero-section-5-hero-video",
+        "tailark-base-dusk-landing-5-hero-video",
+        "tailark-base-dusk-landing-1-components-hero-video",
+        "tailark-radix-dusk-hero-section-5-hero-video",
+        "tailark-radix-dusk-landing-5-hero-video",
+        "tailark-radix-dusk-landing-1-components-hero-video"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "c21d14ff624b95de073c7db98c53e822e846ee1547af7cf1f4bcde3102dd4156",
+      "ids": [
+        "tailark-base-dusk-hero-section-5-logo-cloud",
+        "tailark-radix-dusk-hero-section-5-logo-cloud"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "5ffef2c4cd906ede3934fddd034671f4d29168fc7e7b46da537632ba68ef5f75",
+      "ids": [
+        "tailark-base-dusk-hero-section-4-logo-cloud",
+        "tailark-radix-dusk-hero-section-4-logo-cloud"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "d79a03fe24f0adf4dab039ce5becb1340ec0d80494dd82049529a84b7dbc56eb",
+      "ids": [
+        "tailark-base-dusk-hero-section-9-hero-section",
+        "tailark-base-dusk-hero-section-6-hero-section",
+        "tailark-base-dusk-hero-section-10-hero-section"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "ef42c7ffda716bb5ade1ec3d563136dc28e01e376048ccaae1d3a35dd1c0a9e3",
+      "ids": [
+        "tailark-base-dusk-hero-section-9-logo-cloud",
+        "tailark-base-dusk-hero-section-6-logo-cloud",
+        "tailark-base-dusk-hero-section-2-logo-cloud",
+        "tailark-radix-dusk-hero-section-9-logo-cloud",
+        "tailark-radix-dusk-hero-section-6-logo-cloud",
+        "tailark-radix-dusk-hero-section-2-logo-cloud"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "e1b8b258cd7497e9e0efb5c971708fea70f9470259252c1174302ed8818bb92b",
+      "ids": [
+        "tailark-base-dusk-hero-section-7-logo-cloud",
+        "tailark-radix-dusk-hero-section-7-logo-cloud"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "26434a19a5ab9eaf5816711a09dc68eb85b11c33bb0150c2d089a16c0efb441b",
+      "ids": [
+        "tailark-base-dusk-hero-section-10-logo-cloud",
+        "tailark-radix-dusk-hero-section-10-logo-cloud"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "e412e0c5821f8f572b523d0f2d87bcec9958ab4c661c74f71782b92991883159",
+      "ids": [
+        "tailark-base-dusk-logo-cloud-4",
+        "tailark-radix-dusk-logo-cloud-4"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "bfa87e3887ff06cf5a245512106720099a8df46e8be2f28beb0f64004ae444c9",
+      "ids": [
+        "tailark-base-dusk-logo-cloud-1",
+        "tailark-radix-dusk-logo-cloud-1"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "b78e4694300808b6ae0688c67a6a9a7f5133cea914b2205b9923fc9b4694d38d",
+      "ids": [
+        "tailark-base-dusk-logo-cloud-3",
+        "tailark-radix-dusk-logo-cloud-3"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "b1db578be4a1a6c17b4ffbd7f5c64ef53c2fefcf485f17843366dec2f2609b7d",
+      "ids": [
+        "tailark-base-dusk-logo-cloud-2",
+        "tailark-radix-dusk-logo-cloud-2"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "5add6af68fc57c836bebd7eedf0f796d5ab319dc5635491138de2ad7a1572e9f",
+      "ids": [
+        "tailark-base-dusk-stats-2",
+        "tailark-radix-dusk-stats-2"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "3ceaec15eb514598fe5f56c8eeb84d6b5eaf82d7293ed746eaaa7f135f802a44",
+      "ids": [
+        "tailark-base-dusk-team-2",
+        "tailark-radix-dusk-team-2"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "499c5047ca3f4e149d740fa0daa713b315f56cbcc7ee33f70591fb3f53f074b8",
+      "ids": [
+        "tailark-base-dusk-testimonials-1",
+        "tailark-base-dusk-landing-1-sections-testimonials"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "1c8c5a7a28b34a4eb0a8df0607c20c485df0c09cbdc1e906d9996ed4d39681bc",
+      "ids": [
+        "tailark-base-dusk-landing-5-logo-cloud",
+        "tailark-base-dusk-landing-1-components-logo-cloud",
+        "tailark-radix-dusk-landing-5-logo-cloud",
+        "tailark-radix-dusk-landing-1-components-logo-cloud"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "b96c13817878d4acecfdfae559d5d8fc925bb608df34528404a6ac6bc9f3ae86",
+      "ids": [
+        "tailark-base-mist-content-4",
+        "tailark-radix-mist-content-4"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "edb2f57f41d18c866a77c8a38b38c2f1c5d175897bdb37d312241a1a9c7f32e1",
+      "ids": [
+        "tailark-base-mist-content-3",
+        "tailark-radix-mist-content-3"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "266c1e2a4c64972215fbeaeabde382132e9aface199d85264730d484e37daece",
+      "ids": [
+        "tailark-base-mist-integrations-1",
+        "tailark-radix-mist-integrations-1"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "b65b07c1465e9f85e04a5e156a0a950ca395442b4c2b940433276494bea5e69f",
+      "ids": [
+        "tailark-base-mist-logo-cloud-1",
+        "tailark-radix-mist-logo-cloud-1"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "188f55260229200d7efcc8baeca6dfbae68e934cf7a5d3271df9c8cac9e8586e",
+      "ids": [
+        "tailark-base-mist-logo-cloud-2",
+        "tailark-radix-mist-logo-cloud-2"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "0e887029452c1e9abb5b47394118702535c965093428c2876a938d733d93a811",
+      "ids": [
+        "tailark-base-mist-stats-4",
+        "tailark-radix-mist-stats-4"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "b22edc45cfa1aaa06deb4cd95b123c40eceb1cd485fd9ab20fbf5bfbb9a22900",
+      "ids": [
+        "tailark-base-mist-stats-3",
+        "tailark-radix-mist-stats-3"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "bd728d566aac61ae13161676ff33ff26e83c30cad8c79aeea4dadc8325958e8e",
+      "ids": [
+        "tailark-base-mist-stats-2",
+        "tailark-radix-mist-stats-2"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "b718f2281bbccd2c5bf90cac699571b1d5b2f381dc21722bb01baec167bacc5b",
+      "ids": [
+        "tailark-base-mist-testimonials-5",
+        "tailark-radix-mist-testimonials-5"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "a55ed6b9799303ac1c3f74df97fdca11599a4c7be7c307740de539ca0fe23193",
+      "ids": [
+        "tailark-base-mist-testimonials-4",
+        "tailark-radix-mist-testimonials-4"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "9267a45a4a4d3e2672ad0ee590ef8e7f3fc3c85498eb85e0adac235b9c4bc4dd",
+      "ids": [
+        "tailark-base-mist-testimonials-1",
+        "tailark-radix-mist-testimonials-1"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "869aee3e314ea53d11778fec9a4067d7e9382585e692e27b21923d47aedb99cd",
+      "ids": [
+        "tailark-base-mist-testimonials-3",
+        "tailark-radix-mist-testimonials-3"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "967b4b762321ab54e91ed297d018555a6e78cbb9be22331ad776ee4c4063cfdc",
+      "ids": [
+        "tailark-base-mist-testimonials-2",
+        "tailark-radix-mist-testimonials-2"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "b439065d95098e83876ec891cbee835b1a4c8c3e71f1583858ebbd9d16ad3449",
+      "ids": [
+        "tailark-base-veil-content-1",
+        "tailark-radix-veil-content-1"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "fa52fe6330229721a3c9d4a19e49bdb22a92f1d3012a94a9f6d5e82f47f00b2e",
+      "ids": [
+        "tailark-base-veil-content-3",
+        "tailark-radix-veil-content-3"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "44bcfadcfb004f4d8ee735f8e739fe1a79a1f91a06acad93f6f371100d3b8b5f",
+      "ids": [
+        "tailark-base-veil-content-2",
+        "tailark-radix-veil-content-2"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "46b2ccbdb819aa09bd9518be0a95e291196c358104da2e8a3267abdab19c5773",
+      "ids": [
+        "tailark-base-veil-faqs-5",
+        "tailark-base-veil-faqs-1",
+        "tailark-base-veil-faqs-3",
+        "tailark-base-veil-faqs-2"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "f0746357e52b4b34e5f7b8aef1a63961c843cdbcdab1db89487809818455a940",
+      "ids": [
+        "tailark-base-veil-logo-cloud-1",
+        "tailark-radix-veil-logo-cloud-1"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "2aa81b402f94221fce75138982fe6617d6106044dc361648dba06d3ee667cb37",
+      "ids": [
+        "tailark-base-veil-logo-cloud-2",
+        "tailark-radix-veil-logo-cloud-2"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "c09b621fc88819d3f7e7665c1854ae51807a6cd18b144cea1ec43e1af808afd4",
+      "ids": [
+        "tailark-base-veil-stats-4",
+        "tailark-radix-veil-stats-4"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "8b98aae582ef686f3c54d7d52b67f77d23b4a43f8b9c55a8da45690fb629c79f",
+      "ids": [
+        "tailark-base-veil-stats-1",
+        "tailark-radix-veil-stats-1"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "7c7df610f51361a8684436c2f3866495de9caf4c6ab7dba90e9aef569d8939c0",
+      "ids": [
+        "tailark-base-veil-stats-3",
+        "tailark-radix-veil-stats-3"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "a6b05e07f4ecd4155783f20967753b7a286f1913c9d55d25798b7fd0260c892b",
+      "ids": [
+        "tailark-base-veil-stats-2",
+        "tailark-radix-veil-stats-2"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "d63c18c1e21fba609d670066addbe9c4037b8f2fff61be114edb4975fd051fdf",
+      "ids": [
+        "tailark-base-veil-team-1",
+        "tailark-radix-veil-team-1"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "4a0a2f6867fa67ec8cec25b5cbc6b391e982ffe5b62dc4a587cc96a2fa5624af",
+      "ids": [
+        "tailark-base-veil-team-2",
+        "tailark-radix-veil-team-2"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "14c1c836fa746471cf44d1e6d5a3adae2fd48165c843cb6048c611dcf6fdf95f",
+      "ids": [
+        "tailark-base-veil-testimonials-4",
+        "tailark-radix-veil-testimonials-4"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "8cceab3fbf582a68c5cf6abb535d0b40c718db0732e27987849f240fd0a9e014",
+      "ids": [
+        "tailark-base-veil-testimonials-3",
+        "tailark-radix-veil-testimonials-3"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "64e5760b72c6a0ae5714749c093cc0289520884c8d7059128f5c5817efc0cedb",
+      "ids": [
+        "tailark-radix-dusk-call-to-action-1",
+        "tailark-radix-dusk-landing-5-landing-page",
+        "tailark-radix-dusk-landing-9-landing-page",
+        "tailark-radix-dusk-landing-1-landing-page",
+        "tailark-radix-dusk-landing-7-landing-page",
+        "tailark-radix-dusk-landing-3-landing-page"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "f8d83a17fb7c5c76a6d75b5afcfcb1ec1e85efc2e515f371d2b027eb54684a72",
+      "ids": [
+        "tailark-radix-dusk-call-to-action-2",
+        "tailark-radix-dusk-landing-8-landing-page",
+        "tailark-radix-dusk-landing-4-landing-page",
+        "tailark-radix-dusk-landing-6-landing-page",
+        "tailark-radix-dusk-landing-10-landing-page",
+        "tailark-radix-dusk-landing-2-landing-page"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "a55b129651766243a8ee6266a120bd9c30a11c58dba40116d29826adcf8730b4",
+      "ids": [
+        "tailark-radix-dusk-footer-2",
+        "tailark-radix-dusk-landing-1-sections-footer"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "05756696c8960ffc5be9d325089baf5f16840e4403bdd664340c116ed10a63d6",
+      "ids": [
+        "tailark-radix-dusk-hero-section-9-hero-section",
+        "tailark-radix-dusk-hero-section-6-hero-section",
+        "tailark-radix-dusk-hero-section-10-hero-section"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "e5f31b66aed067aa1a113f470ee73c5f57b6f794da6b3eaa246e28283380d989",
+      "ids": [
+        "tailark-radix-dusk-testimonials-1",
+        "tailark-radix-dusk-landing-1-sections-testimonials"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "050dd319e99784112e0cab13c61da612736ae1de10e89d1a1921a4e3f7c3f80e",
+      "ids": [
+        "tailark-radix-mist-hero-section-4-hero-section",
+        "tailark-radix-mist-hero-section-1-hero-section"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "0d76e749f7bfccfde3a1b14c878e7fd8f0820d11a0091a9ff90c1612f0a64d8d",
+      "ids": [
+        "tailark-radix-veil-hero-section-4-hero-section",
+        "tailark-radix-veil-hero-section-2-hero-section"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "cb3a029cf81ac1f4534e19f8dec4e9c933e7b9db577c109597d4a9b08992edb9",
+      "ids": [
+        "tailark-radix-veil-hero-section-1-hero-section",
+        "tailark-radix-veil-hero-section-3-hero-section"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "5f9b3c061b4e0b06f45949f41fd2bfefc8794cf142df681c8441e8d82e761135",
+      "ids": [
+        "animate-primitives-base-ui-accordion",
+        "animate-primitives-base-ui-alert-dialog",
+        "animate-primitives-base-ui-collapsible",
+        "animate-primitives-base-ui-dialog",
+        "animate-primitives-base-ui-drawer",
+        "animate-primitives-base-ui-popover",
+        "animate-primitives-base-ui-progress",
+        "animate-primitives-base-ui-toast",
+        "animate-primitives-base-ui-tooltip"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "e9256fa2a70917d0fe8ce8803602edabe77265b2627c9bb842a2bd2706575555",
+      "ids": [
+        "animate-primitives-base-ui-checkbox",
+        "animate-primitives-base-ui-radio-group",
+        "animate-primitives-base-ui-select",
+        "animate-primitives-base-ui-switch"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "e990fcc9c6e7710f7cfb1f680bbc148a3137ce0cdc2c5f8d777abc9fa3483dcd",
+      "ids": [
+        "animate-primitives-base-ui-context-menu",
+        "animate-primitives-base-ui-dropdown-menu",
+        "animate-primitives-base-ui-menubar",
+        "animate-primitives-base-ui-navigation-menu",
+        "animate-primitives-base-ui-tabs"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "8a9b1db169ffc2a55ec3e020f46ff1396dd95f8f3eb3c79024da0a43438c68ab",
+      "ids": [
+        "animate-primitives-base-ui-toggle-group",
+        "animate-primitives-base-ui-toggle"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "0090537042425ce618720c2f5bce778d5769a6013dbba14dede76b9fd7cd8cfe",
+      "ids": [
+        "animate-primitives-radix-ui-accordion",
+        "animate-primitives-radix-ui-alert-dialog",
+        "animate-primitives-radix-ui-collapsible",
+        "animate-primitives-radix-ui-dialog",
+        "animate-primitives-radix-ui-popover",
+        "animate-primitives-radix-ui-progress",
+        "animate-primitives-radix-ui-tooltip"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "3facc7a1033f94d2a8bdf39af1572fb4d358effaf7d4829a0e4294614cc440be",
+      "ids": [
+        "animate-primitives-radix-ui-checkbox",
+        "animate-primitives-radix-ui-radio-group",
+        "animate-primitives-radix-ui-select",
+        "animate-primitives-radix-ui-switch"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "16bde3712599083de42d7668ffea3bf1f6b3c15c035e44a14d367099c53571e9",
+      "ids": [
+        "animate-primitives-radix-ui-context-menu",
+        "animate-primitives-radix-ui-dropdown-menu",
+        "animate-primitives-radix-ui-menubar",
+        "animate-primitives-radix-ui-navigation-menu",
+        "animate-primitives-radix-ui-tabs"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "71fa8e4613be97ad3827ef827ac9ae5f3dce8fbae2cdbf6277ea11bad2ab8bca",
+      "ids": [
+        "animate-primitives-radix-ui-toggle-group",
+        "animate-primitives-radix-ui-toggle"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "5415550613b6201eb34f728a22a2533433a4d376eb8f0540bf10cabe991a3c6a",
+      "ids": [
+        "animate-primitives-react-aria-accordion",
+        "animate-primitives-react-aria-alert-dialog",
+        "animate-primitives-react-aria-collapsible",
+        "animate-primitives-react-aria-dialog",
+        "animate-primitives-react-aria-popover",
+        "animate-primitives-react-aria-progress",
+        "animate-primitives-react-aria-tooltip"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "9763359708b29d291221f4f9b86fd2c68590db5d3af8fefd91d86c92197ea98f",
+      "ids": [
+        "animate-primitives-react-aria-checkbox",
+        "animate-primitives-react-aria-radio-group",
+        "animate-primitives-react-aria-select",
+        "animate-primitives-react-aria-switch"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "6e6339e62fb7752cbe24bb33dd7f00318b114310012bb5c6ddd3fe62cb01c42a",
+      "ids": [
+        "animate-primitives-react-aria-combobox",
+        "animate-primitives-react-aria-sheet"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "918f497a7a4a9e10dcb9a5102e7441f059a28526d3a85c9259cd9e5091f91469",
+      "ids": [
+        "animate-primitives-react-aria-context-menu",
+        "animate-primitives-react-aria-dropdown-menu",
+        "animate-primitives-react-aria-tabs"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    },
+    {
+      "fingerprint": "bc10cebdc112fc1f4c5467d6a3784a1d530cfdbee994d9b8e7732dc803393083",
+      "ids": [
+        "animate-primitives-react-aria-toggle-group",
+        "animate-primitives-react-aria-toggle"
+      ],
+      "reason": "Primary source tokens match; package, demo, dependencies or license differ. Preserve separately pending human review."
+    }
+  ],
+  "skipCounts": {
+    "no_standalone_primary_source": 1079,
+    "no_original_package": 7745
+  }
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "route": "/@aloksivastava1025/components/astryx-center",
+    "type": "component",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@aloksivastava1025/components/astryx-chat-composer",
+    "type": "component",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@aloksivastava1025/components/astryx-chat-composer-drawer",
+    "type": "component",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@aloksivastava1025/components/astryx-chat-composer-input",
+    "type": "component",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@aloksivastava1025/components/astryx-chat-dictation-button",
+    "type": "component",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@aloksivastava1025/components/astryx-chat-layout",
+    "type": "component",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@aloksivastava1025/components/astryx-chat-layout-scroll-button",
+    "type": "component",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@aloksivastava1025/components/astryx-chat-message",
+    "type": "component",
+    "status": "metadata_unresolved"
+  }
+]

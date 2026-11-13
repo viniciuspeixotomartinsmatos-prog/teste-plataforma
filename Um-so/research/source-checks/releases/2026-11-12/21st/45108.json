@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 45108,
+    "name": "Hover Card",
+    "description": "A popover that shows extra preview content, like a profile summary or link preview, when a user hovers over a trigger element.",
+    "previewUrl": "https://cdn.21st.dev/user_registry_sopo_1793377578676/hover-card/default/preview.1794422375706.png",
+    "videoUrl": "https://cdn.21st.dev/user_registry_sopo_1793377578676/hover-card/default/video.1794422322069.mp4",
+    "author": "sopo",
+    "authorImage": "https://avatars.githubusercontent.com/u/2558332?v=4",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/sopo/hover-card?api_key=REDACTED\"",
+    "url": "https://21st.dev/@sopo/components/hover-card"
+  },
+  "requestedRoute": "/@sopo/components/hover-card",
+  "checkedAt": "2026-11-13T02:15:25.180Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 45108,
+    "componentId": 26081,
+    "authorUserId": "user_registry_sopo_1793377578676",
+    "name": "Hover Card",
+    "demoName": "Default",
+    "description": "A popover that shows extra preview content, like a profile summary or link preview, when a user hovers over a trigger element.",
+    "previewUrl": "https://cdn.21st.dev/user_registry_sopo_1793377578676/hover-card/default/preview.1794422375706.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/sopo/hover-card?api_key=REDACTED\"",
+    "componentCode": "\"use client\";\n\nimport { PreviewCard as PreviewCardPrimitive } from \"@base-ui/react/preview-card\";\nimport { cn } from \"@/lib/utils\";\n\nfunction HoverCard({ ...props }: PreviewCardPrimitive.Root.Props) {\n  return <PreviewCardPrimitive.Root data-slot=\"hover-card\" {...props} />;\n}\n\nfunction HoverCardTrigger({ ...props }: PreviewCardPrimitive.Trigger.Props) {\n  return (\n    <PreviewCardPrimitive.Trigger data-slot=\"hover-card-trigger\" {...props} />\n  );\n}\n\nfunction HoverCardContent({\n  className,\n  side = \"bottom\",\n  sideOffset = 4,\n  align = \"center\",\n  alignOffset = 4,\n  ...props\n}: PreviewCardPrimitive.Popup.Props &\n  Pick<\n    PreviewCardPrimitive.Positioner.Props,\n    \"align\" | \"alignOffset\" | \"side\" | \"sideOffset\"\n  >) {\n  return (\n    <PreviewCardPrimitive.Portal data-slot=\"hover-card-portal\">\n      <PreviewCardPrimitive.Positioner\n        align={align}\n        alignOffset={alignOffset}\n        side={side}\n        sideOffset={sideOffset}\n        className=\"isolate z-50\"\n      >\n        <PreviewCardPrimitive.Popup\n          data-slot=\"hover-card-content\"\n          className={cn(\n            \"z-50 w-64 origin-(--transform-origin) rounded-lg bg-popover p-2.5 text-sm text-popover-foreground shadow-md ring-1 ring-foreground/10 outline-hidden duration-100 data-[side=bottom]:slide-in-from-top-2 data-[side=inline-end]:slide-in-from-left-2 data-[side=inline-start]:slide-in-from-right-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 data-closed:animate-out data-closed:fade-out-0 data-closed:zoom-out-95\",\n            className,\n          )}\n          {...props}\n        />\n      </PreviewCardPrimitive.Positioner>\n    </PreviewCardPrimitive.Portal>\n  );\n}\n\nexport { HoverCard, HoverCardTrigger, HoverCardContent };\nexport default HoverCard;\n",
+    "demoCode": "\"use client\";\n\nimport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n} from \"@/components/ui/hover-card\";\n\nexport default function HoverCardDemo() {\n  return (\n    <div className=\"flex items-center justify-center p-10\">\n      <HoverCard>\n        <HoverCardTrigger\n          href=\"#\"\n          className=\"font-medium text-sm underline-offset-4 hover:underline\"\n        >\n          @shadcn-animated\n        </HoverCardTrigger>\n        <HoverCardContent>\n          <div className=\"flex flex-col gap-1\">\n            <p className=\"text-sm font-semibold\">shadcn animated</p>\n            <p className=\"text-sm text-muted-foreground\">\n              An expanding collection of animated shadcn/ui components, built on\n              Base UI and Motion.\n            </p>\n          </div>\n        </HoverCardContent>\n      </HoverCard>\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": "user_registry_sopo_1793377578676"
+  }
+}

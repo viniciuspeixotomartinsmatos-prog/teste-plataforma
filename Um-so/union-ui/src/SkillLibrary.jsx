@@ -9,10 +9,10 @@ async function readFile(path,signal){
   return response;
 }
 export default function SkillLibrary({canExport,onUpgrade,notify,section='skills'}){
-  const [rows,setRows]=useState([]),[query,setQuery]=useState(''),[selected,setSelected]=useState(null),[guide,setGuide]=useState(''),[error,setError]=useState(''),[kind,setKind]=useState('all');
+  const [rows,setRows]=useState([]),[loading,setLoading]=useState(true),[query,setQuery]=useState(''),[selected,setSelected]=useState(null),[guide,setGuide]=useState(''),[error,setError]=useState(''),[kind,setKind]=useState('all');
   useEffect(()=>{
     const abort=new AbortController();
-    readFile('index.json',abort.signal).then(r=>r.json()).then(setRows).catch(e=>{if(!abort.signal.aborted)setError(e.message);});
+    readFile('index.json',abort.signal).then(r=>r.json()).then(setRows).catch(e=>{if(!abort.signal.aborted)setError(e.message);}).finally(()=>{if(!abort.signal.aborted)setLoading(false);});
     return ()=>abort.abort();
   },[]);
   useEffect(()=>{
@@ -29,7 +29,7 @@ export default function SkillLibrary({canExport,onUpgrade,notify,section='skills
   return <main className="tools-page library-page skill-library" id="main"><header><p className="eyebrow">{designs?'IDENTIDADE PARA SEU PROJETO':'DO PRIMEIRO PROMPT AO PROJETO'}</p><h1>{designs?'Design systems. Uma direção completa.':'Skills para criar melhor.'}</h1><p>{designs?'Paletas, tipografia e diretrizes visuais para manter seu projeto consistente.':'Skills e guias para usar na sua IA. Cada ferramenta em uma única entrada.'}</p><a className="text-button" href={designs?'/tools/skills':'/tools/design-systems'}>{designs?'Explorar Skills':'Explorar Design Systems'}</a></header>
     <label>Buscar por nome ou coleção <input type="search" value={query} onChange={event=>setQuery(event.target.value)}/></label>
     {!designs&&<nav className="skill-filters" aria-label="Tipo de recurso">{[['all','Tudo'],['skill','Skills'],['mcp','Integrações MCP']].map(([value,label])=><button className="button" key={value} aria-pressed={kind===value} onClick={()=>setKind(value)}>{label} <span>{packages.filter(row=>value==='all'||type(row)===value).length}</span></button>)}</nav>}
-    <p role="status">{visible.length} recursos encontrados</p>
+    <p role="status">{loading?'Carregando recursos…':visible.length+' recursos encontrados'}</p>
     {error&&<p role="alert">{error}</p>}
     {selected&&<section className="creator-panel"><h2>{selected.name}</h2><button className="text-button" onClick={()=>setSelected(null)}>Fechar guia</button>
       {selectedFamily&&<label>Guia ou comando Caveman<select value={selected.id} onChange={event=>{setGuide('');setError('');setSelected(selectedFamily.modules.find(module=>module.id===event.target.value));}}>{selectedFamily.modules.map(module=><option key={module.id} value={module.id}>{module.id==='caveman-caveman'?'Caveman · guia principal':module.name}</option>)}</select></label>}

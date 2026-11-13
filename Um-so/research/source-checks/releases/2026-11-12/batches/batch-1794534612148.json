@@ -1,0 +1,92 @@
+[
+  {
+    "route": "/@ebnsina/components/dialog",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 43875,
+      "name": "Dialog",
+      "description": "A modal dialog built on the native HTML dialog element, with a centered variant and a full-height sheet variant that slides in from either edge.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_ebnsina_1791304195573/dialog/default/preview.1794429592951.webp",
+      "videoUrl": "https://cdn.21st.dev/user_registry_ebnsina_1791304195573/dialog/default/video.1794429576857.mp4",
+      "author": "ebnsina",
+      "authorImage": "https://avatars.githubusercontent.com/u/26293733?v=4",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/ebnsina/dialog?api_key=REDACTED\"",
+      "url": "https://21st.dev/@ebnsina/components/dialog"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@ebnsina/components/toggle-group",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44138,
+      "name": "Toggle Group",
+      "description": "A multi-select group of toggle buttons for a toolbar (like text-style controls) with roving-tabindex arrow-key navigation and automatic tooltips on icon-only buttons; ported to React from the Sina UI Svelte component library by ebnsina.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_ebnsina_1791304195573/toggle-group/labels/preview.1794412377399.webp",
+      "videoUrl": "https://cdn.21st.dev/user_registry_ebnsina_1791304195573/toggle-group/labels/video.1794412335388.mp4",
+      "author": "ebnsina",
+      "authorImage": "https://avatars.githubusercontent.com/u/26293733?v=4",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/ebnsina/toggle-group?api_key=REDACTED\"",
+      "url": "https://21st.dev/@ebnsina/components/toggle-group"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@ezam0000/components/ezpz-rubber-duck",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44837,
+      "name": "EZPZ Rubber Duck",
+      "description": "Squeeze, drag and release a 3D rubber duck on rippling water. Editable React and Three.js component with configurable color, optional synthesized squeak, keyboard interaction and reduced-motion support. No visible controls. Duck mesh adapted from Sony Computer Entertainment’s SCEA Duck via Khronos under the SCEA Shared Source License 1.0. Full asset license and modification notes retained in source. Complete editable project: https://github.com/ezam0000/ezpz-rubber-duck. Application code MIT licensed.",
+      "previewUrl": "https://cdn.21st.dev/user_2y4mAmG5WMonwhwjqKc8LyeecUz/ezpz-rubber-duck/default/preview.1794245350758.webp",
+      "videoUrl": "https://cdn.21st.dev/user_2y4mAmG5WMonwhwjqKc8LyeecUz/ezpz-rubber-duck/default/video.1794245344459.mp4",
+      "author": "ezam0000",
+      "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18yeTRtQWx0WVB2NFJtelBQQ1lRMUtPcmkybXIifQ",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/ezam0000/ezpz-rubber-duck?api_key=REDACTED\"",
+      "url": "https://21st.dev/@ezam0000/components/ezpz-rubber-duck"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@f0rextasy/components/console-panel",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 43757,
+      "name": "Console Panel",
+      "description": "An interactive terminal-style console panel that displays colored log lines (input, output, error, success) with autoscroll and a command prompt input.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_f0rextasy_1791204275988/console-panel/default/preview.1794426488719.webp",
+      "videoUrl": "https://cdn.21st.dev/user_registry_f0rextasy_1791204275988/console-panel/default/video.1794426479781.mp4",
+      "author": "f0rextasy",
+      "authorImage": "https://avatars.githubusercontent.com/u/99847357?v=4",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/f0rextasy/console-panel?api_key=REDACTED\"",
+      "url": "https://21st.dev/@f0rextasy/components/console-panel"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@f0rextasy/components/feedback-widget",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 43735,
+      "name": "Feedback Widget",
+      "description": "A floating corner button that opens a compact feedback form for capturing a quick good/bad mood rating and an optional message.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_f0rextasy_1791204275988/feedback-widget/default/preview.1794426234945.png",
+      "videoUrl": null,
+      "author": "f0rextasy",
+      "authorImage": "https://avatars.githubusercontent.com/u/99847357?v=4",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/f0rextasy/feedback-widget?api_key=REDACTED\"",
+      "url": "https://21st.dev/@f0rextasy/components/feedback-widget"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@f0rextasy/components/hero",
+    "type": "component",
+    "status": "metadata_unresolved"
+  }
+]

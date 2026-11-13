@@ -6,6 +6,15 @@ import {preparePreviewAssets,createPreviewAssetResponder,addPreviewAssetClient,a
 import {injectDemoAssets} from '../src/demo-asset-bridge.js';
 import fs from 'node:fs/promises';
 
+test('headless video documents still install the authenticated opaque-frame asset bridge before media',()=>{
+ for(const html of ['<!doctype html><html><video src="/previews/private.mp4"></video></html>','<video src="/previews/private.mp4"></video>']){
+  const prepared=addPreviewAssetClient(html,'recorded','https://app.example/previews/recorded.html');
+  assert.equal((prepared.match(/data-preview-assets/g)||[]).length,1);
+  assert.ok(prepared.indexOf('data-preview-assets')<prepared.indexOf('<video'));
+  const dom=new JSDOM(prepared);assert.ok(dom.window.document.querySelector('script[data-preview-assets]'));assert.equal(dom.window.document.querySelector('video').getAttribute('src'),'/previews/private.mp4');dom.window.close();
+ }
+});
+
 test('the retained HLS demo prefers MSE when native HLS reports only maybe',async()=>{
  const path='/previews/expanded/21st-8712cd5ba9a6.html';
  const original=await fs.readFile('public'+path,'utf8');

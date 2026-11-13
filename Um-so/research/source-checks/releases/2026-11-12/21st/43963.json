@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 43963,
+    "name": "Star Rate",
+    "description": "A five-star rating control for reviews and feedback where each selected star pops in with a staggered animation, five stars throws a small sparkle burst, and a line below states what the rating means.",
+    "previewUrl": "https://cdn.21st.dev/user_3Bft2c6Th5yLxMZYOKsM8H4TjMH/star-rate/default/preview.1794342983877.webp",
+    "videoUrl": "https://cdn.21st.dev/user_3Bft2c6Th5yLxMZYOKsM8H4TjMH/star-rate/default/video.1794342942716.mp4",
+    "author": "ham7a311",
+    "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18zQmZ0MllLbnVkRFlYUzlQaG0zOGNrbHZ2dDcifQ",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/ham7a311/star-rate?api_key=REDACTED\"",
+    "url": "https://21st.dev/@ham7a311/components/star-rate"
+  },
+  "requestedRoute": "/@ham7a311/components/star-rate",
+  "checkedAt": "2026-11-13T02:10:23.611Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 43963,
+    "componentId": 25333,
+    "authorUserId": "user_3Bft2c6Th5yLxMZYOKsM8H4TjMH",
+    "name": "Star Rate",
+    "demoName": "Default",
+    "description": "A five-star rating control for reviews and feedback where each selected star pops in with a staggered animation, five stars throws a small sparkle burst, and a line below states what the rating means.",
+    "previewUrl": "https://cdn.21st.dev/user_3Bft2c6Th5yLxMZYOKsM8H4TjMH/star-rate/default/preview.1794342983877.webp",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/ham7a311/star-rate?api_key=REDACTED\"",
+    "componentCode": "\"use client\";\n\nimport { useState, type KeyboardEvent } from \"react\";\nimport \"./star-rate-utils/star-rate.css\";\n\n/**\n * Star Rate\n * A five-star rating where choosing fills the stars one after another, each popping as it\n * lights; five stars throws a little sparkle. Hovering previews the fill, and the line below\n * says what the rating means.\n */\n\ntype Props = {\n  value?: number;\n  defaultValue?: number;\n  onChange?: (v: number) => void;\n  label?: string;\n  words?: string[];\n  className?: string;\n};\n\nconst WORDS = [\n  \"Not rated\",\n  \"Not for me\",\n  \"It was fine\",\n  \"Good\",\n  \"Really good\",\n  \"Loved it\",\n];\n\nexport function StarRate({\n  value,\n  defaultValue = 0,\n  onChange,\n  label = \"Rating\",\n  words = WORDS,\n  className = \"\",\n}: Props) {\n  const [inner, setInner] = useState(defaultValue);\n  const v = value ?? inner;\n  const [hover, setHover] = useState(0);\n  const [beat, setBeat] = useState(0);\n  const set = (n: number) => {\n    if (value === undefined) setInner(n);\n    setBeat((b) => b + 1);\n    onChange?.(n);\n  };\n  const shown = hover || v;\n  const onKey = (e: KeyboardEvent) => {\n    const m: Record<string, number> = {\n      ArrowRight: v + 1,\n      ArrowUp: v + 1,\n      ArrowLeft: v - 1,\n      ArrowDown: v - 1,\n      Home: 1,\n      End: 5,\n    };\n    if (!(e.key in m)) return;\n    e.preventDefault();\n    const n = Math.max(1, Math.min(5, m[e.key]));\n    set(n);\n    (\n      e.currentTarget.querySelector(`[data-n=\"${n}\"]`) as HTMLElement | null\n    )?.focus();\n  };\n  return (\n    <div className={`sr ${className}`}>\n      <div\n        role=\"radiogroup\"\n        aria-label={label}\n        className=\"sr__stars\"\n        onKeyDown={onKey}\n        onPointerLeave={() => setHover(0)}\n        data-beat={beat}\n      >\n        {[1, 2, 3, 4, 5].map((n) => (\n          <button\n            key={n}\n            type=\"button\"\n            role=\"radio\"\n            data-n={n}\n            aria-checked={v === n}\n            aria-label={`${n} star${n > 1 ? \"s\" : \"\"}`}\n            tabIndex={v ? (v === n ? 0 : -1) : n === 1 ? 0 : -1}\n            className=\"sr__star\"\n            data-on={n <= shown ? \"\" : undefined}\n            data-pop={beat && n <= v ? (beat % 2 ? \"a\" : \"b\") : undefined}\n            style={{ [\"--d\" as string]: `${(n - 1) * 70}ms` }}\n            onPointerEnter={() => setHover(n)}\n            onClick={() => set(n)}\n          >\n            <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\">\n              <path d=\"M12 2.8l2.7 5.7 6.2.8-4.6 4.3 1.2 6.2L12 16.8l-5.5 3 1.2-6.2-4.6-4.3 6.2-.8Z\" />\n            </svg>\n            {n === 5 && beat > 0 && v === 5 && (\n              <span className=\"sr__sparks\" key={beat} aria-hidden=\"true\">\n                {Array.from({ length: 8 }, (_, i) => (\n                  <i key={i} style={{ [\"--a\" as string]: `${i * 45}deg` }} />\n                ))}\n              </span>\n            )}\n          </button>\n        ))}\n      </div>\n      <p className=\"sr__word\" aria-live=\"polite\">\n        {words[shown] ?? \"\"}\n      </p>\n    </div>\n  );\n}\n\nexport default StarRate;\n",
+    "demoCode": "\"use client\";\n\nimport { StarRate } from \"@/components/ui/star-rate\";\n\nexport default function StarRateDemo() {\n  return (\n    <div className=\"flex min-h-screen w-full items-center justify-center bg-background p-8 text-foreground\">\n      <div className=\"flex w-full max-w-sm flex-col gap-5 rounded-[20px] border border-border bg-card p-6 text-card-foreground shadow-[0_20px_40px_-24px_rgb(0_0_0/0.35)]\">\n        <div className=\"text-center\">\n          <p className=\"text-[15px] font-medium\">How was the dhow cruise?</p>\n          <p className=\"mb-4 text-[13px] text-muted-foreground\">\n            Thursday 17:30 · Al Mouj marina\n          </p>\n          <StarRate label=\"Rate the dhow cruise\" />\n        </div>\n      </div>\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": "user_3Bft2c6Th5yLxMZYOKsM8H4TjMH"
+  }
+}

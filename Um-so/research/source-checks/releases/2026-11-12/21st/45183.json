@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 45183,
+    "name": "Astryx Avatar Status Dot",
+    "description": "A size-aware Astryx avatar presence indicator with distinct success, neutral, and error shapes.",
+    "previewUrl": "https://cdn.21st.dev/user_astryx/astryx-avatar-status-dot-larsen66/default/preview.1794415137807.png",
+    "videoUrl": null,
+    "author": "Astryxdesign",
+    "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-avatar-status-dot-larsen66?api_key=REDACTED\"",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-avatar-status-dot-larsen66"
+  },
+  "requestedRoute": "/@Astryxdesign/components/astryx-avatar-status-dot-larsen66",
+  "checkedAt": "2026-11-12T21:12:03.737Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 45183,
+    "componentId": 26134,
+    "authorUserId": "user_astryx",
+    "name": "Astryx Avatar Status Dot",
+    "demoName": "Default",
+    "description": "A size-aware Astryx avatar presence indicator with distinct success, neutral, and error shapes.",
+    "previewUrl": "https://cdn.21st.dev/user_astryx/astryx-avatar-status-dot-larsen66/default/preview.1794415137807.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-avatar-status-dot-larsen66?api_key=REDACTED\"",
+    "componentCode": "\"use client\"\n\nimport \"@astryxdesign/core/reset.css\"\nimport \"@astryxdesign/core/astryx.css\"\nimport \"@astryxdesign/theme-neutral/theme.css\"\nimport { AvatarStatusDot } from \"@astryxdesign/core/Avatar\"\n\nfunction restoreAstryxLayerPriority() {\n  if (typeof document === \"undefined\" || document.getElementById(\"astryx-unlayered-compat\")) return\n  const wanted = new Set([\"astryx-base\", \"astryx-theme\"])\n  let css = \"\"\n  for (const sheet of Array.from(document.styleSheets)) {\n    try {\n      for (const rule of Array.from(sheet.cssRules)) {\n        const layer = rule as CSSRule & { name?: string; cssRules?: CSSRuleList }\n        if (layer.name && layer.cssRules && wanted.has(layer.name)) {\n          css += Array.from(layer.cssRules, (child) => child.cssText).join(\"\\n\")\n        }\n      }\n    } catch {}\n  }\n  if (css) {\n    const style = document.createElement(\"style\")\n    style.id = \"astryx-unlayered-compat\"\n    style.textContent = css\n    document.head.append(style)\n  }\n}\n\nrestoreAstryxLayerPriority()\n\nexport * from \"@astryxdesign/core/Avatar\"\nexport default AvatarStatusDot\n",
+    "demoCode": "\"use client\"\n\nimport AvatarStatusDot from \"@/components/ui/astryx-avatar-status-dot\"\nimport { Avatar } from \"@astryxdesign/core/Avatar\"\nimport { HStack } from \"@astryxdesign/core/Layout\"\n\nexport default function AvatarStatusDotDemo() {\n  return (\n    <HStack gap={4} vAlign=\"center\">\n      <Avatar name=\"Online User\" size=\"xl\" status={<AvatarStatusDot variant=\"success\" label=\"Online\" />} />\n      <Avatar name=\"Away User\" size=\"xl\" status={<AvatarStatusDot variant=\"neutral\" label=\"Away\" />} />\n      <Avatar name=\"Busy User\" size=\"xl\" status={<AvatarStatusDot variant=\"error\" label=\"Busy\" />} />\n    </HStack>\n  )\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 45076,
+    "name": "Switch",
+    "description": "A toggle control for switching a setting on or off, built on a real button with the WAI-ARIA switch pattern for native keyboard and focus support.",
+    "previewUrl": "https://cdn.21st.dev/user_registry_kemiljk_1793377556551/switch/default/preview.1794330825393.webp",
+    "videoUrl": "https://cdn.21st.dev/user_registry_kemiljk_1793377556551/switch/default/video.1794330530691.mp4",
+    "author": "kemiljk",
+    "authorImage": "https://avatars.githubusercontent.com/u/26257029?v=4",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/kemiljk/switch?api_key=REDACTED\"",
+    "url": "https://21st.dev/@kemiljk/components/switch"
+  },
+  "requestedRoute": "/@kemiljk/components/switch",
+  "checkedAt": "2026-11-13T02:11:41.352Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 45076,
+    "componentId": 26064,
+    "authorUserId": "user_registry_kemiljk_1793377556551",
+    "name": "Switch",
+    "demoName": "Default",
+    "description": "A toggle control for switching a setting on or off, built on a real button with the WAI-ARIA switch pattern for native keyboard and focus support.",
+    "previewUrl": "https://cdn.21st.dev/user_registry_kemiljk_1793377556551/switch/default/preview.1794330825393.webp",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/kemiljk/switch?api_key=REDACTED\"",
+    "componentCode": "import { forwardRef } from \"react\";\nimport type { ButtonHTMLAttributes, ReactNode } from \"react\";\nimport {\n  dataAttr,\n  resolveClassName,\n  type ClassNameValue,\n} from \"@/components/ui/switch-utils/polymorphic\";\nimport { useControllableState } from \"@/components/ui/switch-utils/useControllableState\";\nimport styles from \"@/components/ui/switch-utils/Switch.module.css\";\n\nexport interface SwitchState {\n  checked: boolean;\n  disabled: boolean;\n}\n\nexport interface SwitchProps extends Omit<\n  ButtonHTMLAttributes<HTMLButtonElement>,\n  \"className\" | \"onChange\" | \"children\"\n> {\n  checked?: boolean;\n  defaultChecked?: boolean;\n  onCheckedChange?: (checked: boolean) => void;\n  children?: ReactNode;\n  className?: ClassNameValue<SwitchState>;\n}\n\n/**\n * There's no native \"switch\" element yet, so this follows the WAI-ARIA\n * switch pattern: a real `<button>` (so click, Space/Enter, and focus are\n * free) with `role=\"switch\"` and `aria-checked` telling assistive tech\n * it's a two-state toggle, not a regular button. Wrapping it in a\n * `<label>` works because `button` is a labelable element, exactly like\n * `input`.\n */\nexport const Switch = forwardRef<HTMLButtonElement, SwitchProps>(\n  function Switch(\n    {\n      checked,\n      defaultChecked = false,\n      onCheckedChange,\n      disabled = false,\n      children,\n      className,\n      ...rest\n    },\n    ref,\n  ) {\n    const [isChecked, setChecked] = useControllableState({\n      value: checked,\n      defaultValue: defaultChecked,\n      onChange: onCheckedChange,\n    });\n\n    const state: SwitchState = { checked: isChecked, disabled };\n\n    const control = (\n      <button\n        {...rest}\n        ref={ref}\n        type=\"button\"\n        role=\"switch\"\n        aria-checked={isChecked}\n        disabled={disabled}\n        data-state={isChecked ? \"checked\" : \"unchecked\"}\n        data-disabled={dataAttr(disabled)}\n        className={[styles.control, resolveClassName(className, state)]\n          .filter(Boolean)\n          .join(\" \")}\n        onClick={(event) => {\n          rest.onClick?.(event);\n          if (!event.defaultPrevented) setChecked(!isChecked);\n        }}\n      >\n        <span className={styles.thumb} />\n      </button>\n    );\n\n    if (!children) return control;\n\n    return (\n      <label className={styles.root} data-disabled={dataAttr(disabled)}>\n        <span className={styles.label}>{children}</span>\n        {control}\n      </label>\n    );\n  },\n);\n\nexport default Switch;\n",
+    "demoCode": "import { Switch } from \"@/components/ui/switch\";\nimport { useState } from \"react\";\n\nexport default function SwitchDemo() {\n  const [checked, setChecked] = useState(true);\n\n  return (\n    <div style={{ display: \"flex\", flexDirection: \"column\", gap: \"0.75rem\" }}>\n      <Switch checked={checked} onCheckedChange={setChecked}>\n        Notifications\n      </Switch>\n      <Switch defaultChecked={false} disabled>\n        Disabled\n      </Switch>\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": "user_registry_kemiljk_1793377556551"
+  }
+}

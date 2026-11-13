@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 45051,
+    "name": "Emoji Picker",
+    "description": "A compact grid of emoji reactions, built with listbox/option roles, that calls a callback with the chosen emoji — useful for message reaction bars and quick-react buttons.",
+    "previewUrl": "https://cdn.21st.dev/user_registry_amankaushik481_1793404304119/emoji-picker/default/preview.1794331684314.webp",
+    "videoUrl": "https://cdn.21st.dev/user_registry_amankaushik481_1793404304119/emoji-picker/default/video.1794331627134.mp4",
+    "author": "amankaushik481",
+    "authorImage": "https://github.com/amankaushik481.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/amankaushik481/emoji-picker?api_key=REDACTED\"",
+    "url": "https://21st.dev/@amankaushik481/components/emoji-picker"
+  },
+  "requestedRoute": "/@amankaushik481/components/emoji-picker",
+  "checkedAt": "2026-11-12T21:13:58.113Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 45051,
+    "componentId": 26049,
+    "authorUserId": "user_registry_amankaushik481_1793404304119",
+    "name": "Emoji Picker",
+    "demoName": "Default",
+    "description": "A compact grid of emoji reactions, built with listbox/option roles, that calls a callback with the chosen emoji — useful for message reaction bars and quick-react buttons.",
+    "previewUrl": "https://cdn.21st.dev/user_registry_amankaushik481_1793404304119/emoji-picker/default/preview.1794331684314.webp",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/amankaushik481/emoji-picker?api_key=REDACTED\"",
+    "componentCode": "\"use client\";\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nconst DEFAULT = [\n  \"👍\",\n  \"❤️\",\n  \"😂\",\n  \"🎉\",\n  \"🔥\",\n  \"👀\",\n  \"✅\",\n  \"❌\",\n  \"🚀\",\n  \"💡\",\n  \"📎\",\n  \"🙏\",\n];\n\nfunction EmojiPicker({\n  emojis = DEFAULT,\n  onSelect,\n  className,\n}: {\n  emojis?: string[];\n  onSelect?: (emoji: string) => void;\n  className?: string;\n}) {\n  return (\n    <div\n      data-slot=\"emoji-picker\"\n      role=\"listbox\"\n      aria-label=\"Emoji picker\"\n      className={cn(\n        \"grid grid-cols-6 gap-1 rounded-xl border border-border bg-raised p-2\",\n        \"shadow-lg\",\n        className,\n      )}\n    >\n      {emojis.map((e) => (\n        <button\n          key={e}\n          type=\"button\"\n          role=\"option\"\n          aria-label={e}\n          className=\"grid size-8 place-items-center rounded-lg text-base hover:bg-sunken focus-visible:ring-2 focus-visible:ring-accent outline-none\"\n          onClick={() => onSelect?.(e)}\n        >\n          {e}\n        </button>\n      ))}\n    </div>\n  );\n}\nexport { EmojiPicker };\n\nexport default EmojiPicker;\n",
+    "demoCode": "\"use client\";\n\nimport * as React from \"react\";\nimport { EmojiPicker } from \"@/components/ui/emoji-picker\";\n\nexport default function EmojiPickerDemo() {\n  const [selected, setSelected] = React.useState<string | null>(null);\n\n  return (\n    <div className=\"flex flex-col items-center gap-3\">\n      <EmojiPicker onSelect={(emoji) => setSelected(emoji)} />\n      <p className=\"text-sm text-muted-foreground\">\n        {selected ? `You picked ${selected}` : \"Pick an emoji\"}\n      </p>\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": "user_registry_amankaushik481_1793404304119"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 45097,
+    "name": "lsm",
+    "description": "Animated (flicker) ASCII art in the Dots style, made with the 21st ASCII editor and baked to a looping video. A drop-in, zero-dependency React component for hero sections, cards, and retro terminal-style backgrounds.",
+    "previewUrl": "https://cdn.21st.dev/studiostargazing/lsm/default/preview.1794340246208-2ac62b1a-42bd-4591-b42c-b15c9eedcb11.webp",
+    "videoUrl": "https://cdn.21st.dev/studiostargazing/lsm/default/video.1794340246208-2ac62b1a-42bd-4591-b42c-b15c9eedcb11.mp4",
+    "author": "studiostargazing",
+    "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zNXRiUVRrbnBrT05PaUJWaUdWVkhsbzN6RVEifQ",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/studiostargazing/lsm?api_key=REDACTED\"",
+    "url": "https://21st.dev/@studiostargazing/components/lsm"
+  },
+  "requestedRoute": "/@studiostargazing/components/lsm",
+  "checkedAt": "2026-11-13T02:15:30.255Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 45097,
+    "componentId": 26073,
+    "authorUserId": "user_35tbQVU2ODM5enbRGylqcG4ZIHw",
+    "name": "lsm",
+    "demoName": "Default",
+    "description": "Animated (flicker) ASCII art in the Dots style, made with the 21st ASCII editor and baked to a looping video. A drop-in, zero-dependency React component for hero sections, cards, and retro terminal-style backgrounds.",
+    "previewUrl": "https://cdn.21st.dev/studiostargazing/lsm/default/preview.1794340246208-2ac62b1a-42bd-4591-b42c-b15c9eedcb11.webp",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/studiostargazing/lsm?api_key=REDACTED\"",
+    "componentCode": "\"use client\"\n\n// AsciiArt — \"lsm\", made with the 21st ASCII editor and baked\n// to its exact rendered output (looping video + poster). Zero dependencies:\n// one <video> that fills its parent. Drop it behind or inside your content:\n// <div className=\"relative h-96\"><AsciiArt className=\"absolute inset-0\" /></div>\n// Remix the source recipe (styles, animation, palette) in the editor:\n// https://21st.dev/community/ascii/editor?from=b1aeff3c-67eb-4aae-be5d-ec9e7584945a\nexport function AsciiArt({ className }: { className?: string }) {\n  return (\n    <video\n      className={className}\n      src={\"https://assets.21st.dev/ascii-recipes/videos/user_35tbQVU2ODM5enbRGylqcG4ZIHw/b6d770a2-13cb-4e2c-b8dc-a61b7078d61d.mp4\"}\n      poster={\"https://assets.21st.dev/ascii-recipes/thumbnails/user_35tbQVU2ODM5enbRGylqcG4ZIHw/c7b9f2f3-f57f-46b1-a792-a176cf662698.webp\"}\n      autoPlay\n      loop\n      muted\n      playsInline\n      aria-label={\"lsm — animated ASCII art\"}\n      style={{\n        display: \"block\",\n        width: \"100%\",\n        height: \"100%\",\n        objectFit: \"cover\",\n      }}\n    />\n  )\n}\n",
+    "demoCode": "import { AsciiArt } from \"@/components/ui/lsm\"\n\nexport default function AsciiArtDemo() {\n  return (\n    <div className=\"relative h-screen w-full overflow-hidden\">\n      <AsciiArt className=\"h-full w-full\" />\n    </div>\n  )\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  }
+}

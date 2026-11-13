@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 44951,
+    "name": "Skeleton",
+    "description": "A loading placeholder block with a pulsing shimmer animation, used to indicate content that is still loading.",
+    "previewUrl": "https://cdn.21st.dev/user_registry_mayurrawte_1793377663685/skeleton/default/preview.1794255027415.webp",
+    "videoUrl": "https://cdn.21st.dev/user_registry_mayurrawte_1793377663685/skeleton/default/video.1794255021113.mp4",
+    "author": "mayurrawte",
+    "authorImage": "https://avatars.githubusercontent.com/u/32830023?v=4",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/mayurrawte/skeleton?api_key=REDACTED\"",
+    "url": "https://21st.dev/@mayurrawte/components/skeleton"
+  },
+  "requestedRoute": "/@mayurrawte/components/skeleton",
+  "checkedAt": "2026-11-13T02:13:27.850Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 44951,
+    "componentId": 25973,
+    "authorUserId": "user_registry_mayurrawte_1793377663685",
+    "name": "Skeleton",
+    "demoName": "Default",
+    "description": "A loading placeholder block with a pulsing shimmer animation, used to indicate content that is still loading.",
+    "previewUrl": "https://cdn.21st.dev/user_registry_mayurrawte_1793377663685/skeleton/default/preview.1794255027415.webp",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/mayurrawte/skeleton?api_key=REDACTED\"",
+    "componentCode": "import { cn } from \"@mcp-elements/core\";\n\nexport interface SkeletonProps extends React.HTMLAttributes<HTMLDivElement> {}\n\nexport function Skeleton({ className, ...props }: SkeletonProps) {\n  return <div className={cn(\"mcpe-skeleton\", className)} {...props} />;\n}\n\nexport default Skeleton;\n",
+    "demoCode": "import { Skeleton } from \"@/components/ui/skeleton\";\n\nexport default function SkeletonDemo() {\n  return (\n    <div className=\"flex flex-col gap-3 w-64\">\n      <Skeleton className=\"h-4 w-full rounded\" />\n      <Skeleton className=\"h-4 w-3/4 rounded\" />\n      <Skeleton className=\"h-4 w-1/2 rounded\" />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": "user_registry_mayurrawte_1793377663685"
+  }
+}

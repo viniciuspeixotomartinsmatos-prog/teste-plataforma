@@ -5,7 +5,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { createRequire } from 'node:module';
 import { promises as fs } from 'node:fs';
-import { APP_ROOT, PUBLIC_ROOT, loadItem, createSourceContext, basename } from './preview-catalog.mjs';
+import { APP_ROOT, PUBLIC_ROOT, getCatalog, loadItem, createSourceContext, basename } from './preview-catalog.mjs';
 
 const require=createRequire(import.meta.url);
 const esbuild=require('esbuild');
@@ -119,12 +119,19 @@ function buildPlugin(context){
  }};
 }
 
-export async function compileItem(id,{cache=true,persist=false}={}){
+// Internal acquisition entry point. Staged IDs cannot overwrite published
+// artifacts, and the HTTP preview handler never accepts a source record.
+export async function compileStagedItem(item,payload,{persist=false}={}){
+ if(!/^staged-[a-zA-Z0-9._-]{1,160}$/.test(item?.id||'')||!['react','vue'].includes(item.framework)||!Array.isArray(payload?.files)||!payload.files.length||payload.files.length>1000||JSON.stringify(payload).length>5000000)throw Error('Invalid isolated staging source.');
+ if((await getCatalog()).byId.has(item.id))throw Error('Staging cannot overwrite an indexed component.');
+ return compileItem(item.id,{cache:false,persist,sourceRecord:{item,payload}});
+}
+export async function compileItem(id,{cache=true,persist=false,sourceRecord}={}){
  const key=keyFor(id);
  if(cache&&bundles.has(key))return bundles.get(key);
  if(jobs.has(id))return jobs.get(id);
  const work=(async()=>{
-  const {item,payload}=await loadItem(id);
+  const {item,payload}=sourceRecord||await loadItem(id);
   const vue=item.framework==='vue';
   const vueRuntime=vue?await import('./vue-preview.mjs'):null;
   const context=vue?await vueRuntime.createVueContext(item,payload):await createSourceContext(item,payload);

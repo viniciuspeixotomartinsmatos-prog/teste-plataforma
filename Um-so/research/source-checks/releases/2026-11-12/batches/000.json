@@ -1,0 +1,126 @@
+[
+  {
+    "route": "/@8b/templates/accountant-website-template-for-cursor-free-html-tax-and-payroll-site-with-tax-calendar-and-css-scroll-animations",
+    "type": "template",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@Astryxdesign/components/astryx-avatar-group-overflow",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45181,
+      "name": "Astryx Avatar Group Overflow",
+      "description": "An overflow-count indicator for Astryx avatar groups, supporting both the standard count and custom compact text.",
+      "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-avatar-group-overflow/default/preview.1794415414148.png",
+      "videoUrl": null,
+      "author": "Astryxdesign",
+      "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-avatar-group-overflow?api_key=REDACTED\"",
+      "url": "https://21st.dev/@Astryxdesign/components/astryx-avatar-group-overflow"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@Astryxdesign/components/astryx-avatar-status-dot-larsen66",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45183,
+      "name": "Astryx Avatar Status Dot",
+      "description": "A size-aware Astryx avatar presence indicator with distinct success, neutral, and error shapes.",
+      "previewUrl": "https://cdn.21st.dev/user_astryx/astryx-avatar-status-dot-larsen66/default/preview.1794415137807.png",
+      "videoUrl": null,
+      "author": "Astryxdesign",
+      "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-avatar-status-dot-larsen66?api_key=REDACTED\"",
+      "url": "https://21st.dev/@Astryxdesign/components/astryx-avatar-status-dot-larsen66"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@aadixc0de/components/agent-lanes",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44802,
+      "name": "Agent Lanes",
+      "description": "Run several coding agents side by side on one task, each with live status, streamed output and a pick the winner action.",
+      "previewUrl": "https://cdn.21st.dev/user_3LlhXiSsBVSfcYPAE8bBARKA2mf/agent-lanes/default/preview.1794245570275.webp",
+      "videoUrl": "https://cdn.21st.dev/aadixc0de/agent-lanes/default/video.1794245565793.mp4",
+      "author": "aadixc0de",
+      "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18zTGxoWGRCVmdRRGY0N2tyc0tVZE9YOVJEa2UifQ",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/aadixc0de/agent-lanes?api_key=REDACTED\"",
+      "url": "https://21st.dev/@aadixc0de/components/agent-lanes"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@aadixc0de/components/audio-visualizer",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44800,
+      "name": "Audio Visualizer",
+      "description": "Five canvas audio visualizers (bars, radial, grid, line, dots) for voice agents that read live frequency bands from a mic or agent audio.",
+      "previewUrl": "https://cdn.21st.dev/aadixc0de/audio-visualizer/default/preview.1794298259731-37422b36-ec36-4f0f-8841-f1994bc05632.png",
+      "videoUrl": "https://cdn.21st.dev/aadixc0de/audio-visualizer/default/video.1794298259731-37422b36-ec36-4f0f-8841-f1994bc05632.mp4",
+      "author": "aadixc0de",
+      "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18zTGxoWGRCVmdRRGY0N2tyc0tVZE9YOVJEa2UifQ",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/aadixc0de/audio-visualizer?api_key=REDACTED\"",
+      "url": "https://21st.dev/@aadixc0de/components/audio-visualizer"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@aadixc0de/components/computer-view",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44803,
+      "name": "Computer View",
+      "description": "Watch a browser agent work: live screenshots with the click it is about to make, a pause for the steps a person must do, take over and hand back, then a timeline to scrub every step.",
+      "previewUrl": "https://cdn.21st.dev/user_3LlhXiSsBVSfcYPAE8bBARKA2mf/computer-view/default/preview.1794403922759.png",
+      "videoUrl": "https://cdn.21st.dev/user_3LlhXiSsBVSfcYPAE8bBARKA2mf/computer-view/default/video.1794403883407.mp4",
+      "author": "aadixc0de",
+      "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18zTGxoWGRCVmdRRGY0N2tyc0tVZE9YOVJEa2UifQ",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/aadixc0de/computer-view?api_key=REDACTED\"",
+      "url": "https://21st.dev/@aadixc0de/components/computer-view"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@aadixc0de/components/reasoning",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44801,
+      "name": "Reasoning",
+      "description": "A model's thinking block that streams in with a live step summary and elapsed time, then settles into a collapsible summary.",
+      "previewUrl": "https://cdn.21st.dev/user_3LlhXiSsBVSfcYPAE8bBARKA2mf/reasoning/default/preview.1794245524225.webp",
+      "videoUrl": "https://cdn.21st.dev/aadixc0de/reasoning/default/video.1794245517813.mp4",
+      "author": "aadixc0de",
+      "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18zTGxoWGRCVmdRRGY0N2tyc0tVZE9YOVJEa2UifQ",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/aadixc0de/reasoning?api_key=REDACTED\"",
+      "url": "https://21st.dev/@aadixc0de/components/reasoning"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@aadixc0de/components/voice-orb",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44790,
+      "name": "Voice Orb",
+      "description": "A line-drawn 3D voice orb with eight conversation states that reacts to live mic and agent audio levels, with reduced motion support.",
+      "previewUrl": "https://cdn.21st.dev/aadixc0de/voice-orb/default/preview.1794298088583-087ba959-b811-48e2-956d-b78484d4f9b8.png",
+      "videoUrl": "https://cdn.21st.dev/aadixc0de/voice-orb/default/video.1794298088583-087ba959-b811-48e2-956d-b78484d4f9b8.mp4",
+      "author": "aadixc0de",
+      "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18zTGxoWGRCVmdRRGY0N2tyc0tVZE9YOVJEa2UifQ",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/aadixc0de/voice-orb?api_key=REDACTED\"",
+      "url": "https://21st.dev/@aadixc0de/components/voice-orb"
+    },
+    "status": "retained_unvalidated"
+  }
+]
