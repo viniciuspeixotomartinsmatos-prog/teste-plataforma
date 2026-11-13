@@ -29,7 +29,8 @@ export async function createServer(options={}){
    if(protectedPath(pathname)&&!await app.isSignedIn(await nodeRequest(req,app.origin)))return await nodeResponse(signInResponse(await nodeRequest(req,app.origin)),res);
    if(protectedPath(pathname)&&app.canAccessPlatform&&!await app.canAccessPlatform(await nodeRequest(req,app.origin))){const html=req.headers.accept?.includes('text/html');return await nodeResponse(html?new Response(null,{status:303,headers:{Location:'/plans','Cache-Control':'no-store'}}):Response.json({error:'Assinatura necessária.',code:'subscription_required'},{status:402,headers:{'Cache-Control':'no-store'}}),res);}
    if((pathname.startsWith('/code/')||pathname.startsWith('/tools-runtime/'))&&!await app.canReadCode(await nodeRequest(req,app.origin)))return await nodeResponse(new Response(JSON.stringify({error:'Assinatura necessária.',code:'subscription_required'}),{status:403,headers:{'Content-Type':'application/json','Cache-Control':'no-store'}}),res);
-   let target=path.resolve(root,'.'+pathname);
+   const filePath=pathname==='/vendas'||pathname==='/vendas/'?'/vendas/index.html':pathname;
+   let target=path.resolve(root,'.'+filePath);
    if(target!==root&&!target.startsWith(root+path.sep))throw Object.assign(Error(),{status:404});
    let stat;try{stat=await fs.stat(target);}catch{}
    if(!stat?.isFile()){

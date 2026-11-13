@@ -51,6 +51,10 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     {
+      "source": "/vendas",
+      "destination": "/vendas/index.html"
+    },
+    {
       "source": "/api/:path*",
       "destination": "/api"
     },

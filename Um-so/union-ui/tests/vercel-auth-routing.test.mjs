@@ -3,6 +3,17 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {protectedPath} from '../src/auth-policy.js';
 
+test('the sales page and its assets open without exposing other files',async()=>{
+ const config=JSON.parse(await fs.readFile('vercel.json','utf8'));
+ assert.equal(config.rewrites.find(rule=>rule.source==='/vendas')?.destination,'/vendas/index.html');
+ for(const url of ['/vendas','/vendas/','/vendas/index.html','/vendas/styles.css','/vendas/app.js','/vendas/icon.svg','/vendas/geist.woff2','/vendas/licencas.txt']){
+  assert.equal(protectedPath(url),false,url);
+ }
+ assert.equal(protectedPath('/vendas/private.json'),true);
+ const html=await fs.readFile('public/vendas/index.html','utf8');
+ for(const value of ['85','165','550','/legal/terms','/legal/privacy','/legal/refunds'])assert.ok(html.includes(value),value);
+});
+
 test('all named SPA entrypoints survive direct navigation without rewriting private files to HTML',async()=>{
  const config=JSON.parse(await fs.readFile('vercel.json','utf8'));
  const destination=input=>{

@@ -8,6 +8,7 @@ export const accountRoute=path=>path==='/account'||path==='/account/reset';
 export function protectedPath(path){
  let decoded;try{decoded=decodeURIComponent(path);}catch{return true;}
  if(decoded.includes('\\')||decoded.includes('\0'))return true;
+ if(/^\/vendas(?:\/(?:index\.html|styles\.css|app\.js|icon\.svg|geist\.woff2|licencas\.txt)?)?$/.test(decoded))return false;
  if(/^\/legal\/(privacy|cookies|terms|refunds|provider|rights|licenses|ai)\/?$/.test(decoded))return false;
  if(/^\/(pt|en)\/(?:contact\/|terms\/|privacy\/|refunds\/)?$/.test(decoded)||/^\/(pt|en)$/.test(decoded)||decoded==='/sitemap.xml')return false;
  if(decoded==='/library-sitemap.xml'||/^\/(?:pt\/biblioteca|en\/library)(?:\/[a-z0-9_-]+)?\/?$/.test(decoded))return false;
