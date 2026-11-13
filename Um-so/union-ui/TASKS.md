@@ -98,3 +98,12 @@ Auth Modal and Hyper Text now have individual acceptance records, bringing this 
 - [x] Implement authenticated original-public-JavaScript computed-design capture; production capture200 with448 observed Eco Park elements and explicit partial coverage.
 - [x] Implement contextual structure + existing local LSA/visual recommendations with actual catalog IDs and integration prompts; six production-evidence recommendations verified.
 - [ ] Complete final desktop/mobile visual, performance, zoom/touch/keyboard and published main-flow acceptance. Authorized browser remains unavailable for this chat despite re-enable report. This also prevents closing all device acceptance for the scene. See PROGRESS.md; do not claim all1–4 complete.
+
+## November13 bounded release acceptance
+- [x] Browser restored; individually accept five original Profitize videos and the interactive Lente source, including actual ZIP downloads and byte checks.
+- [x] Bind publication to source/media/archive/theme hashes and preserve approved originals on repeat import.
+- [x] Check Vistal hover start/stop and fix the mobile detail-action overflow at390px.
+- [x] Expand source/coverage/semantic inventory without publishing the four quota-blocked originals or the remaining unaccepted candidates.
+- [x]283 full regressions, final source/evidence guard checks,4 Sites checks and production compilation.
+- [ ] Confirm this release's Git/Vercel publication and published access/media flows. Previous7c7a9d530 correction release was READY and HTTP-verified.
+- [ ] Other earlier main-flow/device acceptance remains pending; the old browser-unavailable status above is superseded by restored IAB access.

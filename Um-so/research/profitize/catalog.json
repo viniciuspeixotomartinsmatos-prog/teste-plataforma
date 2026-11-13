@@ -3943,5 +3943,95 @@
     "demoUrl": null,
     "promptRelease": "2026-11-09",
     "acquisitionDate": "2026-11-09"
+  },
+  {
+    "slug": "vistal",
+    "title": "Vistal",
+    "type": "landing_page",
+    "niche": "imobiliaria",
+    "tags": [
+      "imobiliaria",
+      "landing_page"
+    ],
+    "kind": {
+      "segment": "landing-pages"
+    },
+    "approvedRelease": "2026-11-12",
+    "promptRelease": "2026-11-12"
+  },
+  {
+    "slug": "uvra",
+    "title": "Uvra",
+    "type": "landing_page",
+    "niche": "vinícola",
+    "tags": [
+      "vinícola",
+      "landing_page"
+    ],
+    "kind": {
+      "segment": "landing-pages"
+    },
+    "approvedRelease": "2026-11-12",
+    "promptRelease": "2026-11-12"
+  },
+  {
+    "slug": "sello",
+    "title": "Sello",
+    "type": "landing_page",
+    "niche": "corretora de cripto",
+    "tags": [
+      "corretora de cripto",
+      "landing_page"
+    ],
+    "kind": {
+      "segment": "landing-pages"
+    },
+    "approvedRelease": "2026-11-12",
+    "promptRelease": "2026-11-12"
+  },
+  {
+    "slug": "do-prompt-ao-site",
+    "title": "Do Prompt ao Site",
+    "type": "motion",
+    "niche": "Lançamento de IA",
+    "tags": [
+      "Lançamento de IA",
+      "motion"
+    ],
+    "kind": {
+      "segment": "motion"
+    },
+    "approvedRelease": "2026-11-12",
+    "promptRelease": "2026-11-12"
+  },
+  {
+    "slug": "sobrevoo",
+    "title": "Sobrevoo",
+    "type": "motion",
+    "niche": "Vídeo de landing page",
+    "tags": [
+      "Vídeo de landing page",
+      "motion"
+    ],
+    "kind": {
+      "segment": "motion"
+    },
+    "approvedRelease": "2026-11-12",
+    "promptRelease": "2026-11-12"
+  },
+  {
+    "slug": "lente",
+    "title": "Lente",
+    "type": "component",
+    "niche": "Shader",
+    "tags": [
+      "Shader",
+      "component"
+    ],
+    "kind": {
+      "segment": "componentes"
+    },
+    "approvedRelease": "2026-11-12",
+    "promptRelease": "2026-11-12"
   }
 ]

@@ -1,0 +1,129 @@
+[
+  {
+    "id": "staged-profitize-vistal",
+    "checkedAt": "2026-11-13T13:37:29.803Z",
+    "environment": "Authenticated local IAB http://localhost:4178",
+    "startupVerified": true,
+    "visualConfirmed": true,
+    "interactionVerified": true,
+    "mediaVerified": true,
+    "promptVerified": true,
+    "downloadVerified": true,
+    "notes": "Original960x600 video visually inspected, advancing frames, native Space pause/resume, copy-success feedback and actual ZIP download. All actual downloaded ZIPs retain byte-identical prompts, source archives and portable media. Browser-session clipboard reading returned empty; success feedback plus independent prompt-byte checks are the supported scope.",
+    "downloadSha256": "a2cd92dde9b0b7dae4c464aba438a229814c8984280dc0fdf675220407228f52",
+    "artifacts": {
+      "/previews/releases/profitize-2026-11-12/vistal.html": "5c4eec995f371860ae0d6dcaf64266f6b619f9c9542a8c15b4cb48b3b4477771",
+      "/code/releases/staged-profitize-vistal.json": "23a84ad869206b006b5bc6298a630a184cac81280b6afe87692e9d691eac5366",
+      "/previews/recovered/build/media/0fcc809f-1340-4acc-946f-b56205a2d620/poster-d56c0904.webp": "d56c09042d6e3325999d683e6c8c644a1b0c3829541b76ebf4b4bbb7ddbb3e96",
+      "/code/recovered/bundles/vistal-original-2026-11-12.zip": "9cff6e72c2c53372038e240f3208848c31624fad1ab94098dd020746cb449ed0",
+      "/previews/recovered/build/media/0fcc809f-1340-4acc-946f-b56205a2d620/previa-card-ff4a1e0d.mp4": "ff4a1e0d17943fe0ac870b10a42fdbb1c30e6e1ac0c502d5fe1c5998609548c7"
+    },
+    "errors": []
+  },
+  {
+    "id": "staged-profitize-uvra",
+    "checkedAt": "2026-11-13T13:37:30.099Z",
+    "environment": "Authenticated local IAB http://localhost:4178",
+    "startupVerified": true,
+    "visualConfirmed": true,
+    "interactionVerified": true,
+    "mediaVerified": true,
+    "promptVerified": true,
+    "downloadVerified": true,
+    "notes": "Original960x600 video visually inspected, advancing frames, keyboard playback toggle, copy-success feedback and actual ZIP download. All actual downloaded ZIPs retain byte-identical prompts, source archives and portable media. Browser-session clipboard reading returned empty; success feedback plus independent prompt-byte checks are the supported scope.",
+    "downloadSha256": "3c04868bffa5fb58d81492e0c2be3e503da52967a086c8f545f8cd11fdbd8ddf",
+    "artifacts": {
+      "/previews/releases/profitize-2026-11-12/uvra.html": "c43168c63fe596ba485f63370619ccb18255a495832c1304709fe14b1a9e3f9e",
+      "/code/releases/staged-profitize-uvra.json": "a0d524813c9b0682dff4b5e54168a31db30185dea92afd7b928cd99554adb119",
+      "/previews/recovered/build/media/7f57314f-1772-4e8f-a25f-1dabac20f9b7/poster-4955c7f2.webp": "4955c7f201c35c6ca0ef35abd31daaf84a7b0738a33930bdcfd870f6767b7287",
+      "/code/recovered/bundles/uvra-original-2026-11-12.zip": "9fd13b34d4b17afced664ba831a1253dd79d20b9c803e531e40575fae92ec366",
+      "/previews/recovered/build/media/7f57314f-1772-4e8f-a25f-1dabac20f9b7/previa-card-166b0578.mp4": "166b05785b57650948e3bb063f19c9f952f91c79cf7547a69fb08766f56efc41"
+    },
+    "errors": []
+  },
+  {
+    "id": "staged-profitize-sello",
+    "checkedAt": "2026-11-13T13:37:30.249Z",
+    "environment": "Authenticated local IAB http://localhost:4178",
+    "startupVerified": true,
+    "visualConfirmed": true,
+    "interactionVerified": true,
+    "mediaVerified": true,
+    "promptVerified": true,
+    "downloadVerified": true,
+    "notes": "Original960x600 video inspected after intro, advancing frames, native pause/resume and actual ZIP download. Original prompt action checked. All actual downloaded ZIPs retain byte-identical prompts, source archives and portable media. Browser-session clipboard reading returned empty; success feedback plus independent prompt-byte checks are the supported scope.",
+    "downloadSha256": "ccfd8578252f9d29dcd8965dc955d9a4007e1610525950e7ba50110b8e1b2439",
+    "artifacts": {
+      "/previews/releases/profitize-2026-11-12/sello.html": "7e6aa3960f5dfbd8a52187d703f4e93adad2621838a7e2d020eb04ab24a5364c",
+      "/code/releases/staged-profitize-sello.json": "17f42ae16ded7052d62205c79280bf46103b7723f1df243f0a9999f1f47faba7",
+      "/previews/recovered/build/media/44e67f36-8518-4ccb-8d34-b790a81f1d76/poster-988ed696.webp": "988ed6961cd611c7e8fd58edfd2ca03c7c8e6f7abe35f4d42b88f27ecadd4be5",
+      "/code/recovered/bundles/sello-original-2026-11-12.zip": "fc47db0dd4ff72d8d9599708b34aa8dbbcfdd317df26645c940cd237532994bd",
+      "/previews/recovered/build/media/44e67f36-8518-4ccb-8d34-b790a81f1d76/previa-card-6cf36952.mp4": "6cf36952081296069bc71cb301e9367204522ec550e1d223f0ddfb1242094ccf"
+    },
+    "errors": []
+  },
+  {
+    "id": "staged-profitize-do-prompt-ao-site",
+    "checkedAt": "2026-11-13T13:37:30.401Z",
+    "environment": "Authenticated local IAB http://localhost:4178",
+    "startupVerified": true,
+    "visualConfirmed": true,
+    "interactionVerified": true,
+    "mediaVerified": true,
+    "promptVerified": true,
+    "downloadVerified": true,
+    "notes": "Original960x540 recorded motion inspected, advancing media, keyboard playback toggle and actual ZIP download. Original prompt action checked. All actual downloaded ZIPs retain byte-identical prompts, source archives and portable media. Browser-session clipboard reading returned empty; success feedback plus independent prompt-byte checks are the supported scope.",
+    "downloadSha256": "ddb6e335df92b88c99219a56282b43cb490151f461243205cb1d32af24e966eb",
+    "artifacts": {
+      "/previews/releases/profitize-2026-11-12/do-prompt-ao-site.html": "760fd8d2ad9dae65357bc3b4677036069389f6840167d109bc4abd7c5921f5ed",
+      "/code/releases/staged-profitize-do-prompt-ao-site.json": "7ec8592288eca4a56d266a997d4ae2abb6d743531aaf3373d7e549cf39af114d",
+      "/previews/recovered/build/media/a4b9c11e-5521-411d-8c69-c2a1e5332925/poster-44b0ab5e.webp": "44b0ab5e478e5c4d5238d3f40a8d6eabce6f84e4b3313064e335f7dc063f2874",
+      "/code/recovered/bundles/do-prompt-ao-site-original-2026-11-12.zip": "14de9fc960a263bf38d0479d59b34524e4bbcfe62bf52945049789b38a1fc67f",
+      "/previews/recovered/build/media/a4b9c11e-5521-411d-8c69-c2a1e5332925/previa-card-4e700489.mp4": "4e70048975f2bdbfab8d6be29785fa0d44dbede1ec7b01dc2239ec4120501965"
+    },
+    "errors": []
+  },
+  {
+    "id": "staged-profitize-sobrevoo",
+    "checkedAt": "2026-11-13T13:37:30.559Z",
+    "environment": "Authenticated local IAB http://localhost:4178",
+    "startupVerified": true,
+    "visualConfirmed": true,
+    "interactionVerified": true,
+    "mediaVerified": true,
+    "promptVerified": true,
+    "downloadVerified": true,
+    "notes": "Original960x768 recorded motion inspected, advancing media, keyboard playback toggle and actual ZIP download. Original prompt action checked. All actual downloaded ZIPs retain byte-identical prompts, source archives and portable media. Browser-session clipboard reading returned empty; success feedback plus independent prompt-byte checks are the supported scope.",
+    "downloadSha256": "54dfb67d8cd7819ee57d516d5c2ed1b8263f93f4ad3796a43f6e36cb9cb31534",
+    "artifacts": {
+      "/previews/releases/profitize-2026-11-12/sobrevoo.html": "2888523164664585ecbb3341e9a7c730c09bb3ce79b34b0989be9005f10d2753",
+      "/code/releases/staged-profitize-sobrevoo.json": "84301037e27c42e5a6b8a1913ecfe78a55e4b609f19d47b7389198599b9cf5c2",
+      "/previews/recovered/build/media/4d10ea66-59b9-4a53-9e28-21891603c8a5/poster-0ff2e5fc.webp": "0ff2e5fc3c9f5ec278c27621e7229c5e21411c2f4bfdfac2901cc4e04e057849",
+      "/code/recovered/bundles/sobrevoo-original-2026-11-12.zip": "d9bc84dd91e8c1ed3e768c6d1cbeb12a747d94629b57b9ec138a77443304aaf8",
+      "/previews/recovered/build/media/4d10ea66-59b9-4a53-9e28-21891603c8a5/previa-card-4baf31f0.mp4": "4baf31f0e118b96bfbdcdbe76614781e1e0775eaf3621ed9c6d8a4916c5ddbac"
+    },
+    "errors": []
+  },
+  {
+    "id": "staged-profitize-lente",
+    "checkedAt": "2026-11-13T13:37:30.591Z",
+    "environment": "Authenticated local IAB http://localhost:4178",
+    "startupVerified": true,
+    "visualConfirmed": true,
+    "interactionVerified": true,
+    "mediaVerified": true,
+    "promptVerified": true,
+    "downloadVerified": true,
+    "notes": "Original WebGL2/React source rendered Vedra. Trusted mouse replay visibly restored the glass reveal. Original prompt action and actual ZIP download checked. All actual downloaded ZIPs retain byte-identical prompts, source archives and portable media. Browser-session clipboard reading returned empty; success feedback plus independent prompt-byte checks are the supported scope.",
+    "downloadSha256": "bebadb5efdc2245622479bc1e686178e7ad9395c288b318fd8b64498e0ad24d7",
+    "artifacts": {
+      "/previews/runtime/staged-profitize-lente.html": "184ca9cf8202129807c00c30a5f0f1beece0bc12a056cd76fafcb4e24d4ef2a1",
+      "/code/releases/staged-profitize-lente.json": "2e5490bd833e3651798b97fad2d1ae7af5185491d07977721c964d2e8d746077",
+      "/previews/runtime/staged-profitize-lente.light.html": "fc3510bacc0f58aa8b10f4c6036179a4ba6b9751310bb20e96326b6f1fcdb787",
+      "/assets/preview.css": "3ab717e491e0fc421827b9b027c902ffa77519d5298862a34eee510c466b7a36",
+      "/previews/runtime/71dce893e46af168f19a9465.js": "71dce893e46af168f19a94653e3112f3c1c8265110b6bf4a4b0fc5c71662da76",
+      "/assets/fonts/Inter.woff2": "dd8a4575be9806105ac3decd02805cd2782fe7c05abb02c582316bc436ce03ae"
+    },
+    "errors": []
+  }
+]

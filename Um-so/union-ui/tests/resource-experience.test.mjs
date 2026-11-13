@@ -7,6 +7,7 @@ test('resource labels distinguish editable source, compiled demos and video with
  assert.equal(resourceDelivery({availability:'code',codePath:'/code/x.json',recoveryMode:'interactive-compiled-example'}).source,false);
  const video=resourceDelivery({video:'/x.mp4',previewPath:'/x.html',recoveryMode:'recorded-video'});assert.equal(video.preview,'Vídeo demonstrativo');assert.equal(video.source,false);assert.match(video.notice,/não é uma implementação/);
  assert.match(video.license,/não informada/);
+ const recordedHTML=resourceDelivery({framework:'html',availability:'preview',recoveryMode:'recorded-video'});assert.equal(recordedHTML.delivery,'Referência em vídeo');assert.equal(recordedHTML.compiled,false);assert.equal(recordedHTML.source,false);
  const rows=prepareCatalog([{id:'r',name:'Card',framework:'react'},{id:'v',name:'Card',framework:'vue'}]);assert.deepEqual(searchCatalog(rows,{framework:'vue'}).map(r=>r.id),['v']);
 });
 test('journeys are bounded and owner isolated, restore filtered paths, reject external/account URLs',()=>{

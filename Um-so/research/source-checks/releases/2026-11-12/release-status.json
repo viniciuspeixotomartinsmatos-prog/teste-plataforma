@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-11-13T02:31:56.048Z",
-  "published": 0,
-  "scope": "Retained and compiled candidates only. No new candidate has completed all authorized browser, media, interaction, prompt and portable-download acceptance gates.",
+  "checkedAt": "2026-11-13T13:37:31.294Z",
+  "published": 6,
+  "scope": "Only individually browser-approved originals are published. Other retained/compiled candidates remain unapproved.",
   "sources": {
     "21st": {
       "observedRoutes": 239,
@@ -34,16 +34,18 @@
         "prega"
       ],
       "videoReferences": 5,
-      "interactiveOriginalSource": 1
+      "interactiveOriginalSource": 1,
+      "published": 6
     }
   },
   "browser": {
     "verified": [
       "Skills one-column at390px, exactly one Caveman family",
       "Design Systems separate,9 cards,24x24 palette swatches, no horizontal overflow",
-      "Vistal original video readyState4,960x600,autoplay progressing after asset-bridge correction"
+      "Vistal original video readyState4,960x600,autoplay progressing after asset-bridge correction",
+      "Six Profitize originals: actual IAB preview/playback or shader replay, prompt action, actual ZIP downloads and independent original-byte validation; Vistal hover starts/stops correctly; mobile action buttons fit390px."
     ],
-    "remaining": "Prompt/download/full six-item acceptance incomplete: browser kernel reset on download wait and subsequent calls fail to write kernel assets."
+    "remaining": "Other staged candidates and earlier main-flow acceptance remain separate pending work. The authorized browser is working again."
   },
   "routes": [
     {

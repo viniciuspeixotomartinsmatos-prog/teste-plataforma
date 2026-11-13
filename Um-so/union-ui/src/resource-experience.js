@@ -8,7 +8,7 @@ export const discoveryGoals=[
 ];
 export function resourceDelivery(item){
  const recorded=item.recoveryMode==='recorded-video';
- const compiled=/compiled|retained|reference/.test(item.recoveryMode||'')||item.framework==='html'&&item.availability!=='code';
+ const compiled=!recorded&&(/compiled|retained|reference/.test(item.recoveryMode||'')||item.framework==='html'&&item.availability!=='code');
  const hasCode=Boolean(item.codePath)&&item.availability==='code'&&!compiled&&!recorded;
  return {preview:recorded?'Vídeo demonstrativo':item.previewPath||item.runtimePreviewPath?'Prévia interativa':'Prévia sob demanda',
   delivery:hasCode?'Código-fonte disponível':item.availability==='usage'?'Exemplo de uso':compiled?'Demonstração compilada':recorded?'Referência em vídeo':'Consultar arquivos',

@@ -3,6 +3,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import {createRecoveredRuntime,deduplicateRecoveredItems} from './lib/recovered-runtime.mjs';
 import {createPreviewNavigation} from './lib/preview-navigation.mjs';
+import {approvedReleaseRows} from './lib/release-evidence.mjs';
 const app=process.cwd(),snapshot=path.resolve(app,'../research/profitize'),publicRoot=path.join(app,'public');
 const destination=path.join(publicRoot,'previews/recovered'),prefix='/previews/recovered';
 const read=async file=>JSON.parse(await fs.readFile(file,'utf8'));
@@ -14,6 +15,8 @@ const origin='https://profitize.com.br';
 const captureArg=process.argv.find(x=>x.startsWith('--capture='))?.slice(10);
 const capture=captureArg&&path.resolve(captureArg);
 const [items,captured,loader]=await Promise.all([read(path.join(snapshot,'catalog.json')),read(path.join(snapshot,'runtime-snapshot.json')),fs.readFile(path.join(app,'scripts/lib/recovered-runtime.mjs'),'utf8')]);
+const approvedRows=(await approvedReleaseRows(publicRoot)).filter(row=>row.sourceId==='recovered'),approvedBySlug=new Map(approvedRows.map(row=>[row.slug,row]));
+for(const item of items)if(item.approvedRelease&&approvedBySlug.get(item.slug)?.approvedRelease!==item.approvedRelease)throw Error('Approved original release evidence is missing or changed: '+item.slug);
 const failed=[],requests=new Map();let bytes=0;
 const releases={};for(const version of new Set(items.map(item=>item.runtimeRelease).filter(Boolean))){if(!/^[a-zA-Z0-9-]+$/.test(version))throw Error('Invalid runtime release');releases[version]=await read(path.join(snapshot,'releases',version,'runtime-snapshot.json'));}
 
@@ -91,6 +94,7 @@ const categoryMap={Hero:'Heroes',Shader:'Backgrounds',Avatar:'Components',Dashbo
 const codeFolder=path.join(publicRoot,'code/recovered');const rows=[];let executable=0,recorded=0;
 const boot=String.raw`const info=window.recoveredItem;const r=window.recovered;const React=r.load(271645);async function mount(){let component,props=info.mode?{mode:info.mode}:{};if(window.recoveredEntries[info.slug])component=(await r.context(0).A(window.recoveredEntries[info.slug])).default;else{const spec=r.load(849266).liveSpec(info.slug);if(spec){component=r.load(800884).LiveShader;props={spec,className:'recovered-shader'};}else if(r.load(609673).hasLiveAscii(info.slug)){component=r.load(609673).LiveAscii;props={slug:info.slug,mode:'stage',className:'recovered-shader'};}else throw Error('No retained executable demo');}const registry=r.load(515470);const metadata=(registry.LIVE_COMPONENTS||registry._)?.[info.slug];const root=document.getElementById('root');if(metadata){root.style.background=metadata.bg||'';if(metadata.light)document.documentElement.style.colorScheme='light';}r.load(146480).createRoot(root,{onUncaughtError:error=>{throw error;}}).render(React.createElement(component,props));}mount().catch(error=>{document.getElementById('root').textContent=error.message;setTimeout(()=>{throw error;});});`;
 for(const item of items){
+ if(item.approvedRelease){const approved=approvedBySlug.get(item.slug);rows.push(approved);if(approved.recoveryMode==='recorded-video')recorded++;else executable++;continue;}
  const retained=item.runtimeRelease?releases[item.runtimeRelease]:captured,runtimeSuffix=item.runtimeRelease?'-'+item.runtimeRelease:'';
  const previewAssets=item.runtimeRelease?Object.fromEntries([...assets].filter(url=>url.startsWith('/build/componentes/'+item.slug+'/')).map(url=>[origin+url,prefix+url])):undefined;
  const id='recovered--'+item.slug;const hasRuntime=Boolean(retained.entries[item.slug]||['aurora','nebulosa','moldura','fluxo','topografia','pontilhado','limalha','tipos','flue','cromo','animated-mosaic-portrait','apoteose'].includes(item.slug));

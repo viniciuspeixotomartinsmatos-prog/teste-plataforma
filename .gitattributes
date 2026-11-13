@@ -8,3 +8,7 @@ Um-so/union-ui/public/code/runtime/21st-release-*.json -text
 Um-so/union-ui/public/previews/releases/** -text
 Um-so/union-ui/public/previews/runtime/21st-release-*.html -text
 Um-so/union-ui/public/previews/recovered/demos/21st-*/** -text
+Um-so/research/source-checks/releases/2026-11-12/profitize/*/*-ORIGINAL.md -text
+Um-so/union-ui/public/previews/runtime/staged-profitize-lente*.html -text
+Um-so/union-ui/public/previews/runtime/71dce893e46af168f19a9465.js -text
+Um-so/union-ui/public/assets/preview.css -text

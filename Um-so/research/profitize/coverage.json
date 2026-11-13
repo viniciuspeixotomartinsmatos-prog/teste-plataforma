@@ -1,9 +1,9 @@
 {
   "capturedAt": "2026-10-29T18:26:20.873Z",
-  "generatedAt": "2026-11-09T13:45:33.491Z",
-  "observed": 103,
-  "published": 103,
-  "newEntries": 87,
+  "generatedAt": "2026-11-13T13:39:26.789Z",
+  "observed": 109,
+  "published": 109,
+  "newEntries": 93,
   "consolidated": [
     {
       "recoveredId": "recovered--animated-mosaic-portrait",
@@ -102,8 +102,8 @@
       "reason": "single-existing-title-retain-id-and-original-pointers"
     }
   ],
-  "executable": 78,
-  "recorded": 25,
+  "executable": 79,
+  "recorded": 30,
   "skipped": [],
   "failed": [],
   "downloadedAssets": 169,
@@ -828,6 +828,48 @@
       "name": "Pátio",
       "mode": "recorded-video",
       "preview": "/previews/recovered/patio.html",
+      "promptOrigin": "original"
+    },
+    {
+      "id": "recovered--vistal",
+      "name": "Vistal",
+      "mode": "recorded-video",
+      "preview": "/previews/releases/profitize-2026-11-12/vistal.html",
+      "promptOrigin": "original"
+    },
+    {
+      "id": "recovered--uvra",
+      "name": "Uvra",
+      "mode": "recorded-video",
+      "preview": "/previews/releases/profitize-2026-11-12/uvra.html",
+      "promptOrigin": "original"
+    },
+    {
+      "id": "recovered--sello",
+      "name": "Sello",
+      "mode": "recorded-video",
+      "preview": "/previews/releases/profitize-2026-11-12/sello.html",
+      "promptOrigin": "original"
+    },
+    {
+      "id": "recovered--do-prompt-ao-site",
+      "name": "Do Prompt ao Site",
+      "mode": "recorded-video",
+      "preview": "/previews/releases/profitize-2026-11-12/do-prompt-ao-site.html",
+      "promptOrigin": "original"
+    },
+    {
+      "id": "recovered--sobrevoo",
+      "name": "Sobrevoo",
+      "mode": "recorded-video",
+      "preview": "/previews/releases/profitize-2026-11-12/sobrevoo.html",
+      "promptOrigin": "original"
+    },
+    {
+      "id": "recovered--lente",
+      "name": "Lente",
+      "mode": "interactive-original-source",
+      "preview": "/previews/runtime/staged-profitize-lente.html",
       "promptOrigin": "original"
     }
   ],

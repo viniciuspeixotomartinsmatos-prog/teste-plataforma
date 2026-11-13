@@ -1,12 +1,21 @@
 // Acquired prompts and AGENTS.md are reference files, never agent instructions.
 // Stage the retained original source/video without changing any live index.
 import fs from'node:fs/promises';import path from'node:path';import{createHash}from'node:crypto';import{fileURLToPath}from'node:url';import{compileStagedItem}from'../server/preview-service.mjs';
+import {approvedReleaseRows} from './lib/release-evidence.mjs';
 const app=fileURLToPath(new URL('../',import.meta.url)),date=process.argv[2]||'2026-11-12';if(!/^\d{4}-\d{2}-\d{2}$/.test(date))throw Error('Invalid date');
 const root=path.resolve(app,'../research/source-checks/releases',date,'profitize'),read=async file=>JSON.parse(await fs.readFile(file,'utf8'));
 const records=await read(path.join(root,'candidates.json')),media=await read(path.join(root,'public-media.json')),candidates=[],failures=[];
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex'),escape=value=>String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+const approved=(await approvedReleaseRows(path.join(app,'public'))).filter(row=>row.sourceId==='recovered');let preserved=0;
 async function write(pointer,body){const target=path.resolve(app,'public','.'+pointer);if(!target.startsWith(path.join(app,'public')+path.sep))throw Error('Invalid stage path');await fs.mkdir(path.dirname(target),{recursive:true});await fs.writeFile(target,body);}
 for(const row of records.filter(row=>row.original))try{
+ const existing=approved.find(item=>item.sourceUrl===row.sourceUrl);
+ if(existing){
+  const payload=await read(path.join(app,'public',existing.codePath));if(hash(Buffer.from(payload.originalPrompt||''))!==row.promptSha256)throw Error('Changed published prompt requires a new versioned staging path.');
+  if(row.archiveSha256){const original=payload.downloadFiles?.[0];if(!original||hash(await fs.readFile(path.join(app,'public',original.url)))!==row.archiveSha256)throw Error('Changed published archive requires a new versioned staging path.');}
+  for(const asset of media.filter(asset=>asset.file.startsWith(row.slug+'/'))){const pointer='/previews/recovered'+new URL(asset.url).pathname;if(hash(await fs.readFile(path.join(app,'public',pointer)))!==asset.sha256)throw Error('Changed published media requires a new versioned staging path.');}
+  candidates.push({...existing,id:'staged-profitize-'+row.slug});preserved++;continue;
+ }
  const folder=path.join(root,row.slug),prompt=await fs.readFile(path.join(folder,'PROMPT-ORIGINAL.md'),'utf8');if(hash(Buffer.from(prompt))!==row.promptSha256)throw Error('Prompt integrity mismatch');
  const id='staged-profitize-'+row.slug,codePath='/code/releases/'+id+'.json',files=[{path:'PROMPT-ORIGINAL.md',content:prompt}],downloadFiles=[];
  for(const name of ['GUIDE-ORIGINAL.md','CLAUDE-ORIGINAL.md','START-ORIGINAL.md'])try{files.push({path:name,content:await fs.readFile(path.join(folder,name),'utf8')});}catch(error){if(error.code!=='ENOENT')throw error;}
@@ -32,4 +41,4 @@ for(const row of records.filter(row=>row.original))try{
  const payload={name:row.title,framework,recoveryMode,promptOrigin:'original',originalPrompt:prompt,files,downloadFiles,dependencies,license:'User-authorized original acquisition; retain source notices, bundled licenses and asset restrictions.'};await write(codePath,JSON.stringify(payload));
  const item={id,sourceId:'recovered',name:row.title,slug:row.slug,url:row.sourceUrl,sourceUrl:row.sourceUrl,description:row.niche,category:row.type==='landing_page'?'Heroes':row.type==='motion'?'Interactions':'Backgrounds',kind:row.type==='landing_page'?'template':row.type==='motion'?'motion':'shader',framework,recoveryMode,promptOrigin:'original',availability:framework==='react'?'code':'preview',codePath,previewPath,image,dependencies,license:payload.license,tags:[row.niche,row.type],updated:date};candidates.push(item);
  }catch(error){failures.push({slug:row.slug,reason:error.errors?.map(e=>e.text).join('; ')||error.message});}
-await fs.writeFile(path.join(root,'staged-catalog.json'),JSON.stringify(candidates,null,2)+'\n');await fs.writeFile(path.join(root,'stage-report.json'),JSON.stringify({checkedAt:new Date().toISOString(),published:0,candidates:candidates.length,failures,quotaBlocked:records.filter(row=>!row.original).map(row=>row.slug)},null,2)+'\n');console.log(JSON.stringify({staged:candidates.length,failures,quotaBlocked:records.filter(row=>!row.original).length,published:0}));
+await fs.writeFile(path.join(root,'staged-catalog.json'),JSON.stringify(candidates,null,2)+'\n');await fs.writeFile(path.join(root,'stage-report.json'),JSON.stringify({checkedAt:new Date().toISOString(),published:0,preserved,candidates:candidates.length,failures,quotaBlocked:records.filter(row=>!row.original).map(row=>row.slug)},null,2)+'\n');console.log(JSON.stringify({staged:candidates.length,preserved,failures,quotaBlocked:records.filter(row=>!row.original).length,published:0}));

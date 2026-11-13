@@ -123,7 +123,8 @@ function buildPlugin(context){
 // artifacts, and the HTTP preview handler never accepts a source record.
 export async function compileStagedItem(item,payload,{persist=false}={}){
  if(!/^staged-[a-zA-Z0-9._-]{1,160}$/.test(item?.id||'')||!['react','vue'].includes(item.framework)||!Array.isArray(payload?.files)||!payload.files.length||payload.files.length>1000||JSON.stringify(payload).length>5000000)throw Error('Invalid isolated staging source.');
- if((await getCatalog()).byId.has(item.id))throw Error('Staging cannot overwrite an indexed component.');
+ const catalog=await getCatalog(),stagedPath='/previews/runtime/'+item.id+'.html';
+ if(catalog.byId.has(item.id)||catalog.items.some(row=>row.previewPath===stagedPath||row.runtimePreviewPath===stagedPath))throw Error('Staging cannot overwrite an indexed component.');
  return compileItem(item.id,{cache:false,persist,sourceRecord:{item,payload}});
 }
 export async function compileItem(id,{cache=true,persist=false,sourceRecord}={}){

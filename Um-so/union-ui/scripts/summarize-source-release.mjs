@@ -1,5 +1,6 @@
 // Source acquisition evidence is distinct from approval to publish.
 import fs from'node:fs/promises';import path from'node:path';import{fileURLToPath}from'node:url';
+import {approvedReleaseRows} from './lib/release-evidence.mjs';
 const app=fileURLToPath(new URL('../',import.meta.url)),date=process.argv[2]||'2026-11-12';if(!/^\d{4}-\d{2}-\d{2}$/.test(date))throw Error('Invalid date');
 const root=path.resolve(app,'../research/source-checks/releases',date),read=async file=>JSON.parse(await fs.readFile(file,'utf8'));
 const redact=text=>text.replace(/([?&](?:api_?key|token|secret|authorization|auth)=)[^\s"'&<>]+/gi,'$1REDACTED');
@@ -18,4 +19,7 @@ const report={checkedAt:new Date().toISOString(),published:0,scope:'Retained and
 report.sources['21st'].retainedThemes=[...routes.values()].filter(row=>row.status==='retained_theme_unvalidated').length;
 report.sources['21st'].templateMetadataOnly=[...routes.values()].filter(row=>row.status==='template_metadata_only').length;
 report.sources['21st'].unresolved=[...routes.values()].filter(row=>row.status==='metadata_unresolved').length;
+const approved=(await approvedReleaseRows(path.join(app,'public'))).filter(row=>row.approvedRelease===date);
+report.published=approved.length;report.sources.profitize.published=approved.filter(row=>row.sourceId==='recovered').length;
+if(approved.length){report.scope='Only individually browser-approved originals are published. Other retained/compiled candidates remain unapproved.';report.browser.verified.push('Six Profitize originals: actual IAB preview/playback or shader replay, prompt action, actual ZIP downloads and independent original-byte validation; Vistal hover starts/stops correctly; mobile action buttons fit390px.');report.browser.remaining='Other staged candidates and earlier main-flow acceptance remain separate pending work. The authorized browser is working again.';}
 await fs.writeFile(path.join(root,'release-status.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({...report,routes:undefined,browser:undefined,scrubbed}));
