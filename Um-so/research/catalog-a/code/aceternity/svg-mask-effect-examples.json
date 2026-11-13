@@ -1,0 +1,11 @@
+{
+  "name": "svg-mask-effect-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/svg-mask-effect-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport { MaskContainer } from \"@/components/ui/svg-mask-effect\";\n\nexport function SVGMaskEffectDemo() {\n  return (\n    <div className=\"flex h-[40rem] w-full items-center justify-center overflow-hidden\">\n      <MaskContainer\n        revealText={\n          <p className=\"mx-auto max-w-4xl text-center text-4xl font-bold text-slate-800 dark:text-white\">\n            The first rule of MRR Club is you do not talk about MRR Club. The\n            second rule of MRR Club is you DO NOT talk about MRR Club.\n          </p>\n        }\n        className=\"h-[40rem] rounded-md border text-white dark:text-black\"\n      >\n        Discover the power of{\" \"}\n        <span className=\"text-blue-500\">Tailwind CSS v4</span> with native CSS\n        variables and container queries with\n        <span className=\"text-blue-500\">advanced animations</span>.\n      </MaskContainer>\n    </div>\n  );\n}\n"
+    }
+  ]
+}

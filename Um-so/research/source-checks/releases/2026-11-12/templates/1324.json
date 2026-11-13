@@ -1,0 +1,16 @@
+{
+  "route": "/@hyperiux/templates/the-missing-pixel-design-studio-template",
+  "type": "template",
+  "status": "template_metadata_only",
+  "metadata": {
+    "type": "template",
+    "id": 1324,
+    "name": "The Missing Pixel - Design Studio Template",
+    "description": "The Missing Pixel is a multi-page website template for a design studio, built with Next.js. Setup instructions are in Code/README.md; fonts load from Google Fonts (OFL) and third-party credits are in LICENSE.md.",
+    "previewUrl": "https://cdn.21st.dev/user_3IlVIzEF1oziaTRKTKA3Qak2f5C/templates/the-missing-pixel-design-studio-template/preview-email-20261030.png",
+    "author": "hyperiux",
+    "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3IlVIzEF1oziaTRKTKA3Qak2f5C/avatar.png",
+    "url": "https://21st.dev/community/templates/the-missing-pixel-design-studio-template",
+    "price": 139
+  }
+}

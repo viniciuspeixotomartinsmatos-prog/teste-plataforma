@@ -1,0 +1,294 @@
+{
+  "checkedAt": "2026-11-12T14:47:17.095Z",
+  "scope": "Sixteen generated demonstrations of retained CSS themes, not the entire 168-item batch. No external image/font dependencies required by these demos.",
+  "records": [
+    {
+      "id": "21st-theme-06999342-268b-49f0-b05e-7de6ab02ccdb",
+      "name": "Vivid",
+      "before": {
+        "background": "rgb(255, 249, 246)",
+        "color": "rgb(92, 75, 67)"
+      },
+      "after": {
+        "background": "rgb(26, 20, 18)",
+        "color": "rgb(234, 224, 220)"
+      },
+      "saved": "Projeto salvo nesta demonstração.",
+      "promptCopied": true,
+      "zipSha256": "442ee8d5f55e6121beb915533403cc26b1c5a2a2b49cc6241a89c71f6a702aa9",
+      "originalCssSha256": "78455d69ff4ec120316f0ad9238d282ead098a42b7480dc772fb3327de6011f6",
+      "zipBytes": 20312,
+      "screenshot": "var/audits/themes-batch-0.png"
+    },
+    {
+      "id": "21st-theme-7027ab36-394c-434b-a5bf-8f91e5a5816c",
+      "name": "NORTH",
+      "before": {
+        "background": "rgb(250, 250, 250)",
+        "color": "rgb(10, 10, 11)"
+      },
+      "after": {
+        "background": "rgb(5, 5, 5)",
+        "color": "rgb(250, 250, 250)"
+      },
+      "saved": "Projeto salvo nesta demonstração.",
+      "promptCopied": true,
+      "zipSha256": "baa3a08610f5018b8097d2d04219bd0d0a401fb34783870f27bd47fa6e70f531",
+      "originalCssSha256": "fd694279f878d9156761e47e6b6a8bc21bffca05785b45b47c91af12f29ae7a0",
+      "zipBytes": 18617,
+      "screenshot": "var/audits/themes-batch-0.png"
+    },
+    {
+      "id": "21st-theme-021257c5-9803-4252-af59-9b94fb3b389b",
+      "name": "Pactum",
+      "before": {
+        "background": "rgb(250, 249, 245)",
+        "color": "rgb(31, 31, 31)"
+      },
+      "after": {
+        "background": "rgb(19, 19, 20)",
+        "color": "rgb(227, 227, 227)"
+      },
+      "saved": "Projeto salvo nesta demonstração.",
+      "promptCopied": true,
+      "zipSha256": "5be8f89e717f1e4df400d862ef3660709df78757529aee2be44e8376795d1e06",
+      "originalCssSha256": "da333f0227169aeaa01545a8b80dae936dfea4c072bc3672a4bb7f38f29ec7d2",
+      "zipBytes": 20409,
+      "screenshot": "var/audits/themes-batch-0.png"
+    },
+    {
+      "id": "21st-theme-3dff9192-eccf-4676-b88a-52432a069f38",
+      "name": "bluuue",
+      "before": {
+        "background": "rgb(250, 249, 245)",
+        "color": "rgb(61, 57, 41)"
+      },
+      "after": {
+        "background": "rgb(38, 38, 36)",
+        "color": "rgb(195, 192, 182)"
+      },
+      "saved": "Projeto salvo nesta demonstração.",
+      "promptCopied": true,
+      "zipSha256": "5344053dda5bd6f73040421256bf4c18ce28d43cfcd2e1aff66afc0bc8f0edd5",
+      "originalCssSha256": "1f3980436e875e021fffc772ea0714665f18e5fad5d50edce3b6b4dc4540ec5a",
+      "zipBytes": 20295,
+      "screenshot": "var/audits/themes-batch-0.png"
+    },
+    {
+      "id": "21st-theme-42ea0d36-69cd-4c9c-a5e8-2a5a55659316",
+      "name": "Orange Vivid",
+      "before": {
+        "background": "rgb(232, 235, 237)",
+        "color": "rgb(51, 51, 51)"
+      },
+      "after": {
+        "background": "rgb(26, 26, 26)",
+        "color": "rgb(229, 229, 229)"
+      },
+      "saved": "Projeto salvo nesta demonstração.",
+      "promptCopied": true,
+      "zipSha256": "3ebc3e794918285330e84f7feae3c15f946a35c8cf7cbac6d92f19e517f7edcf",
+      "originalCssSha256": "a7d4d2f955ceb5be80b596ced0b9d604affdf9af6b7fd6d9c1e1213adfc4672f",
+      "zipBytes": 20010,
+      "screenshot": "var/audits/themes-batch-4.png"
+    },
+    {
+      "id": "21st-theme-570a7a13-5c86-4fc7-b044-bbdb542d8605",
+      "name": "NiceNia",
+      "before": {
+        "background": "rgb(249, 250, 251)",
+        "color": "oklch(0.2795 0.0368 260.03)"
+      },
+      "after": {
+        "background": "rgb(16, 21, 30)",
+        "color": "rgb(244, 249, 255)"
+      },
+      "saved": "Projeto salvo nesta demonstração.",
+      "promptCopied": true,
+      "zipSha256": "b4d520a5f9543d8946529488e3c734d472c9eea7e2e44481d5e2cad4552673db",
+      "originalCssSha256": "f5afb5b1d021e908e18e43264393847e033135cfdc847207e0f227ba076a4507",
+      "zipBytes": 20417,
+      "screenshot": "var/audits/themes-batch-4.png"
+    },
+    {
+      "id": "21st-theme-91a6f795-8261-44d4-863a-33bf33cf0b63",
+      "name": "Blue Soft",
+      "before": {
+        "background": "oklch(0.9851 0 0)",
+        "color": "oklch(0 0 0)"
+      },
+      "after": {
+        "background": "oklch(0 0 0)",
+        "color": "oklch(1 0 0)"
+      },
+      "saved": "Projeto salvo nesta demonstração.",
+      "promptCopied": true,
+      "zipSha256": "4c1d008da4de05054573938b85f6390861d0b9ed6ef542c1c5cbfa339b4df3e5",
+      "originalCssSha256": "9e8a0c5aad1394516003d557ba3a33fa15cc8f1495e2f626c6fa6440eb947dbc",
+      "zipBytes": 20298,
+      "screenshot": "var/audits/themes-batch-4.png"
+    },
+    {
+      "id": "21st-theme-a04b2563-8f98-4a95-8cd5-a80615021335",
+      "name": "NhomaOrangeSoft",
+      "before": {
+        "background": "rgb(250, 249, 245)",
+        "color": "rgb(61, 57, 41)"
+      },
+      "after": {
+        "background": "rgb(38, 38, 36)",
+        "color": "rgb(241, 241, 239)"
+      },
+      "saved": "Projeto salvo nesta demonstração.",
+      "promptCopied": true,
+      "zipSha256": "734cf78cb6c3de10903a75c46924fb72ead204741e7a95c35182cb372e3ea7e0",
+      "originalCssSha256": "5fc13a1caff7061cf91aca368409d80fc368a419841a085b7c4f2ede956b9a0d",
+      "zipBytes": 20308,
+      "screenshot": "var/audits/themes-batch-4.png"
+    },
+    {
+      "id": "21st-theme-adf974a8-f305-45d5-a826-c96f247479cd",
+      "name": "Red Brightspace",
+      "before": {
+        "background": "rgb(252, 245, 247)",
+        "color": "rgb(10, 25, 49)"
+      },
+      "after": {
+        "background": "rgb(0, 5, 13)",
+        "color": "rgb(255, 255, 255)"
+      },
+      "saved": "Projeto salvo nesta demonstração.",
+      "promptCopied": true,
+      "zipSha256": "a8a51bdc1878e27a16d9055faf15f4c48ecd448e5c954a166a6a33c89d625908",
+      "originalCssSha256": "ba15a7fb3c8e31ed811a6e90b680df6c3197f2e125e6ccba2224aadbe5cc2525",
+      "zipBytes": 20127,
+      "screenshot": "var/audits/themes-batch-8.png"
+    },
+    {
+      "id": "21st-theme-d0170524-1277-45e3-9bba-08e4276963cb",
+      "name": "My SIP",
+      "before": {
+        "background": "rgb(243, 245, 251)",
+        "color": "rgb(1, 1, 1)"
+      },
+      "after": {
+        "background": "rgb(5, 5, 5)",
+        "color": "rgb(250, 250, 250)"
+      },
+      "saved": "Projeto salvo nesta demonstração.",
+      "promptCopied": true,
+      "zipSha256": "886f1bdfcc922420ea3e5e5ba2c2dda9631dc170f7ff2ae943e7edb943ebbf8b",
+      "originalCssSha256": "1bfa020fa185b751e1e5fe1f837a9b9b8185b5df936a525fc10b9d91fef3b2a0",
+      "zipBytes": 20388,
+      "screenshot": "var/audits/themes-batch-8.png"
+    },
+    {
+      "id": "21st-theme-d53b9d76-4af1-4428-bb02-3bc1942975b5",
+      "name": "dgn tema",
+      "before": {
+        "background": "rgb(253, 253, 253)",
+        "color": "rgb(0, 0, 0)"
+      },
+      "after": {
+        "background": "rgb(10, 10, 10)",
+        "color": "rgb(240, 240, 240)"
+      },
+      "saved": "Projeto salvo nesta demonstração.",
+      "promptCopied": true,
+      "zipSha256": "1eccb743a9d5a4995fe430f2206fc45b8b9cc8ce11b44053070352907c089c86",
+      "originalCssSha256": "98518a427c4ac50af8baf93c86aa674178d99e550633e9c844cf35222c7ad4a5",
+      "zipBytes": 20094,
+      "screenshot": "var/audits/themes-batch-8.png"
+    },
+    {
+      "id": "21st-theme-d85d5236-fa81-4abf-ad30-ceed37fdb932",
+      "name": "Idor Theme B",
+      "before": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)"
+      },
+      "after": {
+        "background": "rgb(0, 0, 0)",
+        "color": "rgb(255, 255, 255)"
+      },
+      "saved": "Projeto salvo nesta demonstração.",
+      "promptCopied": true,
+      "zipSha256": "e2af650151609e42ceefef8542a3b960bd074d043f7d949cd3a8798b9fec728f",
+      "originalCssSha256": "53d913eafc20c7111b41c9f26fd086524575586329bc03820d0f081539207648",
+      "zipBytes": 17515,
+      "screenshot": "var/audits/theme-idor-repaired.png"
+    },
+    {
+      "id": "21st-theme-dc0cb93a-c606-437e-8b4b-54d4f90013a3",
+      "name": "idor-theme-b-1",
+      "before": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)"
+      },
+      "after": {
+        "background": "rgb(0, 0, 0)",
+        "color": "rgb(255, 255, 255)"
+      },
+      "saved": "Projeto salvo nesta demonstração.",
+      "promptCopied": true,
+      "zipSha256": "b50e6d2eb25d1e8a4f94dbab8c0e2325463cf02118abb506001b941880bb0070",
+      "originalCssSha256": "37c955308cbb2ff01cf8b3f2433a6b573e7306cd1c2fa18fd54abcaa963fc1c6",
+      "zipBytes": 17534,
+      "screenshot": "var/audits/themes-batch-12.png"
+    },
+    {
+      "id": "21st-theme-dedb51e5-675f-4254-934f-8cbbdbd3d351",
+      "name": "Heritage Athletic Club",
+      "before": {
+        "background": "rgb(244, 238, 225)",
+        "color": "rgb(27, 34, 51)"
+      },
+      "after": {
+        "background": "rgb(15, 26, 46)",
+        "color": "rgb(244, 238, 225)"
+      },
+      "saved": "Projeto salvo nesta demonstração.",
+      "promptCopied": true,
+      "zipSha256": "a664dc75770e107ffd21a4bf3d46f3471b9f9bd47379572b4627b43d79c820de",
+      "originalCssSha256": "e17ba4a68345f880d04a4bb5b3bb85ac8cbf582e751256f004a8499a08aeb9c5",
+      "zipBytes": 18833,
+      "screenshot": "var/audits/themes-batch-12.png"
+    },
+    {
+      "id": "21st-theme-dfc7b221-bb0e-4ec8-b935-fb37c73e731d",
+      "name": "test",
+      "before": {
+        "background": "rgba(195, 189, 183, 0.85)",
+        "color": "rgb(17, 24, 39)"
+      },
+      "after": {
+        "background": "rgb(25, 25, 25)",
+        "color": "oklch(0.88 0.04 260)"
+      },
+      "saved": "Projeto salvo nesta demonstração.",
+      "promptCopied": true,
+      "zipSha256": "70ec1dc3cd3cb83194a16b6d67698b05a4e7e1a6d7631268b4ddb082592ad7b9",
+      "originalCssSha256": "dad0f8b1af072466bd2b03598127c18aaaf880b767017449143dd134dcc19299",
+      "zipBytes": 20310,
+      "screenshot": "var/audits/themes-batch-12.png"
+    },
+    {
+      "id": "21st-theme-fbd7237a-6216-4602-8748-05169b203135",
+      "name": "Sky Vivid",
+      "before": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(15, 20, 25)"
+      },
+      "after": {
+        "background": "rgb(0, 0, 0)",
+        "color": "rgb(231, 233, 234)"
+      },
+      "saved": "Projeto salvo nesta demonstração.",
+      "promptCopied": true,
+      "zipSha256": "815ec6d302e133faa91cd364c2586b4dba448b68780ab927282dcd32ccb7d186",
+      "originalCssSha256": "6f682a99af7bf08d5f8cbfaad199a962a1a8d06249775a91eaf29281e8c27167",
+      "zipBytes": 20187,
+      "screenshot": "var/audits/themes-batch-12.png"
+    }
+  ]
+}

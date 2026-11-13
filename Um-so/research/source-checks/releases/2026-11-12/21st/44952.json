@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 44952,
+    "name": "Spinny thing",
+    "description": "Pure CSS gradient background in the Orbit Sweep style, made with the 21st.dev Gradient Builder. 6-color palette (#2F51C1, #123A6B, #DC2C2C, #DD2C2C, #530097, #6500B8). Features: soft blur finish, vignette. A drop-in, zero-dependency React component for hero sections, cards, and page backgrounds.",
+    "previewUrl": "https://cdn.21st.dev/paulkatz996/spinny-thing/default/preview.1794230732881-ab7f6df4-100f-4e0d-87bd-1d7c8cc15d1a.webp",
+    "videoUrl": null,
+    "author": "paulkatz996",
+    "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zSlFaMFAwR1cwWWtickl2RGlBdHRwNVZPM2cifQ",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/paulkatz996/spinny-thing?api_key=REDACTED\"",
+    "url": "https://21st.dev/@paulkatz996/components/spinny-thing"
+  },
+  "requestedRoute": "/@paulkatz996/components/spinny-thing",
+  "checkedAt": "2026-11-13T02:14:30.090Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 44952,
+    "componentId": 25974,
+    "authorUserId": "user_3JQZ0M01O6QogmdLPNbnt3sf7UO",
+    "name": "Spinny thing",
+    "demoName": "Default",
+    "description": "Pure CSS gradient background in the Orbit Sweep style, made with the 21st.dev Gradient Builder. 6-color palette (#2F51C1, #123A6B, #DC2C2C, #DD2C2C, #530097, #6500B8). Features: soft blur finish, vignette. A drop-in, zero-dependency React component for hero sections, cards, and page backgrounds.",
+    "previewUrl": "https://cdn.21st.dev/paulkatz996/spinny-thing/default/preview.1794230732881-ab7f6df4-100f-4e0d-87bd-1d7c8cc15d1a.webp",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/paulkatz996/spinny-thing?api_key=REDACTED\"",
+    "componentCode": "// GradientBackground — \"Spinny thing\", made with the 21st.dev Gradient\n// Builder and exported as live CSS (the builder's own Copy-CSS background,\n// plus its soften-blur and grain passes). Zero dependencies: one <div> that\n// fills its parent. Drop it behind your content:\n// <div className=\"relative h-96\"><GradientBackground className=\"absolute inset-0\" /></div>\n// Remix the source recipe (colors, mode, finish) in the editor:\n// https://21st.dev/community/gradients/editor?from=8390de08-b510-4c99-9113-249f43ec4da3\nexport function GradientBackground({ className }: { className?: string }) {\n  return (\n    <div\n      aria-hidden=\"true\"\n      className={className}\n      style={{\n        position: \"relative\",\n        overflow: \"hidden\",\n        width: \"100%\",\n        height: \"100%\",\n        containerType: \"size\",\n      }}\n    >\n      <div\n        style={{\n          position: \"absolute\",\n        inset: \"-3.4cqmin\",\n        filter: \"blur(1.7cqmin)\",\n        backgroundColor: \"#2F51C1\",\n        backgroundImage:\n          \"radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0.336) 100%), conic-gradient(from 142deg at 50% 50%, #2F51C1 32%, #6500B8 35%, #DD2C2C 41%, #DC2C2C 58%, #530097 75%, #123A6B 90%)\",\n        }}\n      />\n    </div>\n  )\n}\n",
+    "demoCode": "import { GradientBackground } from \"@/components/ui/spinny-thing\"\n\nexport default function GradientBackgroundDemo() {\n  return (\n    <div className=\"relative h-[440px] w-full overflow-hidden rounded-xl\">\n      <GradientBackground className=\"h-full w-full\" />\n    </div>\n  )\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "sources": [
+    {
+      "sourceId": "magic",
+      "url": "https://magicui.design",
+      "repository": "https://github.com/magicuidesign/magicui",
+      "license": "MIT",
+      "components": 78,
+      "examples": 170,
+      "coverage": "All registry:ui components plus all public example JSON files from official registry."
+    },
+    {
+      "sourceId": "reactbits",
+      "url": "https://reactbits.dev",
+      "repository": "https://github.com/DavidHDev/react-bits",
+      "license": "MIT + Commons Clause",
+      "components": 419,
+      "variants": 1274,
+      "coverage": "All component variants in official public/r/registry.json. Grouped by title with default TS/Tailwind when available.",
+      "exampleFiles": 218
+    },
+    {
+      "sourceId": "aceternity",
+      "url": "https://ui.aceternity.com",
+      "license": "Public component documentation; retain upstream terms/source attribution",
+      "components": 123,
+      "coverage": "All 123 component docs linked from public /components index. Exact registry names parsed from public rendered docs; source included only for registry responses accessible without authentication. Also extracted public code blocks and 182 examples from docs without executing page scripts.",
+      "publicCodeComponents": 113,
+      "renderedExampleFiles": 182,
+      "withoutPublicCode": [
+        "empty-states-thumbnail",
+        "features-section-with-skeletons",
+        "grid-and-dot-backgrounds",
+        "hero-section-with-mousemove",
+        "illustrations",
+        "inference-landing-page-hd",
+        "parallax-hero-images-2",
+        "product-landing-page",
+        "sliding-loader",
+        "team-section-with-scales"
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "url": "https://ui.aceternity.com/components/empty-states-thumbnail",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://ui.aceternity.com/components/features-section-with-skeletons",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://ui.aceternity.com/components/hero-section-with-mousemove",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://ui.aceternity.com/components/inference-landing-page-hd",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://ui.aceternity.com/components/parallax-hero-images-2",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://ui.aceternity.com/components/product-landing-page",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://ui.aceternity.com/components/sliding-loader",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://ui.aceternity.com/components/team-section-with-scales",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "generatedAt": "2026-10-26",
+  "counts": {
+    "magic": 78,
+    "reactbits": 419,
+    "aceternity": 123,
+    "thumbnails": 332
+  }
+}

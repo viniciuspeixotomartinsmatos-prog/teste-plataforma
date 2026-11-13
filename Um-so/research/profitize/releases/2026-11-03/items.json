@@ -1,0 +1,360 @@
+[
+  {
+    "id": "f9482eee-d70e-4b1f-b038-f5604c387024",
+    "slug": "lusco",
+    "title": "Lusco",
+    "type": "landing_page",
+    "kind": {
+      "id": "landing_page",
+      "label": "Landing page",
+      "plural": "Landing pages",
+      "segment": "landing-pages",
+      "sortOrder": 0
+    },
+    "niche": "produtora audiovisual",
+    "description": "Produtora audiovisual: uma montagem do set em preto e branco fica atrás da página e aparece por furos recortados em cada seção.",
+    "tags": [
+      "produtora",
+      "audiovisual",
+      "video-fundo",
+      "montagem",
+      "preto-e-branco",
+      "mascara",
+      "intro",
+      "grao",
+      "cinematografico",
+      "escuro",
+      "lenis"
+    ],
+    "isNew": true,
+    "free": false,
+    "tone": "escuro",
+    "industry": "agencia",
+    "preview": {
+      "poster": "/build/media/f9482eee-d70e-4b1f-b038-f5604c387024/poster-0ed01cb8.webp",
+      "video": "/build/media/f9482eee-d70e-4b1f-b038-f5604c387024/previa-card-a85a9ef4.mp4",
+      "mode": "cover"
+    },
+    "aspect": "200/113",
+    "publishedAt": "2026-11-02T09:19:21.390724+00:00",
+    "updatedAt": "2026-11-03T02:06:07.543354+00:00",
+    "demoUrl": null,
+    "captureFile": "landing-pages_lusco.html"
+  },
+  {
+    "id": "a2467073-53ba-4fe8-9f52-bd00e1b10497",
+    "slug": "sushi-conveyor-menu",
+    "title": "Sushi Conveyor Menu",
+    "type": "component",
+    "kind": {
+      "id": "component",
+      "label": "Componente",
+      "plural": "Componentes",
+      "segment": "componentes",
+      "sortOrder": 1
+    },
+    "niche": "Cardápio",
+    "description": "O cardápio numa esteira de sushi que gira na página, em perspectiva. O prato sob o mouse para a esteira e sobe com o nome e o preço; arrastar a gira, e o clique abre o prato num diálogo, voando da esteira.",
+    "tags": [
+      "Restaurante",
+      "Perspectiva"
+    ],
+    "isNew": true,
+    "free": false,
+    "tone": "escuro",
+    "industry": null,
+    "preview": {
+      "poster": "$undefined",
+      "video": "$undefined",
+      "mode": "cover"
+    },
+    "aspect": "4/3",
+    "publishedAt": "2026-11-01T22:00:00+00:00",
+    "updatedAt": "2026-11-02T08:35:36.181141+00:00",
+    "demoUrl": null,
+    "captureFile": "componentes_sushi-conveyor-menu.html"
+  },
+  {
+    "id": "1e2a6b33-68b2-4c82-84f6-fce4680b93c0",
+    "slug": "maison",
+    "title": "Maison",
+    "type": "landing_page",
+    "kind": {
+      "id": "landing_page",
+      "label": "Landing page",
+      "plural": "Landing pages",
+      "segment": "landing-pages",
+      "sortOrder": 0
+    },
+    "niche": "imobiliaria",
+    "description": "Imobiliária de casas: um voo de drone preso ao scroll atravessa a mansão e sai por uma janela em arco recortada na página.",
+    "tags": [
+      "imobiliaria",
+      "alto-padrao",
+      "video-scroll",
+      "frames-canvas",
+      "cinematografico",
+      "editorial",
+      "quadrado",
+      "claro",
+      "scroll",
+      "lenis"
+    ],
+    "isNew": false,
+    "free": false,
+    "tone": "escuro",
+    "industry": "imoveis",
+    "preview": {
+      "poster": "/build/media/1e2a6b33-68b2-4c82-84f6-fce4680b93c0/poster-73398fdc.webp",
+      "video": "/build/media/1e2a6b33-68b2-4c82-84f6-fce4680b93c0/previa-card-0d3e243d.mp4",
+      "mode": "cover"
+    },
+    "aspect": "25/14",
+    "publishedAt": "2026-10-31T03:40:48.393034+00:00",
+    "updatedAt": "2026-11-03T02:06:14.985981+00:00",
+    "demoUrl": null,
+    "captureFile": "landing-pages_maison.html"
+  },
+  {
+    "id": "fd09aa05-fa96-47eb-ad4a-fcb6c0a41de9",
+    "slug": "clareira",
+    "title": "Clareira",
+    "type": "landing_page",
+    "kind": {
+      "id": "landing_page",
+      "label": "Landing page",
+      "plural": "Landing pages",
+      "segment": "landing-pages",
+      "sortOrder": 0
+    },
+    "niche": "imobiliaria",
+    "description": "Condomínio de casas na mata: um voo de drone preso ao scroll entra pela casa-modelo, passa cômodo a cômodo e sai pela piscina.",
+    "tags": [
+      "imobiliaria",
+      "lancamento",
+      "arquitetura",
+      "video-scroll",
+      "frames-canvas",
+      "cinematografico",
+      "minimalista",
+      "claro",
+      "scroll",
+      "lenis"
+    ],
+    "isNew": false,
+    "free": false,
+    "tone": "escuro",
+    "industry": "imoveis",
+    "preview": {
+      "poster": "/build/media/fd09aa05-fa96-47eb-ad4a-fcb6c0a41de9/poster-da7207ee.webp",
+      "video": "/build/media/fd09aa05-fa96-47eb-ad4a-fcb6c0a41de9/previa-card-ef7e7cd8.mp4",
+      "mode": "cover"
+    },
+    "aspect": "25/14",
+    "publishedAt": "2026-10-30T19:37:13.646836+00:00",
+    "updatedAt": "2026-11-03T02:05:53.008144+00:00",
+    "demoUrl": null,
+    "captureFile": "landing-pages_clareira.html"
+  },
+  {
+    "id": "36dc684d-7a08-4d66-a56b-b88b1832af77",
+    "slug": "akari",
+    "title": "Akari",
+    "type": "landing_page",
+    "kind": {
+      "id": "landing_page",
+      "label": "Landing page",
+      "plural": "Landing pages",
+      "segment": "landing-pages",
+      "sortOrder": 0
+    },
+    "niche": "cervejaria",
+    "description": "Cervejaria artesanal: uma gota de água cai e vira lata na abertura, e rolando, duas gotas fazem nascer os outros sabores.",
+    "tags": [
+      "cerveja",
+      "cervejaria",
+      "bebida",
+      "produto",
+      "video",
+      "scroll",
+      "canvas",
+      "lenis",
+      "escuro",
+      "mobile"
+    ],
+    "isNew": false,
+    "free": false,
+    "tone": "escuro",
+    "industry": "comida",
+    "preview": {
+      "poster": "/build/media/36dc684d-7a08-4d66-a56b-b88b1832af77/poster-3c931ac2.webp",
+      "video": "/build/media/36dc684d-7a08-4d66-a56b-b88b1832af77/previa-card-313fc29f.mp4",
+      "mode": "cover"
+    },
+    "aspect": "40/23",
+    "publishedAt": "2026-10-31T06:20:49.791213+00:00",
+    "updatedAt": "2026-11-03T02:05:08.262418+00:00",
+    "demoUrl": null,
+    "captureFile": "landing-pages_akari.html"
+  },
+  {
+    "id": "4efc310e-70e6-483f-a3f0-87f7692ba36b",
+    "slug": "ollo",
+    "title": "Ollo",
+    "type": "landing_page",
+    "kind": {
+      "id": "landing_page",
+      "label": "Landing page",
+      "plural": "Landing pages",
+      "segment": "landing-pages",
+      "sortOrder": 0
+    },
+    "niche": "saas",
+    "description": "Assistente pessoal com IA: um busto de pontos 3D vira para o cursor, se penteia com o mouse e a câmera entra até o olho.",
+    "tags": [
+      "saas",
+      "ia",
+      "lista-de-espera",
+      "3d",
+      "three.js",
+      "pontos",
+      "webgl",
+      "mouse",
+      "scroll",
+      "escuro",
+      "mobile"
+    ],
+    "isNew": false,
+    "free": false,
+    "tone": "escuro",
+    "industry": "tech",
+    "preview": {
+      "poster": "/build/media/4efc310e-70e6-483f-a3f0-87f7692ba36b/poster-4f2682cc.webp",
+      "video": "/build/media/4efc310e-70e6-483f-a3f0-87f7692ba36b/previa-card-1524a283.mp4",
+      "mode": "cover"
+    },
+    "aspect": "800/461",
+    "publishedAt": "2026-10-31T04:58:27.420191+00:00",
+    "updatedAt": "2026-11-03T02:07:05.314781+00:00",
+    "demoUrl": null,
+    "captureFile": "landing-pages_ollo.html"
+  },
+  {
+    "id": "74f34977-9a73-415b-9d14-20c160bc345d",
+    "slug": "glassy-coverflow-carousel",
+    "title": "Glassy Coverflow Carousel",
+    "type": "component",
+    "kind": {
+      "id": "component",
+      "label": "Componente",
+      "plural": "Componentes",
+      "segment": "componentes",
+      "sortOrder": 1
+    },
+    "niche": "Carrossel",
+    "description": "Um carrossel de pôsteres em perspectiva 3D: o do meio de frente, os vizinhos girando para trás. Arraste, use as setas ou o dock de vidro; o pôster do meio abre o trailer do YouTube numa janela por cima da página.",
+    "tags": [
+      "Galeria",
+      "3D"
+    ],
+    "isNew": true,
+    "free": false,
+    "tone": "escuro",
+    "industry": null,
+    "preview": {
+      "poster": "$undefined",
+      "video": "$undefined",
+      "mode": "cover"
+    },
+    "aspect": "4/3",
+    "publishedAt": "2026-11-01T23:00:00+00:00",
+    "updatedAt": "2026-11-02T08:35:35.768089+00:00",
+    "demoUrl": null,
+    "captureFile": "componentes_glassy-coverflow-carousel.html"
+  },
+  {
+    "id": "80b0faf1-6417-472e-a428-2efa03decd5d",
+    "slug": "sulko",
+    "title": "Sulko",
+    "type": "landing_page",
+    "kind": {
+      "id": "landing_page",
+      "label": "Landing page",
+      "plural": "Landing pages",
+      "segment": "landing-pages",
+      "sortOrder": 0
+    },
+    "niche": "automotivo",
+    "description": "Lançamento de SUV off-road: um voo de drone num cânion preso ao scroll termina com o carro parado no ar e o nome atrás dele.",
+    "tags": [
+      "automotivo",
+      "lancamento",
+      "video-scroll",
+      "frames-canvas",
+      "cinematografico",
+      "texto-atras-do-objeto",
+      "intro",
+      "escuro",
+      "scroll",
+      "lenis"
+    ],
+    "isNew": false,
+    "free": false,
+    "tone": "escuro",
+    "industry": "automotivo",
+    "preview": {
+      "poster": "/build/media/80b0faf1-6417-472e-a428-2efa03decd5d/poster-f3a46b6e.webp",
+      "video": "/build/media/80b0faf1-6417-472e-a428-2efa03decd5d/previa-card-d54c9024.mp4",
+      "mode": "cover"
+    },
+    "aspect": "40/23",
+    "publishedAt": "2026-10-31T05:17:03.213212+00:00",
+    "updatedAt": "2026-11-03T02:08:00.162064+00:00",
+    "demoUrl": null,
+    "captureFile": "landing-pages_sulko.html"
+  },
+  {
+    "id": "1541d4d1-bd2d-49cd-949b-a9a5853217ac",
+    "slug": "shari",
+    "title": "Shari",
+    "type": "landing_page",
+    "kind": {
+      "id": "landing_page",
+      "label": "Landing page",
+      "plural": "Landing pages",
+      "segment": "landing-pages",
+      "sortOrder": 0
+    },
+    "niche": "restaurante japonês",
+    "description": "Restaurante japonês: barca de sushi sobre o nome gigante, o dia do balcão em horários e o salão em panorama que corre de lado.",
+    "tags": [
+      "restaurante",
+      "japones",
+      "sushi",
+      "comida",
+      "delivery",
+      "palavra-gigante",
+      "recortes",
+      "marquee",
+      "pin",
+      "scroll-horizontal",
+      "gsap",
+      "lenis",
+      "claro"
+    ],
+    "isNew": true,
+    "free": false,
+    "tone": "claro",
+    "industry": "comida",
+    "preview": {
+      "poster": "/build/media/1541d4d1-bd2d-49cd-949b-a9a5853217ac/poster-1610-1793586892.webp",
+      "video": "/build/media/1541d4d1-bd2d-49cd-949b-a9a5853217ac/previa-card-1610-709-1793593939.mp4",
+      "mode": "cover"
+    },
+    "aspect": "32/17",
+    "publishedAt": "2026-11-01T09:15:52.993286+00:00",
+    "updatedAt": "2026-11-03T02:07:48.333325+00:00",
+    "demoUrl": null,
+    "captureFile": "landing-pages_shari.html"
+  }
+]

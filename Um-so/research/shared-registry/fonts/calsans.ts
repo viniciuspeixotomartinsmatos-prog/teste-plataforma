@@ -1,0 +1,1 @@
+import "./calsans.css";export const calsans={className:"calsans",style:{fontFamily:"Cal Sans"}};

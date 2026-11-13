@@ -1,0 +1,104 @@
+[
+  {
+    "route": "/@themeocean/components/modern-ai-saa-s-hero-with-interactive-live-preview",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45141,
+      "name": "Modern AI SaaS Hero with Interactive Live Preview",
+      "description": "A conversion-focused SaaS hero section featuring a subtle animated background grid, gradient badge, staggered text reveal, dual CTAs, and an interactive product preview frame.",
+      "previewUrl": "https://cdn.21st.dev/themeocean/modern-ai-saa-s-hero-with-interactive-live-preview/default/preview.1794393709254-742cbefe-cf3f-413c-a4a4-6193f7e842a7.jpg",
+      "videoUrl": null,
+      "author": "themeocean",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3KgWzslqJFclZ2iRrfddAtKvi27/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/themeocean/modern-ai-saa-s-hero-with-interactive-live-preview?api_key=REDACTED\"",
+      "url": "https://21st.dev/@themeocean/components/modern-ai-saa-s-hero-with-interactive-live-preview"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@themeocean/components/multi-state-action-button-with-micro-animations",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44863,
+      "name": "Multi-State Action Button with Micro-Animations",
+      "description": "A highly interactive form submission button built with React, Tailwind CSS, and Framer Motion. Transitions smoothly through 'Idle', 'Loading' (with spinner), and 'Success' (with an animated checkmark) states.",
+      "previewUrl": "https://cdn.21st.dev/user_3KgWzslqJFclZ2iRrfddAtKvi27/multi-state-action-button-with-micro-animations/default/preview.1794245187538.webp",
+      "videoUrl": "https://cdn.21st.dev/user_3KgWzslqJFclZ2iRrfddAtKvi27/multi-state-action-button-with-micro-animations/default/video.1794245181342.mp4",
+      "author": "themeocean",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3KgWzslqJFclZ2iRrfddAtKvi27/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/themeocean/multi-state-action-button-with-micro-animations?api_key=REDACTED\"",
+      "url": "https://21st.dev/@themeocean/components/multi-state-action-button-with-micro-animations"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@themeocean/components/sleek-ai-command-menu-cmdk-with-fuzzy-search",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44930,
+      "name": "Sleek AI Command Menu (CMDK) with Fuzzy Search",
+      "description": "A premium, keyboard-accessible command menu dialog optimized for AI platforms. Features dynamic search filtering, shortcut key indicators, recent AI prompts history, and buttery smooth fade/scale transitions.",
+      "previewUrl": "https://cdn.21st.dev/user_3KgWzslqJFclZ2iRrfddAtKvi27/sleek-ai-command-menu-cmdk-with-fuzzy-search/default/preview.1794233861485.webp",
+      "videoUrl": "https://cdn.21st.dev/user_3KgWzslqJFclZ2iRrfddAtKvi27/sleek-ai-command-menu-cmdk-with-fuzzy-search/default/video.1794233857306.mp4",
+      "author": "themeocean",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3KgWzslqJFclZ2iRrfddAtKvi27/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/themeocean/sleek-ai-command-menu-cmdk-with-fuzzy-search?api_key=REDACTED\"",
+      "url": "https://21st.dev/@themeocean/components/sleek-ai-command-menu-cmdk-with-fuzzy-search"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@themeocean/components/split-developer-hero-with-interactive-code-terminal",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45146,
+      "name": "Split Developer Hero with Interactive Code Terminal",
+      "description": "A responsive two-column hero section tailored for developer tools and APIs. Pairs bold value-proposition copy with an interactive tabbed code snippet terminal featuring one-click copy feedback.",
+      "previewUrl": "https://cdn.21st.dev/user_3KgWzslqJFclZ2iRrfddAtKvi27/split-developer-hero-with-interactive-code-terminal/default/preview.1794402179580.webp",
+      "videoUrl": "https://cdn.21st.dev/user_3KgWzslqJFclZ2iRrfddAtKvi27/split-developer-hero-with-interactive-code-terminal/default/video.1794402139705.mp4",
+      "author": "themeocean",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3KgWzslqJFclZ2iRrfddAtKvi27/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/themeocean/split-developer-hero-with-interactive-code-terminal?api_key=REDACTED\"",
+      "url": "https://21st.dev/@themeocean/components/split-developer-hero-with-interactive-code-terminal"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@uploadcn/components/progress-ring-upload",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45003,
+      "name": "Progress Ring Upload",
+      "description": "A circular ring dropzone that shows a counting percentage, a tick per file, and a self-drawing checkmark when a batch upload completes.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_uploadcn_1793404283202/progress-ring-upload/default/preview.1794334119903.png",
+      "videoUrl": "https://cdn.21st.dev/user_registry_uploadcn_1793404283202/progress-ring-upload/default/video.1794334064651.mp4",
+      "author": "uploadcn",
+      "authorImage": "https://github.com/uploadcn.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/uploadcn/progress-ring-upload?api_key=REDACTED\"",
+      "url": "https://21st.dev/@uploadcn/components/progress-ring-upload"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@vamsiy78/components/segmented-control",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44919,
+      "name": "Segmented Control",
+      "description": "A macOS-style segmented control for switching between a few mutually exclusive options, with a selected pill that springs between segments and hairline dividers between unselected ones.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_vamsiy78_1793404269277/segmented-control/default/preview.1794255831345.png",
+      "videoUrl": "https://cdn.21st.dev/user_registry_vamsiy78_1793404269277/segmented-control/default/video.1794255707882.mp4",
+      "author": "vamsiy78",
+      "authorImage": "https://github.com/vamsiy78.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/vamsiy78/segmented-control?api_key=REDACTED\"",
+      "url": "https://21st.dev/@vamsiy78/components/segmented-control"
+    },
+    "status": "retained_unvalidated"
+  }
+]

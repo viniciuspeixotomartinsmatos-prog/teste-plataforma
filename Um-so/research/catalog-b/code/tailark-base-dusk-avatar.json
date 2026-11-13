@@ -1,0 +1,24 @@
+{
+  "name": "Dusk Avatar",
+  "sourceId": "tailark",
+  "files": [
+    {
+      "path": "registry/bases/base/dusk/ui/avatar.tsx",
+      "content": "'use client'\n\nimport * as React from 'react'\nimport { Avatar as AvatarPrimitive } from '@base-ui/react/avatar'\n\nimport { cn } from '@/registry/core/lib/utils'\n\nfunction Avatar({\n    className,\n    size = 'default',\n    ...props\n}: AvatarPrimitive.Root.Props & {\n    size?: 'default' | 'sm' | 'lg'\n}) {\n    return (\n        <AvatarPrimitive.Root\n            data-slot=\"avatar\"\n            data-size={size}\n            className={cn('group/avatar after:border-border relative flex size-8 shrink-0 select-none rounded-full after:absolute after:inset-0 after:rounded-full after:border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten', className)}\n            {...props}\n        />\n    )\n}\n\nfunction AvatarImage({ className, ...props }: AvatarPrimitive.Image.Props) {\n    return (\n        <AvatarPrimitive.Image\n            data-slot=\"avatar-image\"\n            className={cn('aspect-square size-full rounded-full object-cover', className)}\n            {...props}\n        />\n    )\n}\n\nfunction AvatarFallback({ className, ...props }: AvatarPrimitive.Fallback.Props) {\n    return (\n        <AvatarPrimitive.Fallback\n            data-slot=\"avatar-fallback\"\n            className={cn('bg-muted text-muted-foreground flex size-full items-center justify-center rounded-full text-sm group-data-[size=sm]/avatar:text-xs', className)}\n            {...props}\n        />\n    )\n}\n\nfunction AvatarBadge({ className, ...props }: React.ComponentProps<'span'>) {\n    return (\n        <span\n            data-slot=\"avatar-badge\"\n            className={cn('bg-primary text-primary-foreground ring-background absolute bottom-0 right-0 z-10 inline-flex select-none items-center justify-center rounded-full bg-blend-color ring-2', 'group-data-[size=sm]/avatar:size-2 group-data-[size=sm]/avatar:[&>svg]:hidden', 'group-data-[size=default]/avatar:size-2.5 group-data-[size=default]/avatar:[&>svg]:size-2', 'group-data-[size=lg]/avatar:size-3 group-data-[size=lg]/avatar:[&>svg]:size-2', className)}\n            {...props}\n        />\n    )\n}\n\nfunction AvatarGroup({ className, ...props }: React.ComponentProps<'div'>) {\n    return (\n        <div\n            data-slot=\"avatar-group\"\n            className={cn('group/avatar-group *:data-[slot=avatar]:ring-background flex -space-x-2 *:data-[slot=avatar]:ring-2', className)}\n            {...props}\n        />\n    )\n}\n\nfunction AvatarGroupCount({ className, ...props }: React.ComponentProps<'div'>) {\n    return (\n        <div\n            data-slot=\"avatar-group-count\"\n            className={cn('bg-muted text-muted-foreground ring-background group-has-data-[size=lg]/avatar-group:size-10 group-has-data-[size=sm]/avatar-group:size-6 group-has-data-[size=lg]/avatar-group:[&>svg]:size-5 group-has-data-[size=sm]/avatar-group:[&>svg]:size-3 relative flex size-8 shrink-0 items-center justify-center rounded-full text-sm ring-2 [&>svg]:size-4', className)}\n            {...props}\n        />\n    )\n}\n\nexport { Avatar, AvatarImage, AvatarFallback, AvatarGroup, AvatarGroupCount, AvatarBadge }\n",
+      "type": "registry:component"
+    },
+    {
+      "path": "registry/core/lib/utils.ts",
+      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}",
+      "type": "dependency"
+    }
+  ],
+  "demoCode": null,
+  "dependencies": [
+    "@base-ui/react/avatar",
+    "react"
+  ],
+  "registryDependencies": [],
+  "license": "MIT",
+  "sourceUrl": "https://github.com/tailark/blocks/blob/main/registry/bases/base/dusk/ui/avatar.tsx"
+}

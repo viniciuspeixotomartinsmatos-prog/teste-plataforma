@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 39225,
+    "name": "Gloss Button",
+    "description": "A rounded button with a glossy top-light gradient and inset sheen, built on Base UI's Button primitive with size variants.",
+    "previewUrl": "https://cdn.21st.dev/user_37TqCAC00s9KcfmZ614YPQ0tnLG/gloss-button/default/preview.1794257750175.png",
+    "videoUrl": "https://cdn.21st.dev/user_37TqCAC00s9KcfmZ614YPQ0tnLG/gloss-button/default/video.1794257458853.mp4",
+    "author": "diarmuradi",
+    "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_37TqCAC00s9KcfmZ614YPQ0tnLG/avatar.svg+xml",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/diarmuradi/gloss-button?api_key=REDACTED\"",
+    "url": "https://21st.dev/@diarmuradi/components/gloss-button"
+  },
+  "requestedRoute": "/@diarmuradi/components/gloss-button",
+  "checkedAt": "2026-11-12T21:22:09.309Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 39225,
+    "componentId": 22185,
+    "authorUserId": "user_37TqCAC00s9KcfmZ614YPQ0tnLG",
+    "name": "Gloss Button",
+    "demoName": "Default",
+    "description": "A rounded button with a glossy top-light gradient and inset sheen, built on Base UI's Button primitive with size variants.",
+    "previewUrl": "https://cdn.21st.dev/user_37TqCAC00s9KcfmZ614YPQ0tnLG/gloss-button/default/preview.1794257750175.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/diarmuradi/gloss-button?api_key=REDACTED\"",
+    "componentCode": "\"use client\";\n\nimport { Button as ButtonPrimitive } from \"@base-ui/react/button\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\nimport { cn } from \"cn\";\n\nconst glossButtonVariants = cva(\n  [\n    /* Base. */\n    \"group/button inline-flex shrink-0 cursor-pointer items-center justify-center rounded-full bg-linear-to-b from-[color-mix(in_oklch,var(--primary),white_14%)] to-primary bg-clip-padding text-sm font-medium whitespace-nowrap text-primary-foreground ring-offset-background outline-none select-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 aria-invalid:focus-visible:ring-destructive\",\n    /* States. */\n    \"shadow-[inset_0_1px_0_rgb(255_255_255_/_0.4),inset_0_-2px_4px_rgb(0_0_0_/_0.12),0_2px_4px_rgb(0_0_0_/_0.08)] transition-[filter,opacity,transform] duration-200 hover:brightness-105 active:scale-[0.985] disabled:pointer-events-none disabled:bg-muted disabled:bg-none disabled:text-muted-foreground disabled:opacity-50 disabled:shadow-none aria-invalid:from-[color-mix(in_oklch,var(--destructive),white_12%)] aria-invalid:to-destructive aria-invalid:text-white\",\n    /* Icons. */\n    \"[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4\",\n  ],\n  {\n    variants: {\n      size: {\n        default:\n          \"h-8 gap-1.5 px-3 has-data-[icon=inline-end]:pe-2.5 has-data-[icon=inline-start]:ps-2.5\",\n        xs: \"h-6 gap-1 px-2.5 text-xs has-data-[icon=inline-end]:pe-2 has-data-[icon=inline-start]:ps-2 [&_svg:not([class*='size-'])]:size-3\",\n        sm: \"h-7 gap-1 px-3 text-[0.8rem] has-data-[icon=inline-end]:pe-2.5 has-data-[icon=inline-start]:ps-2.5 [&_svg:not([class*='size-'])]:size-3.5\",\n        lg: \"h-9 gap-1.5 px-3.5 has-data-[icon=inline-end]:pe-3 has-data-[icon=inline-start]:ps-3\",\n        icon: \"size-8\",\n        \"icon-xs\": \"size-6 [&_svg:not([class*='size-'])]:size-3\",\n        \"icon-sm\": \"size-7 [&_svg:not([class*='size-'])]:size-3.5\",\n        \"icon-lg\": \"size-9\",\n      },\n    },\n    defaultVariants: {\n      size: \"default\",\n    },\n  },\n);\n\nfunction GlossButton({\n  className,\n  size = \"default\",\n  render,\n  nativeButton,\n  ...props\n}: ButtonPrimitive.Props & VariantProps<typeof glossButtonVariants>) {\n  return (\n    <ButtonPrimitive\n      data-slot=\"gloss-button\"\n      data-size={size}\n      className={cn(glossButtonVariants({ size, className }))}\n      nativeButton={render ? false : nativeButton}\n      render={render}\n      {...props}\n    />\n  );\n}\n\nexport { GlossButton, glossButtonVariants };\nexport default GlossButton;\n",
+    "demoCode": "import { GlossButton } from \"@/components/ui/gloss-button\";\n\nexport default function GlossButtonDemo() {\n  return (\n    <div className=\"flex min-h-[200px] w-full items-center justify-center gap-3\">\n      <GlossButton size=\"lg\">Get Started</GlossButton>\n      <GlossButton size=\"default\" disabled>\n        Disabled\n      </GlossButton>\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": "user_37TqCAC00s9KcfmZ614YPQ0tnLG"
+  }
+}

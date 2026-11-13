@@ -1,0 +1,3 @@
+import json,collections
+from pathlib import Path
+r=Path('research/catalog-a');c=json.load(open(r/'catalog.json',encoding='utf8'));print('counts',collections.Counter(x['sourceId'] for x in c));print('default source missing content',[(x['id'],[f.get('path') for f in x.get('files',[]) if not isinstance(f.get('content'),str)]) for x in c if any(not isinstance(f.get('content'),str) for f in x.get('files',[]))][:8]);print('all registry files',len(list((r/'code').rglob('*.json'))));print('assets',len(list((r/'assets').glob('*'))));print('dup ids',len(c)-len({x['id'] for x in c}));print('sources',len([x for x in c if x.get('codeFile')]))

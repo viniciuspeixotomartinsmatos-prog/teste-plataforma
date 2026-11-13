@@ -1,0 +1,11 @@
+{
+  "name": "placeholders-and-vanish-input-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/placeholders-and-vanish-input-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\n\nimport { PlaceholdersAndVanishInput } from \"../ui/placeholders-and-vanish-input\";\n\nexport function PlaceholdersAndVanishInputDemo() {\n  const placeholders = [\n    \"What's the first rule of Fight Club?\",\n    \"Who is Tyler Durden?\",\n    \"Where is Andrew Laeddis Hiding?\",\n    \"Write a Javascript method to reverse a string\",\n    \"How to assemble your own PC?\",\n  ];\n\n  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {\n    console.log(e.target.value);\n  };\n  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {\n    e.preventDefault();\n    console.log(\"submitted\");\n  };\n  return (\n    <div className=\"h-[40rem] flex flex-col justify-center  items-center px-4\">\n      <h2 className=\"mb-10 sm:mb-20 text-xl text-center sm:text-5xl dark:text-white text-black\">\n        Ask Aceternity UI Anything\n      </h2>\n      <PlaceholdersAndVanishInput\n        placeholders={placeholders}\n        onChange={handleChange}\n        onSubmit={onSubmit}\n      />\n    </div>\n  );\n}\n"
+    }
+  ]
+}

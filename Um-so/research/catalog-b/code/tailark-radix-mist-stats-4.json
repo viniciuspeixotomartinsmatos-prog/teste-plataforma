@@ -1,0 +1,16 @@
+{
+  "name": "Mist Stats 4",
+  "sourceId": "tailark",
+  "files": [
+    {
+      "path": "registry/bases/radix/mist/blocks/stats/four.tsx",
+      "content": "export default function StatsSection() {\n    return (\n        <section>\n            <div className=\"py-24\">\n                <div className=\"mx-auto max-w-5xl px-6\">\n                    <h2 className=\"sr-only\">Tailark in stats</h2>\n                    <div className=\"grid grid-cols-2 gap-4 md:grid-cols-4\">\n                        <div className=\"space-y-0.5 md:text-center\">\n                            <div className=\"text-primary text-4xl font-bold\">90+</div>\n                            <p className=\"text-muted-foreground\">Integrations</p>\n                        </div>\n                        <div className=\"space-y-0.5 md:text-center\">\n                            <div className=\"text-primary text-4xl font-bold\">56%</div>\n                            <p className=\"text-muted-foreground\">Productivity Boost</p>\n                        </div>\n                        <div className=\"col-span-2 border-t pt-4 md:border-l md:border-t-0 md:pl-12 md:pt-0\">\n                            <p className=\"text-muted-foreground text-balance text-lg\">Our platform continues to grow with developers and businesses using productivity.</p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </section>\n    )\n}\n",
+      "type": "registry:block"
+    }
+  ],
+  "demoCode": "export default function StatsSection() {\n    return (\n        <section>\n            <div className=\"py-24\">\n                <div className=\"mx-auto max-w-5xl px-6\">\n                    <h2 className=\"sr-only\">Tailark in stats</h2>\n                    <div className=\"grid grid-cols-2 gap-4 md:grid-cols-4\">\n                        <div className=\"space-y-0.5 md:text-center\">\n                            <div className=\"text-primary text-4xl font-bold\">90+</div>\n                            <p className=\"text-muted-foreground\">Integrations</p>\n                        </div>\n                        <div className=\"space-y-0.5 md:text-center\">\n                            <div className=\"text-primary text-4xl font-bold\">56%</div>\n                            <p className=\"text-muted-foreground\">Productivity Boost</p>\n                        </div>\n                        <div className=\"col-span-2 border-t pt-4 md:border-l md:border-t-0 md:pl-12 md:pt-0\">\n                            <p className=\"text-muted-foreground text-balance text-lg\">Our platform continues to grow with developers and businesses using productivity.</p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </section>\n    )\n}\n",
+  "dependencies": [],
+  "registryDependencies": [],
+  "license": "MIT",
+  "sourceUrl": "https://github.com/tailark/blocks/blob/main/registry/bases/radix/mist/blocks/stats/four.tsx"
+}

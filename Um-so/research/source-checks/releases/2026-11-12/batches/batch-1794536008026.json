@@ -1,0 +1,92 @@
+[
+  {
+    "route": "/@mayurrawte/components/loader",
+    "type": "component",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@mayurrawte/components/skeleton",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44951,
+      "name": "Skeleton",
+      "description": "A loading placeholder block with a pulsing shimmer animation, used to indicate content that is still loading.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_mayurrawte_1793377663685/skeleton/default/preview.1794255027415.webp",
+      "videoUrl": "https://cdn.21st.dev/user_registry_mayurrawte_1793377663685/skeleton/default/video.1794255021113.mp4",
+      "author": "mayurrawte",
+      "authorImage": "https://avatars.githubusercontent.com/u/32830023?v=4",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/mayurrawte/skeleton?api_key=REDACTED\"",
+      "url": "https://21st.dev/@mayurrawte/components/skeleton"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@mohammedsahil0003/components/color-fill-card",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45082,
+      "name": "Color Fill Card",
+      "description": "A high-performance card component featuring an ultra-slow, cinematic radial color flood on hover with seamless contrast transitions.",
+      "previewUrl": "https://cdn.21st.dev/user_3GV9lgXrq2JTJPCTpgVuCcv7fev/color-fill-card/default/preview.1794330296248.webp",
+      "videoUrl": "https://cdn.21st.dev/user_3GV9lgXrq2JTJPCTpgVuCcv7fev/color-fill-card/default/video.1794330164023.mp4",
+      "author": "mohammedsahil0003",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3GV9lgXrq2JTJPCTpgVuCcv7fev/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/mohammedsahil0003/color-fill-card?api_key=REDACTED\"",
+      "url": "https://21st.dev/@mohammedsahil0003/components/color-fill-card"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@nomanjack/components/glimm-autopilot",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45194,
+      "name": "Glimm Autopilot",
+      "description": "A faithful Glimm dashboard scene where enabling Autopilot reveals its engaged state through a shader sweep.",
+      "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/glimm-autopilot/default/preview.1794431616589.png",
+      "videoUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/glimm-autopilot/default/video.1794431564796.mp4",
+      "author": "nomanjack",
+      "authorImage": "https://github.com/nomanjack.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/nomanjack/glimm-autopilot?api_key=REDACTED\"",
+      "url": "https://21st.dev/@nomanjack/components/glimm-autopilot"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@nomanjack/components/glimm-band-width",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45162,
+      "name": "Glimm Band Width",
+      "description": "The original Glimm band width control with a draggable bandTight preview and real WebGL sweep.",
+      "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/glimm-band-width/default/preview.1794430896271.webp",
+      "videoUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/glimm-band-width/default/video.1794415558116.mp4",
+      "author": "nomanjack",
+      "authorImage": "https://github.com/nomanjack.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/nomanjack/glimm-band-width?api_key=REDACTED\"",
+      "url": "https://21st.dev/@nomanjack/components/glimm-band-width"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@nomanjack/components/glimm-custom-palette",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45164,
+      "name": "Glimm Custom Palette",
+      "description": "The original Glimm custom palette explorer with live cosine colors, shuffle, and a soft WebGL preview transition.",
+      "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/glimm-custom-palette/default/preview.1794417833669.png",
+      "videoUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/glimm-custom-palette/default/video.1794417805230.mp4",
+      "author": "nomanjack",
+      "authorImage": "https://github.com/nomanjack.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/nomanjack/glimm-custom-palette?api_key=REDACTED\"",
+      "url": "https://21st.dev/@nomanjack/components/glimm-custom-palette"
+    },
+    "status": "retained_unvalidated"
+  }
+]

@@ -1,0 +1,2 @@
+import json,collections
+c=json.load(open('research/catalog-a/catalog-light.json',encoding='utf8'));print(collections.Counter(x['sourceId'] for x in c if 'thumbnailLocal'in x));print([ (x['name'],x['slug'],x.get('thumbnailUrl')) for x in c if x['sourceId']=='reactbits'][:8]);t=json.load(open('research/catalog-a/reactbits-tree.json'))['tree'];p=[x['path'] for x in t if x['type']=='blob' and x['path'].startswith('public/og/components/')];print('available og',len(p),p[:10]);print('reactfiles',[(x['name'],len(x.get('files',[]))) for x in c if x['sourceId']=='reactbits'][:2])

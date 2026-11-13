@@ -1,0 +1,11 @@
+{
+  "name": "3d-pin-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/3d-pin-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport React from \"react\";\nimport { PinContainer } from \"../ui/3d-pin\";\n\nexport function AnimatedPinDemo() {\n  return (\n    <div className=\"h-[40rem] w-full flex items-center justify-center \">\n      <PinContainer\n        title=\"/ui.aceternity.com\"\n        href=\"https://twitter.com/mannupaaji\"\n      >\n        <div className=\"flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] \">\n          <h3 className=\"max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100\">\n            Aceternity UI\n          </h3>\n          <div className=\"text-base !m-0 !p-0 font-normal\">\n            <span className=\"text-slate-500 \">\n              Customizable Tailwind CSS and Framer Motion Components.\n            </span>\n          </div>\n          <div className=\"flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500\" />\n        </div>\n      </PinContainer>\n    </div>\n  );\n}\n"
+    }
+  ]
+}

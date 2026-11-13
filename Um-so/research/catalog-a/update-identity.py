@@ -1,0 +1,35 @@
+from pathlib import Path
+p=Path('union-ui/src/App.jsx');s=p.read_text(encoding='utf8')
+s=s.replace("import {SourceIcon,Modal,ItemCard,SearchDialog} from './UI.jsx';", "import {Modal,ItemCard,SearchDialog,displayName,publicText} from './UI.jsx';\nimport './identity.css';")
+s=s.replace("Não foi possível carregar a biblioteca.","Não foi possível carregar o catálogo.")
+s=s.replace("source:params.get('source')||'all'", "source:'all'")
+s=s.replace("location.path==='/sources'?'/':location.path", "['/sources','/resources'].includes(location.path)?'/':location.path")
+s=s.replace("const selectedSource=sourceOf(sources,filter.source);", "const isResources=['/sources','/resources'].includes(location.path);")
+s=s.replace("!['/','/sources','/compare','/collections'].includes(location.path)", "!['/','/sources','/resources','/compare','/collections'].includes(location.path)")
+start=s.index('useEffect(()=>{document.title=')
+end=s.index('\nfunction createCollection',start)
+s=s[:start]+"useEffect(()=>{document.title=current?displayName(current.name)+' — Um só.':isResources?'Recursos — Um só.':isCollections?'Suas coleções — Um só.':'Um só. — Tudo para criar, em um só lugar.';},[current,isResources,isCollections]);"+s[end:]
+s=s.replace('Use uma coleção exportada pelo UNION.','Use uma coleção exportada pelo app.')
+s=s.replace('<span>UNION<span className="brand-ui">UI</span></span><span className="brand-beta">WORKSPACE</span>', '<span>Um só.</span>')
+navstart=s.index('<nav className="main-nav"')
+navend=s.index('</nav>',navstart)+len('</nav>')
+s=s[:navstart]+'''<nav className="main-nav" aria-label="Navegação principal"><a className={!isCollections&&!isResources&&location.path!=='/compare'?'active':''} href="/" onClick={e=>{e.preventDefault();navigate('/');}}>Explorar</a><a className={isCollections?'active':''} href="/collections" onClick={e=>{e.preventDefault();navigate('/collections');}}>Coleções{saved.length>0&&<span>{saved.length}</span>}</a><a className={isResources?'active':''} href="/resources" onClick={e=>{e.preventDefault();navigate('/resources');}}>Recursos</a></nav>'''+s[navend:]
+s=s.replace('Reunindo suas bibliotecas…','Preparando seu espaço…')
+s=s.replace('Voltar à biblioteca','Voltar ao catálogo').replace('Explorar biblioteca','Explorar catálogo').replace('Voltar à biblioteca','Voltar ao catálogo')
+start=s.index("location.path==='/sources'?<main")
+end=s.index(":location.path==='/compare'?",start)
+s=s[:start]+'''isResources?<main className="sources-page resources-page" id="main"><div className="section-eyebrow"><Boxes size={14}/> SEU ESPAÇO PARA CRIAR</div><h1>Encontre a sua próxima<br/><span>grande ideia.</span></h1><p className="page-lead">Explore componentes, animações e estruturas prontas para transformar o seu próximo projeto.</p><div className="source-grid resource-grid">{Object.keys(categoryLabels).filter(c=>counts[c]).map(c=><a key={c} href={'/?category='+encodeURIComponent(c)} onClick={e=>{e.preventDefault();navigate('/?category='+encodeURIComponent(c));}} className="source-card resource-card"><div className="source-card-top"><LayoutGrid size={28}/><ArrowUpRight size={20}/></div><h2>{categoryLabels[c]}</h2><p>Explore ideias, veja os detalhes e encontre o recurso certo para o seu projeto.</p><div className="source-stats"><span>Explorar categoria <ArrowRight size={12}/></span></div></a>)}</div><div className="coverage-note"><Code2 size={20}/><div><h3>Da ideia à sua interface.</h3><p>Explore previews, consulte o código e organize suas escolhas em coleções para continuar de onde parou.</p></div><button className="text-button" onClick={()=>navigate('/')}>Abrir catálogo <ArrowRight size={14}/></button></div></main>'''+s[end:]
+s=s.replace('<small>{sourceOf(sources,r.sourceId).name}</small><h2>{r.name}</h2><p>{r.description||categoryLabels[r.category]}</p>', '<small>{kindLabels[r.kind]||\'Componente\'} · {categoryLabels[r.category]||r.category}</small><h2>{displayName(r.name)}</h2><p>{publicText(r.description)||categoryLabels[r.category]}</p>')
+s=s.replace("{isCollections?'SEU ESPAÇO DE INSPIRAÇÃO':'9 BIBLIOTECAS. UM SÓ FLUXO.'}", "{isCollections?'SEU ESPAÇO DE INSPIRAÇÃO':'UM ESPAÇO. INFINITAS IDEIAS.'}")
+s=s.replace("{isCollections?(activeCollection?.name||'Boas ideias merecem ficar.'):filter.source!=='all'?selectedSource.name:<>O universo da UI.<br/><span>Agora, todo seu.</span></>}", "{isCollections?(activeCollection?.name||'Boas ideias merecem ficar.'):<>Tudo para criar.<br/><span>Em um só lugar.</span></>}")
+s=s.replace('''<><div className="source-stack">{sources.slice(0,6).map(s=><span key={s.id} title={s.name}><SourceIcon source={s} size={19}/></span>)}</div><p><strong>{formatCount(rows.length)}</strong> possibilidades.<br/>Seu próximo projeto começa aqui.</p></>''', '''<><div className="creative-tools" aria-hidden="true"><span><Code2 size={18}/></span><span><LayoutGrid size={18}/></span><span><Bookmark size={18}/></span></div><p>Explore. Experimente. Crie.<br/>Seu próximo projeto começa aqui.</p></>''')
+start=s.index('<div className="source-strip"')
+end=s.index('<div className="library-layout">',start)
+s=s[:start]+s[end:]
+s=s.replace("<option value=\"source\">Biblioteca</option>","")
+start=s.index('{!loading&&<footer className="app-footer">')
+end=s.index('{compare.length>0',start)
+s=s[:start]+'''{!loading&&<footer className="app-footer"><a className="footer-brand" href="/" onClick={e=>{e.preventDefault();navigate('/');}}><Layers3 size={17}/><b>Um só.</b><span>Seu próximo projeto começa com uma boa ideia.</span></a><div><button onClick={()=>navigate('/resources')}>Explorar recursos <ArrowUpRight size={12}/></button><button onClick={()=>navigate('/collections')}>Suas coleções <Bookmark size={12}/></button></div></footer>}'''+s[end:]
+s=s.replace('alt={r.name}','alt={displayName(r.name)}')
+s=s.replace(',sourceOf,downloadJson',',downloadJson')
+p.write_text(s,encoding='utf8')

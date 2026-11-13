@@ -1,0 +1,68 @@
+[
+  {
+    "route": "/@viktoraksenov061106/themes/orange-soft-1794223227616",
+    "type": "theme",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@webscale-pl/templates/forma-construction-and-renovation-template",
+    "type": "template",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@wensity/components/animated-tabs",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 27845,
+      "name": "Animated Tabs",
+      "description": "A tab switcher that shows a physical stack of photo cards with pill-shaped animated tab triggers, where hovering fans the stacked cards out to either side.",
+      "previewUrl": "https://cdn.21st.dev/wensity/animated-tabs/default/preview.1789814186800-2e6d8b2a-bb12-44e1-9c57-dc315e2da892.png",
+      "videoUrl": "https://cdn.21st.dev/wensity/animated-tabs/default/video.1789814186800-2e6d8b2a-bb12-44e1-9c57-dc315e2da892.mp4",
+      "author": "wensity",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/wensity/animated-tabs?api_key=REDACTED\"",
+      "url": "https://21st.dev/@wensity/components/animated-tabs"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@wensity/components/empty-state",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 27575,
+      "name": "Empty State",
+      "description": "A placeholder layout for empty lists, search results, or error screens with an optional icon, title, description, and action buttons.",
+      "previewUrl": "https://cdn.21st.dev/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/empty-state/default/preview.1794339099055.png",
+      "videoUrl": null,
+      "author": "wensity",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/wensity/empty-state?api_key=REDACTED\"",
+      "url": "https://21st.dev/@wensity/components/empty-state"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@wensity/components/field",
+    "type": "component",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@wensity/components/infinite-marquee",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 27697,
+      "name": "Infinite Marquee",
+      "description": "A horizontally scrolling marquee that loops logos or content seamlessly forever, with soft fade at both edges.",
+      "previewUrl": "https://cdn.21st.dev/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/infinite-marquee/default/preview.1794258388938.webp",
+      "videoUrl": "https://cdn.21st.dev/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/infinite-marquee/default/video.1794258374339.mp4",
+      "author": "wensity",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/wensity/infinite-marquee?api_key=REDACTED\"",
+      "url": "https://21st.dev/@wensity/components/infinite-marquee"
+    },
+    "status": "retained_unvalidated"
+  }
+]

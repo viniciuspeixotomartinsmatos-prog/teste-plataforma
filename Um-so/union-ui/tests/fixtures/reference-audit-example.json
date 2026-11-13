@@ -1,0 +1,193 @@
+{
+  "site": {
+    "v": 1,
+    "url": "https://torracafe.com.br/",
+    "host": "torracafe.com.br",
+    "status": 200,
+    "redirects": [],
+    "https": true,
+    "tls": null,
+    "httpToHttps": true,
+    "ttfb": 182,
+    "htmlBytes": 9812,
+    "platform": "vercel",
+    "stack": "vite",
+    "head": {
+      "title": "Torra Café | Café especial torrado na hora, espresso, coado e pão de fermentação natural em Curitiba",
+      "description": "Café especial torrado aqui, toda terça.",
+      "lang": "pt-BR",
+      "viewport": "width=device-width, initial-scale=1",
+      "canonical": null,
+      "robots": null,
+      "favicon": "https://torracafe.com.br/favicon.svg",
+      "generator": null,
+      "og": {
+        "title": null,
+        "description": null,
+        "image": null,
+        "url": null
+      },
+      "twitterCard": null,
+      "jsonLd": []
+    },
+    "xRobots": null,
+    "h1": 1,
+    "csr": false,
+    "textChars": 1840,
+    "imgs": {
+      "total": 9,
+      "noAlt": 2,
+      "samples": [
+        "https://torracafe.com.br/img/grao.jpg",
+        "https://torracafe.com.br/img/balcao.jpg"
+      ]
+    },
+    "ogImage": null,
+    "robotsTxt": {
+      "status": 404,
+      "blocksAll": false,
+      "sitemaps": []
+    },
+    "sitemap": {
+      "url": "https://torracafe.com.br/sitemap.xml",
+      "ok": false
+    },
+    "scripts": {
+      "scanned": 2,
+      "bytes": 214300
+    },
+    "found": {
+      "metaPixel": [
+        "1290034871652210"
+      ],
+      "fbq": true,
+      "pixelEvents": [
+        "PageView"
+      ],
+      "ga4": [],
+      "gtm": [],
+      "googleAds": [],
+      "tiktok": false,
+      "whatsapp": true,
+      "forms": false,
+      "privacy": false,
+      "terms": false,
+      "cookieNotice": false,
+      "cnpj": false,
+      "defaults": []
+    },
+    "secrets": []
+  },
+  "lab": {
+    "v": 1,
+    "lighthouse": "13.6.0",
+    "url": "https://torracafe.com.br/",
+    "scores": {
+      "performance": 61,
+      "accessibility": 91,
+      "bestPractices": 100,
+      "seo": 92
+    },
+    "metrics": {
+      "lcp": 4620,
+      "fcp": 1540,
+      "cls": 0.03,
+      "tbt": 410,
+      "si": 3180,
+      "ttfb": 190
+    },
+    "bytes": 4310000,
+    "screenshot": null,
+    "lcpNode": {
+      "label": "Torra Café",
+      "snippet": "<img class=\"hero__foto\" src=\"/img/espresso.jpg\" loading=\"lazy\">"
+    },
+    "lcpLazy": true,
+    "images": [
+      {
+        "url": "https://torracafe.com.br/img/espresso.jpg",
+        "bytes": 1240000,
+        "wasted": 1010000
+      },
+      {
+        "url": "https://torracafe.com.br/img/balcao.jpg",
+        "bytes": 486000,
+        "wasted": 342000
+      },
+      {
+        "url": "https://torracafe.com.br/img/grao.jpg",
+        "bytes": 211000,
+        "wasted": 128000
+      }
+    ],
+    "imagesWasted": 1480000,
+    "blocking": [
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=Instrument+Serif:ital@1",
+        "ms": 180
+      }
+    ],
+    "blockingMs": 180,
+    "unusedJs": 96000,
+    "shifts": [],
+    "thirdParties": [
+      {
+        "name": "Facebook",
+        "bytes": 221000,
+        "ms": 34
+      }
+    ],
+    "a11y": {
+      "contrast": [
+        {
+          "label": "(Cardápio)",
+          "snippet": "<a class=\"hero__link\" href=\"#cardapio\">"
+        },
+        {
+          "label": "Abre amanhã às 7h",
+          "snippet": "<span class=\"status\">"
+        }
+      ],
+      "targets": [],
+      "imageAlt": [
+        {
+          "label": "",
+          "snippet": "<img src=\"/img/grao.jpg\">"
+        },
+        {
+          "label": "",
+          "snippet": "<img src=\"/img/balcao.jpg\">"
+        }
+      ],
+      "unnamed": 0,
+      "zoomBlocked": false,
+      "viewport": true
+    },
+    "seo": {
+      "crawlable": true,
+      "title": true,
+      "description": true,
+      "status": true,
+      "canonical": null
+    },
+    "https": {
+      "ok": true,
+      "insecure": []
+    },
+    "consoleErrors": [],
+    "network": {
+      "metaPixel": [
+        "1290034871652210"
+      ],
+      "pageView": true,
+      "events": [
+        "PageView"
+      ],
+      "ga4": [],
+      "gtm": [],
+      "tiktok": false
+    },
+    "field": null
+  },
+  "at": "2026-11-02T15:00:00.000Z"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Use Click Outside",
+  "sourceId": "kokonut",
+  "files": [
+    {
+      "path": "hooks/use-click-outside.ts",
+      "type": "registry:hook",
+      "content": "import { type RefObject, useEffect } from \"react\";\n\nexport function useClickOutside(\n  ref: RefObject<HTMLElement>,\n  handler: () => void\n) {\n  useEffect(() => {\n    const handleClickOutside = (event: MouseEvent) => {\n      if (ref.current && !ref.current.contains(event.target as Node)) {\n        handler();\n      }\n    };\n\n    document.addEventListener(\"mousedown\", handleClickOutside);\n    return () => document.removeEventListener(\"mousedown\", handleClickOutside);\n  }, [ref, handler]);\n}\n"
+    }
+  ],
+  "demoCode": null,
+  "dependencies": [],
+  "registryDependencies": [],
+  "license": "MIT",
+  "sourceUrl": "https://kokonutui.com/docs/use-click-outside"
+}

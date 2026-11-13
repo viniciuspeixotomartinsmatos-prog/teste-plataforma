@@ -1,0 +1,11 @@
+{
+  "name": "sticky-banner-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/sticky-banner-demo.tsx",
+      "type": "registry:example",
+      "content": "import { StickyBanner } from \"@/components/ui/sticky-banner\";\n\nexport function StickyBannerDemo() {\n  return (\n    <div className=\"relative flex h-[60vh] w-full flex-col overflow-y-auto\">\n      <StickyBanner className=\"bg-gradient-to-b from-blue-500 to-blue-600\">\n        <p className=\"mx-0 max-w-[90%] text-white drop-shadow-md\">\n          Announcing $10M seed funding from project mayhem ventures.{\" \"}\n          <a href=\"#\" className=\"transition duration-200 hover:underline\">\n            Read announcement\n          </a>\n        </p>\n      </StickyBanner>\n      <DummyContent />\n    </div>\n  );\n}\n\nconst DummyContent = () => {\n  return (\n    <div className=\"relative mx-auto flex w-full max-w-7xl flex-col gap-10 py-8\">\n      <div className=\"h-96 w-full animate-pulse rounded-lg bg-neutral-100 dark:bg-neutral-800\" />\n      <div className=\"h-96 w-full animate-pulse rounded-lg bg-neutral-100 dark:bg-neutral-800\" />\n      <div className=\"h-96 w-full animate-pulse rounded-lg bg-neutral-100 dark:bg-neutral-800\" />\n    </div>\n  );\n};\n"
+    }
+  ]
+}

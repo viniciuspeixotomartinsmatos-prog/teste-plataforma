@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 27697,
+    "name": "Infinite Marquee",
+    "description": "A horizontally scrolling marquee that loops logos or content seamlessly forever, with soft fade at both edges.",
+    "previewUrl": "https://cdn.21st.dev/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/infinite-marquee/default/preview.1794258388938.webp",
+    "videoUrl": "https://cdn.21st.dev/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/infinite-marquee/default/video.1794258374339.mp4",
+    "author": "wensity",
+    "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/avatar.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/wensity/infinite-marquee?api_key=REDACTED\"",
+    "url": "https://21st.dev/@wensity/components/infinite-marquee"
+  },
+  "requestedRoute": "/@wensity/components/infinite-marquee",
+  "checkedAt": "2026-11-13T02:18:40.351Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 27697,
+    "componentId": 14179,
+    "authorUserId": "user_3JFJF7Mbb5ImA8DO9hE1FECx2fT",
+    "name": "Infinite Marquee",
+    "demoName": "Default",
+    "description": "A horizontally scrolling marquee that loops logos or content seamlessly forever, with soft fade at both edges.",
+    "previewUrl": "https://cdn.21st.dev/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/infinite-marquee/default/preview.1794258388938.webp",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/wensity/infinite-marquee?api_key=REDACTED\"",
+    "componentCode": "\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface InfiniteMarqueeProps {\n  /** Items rendered exactly twice (for seamless loop). */\n  items: React.ReactNode[];\n  /** Cycle duration in seconds (lower = faster). */\n  speed?: number;\n  /** Animation direction. */\n  direction?: \"left\" | \"right\";\n  /** Pause the loop when the cursor enters. Off by default — most marketing\n   *  marquees should keep moving so they never feel \"stuck\" mid-page. */\n  pauseOnHover?: boolean;\n  /** Tailwind gap class between items, e.g. \"gap-10\". */\n  gap?: string;\n  /** Apply the soft mask-image fade at both edges. */\n  fade?: boolean;\n  className?: string;\n}\n\n/**\n * InfiniteMarquee\n *\n * Zero-jitter, GPU-only horizontal marquee. We duplicate the children once\n * and animate from `translate3d(0,0,0)` → `translate3d(-50%,0,0)` via a CSS\n * keyframe (defined in `globals.css`), so the work stays on the compositor\n * and never touches the JS thread.\n */\nexport function InfiniteMarquee({\n  items,\n  speed = 30,\n  direction = \"left\",\n  pauseOnHover = false,\n  gap = \"gap-20\",\n  fade = true,\n  className,\n}: InfiniteMarqueeProps) {\n  return (\n    <div\n      className={cn(\n        \"group/marquee relative w-full overflow-hidden\",\n        fade && [\n          \"[mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]\",\n          \"[-webkit-mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]\",\n        ],\n        className,\n      )}\n    >\n      <div\n        className={cn(\n          \"flex w-max items-center will-change-transform\",\n          // Honour the OS reduced-motion preference — freeze the loop.\n          \"motion-reduce:![animation:none]\",\n          gap,\n        )}\n        style={{\n          animation: `${\n            direction === \"left\"\n              ? \"wensity-marquee-x\"\n              : \"wensity-marquee-x-reverse\"\n          } ${speed}s linear infinite`,\n          animationPlayState: \"running\",\n        }}\n        onMouseEnter={(e) => {\n          if (pauseOnHover) e.currentTarget.style.animationPlayState = \"paused\";\n        }}\n        onMouseLeave={(e) => {\n          if (pauseOnHover)\n            e.currentTarget.style.animationPlayState = \"running\";\n        }}\n      >\n        {/* Original strip */}\n        <div\n          className={cn(\"flex shrink-0 items-center\", gap)}\n          aria-hidden={false}\n        >\n          {items.map((node, i) => (\n            <div key={`a-${i}`} className=\"shrink-0\">\n              {node}\n            </div>\n          ))}\n        </div>\n        {/* Duplicate — exactly once — for the seamless wrap at -50%. */}\n        <div className={cn(\"flex shrink-0 items-center\", gap)} aria-hidden>\n          {items.map((node, i) => (\n            <div key={`b-${i}`} className=\"shrink-0\">\n              {node}\n            </div>\n          ))}\n        </div>\n      </div>\n    </div>\n  );\n}\n\nexport default InfiniteMarquee;\n",
+    "demoCode": "import InfiniteMarquee from \"@/components/ui/infinite-marquee\";\n\nconst logos = [\"Acme\", \"Globex\", \"Umbrella\", \"Initech\", \"Hooli\", \"Stark\"];\n\nexport default function InfiniteMarqueeDemo() {\n  const items = logos.map((name) => (\n    <span key={name} className=\"text-lg font-semibold text-muted-foreground\">\n      {name}\n    </span>\n  ));\n\n  return (\n    <div className=\"flex w-full h-screen items-center justify-center bg-background\">\n      <InfiniteMarquee items={items} className=\"max-w-2xl\" />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": "user_3JFJF7Mbb5ImA8DO9hE1FECx2fT"
+  }
+}

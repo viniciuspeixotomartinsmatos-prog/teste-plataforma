@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 44926,
+    "name": "Animated Number",
+    "description": "A number display that rolls to a new value when it changes, sliding up for increases and down for decreases so the direction is readable at a glance.",
+    "previewUrl": "https://cdn.21st.dev/ikascom/animated-number/default/preview.1794187006981-c2aaeff9-a5a8-4d32-9984-a799a949f8e8.png",
+    "videoUrl": "https://cdn.21st.dev/ikascom/animated-number/default/video.1794187006981-c2aaeff9-a5a8-4d32-9984-a799a949f8e8.mp4",
+    "author": "ikascom",
+    "authorImage": "https://github.com/ikascom.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/ikascom/animated-number?api_key=REDACTED\"",
+    "url": "https://21st.dev/@ikascom/components/animated-number"
+  },
+  "requestedRoute": "/@ikascom/components/animated-number",
+  "checkedAt": "2026-11-13T02:10:47.803Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 44926,
+    "componentId": 25955,
+    "authorUserId": "user_registry_ikascom_1793404296635",
+    "name": "Animated Number",
+    "demoName": "Default",
+    "description": "A number display that rolls to a new value when it changes, sliding up for increases and down for decreases so the direction is readable at a glance.",
+    "previewUrl": "https://cdn.21st.dev/ikascom/animated-number/default/preview.1794187006981-c2aaeff9-a5a8-4d32-9984-a799a949f8e8.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/ikascom/animated-number?api_key=REDACTED\"",
+    "componentCode": "\"use client\";\n\nimport * as React from \"react\";\nimport { AnimatePresence, motion, useReducedMotion } from \"motion/react\";\n\nimport { cn } from \"@/lib/utils\";\n\n// Shared spring/easing tokens (flattened from ikas's @/lib/motion lib, which is not\n// part of the base template): only the pieces this component needs.\nconst SPRING = { type: \"spring\", stiffness: 350, damping: 35 } as const;\nconst INSTANT = { duration: 0 } as const;\nconst springOrInstant = (reduce: boolean | null) => (reduce ? INSTANT : SPRING);\n\nconst defaultFormat = new Intl.NumberFormat(\"tr-TR\").format;\n\ntype AnimatedNumberProps = Omit<React.ComponentProps<\"span\">, \"children\"> & {\n  value: number;\n  /** Formats the number for display. Defaults to tr-TR grouping. */\n  format?: (value: number) => string;\n};\n\n/**\n * A number that rolls when it changes: increases come up from below,\n * decreases drop from above, so the direction is readable at a glance.\n */\nfunction AnimatedNumber({\n  value,\n  format = defaultFormat,\n  className,\n  ...props\n}: AnimatedNumberProps) {\n  const reduce = useReducedMotion();\n  // Derive direction during render (React's \"adjust state on prop change\" pattern).\n  const [previous, setPrevious] = React.useState(value);\n  const [direction, setDirection] = React.useState(0);\n  if (value !== previous) {\n    setDirection(value > previous ? 1 : -1);\n    setPrevious(value);\n  }\n\n  const offset = reduce ? 0 : 10;\n\n  return (\n    <span\n      data-slot=\"animated-number\"\n      className={cn(\n        \"relative inline-flex overflow-hidden tabular-nums\",\n        className,\n      )}\n      {...props}\n    >\n      <AnimatePresence mode=\"popLayout\" initial={false} custom={direction}>\n        <motion.span\n          key={value}\n          custom={direction}\n          variants={{\n            enter: (dir: number) => ({ y: offset * dir, opacity: 0 }),\n            center: { y: 0, opacity: 1 },\n            exit: (dir: number) => ({ y: -offset * dir, opacity: 0 }),\n          }}\n          initial=\"enter\"\n          animate=\"center\"\n          exit=\"exit\"\n          transition={springOrInstant(reduce)}\n          className=\"inline-block\"\n        >\n          {format(value)}\n        </motion.span>\n      </AnimatePresence>\n    </span>\n  );\n}\n\nexport default AnimatedNumber;\nexport { AnimatedNumber, type AnimatedNumberProps };\n",
+    "demoCode": "\"use client\";\n\nimport * as React from \"react\";\nimport { MinusIcon, PlusIcon } from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\nimport AnimatedNumber from \"@/components/ui/animated-number\";\n\nexport default function AnimatedNumberDemo() {\n  const [count, setCount] = React.useState(1208);\n\n  return (\n    <div className=\"flex items-center gap-4\">\n      <Button\n        variant=\"outline\"\n        size=\"icon\"\n        aria-label=\"Decrease\"\n        onClick={() => setCount((c) => c - 1)}\n      >\n        <MinusIcon />\n      </Button>\n      <div className=\"flex min-w-28 flex-col items-center\">\n        <AnimatedNumber\n          value={count}\n          className=\"text-3xl font-semibold tracking-[-0.03em]\"\n        />\n        <span className=\"text-[13px] text-muted-foreground\">orders</span>\n      </div>\n      <Button\n        variant=\"outline\"\n        size=\"icon\"\n        aria-label=\"Increase\"\n        onClick={() => setCount((c) => c + 1)}\n      >\n        <PlusIcon />\n      </Button>\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {
+        "/components/ui/button.tsx": {
+          "code": "import * as React from \"react\"\nimport { Slot } from \"@radix-ui/react-slot\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst buttonVariants = cva(\n  \"inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50\",\n  {\n    variants: {\n      variant: {\n        default: \"bg-primary text-primary-foreground hover:bg-primary/90\",\n        destructive:\n          \"bg-destructive text-destructive-foreground hover:bg-destructive/90\",\n        outline:\n          \"border border-input bg-background hover:bg-accent hover:text-accent-foreground\",\n        secondary:\n          \"bg-secondary text-secondary-foreground hover:bg-secondary/80\",\n        ghost: \"hover:bg-accent hover:text-accent-foreground\",\n        link: \"text-primary underline-offset-4 hover:underline\",\n      },\n      size: {\n        default: \"h-10 px-4 py-2\",\n        sm: \"h-9 rounded-md px-3\",\n        lg: \"h-11 rounded-md px-8\",\n        icon: \"h-10 w-10\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n      size: \"default\",\n    },\n  },\n)\n\nexport interface ButtonProps\n  extends React.ButtonHTMLAttributes<HTMLButtonElement>,\n    VariantProps<typeof buttonVariants> {\n  asChild?: boolean\n}\n\nconst Button = React.forwardRef<HTMLButtonElement, ButtonProps>(\n  ({ className, variant, size, asChild = false, ...props }, ref) => {\n    const Comp = asChild ? Slot : \"button\"\n    return (\n      <Comp\n        className={cn(buttonVariants({ variant, size, className }))}\n        ref={ref}\n        {...props}\n      />\n    )\n  },\n)\nButton.displayName = \"Button\"\n\nexport { Button, buttonVariants }\n",
+          "registry": "ui"
+        }
+      },
+      "npmDependencies": {
+        "@radix-ui/react-slot": "latest",
+        "class-variance-authority": "latest"
+      }
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": "user_registry_ikascom_1793404296635"
+  }
+}

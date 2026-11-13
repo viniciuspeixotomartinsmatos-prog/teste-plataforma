@@ -1,0 +1,67 @@
+{
+  "checkedAt": "2026-10-28T19:30:44.068Z",
+  "suite": {
+    "passed": 31,
+    "failed": 0
+  },
+  "toolUI": {
+    "passed": [
+      "sound-lab",
+      "background-studio"
+    ],
+    "environment": "JSDOM evaluating production bundles; no GPU, iframe shader rendering or browser playback"
+  },
+  "toolEngine": {
+    "passed": [
+      "non-silent sound generation",
+      "duration and pitch settings",
+      "WAV 16/24/32-bit mono and stereo",
+      "sound code export",
+      "shader primitive variants",
+      "field-to-SVG tracing",
+      "texture JSON settings roundtrip"
+    ],
+    "environment": "Node; web-audio-engine for audio"
+  },
+  "originalShaderTests": {
+    "passed": 4
+  },
+  "build": {
+    "passed": true,
+    "seconds": 115
+  },
+  "sitesAdapter": {
+    "passed": 4
+  },
+  "nodeServerSmoke": {
+    "passed": true
+  },
+  "catalog": {
+    "generatedAt": "2026-10-28T13:59:00.864Z",
+    "indexed": 17243,
+    "published": 10591,
+    "compiledWithExample": 2829,
+    "retained": 7830,
+    "remaining": 6652
+  },
+  "billing": {
+    "enabled": false,
+    "canceledByUser": true
+  },
+  "browser": {
+    "verified": [
+      "local test account login and sync status",
+      "Particles page and automatic preview"
+    ],
+    "finalVisualReview": false,
+    "blocker": "Local browser use is disabled in Work settings"
+  },
+  "externalProductionSetup": {
+    "configured": false,
+    "requires": [
+      "HTTPS origin",
+      "SMTP sender",
+      "Node hosting with persistent SQLite volume"
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nitido-lp.vercel.app/sitemap.xml

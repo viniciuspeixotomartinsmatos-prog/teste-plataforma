@@ -1,0 +1,56 @@
+[
+  {
+    "route": "/@qa-author-847/templates/qa-847-demo-only",
+    "type": "template",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@reacthive/templates/dusk-app-website-template",
+    "type": "template",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@sarat-asymmetrica/components/tile-band",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 43799,
+      "name": "Tile Band",
+      "description": "A decorative or dividing strip of hand-painted Goan tile motifs (azulejo blue-and-white or majolica cobalt/lemon/leaf), seeded so the same page always paints the same tiles, with a quiet line-art, warm glazed, or playful touch-reactive register.",
+      "previewUrl": "https://cdn.21st.dev/sarat-asymmetrica/tile-band/vertical-edge/preview.1793441074639-454d109c-fee0-4f2d-aeed-48646844e8cd.png",
+      "videoUrl": null,
+      "author": "sarat-asymmetrica",
+      "authorImage": "https://avatars.githubusercontent.com/u/227766750?v=4",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/sarat-asymmetrica/tile-band?api_key=REDACTED\"",
+      "url": "https://21st.dev/@sarat-asymmetrica/components/tile-band"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@serayudigital/components/theme-toggle",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 43774,
+      "name": "Theme Toggle",
+      "description": "A button that cycles through light, dark, and system theme preferences and shows a sun, moon, or monitor icon for the active mode.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_serayudigital_1791204328603/theme-toggle/default/preview.1794427200675.webp",
+      "videoUrl": "https://cdn.21st.dev/user_registry_serayudigital_1791204328603/theme-toggle/default/video.1794427182049.mp4",
+      "author": "serayudigital",
+      "authorImage": "https://avatars.githubusercontent.com/u/41495217?v=4",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/serayudigital/theme-toggle?api_key=REDACTED\"",
+      "url": "https://21st.dev/@serayudigital/components/theme-toggle"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@shadcnspace/templates/saazio-shadcn-saas-product-website-template",
+    "type": "template",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@sharif_a68bbddb/themes/blue-vivid-1794341845761",
+    "type": "theme",
+    "status": "metadata_unresolved"
+  }
+]

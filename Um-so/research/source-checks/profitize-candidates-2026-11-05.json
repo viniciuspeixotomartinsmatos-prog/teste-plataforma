@@ -1,0 +1,118 @@
+[
+  {
+    "slug": "arbo",
+    "url": "https://profitize.com.br/build/landing-pages/arbo",
+    "status": 200,
+    "item": {
+      "id": "19f71697-2482-4572-9b67-14d0ca9c975c",
+      "slug": "arbo",
+      "title": "Arbo",
+      "type": "landing_page",
+      "kind": {
+        "id": "landing_page",
+        "label": "Landing page",
+        "plural": "Landing pages",
+        "segment": "landing-pages",
+        "sortOrder": 0
+      },
+      "niche": "imobiliaria",
+      "description": "Lançamento residencial: passe o mouse nos andares da torre à noite, clique e o andar vira a maquete 3D mobiliada.",
+      "tags": [
+        "imobiliaria",
+        "lancamento",
+        "alto-padrao",
+        "3d",
+        "three.js",
+        "maquete",
+        "blender",
+        "hover",
+        "galeria",
+        "escuro",
+        "serifa",
+        "gsap",
+        "mobile"
+      ],
+      "isNew": true,
+      "free": false,
+      "tone": "escuro",
+      "industry": "imoveis",
+      "preview": {
+        "poster": "/build/media/19f71697-2482-4572-9b67-14d0ca9c975c/poster-185d582a.webp",
+        "video": "/build/media/19f71697-2482-4572-9b67-14d0ca9c975c/previa-card-34806ea2.mp4",
+        "mode": "cover"
+      },
+      "aspect": "16/10",
+      "publishedAt": "2026-11-05T03:39:15.531011+00:00",
+      "updatedAt": "2026-11-05T03:39:15.531011+00:00"
+    },
+    "media": [
+      {
+        "kind": "poster",
+        "url": "/build/media/19f71697-2482-4572-9b67-14d0ca9c975c/poster-185d582a.webp",
+        "status": 200,
+        "type": "image/webp",
+        "bytes": "63314"
+      },
+      {
+        "kind": "video",
+        "url": "/build/media/19f71697-2482-4572-9b67-14d0ca9c975c/previa-card-34806ea2.mp4",
+        "status": 200,
+        "type": "video/mp4",
+        "bytes": "3599541"
+      }
+    ],
+    "published": false,
+    "validation": "Public metadata and HTTP media headers only; no browser playback validation."
+  },
+  {
+    "slug": "sticker-slap-footer",
+    "url": "https://profitize.com.br/build/landing-pages/sticker-slap-footer",
+    "status": 404,
+    "item": {
+      "id": "landing-pages",
+      "label": "Landing Pages",
+      "href": "/landing-pages",
+      "items": [
+        {
+          "title": "Arbo",
+          "href": "/landing-pages/arbo",
+          "src": "/build/media/19f71697-2482-4572-9b67-14d0ca9c975c/poster-185d582a.webp",
+          "srcSet": "/build/media/320w/19f71697-2482-4572-9b67-14d0ca9c975c/poster-185d582a.webp 320w, /build/media/480w/19f71697-2482-4572-9b67-14d0ca9c975c/poster-185d582a.webp 480w, /build/media/640w/19f71697-2482-4572-9b67-14d0ca9c975c/poster-185d582a.webp 640w, /build/media/960w/19f71697-2482-4572-9b67-14d0ca9c975c/poster-185d582a.webp 960w, /build/media/1280w/19f71697-2482-4572-9b67-14d0ca9c975c/poster-185d582a.webp 1280w"
+        },
+        {
+          "title": "Colina",
+          "href": "/landing-pages/colina",
+          "src": "/build/media/54de1436-4ae2-49f2-b675-483568159f41/poster-53155197.webp",
+          "srcSet": "/build/media/320w/54de1436-4ae2-49f2-b675-483568159f41/poster-53155197.webp 320w, /build/media/480w/54de1436-4ae2-49f2-b675-483568159f41/poster-53155197.webp 480w, /build/media/640w/54de1436-4ae2-49f2-b675-483568159f41/poster-53155197.webp 640w, /build/media/960w/54de1436-4ae2-49f2-b675-483568159f41/poster-53155197.webp 960w, /build/media/1280w/54de1436-4ae2-49f2-b675-483568159f41/poster-53155197.webp 1280w"
+        },
+        {
+          "title": "Skeleton",
+          "href": "/landing-pages/skeleton",
+          "src": "/build/media/c2d77a9f-5c89-4800-afc8-78f679b78cd0/poster-9a6404da.webp",
+          "srcSet": "/build/media/320w/c2d77a9f-5c89-4800-afc8-78f679b78cd0/poster-9a6404da.webp 320w, /build/media/480w/c2d77a9f-5c89-4800-afc8-78f679b78cd0/poster-9a6404da.webp 480w, /build/media/640w/c2d77a9f-5c89-4800-afc8-78f679b78cd0/poster-9a6404da.webp 640w, /build/media/960w/c2d77a9f-5c89-4800-afc8-78f679b78cd0/poster-9a6404da.webp 960w, /build/media/1280w/c2d77a9f-5c89-4800-afc8-78f679b78cd0/poster-9a6404da.webp 1280w"
+        },
+        {
+          "title": "Lusco",
+          "href": "/landing-pages/lusco",
+          "src": "/build/media/f9482eee-d70e-4b1f-b038-f5604c387024/poster-0ed01cb8.webp",
+          "srcSet": "/build/media/320w/f9482eee-d70e-4b1f-b038-f5604c387024/poster-0ed01cb8.webp 320w, /build/media/480w/f9482eee-d70e-4b1f-b038-f5604c387024/poster-0ed01cb8.webp 480w, /build/media/640w/f9482eee-d70e-4b1f-b038-f5604c387024/poster-0ed01cb8.webp 640w, /build/media/960w/f9482eee-d70e-4b1f-b038-f5604c387024/poster-0ed01cb8.webp 960w, /build/media/1280w/f9482eee-d70e-4b1f-b038-f5604c387024/poster-0ed01cb8.webp 1280w"
+        },
+        {
+          "title": "Sulko",
+          "href": "/landing-pages/sulko",
+          "src": "/build/media/80b0faf1-6417-472e-a428-2efa03decd5d/poster-f3a46b6e.webp",
+          "srcSet": "/build/media/320w/80b0faf1-6417-472e-a428-2efa03decd5d/poster-f3a46b6e.webp 320w, /build/media/480w/80b0faf1-6417-472e-a428-2efa03decd5d/poster-f3a46b6e.webp 480w, /build/media/640w/80b0faf1-6417-472e-a428-2efa03decd5d/poster-f3a46b6e.webp 640w, /build/media/960w/80b0faf1-6417-472e-a428-2efa03decd5d/poster-f3a46b6e.webp 960w, /build/media/1280w/80b0faf1-6417-472e-a428-2efa03decd5d/poster-f3a46b6e.webp 1280w"
+        },
+        {
+          "title": "argila",
+          "href": "/landing-pages/argila",
+          "src": "/build/media/98f5a774-f9ed-4201-9c33-ad704aed4dc4/poster-8c0ecc8f.webp",
+          "srcSet": "/build/media/320w/98f5a774-f9ed-4201-9c33-ad704aed4dc4/poster-8c0ecc8f.webp 320w, /build/media/480w/98f5a774-f9ed-4201-9c33-ad704aed4dc4/poster-8c0ecc8f.webp 480w, /build/media/640w/98f5a774-f9ed-4201-9c33-ad704aed4dc4/poster-8c0ecc8f.webp 640w, /build/media/960w/98f5a774-f9ed-4201-9c33-ad704aed4dc4/poster-8c0ecc8f.webp 960w, /build/media/1280w/98f5a774-f9ed-4201-9c33-ad704aed4dc4/poster-8c0ecc8f.webp 1280w"
+        }
+      ]
+    },
+    "media": [],
+    "published": false,
+    "validation": "Public metadata and HTTP media headers only; no browser playback validation."
+  }
+]

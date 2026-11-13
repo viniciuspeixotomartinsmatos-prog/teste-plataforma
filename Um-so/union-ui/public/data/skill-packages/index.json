@@ -1,0 +1,502 @@
+[
+  {
+    "id": "caveman-cavecrew",
+    "name": "cavecrew",
+    "group": "caveman",
+    "files": 2
+  },
+  {
+    "id": "caveman-caveman-commit",
+    "name": "caveman-commit",
+    "group": "caveman",
+    "files": 2
+  },
+  {
+    "id": "caveman-caveman-compress",
+    "name": "caveman-compress",
+    "group": "caveman",
+    "files": 10
+  },
+  {
+    "id": "caveman-caveman-discover",
+    "name": "caveman-discover",
+    "group": "caveman",
+    "files": 1
+  },
+  {
+    "id": "caveman-caveman-evidence-review",
+    "name": "caveman-evidence-review",
+    "group": "caveman",
+    "files": 1
+  },
+  {
+    "id": "caveman-caveman-explore",
+    "name": "caveman-explore",
+    "group": "caveman",
+    "files": 3
+  },
+  {
+    "id": "caveman-caveman-help",
+    "name": "caveman-help",
+    "group": "caveman",
+    "files": 2
+  },
+  {
+    "id": "caveman-caveman-learn",
+    "name": "caveman-learn",
+    "group": "caveman",
+    "files": 6
+  },
+  {
+    "id": "caveman-caveman-manage",
+    "name": "caveman-manage",
+    "group": "caveman",
+    "files": 1
+  },
+  {
+    "id": "caveman-caveman-optimize",
+    "name": "caveman-optimize",
+    "group": "caveman",
+    "files": 1
+  },
+  {
+    "id": "caveman-caveman-review",
+    "name": "caveman-review",
+    "group": "caveman",
+    "files": 2
+  },
+  {
+    "id": "caveman-caveman-setup",
+    "name": "caveman-setup",
+    "group": "caveman",
+    "files": 1
+  },
+  {
+    "id": "caveman-caveman-stats",
+    "name": "caveman-stats",
+    "group": "caveman",
+    "files": 2
+  },
+  {
+    "id": "caveman-caveman",
+    "name": "caveman",
+    "group": "caveman",
+    "files": 2
+  },
+  {
+    "id": "caveman-investigate-first",
+    "name": "investigate-first",
+    "group": "caveman",
+    "files": 2
+  },
+  {
+    "id": "caveman-lean-build",
+    "name": "lean-build",
+    "group": "caveman",
+    "files": 2
+  },
+  {
+    "id": "caveman-megacave",
+    "name": "megacave",
+    "group": "caveman",
+    "files": 2
+  },
+  {
+    "id": "caveman-migration",
+    "name": "migration",
+    "group": "caveman",
+    "files": 2
+  },
+  {
+    "id": "caveman-safe-refactor",
+    "name": "safe-refactor",
+    "group": "caveman",
+    "files": 2
+  },
+  {
+    "id": "caveman-surgical-patch",
+    "name": "surgical-patch",
+    "group": "caveman",
+    "files": 2
+  },
+  {
+    "id": "caveman-ultracave",
+    "name": "ultracave",
+    "group": "caveman",
+    "files": 2
+  },
+  {
+    "id": "caveman-verify-and-stop",
+    "name": "verify-and-stop",
+    "group": "caveman",
+    "files": 2
+  },
+  {
+    "id": "agent-browser-agentcore",
+    "name": "agentcore",
+    "group": "agent-browser",
+    "files": 1
+  },
+  {
+    "id": "agent-browser-core",
+    "name": "core",
+    "group": "agent-browser",
+    "files": 14
+  },
+  {
+    "id": "agent-browser-derive-client",
+    "name": "derive-client",
+    "group": "agent-browser",
+    "files": 1
+  },
+  {
+    "id": "agent-browser-dogfood",
+    "name": "dogfood",
+    "group": "agent-browser",
+    "files": 3
+  },
+  {
+    "id": "agent-browser-electron",
+    "name": "electron",
+    "group": "agent-browser",
+    "files": 1
+  },
+  {
+    "id": "agent-browser-protected-vercel-deployments",
+    "name": "protected-vercel-deployments",
+    "group": "agent-browser",
+    "files": 1
+  },
+  {
+    "id": "agent-browser-slack",
+    "name": "slack",
+    "group": "agent-browser",
+    "files": 3
+  },
+  {
+    "id": "agent-browser-vercel-sandbox",
+    "name": "vercel-sandbox",
+    "group": "agent-browser",
+    "files": 1
+  },
+  {
+    "id": "agent-browser-webmcp-gen",
+    "name": "webmcp-gen",
+    "group": "agent-browser",
+    "files": 1
+  },
+  {
+    "id": "agent-browser-agent-browser",
+    "name": "agent-browser",
+    "group": "agent-browser",
+    "files": 1
+  },
+  {
+    "id": "marketingskills-ai-seo",
+    "name": "ai-seo",
+    "group": "marketingskills",
+    "files": 17
+  },
+  {
+    "id": "marketingskills-content-strategy",
+    "name": "content-strategy",
+    "group": "marketingskills",
+    "files": 4
+  },
+  {
+    "id": "pm-claude-skills-pricing-strategy",
+    "name": "pricing-strategy",
+    "group": "pm-claude-skills",
+    "files": 2
+  },
+  {
+    "id": "hyperframes-project-guide",
+    "name": "HyperFrames · guia de projeto",
+    "group": "hyperframes",
+    "files": 1,
+    "guide": "CLAUDE.md"
+  },
+  {
+    "id": "create-plan",
+    "name": "Criar plano",
+    "group": "nitido",
+    "files": 1
+  },
+  {
+    "id": "valyu-mcp",
+    "name": "Valyu · pesquisa",
+    "group": "MCP",
+    "files": 2,
+    "guide": "README.md"
+  },
+  {
+    "id": "profitize-direcao-de-arte",
+    "name": "Direção de Arte",
+    "files": 40,
+    "description": "Composição, tipografia e direção visual.",
+    "kind": "skill",
+    "group": "Design",
+    "guide": "SKILL.md"
+  },
+  {
+    "id": "profitize-seo-google",
+    "name": "SEO para o Google",
+    "files": 1,
+    "description": "Pesquisa, conteúdo e melhorias para mecanismos de busca.",
+    "kind": "skill",
+    "group": "Marketing",
+    "guide": "SKILL.md"
+  },
+  {
+    "id": "profitize-trafego-pago",
+    "name": "Tráfego Pago",
+    "files": 1,
+    "description": "Planejamento e otimização de campanhas.",
+    "kind": "skill",
+    "group": "Marketing",
+    "guide": "SKILL.md"
+  },
+  {
+    "id": "profitize-anuncios-concorrencia",
+    "name": "Anúncios da Concorrência",
+    "files": 1,
+    "description": "Análise de anúncios e posicionamento.",
+    "kind": "skill",
+    "group": "Marketing",
+    "guide": "SKILL.md"
+  },
+  {
+    "id": "profitize-banco-de-dados",
+    "name": "Banco de Dados",
+    "files": 8,
+    "description": "Modelagem, índices e migrações.",
+    "kind": "skill",
+    "group": "Desenvolvimento",
+    "guide": "SKILL.md"
+  },
+  {
+    "id": "profitize-backend",
+    "name": "Backend e APIs",
+    "files": 1,
+    "description": "APIs, autenticação e desempenho.",
+    "kind": "skill",
+    "group": "Desenvolvimento",
+    "guide": "SKILL.md"
+  },
+  {
+    "id": "profitize-jogos",
+    "name": "Criação de Jogos",
+    "files": 11,
+    "description": "Desenvolvimento de jogos 2D e 3D.",
+    "kind": "skill",
+    "group": "Desenvolvimento",
+    "guide": "SKILL.md"
+  },
+  {
+    "id": "profitize-apresentacoes",
+    "name": "Apresentações PowerPoint",
+    "files": 111,
+    "description": "Criação e revisão de apresentações.",
+    "kind": "skill",
+    "group": "Documentos",
+    "guide": "SKILL.md"
+  },
+  {
+    "id": "profitize-documentos",
+    "name": "Documentos Word",
+    "files": 111,
+    "description": "Relatórios, propostas e documentos.",
+    "kind": "skill",
+    "group": "Documentos",
+    "guide": "SKILL.md"
+  },
+  {
+    "id": "profitize-estilo-apple",
+    "name": "Estilo Apple",
+    "files": 1,
+    "description": "A galeria branca: o produto no centro, a tipografia preta e compacta, e um azul só para os links e os botões.",
+    "kind": "design",
+    "group": "Design systems",
+    "guide": "DESIGN.md",
+    "image": "/data/skill-packages/profitize-estilo-apple.webp",
+    "markdown": "profitize-estilo-apple.md",
+    "colors": [
+      "#ffffff",
+      "#1d1d1f",
+      "#6e6e73",
+      "#0066cc",
+      "#f5f5f7",
+      "#000000",
+      "#86868b",
+      "#2997ff"
+    ]
+  },
+  {
+    "id": "profitize-estilo-wise",
+    "name": "Estilo Wise",
+    "files": 1,
+    "description": "Verde-floresta com um limão elétrico: títulos enormes em caixa alta, tudo em pílula e nenhuma sombra.",
+    "kind": "design",
+    "group": "Design systems",
+    "guide": "DESIGN.md",
+    "image": "/data/skill-packages/profitize-estilo-wise.webp",
+    "markdown": "profitize-estilo-wise.md",
+    "colors": [
+      "#ffffff",
+      "#0e0f0c",
+      "#6a6c6a",
+      "#163300",
+      "#e8ebe6",
+      "#e2f6d5",
+      "#454745",
+      "#9fe870"
+    ]
+  },
+  {
+    "id": "profitize-estilo-cursor",
+    "name": "Estilo Cursor",
+    "files": 1,
+    "description": "Um ateliê em papel creme: títulos leves, tinta quase preta, cantos de 4 px e uma brasa laranja só nos links.",
+    "kind": "design",
+    "group": "Design systems",
+    "guide": "DESIGN.md",
+    "image": "/data/skill-packages/profitize-estilo-cursor.webp",
+    "markdown": "profitize-estilo-cursor.md",
+    "colors": [
+      "#f7f7f4",
+      "#26251e",
+      "#7a7974",
+      "#f54e00",
+      "#f2f1ed",
+      "#e6e5e0",
+      "#c08532",
+      "#34785c"
+    ]
+  },
+  {
+    "id": "profitize-estilo-duna",
+    "name": "Estilo Duna",
+    "files": 1,
+    "description": "Um documento calmo em papel quente: quase sem cor, letras grandes e apertadas, e uma única pintura de pôr do sol no topo.",
+    "kind": "design",
+    "group": "Design systems",
+    "guide": "DESIGN.md",
+    "image": "/data/skill-packages/profitize-estilo-duna.webp",
+    "markdown": "profitize-estilo-duna.md",
+    "colors": [
+      "#f7f7f5",
+      "#1b0624",
+      "#766a7c",
+      "#160f0c",
+      "#ffffff",
+      "#edece7",
+      "#898683",
+      "#eeeeee"
+    ]
+  },
+  {
+    "id": "profitize-estilo-linear",
+    "name": "Estilo Linear",
+    "files": 1,
+    "description": "Um painel de comando à meia-noite: quase preto, letras brancas e precisas, e um verde-limão elétrico só no botão principal.",
+    "kind": "design",
+    "group": "Design systems",
+    "guide": "DESIGN.md",
+    "image": "/data/skill-packages/profitize-estilo-linear.webp",
+    "markdown": "profitize-estilo-linear.md",
+    "colors": [
+      "#08090a",
+      "#ffffff",
+      "#8a8f98",
+      "#e4f222",
+      "#0f1011",
+      "#161718",
+      "#d0d6e0",
+      "#23252a"
+    ]
+  },
+  {
+    "id": "profitize-estilo-notion",
+    "name": "Estilo Notion",
+    "files": 1,
+    "description": "O caderno de papel quente: fundo creme, cartões brancos com fio fino e cores vivas só em pílulas e blocos de destaque.",
+    "kind": "design",
+    "group": "Design systems",
+    "guide": "DESIGN.md",
+    "image": "/data/skill-packages/profitize-estilo-notion.webp",
+    "markdown": "profitize-estilo-notion.md",
+    "colors": [
+      "#f6f5f4",
+      "#000000",
+      "#615d59",
+      "#0075de",
+      "#ffffff",
+      "#696969",
+      "#ffb110",
+      "#111111"
+    ]
+  },
+  {
+    "id": "profitize-estilo-vercel",
+    "name": "Estilo Vercel",
+    "files": 1,
+    "description": "O terminal impresso em papel: preto, branco e cinza, títulos grandes e leves e etiquetas pequenas em letra de terminal.",
+    "kind": "design",
+    "group": "Design systems",
+    "guide": "DESIGN.md",
+    "image": "/data/skill-packages/profitize-estilo-vercel.webp",
+    "markdown": "profitize-estilo-vercel.md",
+    "colors": [
+      "#fafafa",
+      "#171717",
+      "#4d4d4d",
+      "#297a3a",
+      "#ffffff",
+      "#666666",
+      "#a8a8a8",
+      "#ebebeb"
+    ]
+  },
+  {
+    "id": "profitize-estilo-duolingo",
+    "name": "Estilo Duolingo",
+    "files": 1,
+    "description": "O livro de histórias: papel branco, títulos redondos em verde e botões que parecem adesivos colados na página.",
+    "kind": "design",
+    "group": "Design systems",
+    "guide": "DESIGN.md",
+    "image": "/data/skill-packages/profitize-estilo-duolingo.webp",
+    "markdown": "profitize-estilo-duolingo.md",
+    "colors": [
+      "#ffffff",
+      "#4b4b4b",
+      "#777777",
+      "#58cc02",
+      "#d7ffb8",
+      "#a5ed6e",
+      "#000437",
+      "#afafaf"
+    ]
+  },
+  {
+    "id": "profitize-estilo-anthropic",
+    "name": "Estilo Anthropic",
+    "files": 1,
+    "description": "O caderno de pesquisa: pergaminho marfim, títulos e textos em serifa, e um terracota só na ação que importa.",
+    "kind": "design",
+    "group": "Design systems",
+    "guide": "DESIGN.md",
+    "image": "/data/skill-packages/profitize-estilo-anthropic.webp",
+    "markdown": "profitize-estilo-anthropic.md",
+    "colors": [
+      "#f0eee6",
+      "#141413",
+      "#87867f",
+      "#d97757",
+      "#faf9f5",
+      "#f5e3c7",
+      "#c6613f",
+      "#b0aea5"
+    ]
+  }
+]

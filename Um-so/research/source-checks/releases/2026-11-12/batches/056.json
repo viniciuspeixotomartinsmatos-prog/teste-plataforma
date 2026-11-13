@@ -1,0 +1,138 @@
+[
+  {
+    "route": "/@aloksivastava1025/components/pixel-perfect-command-palette",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44777,
+      "name": "Pixel Perfect Command Palette",
+      "description": "A keyboard-driven command palette (⌘K launcher) with search, key-cap chords, letter sequences, recent commands, file search and toast feedback on run.",
+      "previewUrl": "https://cdn.21st.dev/user_35NhaNECmTVfUAllRZbZCIQa1D3/pixel-perfect-command-palette/default/preview.1794418165981.png",
+      "videoUrl": "https://cdn.21st.dev/user_35NhaNECmTVfUAllRZbZCIQa1D3/pixel-perfect-command-palette/default/video.1794417959227.mp4",
+      "author": "aloksivastava1025",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_35NhaNECmTVfUAllRZbZCIQa1D3/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/aloksivastava1025/pixel-perfect-command-palette?api_key=REDACTED\"",
+      "url": "https://21st.dev/@aloksivastava1025/components/pixel-perfect-command-palette"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@alwkala/components/callout",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44862,
+      "name": "Callout",
+      "description": "A left-accented note box for highlighting an editorial tip, warning, or informational aside inside article or docs content.",
+      "previewUrl": "https://cdn.21st.dev/alwkala/callout/default/preview.1794143956875-c0da6371-a2ae-45b7-9882-8c4e3ff180dd.png",
+      "videoUrl": null,
+      "author": "alwkala",
+      "authorImage": "https://github.com/alwkala.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/alwkala/callout?api_key=REDACTED\"",
+      "url": "https://21st.dev/@alwkala/components/callout"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@amankaushik481/components/chip-filter",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44978,
+      "name": "Chip Filter",
+      "description": "A row of pill-shaped filter chips that behaves like a single-select radio group, with an accent ring on the active chip, for quick filters above lists and tables.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_amankaushik481_1793404304119/chip-filter/default/preview.1794335169811.png",
+      "videoUrl": "https://cdn.21st.dev/user_registry_amankaushik481_1793404304119/chip-filter/default/video.1794335092980.mp4",
+      "author": "amankaushik481",
+      "authorImage": "https://github.com/amankaushik481.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/amankaushik481/chip-filter?api_key=REDACTED\"",
+      "url": "https://21st.dev/@amankaushik481/components/chip-filter"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@amankaushik481/components/emoji-picker",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45051,
+      "name": "Emoji Picker",
+      "description": "A compact grid of emoji reactions, built with listbox/option roles, that calls a callback with the chosen emoji — useful for message reaction bars and quick-react buttons.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_amankaushik481_1793404304119/emoji-picker/default/preview.1794331684314.webp",
+      "videoUrl": "https://cdn.21st.dev/user_registry_amankaushik481_1793404304119/emoji-picker/default/video.1794331627134.mp4",
+      "author": "amankaushik481",
+      "authorImage": "https://github.com/amankaushik481.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/amankaushik481/emoji-picker?api_key=REDACTED\"",
+      "url": "https://21st.dev/@amankaushik481/components/emoji-picker"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@automate_flows/components/liquid-glass-wordmark-footer",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44929,
+      "name": "Liquid Glass Wordmark Footer",
+      "description": "An adjustable liquid-glass footer with refractive 3D lettering, a resizable cursor lens, elastic edges, and click or tap ripples. Includes responsive navigation, an optional signup form, host-theme support, reduced-motion behavior, and editable glass, lettering, cursor, and ripple settings.",
+      "previewUrl": "https://cdn.21st.dev/user_3EFgBcaTwAWLVWzXlHvjY47l6Xk/liquid-glass-wordmark-footer/default/preview.1794313375413.webp",
+      "videoUrl": "https://cdn.21st.dev/user_3EFgBcaTwAWLVWzXlHvjY47l6Xk/liquid-glass-wordmark-footer/default/video.1794313362145.mp4",
+      "author": "automate_flows",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3EFgBcaTwAWLVWzXlHvjY47l6Xk/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/automate_flows/liquid-glass-wordmark-footer?api_key=REDACTED\"",
+      "url": "https://21st.dev/@automate_flows/components/liquid-glass-wordmark-footer"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@bagherifarzad/components/dot-matrix",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 43820,
+      "name": "Dot Matrix",
+      "description": "A decorative radial-gradient dot grid background with an optional radial fade mask, used behind hero sections and cards.",
+      "previewUrl": "https://cdn.21st.dev/bagherifarzad/dot-matrix/default/preview.1793441153736-14053614-09ce-428e-bdfa-781c5832f8ff.png",
+      "videoUrl": null,
+      "author": "bagherifarzad",
+      "authorImage": "https://avatars.githubusercontent.com/u/56923236?v=4",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/bagherifarzad/dot-matrix?api_key=REDACTED\"",
+      "url": "https://21st.dev/@bagherifarzad/components/dot-matrix"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@bagherifarzad/components/noise-field",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 43818,
+      "name": "Noise Field",
+      "description": "A decorative animated noise/blob background layer that adds subtle depth and texture behind hero sections or product surfaces.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_bagherifarzad_1791205672729/noise-field/default/preview.1794428579625.webp",
+      "videoUrl": "https://cdn.21st.dev/user_registry_bagherifarzad_1791205672729/noise-field/default/video.1794428562777.mp4",
+      "author": "bagherifarzad",
+      "authorImage": "https://avatars.githubusercontent.com/u/56923236?v=4",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/bagherifarzad/noise-field?api_key=REDACTED\"",
+      "url": "https://21st.dev/@bagherifarzad/components/noise-field"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@bayagbono/components/silk-blend-gradient",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44968,
+      "name": "Silk Blend Gradient",
+      "description": "Pure CSS gradient background in the Silk Blend style, made with the 21st.dev Gradient Builder. 4-color palette (#000000, #820853, #0F0609, #2C1A00). Features: film grain. A drop-in, zero-dependency React component for hero sections, cards, and page backgrounds.",
+      "previewUrl": "https://cdn.21st.dev/bayagbono/silk-blend-gradient/default/preview.1794250533477-c000c081-d2d6-4ae6-aad9-5e1c98cbfa9f.webp",
+      "videoUrl": null,
+      "author": "bayagbono",
+      "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zTGpUMUtRRklEWU1rVW44SUpGNHBlYUUzdFIifQ",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/bayagbono/silk-blend-gradient?api_key=REDACTED\"",
+      "url": "https://21st.dev/@bayagbono/components/silk-blend-gradient"
+    },
+    "status": "retained_unvalidated"
+  }
+]

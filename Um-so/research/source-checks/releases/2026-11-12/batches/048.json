@@ -1,0 +1,90 @@
+[
+  {
+    "route": "/@aloksivastava1025/components/astryx-code-block",
+    "type": "component",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@aloksivastava1025/components/astryx-collapsible",
+    "type": "component",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@aloksivastava1025/components/astryx-collapsible-group",
+    "type": "component",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@aloksivastava1025/components/astryx-command-palette-empty",
+    "type": "component",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@aloksivastava1025/components/dot-graph-card",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44867,
+      "name": "Dot Graph Card",
+      "description": "A revenue card with an animated percentage counter and a dot-matrix bar chart whose dots pop in and show tooltips on hover, with daily/weekly/monthly tabs.",
+      "previewUrl": "https://cdn.21st.dev/user_35NhaNECmTVfUAllRZbZCIQa1D3/dot-graph-card/default/preview.1794262124985.webp",
+      "videoUrl": "https://cdn.21st.dev/user_35NhaNECmTVfUAllRZbZCIQa1D3/dot-graph-card/default/video.1794261288922.mp4",
+      "author": "aloksivastava1025",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_35NhaNECmTVfUAllRZbZCIQa1D3/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/aloksivastava1025/dot-graph-card?api_key=REDACTED\"",
+      "url": "https://21st.dev/@aloksivastava1025/components/dot-graph-card"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@aloksivastava1025/components/expandable-book-search-palette",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44903,
+      "name": "Expandable Book Search Palette",
+      "description": "A search bar that expands into a filterable genre grid using a CSS grid-rows accordion animation, useful for a book catalog or library browse page.",
+      "previewUrl": "https://cdn.21st.dev/user_35NhaNECmTVfUAllRZbZCIQa1D3/expandable-book-search-palette/default/preview.1794256752686.png",
+      "videoUrl": "https://cdn.21st.dev/user_35NhaNECmTVfUAllRZbZCIQa1D3/expandable-book-search-palette/default/video.1794256630445.mp4",
+      "author": "aloksivastava1025",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_35NhaNECmTVfUAllRZbZCIQa1D3/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/aloksivastava1025/expandable-book-search-palette?api_key=REDACTED\"",
+      "url": "https://21st.dev/@aloksivastava1025/components/expandable-book-search-palette"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@aloksivastava1025/components/glossy-slider-call-button",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44880,
+      "name": "Glossy Slider Call Button",
+      "description": "A dark pill button with an acid-green slider that expands on hover, swapping a dotted arrow icon for a ringing-phone icon while the label fades out.",
+      "previewUrl": "https://cdn.21st.dev/user_35NhaNECmTVfUAllRZbZCIQa1D3/glossy-slider-call-button/default/preview.1794258946242.webp",
+      "videoUrl": "https://cdn.21st.dev/user_35NhaNECmTVfUAllRZbZCIQa1D3/glossy-slider-call-button/default/video.1794258935231.mp4",
+      "author": "aloksivastava1025",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_35NhaNECmTVfUAllRZbZCIQa1D3/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/aloksivastava1025/glossy-slider-call-button?api_key=REDACTED\"",
+      "url": "https://21st.dev/@aloksivastava1025/components/glossy-slider-call-button"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@aloksivastava1025/components/grid-row-profile-expander",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44878,
+      "name": "Profile Menu Expander",
+      "description": "A profile card that expands upward to reveal a navigation menu and a light/dark/system theme switcher, using a grid-row 0fr-to-1fr animation.",
+      "previewUrl": "https://cdn.21st.dev/user_35NhaNECmTVfUAllRZbZCIQa1D3/grid-row-profile-expander/default/preview.1794336579479.webp",
+      "videoUrl": "https://cdn.21st.dev/user_35NhaNECmTVfUAllRZbZCIQa1D3/grid-row-profile-expander/default/video.1794336557350.mp4",
+      "author": "aloksivastava1025",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_35NhaNECmTVfUAllRZbZCIQa1D3/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/aloksivastava1025/grid-row-profile-expander?api_key=REDACTED\"",
+      "url": "https://21st.dev/@aloksivastava1025/components/grid-row-profile-expander"
+    },
+    "status": "retained_unvalidated"
+  }
+]

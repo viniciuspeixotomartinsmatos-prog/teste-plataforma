@@ -1,0 +1,9 @@
+# Pesquisa Valyu no Codex
+
+Configure o endpoint HTTPS no cliente MCP e autentique na sua conta Valyu. Para usar o arquivo incluído, acrescente a seção de config.toml à configuração do Codex e faça login no servidor valyu. Credenciais ficam no seu cliente. Ferramentas de pesquisa aprofundada podem consumir créditos do serviço.
+
+Endpoint: https://mcp.valyu.ai/mcp
+
+Exemplo de consulta: encontre artigos originais sobre renderização de interfaces e devolva referências com autor, data e link.
+
+Documentação: https://mcp.valyu.ai/

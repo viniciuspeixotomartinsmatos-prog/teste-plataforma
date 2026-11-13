@@ -1,0 +1,104 @@
+[
+  {
+    "route": "/@sopo/components/hover-card",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45108,
+      "name": "Hover Card",
+      "description": "A popover that shows extra preview content, like a profile summary or link preview, when a user hovers over a trigger element.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_sopo_1793377578676/hover-card/default/preview.1794422375706.png",
+      "videoUrl": "https://cdn.21st.dev/user_registry_sopo_1793377578676/hover-card/default/video.1794422322069.mp4",
+      "author": "sopo",
+      "authorImage": "https://avatars.githubusercontent.com/u/2558332?v=4",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/sopo/hover-card?api_key=REDACTED\"",
+      "url": "https://21st.dev/@sopo/components/hover-card"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@starc007/components/be-ui-404-not-found",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 16250,
+      "name": "BeUI 404 / Not Found",
+      "description": "",
+      "previewUrl": "https://cdn.21st.dev/larsen66/be-ui-404-not-found/default/preview.1782487811497.png",
+      "videoUrl": "https://cdn.21st.dev/larsen66/be-ui-404-not-found/default/video.1782487811497.mp4",
+      "author": "starc007",
+      "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zR01iekluZ3JmNGtUYUM1ZVpQNm5mMUYyazEifQ",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/starc007/be-ui-404-not-found?api_key=REDACTED\"",
+      "url": "https://21st.dev/@starc007/components/be-ui-404-not-found"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@starc007/components/be-ui-expanable-action-bar",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 16170,
+      "name": "BeUI Expanable Action Bar",
+      "description": "",
+      "previewUrl": "https://cdn.21st.dev/larsen66/be-ui-expanable-action-bar/default/preview.1782388276316.png",
+      "videoUrl": "https://cdn.21st.dev/larsen66/be-ui-expanable-action-bar/default/video.1782388276316.mp4",
+      "author": "starc007",
+      "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zR01iekluZ3JmNGtUYUM1ZVpQNm5mMUYyazEifQ",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/starc007/be-ui-expanable-action-bar?api_key=REDACTED\"",
+      "url": "https://21st.dev/@starc007/components/be-ui-expanable-action-bar"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@starc007/components/be-ui-text-animation",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 15761,
+      "name": "BeUI Text Animation",
+      "description": "",
+      "previewUrl": "https://cdn.21st.dev/larsen66/be-ui-text-animation/default/preview.1782305407228.png",
+      "videoUrl": "https://cdn.21st.dev/larsen66/be-ui-text-animation/default/video.1782305407228.mp4",
+      "author": "starc007",
+      "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zR01iekluZ3JmNGtUYUM1ZVpQNm5mMUYyazEifQ",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/starc007/be-ui-text-animation?api_key=REDACTED\"",
+      "url": "https://21st.dev/@starc007/components/be-ui-text-animation"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@studiostargazing/components/lsm",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45097,
+      "name": "lsm",
+      "description": "Animated (flicker) ASCII art in the Dots style, made with the 21st ASCII editor and baked to a looping video. A drop-in, zero-dependency React component for hero sections, cards, and retro terminal-style backgrounds.",
+      "previewUrl": "https://cdn.21st.dev/studiostargazing/lsm/default/preview.1794340246208-2ac62b1a-42bd-4591-b42c-b15c9eedcb11.webp",
+      "videoUrl": "https://cdn.21st.dev/studiostargazing/lsm/default/video.1794340246208-2ac62b1a-42bd-4591-b42c-b15c9eedcb11.mp4",
+      "author": "studiostargazing",
+      "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zNXRiUVRrbnBrT05PaUJWaUdWVkhsbzN6RVEifQ",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/studiostargazing/lsm?api_key=REDACTED\"",
+      "url": "https://21st.dev/@studiostargazing/components/lsm"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@support_596fe4b8/components/aquarium-prompt",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44875,
+      "name": "Aquarium Prompt",
+      "description": "An AI prompt box floating in a pixel-art aquarium. Fish school behind the frosted glass, scatter from your pointer, crowd round the caret as you type, and swim into the box when you send. Part of Nexus UI: nexus-ui.com/components/aquarium-prompt",
+      "previewUrl": "https://cdn.21st.dev/support_596fe4b8/aquarium-prompt/default/preview.1794154938292-38fdfa73-e368-4812-a640-9334b3806de1.png",
+      "videoUrl": null,
+      "author": "support_596fe4b8",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3LfQDpxmLCWepfcwLitp9KqvRFw/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/support_596fe4b8/aquarium-prompt?api_key=REDACTED\"",
+      "url": "https://21st.dev/@support_596fe4b8/components/aquarium-prompt"
+    },
+    "status": "retained_unvalidated"
+  }
+]

@@ -1,0 +1,124 @@
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(self), microphone=(self), geolocation=(), payment=()"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "object-src 'none'; base-uri 'self'; frame-ancestors 'self'"
+        }
+      ]
+    },
+    {
+      "source": "/assets/:path*",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/previews/:path*",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
+  ],
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/vendas",
+      "destination": "/vendas/index.html"
+    },
+    {
+      "source": "/api/:path*",
+      "destination": "/api"
+    },
+    {
+      "source": "/community/:path*",
+      "destination": "/api"
+    },
+    {
+      "source": "/component/:path*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/icons",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/compare",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/sources",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/collections/:path*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/tools/:path*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/account/:path*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/plans/:path*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/billing",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/builder/:path*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/resources/:path*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/shared",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/creators",
+      "destination": "/index.html"
+    }
+  ],
+  "functions": {
+    "api/index.js": {
+      "maxDuration": 90,
+      "includeFiles": "node_modules/@sparticuz/chromium/bin/**"
+    }
+  }
+}

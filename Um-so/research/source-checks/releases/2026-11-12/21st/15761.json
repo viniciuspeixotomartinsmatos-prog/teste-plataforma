@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 15761,
+    "name": "BeUI Text Animation",
+    "description": "",
+    "previewUrl": "https://cdn.21st.dev/larsen66/be-ui-text-animation/default/preview.1782305407228.png",
+    "videoUrl": "https://cdn.21st.dev/larsen66/be-ui-text-animation/default/video.1782305407228.mp4",
+    "author": "starc007",
+    "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zR01iekluZ3JmNGtUYUM1ZVpQNm5mMUYyazEifQ",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/starc007/be-ui-text-animation?api_key=REDACTED\"",
+    "url": "https://21st.dev/@starc007/components/be-ui-text-animation"
+  },
+  "requestedRoute": "/@starc007/components/be-ui-text-animation",
+  "checkedAt": "2026-11-13T02:15:30.209Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 15761,
+    "componentId": 8685,
+    "authorUserId": "user_3GMbzDOOqkmdobxoz8ep4iCuufg",
+    "name": "BeUI Text Animation",
+    "demoName": "default.tsx",
+    "description": "",
+    "previewUrl": "https://cdn.21st.dev/larsen66/be-ui-text-animation/default/preview.1782305407228.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/starc007/be-ui-text-animation?api_key=REDACTED\"",
+    "componentCode": "import { clsx, type ClassValue } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\nimport type { ElementType, ReactNode } from \"react\";\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n\nexport interface TextShimmerProps {\n  children: ReactNode;\n  as?: ElementType;\n  duration?: number;\n  className?: string;\n}\n\nexport function TextShimmer({\n  children,\n  as: Comp = \"span\",\n  duration = 2.5,\n  className,\n}: TextShimmerProps) {\n  return (\n    <>\n      <style>\n        {`@keyframes beui-text-shimmer{from{background-position:200% 0}to{background-position:-200% 0}}`}\n      </style>\n      <Comp\n        style={{ animation: `beui-text-shimmer ${duration}s linear infinite` }}\n        className={cn(\n          \"inline-block bg-[length:200%_100%] bg-clip-text text-transparent\",\n          \"bg-[linear-gradient(110deg,var(--muted-foreground)_30%,var(--foreground)_50%,var(--muted-foreground)_70%)]\",\n          className,\n        )}\n      >\n        {children}\n      </Comp>\n    </>\n  );\n}",
+    "demoCode": "\"use client\";\n\nimport { TextShimmer } from \"@/components/ui/be-ui-text-animation\";\n\nexport default function TextShimmerPreview() {\n  return (\n    <div className=\"flex flex-col gap-4\">\n      <TextShimmer className=\"text-3xl font-semibold\">Loading projects…</TextShimmer>\n      <TextShimmer duration={1.5} className=\"text-sm\">Faster shimmer</TextShimmer>\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": "user_3GMbzDOOqkmdobxoz8ep4iCuufg"
+  }
+}

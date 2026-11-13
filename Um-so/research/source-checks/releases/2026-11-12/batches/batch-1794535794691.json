@@ -1,0 +1,68 @@
+[
+  {
+    "route": "/@getastrothemes/templates/homio-cleaning-and-home-services-astro-theme",
+    "type": "template",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@getastrothemes/templates/taskly-task-management-saas-astro-theme",
+    "type": "template",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@gobbe/themes/ironclad-1794452190740",
+    "type": "theme",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@goodmotion/components/circle-reveal-loader",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45158,
+      "name": "Circle Reveal Loader",
+      "description": "A smooth staggered circular ripple page loader for entry transitions. Explore more free GSAP components at goodmotion.vercel.app",
+      "previewUrl": "https://cdn.21st.dev/user_3BtXJlYlZv7MjW1CcjpSHAkXBk9/circle-reveal-loader/default/preview.1794406143470.webp",
+      "videoUrl": "https://cdn.21st.dev/user_3BtXJlYlZv7MjW1CcjpSHAkXBk9/circle-reveal-loader/default/video.1794406131174.mp4",
+      "author": "goodmotion",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3BtXJlYlZv7MjW1CcjpSHAkXBk9/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/goodmotion/circle-reveal-loader?api_key=REDACTED\"",
+      "url": "https://21st.dev/@goodmotion/components/circle-reveal-loader"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@goodmotion/components/googly-eye-cursor",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44877,
+      "name": "Googly Eye Cursor",
+      "description": "An interactive custom cursor featuring playful googly eyes that track pointer movement with smooth physics. Built by  goodmotion.vercel.app/",
+      "previewUrl": "https://cdn.21st.dev/user_3BtXJlYlZv7MjW1CcjpSHAkXBk9/googly-eye-cursor/default/preview.1794234366406.webp",
+      "videoUrl": "https://cdn.21st.dev/user_3BtXJlYlZv7MjW1CcjpSHAkXBk9/googly-eye-cursor/default/video.1794234338748.mp4",
+      "author": "goodmotion",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3BtXJlYlZv7MjW1CcjpSHAkXBk9/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/goodmotion/googly-eye-cursor?api_key=REDACTED\"",
+      "url": "https://21st.dev/@goodmotion/components/googly-eye-cursor"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@goodmotion/components/y2k-dreamy-text",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45013,
+      "name": "Y2K Dreamy Text",
+      "description": "A dreamy Y2K bloom text effect powered by GSAP with fluid cursor proximity glow and seamless auto-sweep animation.\nExplore a curated collection of interactive motion components at: https://goodmotion.vercel.app/",
+      "previewUrl": "https://cdn.21st.dev/user_3BtXJlYlZv7MjW1CcjpSHAkXBk9/y2k-dreamy-text/default/preview.1794403796297.webp",
+      "videoUrl": "https://cdn.21st.dev/orvillemaggart709/y2k-dreamy-text/default/video.1794403801685.mp4",
+      "author": "goodmotion",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3BtXJlYlZv7MjW1CcjpSHAkXBk9/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/goodmotion/y2k-dreamy-text?api_key=REDACTED\"",
+      "url": "https://21st.dev/@goodmotion/components/y2k-dreamy-text"
+    },
+    "status": "retained_unvalidated"
+  }
+]

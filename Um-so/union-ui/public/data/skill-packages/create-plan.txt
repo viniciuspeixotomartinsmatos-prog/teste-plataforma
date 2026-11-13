@@ -1,0 +1,6 @@
+---
+name: create-plan
+description: Prepare and review an implementation plan before editing a project.
+---
+
+Write a plan describing the intended behavior, relevant files, dependencies, boundary cases, migration and rollback needs, and how success will be tested. State assumptions and unresolved choices. Give the user the written plan and wait for approval before editing project files. If implementation evidence requires a material change of scope, update the plan before proceeding.

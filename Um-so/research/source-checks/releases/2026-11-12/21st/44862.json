@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 44862,
+    "name": "Callout",
+    "description": "A left-accented note box for highlighting an editorial tip, warning, or informational aside inside article or docs content.",
+    "previewUrl": "https://cdn.21st.dev/alwkala/callout/default/preview.1794143956875-c0da6371-a2ae-45b7-9882-8c4e3ff180dd.png",
+    "videoUrl": null,
+    "author": "alwkala",
+    "authorImage": "https://github.com/alwkala.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/alwkala/callout?api_key=REDACTED\"",
+    "url": "https://21st.dev/@alwkala/components/callout"
+  },
+  "requestedRoute": "/@alwkala/components/callout",
+  "checkedAt": "2026-11-12T21:13:58.060Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 44862,
+    "componentId": 25912,
+    "authorUserId": "user_registry_alwkala_1790355067858",
+    "name": "Callout",
+    "demoName": "Default",
+    "description": "A left-accented note box for highlighting an editorial tip, warning, or informational aside inside article or docs content.",
+    "previewUrl": "https://cdn.21st.dev/alwkala/callout/default/preview.1794143956875-c0da6371-a2ae-45b7-9882-8c4e3ff180dd.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/alwkala/callout?api_key=REDACTED\"",
+    "componentCode": "import React from \"react\";\nimport { QaheraTone } from \"./callout-utils/types\";\n\nexport interface CalloutProps extends React.HTMLAttributes<HTMLDivElement> {\n  title?: string;\n  tone?: QaheraTone;\n  icon?: React.ReactNode;\n}\n\nexport const Callout: React.FC<CalloutProps> = ({\n  title,\n  tone = \"neutral\",\n  icon,\n  className = \"\",\n  children,\n  ...props\n}) => {\n  const classes = [\n    \"qhr-callout\",\n    tone !== \"neutral\" ? `qhr-callout--${tone}` : \"\",\n    className,\n  ]\n    .filter(Boolean)\n    .join(\" \");\n\n  return (\n    <div role=\"note\" className={classes} {...props}>\n      {icon && <div style={{ flexShrink: 0, marginTop: \"2px\" }}>{icon}</div>}\n      <div style={{ flex: 1 }}>\n        {title && <h4 className=\"qhr-callout-title\">{title}</h4>}\n        <div className=\"qhr-callout-body\">{children}</div>\n      </div>\n    </div>\n  );\n};\n\nexport default Callout;\n",
+    "demoCode": "import Callout from \"@/components/ui/callout\";\nimport { Info, CheckCircle2, AlertTriangle, XCircle } from \"lucide-react\";\n\nexport default function CalloutDemo() {\n  return (\n    <div className=\"flex w-full max-w-xl flex-col gap-4 p-6\">\n      <Callout tone=\"info\" title=\"Technical compatibility note\" icon={<Info />}>\n        All components are built to standard web conventions and run in any\n        modern browser without extra dependencies.\n      </Callout>\n\n      <Callout tone=\"success\" title=\"Performance tip\" icon={<CheckCircle2 />}>\n        Use the production CSS bundle to cut network requests — the minified\n        file is only a few kilobytes.\n      </Callout>\n\n      <Callout\n        tone=\"warning\"\n        title=\"Naming convention warning\"\n        icon={<AlertTriangle />}\n      >\n        Stick to the <code>.qhr-*</code> class prefix to avoid collisions with\n        other styling libraries like Bootstrap or Tailwind.\n      </Callout>\n\n      <Callout tone=\"danger\" title=\"Breaking change\" icon={<XCircle />}>\n        Removing the <code>tone</code> prop falls back to the neutral style —\n        double check call sites after upgrading.\n      </Callout>\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": "user_registry_alwkala_1790355067858"
+  }
+}

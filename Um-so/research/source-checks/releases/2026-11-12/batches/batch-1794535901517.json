@@ -1,0 +1,92 @@
+[
+  {
+    "route": "/@kemiljk/components/switch",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45076,
+      "name": "Switch",
+      "description": "A toggle control for switching a setting on or off, built on a real button with the WAI-ARIA switch pattern for native keyboard and focus support.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_kemiljk_1793377556551/switch/default/preview.1794330825393.webp",
+      "videoUrl": "https://cdn.21st.dev/user_registry_kemiljk_1793377556551/switch/default/video.1794330530691.mp4",
+      "author": "kemiljk",
+      "authorImage": "https://avatars.githubusercontent.com/u/26257029?v=4",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/kemiljk/switch?api_key=REDACTED\"",
+      "url": "https://21st.dev/@kemiljk/components/switch"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@klyv-ui/components/klyv-falling-sand",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44205,
+      "name": "Falling Sand",
+      "description": "An interactive falling-sand cellular automaton where sand, water, oil, wood, stone, fire, smoke and steam fall, pile and react on a canvas grid that a user can paint, pour or drop material into.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_klyv-ui_1791308669867/klyv-falling-sand/404-not-found-state/preview.1794424107790.png",
+      "videoUrl": "https://cdn.21st.dev/user_registry_klyv-ui_1791308669867/klyv-falling-sand/404-not-found-state/video.1794424091527.mp4",
+      "author": "klyv-ui",
+      "authorImage": "https://avatars.githubusercontent.com/u/330078567?v=4",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/klyv-ui/klyv-falling-sand?api_key=REDACTED\"",
+      "url": "https://21st.dev/@klyv-ui/components/klyv-falling-sand"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@klyv-ui/components/log-viewer",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44118,
+      "name": "Log Viewer",
+      "description": "A searchable, scrollable log tail panel with level filters, line-wrap toggle, and an auto-follow mode that pauses when you scroll up and offers a jump-to-latest button.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_klyv-ui_1791308669867/log-viewer/default/preview.1794413661730.png",
+      "videoUrl": "https://cdn.21st.dev/user_registry_klyv-ui_1791308669867/log-viewer/default/video.1794413686014.mp4",
+      "author": "klyv-ui",
+      "authorImage": "https://avatars.githubusercontent.com/u/330078567?v=4",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/klyv-ui/log-viewer?api_key=REDACTED\"",
+      "url": "https://21st.dev/@klyv-ui/components/log-viewer"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@klyv-ui/components/profile-card",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 43824,
+      "name": "Profile Card",
+      "description": "A card that summarises a person — avatar, name, role, bio, stats and links — with a compact single-row variant for member lists and directories.",
+      "previewUrl": "https://cdn.21st.dev/klyv-ui/profile-card/default/preview.1793441173763-d46813a9-f16e-4760-a5f5-10adcabb65f1.png",
+      "videoUrl": null,
+      "author": "klyv-ui",
+      "authorImage": "https://avatars.githubusercontent.com/u/330078567?v=4",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/klyv-ui/profile-card?api_key=REDACTED\"",
+      "url": "https://21st.dev/@klyv-ui/components/profile-card"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@larsen66/components/astryx-chat-message-list",
+    "type": "component",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@larsen66/components/glimm-easing",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45159,
+      "name": "Glimm Easing",
+      "description": "The original Glimm easing explorer with its live curve graph and real WebGL sweep preview.",
+      "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/glimm-easing/default/preview.1794413920137.png",
+      "videoUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/glimm-easing/default/video.1794413859532.mp4",
+      "author": "larsen66",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/larsen66/glimm-easing?api_key=REDACTED\"",
+      "url": "https://21st.dev/@larsen66/components/glimm-easing"
+    },
+    "status": "retained_unvalidated"
+  }
+]

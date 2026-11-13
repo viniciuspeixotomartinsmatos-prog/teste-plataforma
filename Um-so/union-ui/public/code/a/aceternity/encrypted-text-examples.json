@@ -1,0 +1,16 @@
+{
+  "name": "encrypted-text-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/encrypted-text-demo-2.tsx",
+      "type": "registry:example",
+      "content": "import { EncryptedText } from \"@/components/ui/encrypted-text\";\nimport React from \"react\";\n\nexport function EncryptedTextDemoSecond() {\n  return (\n    <p className=\"mx-auto max-w-lg py-10 text-left\">\n      <EncryptedText\n        text=\"Welcome to the Matrix, Neo.\"\n        encryptedClassName=\"text-neutral-500\"\n        revealedClassName=\"dark:text-white text-black\"\n        revealDelayMs={50}\n      />\n    </p>\n  );\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/encrypted-text-demo.tsx",
+      "type": "registry:example",
+      "content": "import { EncryptedText } from \"@/components/ui/encrypted-text\";\nimport React from \"react\";\n\nexport function EncryptedTextDemo() {\n  return (\n    <div className=\"mx-auto flex max-w-lg items-center justify-center\">\n      <p className=\"text-left\">\n        You are not your job, you&apos;re not how much money you have in the\n        bank. You are not the car you drive. You&apos;re not the contents of\n        your wallet. You are not your fucking khakis.{\" \"}\n        <EncryptedText text=\"All singing, all dancing crap of the world.\" />\n      </p>\n    </div>\n  );\n}\n"
+    }
+  ]
+}

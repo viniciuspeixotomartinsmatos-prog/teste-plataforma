@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 44811,
+    "name": "Tensor Core Gpu",
+    "description": "Triple-fan isometric Tensor-Core GPU hardware component",
+    "previewUrl": "https://cdn.21st.dev/user_332oxzW8MyPod4IDIdKq9rbPYuk/tensor-core-gpu/default/preview.1794245479813.webp",
+    "videoUrl": "https://cdn.21st.dev/user_332oxzW8MyPod4IDIdKq9rbPYuk/tensor-core-gpu/default/video.1794245474957.mp4",
+    "author": "daiwiikharihar",
+    "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_332oxzW8MyPod4IDIdKq9rbPYuk/avatar.jpeg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/daiwiikharihar/tensor-core-gpu?api_key=REDACTED\"",
+    "url": "https://21st.dev/@daiwiikharihar/components/tensor-core-gpu"
+  },
+  "requestedRoute": "/@daiwiikharihar/components/tensor-core-gpu",
+  "checkedAt": "2026-11-12T21:14:50.406Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 44811,
+    "componentId": 25879,
+    "authorUserId": "user_332oxzW8MyPod4IDIdKq9rbPYuk",
+    "name": "Tensor Core Gpu",
+    "demoName": "Default",
+    "description": "Triple-fan isometric Tensor-Core GPU hardware component",
+    "previewUrl": "https://cdn.21st.dev/user_332oxzW8MyPod4IDIdKq9rbPYuk/tensor-core-gpu/default/preview.1794245479813.webp",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/daiwiikharihar/tensor-core-gpu?api_key=REDACTED\"",
+    "componentCode": "\"use client\";\n\nimport { useEffect, useRef, useState, type CSSProperties } from \"react\";\nimport { Box, Plate, type Box3 } from \"react-isokit\";\nimport \"react-isokit/styles.css\";\nimport \"react-isokit/themes.css\";\n\nconst COS = Math.cos(Math.PI / 6);\nconst SIN = Math.sin(Math.PI / 6);\n\nfunction shift(box: Box3, dx = 0, dy = 0, dz = 0): Box3 {\n  return { ...box, x: box.x + dx, y: box.y + dy, z: box.z + dz };\n}\n\nfunction Vents({\n  x,\n  y,\n  count,\n  gap,\n  length,\n}: {\n  x: number;\n  y: number;\n  count: number;\n  gap: number;\n  length: number;\n}) {\n  return (\n    <g>\n      {Array.from({ length: count }, (_, i) => (\n        <path\n          key={i}\n          className=\"ik-detail\"\n          d={`M ${x} ${y + i * gap} h ${length}`}\n        />\n      ))}\n    </g>\n  );\n}\n\nfunction LiveMark({ x, y, w }: { x: number; y: number; w: number }) {\n  return <path className=\"ik-live\" d={`M ${x} ${y} h ${w}`} />;\n}\n\nfunction Rotor({\n  cx,\n  cy,\n  r,\n}: {\n  cx: number;\n  cy: number;\n  r: number;\n}) {\n  return (\n    <g\n      className=\"ik-hw-rotor\"\n      style={{ transformOrigin: `${cx}px ${cy}px` }}\n    >\n      <circle className=\"ik-well\" cx={cx} cy={cy} r={r} />\n      <path\n        className=\"ik-detail\"\n        d={`M ${cx} ${cy - r + 2} V ${cy + r - 2} M ${cx - r + 2} ${cy} H ${cx + r - 2}`}\n      />\n      <circle className=\"ik-fill\" cx={cx} cy={cy} r={Math.max(2, r * 0.22)} />\n    </g>\n  );\n}\n\nfunction plateProps(fig: string, name: string, hint: string) {\n  return { fig, name, hint, aspect: 1.25, pad: 0.11 } as const;\n}\n\nconst PCB: Box3 = { x: 4, y: 22, z: 0, w: 158, d: 70, h: 6 };\nconst FINGERS: Box3 = { x: 10, y: 92, z: 1, w: 146, d: 12, h: 3 };\nconst BRACKET: Box3 = { x: 0, y: 16, z: 0, w: 8, d: 92, h: 42 };\nconst SHROUD: Box3 = { x: 16, y: 30, z: 20, w: 136, d: 50, h: 10 };\nconst LIFT = 8;\n\nfunction fin(i: number): Box3 {\n  return { x: 22 + i * 20, y: 34, z: 6, w: 12, d: 42, h: 14 };\n}\n\nexport default function TensorCoreGpu() {\n  return (\n    <>\n      <Plate\n        label=\"Triple-fan flagship GPU\"\n        fit={[\n          PCB,\n          FINGERS,\n          BRACKET,\n          ...[0, 1, 2, 3, 4, 5].map(fin),\n          SHROUD,\n          shift(SHROUD, 0, 0, LIFT),\n        ]}\n        data-run={\"off\"}\n        {...plateProps(\"\", \"Tensor GPU\", \"\")}\n      >\n        <Box\n          {...PCB}\n          r={3}\n          top={<Vents x={12} y={8} count={4} gap={14} length={130} />}\n        />\n        <Box\n          {...FINGERS}\n          r={1}\n          top={\n            <g>\n              {Array.from({ length: 14 }, (_, i) => (\n                <rect\n                  key={i}\n                  className=\"ik-fill\"\n                  x={6 + i * 10}\n                  y={2}\n                  width={4}\n                  height={8}\n                />\n              ))}\n            </g>\n          }\n        />\n        <Box\n          {...BRACKET}\n          r={2}\n          front={\n            <path className=\"ik-detail\" d=\"M 1 8 h 6 M 1 16 h 6 M 1 24 h 6\" />\n          }\n        />\n        {[0, 1, 2, 3, 4, 5].map((i) => (\n          <Box key={i} {...fin(i)} r={1} />\n        ))}\n        <g>\n          <Box\n            {...SHROUD}\n            r={4}\n            top={\n              <g>\n                <Rotor cx={28} cy={25} r={14} />\n                <Rotor cx={68} cy={25} r={14} />\n                <Rotor cx={108} cy={25} r={14} />\n                <LiveMark x={18} y={6} w={100} />\n              </g>\n            }\n            front={<path className=\"ik-detail\" d=\"M 12 5 h 112\" />}\n          />\n        </g>\n      </Plate>\n    </>\n  );\n}",
+    "demoCode": "import PublishedComponent from \"@/components/ui/tensor-core-gpu\"\n\nexport default function Demo() {\n  return <PublishedComponent />\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": "user_332oxzW8MyPod4IDIdKq9rbPYuk"
+  }
+}

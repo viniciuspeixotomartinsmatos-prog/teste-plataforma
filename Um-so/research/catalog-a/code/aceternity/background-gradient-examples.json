@@ -1,0 +1,11 @@
+{
+  "name": "background-gradient-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/background-gradient-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport React from \"react\";\nimport { BackgroundGradient } from \"../ui/background-gradient\";\nimport { IconAppWindow } from \"@tabler/icons-react\";\n\n\nexport function BackgroundGradientDemo() {\n  return (\n    <div>\n      <BackgroundGradient className=\"rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900\">\n        <img\n          src={`/jordans.webp`}\n          alt=\"jordans\"\n          height=\"400\"\n          width=\"400\"\n          className=\"object-contain\"\n        />\n        <p className=\"text-base sm:text-xl text-black mt-4 mb-2 dark:text-neutral-200\">\n          Air Jordan 4 Retro Reimagined\n        </p>\n\n        <p className=\"text-sm text-neutral-600 dark:text-neutral-400\">\n          The Air Jordan 4 Retro Reimagined Bred will release on Saturday,\n          February 17, 2024. Your best opportunity to get these right now is by\n          entering raffles and waiting for the official releases.\n        </p>\n        <button className=\"rounded-full pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800\">\n          <span>Buy now </span>\n          <span className=\"bg-zinc-700 rounded-full text-[0.6rem] px-2 py-0 text-white\">\n            $100\n          </span>\n        </button>\n      </BackgroundGradient>\n    </div>\n  );\n}\n"
+    }
+  ]
+}

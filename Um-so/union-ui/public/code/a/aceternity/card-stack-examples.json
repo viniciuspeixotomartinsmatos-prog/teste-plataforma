@@ -1,0 +1,11 @@
+{
+  "name": "card-stack-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/card-stack-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport { CardStack } from \"../ui/card-stack\";\nimport { cn } from \"@/lib/utils\";\nexport function CardStackDemo() {\n  return (\n    <div className=\"h-[40rem] flex items-center justify-center w-full\">\n      <CardStack items={CARDS} />\n    </div>\n  );\n}\n\n// Small utility to highlight the content of specific section of a testimonial content\nexport const Highlight = ({\n  children,\n  className,\n}: {\n  children: React.ReactNode;\n  className?: string;\n}) => {\n  return (\n    <span\n      className={cn(\n        \"font-bold bg-emerald-100 text-emerald-700 dark:bg-emerald-700/[0.2] dark:text-emerald-500 px-1 py-0.5\",\n        className\n      )}\n    >\n      {children}\n    </span>\n  );\n};\n\nconst CARDS = [\n  {\n    id: 0,\n    name: \"Manu Arora\",\n    designation: \"Senior Software Engineer\",\n    content: (\n      <p>\n        These cards are amazing, <Highlight>I want to use them</Highlight> in my\n        project. Framer motion is a godsend ngl tbh fam 🙏\n      </p>\n    ),\n  },\n  {\n    id: 1,\n    name: \"Elon Musk\",\n    designation: \"Senior Shitposter\",\n    content: (\n      <p>\n        I dont like this Twitter thing,{\" \"}\n        <Highlight>deleting it right away</Highlight> because yolo. Instead, I\n        would like to call it <Highlight>X.com</Highlight> so that it can easily\n        be confused with adult sites.\n      </p>\n    ),\n  },\n  {\n    id: 2,\n    name: \"Tyler Durden\",\n    designation: \"Manager Project Mayhem\",\n    content: (\n      <p>\n        The first rule of\n        <Highlight>Fight Club</Highlight> is that you do not talk about fight\n        club. The second rule of\n        <Highlight>Fight club</Highlight> is that you DO NOT TALK about fight\n        club.\n      </p>\n    ),\n  },\n];\n"
+    }
+  ]
+}

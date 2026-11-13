@@ -1,0 +1,104 @@
+[
+  {
+    "route": "/@wensity/components/marker",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 27580,
+      "name": "Marker",
+      "description": "A small status marker component for showing live state, order position, icons, or contextual status labels with dot, pulse, numbered, icon and status variants.",
+      "previewUrl": "https://cdn.21st.dev/wensity/marker/default/preview.1789781877344-efe5eaf7-830c-49fc-bc7c-906f6b10ee6c.png",
+      "videoUrl": "https://cdn.21st.dev/wensity/marker/default/video.1789781877344-efe5eaf7-830c-49fc-bc7c-906f6b10ee6c.mp4",
+      "author": "wensity",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/wensity/marker?api_key=REDACTED\"",
+      "url": "https://21st.dev/@wensity/components/marker"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@wensity/components/spinner",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 27632,
+      "name": "Spinner",
+      "description": "A loading spinner primitive with multiple animation styles (spin, ring, dots, pulse), size and color-tone options, plus an overlay variant for blocking a panel while content loads.",
+      "previewUrl": "https://cdn.21st.dev/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/spinner/default/preview.1794258546729.webp",
+      "videoUrl": "https://cdn.21st.dev/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/spinner/default/video.1794258550654.mp4",
+      "author": "wensity",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/wensity/spinner?api_key=REDACTED\"",
+      "url": "https://21st.dev/@wensity/components/spinner"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@wensity/components/text-chroma-reveal",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 31331,
+      "name": "Text Chroma Reveal",
+      "description": "A headline reveal that paints text into view with a sweeping chromatic gradient ribbon. Loop through several phrases or reveal once, with reduced motion support.",
+      "previewUrl": "https://cdn.21st.dev/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/text-chroma-reveal/default/preview.1794340397478.png",
+      "videoUrl": "https://cdn.21st.dev/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/text-chroma-reveal/default/video.1794339942715.mp4",
+      "author": "wensity",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/wensity/text-chroma-reveal?api_key=REDACTED\"",
+      "url": "https://21st.dev/@wensity/components/text-chroma-reveal"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@wensity/components/text-flip",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 27536,
+      "name": "Text Flip",
+      "description": "A 3D flip-text headline effect that rotates each character to reveal a back face on hover, click, or an imperative trigger, with staggered timing and reduced-motion support.",
+      "previewUrl": "https://cdn.21st.dev/wensity/text-flip/default/preview.1789776472011-dee7bbdd-73c0-4da7-906c-2266a1fb8f3b.png",
+      "videoUrl": "https://cdn.21st.dev/wensity/text-flip/default/video.1789776472011-dee7bbdd-73c0-4da7-906c-2266a1fb8f3b.mp4",
+      "author": "wensity",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/wensity/text-flip?api_key=REDACTED\"",
+      "url": "https://21st.dev/@wensity/components/text-flip"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@wensity/components/text-glitch",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 31332,
+      "name": "Text Glitch",
+      "description": "A CSS only glitch text effect with RGB channel split and clip path slices. GPU friendly and reduced motion safe, ideal for gaming, tech and cyberpunk headlines.",
+      "previewUrl": "https://cdn.21st.dev/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/text-glitch/default/preview.1794340465774.webp",
+      "videoUrl": "https://cdn.21st.dev/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/text-glitch/default/video.1794340452735.mp4",
+      "author": "wensity",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/wensity/text-glitch?api_key=REDACTED\"",
+      "url": "https://21st.dev/@wensity/components/text-glitch"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@wensity/components/text-scribble",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 30464,
+      "name": "Text Scribble",
+      "description": "A React text wrapper that draws a hand-drawn scribble, underline, or strike-through mark over inline text when it enters the viewport, on hover, or on mount.",
+      "previewUrl": "https://cdn.21st.dev/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/text-scribble/default/preview.1794258195096.png",
+      "videoUrl": null,
+      "author": "wensity",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/wensity/text-scribble?api_key=REDACTED\"",
+      "url": "https://21st.dev/@wensity/components/text-scribble"
+    },
+    "status": "retained_unvalidated"
+  }
+]

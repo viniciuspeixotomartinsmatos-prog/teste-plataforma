@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 43820,
+    "name": "Dot Matrix",
+    "description": "A decorative radial-gradient dot grid background with an optional radial fade mask, used behind hero sections and cards.",
+    "previewUrl": "https://cdn.21st.dev/bagherifarzad/dot-matrix/default/preview.1793441153736-14053614-09ce-428e-bdfa-781c5832f8ff.png",
+    "videoUrl": null,
+    "author": "bagherifarzad",
+    "authorImage": "https://avatars.githubusercontent.com/u/56923236?v=4",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/bagherifarzad/dot-matrix?api_key=REDACTED\"",
+    "url": "https://21st.dev/@bagherifarzad/components/dot-matrix"
+  },
+  "requestedRoute": "/@bagherifarzad/components/dot-matrix",
+  "checkedAt": "2026-11-12T21:14:04.443Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 43820,
+    "componentId": 25248,
+    "authorUserId": "user_registry_bagherifarzad_1791205672729",
+    "name": "Dot Matrix",
+    "demoName": "Default",
+    "description": "A decorative radial-gradient dot grid background with an optional radial fade mask, used behind hero sections and cards.",
+    "previewUrl": "https://cdn.21st.dev/bagherifarzad/dot-matrix/default/preview.1793441153736-14053614-09ce-428e-bdfa-781c5832f8ff.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/bagherifarzad/dot-matrix?api_key=REDACTED\"",
+    "componentCode": "import \"./dot-matrix-utils/DotMatrix.css\";\n\nexport interface DotMatrixProps {\n  color?: string;\n  background?: string;\n  dotSize?: number;\n  gap?: number;\n  opacity?: number;\n  fade?: boolean;\n  className?: string;\n}\n\nexport function DotMatrix({\n  color = \"#9b7cff\",\n  background = \"#0d0d11\",\n  dotSize = 2,\n  gap = 20,\n  opacity = 0.8,\n  fade = true,\n  className = \"\",\n}: DotMatrixProps) {\n  return (\n    <div\n      className={`fb-dot-matrix ${\n        fade ? \"fb-dot-matrix--fade\" : \"\"\n      } ${className}`}\n      style={{\n        backgroundColor: background,\n\n        opacity,\n\n        backgroundImage: `radial-gradient(\n            circle,\n            ${color} ${dotSize}px,\n            transparent ${dotSize + 0.8}px\n          )`,\n\n        backgroundSize: `${gap}px ${gap}px`,\n      }}\n    />\n  );\n}\n\nexport default DotMatrix;\n",
+    "demoCode": "import { DotMatrix } from \"@/components/ui/dot-matrix\";\n\nexport default function DotMatrixDemo() {\n  return (\n    <div className=\"relative w-full h-screen bg-background\">\n      <DotMatrix className=\"absolute inset-0\" />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": "user_registry_bagherifarzad_1791205672729"
+  }
+}

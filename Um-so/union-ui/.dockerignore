@@ -1,0 +1,10 @@
+node_modules
+dist
+var
+.env*
+research
+tests
+.preview-cache
+.preview-sources
+*.log
+.git

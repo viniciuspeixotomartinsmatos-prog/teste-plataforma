@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 44978,
+    "name": "Chip Filter",
+    "description": "A row of pill-shaped filter chips that behaves like a single-select radio group, with an accent ring on the active chip, for quick filters above lists and tables.",
+    "previewUrl": "https://cdn.21st.dev/user_registry_amankaushik481_1793404304119/chip-filter/default/preview.1794335169811.png",
+    "videoUrl": "https://cdn.21st.dev/user_registry_amankaushik481_1793404304119/chip-filter/default/video.1794335092980.mp4",
+    "author": "amankaushik481",
+    "authorImage": "https://github.com/amankaushik481.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/amankaushik481/chip-filter?api_key=REDACTED\"",
+    "url": "https://21st.dev/@amankaushik481/components/chip-filter"
+  },
+  "requestedRoute": "/@amankaushik481/components/chip-filter",
+  "checkedAt": "2026-11-12T21:13:58.086Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 44978,
+    "componentId": 25997,
+    "authorUserId": "user_registry_amankaushik481_1793404304119",
+    "name": "Chip Filter",
+    "demoName": "Default",
+    "description": "A row of pill-shaped filter chips that behaves like a single-select radio group, with an accent ring on the active chip, for quick filters above lists and tables.",
+    "previewUrl": "https://cdn.21st.dev/user_registry_amankaushik481_1793404304119/chip-filter/default/preview.1794335169811.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/amankaushik481/chip-filter?api_key=REDACTED\"",
+    "componentCode": "\"use client\";\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype ChipOption = { value: string; label: string };\n\n/** A row of pill-shaped radio chips for picking one filter, uncontrolled unless a value is passed. */\ntype ChipFilterProps = {\n  options?: ChipOption[];\n  /** Controlled selection. Leave undefined for an uncontrolled filter. */\n  value?: string;\n  /** Initial selection for the uncontrolled filter. */\n  defaultValue?: string;\n  onChange?: (value: string) => void;\n  className?: string;\n};\n\nconst SAMPLE_OPTIONS: ChipOption[] = [\n  { value: \"all\", label: \"All\" },\n  { value: \"paid\", label: \"Paid\" },\n  { value: \"pending\", label: \"Pending\" },\n  { value: \"overdue\", label: \"Overdue\" },\n  { value: \"draft\", label: \"Draft\" },\n];\n\nfunction ChipFilter({\n  options = SAMPLE_OPTIONS,\n  value,\n  defaultValue = \"all\",\n  onChange,\n  className,\n}: ChipFilterProps) {\n  const [inner, setInner] = React.useState(defaultValue);\n  const current = value ?? inner;\n  return (\n    <div\n      data-slot=\"chip-filter\"\n      role=\"radiogroup\"\n      className={cn(\"flex flex-wrap gap-1.5\", className)}\n    >\n      {options.map((o) => {\n        const on = o.value === current;\n        return (\n          <button\n            key={o.value}\n            type=\"button\"\n            role=\"radio\"\n            aria-checked={on}\n            className={cn(\n              \"h-7 rounded-full border px-3 text-xs font-medium text-fg outline-none focus-visible:ring-2 focus-visible:ring-accent\",\n              on\n                ? \"border-accent bg-surface shadow-[inset_0_0_0_1px_var(--accent)]\"\n                : \"border-border bg-surface hover:border-fg-subtle\",\n            )}\n            onClick={() => {\n              if (value === undefined) setInner(o.value);\n              onChange?.(o.value);\n            }}\n          >\n            {o.label}\n          </button>\n        );\n      })}\n    </div>\n  );\n}\nexport { ChipFilter };\nexport type { ChipFilterProps, ChipOption };\n\nexport default ChipFilter;\n",
+    "demoCode": "import * as React from \"react\";\nimport { ChipFilter } from \"@/components/ui/chip-filter\";\n\nexport default function ChipFilterDemo() {\n  const [status, setStatus] = React.useState(\"all\");\n\n  return (\n    <div className=\"flex w-full items-center justify-center p-10\">\n      <ChipFilter\n        value={status}\n        onChange={setStatus}\n        options={[\n          { value: \"all\", label: \"All\" },\n          { value: \"paid\", label: \"Paid\" },\n          { value: \"pending\", label: \"Pending\" },\n          { value: \"overdue\", label: \"Overdue\" },\n          { value: \"draft\", label: \"Draft\" },\n        ]}\n      />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": "user_registry_amankaushik481_1793404304119"
+  }
+}

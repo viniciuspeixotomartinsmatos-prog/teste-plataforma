@@ -1,0 +1,87 @@
+[
+  {
+    "route": "/@wensity/components/text-spectrum",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 30492,
+      "name": "Text Spectrum",
+      "description": "Animated multi-color gradient text fill for headlines that drifts across the glyphs using a CSS-only background-position loop, with reduced-motion and off-screen auto-pause support.",
+      "previewUrl": "https://cdn.21st.dev/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/text-spectrum/default/preview.1794257996385.webp",
+      "videoUrl": "https://cdn.21st.dev/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/text-spectrum/default/video.1794257911065.mp4",
+      "author": "wensity",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/wensity/text-spectrum?api_key=REDACTED\"",
+      "url": "https://21st.dev/@wensity/components/text-spectrum"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@wensity/components/text-word-flip",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 30468,
+      "name": "Text Word Flip",
+      "description": "An animated inline text element that cycles through a list of words with a spring flip and letter-blur stagger effect, useful for rotating headlines or hero copy.",
+      "previewUrl": "https://cdn.21st.dev/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/text-word-flip/default/preview.1794258038851.webp",
+      "videoUrl": "https://cdn.21st.dev/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/text-word-flip/default/video.1794258032425.mp4",
+      "author": "wensity",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/wensity/text-word-flip?api_key=REDACTED\"",
+      "url": "https://21st.dev/@wensity/components/text-word-flip"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@wensity/components/underline-animation",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44319,
+      "name": "Underline Animation",
+      "description": "An animated CSS hover underline for links with multiple motion styles (slide, center, fill, wavy, gradient) that supports active/current-page state and respects reduced motion.",
+      "previewUrl": "https://cdn.21st.dev/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/underline-animation/default/preview.1793712269903.webp",
+      "videoUrl": "https://cdn.21st.dev/wensity/underline-animation/default/video.1793712273549.mp4",
+      "author": "wensity",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/wensity/underline-animation?api_key=REDACTED\"",
+      "url": "https://21st.dev/@wensity/components/underline-animation"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@wensity/components/voice-aurora-wave",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 31199,
+      "name": "Voice Aurora Wave",
+      "description": "Voice reactive orb for React AI voice agents. It swells with microphone input or a controlled audio level and settles between turns.",
+      "previewUrl": "https://cdn.21st.dev/wensity/voice-aurora-wave/default/preview.1790278681312-ed0604df-1902-4dfa-93d3-50bbc970a933.png",
+      "videoUrl": "https://cdn.21st.dev/wensity/voice-aurora-wave/default/video.1790278681312-ed0604df-1902-4dfa-93d3-50bbc970a933.mp4",
+      "author": "wensity",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/wensity/voice-aurora-wave?api_key=REDACTED\"",
+      "url": "https://21st.dev/@wensity/components/voice-aurora-wave"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@wrapcoders/components/metric-switcher-trend-chart-demo",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 43131,
+      "name": "Metric Trend Chart",
+      "description": "Switchable multi-metric trend chart with previous-period comparison, event annotations, keyboard-accessible readout and CSV export.\n",
+      "previewUrl": "https://cdn.21st.dev/wrapcoders/metric-switcher-trend-chart-demo/default/preview.1794118704528-e72f2b2a-b693-48cf-8aac-6e91a2371a59.png",
+      "videoUrl": "https://cdn.21st.dev/user_3Jr3Pok902qWg5RW7NgQa9OdjOg/metric-switcher-trend-chart-demo/default/video.1794120775876.mp4",
+      "author": "wrapcoders",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3Jr3Pok902qWg5RW7NgQa9OdjOg/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/wrapcoders/metric-switcher-trend-chart-demo?api_key=REDACTED\"",
+      "url": "https://21st.dev/@wrapcoders/components/metric-switcher-trend-chart-demo"
+    },
+    "status": "retained_unvalidated"
+  }
+]

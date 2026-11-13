@@ -1,0 +1,16 @@
+{
+  "route": "/@webscale-pl/templates/forma-construction-and-renovation-template",
+  "type": "template",
+  "status": "template_metadata_only",
+  "metadata": {
+    "type": "template",
+    "id": 1366,
+    "name": "Forma, Construction and Renovation Template",
+    "description": "Astro website template for local construction and renovation companies. One page with hero, services, example projects, process, testimonials, service area, FAQ and a contact form, in English and Polish. Built with Tailwind CSS, self-hosted fonts and optimized images. Free to use.",
+    "previewUrl": "https://cdn.21st.dev/user_3Hfvy2MQYCR4ckq8F6k4EpOP2XX/templates/forma-construction-and-renovation-template/preview-1794247733828.png",
+    "author": "webscale-pl",
+    "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3Hfvy2MQYCR4ckq8F6k4EpOP2XX/avatar.png",
+    "url": "https://21st.dev/community/templates/forma-construction-and-renovation-template",
+    "price": 0
+  }
+}

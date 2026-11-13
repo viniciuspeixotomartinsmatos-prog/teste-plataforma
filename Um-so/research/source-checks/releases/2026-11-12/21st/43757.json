@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 43757,
+    "name": "Console Panel",
+    "description": "An interactive terminal-style console panel that displays colored log lines (input, output, error, success) with autoscroll and a command prompt input.",
+    "previewUrl": "https://cdn.21st.dev/user_registry_f0rextasy_1791204275988/console-panel/default/preview.1794426488719.webp",
+    "videoUrl": "https://cdn.21st.dev/user_registry_f0rextasy_1791204275988/console-panel/default/video.1794426479781.mp4",
+    "author": "f0rextasy",
+    "authorImage": "https://avatars.githubusercontent.com/u/99847357?v=4",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/f0rextasy/console-panel?api_key=REDACTED\"",
+    "url": "https://21st.dev/@f0rextasy/components/console-panel"
+  },
+  "requestedRoute": "/@f0rextasy/components/console-panel",
+  "checkedAt": "2026-11-13T01:50:08.655Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 43757,
+    "componentId": 25215,
+    "authorUserId": "user_registry_f0rextasy_1791204275988",
+    "name": "Console Panel",
+    "demoName": "Default",
+    "description": "An interactive terminal-style console panel that displays colored log lines (input, output, error, success) with autoscroll and a command prompt input.",
+    "previewUrl": "https://cdn.21st.dev/user_registry_f0rextasy_1791204275988/console-panel/default/preview.1794426488719.webp",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/f0rextasy/console-panel?api_key=REDACTED\"",
+    "componentCode": "\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"./console-panel-utils/utils\";\n\nexport interface ConsoleLine {\n  id: string;\n  text: string;\n  tone?: \"input\" | \"output\" | \"error\" | \"accent\";\n}\n\nexport interface ConsolePanelProps extends Omit<\n  React.HTMLAttributes<HTMLDivElement>,\n  \"onSubmit\"\n> {\n  lines: ConsoleLine[];\n  prompt?: string;\n  onSubmit?: (command: string) => void;\n}\n\n/** Interactive console panel: terminal logs + command prompt. */\nexport function ConsolePanel({\n  lines,\n  prompt = \">\",\n  onSubmit,\n  className,\n  ...props\n}: ConsolePanelProps) {\n  const [input, setInput] = React.useState(\"\");\n  const scrollRef = React.useRef<HTMLDivElement>(null);\n  const inputRef = React.useRef<HTMLInputElement>(null);\n\n  React.useEffect(() => {\n    scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight });\n  }, [lines.length]);\n\n  const toneClass = {\n    input: \"text-accent\",\n    output: \"text-foreground/90\",\n    error: \"text-destructive\",\n    accent: \"text-success\",\n  };\n\n  return (\n    <div\n      className={cn(\n        \"w-full overflow-hidden rounded-lg border border-border bg-card font-mono text-xs\",\n        className,\n      )}\n      onClick={() => inputRef.current?.focus()}\n      {...props}\n    >\n      <style>{`@keyframes cpIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }`}</style>\n      <div className=\"flex items-center justify-between border-b border-border/40 bg-secondary/40 px-3 py-1.5\">\n        <span className=\"font-mono text-[10px] uppercase tracking-wider text-muted-foreground\">\n          console\n        </span>\n        <span className=\"flex gap-1\" aria-hidden=\"true\">\n          <span className=\"size-1.5 rounded-full bg-destructive/70\" />\n          <span className=\"size-1.5 rounded-full bg-warning/70\" />\n          <span className=\"size-1.5 rounded-full bg-success/70\" />\n        </span>\n      </div>\n      <div ref={scrollRef} className=\"max-h-56 overflow-y-auto p-3\">\n        {lines.map((line, idx) => (\n          <div\n            key={line.id}\n            className={cn(\n              \"leading-5 animate-[cpIn_0.2s_ease-out_both] motion-reduce:animate-none\",\n              toneClass[line.tone ?? \"output\"],\n            )}\n            style={{ animationDelay: `${Math.min(idx, 20) * 25}ms` }}\n          >\n            {line.tone === \"input\" && (\n              <span className=\"me-1 text-muted-foreground\">{prompt}</span>\n            )}\n            {line.text}\n          </div>\n        ))}\n      </div>\n      <div className=\"flex items-center gap-1.5 border-t border-border/40 px-3 py-2\">\n        <span className=\"text-accent\" aria-hidden=\"true\">\n          {prompt}\n        </span>\n        <input\n          ref={inputRef}\n          value={input}\n          onChange={(e) => setInput(e.target.value)}\n          onKeyDown={(e) => {\n            if (e.key === \"Enter\" && input.trim()) {\n              onSubmit?.(input.trim());\n              setInput(\"\");\n            }\n          }}\n          className=\"min-w-0 flex-1 bg-transparent text-foreground focus-visible:outline-none\"\n          aria-label=\"Command prompt input\"\n          spellCheck={false}\n          autoComplete=\"off\"\n        />\n      </div>\n    </div>\n  );\n}\n\nexport default ConsolePanel;\n",
+    "demoCode": "\"use client\";\n\nimport * as React from \"react\";\nimport { ConsolePanel, ConsoleLine } from \"@/components/ui/console-panel\";\n\nexport default function ConsolePanelDemo() {\n  const [lines, setLines] = React.useState<ConsoleLine[]>([\n    { id: \"1\", text: \"stub verify --id 48213\", tone: \"input\" },\n    { id: \"2\", text: \"checking ticket records...\", tone: \"output\" },\n    { id: \"3\", text: \"ticket #48213 confirmed\", tone: \"accent\" },\n    { id: \"4\", text: \"seat 12B · gate 4 · boarding 18:40\", tone: \"output\" },\n    { id: \"5\", text: \"stub expire --id 90110\", tone: \"input\" },\n    { id: \"6\", text: \"error: ticket not found\", tone: \"error\" },\n  ]);\n\n  const handleSubmit = (command: string) => {\n    setLines((prev) => [\n      ...prev,\n      { id: `${prev.length + 1}-in`, text: command, tone: \"input\" },\n      { id: `${prev.length + 1}-out`, text: `ok: ${command}`, tone: \"output\" },\n    ]);\n  };\n\n  return (\n    <div className=\"flex w-full items-center justify-center bg-background p-6 text-foreground\">\n      <ConsolePanel\n        className=\"max-w-md\"\n        lines={lines}\n        onSubmit={handleSubmit}\n      />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": "user_registry_f0rextasy_1791204275988"
+  }
+}

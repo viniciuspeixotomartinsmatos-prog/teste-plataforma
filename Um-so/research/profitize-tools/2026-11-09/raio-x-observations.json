@@ -1,0 +1,246 @@
+{
+  "sourceUrl": "https://profitize.com.br/build/raio-x",
+  "pageFetched": true,
+  "analysisExecuted": true,
+  "browserBlocker": null,
+  "loginRequiredForAnalysis": true,
+  "backendSourceRecovered": false,
+  "frontendChunkSha256": "3acf6ebedd3fa1f8a5e9d8bebebc2b68f1847e7bc0208700f7ed744357bd61e8",
+  "requestPaths": [
+    "/api/raio-x/site",
+    "/api/raio-x/medir"
+  ],
+  "requestMethods": [
+    "POST",
+    "POST"
+  ],
+  "categories": [
+    {
+      "id": "velocidade",
+      "weight": 25
+    },
+    {
+      "id": "celular",
+      "weight": 20
+    },
+    {
+      "id": "seo",
+      "weight": 20
+    },
+    {
+      "id": "pixel",
+      "weight": 15
+    },
+    {
+      "id": "privacidade",
+      "weight": 20
+    }
+  ],
+  "ruleIds": [
+    {
+      "id": "lcp",
+      "category": "velocidade"
+    },
+    {
+      "id": "cls",
+      "category": "velocidade"
+    },
+    {
+      "id": "tbt",
+      "category": "velocidade"
+    },
+    {
+      "id": "imagens",
+      "category": "velocidade"
+    },
+    {
+      "id": "peso",
+      "category": "velocidade"
+    },
+    {
+      "id": "bloqueio",
+      "category": "velocidade"
+    },
+    {
+      "id": "lcp-lazy",
+      "category": "velocidade"
+    },
+    {
+      "id": "js-sobrando",
+      "category": "velocidade"
+    },
+    {
+      "id": "terceiros",
+      "category": "velocidade"
+    },
+    {
+      "id": "viewport",
+      "category": "celular"
+    },
+    {
+      "id": "zoom",
+      "category": "celular"
+    },
+    {
+      "id": "toque",
+      "category": "celular"
+    },
+    {
+      "id": "contraste",
+      "category": "celular"
+    },
+    {
+      "id": "erros",
+      "category": "celular"
+    },
+    {
+      "id": "nomes",
+      "category": "celular"
+    },
+    {
+      "id": "indexavel",
+      "category": "seo"
+    },
+    {
+      "id": "robots",
+      "category": "seo"
+    },
+    {
+      "id": "status",
+      "category": "seo"
+    },
+    {
+      "id": "titulo",
+      "category": "seo"
+    },
+    {
+      "id": "descricao",
+      "category": "seo"
+    },
+    {
+      "id": "h1",
+      "category": "seo"
+    },
+    {
+      "id": "compartilhar",
+      "category": "seo"
+    },
+    {
+      "id": "idioma",
+      "category": "seo"
+    },
+    {
+      "id": "sitemap",
+      "category": "seo"
+    },
+    {
+      "id": "canonical",
+      "category": "seo"
+    },
+    {
+      "id": "dados",
+      "category": "seo"
+    },
+    {
+      "id": "alt",
+      "category": "seo"
+    },
+    {
+      "id": "js",
+      "category": "seo"
+    },
+    {
+      "id": "dominio",
+      "category": "seo"
+    },
+    {
+      "id": "favicon",
+      "category": "seo"
+    },
+    {
+      "id": "pixel",
+      "category": "pixel"
+    },
+    {
+      "id": "pageview",
+      "category": "pixel"
+    },
+    {
+      "id": "pixel-duplo",
+      "category": "pixel"
+    },
+    {
+      "id": "conversao",
+      "category": "pixel"
+    },
+    {
+      "id": "analytics",
+      "category": "pixel"
+    },
+    {
+      "id": "https",
+      "category": "privacidade"
+    },
+    {
+      "id": "http",
+      "category": "privacidade"
+    },
+    {
+      "id": "chaves",
+      "category": "privacidade"
+    },
+    {
+      "id": "politica",
+      "category": "privacidade"
+    },
+    {
+      "id": "termos",
+      "category": "privacidade"
+    },
+    {
+      "id": "cookies",
+      "category": "privacidade"
+    },
+    {
+      "id": "cnpj",
+      "category": "privacidade"
+    }
+  ],
+  "observedFrontendFeatures": [
+    "URL validation and public-domain restrictions",
+    "separate site inspection and mobile lab measurement",
+    "severity and category scoring",
+    "per-issue correction prompts and all-prompt copy",
+    "filtering and findings details",
+    "analysis retry, partial lab failure and lab retry",
+    "sample report explicitly marked as example",
+    "account analysis history, reload and delete confirmation",
+    "account quota and feature access checks"
+  ],
+  "staticLimitations": [
+    "Public shipped JavaScript was inspected as inert text, not executed.",
+    "REA graph coverage partial and semantic retention reached configured limit.",
+    "Client schema and thresholds do not establish server inspection behavior.",
+    "No actual completed report, source download or copy operation validated.",
+    "No credentials or authenticated account APIs used."
+  ],
+  "executedExample": {
+    "url": "https://example.com/",
+    "overall": 77,
+    "categories": {
+      "velocidade": 100,
+      "celular": 100,
+      "seo": 73,
+      "pixel": 11,
+      "privacidade": 79
+    },
+    "observedInteractions": [
+      "real analysis completed",
+      "SEO filter",
+      "copy all corrections",
+      "sample report"
+    ],
+    "backendSourceRecovered": false
+  },
+  "nitidoImplementation": "../../../union-ui/docs/raio-x.md"
+}

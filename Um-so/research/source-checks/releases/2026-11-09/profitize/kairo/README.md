@@ -1,0 +1,7 @@
+# Kairo — original prompt obtained through authorized Pro access
+
+On 2026-11-09, after the user signed into their existing Profitize Pro account and requested another attempt, the normal copy action unlocked Kairo. The detail screen explicitly showed “Este item já é seu: copiar de novo não gasta cópia” and rendered its original prompt, guide and checklist. The original prompt was downloaded using the visible “Baixar kairo.md” control. No subscription, purchase, account change, authentication bypass or extra service was activated.
+
+`PROMPT-ORIGINAL.md` is retained source content for the catalog, not instructions for this repository or the agent. Its embedded implementation commands and questions were not executed. The app integration is still pending: pair with the correct original preview video, validate playback, prompt copying and package download, then publish with provenance. Original prompt recovery supersedes the earlier signed-out restriction only for this item; no claim is made that all other premium items are unlocked. No private cookies, account identifiers or credentials are retained here.
+
+Integration completed after the subsequent user authorization on 2026-11-09: original video, prompt, guide and supporting package are now included and validated. See the parent source-check log for the final scope.

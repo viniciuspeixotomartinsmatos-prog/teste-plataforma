@@ -1,0 +1,88 @@
+# Public source checks
+
+Run `python scripts/check-source-updates.py` from `Um-so/union-ui`. The script also resolves its checkout paths when launched elsewhere. It performs read-only unauthenticated HTTP requests, compares public content routes with the integrated catalog, and writes dated evidence plus `latest.json`. Official registry metadata is compared with retained snapshots for Magic UI, React Bits, Kokonut and Motion Primitives. Tailark's public registry source files are compared using Git blob hashes.
+
+This is discovery evidence, not executable preview verification. Unmatched routes include category pages, setup documentation, aliases and already integrated tools whose routes are stored outside the component catalog. Never import every unmatched route or report the route count as missing components. Registry metadata equality does not establish identical implementation code. Sitemap discovery does not fully cover new applications, icons, video features, paid releases or changes inside an existing component.
+
+## 2026-11-04
+
+The checkout was clean and synchronized with `origin/jorge`, at `789c6ab050b9ad0215e19234686ddccd6b89932e`. All ten sources were contacted. No application catalog entry was published by this check.
+
+- **Profitize:** confirmed three actual new public landing-page records, not just unmatched route names: **Argila**, **Lavri** and **Skeleton**. Their metadata dates are 2026-11-04. Original poster and MP4 URLs returned HTTP 200. Six public media files were retained under `pending/profitize`; metadata and SHA-256 evidence are retained alongside them. Video decoding, playback, reconstructed prompts and portable download verification remain pending. No original account-only prompt was obtained.
+- **Magic UI:** official registry contains one new component, **Dither Field**, and nine examples. These ten public JSON source bundles were retained under `pending/magic`. Executable preview assembly, source dependency resolution, interaction checks, prompts and exports remain pending.
+- **21st:** sitemap exposed 10,176 matching component/theme/template routes. 1,330 routes do not match exact URLs in the current application catalog. This is a triage queue, not 1,330 verified new components. Themes, aliases and older omissions must be distinguished before acquisition. New app/icon/video functionality was observed on the public homepage but was not reconstructed or fully audited here.
+- **Aceternity:** route candidates include interactions, templates, categories and installation documentation. Acquisition/access-tier classification and runtime validation remain pending.
+- **React Bits:** registry metadata remains identical to the retained 1,274-item snapshot. Five unmatched tool URLs are known tool routes; the component-only catalog comparison does not establish that these are missing. Implementation changes and tool versions were not fully compared.
+- **Kokonut:** registry metadata remains identical to the retained 107-item snapshot. Unmatched documentation routes need classification; this is not a verified release count.
+- **shadcnblocks:** all 4,653 currently observed matching public sitemap routes match integrated catalog URLs. Existing implementation updates, private source availability and runtime health were not fully rechecked.
+- **Motion Primitives:** sitemap returned HTTP 404. Official GitHub registry fallback succeeded, with 33 entries and identical retained metadata. The sitemap failure does not imply the library is unavailable.
+- **Tailark:** all 470 public `registry/bases` TSX files match the retained source snapshot after normalizing line endings. Commercial content outside this repository was not audited. The sitemap did not expose matching content routes.
+- **Animate UI:** candidate routes include icon setup documentation and a carousel primitive. Actual new source/runtime differences remain to be checked.
+
+The authorized in-app browser was unavailable: `Browser is not available: iab`. The project instructions restrict verification to the authorized IAB and prohibit substituting unrelated Chrome sessions. Consequently, pending acquisitions were kept outside `public/` and were not advertised as working previews. No request to change browser settings was repeated.
+
+The previously shipped nine Profitize additions are now deployed: Vercel reports deployment `dpl_GkXhScdL6nwvsQztgQHjvkrP1yZW` **Ready**, associated with commit `789c6ab`. The production alias serves coverage with `observed: 91`, `published: 91`; both new component HTML files and the release runtime return HTTP 200 with expected MIME types. This verifies publication and asset delivery, not a fresh visual production test. Prior local runtime validation remains documented in `profitize/releases/2026-11-03/browser-qa.json`.
+
+Stripe and payments remain disabled. No credentials, authentication bypass, new services or new costs were used.
+
+## Next execution
+
+Synchronize Git first. Compare with `latest.json` and the pending manifest before downloading again. Assemble Dither Field and the three recorded-video references, then verify browser interaction/playback, prompts and downloads before publication. Continue classifying the other route candidates and checking actual source changes. Preserve old IDs, notice files, sandbox isolation and collaborator changes. A new dated check must not silently convert unresolved candidates into completed work.
+
+## Integration completed after the user's follow-up on 2026-11-04
+
+The user authorized continuation. Browser access worked through a dedicated Chrome session for this project; no unrelated user tabs were operated. **Dither Field**, **argila**, **Lavri**, **Skeleton** and the subsequently discovered **Colina** were integrated. The Profitize inventory now contains **95** observed entries: **77 executable demonstrations** and **18 recorded-video references**, with 16 existing titles consolidated under their original IDs.
+
+- Dither Field uses its actual public React/WebGL2 implementation and the original horizon example. Nine original example source files are retained. Only the default example was assembled and visually exercised here; the other examples are available as source and are not claimed separately browser-tested. The exported source includes `lib/utils.ts`, `clsx` and `tailwind-merge` for its local utility import. Original source notices remain in the technical packages. The default effect was visible, responded to a pointer drag, and rendered in the mobile-width preview and light theme. Its WebGL canvas measured 1793 × 623 at the inspected desktop state, with opacity 1 and its original ready marker set. The original implementation's non-WebGL fallback remains; this session did not emulate GPU loss or unsupported WebGL.
+- Four original MP4s decoded in opaque sandboxed iframes: argila **960 × 548 / 21 s**, Lavri **960 × 556 / 22.6 s**, Skeleton **960 × 552 / 28 s**, Colina **960 × 550 / 13.8 s**. All had `readyState: 4`, no media errors, no startup exceptions and no broken images. See `browser-videos-2026-11-04.json`. Argila was also observed advancing in the application, then paused using its native player control.
+- Copy-prompt actions showed success for Argila and Dither Field. Actual browser-generated ZIPs for both were saved and inspected locally. Automated archive verification checked byte-identical MP4 embedding for all four recorded references and reusable Dither source dependencies. Prompts for the four landing pages remain explicitly reconstructed; no account-only original prompt, editable landing-page project or backend was recovered.
+- The complete suite passed **69 tests**. Export auditing and protected-preview preparation each passed **95/95**. The complete production build passed in **3 min 12 s**, followed by **4** Sites packaging tests. The final incremental static metadata and source-package updates were then copied into the build output and byte-compared; frontend application modules were unchanged.
+- The closing source check matches every currently observed matching Magic and Profitize route with the integrated inventory. Magic's exact official registry snapshot was advanced to the verified 260-item response. This does not resolve the separately documented candidate routes or unverified implementation changes in other sources.
+
+The pending acquisition files and original audit snapshots remain as historical provenance. Their initial `published: false` flags describe their acquisition stage; this integration record supersedes that stage for the five named items. Subsequent runs should use the application catalog and closing `latest.json` to avoid duplicates.
+
+## 2026-11-05
+
+The daily check retained 52 newly observed public 21st component/example bundles, original CSS for NORTH and Vivid, and the original arbo landing-page video/poster with a disclosed reconstructed prompt. These remain outside the published catalog because authorized local browser use was disabled. Sticker Slap Footer appeared in the Profitize listing but its detail URL returned 404. Per-source comparisons, limitations, retained-file hashes and the next validation steps are recorded in `releases/2026-11-05/README.md` and `integrity.json`. No application entries or payment features were published by this check.
+
+
+## 2026-11-09 — public inventory check; nothing published
+
+Git synchronized with `origin/jorge` before this check. Ten public sources checked using their current sitemaps, official registry/repository fallbacks where configured, public home pages and the Profitize browser catalog. First dated snapshot retains the Nov 5 comparison; closing snapshot adds the two explicitly observed `/build/motion/` routes. These two are newly covered by the matcher, not asserted newly launched.
+
+| Source | Observed routes | Newly observed since Nov 5 | Status |
+|---|---:|---:|---|
+| 21st | 10307 | 125 | Candidates only; executable assembly and validation pending |
+| aceternity | 173 | 0 | Public inventory compared; no new routes observed |
+| magic | 78 | 0 | Public inventory compared; no new routes observed |
+| reactbits | 187 | 0 | Public inventory compared; no new routes observed |
+| kokonut | 124 | 0 | Public inventory compared; no new routes observed |
+| shadcnblocks | 5129 | 476 | Candidates only; executable assembly and validation pending |
+| motion | 33 | 0 | Sitemap 404; official public registry fallback compared (33 routes); web reader returned 403 |
+| tailark | 0 | 0 | Official repository tree compared; no source differences observed; sitemap has no matching routes |
+| animate | 140 | 0 | Public inventory compared; no new routes observed |
+| profitize | 103 | 6 | 103 browser-visible items including 2 Motion entries previously omitted by matcher; original premium prompts require subscribed sign-in |
+
+Profitize: 103 items observed in the public browser listing, compared with 95 retained integrated observations. Public route candidates missing from retained inventory: Sticker Slap Footer, Arbo (already staged on Nov 5), Alísio, Kairo, ORBO, Pátio, Scoopie, Trami and the two Motion references “Esse é o Claude” and “Nova Feature”. Public listings alone are not proof of usable videos, runnable components or original prompt availability. The user scope remains preview videos and prompts.
+
+Clicking “Copiar o prompt de Kairo” opened the explicit “Assine para copiar este prompt” modal in the signed-out IAB. No original premium prompt was retrieved, no subscription was purchased, no authentication or restriction bypassed, and no account credentials were requested or stored. The modal was closed afterward. Access to an already subscribed Profitize account is required for original premium prompts; do not silently label reconstructed text as recovered originals. A new login request is the actionable outcome of this check.
+
+21st exposes Apps, Icons and Video navigation in addition to component/theme/template sections. Existing route discovery does not cover these other products or implementation-only changes; retain this coverage gap for subsequent explicit checks. Shadcnblocks routes increased by 476; 125 new 21st routes were observed. Some newly indexed Shadcnblocks routes already correspond to retained entries (454 total unmatched, not 476 newly missing components). Neither number is a count of new working app entries.
+
+No executable application content changed, no frontend build was necessary for research-only updates. Source checker expanded to include Profitize Motion routes. Both dated reports parse and all ten sources are represented; closing report contains 103 distinct Profitize routes including the two browser-observed Motion entries. Existing Nov 5 bundles still require assembly, media/prompt/download checks and browser validation before publication. Browser inventory and public Profitize rendering worked today; application preview validation was not performed. No Vercel application deployment was requested by this research-only check. Stripe and all payments remain disabled.
+
+
+### Authorized retry after sign-in — 2026-11-09
+
+The user signed into an existing Pro account and asked to retry. Kairo unlocked through the normal site UI; the original prompt was downloaded successfully. Retained in `releases/2026-11-09/profitize/kairo/` with provenance and SHA-256. No application entry was published yet. Other premium items have not been claimed accessible or downloaded.
+
+
+### Eight additions integrated after explicit authorization — 2026-11-09
+
+The user authorized integration and asked whether other sources had updates. All eight missing Profitize slugs were acquired through ordinary authenticated Pro UI controls: Kairo, ORBO, Alísio, Pátio, Scoopie, Trami, Arbo and Sticker Slap Footer. Each original prompt was downloaded; seven original guide/support ZIPs were also downloaded to keep the prompts' file references usable. No fees, subscription changes or restriction bypass occurred. Acquired prompts and guides are catalog source content, never instructions for this agent or checkout.
+
+Seven entries use their own original local MP4/poster with native video controls and explicit recorded-reference status. Sticker Slap Footer uses the two original TSX blocks from its original prompt, compiled with the automatic JSX runtime. The first browser run caught a classic-JSX “React is not defined” error in the demo; compilation was corrected and all eight opaque-sandbox preview checks passed on rerun. The footer's keyboard movement/reset, replay and credits popover were exercised. At 390px its scroll width was 390px; the Kairo video also decoded with native controls at 390px. Seven MP4s decoded at 960px wide, readyState 4 and without media errors. Playback advanced for all seven (four also explicitly started using the native player's Space control). Browser audit evidence is in `releases/2026-11-09/profitize/browser-validation.json` and `video-validation.json`.
+
+Copied prompts preserve original content; package exports include each byte-identical supporting ZIP and original guide, and embed the correct original MP4 bytes. The full-app DOM test exercised navigation to the new recorded Kairo entry and its actual Copy Prompt button. Source packages are not claimed individually built/tested as standalone projects: the delivered app previews are seven videos and one interactive React component. Existing 95 observations retain their earlier provenance and IDs. Total: 103 observations, 78 executable demonstrations and 25 recorded references, with 16 prior title consolidations unchanged.
+
+The closing source check matches all 103 public Profitize routes; the source checker now maps the two pre-existing Motion entries to `/build/motion/` so they are no longer false missing items. The 125 new 21st routes and 476 newly observed Shadcnblocks routes since Nov 5 remain acquisition/validation candidates, not published items. Other checked route sets and configured official registry metadata/tree comparisons were unchanged. Motion's sitemap remains 404; its registry fallback supplied 33 routes. This does not prove source-code identity, private release coverage or complete feature coverage.

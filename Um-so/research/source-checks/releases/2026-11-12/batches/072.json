@@ -1,0 +1,138 @@
+[
+  {
+    "route": "/@daiwiikharihar/components/prismatic-display",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 28757,
+      "name": "Prismatic",
+      "description": "An interactive, Canvas-based React component that renders a shape-shifting 3D mesh background with physics-driven topologies (Torus, Sphere, Vortex) and responsive cursor interactions.",
+      "previewUrl": "https://cdn.21st.dev/user_332oxzW8MyPod4IDIdKq9rbPYuk/prismatic-display/default/preview.1794246562670.webp",
+      "videoUrl": "https://cdn.21st.dev/user_332oxzW8MyPod4IDIdKq9rbPYuk/prismatic-display/default/video.1794246557558.mp4",
+      "author": "daiwiikharihar",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_332oxzW8MyPod4IDIdKq9rbPYuk/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/daiwiikharihar/prismatic-display?api_key=REDACTED\"",
+      "url": "https://21st.dev/@daiwiikharihar/components/prismatic-display"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@daiwiikharihar/components/sketchy-blueprint-text",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45136,
+      "name": "Sketchy Blueprint Text",
+      "description": "An interactive, hand-drawn SVG blueprint typography component built with React, Tailwind CSS, and Framer Motion.",
+      "previewUrl": "https://cdn.21st.dev/daiwiikharihar/sketchy-blueprint-text/default/preview.1794392110922-6c7f5d4d-9679-4871-b4af-7d394a44138c.webp",
+      "videoUrl": "https://cdn.21st.dev/daiwiikharihar/sketchy-blueprint-text/default/video.1794392110922-6c7f5d4d-9679-4871-b4af-7d394a44138c.mp4",
+      "author": "daiwiikharihar",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_332oxzW8MyPod4IDIdKq9rbPYuk/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/daiwiikharihar/sketchy-blueprint-text?api_key=REDACTED\"",
+      "url": "https://21st.dev/@daiwiikharihar/components/sketchy-blueprint-text"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@daiwiikharihar/components/tensor-core-gpu",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44811,
+      "name": "Tensor Core Gpu",
+      "description": "Triple-fan isometric Tensor-Core GPU hardware component",
+      "previewUrl": "https://cdn.21st.dev/user_332oxzW8MyPod4IDIdKq9rbPYuk/tensor-core-gpu/default/preview.1794245479813.webp",
+      "videoUrl": "https://cdn.21st.dev/user_332oxzW8MyPod4IDIdKq9rbPYuk/tensor-core-gpu/default/video.1794245474957.mp4",
+      "author": "daiwiikharihar",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_332oxzW8MyPod4IDIdKq9rbPYuk/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/daiwiikharihar/tensor-core-gpu?api_key=REDACTED\"",
+      "url": "https://21st.dev/@daiwiikharihar/components/tensor-core-gpu"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@daiwiikharihar/components/waving-hand-poster",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45026,
+      "name": "Waving Hand Poster",
+      "description": "An interactive, responsive greeting poster featuring an animated waving hand ribbon, smooth SVG graphics, and dynamic typography.",
+      "previewUrl": "https://cdn.21st.dev/daiwiikharihar/waving-hand-poster/default/preview.1794302817494-64da9557-d4b8-4665-8182-97f087b1bd7c.webp",
+      "videoUrl": "https://cdn.21st.dev/daiwiikharihar/waving-hand-poster/default/video.1794302817494-64da9557-d4b8-4665-8182-97f087b1bd7c.mp4",
+      "author": "daiwiikharihar",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_332oxzW8MyPod4IDIdKq9rbPYuk/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/daiwiikharihar/waving-hand-poster?api_key=REDACTED\"",
+      "url": "https://21st.dev/@daiwiikharihar/components/waving-hand-poster"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@designali-in/components/logos-05",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 43964,
+      "name": "Logos Section",
+      "description": "A grid of brand wordmark logos for a \"trusted by\" / client showcase section on a landing page.",
+      "previewUrl": "https://cdn.21st.dev/user_2rO0IUQINTfBex4xN8Ghho5dpr4/logos-05/default/preview.1794342893890.png",
+      "videoUrl": null,
+      "author": "designali-in",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2rO0IUQINTfBex4xN8Ghho5dpr4/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/designali-in/logos-05?api_key=REDACTED\"",
+      "url": "https://21st.dev/@designali-in/components/logos-05"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@dhxwhy/components/allocation-slider",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44845,
+      "name": "Allocation Slider – Split 100% Across Segments with Draggable Dividers and Locks",
+      "description": "Allocation Slider for React and Tailwind CSS (shadcn/ui): drag a divider between segments and its two neighbours trade share, so the total always stays at 100. It is built to make splitting a whole feel direct: only the two segments you move roll to new shares and amounts while the rest hold still. Locked segments are skipped over, minimums stop the drag, double-click evens neighbours, Reset restores the start. Controlled or uncontrolled, keyboard sliders with aria-valuetext, reduced motion, light and dark. Use it for budgets, portfolio weights or team time. The included demo drags, locks and resets a monthly budget and makes no requests. Requires React only, with no animation library.",
+      "previewUrl": "https://cdn.21st.dev/user_35e5ygDqQuDYzujLgyG9331zPPO/allocation-slider/default/preview.1794244999458.webp",
+      "videoUrl": "https://cdn.21st.dev/dhxwhy/allocation-slider/default/video.1794244978096.mp4",
+      "author": "dhxwhy",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_35e5ygDqQuDYzujLgyG9331zPPO/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/dhxwhy/allocation-slider?api_key=REDACTED\"",
+      "url": "https://21st.dev/@dhxwhy/components/allocation-slider"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@dhxwhy/components/avatar-status-ring",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44856,
+      "name": "Avatar Status Ring – Presence Ring that Animates Speaking Level, Upload Progress and Status Changes",
+      "description": "Avatar Status Ring for React and Tailwind CSS (shadcn/ui): presence drawn as a ring instead of a dot — solid online, dashed away, red busy, thicker with the voice level while speaking, filling clockwise while uploading. It is built to show what a person is doing right now, animating every change in colour, dash pattern and thickness. Controlled status, level and progress props, tone overrides, silhouette fallback, aria-label, reduced motion, light and dark, and a stacked group. Use it for call grids, chat headers, team lists and voice agents. The included demo scripts a speaker and an upload and makes no network requests. Requires React and lucide-react only, with no animation library.",
+      "previewUrl": "https://cdn.21st.dev/user_35e5ygDqQuDYzujLgyG9331zPPO/avatar-status-ring/default/preview.1794235275056.webp",
+      "videoUrl": "https://cdn.21st.dev/dhxwhy/avatar-status-ring/default/video.1794235278500.mp4",
+      "author": "dhxwhy",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_35e5ygDqQuDYzujLgyG9331zPPO/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/dhxwhy/avatar-status-ring?api_key=REDACTED\"",
+      "url": "https://21st.dev/@dhxwhy/components/avatar-status-ring"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@dhxwhy/components/breakdown-stat-card",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44847,
+      "name": "Breakdown Stat Card – KPI Card that Splits a Number into Animated Segments",
+      "description": "Breakdown Stat Card for React and Tailwind CSS (shadcn/ui): a KPI tile whose big number opens like a drawer into its segments. The bar grows from the left, amounts roll up from zero, and hovering or focusing a segment rolls the headline value to its amount. It is built to show what a metric is made of without leaving the dashboard. Shares always sum to 100; expanded state and highlighted segment are controlled or uncontrolled. Roving-tabindex keyboard, polite announcements, light and dark, instant reduced motion. Use it for revenue, users, traffic or cost tiles. The included demo scripts two Alder tiles and makes no requests. Requires React only, with no animation library.",
+      "previewUrl": "https://cdn.21st.dev/user_35e5ygDqQuDYzujLgyG9331zPPO/breakdown-stat-card/default/preview.1794235699949.webp",
+      "videoUrl": "https://cdn.21st.dev/dhxwhy/breakdown-stat-card/default/video.1794235704108.mp4",
+      "author": "dhxwhy",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_35e5ygDqQuDYzujLgyG9331zPPO/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/dhxwhy/breakdown-stat-card?api_key=REDACTED\"",
+      "url": "https://21st.dev/@dhxwhy/components/breakdown-stat-card"
+    },
+    "status": "retained_unvalidated"
+  }
+]
