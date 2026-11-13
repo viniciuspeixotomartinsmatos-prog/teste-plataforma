@@ -105,5 +105,6 @@ Auth Modal and Hyper Text now have individual acceptance records, bringing this 
 - [x] Check Vistal hover start/stop and fix the mobile detail-action overflow at390px.
 - [x] Expand source/coverage/semantic inventory without publishing the four quota-blocked originals or the remaining unaccepted candidates.
 - [x]283 full regressions, final source/evidence guard checks,4 Sites checks and production compilation.
-- [ ] Confirm this release's Git/Vercel publication and published access/media flows. Previous7c7a9d530 correction release was READY and HTTP-verified.
+- [x] e9e2f0968 release READY; actual published Vistal playback and ZIP download verified in the signed-in IAB. Other five retain individual local/source evidence.
+- [ ] Confirm the small follow-up for tall Raio-X summary scrolling and mobile navigation overflow. Local actual JSON download/mobile layout and affected tests passed.
 - [ ] Other earlier main-flow/device acceptance remains pending; the old browser-unavailable status above is superseded by restored IAB access.

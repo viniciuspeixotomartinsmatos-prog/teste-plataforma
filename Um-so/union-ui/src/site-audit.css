@@ -12,4 +12,5 @@
 .rx-indexation-state{font-size:12px;color:#b6adc8}
 .rx-indexation-pass .rx-indexation-state{color:#8bddb3}
 .rx-indexation-fail .rx-indexation-state{color:#f0bf65}
+@media(min-width:761px){.rx-summary{max-height:calc(100vh - 124px);max-height:calc(100svh - 124px);overflow-y:auto;scrollbar-width:thin}}
 @media(max-width:700px){.rx-indexation{padding:16px}.rx-indexation-row{grid-template-columns:minmax(0,1fr);gap:10px}.rx-indexation-row .rx-action{max-width:100%}}
