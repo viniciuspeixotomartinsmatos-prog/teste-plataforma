@@ -4,6 +4,15 @@ import assert from 'node:assert/strict';
 import {createSupabaseApplication} from '../server/supabase-app.mjs';
 import {safeNext,protectedPath} from '../src/auth-policy.js';
 import {signInResponse} from '../server/access-policy.mjs';
+
+test('the domain root leads guests to the public sales page',()=>{
+ for(const method of ['GET','HEAD']){
+  const response=signInResponse(new Request('https://nitido.example/',{method}));
+  assert.equal(response.status,303);
+  assert.equal(response.headers.get('location'),'/vendas');
+  assert.equal(response.headers.get('cache-control'),'private, no-store');
+ }
+});
 const origin='https://platform.example';
 const request=(path,body)=>new Request(origin+path,body===undefined?{}:{method:'POST',headers:{origin,'Content-Type':'application/json'},body:JSON.stringify(body)});
 
