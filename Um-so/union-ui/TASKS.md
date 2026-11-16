@@ -108,3 +108,8 @@ Auth Modal and Hyper Text now have individual acceptance records, bringing this 
 - [x] e9e2f0968 release READY; actual published Vistal playback and ZIP download verified in the signed-in IAB. Other five retain individual local/source evidence.
 - [ ] Confirm the small follow-up for tall Raio-X summary scrolling and mobile navigation overflow. Local actual JSON download/mobile layout and affected tests passed.
 - [ ] Other earlier main-flow/device acceptance remains pending; the old browser-unavailable status above is superseded by restored IAB access.
+
+## November16 — Kairo hover repair
+- [x] Connect25 missing recorded preview videos in both catalog inventories and prevent recurrence in the source importer.
+- [x]12 focused source/media/hover/evidence tests passed; preserve actual source paths and approved release bytes.
+- [ ] Actual Kairo hover playback in the authorized browser: browser access unavailable on November16. Code/media mapping checks do not replace this visual acceptance.
