@@ -137,3 +137,9 @@ Auth Modal and Hyper Text now have individual acceptance records, bringing this 
 - [ ] Validate164 remaining compiled examples individually; recover34 Astryx examples missing local CSS/core files.
 - [ ] Recover actual sources/runtimes for41 template metadata matches and resolve24 templates/5 component routes; older source gaps remain separate.
 - [ ] Confirm this10-item release in production after tests/build/push.
+
+## November16 — second21st acceptance batch
+- [x]12 more original components individually checked, prompt action and actual downloaded ZIP bytes validated.
+- [x]11 available original videos individually passed pointer hover playback and leave pause/reset/cover; Stat Card retains its original cover.
+- [x]First10 deploymentfe5bc427e READY; signed-in production Bento CTA state, prompt feedback and actual ZIP download confirmed.
+- [ ]Publish second12 after focused18-test suite/build/packaging. SQL iframe CSV remains unapproved;152 other compiled examples and34 Astryx candidates remain pending.

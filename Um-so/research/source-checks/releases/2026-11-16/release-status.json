@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-11-16T16:21:44.958Z",
-  "publishedNewItems": 18,
+  "checkedAt": "2026-11-16T16:43:30.569Z",
+  "publishedNewItems": 30,
   "hoverRepair": {
     "commit": "95bbe0697",
     "deployment": "teste-plataforma-puavif2ax-novonormaladm-7417s-projects.vercel.app",
@@ -19,7 +19,7 @@
       "limitations": [
         "Unmatched routes are candidates, not proof of new content or runnable demos."
       ],
-      "published": 10
+      "published": 22
     },
     {
       "source": "aceternity",
@@ -1339,17 +1339,25 @@
         "package": "@fontsource-variable/manrope@5.3.0"
       }
     ],
-    "acceptance": "Two React heroes and eight original CSS themes individually accepted in authorized authenticated IAB.164 other compiled examples remain unapproved;34 Astryx examples lack original local CSS/core modules. Not a complete21st mirror.",
+    "acceptance": "22 individually accepted originals:14 React components and8 CSS themes.152 other compiled examples remain unapproved;34 Astryx examples still lack original local CSS/core integration.",
     "originalRelease": {
-      "approved": 10,
-      "components": 2,
+      "approved": 22,
+      "components": 14,
       "themes": 8,
       "browserEvidence": "21st-browser-validation.json",
-      "remainingCompiled": 164,
+      "remainingCompiled": 152,
       "missingOriginalModules": 34,
       "templateMetadataOnly": 41,
       "unresolvedTemplates": 24,
-      "unresolvedComponents": 5
+      "unresolvedComponents": 5,
+      "secondBrowserEvidence": "21st-second-browser-validation.json",
+      "runtimeLimitations": [
+        {
+          "id": "staged-21st-45601",
+          "reason": "SQL fixture rendered and advanced between sample queries. Its CSV button click did not produce a browser download inside the isolated iframe. Not approved; no global sandbox relaxation."
+        }
+      ],
+      "deployment": "First10: fe5bc427e READY. Second12: local acceptance complete, pending commit/push/production."
     }
   },
   "publicRegistries": {
@@ -1378,7 +1386,7 @@
     ],
     "originalPrompts": "not acquired: authenticated account browser unavailable"
   },
-  "acceptance": "18 dated originals individually approved (8 Profitize and10 21st); no full-catalog certification, billing or paid AI. Remaining staged and older source gaps remain separate.",
+  "acceptance": "30 dated originals individually accepted (8 Profitize and22 21st). Remaining candidates and older gaps are pending; not a complete mirror.",
   "profitizeOriginalRelease": {
     "approved": 8,
     "catalogCount": 10713,
