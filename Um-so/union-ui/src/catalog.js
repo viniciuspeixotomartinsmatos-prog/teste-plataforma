@@ -7,6 +7,13 @@ export const normalize=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f
 const synonyms={botao:'button',botoes:'button',texto:'text',fundo:'background',fundos:'background',animacao:'animation',animacoes:'animation',animado:'animated',cartao:'card',cartoes:'card',navegacao:'navigation',galeria:'gallery',depoimentos:'testimonial',precos:'pricing',carrossel:'carousel',icone:'icon',icones:'icon',formulario:'form'};
 const sourceNames={'21st':'21st dev',aceternity:'aceternity ui',magic:'magic ui',reactbits:'react bits',kokonut:'kokonut ui',shadcnblocks:'shadcn blocks',motion:'motion primitives',tailark:'tailark',animate:'animate ui'};
 const featuredNames=['Aurora','Shader Animation','3D Card Hover Tilt Effect','Magic Bento','Scroll media expansion hero','Bento Grid Component','Liquid Glass Button','Orb','Background Beams Animation','Split Text','Spotlight Card','Animated hero','3D Gallery Photography','Dusk Hero Section 8','Card Swap','Text Rotate','Star Border'];
+export function defaultCatalogSort(path, query) {
+ return path==='/'&&!query?.trim()?'recent':'featured';
+}
+
+function catalogTimestamp(item) {
+ return Math.max(0,...[item.approvedRelease,item.updated,item.created].map(date=>typeof date==='string'&&/^\d{4}-\d{2}-\d{2}(?:T|$)/.test(date)?Date.parse(date)||0:0));
+}
 export function prepareCatalog(rows){return rows.map((r,i)=>({...r,_order:i,_featuredRank:r.image&&featuredNames.includes(r.name)?featuredNames.indexOf(r.name):-1,_concepts:concepts([r.name,r.description,r.slug,r.category,...r.tags||[]].join(' ')),_search:normalize([r.name,r.description,r.slug,r.sourceId,sourceNames[r.sourceId],r.author,r.category,...r.tags||[]].join(' '))}));}
 export function searchCatalog(rows,{q='',source='all',category='all',kind='all',framework='all',codeOnly=false,savedOnly=false,saved=[],sort='featured'}={}){
  const words=queryTerms(q),ranks=new Map();
@@ -15,7 +22,12 @@ export function searchCatalog(rows,{q='',source='all',category='all',kind='all',
  const list=rows.filter(r=>(source==='all'||r.sourceId===source)&&(category==='all'||r.category===category)&&(kind==='all'||r.kind===kind)&&(framework==='all'||r.framework===framework)&&(!codeOnly||r.availability==='code')&&(!savedOnly||savedSet.has(r.id))&&(()=>{const rank=matchIntent(r._search,r._concepts||concepts(r._search),words,q) || (semanticIntent(r,words)?related?.get(r.id):0) || 0;ranks.set(r.id,rank);return rank>0;})());
  if(sort==='name')list.sort((a,b)=>a.name.localeCompare(b.name));
  else if(sort==='source')list.sort((a,b)=>a.sourceId.localeCompare(b.sourceId)||a.name.localeCompare(b.name));
- else if(sort==='recent')list.sort((a,b)=>(b.updated||'').localeCompare(a.updated||''));
+ else if(sort==='recent'){
+  const timestamps=new Map(list.map(row=>[row,catalogTimestamp(row)]));
+  list.sort((a,b)=>timestamps.get(b)-timestamps.get(a)
+   || Number(Boolean(b.approvedRelease))-Number(Boolean(a.approvedRelease))
+   || (a.approvedRelease&&b.approvedRelease?b._order-a._order:a._order-b._order));
+ }
  else if(words.length)list.sort((a,b)=>(ranks.get(b.id)||0)-(ranks.get(a.id)||0)||Number(normalize(b.name)===normalize(q))-Number(normalize(a.name)===normalize(q))||Number(Boolean(b.image))-Number(Boolean(a.image)));
  else list.sort((a,b)=>Number(b._featuredRank>=0)-Number(a._featuredRank>=0)||(a._featuredRank>=0&&b._featuredRank>=0?a._featuredRank-b._featuredRank:0)||Number(Boolean(b.featured))-Number(Boolean(a.featured))||Number(Boolean(b.image))-Number(Boolean(a.image))||a._order-b._order);
  return list;

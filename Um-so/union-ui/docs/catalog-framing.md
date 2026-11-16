@@ -22,3 +22,5 @@ A captura usa um servidor de prévias isolado em loopback (`PREVIEW_CAPTURE_ORIG
 Os derivados WebP têm até 480 e 960 px, preservam proporção e usam URLs com hash. Arquivos já registrados são reaproveitados, e `--refresh` recalcula apenas os IDs indicados. A fila tem dois trabalhos simultâneos. A aplicação usa `srcset`, carregamento preguiçoso e o quadro 16:9 reserva espaço antes do carregamento. As rotas continuam privadas com `no-store`.
 
 O primeiro lote contém seis capturas de demos e três imagens retidas. Imagens menores que 480 px geram um único tamanho para evitar ampliação. Os demais itens usam as mídias já existentes e recebem o enquadramento ao renderizar. A validação local abrange 1600, 1024 e 390 px, claro/escuro, busca, favoritos, coleções, comparação, edição de enquadramento com conta sintética e vídeo Kairo por hover.
+
+O preenchimento de prévias preservadas usa uma versão desfocada da mesma mídia nos espaços restantes. O modo Inteligente pode preencher a área quando a região protegida cabe no recorte. Os modos manuais mantêm o ajuste escolhido. Se um WebP derivado falhar, o card tenta a imagem original antes da demo.

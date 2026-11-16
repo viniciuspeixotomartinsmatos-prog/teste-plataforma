@@ -38,11 +38,12 @@ export function framePreview(item, dimensions, targetRatio = defaultRatio) {
  const bottom = ratio && ratio < targetRatio ? top + ratioMatch : 1;
  const clipsRegion = region && (region.left < left-1e-6 || region.right > right+1e-6 || region.top < top-1e-6 || region.bottom > bottom+1e-6);
  const safeArea = framing.safeArea ?? Boolean(isInterface || region || ratioMatch < .92);
- const threshold = safeArea ? .94 : .84;
+ const threshold = region ? .74 : safeArea ? .94 : .84;
  const smartFit = ratioMatch >= threshold && !clipsRegion ? 'cover' : 'contain';
  const fit = framing.mode === 'custom' ? framing.customFit : framing.mode === 'smart' ? smartFit : framing.mode;
  return {
   fit, safeArea,
+  extend: framing.mode==='smart'&&fit==='contain'&&ratio>0&&ratioMatch<.98&&['neutral','sampled'].includes(framing.background),
   point,
   zoom: framing.mode==='custom' ? (safeArea?Math.min(1,framing.zoom):framing.zoom) : 1,
   review: framing.mode === 'smart' && (!ratio || ratioMatch < threshold || Boolean(clipsRegion)),
@@ -65,5 +66,5 @@ export function applyCatalogFraming(item,overrides,mediaById) {
  const previewMedia=asset?.source===(item.image||null)?asset:undefined;
  const override=overrides&&Object.hasOwn(overrides,item.id)?overrides[item.id]:null;
  if(!previewMedia&&!override)return item;
- return {...item,previewMedia,previewFraming:override||previewMedia?.previewFraming||item.previewFraming};
+ return {...item,previewMedia,previewFraming:{...item.previewFraming,...previewMedia?.previewFraming,...override}};
 }

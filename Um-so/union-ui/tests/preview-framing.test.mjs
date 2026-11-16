@@ -5,8 +5,17 @@ import {framePreview, normalizeFraming, previewLabel} from '../src/preview-frami
 test('wide or tall interface captures keep all content when cropped area would be material', () => {
  const item = {category:'Heroes', kind:'block'};
  assert.equal(framePreview(item, {width:1440,height:900}).fit, 'contain');
+ assert.equal(framePreview(item, {width:1440,height:900}).extend, true);
  assert.equal(framePreview(item, {width:1920,height:1080}).fit, 'cover');
  assert.equal(framePreview(item, {width:0,height:0}).review, true);
+});
+
+test('smart framing fills a wider card when an explicit safe region survives', () => {
+ const item={previewFraming:{region:{left:0,top:.15,right:1,bottom:.86}}};
+ const result=framePreview(item,{width:1200,height:900});
+ assert.equal(result.fit,'cover');
+ assert.equal(result.extend,false);
+ assert.equal(framePreview({previewFraming:{fit:'contain'}},{width:1200,height:900}).extend,false);
 });
 
 test('known protected regions prevent cropping and manual focus is bounded', () => {

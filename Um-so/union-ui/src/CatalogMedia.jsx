@@ -8,8 +8,10 @@ import {framePreview} from './preview-framing.js';
 export function CatalogMedia({item,name,framed=false}){
  const container=useRef(null),[near,setNear]=useState(false),[scale,setScale]=useState(.35),[failed,setFailed]=useState(false),[playing,setPlaying]=useState(false);
  const [imageSize,setImageSize]=useState(null),[videoSize,setVideoSize]=useState(null);
- const media=framed&&item.previewMedia;
- const variants=media?.variants||[];
+ const [failedVariant,setFailedVariant]=useState(null);
+ const media=framed?item.previewMedia:undefined;
+ const optimized=media?.variants?.at(-1)?.src;
+ const variants=optimized&&failedVariant!==optimized?media.variants:[];
  const cover=variants.at(-1)?.src||item.image;
  const imageFrame=framePreview(item,imageSize||media?.size||item.previewSize);
  const videoFrame=framePreview(item,videoSize||item.videoSize);
@@ -61,8 +63,9 @@ export function CatalogMedia({item,name,framed=false}){
  useEffect(()=>{setPreviewHTML('');if(!live||!near)return;const controller=new AbortController(),base=new URL(src,window.location.href).href;fetch(src,{signal:controller.signal}).then(response=>{if(!response.ok)throw Error('Prévia indisponível.');return response.text();}).then(html=>preparePreviewAssets(html,base,{signal:controller.signal})).then(html=>{if(!controller.signal.aborted)setPreviewHTML(addPreviewAssetClient(html,item.id,base));}).catch(()=>{});return()=>controller.abort();},[item.id,src,live,near]);
  useLayoutEffect(()=>{if(!live||!near)return;const responder=createPreviewAssetResponder(frame.current?.contentWindow,item.id,window.location.href);window.addEventListener('message',responder);return()=>window.removeEventListener('message',responder);},[item.id,live,near,previewHTML]);
  const pause=()=>{video.current?.pause();setPlaying(false);};
- return <div ref={container} className={'catalog-media '+(live?'catalog-media-live':'')+(framed?' framed-media':'')} data-preview-playing={active&&playing?'true':undefined} data-safe-area={framed&&imageFrame.safeArea?'true':undefined} data-framing-review={framed&&imageFrame.review?'true':undefined} data-frame-background={framed?imageFrame.background:undefined} style={framed?{'--preview-background':imageFrame.color}:undefined}>
-  {cover&&!failed&&<img src={cover} srcSet={variants.length?variants.map(({src,width})=>src+' '+width+'w').join(', '):undefined} sizes={variants.length?'(max-width: 640px) calc(100vw - 24px), (max-width: 850px) 48vw, (max-width: 1200px) calc((100vw - 290px) / 2), min(460px, calc((100vw - 380px) / 3))':undefined} alt={name} loading="lazy" decoding="async" style={framed?frameStyle(imageFrame):undefined} onLoad={event=>{if(framed)setImageSize({width:event.currentTarget.naturalWidth,height:event.currentTarget.naturalHeight});}} onError={()=>setFailed(true)}/>}
+ const backdrop=framed&&!failed&&imageFrame.extend&&imageSize?.src?imageSize.src:null;
+ return <div ref={container} className={'catalog-media '+(live?'catalog-media-live':'')+(framed?' framed-media':'')} data-preview-playing={active&&playing?'true':undefined} data-safe-area={framed&&imageFrame.safeArea?'true':undefined} data-framing-review={framed&&imageFrame.review?'true':undefined} data-frame-background={framed?imageFrame.background:undefined} style={framed?{'--preview-background':imageFrame.color,'--preview-backdrop':backdrop?'url('+JSON.stringify(backdrop)+')':undefined}:undefined}>
+  {cover&&!failed&&<img src={cover} srcSet={variants.length?variants.map(({src,width})=>src+' '+width+'w').join(', '):undefined} sizes={variants.length?'(max-width: 640px) calc(100vw - 24px), (max-width: 850px) 48vw, (max-width: 1200px) calc((100vw - 290px) / 2), min(460px, calc((100vw - 380px) / 3))':undefined} alt={name} loading="lazy" decoding="async" style={framed?frameStyle(imageFrame):undefined} onLoad={event=>{if(framed){const {naturalWidth:width,naturalHeight:height,currentSrc:src}=event.currentTarget;setImageSize({width,height,src});}}} onError={()=>{if(variants.length&&item.image&&item.image!==cover)setFailedVariant(optimized);else setFailed(true);}}/>}
   {item.video&&near&&!live&&!reduceMotion&&<video ref={video} muted loop playsInline preload="none" aria-hidden="true" tabIndex={-1} style={framed?frameStyle(videoFrame):undefined} onLoadedMetadata={event=>{if(framed)setVideoSize({width:event.currentTarget.videoWidth,height:event.currentTarget.videoHeight});}} className={active&&playing?'playing':''} onPlaying={()=>{if(intent.current&&active)setPlaying(true);else pause();}} onError={pause}/>}
   {live&&near&&<iframe ref={frame} title={'Prévia de '+name} src={src} srcDoc={previewHTML||undefined} loading="lazy" sandbox="allow-scripts" tabIndex={-1} aria-hidden="true" style={{transform:framed?`translate(-50%,-50%) scale(${scale})`:`scale(${scale})`}}/>}
  </div>;
