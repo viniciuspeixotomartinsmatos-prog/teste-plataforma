@@ -1,0 +1,14 @@
+{
+  "staged-21st-45848": {
+    "mapping": {
+      "https://developer.mozilla.org/favicon-48x48.cbbd161b.png": "/assets/releases/2026-11-16/mdn-favicon-77b58351b9f5.svg"
+    },
+    "sourceURL": "https://developer.mozilla.org/favicon.svg",
+    "originalURL": "https://developer.mozilla.org/favicon-48x48.cbbd161b.png",
+    "originalStatus": 404,
+    "sha256": "77b58351b9f57ca4f663812879efb28988da716038b9cf22ad9c3af7fcdeee39",
+    "bytes": 536,
+    "checkedAt": "2026-11-16T17:22:39.909Z",
+    "notes": "Official live MDN homepage declares this SVG favicon. Retained the matching current brand asset instead of the removed original URL; original TSX remains unchanged."
+  }
+}

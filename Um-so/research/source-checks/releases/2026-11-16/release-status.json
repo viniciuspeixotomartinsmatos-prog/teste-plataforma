@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-11-16T16:43:30.569Z",
-  "publishedNewItems": 30,
+  "checkedAt": "2026-11-16T18:05:36.447Z",
+  "publishedNewItems": 49,
   "hoverRepair": {
     "commit": "95bbe0697",
     "deployment": "teste-plataforma-puavif2ax-novonormaladm-7417s-projects.vercel.app",
@@ -19,7 +19,7 @@
       "limitations": [
         "Unmatched routes are candidates, not proof of new content or runnable demos."
       ],
-      "published": 22
+      "published": 41
     },
     {
       "source": "aceternity",
@@ -1415,5 +1415,13 @@
       "sitesPassed": 4
     },
     "deployment": "de539827e READY; authenticated public Capiá hover/detail and actual ZIP download confirmed in IAB."
+  },
+  "astryx": {
+    "compiledWithExplicitOfficialAdapter": 34,
+    "publishedAfterIndividualAcceptance": 19,
+    "pendingIndividualAcceptance": 15,
+    "originalGeneratedCssRecovered": false,
+    "hoverVideosAccepted": 12,
+    "scope": "Original component/demo TSX retained; official public dependency and fixed light-theme CSS adapter, clearly labelled. No pixel identity or external AI/backend claim."
   }
 }

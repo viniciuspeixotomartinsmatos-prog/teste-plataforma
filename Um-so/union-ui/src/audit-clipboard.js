@@ -1,6 +1,6 @@
 // Some embedded browsers expose Clipboard API but leave its promise pending.
 // Bound the wait and preserve the user's focus/selection around the fallback.
-export async function copyAuditText(text,{navigatorObject=navigator,documentObject=document,timeoutMs=1500}={}){
+export async function copyClipboardText(text,{navigatorObject=navigator,documentObject=document,timeoutMs=1500}={}){
  let timer;
  try{
   if(!navigatorObject.clipboard?.writeText)throw Error('Clipboard API unavailable');
@@ -14,3 +14,4 @@ export async function copyAuditText(text,{navigatorObject=navigator,documentObje
   finally{field.remove();active?.focus?.({preventScroll:true});if(selection){selection.removeAllRanges();for(const range of ranges)selection.addRange(range);}}
  }finally{clearTimeout(timer);}
 }
+export const copyAuditText=copyClipboardText;

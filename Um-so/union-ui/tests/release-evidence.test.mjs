@@ -12,6 +12,9 @@ test('release approval binds actual source, preview, media and original archives
   for(const file of ['code/original.zip','previews/movie.mp4','previews/poster.webp'])await fs.writeFile(path.join(root,file),file);
   const proof={id:item.id,checkedAt:new Date().toISOString(),notes:'Synthetic guard fixture; not production browser approval.',...Object.fromEntries(releaseChecks.map(key=>[key,true])),artifacts:await releaseArtifacts(root,item)};
   assert.equal(Object.keys(proof.artifacts).length,5);await verifyReleaseEvidence(root,item,proof);
+  await fs.writeFile(path.join(root,'previews/support.svg'),'<svg xmlns="http://www.w3.org/2000/svg"><path d="M0 0h4v4z"/></svg>');
+  const svgPayload={...JSON.parse(await fs.readFile(path.join(root,'code/original.json'),'utf8')),supportingAssets:[{url:'/previews/support.svg'}]};await fs.writeFile(path.join(root,'code/svg.json'),JSON.stringify(svgPayload));
+  const svgItem={...item,codePath:'/code/svg.json'},svgProof={...proof,artifacts:await releaseArtifacts(root,svgItem)};assert.ok(svgProof.artifacts['/previews/support.svg']);await verifyReleaseEvidence(root,svgItem,svgProof);await fs.appendFile(path.join(root,'previews/support.svg'),'changed');await assert.rejects(verifyReleaseEvidence(root,svgItem,svgProof),/Artifact changed/);
   await fs.writeFile(path.join(root,'previews/hover.mp4'),'hover video');
   const hover={...item,video:'/previews/hover.mp4'},hoverProof={...proof,artifacts:await releaseArtifacts(root,hover)};
   assert.ok(hoverProof.artifacts['/previews/hover.mp4']);await verifyReleaseEvidence(root,hover,hoverProof);
