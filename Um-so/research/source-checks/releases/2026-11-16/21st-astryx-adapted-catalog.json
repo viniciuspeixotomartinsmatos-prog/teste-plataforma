@@ -1,0 +1,996 @@
+[
+  {
+    "id": "staged-21st-45177",
+    "sourceId": "21st",
+    "name": "Alert Dialog",
+    "slug": "astryx-alert-dialog",
+    "description": "A modal confirmation dialog from Meta's Astryx design system for destructive or high-impact actions.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-alert-dialog",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-alert-dialog",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45177.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45177.html"
+  },
+  {
+    "id": "staged-21st-45285",
+    "sourceId": "21st",
+    "name": "Chat Dictation Button",
+    "slug": "astryx-chat-dictation-button",
+    "description": "An Astryx toggle button for starting and stopping voice dictation inside a chat composer.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-dictation-button",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-chat-dictation-button",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45285.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45285.html"
+  },
+  {
+    "id": "staged-21st-45286",
+    "sourceId": "21st",
+    "name": "Chat Layout",
+    "slug": "astryx-chat-layout",
+    "description": "An Astryx layout shell for chat interfaces with message flow, a frosted composer dock, auto-scroll, and responsive keyboard handling.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-layout",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-chat-layout",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45286.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45286.html"
+  },
+  {
+    "id": "staged-21st-45287",
+    "sourceId": "21st",
+    "name": "Chat Layout Scroll Button",
+    "slug": "astryx-chat-layout-scroll-button",
+    "description": "An Astryx floating scroll-to-bottom button that appears when the user moves away from the newest chat messages.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-layout-scroll-button",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-chat-layout-scroll-button",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45287.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45287.html"
+  },
+  {
+    "id": "staged-21st-45288",
+    "sourceId": "21st",
+    "name": "Chat Message",
+    "slug": "astryx-chat-message",
+    "description": "An Astryx sender context wrapper that controls message avatar, name, metadata, and alignment by sender role.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-message",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-chat-message",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45288.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45288.html"
+  },
+  {
+    "id": "staged-21st-45311",
+    "sourceId": "21st",
+    "name": "Avatar Group Overflow",
+    "slug": "astryx-avatar-group-overflow-aloksivastava1025",
+    "description": "An overflow-count indicator for Astryx avatar groups, supporting both the standard count and custom compact text.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-avatar-group-overflow-aloksivastava1025",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-avatar-group-overflow-aloksivastava1025",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45311.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45311.html"
+  },
+  {
+    "id": "staged-21st-45317",
+    "sourceId": "21st",
+    "name": "Base Typeahead",
+    "slug": "astryx-base-typeahead",
+    "description": "A composable Astryx combobox engine with search, keyboard navigation, custom results, and anchored dropdown positioning.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-base-typeahead",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-base-typeahead",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45317.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex",
+      "@heroicons/react"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45317.html"
+  },
+  {
+    "id": "staged-21st-45322",
+    "sourceId": "21st",
+    "name": "Bottom Sheet",
+    "slug": "astryx-bottom-sheet",
+    "description": "A mobile Astryx surface for filters, actions, forms, and detail views that rises from the bottom of the viewport.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-bottom-sheet",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-bottom-sheet",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45322.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex",
+      "@heroicons/react"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45322.html"
+  },
+  {
+    "id": "staged-21st-45324",
+    "sourceId": "21st",
+    "name": "Bottom Sheet Switcher",
+    "slug": "astryx-bottom-sheet-switcher",
+    "description": "A multi-step Astryx bottom-sheet flow demonstrating in-place transitions between notification setup steps.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-bottom-sheet-switcher",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-bottom-sheet-switcher",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45324.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45324.html"
+  },
+  {
+    "id": "staged-21st-45326",
+    "sourceId": "21st",
+    "name": "Breadcrumb Item",
+    "slug": "astryx-breadcrumb-item-aloksivastava1025",
+    "description": "An individual Astryx breadcrumb item supporting links, current-page text, icons, and click handlers.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-breadcrumb-item-aloksivastava1025",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-breadcrumb-item-aloksivastava1025",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45326.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45326.html"
+  },
+  {
+    "id": "staged-21st-45331",
+    "sourceId": "21st",
+    "name": "Calendar",
+    "slug": "astryx-calendar",
+    "description": "An Astryx month-grid calendar for selecting a single date with surrounding dates visible for context.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-calendar",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-calendar",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45331.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45331.html"
+  },
+  {
+    "id": "staged-21st-45338",
+    "sourceId": "21st",
+    "name": "Card",
+    "slug": "astryx-card",
+    "description": "A bordered and elevated Astryx container for discrete, self-contained content and independently interactive items.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-card",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-card",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45338.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45338.html"
+  },
+  {
+    "id": "staged-21st-45341",
+    "sourceId": "21st",
+    "name": "Carousel",
+    "slug": "astryx-carousel",
+    "description": "An Astryx horizontal carousel for browsing overflowing card grids, image galleries, product lists, and related items.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-carousel",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-carousel",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45341.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45341.html"
+  },
+  {
+    "id": "staged-21st-45344",
+    "sourceId": "21st",
+    "name": "Center",
+    "slug": "astryx-center",
+    "description": "An Astryx layout primitive that centers content horizontally, vertically, or along both axes within its container.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-center",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-center",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45344.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex",
+      "@heroicons/react"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45344.html"
+  },
+  {
+    "id": "staged-21st-45352",
+    "sourceId": "21st",
+    "name": "Chat Composer",
+    "slug": "astryx-chat-composer",
+    "description": "An Astryx chat-composer shell arranging input, drawer, header, footer, send actions, status, and keyboard focus behavior.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-composer",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-chat-composer",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45352.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45352.html"
+  },
+  {
+    "id": "staged-21st-45354",
+    "sourceId": "21st",
+    "name": "Chat Composer Drawer",
+    "slug": "astryx-chat-composer-drawer",
+    "description": "A collapsible Astryx chat-composer drawer for attachments, feedback prompts, context chips, and supplementary content.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-composer-drawer",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-chat-composer-drawer",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45354.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45354.html"
+  },
+  {
+    "id": "staged-21st-45423",
+    "sourceId": "21st",
+    "name": "Chat Composer Input",
+    "slug": "astryx-chat-composer-input",
+    "description": "A rich Astryx chat input supporting trigger menus, inline tokens, message history, file handling, and accessible submission.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-composer-input",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-chat-composer-input",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45423.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45423.html"
+  },
+  {
+    "id": "staged-21st-45430",
+    "sourceId": "21st",
+    "name": "Chat Message Bubble",
+    "slug": "astryx-chat-message-bubble",
+    "description": "Styled content container for the chat \"bubble.\" Reads sender from parent ChatMessage context to auto-style the background. Use filled for standard messages and ghost when content needs alignment without a visible boundary. Supports name/metadata slots aligned with bubble padding, and multi-bubble grouping via the group prop for consecutive messages from the same sender.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-message-bubble",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-chat-message-bubble",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45430.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45430.html"
+  },
+  {
+    "id": "staged-21st-45431",
+    "sourceId": "21st",
+    "name": "Chat Message List",
+    "slug": "astryx-chat-message-list",
+    "description": "Presentational message container with density context and infinite scroll support. Provides role=\"log\" with aria-live=\"polite\" for accessibility. A flex spacer pushes messages to the bottom when the list isn't full; set align=\"top\" to start messages at the top instead.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-message-list",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-chat-message-list",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45431.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45431.html"
+  },
+  {
+    "id": "staged-21st-45432",
+    "sourceId": "21st",
+    "name": "Chat Message Metadata",
+    "slug": "astryx-chat-message-metadata",
+    "description": "Composable metadata row for chat messages. Renders timestamp, footer content, and delivery status in a single row. Direction reverses for user sender. Omits the row when both slots are omitted or non-rendering scalars and status is omitted.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-message-metadata",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-chat-message-metadata",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45432.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex",
+      "@heroicons/react"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45432.html"
+  },
+  {
+    "id": "staged-21st-45433",
+    "sourceId": "21st",
+    "name": "Chat Send Button",
+    "slug": "astryx-chat-send-button",
+    "description": "Circular send/stop toggle button for the chat composer. Place it inside ChatComposer where it reads context automatically: no wiring needed. When streaming starts, the button switches from a primary send icon to a secondary stop icon. Override any context value via props for standalone or custom usage.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-send-button",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-chat-send-button",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45433.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex",
+      "@heroicons/react"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45433.html"
+  },
+  {
+    "id": "staged-21st-45434",
+    "sourceId": "21st",
+    "name": "Chat System Message",
+    "slug": "astryx-chat-system-message",
+    "description": "Centered system message for non-sender content like date separators, membership changes, and status notices. It is not a chat bubble; it has no avatar, no alignment, and no sender context. Use the divider variant for temporal breaks and default for inline status updates.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-system-message",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-chat-system-message",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45434.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45434.html"
+  },
+  {
+    "id": "staged-21st-45454",
+    "sourceId": "21st",
+    "name": "Chat Tokenized Text",
+    "slug": "astryx-chat-tokenized-text",
+    "description": "Renders a text string with token patterns replaced by inline token content. Wrap any message body inside ChatMessageBubble to turn raw @mentions, #tags, or /commands into styled content. When no non-empty token matches or none are provided, the text renders as-is, so you can use ChatTokenizedText unconditionally on every message.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-tokenized-text",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-chat-tokenized-text",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45454.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45454.html"
+  },
+  {
+    "id": "staged-21st-45458",
+    "sourceId": "21st",
+    "name": "Chat Tool Calls",
+    "slug": "astryx-chat-tool-calls",
+    "description": "ChatToolCalls displays tool or function call invocations from an LLM response. Pass an array of calls and the component handles the rest: a single call renders inline, while multiple calls collapse into a summary with the latest call visible at the surface. Use it anywhere an AI agent shows what actions it took.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-tool-calls",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-chat-tool-calls",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45458.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45458.html"
+  },
+  {
+    "id": "staged-21st-45468",
+    "sourceId": "21st",
+    "name": "Checkbox Input",
+    "slug": "astryx-checkbox-input",
+    "description": "CheckboxInput toggles a single on/off value. Use it for settings like \"Enable notifications\", terms acceptance, or opt-in choices. For multiple checkboxes in a group, use CheckboxList instead.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-checkbox-input",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-checkbox-input",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45468.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45468.html"
+  },
+  {
+    "id": "staged-21st-45843",
+    "sourceId": "21st",
+    "name": "Checkbox List",
+    "slug": "astryx-checkbox-list",
+    "description": "Checkbox group container with field integration for label, description, and status.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-checkbox-list",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-checkbox-list",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45843.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45843.html"
+  },
+  {
+    "id": "staged-21st-45845",
+    "sourceId": "21st",
+    "name": "Checkbox List Item",
+    "slug": "astryx-checkbox-list-item",
+    "description": "Individual checkbox item with label, description, and end content slot. Works in collection mode (inside a CheckboxList with a value array) or standalone mode (inside List, or inside a CheckboxList without value, such as a select-all item). On a touch screen (a coarse primary pointer), a toggleable row is one press target: a touch on the label, the description or the box itself shows the pressed state on the row and its checkbox together. Where the primary pointer is fine, the box keeps its own press.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-checkbox-list-item",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-checkbox-list-item",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45845.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45845.html"
+  },
+  {
+    "id": "staged-21st-45848",
+    "sourceId": "21st",
+    "name": "Citation",
+    "slug": "astryx-citation",
+    "description": "Citations display inline references to external sources. Use them to attribute information within AI-generated responses, articles, or anywhere provenance and source links are needed.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-citation",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-citation",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45848.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewAssets": {
+      "https://developer.mozilla.org/favicon-48x48.cbbd161b.png": "/assets/releases/2026-11-16/mdn-favicon-77b58351b9f5.svg"
+    },
+    "previewPath": "/previews/runtime/staged-21st-45848.html"
+  },
+  {
+    "id": "staged-21st-45851",
+    "sourceId": "21st",
+    "name": "Clickable Card",
+    "slug": "astryx-clickable-card",
+    "description": "An interactive card for navigation or action targets. Nested interactive elements work independently.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-clickable-card",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-clickable-card",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45851.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45851.html"
+  },
+  {
+    "id": "staged-21st-45864",
+    "sourceId": "21st",
+    "name": "Code",
+    "slug": "astryx-code",
+    "description": "Code marks short inline references such as function names, variables, file paths, and command-line flags. Use CodeBlock for standalone or multi-line snippets.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-code",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-code",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45864.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45864.html"
+  },
+  {
+    "id": "staged-21st-45893",
+    "sourceId": "21st",
+    "name": "Code Block",
+    "slug": "astryx-code-block",
+    "description": "Fenced code block with syntax highlighting. Use for multi-line code snippets.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-code-block",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-code-block",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45893.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45893.html"
+  },
+  {
+    "id": "staged-21st-45900",
+    "sourceId": "21st",
+    "name": "Collapsible",
+    "slug": "astryx-collapsible",
+    "description": "A primitive that makes any content collapsible: a trigger button toggles visibility of the content area, managing its own state or deferring to a parent CollapsibleGroup.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-collapsible",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-collapsible",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45900.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45900.html"
+  },
+  {
+    "id": "staged-21st-45902",
+    "sourceId": "21st",
+    "name": "Collapsible Group",
+    "slug": "astryx-collapsible-group",
+    "description": "Coordinates multiple Collapsible instances so only one (single mode) or any number (multiple mode) can be open at a time. Renders no wrapper DOM element unless dividers are enabled.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-collapsible-group",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-collapsible-group",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45902.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45902.html"
+  },
+  {
+    "id": "staged-21st-45904",
+    "sourceId": "21st",
+    "name": "Command Palette Empty",
+    "slug": "astryx-command-palette-empty",
+    "description": "Empty state display for the results area. CommandPalette renders it automatically when a search returns no results, or when there is no query and bootstrap() returns nothing.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-command-palette-empty",
+    "sourceUrl": "https://21st.dev/@Astryxdesign/components/astryx-command-palette-empty",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45904.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "@astryxdesign/core",
+      "@stylexjs/stylex"
+    ],
+    "tags": [
+      "React",
+      "Official dependency adapter"
+    ],
+    "license": "Original source terms; official Astryx dependency MIT, notice included.",
+    "updated": "2026-11-16",
+    "recoveryMode": "interactive-official-dependency-adapter",
+    "previewPath": "/previews/runtime/staged-21st-45904.html"
+  }
+]

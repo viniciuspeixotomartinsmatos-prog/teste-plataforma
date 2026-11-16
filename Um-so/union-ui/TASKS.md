@@ -146,3 +146,10 @@ Auth Modal and Hyper Text now have individual acceptance records, bringing this 
 
 - [x]Integrate collaborator gallery782395ab3; combined294 tests,4 Sites checks and production build passed. All36 approved artifact graphs preserved. New gallery hover representative checks passed.
 - [ ]Confirm the second12 source additions on the published combined deployment; broader21st backlog remains152 compiled-unapproved and34 original-module-blocked examples, plus templates/older gaps.
+
+### November16 checkpoint —21st adapted batch
+- [x]19 explicit official-dependency adapters: actual isolated UI, cover,12 hover videos, prompt and browser ZIP/source checks. Evidence:21st-astryx-browser-validation.json.
+- [x]295 full tests,6 focused post-publication checks,4 Sites checks, build/package and0 production dependency audit findings.
+- [ ] Commit/push the19 accepted adapters and confirm Vercel.
+- [ ]15 remaining adapted examples and152 other compiled originals still need individual acceptance. Dictation has no microphone/voice acceptance; no permission was granted. SQL Result CSV produced no isolated browser download; sandbox preserved.
+- [ ] Original generated per-example CSS remains unavailable. Official dependency adaptation is labelled; do not call it recovered source CSS or pixel identity. Template/older source gaps remain separate.

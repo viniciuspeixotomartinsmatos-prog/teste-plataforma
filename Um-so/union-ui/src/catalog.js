@@ -1,5 +1,6 @@
 import {concepts,queryTerms,matchIntent,semanticIntent} from './search-language.js';
 import iconVariantSlugs from './catalog-icon-variants.json' with {type:'json'};
+import {copyClipboardText} from './audit-clipboard.js';
 export const categoryLabels = {'Heroes':'Hero sections','Backgrounds':'Backgrounds & shaders','Text effects':'Efeitos de texto','Buttons':'Botões','Navigation':'Navegação','Cards':'Cards & bento','AI & inputs':'IA, inputs & forms','Galleries':'Galerias & carrosséis','Pricing':'Preços','Testimonials':'Depoimentos','Footers':'Rodapés','Dashboards':'Dashboards','Authentication':'Autenticação','Interactions':'Motion & interações','Icons':'Ícones animados','Utilities':'Utilitários','Components':'Outros componentes'};
 export const kindLabels={all:'Tudo',component:'Componentes',block:'Blocos',template:'Templates',theme:'Temas',shader:'Shaders',icon:'Ícones',app:'Apps',page:'Páginas',hook:'Hooks',motion:'Motion design'};
 export const formatCount=n=>new Intl.NumberFormat('pt-BR').format(n||0);
@@ -33,7 +34,7 @@ export function searchCatalog(rows,{q='',source='all',category='all',kind='all',
  return list;
 }
 export function safeStored(key,fallback){try{const value=JSON.parse(localStorage.getItem(key));return value??fallback;}catch{return fallback;}}
-export async function copyText(text){if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(text);return;}const field=document.createElement('textarea');field.value=text;document.body.append(field);field.select();const ok=document.execCommand('copy');field.remove();if(!ok)throw new Error('Não foi possível acessar a área de transferência.');}
+export async function copyText(text,options){return copyClipboardText(text,options);}
 export function downloadJson(data,name){const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});downloadBlob(blob,name);}
 export function downloadBlob(blob,name){const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 export function sourceOf(sources,id){return sources.find(s=>s.id===id)||{id,name:id,color:'#8b8b98'};}

@@ -8,13 +8,14 @@ export const discoveryGoals=[
 ];
 export function resourceDelivery(item){
  const recorded=item.recoveryMode==='recorded-video';
+ const adapted=item.recoveryMode==='interactive-official-dependency-adapter';
  const compiled=!recorded&&(/compiled|retained|reference/.test(item.recoveryMode||'')||item.framework==='html'&&item.availability!=='code');
  const hasCode=Boolean(item.codePath)&&item.availability==='code'&&!compiled&&!recorded;
- return {preview:recorded?'Vídeo demonstrativo':item.previewPath||item.runtimePreviewPath?'Prévia interativa':'Prévia sob demanda',
-  delivery:hasCode?'Código-fonte disponível':item.availability==='usage'?'Exemplo de uso':compiled?'Demonstração compilada':recorded?'Referência em vídeo':'Consultar arquivos',
+ return {preview:adapted?'Prévia adaptada':recorded?'Vídeo demonstrativo':item.previewPath||item.runtimePreviewPath?'Prévia interativa':'Prévia sob demanda',
+  delivery:adapted?'Fonte com adaptação':hasCode?'Código-fonte disponível':item.availability==='usage'?'Exemplo de uso':compiled?'Demonstração compilada':recorded?'Referência em vídeo':'Consultar arquivos',
   framework:({react:'React',vue:'Vue',html:'HTML / JavaScript',svelte:'Svelte'})[item.framework]||item.framework||'Consultar formato',
   source:hasCode,compiled,recorded,
-  notice:recorded?'O vídeo mostra o resultado visual; ele não é uma implementação interativa. Confira os arquivos incluídos antes de integrar.':compiled?'A demonstração compilada não equivale ao projeto-fonte editável nem inclui o backend original.':'Confira os arquivos e as dependências do pacote antes de integrar.',
+  notice:adapted?'O exemplo usa a dependência oficial com CSS de apoio adaptado. O CSS gerado original não foi fornecido. Consulte SOURCE-LIMITATIONS.md antes de integrar.':recorded?'O vídeo mostra o resultado visual; ele não é uma implementação interativa. Confira os arquivos incluídos antes de integrar.':compiled?'A demonstração compilada não equivale ao projeto-fonte editável nem inclui o backend original.':'Confira os arquivos e as dependências do pacote antes de integrar.',
   license:item.license||'Licença não informada. Confirme os termos antes do uso comercial.'};
 }
 const boundedNumber=(value,fallback,max)=>Number.isFinite(Number(value))?Math.max(0,Math.min(max,Number(value))):fallback;

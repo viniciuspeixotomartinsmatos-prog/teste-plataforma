@@ -4,6 +4,7 @@ import {resourceDelivery,librarySnapshot,readJourney,writeJourney,captureLibrary
 import {prepareCatalog,searchCatalog} from '../src/catalog.js';
 test('resource labels distinguish editable source, compiled demos and video without inventing verification',()=>{
  assert.equal(resourceDelivery({availability:'code',codePath:'/code/x.json',framework:'react'}).source,true);
+ const adapted=resourceDelivery({availability:'code',codePath:'/code/x.json',previewPath:'/previews/x.html',framework:'react',recoveryMode:'interactive-official-dependency-adapter'});assert.equal(adapted.preview,'Prévia adaptada');assert.equal(adapted.delivery,'Fonte com adaptação');assert.match(adapted.notice,/CSS gerado original não foi fornecido/);
  assert.equal(resourceDelivery({availability:'code',codePath:'/code/x.json',recoveryMode:'interactive-compiled-example'}).source,false);
  const video=resourceDelivery({video:'/x.mp4',previewPath:'/x.html',recoveryMode:'recorded-video'});assert.equal(video.preview,'Vídeo demonstrativo');assert.equal(video.source,false);assert.match(video.notice,/não é uma implementação/);
  assert.match(video.license,/não informada/);

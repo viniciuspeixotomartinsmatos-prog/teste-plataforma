@@ -6,7 +6,7 @@ function target(root,pointer){if(typeof pointer!=='string'||!/^\/(?:assets|previ
 export async function releaseArtifacts(root,item){
  const pending=[item.previewPath,item.codePath,...(item.image?[item.image]:[]),...(item.video?[item.video]:[])],artifacts={};
  if(item.previewPath?.startsWith('/previews/runtime/'))pending.push(item.previewPath.replace(/\.html$/,'.light.html'));
- const payload=JSON.parse(await fs.readFile(target(root,item.codePath),'utf8'));for(const file of payload.downloadFiles||[])pending.push(file.url);
+ const payload=JSON.parse(await fs.readFile(target(root,item.codePath),'utf8'));for(const file of [...payload.downloadFiles||[],...payload.supportingAssets||[]])pending.push(file.url);
  while(pending.length){const pointer=pending.shift();if(pointer in artifacts)continue;if(Object.keys(artifacts).length>=200)throw Error('Release artifact limit exceeded.');
   const full=target(root,pointer),real=await fs.realpath(full);if(!real.startsWith(await fs.realpath(root)+path.sep))throw Error('Release artifact symlink escaped public root.');
   const stat=await fs.stat(full);if(stat.size>95*1024*1024)throw Error('Release artifact exceeds repository file limit.');const bytes=await fs.readFile(full);artifacts[pointer]=digest(bytes);
