@@ -1,0 +1,234 @@
+{
+  "21st-653d994b61aa": {
+    "source": "/assets/thumbnails/21st-653d994b61aa.webp",
+    "captured": false,
+    "size": {
+      "width": 384,
+      "height": 288
+    },
+    "previewFraming": {
+      "background": "sampled",
+      "color": "#050505"
+    },
+    "review": true,
+    "variants": [
+      {
+        "src": "/assets/thumbnails/framed/8a1a1e2f9a0e4b777e5c5d5e-384.webp",
+        "width": 384
+      }
+    ]
+  },
+  "21st-7dad5377edb3": {
+    "source": "/assets/thumbnails/21st-captured-b4846644240e16e6.webp",
+    "captured": true,
+    "size": {
+      "width": 1440,
+      "height": 810
+    },
+    "previewFraming": {
+      "background": "neutral",
+      "region": {
+        "left": 0.14444444444444443,
+        "top": 0,
+        "right": 0.9888888888888889,
+        "bottom": 1
+      }
+    },
+    "review": false,
+    "variants": [
+      {
+        "src": "/assets/thumbnails/framed/45b41bd8becd023364cb5211-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/thumbnails/framed/45b41bd8becd023364cb5211-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "21st-7e5bd153ace5": {
+    "source": "/assets/thumbnails/21st-captured-5842470623ca5bd1.png",
+    "captured": true,
+    "size": {
+      "width": 1440,
+      "height": 810
+    },
+    "previewFraming": {
+      "background": "neutral",
+      "region": {
+        "left": 0.022222222222222223,
+        "top": 0.0345679012345679,
+        "right": 0.9833333333333333,
+        "bottom": 0.9851851851851852
+      }
+    },
+    "review": false,
+    "variants": [
+      {
+        "src": "/assets/thumbnails/framed/a81a3996315dd8981aeb6808-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/thumbnails/framed/a81a3996315dd8981aeb6808-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "21st-8017e8c98ea8": {
+    "source": "/assets/thumbnails/21st-captured-9b627f2d69246a7a.png",
+    "captured": true,
+    "size": {
+      "width": 1440,
+      "height": 810
+    },
+    "previewFraming": {
+      "background": "sampled",
+      "color": "#47270e",
+      "region": {
+        "left": 0.18174913194444445,
+        "top": 0.30962213586877896,
+        "right": 0.8182400173611111,
+        "bottom": 0.7975308641975308
+      }
+    },
+    "review": false,
+    "variants": [
+      {
+        "src": "/assets/thumbnails/framed/712486303bf0f6d29023be64-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/thumbnails/framed/712486303bf0f6d29023be64-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "21st-84d474ceb176": {
+    "source": "/assets/thumbnails/21st-84d474ceb176.webp",
+    "captured": true,
+    "size": {
+      "width": 1440,
+      "height": 810
+    },
+    "previewFraming": {
+      "background": "neutral",
+      "region": {
+        "left": 0.23355034722222223,
+        "top": 0.02962962962962963,
+        "right": 0.9444444444444444,
+        "bottom": 0.808641975308642
+      }
+    },
+    "review": false,
+    "variants": [
+      {
+        "src": "/assets/thumbnails/framed/86dc77754dff32c337c34f6b-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/thumbnails/framed/86dc77754dff32c337c34f6b-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "21st-9f3a7a837c19": {
+    "source": "/assets/thumbnails/21st-captured-cfb3a6dac84acef2.png",
+    "captured": false,
+    "size": {
+      "width": 640,
+      "height": 358
+    },
+    "previewFraming": {
+      "background": "sampled",
+      "color": "#fafafa"
+    },
+    "review": false,
+    "variants": [
+      {
+        "src": "/assets/thumbnails/framed/4d0fa4337a7910a9515b103c-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/thumbnails/framed/4d0fa4337a7910a9515b103c-640.webp",
+        "width": 640
+      }
+    ]
+  },
+  "21st-bf52852fce4f": {
+    "source": "/assets/thumbnails/21st-bf52852fce4f.webp",
+    "captured": false,
+    "size": {
+      "width": 384,
+      "height": 239
+    },
+    "previewFraming": {
+      "background": "sampled",
+      "color": "#040404"
+    },
+    "review": true,
+    "variants": [
+      {
+        "src": "/assets/thumbnails/framed/955267ea4f35950b0d8f9dbf-384.webp",
+        "width": 384
+      }
+    ]
+  },
+  "21st-ebf4e598c148": {
+    "source": "/assets/thumbnails/21st-captured-64998f0149dddd5f.png",
+    "captured": true,
+    "size": {
+      "width": 1440,
+      "height": 810
+    },
+    "previewFraming": {
+      "background": "sampled",
+      "color": "#ffffff",
+      "region": {
+        "left": 0.26666666666666666,
+        "top": 0.24814814814814815,
+        "right": 0.7333333333333333,
+        "bottom": 0.7518518518518519
+      }
+    },
+    "review": false,
+    "variants": [
+      {
+        "src": "/assets/thumbnails/framed/f22a94a45b2ad92501d79fed-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/thumbnails/framed/f22a94a45b2ad92501d79fed-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "tailark-base-dusk-hero-section-8": {
+    "source": "/assets/thumbnails/tailark-base-dusk-hero-section-8.png",
+    "captured": true,
+    "size": {
+      "width": 1440,
+      "height": 810
+    },
+    "previewFraming": {
+      "background": "sampled",
+      "color": "#0e0e10",
+      "region": {
+        "left": 0.07222222222222222,
+        "top": 0.024691358024691357,
+        "right": 0.9277777777777778,
+        "bottom": 0.951520076798804
+      }
+    },
+    "review": false,
+    "variants": [
+      {
+        "src": "/assets/thumbnails/framed/4b223bc23c89826d9e94405e-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/thumbnails/framed/4b223bc23c89826d9e94405e-960.webp",
+        "width": 960
+      }
+    ]
+  }
+}

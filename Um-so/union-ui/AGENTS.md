@@ -10,6 +10,8 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 ## Product decisions
 
+- On 2026-11-16 the catalog reference established a horizontal header, real category counts, a three-column desktop gallery and 16:9 previews with small corner radii. Titles appear on hover and keyboard focus in the gallery. Use the same layout in light mode and preserve the original media and delivery labels. The catalog framing editor is reserved for trusted moderators. See `docs/catalog-framing.md` for the capture workflow and review scope.
+
 - On 2026-11-12, production account deletion passed a marker-scoped synthetic API test: six dependent record types removed, another owner's workspace preserved, old cookie/token rejected and all synthetic users cleaned up. `ACCOUNT_DELETION_READY=true` is now enabled for that verified production scope, superseding the earlier setup gate below. Billing remains disabled. Missing billing-ledger tables are tolerated only when billing is explicitly disabled; unknown/permission errors remain fail-closed. Provider backup/log retention remains unresolved. New staged sources are not catalog-approved by compilation alone.
 
 - On 2026-11-10 the user requested square component previews with straight corners and titles revealed on hover or keyboard focus. Keep list mode compact and preserve preview content and actions. New account passwords and resets require at least eight characters with an uppercase letter and a number; symbols are optional. Do not apply composition checks when signing in.

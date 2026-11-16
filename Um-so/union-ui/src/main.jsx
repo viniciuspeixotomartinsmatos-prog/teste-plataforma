@@ -4,6 +4,7 @@ import { App } from "./App.jsx";
 import "./styles.css";
 import "../public/assets/apple.css";
 import "../public/assets/glass.css";
+import "./catalog-gallery.css";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
