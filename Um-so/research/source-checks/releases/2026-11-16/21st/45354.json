@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:45:53.583Z",
+  "metadata": {
+    "type": "component",
+    "id": 45354,
+    "name": "Astryx Chat Composer Drawer",
+    "description": "A collapsible Astryx chat-composer drawer for attachments, feedback prompts, context chips, and supplementary content.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-chat-composer-drawer/chat-composer-drawer-feedback/preview.1794507645286.png",
+    "videoUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-chat-composer-drawer/chat-composer-drawer-feedback/video.1794507537143.mp4",
+    "author": "Astryxdesign",
+    "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-chat-composer-drawer?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-composer-drawer"
+  },
+  "component": {
+    "id": 45354,
+    "componentId": 26167,
+    "name": "Astryx Chat Composer Drawer",
+    "demoName": "ChatComposerDrawer — Feedback",
+    "description": "A collapsible Astryx chat-composer drawer for attachments, feedback prompts, context chips, and supplementary content.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-chat-composer-drawer/chat-composer-drawer-feedback/preview.1794507645286.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-chat-composer-drawer?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\nimport \"./astryx-chat-composer-drawer-utils/index.css\"\nimport { ChatComposerDrawer } from \"@astryxdesign/core/Chat\"\n\nexport * from \"@astryxdesign/core/Chat\"\nexport default ChatComposerDrawer\n",
+    "demoCode": "'use client';\n\nimport {useState} from 'react';\nimport {ChatComposer, ChatComposerDrawer} from '@/components/ui/astryx-chat-composer-drawer';\nimport {List, ListItem} from '@astryxdesign/core/List';\nimport {Text} from '@astryxdesign/core/Text';\nimport {Badge} from '@astryxdesign/core/Badge';\nimport {Stack} from '@astryxdesign/core/Layout';\n\nconst options = [\n  {key: 'A', label: 'Yes'},\n  {key: 'B', label: 'Yes, and don\\u2019t ask again for `git add` commands'},\n  {key: 'C', label: 'No, and tell me what to do differently'},\n];\n\nfunction ChatComposerDrawerFeedback() {\n  const [selected, setSelected] = useState<string | null>(null);\n\n  return (\n    <Stack direction=\"vertical\" width={450} maxWidth=\"100%\">\n      <ChatComposer\n        onSubmit={value => {\n          console.log('Submit:', value, '| Answer:', selected);\n        }}\n        drawer={\n          <ChatComposerDrawer count={1} label=\"User feedback requested\">\n            <Stack direction=\"vertical\" gap={1} width=\"100%\">\n              <List>\n                <ListItem\n                  label={<Text weight=\"bold\">Do you want to proceed?</Text>}\n                />\n                {options.map(opt => (\n                  <ListItem\n                    key={opt.key}\n                    label={opt.label}\n                    startContent={\n                      <Badge\n                        variant={selected === opt.key ? 'info' : 'neutral'}\n                        label={opt.key}\n                      />\n                    }\n                    isSelected={selected === opt.key}\n                    onClick={() => setSelected(opt.key)}\n                  />\n                ))}\n              </List>\n            </Stack>\n          </ChatComposerDrawer>\n        }\n      />\n    </Stack>\n  );\n}\n\nexport default function ChatComposerDrawerFeedbackDemo() {\n  return (\n    <div\n      data-astryx-theme=\"neutral\"\n      data-theme=\"light\"\n      style={{colorScheme: 'light', display: 'contents'}}>\n      <ChatComposerDrawerFeedback />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source and usage retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

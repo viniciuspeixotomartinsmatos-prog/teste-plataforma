@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:45:53.556Z",
+  "metadata": {
+    "type": "component",
+    "id": 45423,
+    "name": "Astryx Chat Composer Input",
+    "description": "A rich Astryx chat input supporting trigger menus, inline tokens, message history, file handling, and accessible submission.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-chat-composer-input/chat-composer-input-slash-commands/preview.1794507334556.png",
+    "videoUrl": null,
+    "author": "Astryxdesign",
+    "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-chat-composer-input?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-composer-input"
+  },
+  "component": {
+    "id": 45423,
+    "componentId": 26168,
+    "name": "Astryx Chat Composer Input",
+    "demoName": "ChatComposerInput — Slash Commands",
+    "description": "A rich Astryx chat input supporting trigger menus, inline tokens, message history, file handling, and accessible submission.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-chat-composer-input/chat-composer-input-slash-commands/preview.1794507334556.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-chat-composer-input?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\nimport \"./astryx-chat-composer-input-utils/index.css\"\nimport { ChatComposerInput } from \"@astryxdesign/core/Chat\"\n\nexport * from \"@astryxdesign/core/Chat\"\nexport default ChatComposerInput\n",
+    "demoCode": "'use client';\n\nimport {\n  ChatComposer,\n  ChatComposerInput,\n  type ChatComposerTrigger,\n} from '@/components/ui/astryx-chat-composer-input';\nimport {createStaticSource} from '@astryxdesign/core/Typeahead';\nimport {TypeaheadItem} from '@astryxdesign/core/Typeahead';\nimport type {SearchableItem} from '@astryxdesign/core/Typeahead';\nimport {Stack} from '@astryxdesign/core/Layout';\n\nconst COMMANDS: SearchableItem<{description: string}>[] = [\n  {\n    id: 'summarize',\n    label: 'summarize',\n    auxiliaryData: {description: 'Summarize the conversation'},\n  },\n  {\n    id: 'translate',\n    label: 'translate',\n    auxiliaryData: {description: 'Translate text to another language'},\n  },\n  {\n    id: 'search',\n    label: 'search',\n    auxiliaryData: {description: 'Search the web or documents'},\n  },\n  {\n    id: 'code',\n    label: 'code',\n    auxiliaryData: {description: 'Generate or explain code'},\n  },\n  {\n    id: 'help',\n    label: 'help',\n    auxiliaryData: {description: 'Show available commands'},\n  },\n];\n\nconst commandSource = createStaticSource(COMMANDS);\n\nfunction ChatComposerInputSlashCommands() {\n  const commandTrigger: ChatComposerTrigger = {\n    character: '/',\n    searchSource: commandSource,\n    renderItem: item => (\n      <TypeaheadItem\n        item={item}\n        description={(item.auxiliaryData as {description: string})?.description}\n      />\n    ),\n    onSelect: item => ({\n      value: `/${item.label}`,\n      label: `/${item.label}`,\n      variant: 'yellow' as const,\n    }),\n  };\n\n  return (\n    <Stack direction=\"vertical\" width={450} maxWidth=\"100%\">\n      <ChatComposer\n        onSubmit={() => {}}\n        input={\n          <ChatComposerInput\n            triggers={[commandTrigger]}\n            placeholder=\"Type / for commands...\"\n          />\n        }\n      />\n    </Stack>\n  );\n}\n\nexport default function ChatComposerInputSlashCommandsDemo() {\n  return (\n    <div\n      data-astryx-theme=\"neutral\"\n      data-theme=\"light\"\n      style={{colorScheme: 'light', display: 'contents'}}>\n      <ChatComposerInputSlashCommands />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source and usage retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

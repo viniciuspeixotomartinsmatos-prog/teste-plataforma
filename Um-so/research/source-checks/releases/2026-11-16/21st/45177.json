@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:49:35.945Z",
+  "metadata": {
+    "type": "component",
+    "id": 45177,
+    "name": "Astryx Alert Dialog",
+    "description": "A modal confirmation dialog from Meta's Astryx design system for destructive or high-impact actions.",
+    "previewUrl": "https://cdn.21st.dev/user_35NhaNECmTVfUAllRZbZCIQa1D3/astryx-alert-dialog/default/preview.1794432029260.png",
+    "videoUrl": "https://cdn.21st.dev/user_35NhaNECmTVfUAllRZbZCIQa1D3/astryx-alert-dialog/default/video.1794431992245.mp4",
+    "author": "Astryxdesign",
+    "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-alert-dialog?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-alert-dialog"
+  },
+  "component": {
+    "id": 45177,
+    "componentId": 26129,
+    "name": "Astryx Alert Dialog",
+    "demoName": "Default",
+    "description": "A modal confirmation dialog from Meta's Astryx design system for destructive or high-impact actions.",
+    "previewUrl": "https://cdn.21st.dev/user_35NhaNECmTVfUAllRZbZCIQa1D3/astryx-alert-dialog/default/preview.1794432029260.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-alert-dialog?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\nimport \"./astryx-alert-dialog-utils/index.css\"\nimport { AlertDialog } from \"@astryxdesign/core/AlertDialog\"\n\nexport * from \"@astryxdesign/core/AlertDialog\"\nexport default AlertDialog\n",
+    "demoCode": "\"use client\"\n\nimport AlertDialog, {\n  useImperativeAlertDialog,\n} from \"@/components/ui/astryx-alert-dialog\"\n\nexport default function AlertDialogDemo() {\n  const alert = useImperativeAlertDialog()\n\n  const alertProps = {\n    title: \"Delete item?\",\n    description:\n      \"This action cannot be undone. The item and all its data will be permanently removed.\",\n    actionLabel: \"Delete\",\n  } as const\n\n  return (\n    <div\n      data-astryx-theme=\"neutral\"\n      data-theme=\"light\"\n      style={{ colorScheme: \"light\", display: \"contents\" }}\n    >\n      <AlertDialog\n        isOpen\n        isInline\n        onOpenChange={() => {}}\n        {...alertProps}\n        onAction={() =>\n          alert.show({ ...alertProps, onAction: () => alert.hide() })\n        }\n      />\n      {alert.element}\n    </div>\n  )\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

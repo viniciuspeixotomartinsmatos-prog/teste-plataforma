@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:49:35.991Z",
+  "metadata": {
+    "type": "component",
+    "id": 45285,
+    "name": "Astryx Chat Dictation Button",
+    "description": "An Astryx toggle button for starting and stopping voice dictation inside a chat composer.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-chat-dictation-button/default/preview.1794510174404.png",
+    "videoUrl": null,
+    "author": "Astryxdesign",
+    "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-chat-dictation-button?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-dictation-button"
+  },
+  "component": {
+    "id": 45285,
+    "componentId": 26171,
+    "name": "Astryx Chat Dictation Button",
+    "demoName": "Default",
+    "description": "An Astryx toggle button for starting and stopping voice dictation inside a chat composer.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-chat-dictation-button/default/preview.1794510174404.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-chat-dictation-button?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\nimport \"./astryx-chat-dictation-button-utils/index.css\"\nimport { ChatDictationButton } from \"@astryxdesign/core/Chat\"\n\nexport * from \"@astryxdesign/core/Chat\"\nexport default ChatDictationButton\n",
+    "demoCode": "// Copyright (c) Meta Platforms, Inc. and affiliates.\n\n'use client';\n\nimport {useRef} from 'react';\nimport {\n  ChatDictationButton,\n  ChatComposer,\n  ChatComposerInput,\n  useChatDictation,\n} from '@/components/ui/astryx-chat-dictation-button';\nimport type {ChatComposerInputHandle} from '@/components/ui/astryx-chat-dictation-button';\nimport {HStack, VStack} from '@astryxdesign/core/Layout';\nimport {Text} from '@astryxdesign/core/Text';\n\nexport default function ChatDictationButtonShowcase() {\n  const inputRef = useRef<ChatComposerInputHandle>(null);\n\n  const dictation = useChatDictation({\n    inputRef,\n    hasSounds: true,\n    onResult: text => {\n      console.log('Dictation result:', text);\n    },\n  });\n\n  return (\n    <div\n      data-astryx-theme=\"neutral\"\n      data-theme=\"light\"\n      style={{colorScheme: 'light', display: 'contents'}}>\n      <VStack gap={4} width={450} maxWidth=\"100%\">\n        <Text type=\"supporting\" color=\"secondary\">\n          Click the microphone to start dictating. Speech is transcribed into the\n          input.\n        </Text>\n        <ChatComposer\n          onSubmit={v => console.log('Submit:', v)}\n          input={<ChatComposerInput handleRef={inputRef} />}\n          sendActions={<ChatDictationButton dictation={dictation} />}\n        />\n        {dictation.isListening && (\n          <HStack gap={2} vAlign=\"center\">\n            <Text type=\"supporting\" color=\"secondary\">\n              {dictation.isSpeaking ? 'Speaking detected' : 'Listening...'}\n            </Text>\n            <div\n              style={{\n                width: 80,\n                height: 6,\n                backgroundColor: 'var(--color-surface-secondary)',\n                borderRadius: 3,\n                overflow: 'hidden',\n              }}>\n              <div\n                style={{\n                  height: '100%',\n                  backgroundColor: dictation.isSpeaking\n                    ? 'var(--color-accent)'\n                    : 'var(--color-text-secondary)',\n                  borderRadius: 3,\n                  transition: 'width 0.08s ease-out',\n                  width: `${Math.min(dictation.volume * 200, 100)}%`,\n                }}\n              />\n            </div>\n          </HStack>\n        )}\n        {!dictation.isSupported && (\n          <Text type=\"supporting\" color=\"accent\">\n            SpeechRecognition is not supported in this browser.\n          </Text>\n        )}\n      </VStack>\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

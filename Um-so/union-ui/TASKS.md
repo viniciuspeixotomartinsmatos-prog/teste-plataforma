@@ -113,3 +113,10 @@ Auth Modal and Hyper Text now have individual acceptance records, bringing this 
 - [x] Connect25 missing recorded preview videos in both catalog inventories and prevent recurrence in the source importer.
 - [x]12 focused source/media/hover/evidence tests passed; preserve actual source paths and approved release bytes.
 - [ ] Actual Kairo hover playback in the authorized browser: browser access unavailable on November16. Code/media mapping checks do not replace this visual acceptance.
+
+## November16 — fresh source request
+- [x] Recheck all ten source inventories and compare source IDs/hashes with retained releases.
+- [x] Retain200 public21st originals; stage163 executable builds and8 original CSS themes. Record37 compile failures and unresolved metadata separately.
+- [x] Observe18 Profitize item metadata records; preserve one identity mismatch and the authenticated prompt/archive dependency.
+- [x] Confirm95bbe0697 hover-data repair deployment READY; boot/access/billing checks passed.
+- [ ] Complete Kairo playback and new-candidate browser/media/prompt/download acceptance. The authorized browser remained unavailable after retry; no new candidate is falsely marked published.

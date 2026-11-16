@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:45:53.428Z",
+  "metadata": {
+    "type": "component",
+    "id": 45434,
+    "name": "Astryx Chat System Message",
+    "description": "Centered system message for non-sender content like date separators, membership changes, and status notices. It is not a chat bubble; it has no avatar, no alignment, and no sender context. Use the divider variant for temporal breaks and default for inline status updates.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-chat-system-message/default/preview.1794510962657.png",
+    "videoUrl": null,
+    "author": "Astryxdesign",
+    "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-chat-system-message?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-system-message"
+  },
+  "component": {
+    "id": 45434,
+    "componentId": 26190,
+    "name": "Astryx Chat System Message",
+    "demoName": "Default",
+    "description": "Centered system message for non-sender content like date separators, membership changes, and status notices. It is not a chat bubble; it has no avatar, no alignment, and no sender context. Use the divider variant for temporal breaks and default for inline status updates.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-chat-system-message/default/preview.1794510962657.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-chat-system-message?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\nimport \"./astryx-chat-system-message-utils/index.css\"\nimport { ChatSystemMessage } from \"@astryxdesign/core/Chat\"\n\nexport * from \"@astryxdesign/core/Chat\"\nexport default ChatSystemMessage\n",
+    "demoCode": "// Copyright (c) Meta Platforms, Inc. and affiliates.\n\n'use client';\n\nimport {ChatMessageList, ChatSystemMessage} from '@/components/ui/astryx-chat-system-message';\n\nfunction ChatSystemMessageShowcase() {\n  return (\n    <ChatMessageList>\n      <ChatSystemMessage variant=\"divider\">March 15, 2026</ChatSystemMessage>\n      <ChatSystemMessage>Alex joined the conversation</ChatSystemMessage>\n      <ChatSystemMessage>Agent is thinking…</ChatSystemMessage>\n      <ChatSystemMessage variant=\"divider\">Today</ChatSystemMessage>\n      <ChatSystemMessage>Conversation marked as resolved</ChatSystemMessage>\n    </ChatMessageList>\n  );\n}\n\nexport default function ChatSystemMessageShowcaseDemo() {\n  return (\n    <div\n      data-astryx-theme=\"neutral\"\n      data-theme=\"light\"\n      style={{colorScheme: 'light', display: 'contents'}}>\n      <ChatSystemMessageShowcase />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source and usage retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:45:58.872Z",
+  "metadata": {
+    "type": "component",
+    "id": 45324,
+    "name": "Astryx Bottom Sheet Switcher",
+    "description": "A multi-step Astryx bottom-sheet flow demonstrating in-place transitions between notification setup steps.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-bottom-sheet-switcher/bottom-sheet-switcher-review-flow/preview.1794507018040.png",
+    "videoUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-bottom-sheet-switcher/bottom-sheet-switcher-review-flow/video.1794506971956.mp4",
+    "author": "Astryxdesign",
+    "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-bottom-sheet-switcher?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-bottom-sheet-switcher"
+  },
+  "component": {
+    "id": 45324,
+    "componentId": 26157,
+    "name": "Astryx Bottom Sheet Switcher",
+    "demoName": "Bottom Sheet — Review flow",
+    "description": "A multi-step Astryx bottom-sheet flow demonstrating in-place transitions between notification setup steps.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-bottom-sheet-switcher/bottom-sheet-switcher-review-flow/preview.1794507018040.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-bottom-sheet-switcher?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\nimport \"./astryx-bottom-sheet-switcher-utils/index.css\"\nimport { BottomSheet } from \"@astryxdesign/core/BottomSheet\"\n\nexport * from \"@astryxdesign/core/BottomSheet\"\nexport default BottomSheet\n",
+    "demoCode": "'use client';\n\nimport {useState} from 'react';\nimport {BottomSheet} from '@/components/ui/astryx-bottom-sheet-switcher';\nimport {Button} from '@astryxdesign/core/Button';\nimport {Heading} from '@astryxdesign/core/Heading';\nimport {Section} from '@astryxdesign/core/Section';\nimport {HStack, VStack} from '@astryxdesign/core/Stack';\nimport {Text} from '@astryxdesign/core/Text';\n\ntype Step = 'review' | 'confirm' | null;\n\nfunction BottomSheetSwitcherReviewFlow() {\n  // One state value names the open step; Continue and Back close one sheet\n  // and open the other in the same update, which replaces it in place.\n  const [step, setStep] = useState<Step>(null);\n  // Clear the step only if it is still the open one: a step that closes\n  // because the person moved on must not undo the move.\n  const close = (own: Step) => (isOpen: boolean) => {\n    if (!isOpen) {\n      setStep(current => (current === own ? null : current));\n    }\n  };\n\n  return (\n    <>\n      <Button label=\"Review settings\" onClick={() => setStep('review')} />\n      <BottomSheet\n        isOpen={step === 'review'}\n        onOpenChange={close('review')}\n        label=\"Review notification settings\"\n        height=\"hug\"\n        purpose=\"form\">\n        <Section padding={4}>\n          <VStack gap={4}>\n            <VStack gap={1}>\n              <Heading level={3}>Review settings</Heading>\n              <Text type=\"supporting\" color=\"secondary\">\n                Daily summaries will be sent by email.\n              </Text>\n            </VStack>\n            <HStack gap={2} hAlign=\"end\">\n              <Button\n                label=\"Cancel\"\n                variant=\"secondary\"\n                onClick={() => setStep(null)}\n              />\n              <Button label=\"Continue\" onClick={() => setStep('confirm')} />\n            </HStack>\n          </VStack>\n        </Section>\n      </BottomSheet>\n      <BottomSheet\n        isOpen={step === 'confirm'}\n        onOpenChange={close('confirm')}\n        label=\"Confirm settings\"\n        height=\"hug\">\n        <Section padding={4}>\n          <VStack gap={4}>\n            <VStack gap={1}>\n              <Heading level={3}>Confirm settings</Heading>\n              <Text type=\"supporting\" color=\"secondary\">\n                Your notification settings are ready to save.\n              </Text>\n            </VStack>\n            <HStack gap={2} hAlign=\"end\">\n              <Button\n                label=\"Back\"\n                variant=\"secondary\"\n                onClick={() => setStep('review')}\n              />\n              <Button label=\"Save\" onClick={() => setStep(null)} />\n            </HStack>\n          </VStack>\n        </Section>\n      </BottomSheet>\n    </>\n  );\n}\n\nexport default function BottomSheetSwitcherReviewFlowDemo() {\n  return (\n    <div\n      data-astryx-theme=\"neutral\"\n      data-theme=\"light\"\n      style={{colorScheme: 'light', display: 'contents'}}>\n      <BottomSheetSwitcherReviewFlow />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source and usage retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

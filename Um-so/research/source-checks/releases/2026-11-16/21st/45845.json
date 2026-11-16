@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:45:53.298Z",
+  "metadata": {
+    "type": "component",
+    "id": 45845,
+    "name": "Astryx Checkbox List Item",
+    "description": "Individual checkbox item with label, description, and end content slot. Works in collection mode (inside a CheckboxList with a value array) or standalone mode (inside List, or inside a CheckboxList without value, such as a select-all item). On a touch screen (a coarse primary pointer), a toggleable row is one press target: a touch on the label, the description or the box itself shows the pressed state on the row and its checkbox together. Where the primary pointer is fine, the box keeps its own press.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-checkbox-list-item/checkbox-list-item-basic/preview.1794515820087.png",
+    "videoUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-checkbox-list-item/checkbox-list-item-basic/video.1794515799055.mp4",
+    "author": "Astryxdesign",
+    "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-checkbox-list-item?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-checkbox-list-item"
+  },
+  "component": {
+    "id": 45845,
+    "componentId": 26410,
+    "name": "Astryx Checkbox List Item",
+    "demoName": "CheckboxListItem — Basic",
+    "description": "Individual checkbox item with label, description, and end content slot. Works in collection mode (inside a CheckboxList with a value array) or standalone mode (inside List, or inside a CheckboxList without value, such as a select-all item). On a touch screen (a coarse primary pointer), a toggleable row is one press target: a touch on the label, the description or the box itself shows the pressed state on the row and its checkbox together. Where the primary pointer is fine, the box keeps its own press.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-checkbox-list-item/checkbox-list-item-basic/preview.1794515820087.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-checkbox-list-item?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\nimport \"./astryx-checkbox-list-item-utils/index.css\"\nimport { CheckboxListItem } from \"@astryxdesign/core/CheckboxList\"\n\nexport * from \"@astryxdesign/core/CheckboxList\"\nexport default CheckboxListItem\n",
+    "demoCode": "'use client';\n\nimport {useState} from 'react';\nimport {CheckboxList, CheckboxListItem} from '@/components/ui/astryx-checkbox-list-item';\n\nfunction CheckboxListItemBasic() {\n  const [value, setValue] = useState<string[]>(['updates']);\n\n  return (\n    <CheckboxList label=\"Email preferences\" value={value} onChange={setValue}>\n      <CheckboxListItem\n        label=\"Product updates\"\n        value=\"updates\"\n        description=\"New features and improvements\"\n      />\n      <CheckboxListItem\n        label=\"Security alerts\"\n        value=\"security\"\n        description=\"Important account security notifications\"\n      />\n      <CheckboxListItem\n        label=\"Marketing\"\n        value=\"marketing\"\n        description=\"Tips, offers, and promotions\"\n      />\n    </CheckboxList>\n  );\n}\n\nexport default function CheckboxListItemBasicDemo() {\n  return (\n    <div\n      data-astryx-theme=\"neutral\"\n      data-theme=\"light\"\n      style={{colorScheme: 'light', display: 'contents'}}>\n      <CheckboxListItemBasic />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source and usage retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

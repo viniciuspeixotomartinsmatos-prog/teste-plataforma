@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:45:53.131Z",
+  "metadata": {
+    "type": "component",
+    "id": 45902,
+    "name": "Astryx Collapsible Group",
+    "description": "Coordinates multiple Collapsible instances so only one (single mode) or any number (multiple mode) can be open at a time. Renders no wrapper DOM element unless dividers are enabled.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-collapsible-group/collapsible-group-density/preview.1794512176073.png",
+    "videoUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-collapsible-group/collapsible-group-density/video.1794512016129.mp4",
+    "author": "Astryxdesign",
+    "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-collapsible-group?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-collapsible-group"
+  },
+  "component": {
+    "id": 45902,
+    "componentId": 26425,
+    "name": "Astryx Collapsible Group",
+    "demoName": "CollapsibleGroup — Density",
+    "description": "Coordinates multiple Collapsible instances so only one (single mode) or any number (multiple mode) can be open at a time. Renders no wrapper DOM element unless dividers are enabled.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-collapsible-group/collapsible-group-density/preview.1794512176073.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-collapsible-group?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\nimport \"./astryx-collapsible-group-utils/index.css\"\nimport { CollapsibleGroup } from \"@astryxdesign/core/Collapsible\"\n\nexport * from \"@astryxdesign/core/Collapsible\"\nexport default CollapsibleGroup\n",
+    "demoCode": "'use client';\n\nimport {Collapsible, CollapsibleGroup} from '@/components/ui/astryx-collapsible-group';\nimport {Text} from '@astryxdesign/core/Text';\nimport {Stack} from '@astryxdesign/core/Stack';\n\n/**\n * `density` sets the block padding on every row in the group, so a list of\n * sections can be tuned to the surface it sits on without touching the rows\n * themselves. It follows Table's scale, and pairs with `hasDividers`, which\n * turns it on at 'balanced' by default.\n *\n * - compact  — dense surfaces: sidebars, inspectors, a panel of many rows\n * - balanced — the default, and right for most page content\n * - spacious — a short list that is the main thing on the page\n *\n * Rows share a surface here, so the triggers take body-semibold rather than\n * the trigger's default 'large': at 17px semibold each row would read as its\n * own section heading.\n */\nconst SECTIONS = [\n  {\n    value: 'a',\n    trigger: 'Region',\n    body: 'Where your data is stored and processed. Changing region migrates existing data and can take up to an hour.',\n  },\n  {\n    value: 'b',\n    trigger: 'Retention',\n    body: 'How long deleted items stay recoverable before being purged.',\n  },\n  {\n    value: 'c',\n    trigger: 'Audit log',\n    body: 'Who can read the log, and how far back it reaches.',\n  },\n];\n\nfunction DensityExample({\n  density,\n  label,\n}: {\n  density: 'compact' | 'balanced' | 'spacious';\n  label: string;\n}) {\n  return (\n    <Stack gap={1}>\n      <Text type=\"supporting\">{label}</Text>\n      <CollapsibleGroup\n        type=\"single\"\n        hasDividers\n        density={density}\n        defaultValue=\"a\">\n        {SECTIONS.map(section => (\n          <Collapsible\n            key={section.value}\n            value={section.value}\n            trigger={\n              <Text type=\"body\" weight=\"semibold\">\n                {section.trigger}\n              </Text>\n            }>\n            <Text type=\"body\" color=\"secondary\">\n              {section.body}\n            </Text>\n          </Collapsible>\n        ))}\n      </CollapsibleGroup>\n    </Stack>\n  );\n}\n\nfunction CollapsibleGroupAccordion() {\n  return (\n    <Stack gap={5} maxWidth={420}>\n      <DensityExample density=\"compact\" label=\"compact\" />\n      <DensityExample density=\"balanced\" label=\"balanced — the default\" />\n      <DensityExample density=\"spacious\" label=\"spacious\" />\n    </Stack>\n  );\n}\n\nexport default function CollapsibleGroupAccordionDemo() {\n  return (\n    <div\n      data-astryx-theme=\"neutral\"\n      data-theme=\"light\"\n      style={{colorScheme: 'light', display: 'contents'}}>\n      <CollapsibleGroupAccordion />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source and usage retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

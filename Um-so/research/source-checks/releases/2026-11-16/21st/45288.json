@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:49:36.122Z",
+  "metadata": {
+    "type": "component",
+    "id": 45288,
+    "name": "Astryx Chat Message",
+    "description": "An Astryx sender context wrapper that controls message avatar, name, metadata, and alignment by sender role.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-chat-message/default/preview.1794510415716.png",
+    "videoUrl": null,
+    "author": "Astryxdesign",
+    "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-chat-message?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-message"
+  },
+  "component": {
+    "id": 45288,
+    "componentId": 26174,
+    "name": "Astryx Chat Message",
+    "demoName": "Default",
+    "description": "An Astryx sender context wrapper that controls message avatar, name, metadata, and alignment by sender role.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-chat-message/default/preview.1794510415716.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-chat-message?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\nimport \"./astryx-chat-message-utils/index.css\"\nimport { ChatMessage } from \"@astryxdesign/core/Chat\"\n\nexport * from \"@astryxdesign/core/Chat\"\nexport default ChatMessage\n",
+    "demoCode": "// Copyright (c) Meta Platforms, Inc. and affiliates.\n\n'use client';\n\nimport {\n  ChatMessageList,\n  ChatMessage,\n  ChatMessageBubble,\n  ChatMessageMetadata,\n} from '@/components/ui/astryx-chat-message';\nimport {Timestamp} from '@astryxdesign/core/Timestamp';\nimport {Text} from '@astryxdesign/core/Text';\n\nexport default function ChatMessageShowcase() {\n  return (\n    <div\n      data-astryx-theme=\"neutral\"\n      data-theme=\"light\"\n      style={{colorScheme: 'light', display: 'contents'}}>\n      <ChatMessageList style={{maxWidth: 600}}>\n        <ChatMessage sender=\"user\">\n          <ChatMessageBubble group=\"first\">\n            I just pushed the refactored auth module.\n          </ChatMessageBubble>\n          <ChatMessageBubble\n            group=\"last\"\n            metadata={\n              <ChatMessageMetadata\n                timestamp={\n                  <Timestamp value=\"2026-04-28T14:30:00\" format=\"time\" />\n                }\n                status=\"read\"\n              />\n            }>\n            Can you review the token validation changes?\n          </ChatMessageBubble>\n        </ChatMessage>\n        <ChatMessage sender=\"assistant\">\n          <ChatMessageBubble\n            variant=\"ghost\"\n            metadata={\n              <ChatMessageMetadata\n                timestamp={\n                  <Timestamp value=\"2026-04-28T14:31:00\" format=\"time\" />\n                }\n                footer={\n                  <Text type=\"supporting\" color=\"secondary\">\n                    Claude Opus 4.6\n                  </Text>\n                }\n              />\n            }>\n            Looks good — the refresh token rotation is solid and the error\n            handling covers all the edge cases. Ship it.\n          </ChatMessageBubble>\n        </ChatMessage>\n      </ChatMessageList>\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

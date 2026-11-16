@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:45:53.324Z",
+  "metadata": {
+    "type": "component",
+    "id": 45843,
+    "name": "Astryx Checkbox List",
+    "description": "Checkbox group container with field integration for label, description, and status.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-checkbox-list/checkbox-list-with-end-content/preview.1794511227132.png",
+    "videoUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-checkbox-list/checkbox-list-with-end-content/video.1794511179132.mp4",
+    "author": "Astryxdesign",
+    "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-checkbox-list?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-checkbox-list"
+  },
+  "component": {
+    "id": 45843,
+    "componentId": 26409,
+    "name": "Astryx Checkbox List",
+    "demoName": "CheckboxList — With End Content",
+    "description": "Checkbox group container with field integration for label, description, and status.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-checkbox-list/checkbox-list-with-end-content/preview.1794511227132.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-checkbox-list?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\nimport \"./astryx-checkbox-list-utils/index.css\"\nimport { CheckboxList } from \"@astryxdesign/core/CheckboxList\"\n\nexport * from \"@astryxdesign/core/CheckboxList\"\nexport default CheckboxList\n",
+    "demoCode": "'use client';\n\nimport {useState} from 'react';\nimport {CheckboxList, CheckboxListItem} from '@/components/ui/astryx-checkbox-list';\nimport {Badge} from '@astryxdesign/core/Badge';\n\nfunction CheckboxListWithEndContent() {\n  const [value, setValue] = useState<string[]>(['free']);\n  return (\n    <CheckboxList\n      label=\"Add-on packages\"\n      value={value}\n      onChange={setValue}\n      hasDividers>\n      <CheckboxListItem\n        label=\"Free tier\"\n        value=\"free\"\n        description=\"Basic features included\"\n        endContent={<Badge variant=\"success\" label=\"$0/mo\" />}\n      />\n      <CheckboxListItem\n        label=\"Pro tier\"\n        value=\"pro\"\n        description=\"Advanced analytics and integrations\"\n        endContent={<Badge variant=\"info\" label=\"$9/mo\" />}\n      />\n      <CheckboxListItem\n        label=\"Enterprise\"\n        value=\"enterprise\"\n        description=\"Custom solutions and dedicated support\"\n        endContent={<Badge variant=\"purple\" label=\"Custom\" />}\n      />\n    </CheckboxList>\n  );\n}\n\nexport default function CheckboxListWithEndContentDemo() {\n  return (\n    <div\n      data-astryx-theme=\"neutral\"\n      data-theme=\"light\"\n      style={{colorScheme: 'light', display: 'contents'}}>\n      <CheckboxListWithEndContent />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source and usage retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

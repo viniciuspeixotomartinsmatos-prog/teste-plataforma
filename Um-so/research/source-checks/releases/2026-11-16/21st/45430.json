@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:45:53.528Z",
+  "metadata": {
+    "type": "component",
+    "id": 45430,
+    "name": "Astryx Chat Message Bubble",
+    "description": "Styled content container for the chat \"bubble.\" Reads sender from parent ChatMessage context to auto-style the background. Use filled for standard messages and ghost when content needs alignment without a visible boundary. Supports name/metadata slots aligned with bubble padding, and multi-bubble grouping via the group prop for consecutive messages from the same sender.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-chat-message-bubble/default/preview.1794510620912.png",
+    "videoUrl": null,
+    "author": "Astryxdesign",
+    "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-chat-message-bubble?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-message-bubble"
+  },
+  "component": {
+    "id": 45430,
+    "componentId": 26186,
+    "name": "Astryx Chat Message Bubble",
+    "demoName": "Default",
+    "description": "Styled content container for the chat \"bubble.\" Reads sender from parent ChatMessage context to auto-style the background. Use filled for standard messages and ghost when content needs alignment without a visible boundary. Supports name/metadata slots aligned with bubble padding, and multi-bubble grouping via the group prop for consecutive messages from the same sender.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-chat-message-bubble/default/preview.1794510620912.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-chat-message-bubble?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\nimport \"./astryx-chat-message-bubble-utils/index.css\"\nimport { ChatMessageBubble } from \"@astryxdesign/core/Chat\"\n\nexport * from \"@astryxdesign/core/Chat\"\nexport default ChatMessageBubble\n",
+    "demoCode": "// Copyright (c) Meta Platforms, Inc. and affiliates.\n\n'use client';\n\nimport {\n  ChatMessageList,\n  ChatMessage,\n  ChatMessageBubble,\n  ChatMessageMetadata,\n} from '@/components/ui/astryx-chat-message-bubble';\nimport {Timestamp} from '@astryxdesign/core/Timestamp';\n\nfunction ChatMessageBubbleShowcase() {\n  return (\n    <ChatMessageList style={{maxWidth: 600}}>\n      <ChatMessage sender=\"user\">\n        <ChatMessageBubble group=\"first\">\n          I just pushed the latest changes to the feature branch.\n        </ChatMessageBubble>\n        <ChatMessageBubble\n          group=\"last\"\n          metadata={\n            <ChatMessageMetadata\n              timestamp={\n                <Timestamp value=\"2026-04-10T09:15:00\" format=\"time\" />\n              }\n              status=\"read\"\n            />\n          }>\n          Can you review when you get a chance?\n        </ChatMessageBubble>\n      </ChatMessage>\n      <ChatMessage sender=\"assistant\">\n        <ChatMessageBubble\n          variant=\"ghost\"\n          metadata={\n            <ChatMessageMetadata\n              timestamp={\n                <Timestamp value=\"2026-04-10T09:16:00\" format=\"time\" />\n              }\n            />\n          }>\n          The changes look great. Ship it!\n        </ChatMessageBubble>\n      </ChatMessage>\n    </ChatMessageList>\n  );\n}\n\nexport default function ChatMessageBubbleShowcaseDemo() {\n  return (\n    <div\n      data-astryx-theme=\"neutral\"\n      data-theme=\"light\"\n      style={{colorScheme: 'light', display: 'contents'}}>\n      <ChatMessageBubbleShowcase />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source and usage retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

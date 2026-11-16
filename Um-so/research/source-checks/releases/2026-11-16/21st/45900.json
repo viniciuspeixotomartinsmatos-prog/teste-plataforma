@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:45:53.154Z",
+  "metadata": {
+    "type": "component",
+    "id": 45900,
+    "name": "Astryx Collapsible",
+    "description": "A primitive that makes any content collapsible: a trigger button toggles visibility of the content area, managing its own state or deferring to a parent CollapsibleGroup.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-collapsible/collapsible-with-dividers/preview.1794512397462.png",
+    "videoUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-collapsible/collapsible-with-dividers/video.1794512323051.mp4",
+    "author": "Astryxdesign",
+    "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-collapsible?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-collapsible"
+  },
+  "component": {
+    "id": 45900,
+    "componentId": 26424,
+    "name": "Astryx Collapsible",
+    "demoName": "Collapsible — With Dividers",
+    "description": "A primitive that makes any content collapsible: a trigger button toggles visibility of the content area, managing its own state or deferring to a parent CollapsibleGroup.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-collapsible/collapsible-with-dividers/preview.1794512397462.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-collapsible?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\nimport \"./astryx-collapsible-utils/index.css\"\nimport { Collapsible } from \"@astryxdesign/core/Collapsible\"\n\nexport * from \"@astryxdesign/core/Collapsible\"\nexport default Collapsible\n",
+    "demoCode": "'use client';\n\nimport {Collapsible} from '@/components/ui/astryx-collapsible';\nimport {Text} from '@astryxdesign/core/Text';\nimport {Divider} from '@astryxdesign/core/Divider';\nimport {Stack} from '@astryxdesign/core/Stack';\n\n/**\n * A flat list on the page background, no card and no group dividers — the\n * Dividers are placed by hand so the rows can carry different spacing than\n * `hasDividers` gives them.\n *\n * Rows, so the triggers take body-semibold rather than the default `large`:\n * these are peers in a list, not section headings. The metadata line under\n * each answer is `supporting`, the one place a third size earns its place.\n */\nfunction CollapsibleWithoutCard() {\n  return (\n    <Stack gap={3} maxWidth={480}>\n      <Collapsible\n        trigger={\n          <Text type=\"body\" weight=\"semibold\">\n            Deployment details\n          </Text>\n        }\n        value=\"deployment\">\n        <Stack gap={1}>\n          <Text type=\"body\" color=\"secondary\">\n            Build 4,182 shipped to production from <code>main</code>. 847\n            modules compiled with no warnings, and the bundle came in at 142 KB\n            gzipped — 3 KB under the budget.\n          </Text>\n          <Text type=\"supporting\">\n            Deployed by Sarah Chen · April 18, 3:42 PM · 2m 14s\n          </Text>\n        </Stack>\n      </Collapsible>\n\n      <Divider />\n\n      <Collapsible\n        trigger={\n          <Text type=\"body\" weight=\"semibold\">\n            Environment variables\n          </Text>\n        }\n        value=\"environment\">\n        <Stack gap={1}>\n          <Text type=\"body\" color=\"secondary\">\n            12 variables configured across production and preview. Secrets are\n            encrypted at rest with AES-256 and are never printed in build logs.\n          </Text>\n          <Text type=\"supporting\">Last updated March 30 by the deploy bot</Text>\n        </Stack>\n      </Collapsible>\n\n      <Divider />\n\n      <Collapsible\n        trigger={\n          <Text type=\"body\" weight=\"semibold\">\n            Rollback\n          </Text>\n        }\n        value=\"rollback\">\n        <Stack gap={1}>\n          <Text type=\"body\" color=\"secondary\">\n            The previous build stays warm for 24 hours, so a rollback swaps\n            traffic back in a few seconds without a rebuild. After that window a\n            rollback redeploys from source and takes about two minutes.\n          </Text>\n          <Text type=\"supporting\">Previous build 4,181 · expires in 19h</Text>\n        </Stack>\n      </Collapsible>\n    </Stack>\n  );\n}\n\nexport default function CollapsibleWithoutCardDemo() {\n  return (\n    <div\n      data-astryx-theme=\"neutral\"\n      data-theme=\"light\"\n      style={{colorScheme: 'light', display: 'contents'}}>\n      <CollapsibleWithoutCard />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source and usage retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

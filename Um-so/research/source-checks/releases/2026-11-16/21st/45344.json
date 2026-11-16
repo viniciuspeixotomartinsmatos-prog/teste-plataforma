@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:45:53.646Z",
+  "metadata": {
+    "type": "component",
+    "id": 45344,
+    "name": "Astryx Center",
+    "description": "An Astryx layout primitive that centers content horizontally, vertically, or along both axes within its container.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-center/center-vertical-horizontal-center/preview.1794432504856.png",
+    "videoUrl": null,
+    "author": "Astryxdesign",
+    "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-center?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-center"
+  },
+  "component": {
+    "id": 45344,
+    "componentId": 26164,
+    "name": "Astryx Center",
+    "demoName": "Center — Vertical & Horizontal Center",
+    "description": "An Astryx layout primitive that centers content horizontally, vertically, or along both axes within its container.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-center/center-vertical-horizontal-center/preview.1794432504856.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-center?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\nimport \"./astryx-center-utils/index.css\"\nimport { Center } from \"@astryxdesign/core/Center\"\n\nexport * from \"@astryxdesign/core/Center\"\nexport default Center\n",
+    "demoCode": "'use client';\n\nimport {Center} from '@/components/ui/astryx-center';\nimport {Card} from '@astryxdesign/core/Card';\nimport {Stack} from '@astryxdesign/core/Layout';\nimport {Icon} from '@astryxdesign/core/Icon';\nimport {Text} from '@astryxdesign/core/Text';\nimport {InboxIcon} from '@heroicons/react/24/outline';\n\nfunction CenterInsideACard() {\n  return (\n    <Card width={400}>\n      <Center height={200}>\n        <Stack direction=\"vertical\" gap={2} hAlign=\"center\">\n          <Icon icon={InboxIcon} size=\"lg\" color=\"secondary\" />\n          <Text type=\"body\" weight=\"bold\">\n            No messages yet\n          </Text>\n          <Text type=\"supporting\" color=\"secondary\">\n            Messages from your team will appear here.\n          </Text>\n        </Stack>\n      </Center>\n    </Card>\n  );\n}\n\nexport default function CenterInsideACardDemo() {\n  return (\n    <div\n      data-astryx-theme=\"neutral\"\n      data-theme=\"light\"\n      style={{colorScheme: 'light', display: 'contents'}}>\n      <CenterInsideACard />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source and usage retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

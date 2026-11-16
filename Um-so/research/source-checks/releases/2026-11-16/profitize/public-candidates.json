@@ -1,0 +1,834 @@
+{
+  "checkedAt": "2026-11-16T13:47:47.865Z",
+  "scope": "Public metadata only. No original prompts, archives or playback acquired/verified.",
+  "records": [
+    {
+      "route": "/build/componentes/doodle-crew-footer",
+      "url": "https://profitize.com.br/build/componentes/doodle-crew-footer",
+      "metadata": {
+        "id": "3c81ffd7-ee50-4fee-8e71-fc1afad4705a",
+        "slug": "doodle-crew-footer",
+        "title": "Doodle Crew Footer",
+        "type": "component",
+        "kind": {
+          "id": "component",
+          "label": "Componente",
+          "plural": "Componentes",
+          "segment": "componentes",
+          "sortOrder": 1
+        },
+        "niche": "Rodapé",
+        "description": "Rodapé com o nome da marca carimbado em tinta e uma turma desenhada à mão morando nas letras: os olhos seguem o mouse, cada personagem pula e fala no clique, e os desenhinhos que caem fogem do ponteiro.",
+        "tags": [
+          "Ilustração",
+          "Tipografia"
+        ],
+        "tone": "claro",
+        "aspect": "4/3",
+        "preview": {
+          "poster": "$undefined",
+          "video": "$undefined",
+          "mode": "cover"
+        },
+        "updatedAt": "2026-11-16T10:10:02.828913+00:00"
+      },
+      "pageSha256": "40c0d6a55c9664e37e0f14d307cbbfff5d860c1624fd8d606f497b24528d94d7",
+      "status": "public_metadata_retained",
+      "originalPrompt": "not acquired: authenticated original download required",
+      "published": false
+    },
+    {
+      "route": "/build/landing-pages/alvio",
+      "url": "https://profitize.com.br/build/landing-pages/alvio",
+      "metadata": {
+        "id": "057ae0b2-c430-446b-a4d1-73da513a7382",
+        "slug": "alvio",
+        "title": "Alvio",
+        "type": "landing_page",
+        "kind": {
+          "id": "landing_page",
+          "label": "Landing page",
+          "plural": "Landing pages",
+          "segment": "landing-pages",
+          "sortOrder": 0
+        },
+        "niche": "clínica odontológica",
+        "description": "Clínica odontológica: um implante em 3D acompanha a página, abre peça por peça, mostra cada tratamento e vira vidro.",
+        "tags": [
+          "odontologia",
+          "dentista",
+          "clinica",
+          "implante",
+          "lentes",
+          "clareamento",
+          "alinhadores",
+          "saude",
+          "3d",
+          "three.js",
+          "webgl",
+          "vista-explodida",
+          "vidro",
+          "nuvem-de-pontos",
+          "claro",
+          "gsap",
+          "lenis",
+          "mobile"
+        ],
+        "tone": "claro",
+        "aspect": "16/10",
+        "preview": {
+          "poster": "/build/media/057ae0b2-c430-446b-a4d1-73da513a7382/poster-b112cf00.webp",
+          "video": "/build/media/057ae0b2-c430-446b-a4d1-73da513a7382/previa-card-72273d20.mp4",
+          "mode": "cover"
+        },
+        "updatedAt": "2026-11-14T06:10:16.528905+00:00"
+      },
+      "pageSha256": "239b87c53ac96540ff63039ee6aa98424db5725204627becee4d32ae4db8fed7",
+      "status": "public_metadata_retained",
+      "originalPrompt": "not acquired: authenticated original download required",
+      "published": false
+    },
+    {
+      "route": "/build/landing-pages/capia",
+      "url": "https://profitize.com.br/build/landing-pages/capia",
+      "metadata": {
+        "id": "ebd75434-0e23-465f-8501-aa823e72dab5",
+        "slug": "capia",
+        "title": "Capiá",
+        "type": "landing_page",
+        "kind": {
+          "id": "landing_page",
+          "label": "Landing page",
+          "plural": "Landing pages",
+          "segment": "landing-pages",
+          "sortOrder": 0
+        },
+        "niche": "hamburgueria",
+        "description": "Hamburgueria com mascote: o cardápio sobe em painéis de papel rasgado e cada lanche troca os ingredientes que flutuam em volta.",
+        "tags": [
+          "hamburgueria",
+          "lanchonete",
+          "restaurante",
+          "delivery",
+          "cardápio",
+          "comida",
+          "mascote",
+          "papel rasgado",
+          "painéis presos",
+          "seletor de produto",
+          "carrossel",
+          "ingredientes flutuando",
+          "rastro do mouse",
+          "amarelo",
+          "lenis",
+          "vite",
+          "mobile"
+        ],
+        "tone": "escuro",
+        "aspect": "16/10",
+        "preview": {
+          "poster": "/build/media/ebd75434-0e23-465f-8501-aa823e72dab5/poster-05d96ec3.webp",
+          "video": "/build/media/ebd75434-0e23-465f-8501-aa823e72dab5/previa-card-5a274015.mp4",
+          "mode": "cover"
+        },
+        "updatedAt": "2026-11-16T06:21:05.719693+00:00"
+      },
+      "pageSha256": "618f30029092c54515b1f9930c585561a474c7d2b927df954e3ce78f7411a8e2",
+      "status": "public_metadata_retained",
+      "originalPrompt": "not acquired: authenticated original download required",
+      "published": false
+    },
+    {
+      "route": "/build/landing-pages/ceru",
+      "url": "https://profitize.com.br/build/landing-pages/ceru",
+      "metadata": {
+        "id": "84d8b41d-bc85-4de5-a9f0-37a66cc8af89",
+        "slug": "ceru",
+        "title": "Ceru",
+        "type": "landing_page",
+        "kind": {
+          "id": "landing_page",
+          "label": "Landing page",
+          "plural": "Landing pages",
+          "segment": "landing-pages",
+          "sortOrder": 0
+        },
+        "niche": "plataforma de IA",
+        "description": "Plataforma de IA de chat: uma paisagem em vídeo vira pixel art azul por um shader próprio, com a conversa no meio do céu.",
+        "tags": [
+          "inteligência artificial",
+          "IA",
+          "chat",
+          "chatbot",
+          "assistente",
+          "saas",
+          "startup",
+          "software",
+          "shader",
+          "pixel art",
+          "pontilhado",
+          "vídeo de fundo",
+          "webgl",
+          "abas",
+          "claro",
+          "azul",
+          "serifa",
+          "gsap",
+          "lenis",
+          "vite",
+          "mobile"
+        ],
+        "tone": "claro",
+        "aspect": "16/10",
+        "preview": {
+          "poster": "/build/media/84d8b41d-bc85-4de5-a9f0-37a66cc8af89/poster-5d4b7f94.webp",
+          "video": "/build/media/84d8b41d-bc85-4de5-a9f0-37a66cc8af89/previa-card-3f43b276.mp4",
+          "mode": "cover"
+        },
+        "updatedAt": "2026-11-14T06:09:43.470758+00:00"
+      },
+      "pageSha256": "1587100b3c27a5d9a57142626d054d58fcf4f487e874b7d45e26ea0f8bd804c1",
+      "status": "public_metadata_retained",
+      "originalPrompt": "not acquired: authenticated original download required",
+      "published": false
+    },
+    {
+      "route": "/build/landing-pages/kromo",
+      "url": "https://profitize.com.br/build/landing-pages/kromo",
+      "metadata": {
+        "id": "8445f2db-9fc1-4781-8e1a-d6a5ec0db75a",
+        "slug": "kromo",
+        "title": "Kromo",
+        "type": "landing_page",
+        "kind": {
+          "id": "landing_page",
+          "label": "Landing page",
+          "plural": "Landing pages",
+          "segment": "landing-pages",
+          "sortOrder": 0
+        },
+        "niche": "portfólio de fotógrafo",
+        "description": "Portfólio de fotógrafo: a abertura sai de dentro da lente da câmera, onde as fotos passam, e as seções sobem em diagonal.",
+        "tags": [
+          "portfólio",
+          "fotógrafo",
+          "fotografia",
+          "estúdio de fotos",
+          "marca pessoal",
+          "filmmaker",
+          "retrato recortado",
+          "abertura",
+          "assinatura desenhada",
+          "trilho lateral",
+          "menu grande",
+          "galeria",
+          "claro",
+          "vermelho",
+          "gsap",
+          "lenis",
+          "vite",
+          "mobile"
+        ],
+        "tone": "claro",
+        "aspect": "16/10",
+        "preview": {
+          "poster": "/build/media/8445f2db-9fc1-4781-8e1a-d6a5ec0db75a/poster-597d6a0c.webp",
+          "video": "/build/media/8445f2db-9fc1-4781-8e1a-d6a5ec0db75a/previa-card-a2902fd4.mp4",
+          "mode": "cover"
+        },
+        "updatedAt": "2026-11-14T06:09:43.480031+00:00"
+      },
+      "pageSha256": "d25b4d90155f6023ab6a6143549468edbc9c1838bc675b0827b9fecf477c7b5a",
+      "status": "public_metadata_retained",
+      "originalPrompt": "not acquired: authenticated original download required",
+      "published": false
+    },
+    {
+      "route": "/build/landing-pages/lampo",
+      "url": "https://profitize.com.br/build/landing-pages/lampo",
+      "metadata": {
+        "id": "b2094fd8-14c7-4d0c-a850-8767df1efc30",
+        "slug": "lampo",
+        "title": "Lampo",
+        "type": "landing_page",
+        "kind": {
+          "id": "landing_page",
+          "label": "Landing page",
+          "plural": "Landing pages",
+          "segment": "landing-pages",
+          "sortOrder": 0
+        },
+        "niche": "agência de IA",
+        "description": "Agência de IA: o card do hero gira 90° e vira um anel de cards em 3D, e uma faísca cresce até virar um portal de partículas.",
+        "tags": [
+          "ia",
+          "agencia",
+          "agentes",
+          "automacao",
+          "atendimento",
+          "whatsapp",
+          "tech",
+          "3d",
+          "threejs",
+          "particulas",
+          "carrossel-3d",
+          "cromo",
+          "vermelho",
+          "degrade",
+          "pin",
+          "gsap",
+          "lenis",
+          "mobile"
+        ],
+        "tone": "escuro",
+        "aspect": "16/10",
+        "preview": {
+          "poster": "/build/media/b2094fd8-14c7-4d0c-a850-8767df1efc30/poster-b297a234.webp",
+          "video": "/build/media/b2094fd8-14c7-4d0c-a850-8767df1efc30/previa-card-0e3470f7.mp4",
+          "mode": "cover"
+        },
+        "updatedAt": "2026-11-14T06:10:16.478405+00:00"
+      },
+      "pageSha256": "2f4175469c3cf5a8d681e0519a58bb1e49283da56dfd733f3fa3a70178348998",
+      "status": "public_metadata_retained",
+      "originalPrompt": "not acquired: authenticated original download required",
+      "published": false
+    },
+    {
+      "route": "/build/landing-pages/linno",
+      "url": "https://profitize.com.br/build/landing-pages/linno",
+      "status": "unavailable",
+      "reason": "Metadata identity mismatch",
+      "published": false
+    },
+    {
+      "route": "/build/landing-pages/nubo",
+      "url": "https://profitize.com.br/build/landing-pages/nubo",
+      "metadata": {
+        "id": "685c997a-3489-4baf-a8a8-4131c24721c1",
+        "slug": "nubo",
+        "title": "Nubo",
+        "type": "landing_page",
+        "kind": {
+          "id": "landing_page",
+          "label": "Landing page",
+          "plural": "Landing pages",
+          "segment": "landing-pages",
+          "sortOrder": 0
+        },
+        "niche": "software house",
+        "description": "Software house: um balão de pensamento recorta o céu com um avião de papel e cresce até a tela inteira na rolagem.",
+        "tags": [
+          "software house",
+          "desenvolvimento",
+          "agência digital",
+          "tecnologia",
+          "apps",
+          "sistemas",
+          "recorte",
+          "vídeo",
+          "rolagem lateral",
+          "cards empilhados",
+          "formulário",
+          "colorido",
+          "claro",
+          "gsap",
+          "vite",
+          "mobile"
+        ],
+        "tone": "claro",
+        "aspect": "16/10",
+        "preview": {
+          "poster": "/build/media/685c997a-3489-4baf-a8a8-4131c24721c1/poster-6f630f3f.webp",
+          "video": "/build/media/685c997a-3489-4baf-a8a8-4131c24721c1/previa-card-abe07530.mp4",
+          "mode": "cover"
+        },
+        "updatedAt": "2026-11-14T06:09:53.026684+00:00"
+      },
+      "pageSha256": "73d88f541c00bde89a8164f92a20721e4eb55500215d3fc4a3ea56967ba74e5c",
+      "status": "public_metadata_retained",
+      "originalPrompt": "not acquired: authenticated original download required",
+      "published": false
+    },
+    {
+      "route": "/build/landing-pages/pelu",
+      "url": "https://profitize.com.br/build/landing-pages/pelu",
+      "metadata": {
+        "id": "8cafdbed-5b0e-4a53-a3df-aee6453d2f29",
+        "slug": "pelu",
+        "title": "Pelu",
+        "type": "landing_page",
+        "kind": {
+          "id": "landing_page",
+          "label": "Landing page",
+          "plural": "Landing pages",
+          "segment": "landing-pages",
+          "sortOrder": 0
+        },
+        "niche": "pet shop",
+        "description": "Pet shop com veterinário: cada serviço é um brinquedo 3D numa fileira, e o hover abre a cor dele num círculo a partir do cursor.",
+        "tags": [
+          "pet shop",
+          "banho e tosa",
+          "veterinário",
+          "clínica veterinária",
+          "hotel para cães",
+          "pet",
+          "loja",
+          "objetos 3d",
+          "recorte",
+          "hover",
+          "texto que acende",
+          "cards empilhados",
+          "agendamento",
+          "whatsapp",
+          "colorido",
+          "claro",
+          "gsap",
+          "lenis",
+          "vite",
+          "mobile"
+        ],
+        "tone": "claro",
+        "aspect": "40/23",
+        "preview": {
+          "poster": "/build/media/8cafdbed-5b0e-4a53-a3df-aee6453d2f29/poster-d9800273.webp",
+          "video": "/build/media/8cafdbed-5b0e-4a53-a3df-aee6453d2f29/previa-card-8ef09e91.mp4",
+          "mode": "cover"
+        },
+        "updatedAt": "2026-11-14T06:10:16.521391+00:00"
+      },
+      "pageSha256": "c3796560f3cd1392b8d8acbb43cc377636692bbb353b816801a0ae409b3e29da",
+      "status": "public_metadata_retained",
+      "originalPrompt": "not acquired: authenticated original download required",
+      "published": false
+    },
+    {
+      "route": "/build/landing-pages/pente-fino",
+      "url": "https://profitize.com.br/build/landing-pages/pente-fino",
+      "metadata": {
+        "id": "18d6f228-db40-4530-adad-b5421131ac94",
+        "slug": "pente-fino",
+        "title": "Pente Fino",
+        "type": "landing_page",
+        "kind": {
+          "id": "landing_page",
+          "label": "Landing page",
+          "plural": "Landing pages",
+          "segment": "landing-pages",
+          "sortOrder": 0
+        },
+        "niche": "barbearia",
+        "description": "Barbearia com agendamento: a cadeira 3D acende sob o foco e some na névoa, e cada corte do cardápio tem a sua ferramenta.",
+        "tags": [
+          "barbearia",
+          "salão",
+          "beleza",
+          "cabeleireiro",
+          "agendamento",
+          "3d",
+          "three",
+          "cadeira",
+          "intro",
+          "escuro",
+          "lenis",
+          "vite",
+          "mobile"
+        ],
+        "tone": "escuro",
+        "aspect": "480/277",
+        "preview": {
+          "poster": "/build/media/18d6f228-db40-4530-adad-b5421131ac94/poster-7f548d27.webp",
+          "video": "/build/media/18d6f228-db40-4530-adad-b5421131ac94/previa-card-396b5733.mp4",
+          "mode": "cover"
+        },
+        "updatedAt": "2026-11-14T06:10:21.175262+00:00"
+      },
+      "pageSha256": "a84fa474267af74e20bf1dd4393322d88dd371e588356f15988678a54aa20a11",
+      "status": "public_metadata_retained",
+      "originalPrompt": "not acquired: authenticated original download required",
+      "published": false
+    },
+    {
+      "route": "/build/landing-pages/pomo",
+      "url": "https://profitize.com.br/build/landing-pages/pomo",
+      "metadata": {
+        "id": "7f2a6f83-c4ed-4094-a32f-0bea2f91ef7d",
+        "slug": "pomo",
+        "title": "Pomo",
+        "type": "landing_page",
+        "kind": {
+          "id": "landing_page",
+          "label": "Landing page",
+          "plural": "Landing pages",
+          "segment": "landing-pages",
+          "sortOrder": 0
+        },
+        "niche": "sucos",
+        "description": "Sucos integrais: a rolagem gira a fila de garrafas e o rótulo no vidro; o clique leva a mesma garrafa à página do produto.",
+        "tags": [
+          "sucos",
+          "suco integral",
+          "bebidas",
+          "refrigerante artesanal",
+          "kombucha",
+          "produto",
+          "garrafa",
+          "rótulo",
+          "embalagem",
+          "fila de produtos",
+          "webgl",
+          "física",
+          "frutas",
+          "papel recortado",
+          "abertura",
+          "hover",
+          "claro",
+          "gsap",
+          "lenis",
+          "vite",
+          "mobile"
+        ],
+        "tone": "claro",
+        "aspect": "40/23",
+        "preview": {
+          "poster": "/build/media/7f2a6f83-c4ed-4094-a32f-0bea2f91ef7d/poster-7d3c2452.webp",
+          "video": "/build/media/7f2a6f83-c4ed-4094-a32f-0bea2f91ef7d/previa-card-21f1ea16.mp4",
+          "mode": "cover"
+        },
+        "updatedAt": "2026-11-14T06:11:19.170588+00:00"
+      },
+      "pageSha256": "3942b96f7dc7d51e45d93db85141e3c63da8dfad31ba2490892266ec14ab12f1",
+      "status": "public_metadata_retained",
+      "originalPrompt": "not acquired: authenticated original download required",
+      "published": false
+    },
+    {
+      "route": "/build/landing-pages/prega",
+      "url": "https://profitize.com.br/build/landing-pages/prega",
+      "metadata": {
+        "id": "7ac65346-e4e9-4f30-b695-9cf4a2cf95cf",
+        "slug": "prega",
+        "title": "Prega",
+        "type": "landing_page",
+        "kind": {
+          "id": "landing_page",
+          "label": "Landing page",
+          "plural": "Landing pages",
+          "segment": "landing-pages",
+          "sortOrder": 0
+        },
+        "niche": "moda",
+        "description": "Loja de streetwear: provador com oito looks em fila, arara 3D onde as peças giram e uma lente de vidro que troca a foto.",
+        "tags": [
+          "moda",
+          "streetwear",
+          "e-commerce",
+          "provador",
+          "carrossel",
+          "3d",
+          "lente",
+          "three",
+          "intro",
+          "claro",
+          "lenis",
+          "vite",
+          "mobile"
+        ],
+        "tone": "claro",
+        "aspect": "12/7",
+        "preview": {
+          "poster": "/build/media/7ac65346-e4e9-4f30-b695-9cf4a2cf95cf/poster-af7d42d7.webp",
+          "video": "/build/media/7ac65346-e4e9-4f30-b695-9cf4a2cf95cf/previa-card-a6a5db1a.mp4",
+          "mode": "cover"
+        },
+        "updatedAt": "2026-11-14T06:10:21.190916+00:00"
+      },
+      "pageSha256": "08739919bb0754aaf051a0c24a8b9629d3b86ec6590fb10d4e0fca79a20c286e",
+      "status": "public_metadata_retained",
+      "originalPrompt": "not acquired: authenticated original download required",
+      "published": false
+    },
+    {
+      "route": "/build/landing-pages/solua",
+      "url": "https://profitize.com.br/build/landing-pages/solua",
+      "metadata": {
+        "id": "36b6b6ab-3026-4c48-aba8-b7dc956e4521",
+        "slug": "solua",
+        "title": "Solua",
+        "type": "landing_page",
+        "kind": {
+          "id": "landing_page",
+          "label": "Landing page",
+          "plural": "Landing pages",
+          "segment": "landing-pages",
+          "sortOrder": 0
+        },
+        "niche": "imobiliaria",
+        "description": "Lançamento imobiliário à beira-mar: a página nasce de um círculo que sobe e mergulha, e cada título entra letra a letra.",
+        "tags": [
+          "imobiliária",
+          "lançamento imobiliário",
+          "condomínio",
+          "casas",
+          "alto padrão",
+          "praia",
+          "agendamento",
+          "pré-carregamento",
+          "intro",
+          "texto letra a letra",
+          "cenas presas",
+          "trilho lateral",
+          "mapa",
+          "claro",
+          "gsap",
+          "lenis",
+          "vite",
+          "mobile"
+        ],
+        "tone": "claro",
+        "aspect": "16/10",
+        "preview": {
+          "poster": "/build/media/36b6b6ab-3026-4c48-aba8-b7dc956e4521/poster-b144d1d5.webp",
+          "video": "/build/media/36b6b6ab-3026-4c48-aba8-b7dc956e4521/previa-card-4ab84249.mp4",
+          "mode": "cover"
+        },
+        "updatedAt": "2026-11-16T03:41:09.11672+00:00"
+      },
+      "pageSha256": "f021bf18cf4d43b4d1a6724236d904c72c31e7cb460313a7579d03abfee1e50d",
+      "status": "public_metadata_retained",
+      "originalPrompt": "not acquired: authenticated original download required",
+      "published": false
+    },
+    {
+      "route": "/build/motion/curva",
+      "url": "https://profitize.com.br/build/motion/curva",
+      "metadata": {
+        "id": "0f1940bf-356d-413f-90ae-58afb6e1390b",
+        "slug": "curva",
+        "title": "Curva",
+        "type": "motion",
+        "kind": {
+          "id": "motion",
+          "label": "Motion",
+          "plural": "Motion Design",
+          "segment": "motion",
+          "sortOrder": 3
+        },
+        "niche": "Lançamento de app",
+        "description": "Lançamento de app ou produto digital: o jeito antigo trancado, a marca no drop, o pedido virando resultado e recursos com cursor.",
+        "tags": [
+          "16:9",
+          "30 fps",
+          "UI",
+          "Trilha",
+          "Voz"
+        ],
+        "tone": "escuro",
+        "aspect": "16/9",
+        "preview": {
+          "poster": "/build/media/0f1940bf-356d-413f-90ae-58afb6e1390b/poster-0bb1ed89.webp",
+          "video": "/build/media/0f1940bf-356d-413f-90ae-58afb6e1390b/previa-card-51e31031.mp4",
+          "mode": "cover"
+        },
+        "updatedAt": "2026-11-16T03:30:25.424557+00:00"
+      },
+      "pageSha256": "fc22093b2e5c079457094c89245ffa38c87f0342e688ff373374b117e1cf3ea6",
+      "status": "public_metadata_retained",
+      "originalPrompt": "not acquired: authenticated original download required",
+      "published": false
+    },
+    {
+      "route": "/build/motion/dicta",
+      "url": "https://profitize.com.br/build/motion/dicta",
+      "metadata": {
+        "id": "c03364d4-5638-4a15-ba34-1a6db9f7cdf9",
+        "slug": "dicta",
+        "title": "Dicta",
+        "type": "motion",
+        "kind": {
+          "id": "motion",
+          "label": "Motion",
+          "plural": "Motion Design",
+          "segment": "motion",
+          "sortOrder": 3
+        },
+        "niche": "Lançamento de app",
+        "description": "Lançamento de app ou serviço: o cursor vira o ícone cromado, a entrada bagunçada sai limpa e a marca entra no corte da música.",
+        "tags": [
+          "1:1",
+          "9:16",
+          "16:9",
+          "30 fps",
+          "3D",
+          "Trilha",
+          "Voz"
+        ],
+        "tone": "escuro",
+        "aspect": "1/1",
+        "preview": {
+          "poster": "/build/media/c03364d4-5638-4a15-ba34-1a6db9f7cdf9/poster-fc21f512.webp",
+          "video": "/build/media/c03364d4-5638-4a15-ba34-1a6db9f7cdf9/previa-card-8372a50a.mp4",
+          "mode": "cover"
+        },
+        "updatedAt": "2026-11-16T03:30:30.940268+00:00"
+      },
+      "pageSha256": "4e03c466d0ec8dcce754cea4c450900a04d32138da62e375d32295090c3e4560",
+      "status": "public_metadata_retained",
+      "originalPrompt": "not acquired: authenticated original download required",
+      "published": false
+    },
+    {
+      "route": "/build/motion/patina",
+      "url": "https://profitize.com.br/build/motion/patina",
+      "metadata": {
+        "id": "cd42f236-950d-477b-aeb4-3ee1130452d9",
+        "slug": "patina",
+        "title": "Patina",
+        "type": "motion",
+        "kind": {
+          "id": "motion",
+          "label": "Motion",
+          "plural": "Motion Design",
+          "segment": "motion",
+          "sortOrder": 3
+        },
+        "niche": "Lançamento de produto",
+        "description": "Lançamento em cenas-molde: a pergunta com chaves, imagens no vão da palavra, a foto que se monta no drop e o resultado em formatos.",
+        "tags": [
+          "16:9",
+          "30 fps",
+          "Tipografia",
+          "Trilha"
+        ],
+        "tone": "claro",
+        "aspect": "16/9",
+        "preview": {
+          "poster": "/build/media/cd42f236-950d-477b-aeb4-3ee1130452d9/poster-3e5a94c9.webp",
+          "video": "/build/media/cd42f236-950d-477b-aeb4-3ee1130452d9/previa-card-8e954300.mp4",
+          "mode": "cover"
+        },
+        "updatedAt": "2026-11-16T03:30:43.974167+00:00"
+      },
+      "pageSha256": "c0d7873933d75b18f457367a3ea4c6829fdc9e1f164d070f9f95f3dc6ccd0bb5",
+      "status": "public_metadata_retained",
+      "originalPrompt": "not acquired: authenticated original download required",
+      "published": false
+    },
+    {
+      "route": "/build/motion/plink",
+      "url": "https://profitize.com.br/build/motion/plink",
+      "metadata": {
+        "id": "bb9e92bc-8654-48df-9f63-a748b1fb9419",
+        "slug": "plink",
+        "title": "Plink",
+        "type": "motion",
+        "kind": {
+          "id": "motion",
+          "label": "Motion",
+          "plural": "Motion Design",
+          "segment": "motion",
+          "sortOrder": 3
+        },
+        "niche": "Lançamento de app",
+        "description": "Lançamento de app ou produto: palavras gigantes com adesivos, cortinas de cor na batida e um objeto 3D que cai no ícone no fim.",
+        "tags": [
+          "16:9",
+          "9:16",
+          "1:1",
+          "60 fps",
+          "Trilha",
+          "Adesivos"
+        ],
+        "tone": "claro",
+        "aspect": "16/9",
+        "preview": {
+          "poster": "/build/media/bb9e92bc-8654-48df-9f63-a748b1fb9419/poster-fbda6700.webp",
+          "video": "/build/media/bb9e92bc-8654-48df-9f63-a748b1fb9419/previa-card-3d964bd8.mp4",
+          "mode": "cover"
+        },
+        "updatedAt": "2026-11-16T03:30:38.366444+00:00"
+      },
+      "pageSha256": "1cc786715c1f9fd76bd48b495e91cce8a07d21b700b21d5ef951b5d9858b1c5b",
+      "status": "public_metadata_retained",
+      "originalPrompt": "not acquired: authenticated original download required",
+      "published": false
+    },
+    {
+      "route": "/build/motion/pronto",
+      "url": "https://profitize.com.br/build/motion/pronto",
+      "metadata": {
+        "id": "ac974e8c-28bf-42a5-8845-f24837b1c94e",
+        "slug": "pronto",
+        "title": "Pronto",
+        "type": "motion",
+        "kind": {
+          "id": "motion",
+          "label": "Motion",
+          "plural": "Motion Design",
+          "segment": "motion",
+          "sortOrder": 3
+        },
+        "niche": "Lançamento de produto digital",
+        "description": "Lançamento de app ou SaaS com IA: o cursor que vira a marca no drop, o pedido digitado e clicado, o resultado montado e a ação feita.",
+        "tags": [
+          "16:9",
+          "30 fps",
+          "UI",
+          "Trilha",
+          "33–65 s"
+        ],
+        "tone": "claro",
+        "aspect": "16/9",
+        "preview": {
+          "poster": "/build/media/ac974e8c-28bf-42a5-8845-f24837b1c94e/poster-8c4bb019.webp",
+          "video": "/build/media/ac974e8c-28bf-42a5-8845-f24837b1c94e/previa-card-c8ded86b.mp4",
+          "mode": "cover"
+        },
+        "updatedAt": "2026-11-16T03:31:00.387781+00:00"
+      },
+      "pageSha256": "192afd5d3b7c808e83c6669e84edc083bdbda410e2da0c1564415e7501a3bcbb",
+      "status": "public_metadata_retained",
+      "originalPrompt": "not acquired: authenticated original download required",
+      "published": false
+    },
+    {
+      "route": "/build/motion/tato",
+      "url": "https://profitize.com.br/build/motion/tato",
+      "metadata": {
+        "id": "68727c24-1cf3-4272-84ab-5cc98b86240f",
+        "slug": "tato",
+        "title": "Tato",
+        "type": "motion",
+        "kind": {
+          "id": "motion",
+          "label": "Motion",
+          "plural": "Motion Design",
+          "segment": "motion",
+          "sortOrder": 3
+        },
+        "niche": "Lançamento de produto",
+        "description": "Lançamento de produto ou serviço: gradiente térmico em vidro canelado, palavras gigantes, orbe-mascote e texto cinético na voz.",
+        "tags": [
+          "16:9",
+          "30 fps",
+          "Texto cinético",
+          "Trilha",
+          "Voz"
+        ],
+        "tone": "claro",
+        "aspect": "16/9",
+        "preview": {
+          "poster": "/build/media/68727c24-1cf3-4272-84ab-5cc98b86240f/poster-e60ed327.webp",
+          "video": "/build/media/68727c24-1cf3-4272-84ab-5cc98b86240f/previa-card-01ab5bce.mp4",
+          "mode": "cover"
+        },
+        "updatedAt": "2026-11-16T03:30:51.975705+00:00"
+      },
+      "pageSha256": "d0825d8e57d1311f758f6a6914791dacdc6cea25d0829c3b5bde33219bae34bf",
+      "status": "public_metadata_retained",
+      "originalPrompt": "not acquired: authenticated original download required",
+      "published": false
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:46:42.363Z",
+  "metadata": {
+    "type": "component",
+    "id": 46298,
+    "name": "HANZO Ember Bloom",
+    "description": "Pure CSS gradient background in the Bloom Field style, made with the 21st.dev Gradient Builder. 4-color palette (#0A0A0A, #DC2828, #811D1D, #262626). A drop-in, zero-dependency React component for hero sections, cards, and page backgrounds.",
+    "previewUrl": "https://cdn.21st.dev/workout_scorpion/hanzo-ember-bloom/default/preview.1794567333849-26126706-a8d4-4ab2-8817-c7cf3a8e3bff.webp",
+    "videoUrl": null,
+    "author": "workout_scorpion",
+    "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zR1BHVUtXS3k2NnZ5T2pNRzdNQmk1VWdqYzYifQ",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/workout_scorpion/hanzo-ember-bloom?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@workout_scorpion/components/hanzo-ember-bloom"
+  },
+  "component": {
+    "id": 46298,
+    "componentId": 26600,
+    "name": "HANZO Ember Bloom",
+    "demoName": "Default",
+    "description": "Pure CSS gradient background in the Bloom Field style, made with the 21st.dev Gradient Builder. 4-color palette (#0A0A0A, #DC2828, #811D1D, #262626). A drop-in, zero-dependency React component for hero sections, cards, and page backgrounds.",
+    "previewUrl": "https://cdn.21st.dev/workout_scorpion/hanzo-ember-bloom/default/preview.1794567333849-26126706-a8d4-4ab2-8817-c7cf3a8e3bff.webp",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/workout_scorpion/hanzo-ember-bloom?api_key=$API_KEY_21ST\"",
+    "componentCode": "// GradientBackground — \"HANZO Ember Bloom\", made with the 21st.dev Gradient\n// Builder and exported as live CSS (the builder's own Copy-CSS background,\n// plus its soften-blur and grain passes). Zero dependencies: one <div> that\n// fills its parent. Drop it behind your content:\n// <div className=\"relative h-96\"><GradientBackground className=\"absolute inset-0\" /></div>\n// Remix the source recipe (colors, mode, finish) in the editor:\n// https://21st.dev/community/gradients/editor?from=c0bf78d8-fca7-48db-a409-946a64f5d0fc\nexport function GradientBackground({ className }: { className?: string }) {\n  return (\n    <div\n      aria-hidden=\"true\"\n      className={className}\n      style={{\n        position: \"relative\",\n        overflow: \"hidden\",\n        width: \"100%\",\n        height: \"100%\",\n        containerType: \"size\",\n      }}\n    >\n      <div\n        style={{\n          position: \"absolute\",\n        inset: 0,\n        backgroundColor: \"#262626\",\n        backgroundImage:\n          \"radial-gradient(circle at 65.58% 46.03%, rgba(10, 10, 10, 1) 0%, rgba(10, 10, 10, 0.844) 10.28%, rgba(10, 10, 10, 0.5) 20.55%, rgba(10, 10, 10, 0.156) 30.83%, rgba(10, 10, 10, 0) 41.1%), radial-gradient(circle at 28.38% 73.04%, rgba(220, 40, 40, 1) 0%, rgba(220, 40, 40, 0.844) 13.78%, rgba(220, 40, 40, 0.5) 27.55%, rgba(220, 40, 40, 0.156) 41.33%, rgba(220, 40, 40, 0) 55.1%), radial-gradient(circle at 52.62% 18.32%, rgba(129, 29, 29, 1) 0%, rgba(129, 29, 29, 0.844) 16.4%, rgba(129, 29, 29, 0.5) 32.8%, rgba(129, 29, 29, 0.156) 49.2%, rgba(129, 29, 29, 0) 65.6%), radial-gradient(circle at 79.22% 84.38%, rgba(38, 38, 38, 1) 0%, rgba(38, 38, 38, 0.844) 19.02%, rgba(38, 38, 38, 0.5) 38.05%, rgba(38, 38, 38, 0.156) 57.07%, rgba(38, 38, 38, 0) 76.1%)\",\n        }}\n      />\n    </div>\n  )\n}\n",
+    "demoCode": "import { GradientBackground } from \"@/components/ui/hanzo-ember-bloom\"\n\nexport default function GradientBackgroundDemo() {\n  return (\n    <div className=\"relative h-[440px] w-full overflow-hidden rounded-xl\">\n      <GradientBackground className=\"h-full w-full\" />\n    </div>\n  )\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source and usage retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

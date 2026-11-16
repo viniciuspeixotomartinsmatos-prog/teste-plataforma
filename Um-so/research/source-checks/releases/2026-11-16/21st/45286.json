@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:49:36.032Z",
+  "metadata": {
+    "type": "component",
+    "id": 45286,
+    "name": "Astryx Chat Layout",
+    "description": "An Astryx layout shell for chat interfaces with message flow, a frosted composer dock, auto-scroll, and responsive keyboard handling.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-chat-layout/default/preview.1794510256784.png",
+    "videoUrl": null,
+    "author": "Astryxdesign",
+    "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-chat-layout?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-layout"
+  },
+  "component": {
+    "id": 45286,
+    "componentId": 26172,
+    "name": "Astryx Chat Layout",
+    "demoName": "Default",
+    "description": "An Astryx layout shell for chat interfaces with message flow, a frosted composer dock, auto-scroll, and responsive keyboard handling.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-chat-layout/default/preview.1794510256784.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-chat-layout?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\nimport \"./astryx-chat-layout-utils/index.css\"\nimport { ChatLayout } from \"@astryxdesign/core/Chat\"\n\nexport * from \"@astryxdesign/core/Chat\"\nexport default ChatLayout\n",
+    "demoCode": "// Copyright (c) Meta Platforms, Inc. and affiliates.\n\n'use client';\n\nimport {\n  ChatLayout,\n  ChatMessageList,\n  ChatMessage,\n  ChatMessageBubble,\n  ChatComposer,\n  ChatTokenizedText,\n} from '@/components/ui/astryx-chat-layout';\nimport {VStack} from '@astryxdesign/core/Stack';\n\nconst TOKENS = [{value: '/review', label: '/review', variant: 'blue' as const}];\n\nexport default function ChatLayoutShowcase() {\n  return (\n    <div\n      data-astryx-theme=\"neutral\"\n      data-theme=\"light\"\n      style={{colorScheme: 'light', display: 'contents'}}>\n      <VStack width={450}>\n        <ChatLayout\n          composer={\n            <ChatComposer onSubmit={() => {}} placeholder=\"Ask something...\" />\n          }>\n          <ChatMessageList>\n            <ChatMessage sender=\"user\">\n              <ChatMessageBubble>\n                <ChatTokenizedText tokens={TOKENS}>\n                  /review the changes in this file\n                </ChatTokenizedText>\n              </ChatMessageBubble>\n            </ChatMessage>\n            <ChatMessage sender=\"assistant\">\n              <ChatMessageBubble variant=\"ghost\">\n                Reading the file now...\n              </ChatMessageBubble>\n            </ChatMessage>\n          </ChatMessageList>\n        </ChatLayout>\n      </VStack>\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:46:42.097Z",
+  "metadata": {
+    "type": "component",
+    "id": 46305,
+    "name": "HANZO Biometric Braille",
+    "description": "Animated (flicker) ASCII art in the Braille style, made with the 21st ASCII editor and baked to a looping video. Styled with a crt, minimal look. A drop-in, zero-dependency React component for hero sections, cards, and retro terminal-style backgrounds.",
+    "previewUrl": "https://cdn.21st.dev/workout_scorpion/hanzo-biometric-braille/default/preview.1794568866374-84ded306-f2e2-4b95-bff1-bc04e4a8ec73.webp",
+    "videoUrl": "https://cdn.21st.dev/workout_scorpion/hanzo-biometric-braille/default/video.1794568866374-84ded306-f2e2-4b95-bff1-bc04e4a8ec73.mp4",
+    "author": "workout_scorpion",
+    "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zR1BHVUtXS3k2NnZ5T2pNRzdNQmk1VWdqYzYifQ",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/workout_scorpion/hanzo-biometric-braille?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@workout_scorpion/components/hanzo-biometric-braille"
+  },
+  "component": {
+    "id": 46305,
+    "componentId": 26607,
+    "name": "HANZO Biometric Braille",
+    "demoName": "Default",
+    "description": "Animated (flicker) ASCII art in the Braille style, made with the 21st ASCII editor and baked to a looping video. Styled with a crt, minimal look. A drop-in, zero-dependency React component for hero sections, cards, and retro terminal-style backgrounds.",
+    "previewUrl": "https://cdn.21st.dev/workout_scorpion/hanzo-biometric-braille/default/preview.1794568866374-84ded306-f2e2-4b95-bff1-bc04e4a8ec73.webp",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/workout_scorpion/hanzo-biometric-braille?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\n// AsciiArt — \"HANZO Biometric Braille\", made with the 21st ASCII editor and baked\n// to its exact rendered output (looping video + poster). Zero dependencies:\n// one <video> that fills its parent. Drop it behind or inside your content:\n// <div className=\"relative h-96\"><AsciiArt className=\"absolute inset-0\" /></div>\n// Remix the source recipe (styles, animation, palette) in the editor:\n// https://21st.dev/community/ascii/editor?from=4b609494-71b6-424d-a7b7-a4e913467945\nexport function AsciiArt({ className }: { className?: string }) {\n  return (\n    <video\n      className={className}\n      src={\"https://assets.21st.dev/ascii-recipes/videos/user_3GPGUGW0kezwI1M261bFhugwynL/ac2a0ba7-9007-4bd7-bd20-3e8709a4fee6.mp4\"}\n      poster={\"https://assets.21st.dev/ascii-recipes/thumbnails/user_3GPGUGW0kezwI1M261bFhugwynL/5fabfca4-d401-489c-9d26-fe4cd94237fb.webp\"}\n      autoPlay\n      loop\n      muted\n      playsInline\n      aria-label={\"HANZO Biometric Braille — animated ASCII art\"}\n      style={{\n        display: \"block\",\n        width: \"100%\",\n        height: \"100%\",\n        objectFit: \"cover\",\n      }}\n    />\n  )\n}\n",
+    "demoCode": "import { AsciiArt } from \"@/components/ui/hanzo-biometric-braille\"\n\nexport default function AsciiArtDemo() {\n  return (\n    <div className=\"relative h-screen w-full overflow-hidden\">\n      <AsciiArt className=\"h-full w-full\" />\n    </div>\n  )\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source and usage retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

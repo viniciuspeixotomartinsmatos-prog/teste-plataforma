@@ -1,0 +1,1356 @@
+{
+  "checkedAt": "2026-11-16T13:58:14.490Z",
+  "publishedNewItems": 0,
+  "hoverRepair": {
+    "commit": "95bbe0697",
+    "deployment": "teste-plataforma-puavif2ax-novonormaladm-7417s-projects.vercel.app",
+    "state": "READY",
+    "affectedExistingCards": 25,
+    "codeTests": "12 focused initial checks and7 follow-up checks passed",
+    "visual": "blocked: Local browser access is unavailable for this chat; retried after user re-enable report",
+    "scope": "Existing own MP4 bindings restored. Refresh already-open tabs; no visual playback certification."
+  },
+  "sources": [
+    {
+      "source": "21st",
+      "observedRoutes": 10711,
+      "addedRoutes": 278,
+      "unmatchedRoutes": 1932,
+      "limitations": [
+        "Unmatched routes are candidates, not proof of new content or runnable demos."
+      ],
+      "published": 0
+    },
+    {
+      "source": "aceternity",
+      "observedRoutes": 177,
+      "addedRoutes": 1,
+      "unmatchedRoutes": 63,
+      "limitations": [
+        "Unmatched routes are candidates, not proof of new content or runnable demos."
+      ],
+      "published": 0
+    },
+    {
+      "source": "magic",
+      "observedRoutes": 78,
+      "addedRoutes": 0,
+      "unmatchedRoutes": 0,
+      "limitations": [
+        "Unmatched routes are candidates, not proof of new content or runnable demos."
+      ],
+      "published": 0
+    },
+    {
+      "source": "reactbits",
+      "observedRoutes": 187,
+      "addedRoutes": 0,
+      "unmatchedRoutes": 5,
+      "limitations": [
+        "Unmatched routes are candidates, not proof of new content or runnable demos."
+      ],
+      "published": 0
+    },
+    {
+      "source": "kokonut",
+      "observedRoutes": 139,
+      "addedRoutes": 0,
+      "unmatchedRoutes": 37,
+      "limitations": [
+        "Unmatched routes are candidates, not proof of new content or runnable demos."
+      ],
+      "published": 0
+    },
+    {
+      "source": "shadcnblocks",
+      "observedRoutes": 5129,
+      "addedRoutes": 0,
+      "unmatchedRoutes": 454,
+      "limitations": [
+        "Unmatched routes are candidates, not proof of new content or runnable demos."
+      ],
+      "published": 0
+    },
+    {
+      "source": "motion",
+      "observedRoutes": 33,
+      "addedRoutes": 0,
+      "unmatchedRoutes": 0,
+      "limitations": [
+        "https://motion-primitives.com/sitemap.xml: HTTP Error 404: Not Found",
+        "Sitemap exposed no matching content routes; a repository fallback does not cover private or commercial releases.",
+        "Unmatched routes are candidates, not proof of new content or runnable demos."
+      ],
+      "published": 0
+    },
+    {
+      "source": "tailark",
+      "observedRoutes": 0,
+      "addedRoutes": 0,
+      "unmatchedRoutes": 0,
+      "limitations": [
+        "Unmatched routes are candidates, not proof of new content or runnable demos."
+      ],
+      "published": 0
+    },
+    {
+      "source": "animate",
+      "observedRoutes": 140,
+      "addedRoutes": 0,
+      "unmatchedRoutes": 2,
+      "limitations": [
+        "Unmatched routes are candidates, not proof of new content or runnable demos."
+      ],
+      "published": 0
+    },
+    {
+      "source": "profitize",
+      "observedRoutes": 128,
+      "addedRoutes": 15,
+      "unmatchedRoutes": 19,
+      "limitations": [
+        "Unmatched routes are candidates, not proof of new content or runnable demos."
+      ],
+      "published": 0
+    }
+  ],
+  "twentyFirst": {
+    "originals": 200,
+    "alreadyRetainedSameSource": 0,
+    "compiled": 163,
+    "compileBlocked": 37,
+    "themes": 8,
+    "templateMetadata": 41,
+    "unresolvedComponentRoutes": 5,
+    "unresolvedTemplateRoutes": 24,
+    "originalsManifest": [
+      {
+        "id": 39009,
+        "url": "https://21st.dev/@blackbambu/components/alignment-matrix",
+        "sha256": "10dd0d8b43ecbe89df26c8178ec371e6d4c609f5907b65381f2dba3e51bae39b",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 42976,
+        "url": "https://21st.dev/@louisstudios/components/glow-button",
+        "sha256": "813ea7b39799db7e0ff7804724dccc227ee2feb5886e071dec3da96b669c62f4",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 42983,
+        "url": "https://21st.dev/@louisstudios/components/thinking-pill",
+        "sha256": "b58694667821464f5c35d16cbbe85efd046fcab14b111c199e2e73f269647622",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 44670,
+        "url": "https://21st.dev/@louisstudios/components/peak-chart",
+        "sha256": "6cc385af9a31898ea2a228b7a224c88b9750adb1820ab1143e03f49d6efc1353",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 44795,
+        "url": "https://21st.dev/@aadixc0de/components/dither-orb",
+        "sha256": "e88036fe186b993bfcf77ab72a760a3b597c8e6597864b0a48b252a8e2b8f85d",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 44956,
+        "url": "https://21st.dev/@aakashmehra/components/soda-machine",
+        "sha256": "ad675c825f74810ea0ff0f48277afbd8843c485dc3ff21343f04d6655431efee",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45177,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-alert-dialog",
+        "sha256": "489d048c0418d4bef0b8765b56ca5be5da766d7370f33d0b0fbb9578c8f1dd8b",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45217,
+        "url": "https://21st.dev/@aloksivastava1025/components/cue-outline-inspector-panel",
+        "sha256": "4e8e5fd19560da59cb8e25ae741b0ddbfea787752bf1cfdf5d95be97db8c9505",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45218,
+        "url": "https://21st.dev/@admin-pstzxid/components/button-sign-in",
+        "sha256": "4b058265bff3298fbd27a75cdb0882a85159d0f4293dc71286c810c2666023be",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45221,
+        "url": "https://21st.dev/@aloksivastava1025/components/cue-pixel-perfect-shop-onboarding",
+        "sha256": "aedcce7617efc5b315148fcfc1b960d1f43b6170f705a2a9ea05a0c9b9ffc11a",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45246,
+        "url": "https://21st.dev/@aloksivastava1025/components/cue-interactive-card-sphere",
+        "sha256": "c38d4527a7ec1e8ded75521d3e0e27ac8b6bcb2594697b45268ea3124fe5a41a",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45247,
+        "url": "https://21st.dev/@aloksivastava1025/components/cue-motionflow-feature-grid-showcase",
+        "sha256": "25d2ea1256e0719f406d6799e24d2b47062d3845c044ee7e7411b2007aa98773",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45280,
+        "url": "https://21st.dev/@aloksivastava1025/components/cue-morphing-pill-duration-editor",
+        "sha256": "89ec5b045c31f96c22852485ee6a6c1f7e0d57e7cd7b20da995b3955e226ea50",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45285,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-dictation-button",
+        "sha256": "2e5e26ef9c4b1dc5cd06176dee93f44f2a60b5f18aa89af55c43bcf9a88c7fe3",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45286,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-layout",
+        "sha256": "4b086a78f46411c85c91c4a29f56d94924d56af32e1238d5d9a19de8614ea41c",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45287,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-layout-scroll-button",
+        "sha256": "711ae916fda08e58aec6434838bfed4ca179025b1637eef2f7c7135551581f4f",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45288,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-message",
+        "sha256": "ffe14735764ba0feadf4000e72ea8d7c71fd0f26deef0e9cead55485de9db16b",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45289,
+        "url": "https://21st.dev/@aloksivastava1025/components/cue-live-waveform-audio-recorder",
+        "sha256": "06b297a636ba1ab5d5d8ad911131c04e1f2f8ec64c95043ad4545877d2054f1a",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45291,
+        "url": "https://21st.dev/@larsen66/components/cue-expandable-share-card",
+        "sha256": "1856a6138b74574b6f955cecc789d69bc1ac931a206223cd96c88fd462369849",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45311,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-avatar-group-overflow-aloksivastava1025",
+        "sha256": "07ed26311905237ee30d43ef67888dd2f0ffcf0a7c0e24b8177a0a4606690b34",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45317,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-base-typeahead",
+        "sha256": "5958816f003efe4255794f485d3366cff2fa7a4e3d6bf1e1919db9ed52278645",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45322,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-bottom-sheet",
+        "sha256": "454fb8d80ffa763caccfae91bffd1fd5a0c5e38124caedd737757563c8e22f04",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45324,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-bottom-sheet-switcher",
+        "sha256": "e1483ad3997fcb7c973bb7775bb466aa14c8dc7665cca1d532d2d42e3c88f6f6",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45326,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-breadcrumb-item-aloksivastava1025",
+        "sha256": "1bffeb1c67ed911e72774a853548b4ff730a34e3864ec82599f04368b925f57e",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45331,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-calendar",
+        "sha256": "c7aac669d35af65e8ef5d7e9b5444703fc11b69222156a2ba7bbd4ddd672aab5",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45338,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-card",
+        "sha256": "1bc1f01c649a11f65ff07baa9394917f254b82300c3cf30a1c510ed64914529e",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45341,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-carousel",
+        "sha256": "7f0747c549d0ed4e56b94c33402561b60198d5d3348cb55fe5d390df029a1697",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45344,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-center",
+        "sha256": "e7e5cedebbb81877b9f8497162d7d52e6c2bd2e8ba56aa7bc94de7c0a38e44dd",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45352,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-composer",
+        "sha256": "beb8c6e343d9757bb28d603e3d41975d0126e4f3d9c2e055126c2e731e4a6c24",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45354,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-composer-drawer",
+        "sha256": "c9a710f305db07c8a28f82c357e7d8209ce973e1d36c7476078a1501fafdb493",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45361,
+        "url": "https://21st.dev/@aloksivastava1025/components/cue-glossy-slider-call-button",
+        "sha256": "922aea895beec4da7b21d2f01d4346ba915af601f54dc00bd5da54d0dbae1233",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45362,
+        "url": "https://21st.dev/@aloksivastava1025/components/cue-dot-graph-card",
+        "sha256": "b9c2da251d829585c57a96649a4b0ad8db8546683d1af07c20b557cbeb51b127",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45363,
+        "url": "https://21st.dev/@aloksivastava1025/components/cue-cell-to-card-calendar-expansion",
+        "sha256": "dafb2626050b942800cf0c0245167a7de5a76c4b3ced7e6907e93fee06303cb5",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45423,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-composer-input",
+        "sha256": "459d24dc3287091bd324bdc8e6c0b850eb9935d8d2869c35a634c6b6279ae74f",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45430,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-message-bubble",
+        "sha256": "d55606e7ee7126e1a66d2611fb27427b5d3f9deca6e50ae030146e461c08e6b2",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45431,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-message-list",
+        "sha256": "447a9964c44ac1c3506d9c8e243270e537e2ecb7f3199565b1f59d965d782de3",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45432,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-message-metadata",
+        "sha256": "a096fd88c9b71853b7cedfa75dc5b3ea6b03bc03e25cba34bb944f22019fcd73",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45433,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-send-button",
+        "sha256": "c23eb76f0db0adc86d93a45a338ec4953047ef697010303208a4e7e0398d9617",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45434,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-system-message",
+        "sha256": "a0571e50c7fdc7af7fe6f5b1d88feffeafaeba5671eb182a66b05300bb877eec",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45438,
+        "url": "https://21st.dev/@carolinaraulino/components/ai-agent-mascot",
+        "sha256": "82f48106d2ff819121fffc3fabcc752cc085527a6a1e87c3d58fb330b047718b",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45440,
+        "url": "https://21st.dev/@aloksivastava1025/components/cue-collapsing-cards-accordion",
+        "sha256": "9f14bc77f1358dd0325ce05f04671188f04143df383ac15379d24b7ffcbb164a",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45441,
+        "url": "https://21st.dev/@aloksivastava1025/components/cue-split-panel-image-synced-faq-features",
+        "sha256": "dbf6f26fd18b315a1dac9004e937c903615c66d5976c5f44355666510f78c8c6",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45443,
+        "url": "https://21st.dev/@aloksivastava1025/components/cue-stacker-style-bento-grid",
+        "sha256": "8c8e3b5b3db3a98ad8130d63baae6c24e67ed780b10d4a70e0e6086a2a3239ff",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45444,
+        "url": "https://21st.dev/@aloksivastava1025/components/cue-stacked-deck-scroll-reveal",
+        "sha256": "777e380b489ebf52dd37d24dbc4cc669f143eb9df6506b914c47d19f1421bb49",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45446,
+        "url": "https://21st.dev/@aloksivastava1025/components/cue-phantom-infinite-gallery",
+        "sha256": "eaf3d2d92ee7deac284bec7f2735efaae1118d3908d36f5f75f2e0833212aee1",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45453,
+        "url": "https://21st.dev/@kedhareswer/components/ink-spill-theme-switch",
+        "sha256": "08deb183e5e5dceefa7018f95552681f372f27a218b2a687a7b8a42d100eaef8",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45454,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-tokenized-text",
+        "sha256": "6b977fcf1a670396099ae898bfa32fd0e6e03de97c434e7f3ca5d4df48ac84e2",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45458,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-tool-calls",
+        "sha256": "adf674e0ae1baa9d8fd4160d3b54a81b0cb0eef06a496a90eb86d4ca239b318a",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45461,
+        "url": "https://21st.dev/@aloksivastava1025/components/cue-dot-matrix-cascade-typography",
+        "sha256": "a49d27b1fd19c8f62245176b9f570ac3bf399b613814e5012e60d1e9f50387fb",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45463,
+        "url": "https://21st.dev/@aloksivastava1025/components/cue-gooey-liquid-feedback-drop",
+        "sha256": "eb33b4464d11589aecc757f6c7d2d14cf45154bb499f84fcd3c453dccaa0a532",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45464,
+        "url": "https://21st.dev/@aloksivastava1025/components/cue-scrollspy-line-navigation",
+        "sha256": "bf029f08b88afe7286ed5d2acc76813dc134e554f0b2d4bc7f30feba2ff0f9b3",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45468,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-checkbox-input",
+        "sha256": "0dc04f9fce4519a0726124c91c10a5d9ee26374769407ad14012d9436aee77db",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45469,
+        "url": "https://21st.dev/@aloksivastava1025/components/cue-minimal-ai-dev-workspace",
+        "sha256": "bfc6c40fe4d2e7ef69fd5731a0972ce7d93bbaeb4d021b50a04b08f975d62cd0",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45482,
+        "url": "https://21st.dev/@aadixc0de/components/terminal",
+        "sha256": "b0da83f67cac0aca67c9ae5534d1c52dc0ea6cca610d193aa8807b4cf03cc84e",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45484,
+        "url": "https://21st.dev/@aadixc0de/components/diff-viewer",
+        "sha256": "e534240bd4c26e5cdd0f4d91a945f8f796f026e039dcc024c00418bf36b0dba8",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45486,
+        "url": "https://21st.dev/@aadixc0de/components/tool-call",
+        "sha256": "218d6c002ec0912a6afcf383d1355ba25a9b25a8ea0e7a3f0ec16468f9fbf3a2",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45490,
+        "url": "https://21st.dev/@aadixc0de/components/image-compare",
+        "sha256": "e14cbfa0d3f070c6e4a4ab4be12d534555dfc13a9c240d75b126f0fa4632316f",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45506,
+        "url": "https://21st.dev/@aadixc0de/components/video-generation",
+        "sha256": "0f7db2d69348ba3ca4efec481d7223c6d8582f39376f71786b0ba575a9c5a022",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45507,
+        "url": "https://21st.dev/@aadixc0de/components/plan",
+        "sha256": "4a3cef983dc75270b890b1e3b25e968d154c655ef0395a4c9999369ea376a885",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45508,
+        "url": "https://21st.dev/@aadixc0de/components/research-progress",
+        "sha256": "be8c4084e057cd6393c056cebd2d3fa6feffc1228dbba4a41e5670b0db6b44b5",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45509,
+        "url": "https://21st.dev/@aadixc0de/components/image-generation",
+        "sha256": "a72cad97c6fdd9c8a63523357035f901539a6250e46d11de564225dd61160d11",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45515,
+        "url": "https://21st.dev/@aadixc0de/components/tool-bash",
+        "sha256": "22df7206891eca2b86edf6f7ed04c7f86bd7a2f747cd386a07899fbaf2b8205c",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45520,
+        "url": "https://21st.dev/@aadixc0de/components/command-palette",
+        "sha256": "0f34292db44747ee418e0ac5781df6476ff9670935f9d6e93da63f36f75cba2b",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45524,
+        "url": "https://21st.dev/@aadixc0de/components/tool-browser",
+        "sha256": "659a01ee0a553c8488c0aa63142a4b208a91eaee1edd71f1c13dca8457876b1f",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45526,
+        "url": "https://21st.dev/@aadixc0de/components/model-picker",
+        "sha256": "c0e2b0691f1154f71b0ea743f651a3ee4f818a6eeacc46596e931e454cfb4651",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45527,
+        "url": "https://21st.dev/@aadixc0de/components/background-run",
+        "sha256": "dd237d22f22ba9df21672228ae47851f8f4e4f851f8f7db5e45ba66cd2920200",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45528,
+        "url": "https://21st.dev/@aadixc0de/components/chart",
+        "sha256": "8c3121e5d5ccb7b57b2306e55c9d22dcf0e231d1f5ce45783f94cf373e8225fc",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45529,
+        "url": "https://21st.dev/@louisstudios/components/cover-flow",
+        "sha256": "48f9c6872f5f8e0ea2360fc6f3a7915b299eca07c92993820a65da414a842556",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45530,
+        "url": "https://21st.dev/@louisstudios/components/wind-type",
+        "sha256": "fa746b693926644d287d2e44237cbc77878f02f837922ec2fb7da50b75cefacf",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45531,
+        "url": "https://21st.dev/@louisstudios/components/stream-search",
+        "sha256": "9f947d15fcc5e0eef6531a2aacb1b7439b72a6ff1c50d65e4a2fcb28438582b8",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45533,
+        "url": "https://21st.dev/@aadixc0de/components/weather-card",
+        "sha256": "4f916819d051c40c4ce6a88b304299681a826992d78e71ab5cda5d41e11b9e35",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45534,
+        "url": "https://21st.dev/@aadixc0de/components/ticker-card",
+        "sha256": "f4768f7f23670dbf922ce42621220fbef0c6603a4f87123156c50446e653b7de",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45535,
+        "url": "https://21st.dev/@aadixc0de/components/deploy-status",
+        "sha256": "9d6ac88fe128316c2f0bacdf67f86c195c70204ad23888fc93c8153a888d1d7d",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45536,
+        "url": "https://21st.dev/@aadixc0de/components/retrieved-chunks",
+        "sha256": "98b1b067e01402b2ad0c58ca204ea6df05222d5f979dd2d8bb51dda4b598b55f",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45537,
+        "url": "https://21st.dev/@aadixc0de/components/test-results",
+        "sha256": "6cc6ba08e43aa6e2f6a5ef0cf6ce51448b37f1d163a7039cbd073fa512b27cfd",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45538,
+        "url": "https://21st.dev/@aadixc0de/components/approval-inbox",
+        "sha256": "59ed4dc5d78022e3b97d0f6642130fd9040783e3db580967f9767aed9477601a",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45541,
+        "url": "https://21st.dev/@aadixc0de/components/todo-list",
+        "sha256": "719d2ffa85a627b0247d036325d0d1f59a075afaa898d983a81ce1ab8805ccfe",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45542,
+        "url": "https://21st.dev/@aadixc0de/components/calculator-widget",
+        "sha256": "2a8c13949b58d4af3bd54ec53a3ce52911fe034b781f030bef1a1c14c6469f80",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45543,
+        "url": "https://21st.dev/@aadixc0de/components/upload-queue",
+        "sha256": "929947661509e2d770b6b183181812b4f5e2256a2933816d74ba42e00073a8ba",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45544,
+        "url": "https://21st.dev/@aadixc0de/components/questionnaire",
+        "sha256": "e75adf1041c714526c134bda5108886e613cce90ca039d6f0af41f02e9a71b27",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45545,
+        "url": "https://21st.dev/@aadixc0de/components/notebook-cell",
+        "sha256": "afd0b06b7e2ef7464cc8c484ba420e940c9bae8e464c13b911227a2ed71b9547",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45546,
+        "url": "https://21st.dev/@aadixc0de/components/stack-trace",
+        "sha256": "dea80b7a2c23624e6fe21d9af84c8b0f42ba7559ecfa55c721cd4e507d0a4666",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45547,
+        "url": "https://21st.dev/@aadixc0de/components/tool-image-gen",
+        "sha256": "9c11fa40482564840b608aa232acbc6eb39ca0b655fff124500d76aa25e40851",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45548,
+        "url": "https://21st.dev/@aadixc0de/components/pull-request-card",
+        "sha256": "0abfc1cc6f53ae93a14e181ae591aa7c4669dc2a72884ac6c1b713e364f803b7",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45549,
+        "url": "https://21st.dev/@aadixc0de/components/ansi-output",
+        "sha256": "21ab77bb39dd1f70c0b3e552636d3e77d78fcdf10d57cb075e290763e9564f37",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45550,
+        "url": "https://21st.dev/@louisstudios/components/soft-tabs",
+        "sha256": "87d5d53b41a3c6624ec8ce190299f01c9b8fccb825277ea25360006a65e90509",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45553,
+        "url": "https://21st.dev/@aadixc0de/components/web-preview",
+        "sha256": "24a9499f1cb658354ea35ec911ab758d1ff440a8c0e3f723510b094093fd2a2c",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45555,
+        "url": "https://21st.dev/@aadixc0de/components/transcript",
+        "sha256": "655319c1765b03c54bf8406c73b42c43e21839e01043af2a8658a8e1af0ae38f",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45560,
+        "url": "https://21st.dev/@aadixc0de/components/image-edit-region",
+        "sha256": "a976ceb54c10959116aa2bdc13937c874ced3bdcbc104051e04a0390f85757b8",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45562,
+        "url": "https://21st.dev/@aadixc0de/components/commit-card",
+        "sha256": "8ca7e19937ad6f4c9aa0b61169474f376a5814e369a92db1686aa189b34f7fb0",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45564,
+        "url": "https://21st.dev/@aadixc0de/components/stat-card",
+        "sha256": "e9905a648bb49dfb0216108a3d03c8bb259cdff161da98372a35405f2a68880e",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45574,
+        "url": "https://21st.dev/@aadixc0de/components/subagent",
+        "sha256": "fbd770151a147ae86a8b703bc7bfce97071583872653b6328a98b6f39b91d547",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45575,
+        "url": "https://21st.dev/@aadixc0de/components/file-tree",
+        "sha256": "2adde1bb8c166521735be23905596fecc03960b03973d65aa42f82c46a24837e",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45579,
+        "url": "https://21st.dev/@aadixc0de/components/queued-messages",
+        "sha256": "2cb6dec06ccc0d81eaf1672a1e73350cc0aadfa11067199b50736ced1409ff39",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45580,
+        "url": "https://21st.dev/@louisstudios/components/market-card",
+        "sha256": "2d1e147fe5bb5b7f0f16e66272cc1864dd3b384c3d13406f2dbe0d8a6db3a019",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45581,
+        "url": "https://21st.dev/@aadixc0de/components/audio-player",
+        "sha256": "3d69dd69def1b86ca59fbe2e4730ba62ae7133b1530c73657f127e93cdcbf109",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45582,
+        "url": "https://21st.dev/@louisstudios/components/glass-peaks",
+        "sha256": "a065243821854ff876fa6d9796c8d2c36e2d8c2bdb54e8955d58a2a1519b8160",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45583,
+        "url": "https://21st.dev/@louisstudios/components/peek-blob",
+        "sha256": "d5a700e0e73fe17a1568ec33109b4d0967c10a295e592a7586ee8cca73637bb0",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45584,
+        "url": "https://21st.dev/@aadixc0de/components/changed-files",
+        "sha256": "c8ea8e28bc4d5ff38c61c3ad6e4a88ddcc7a55c5c14ddb8a29875a445bbeaeef",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45585,
+        "url": "https://21st.dev/@aadixc0de/components/environment-variables",
+        "sha256": "c5f0b0912c5471bc5637a437262b507237f3196708fba8854d0bbc84f4de060d",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45586,
+        "url": "https://21st.dev/@aadixc0de/components/tool-file-read",
+        "sha256": "fcab2e475cfe1bd27b636a37dd099b93edfbda3591bcc2814dbaf445ba0f94ef",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45587,
+        "url": "https://21st.dev/@aadixc0de/components/tool-search-code",
+        "sha256": "918f6fdd1979eefea9b7e7cc4bcd2e465e0ee0127a10782ac179a1f8931e453c",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45588,
+        "url": "https://21st.dev/@aadixc0de/components/research-report",
+        "sha256": "b875d81e4cb72ec4257ab5efe3facc292c584c3cbdfd43a89a59ea88dd645299",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45589,
+        "url": "https://21st.dev/@aadixc0de/components/event-card",
+        "sha256": "244109c4e1d5ca1bca9d572d08cce7e438f7bb43d36bf4bec77a79ac4153dbf7",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45590,
+        "url": "https://21st.dev/@aadixc0de/components/contact-card",
+        "sha256": "0e1af1caa5a85ef6d8be9ab9d2fbdca460dfd764f7687fcccd6ac1de9771a11a",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45591,
+        "url": "https://21st.dev/@aadixc0de/components/system-prompt-editor",
+        "sha256": "fe31ee8af734012832b7fe9fa4e616eb67da9021724a95524f06e7bc489fba7c",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45592,
+        "url": "https://21st.dev/@aadixc0de/components/tool-file-write",
+        "sha256": "165c33ae0464ed59761ea834483ab67442f889a0cb838b7537b93ce968010162",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45593,
+        "url": "https://21st.dev/@aadixc0de/components/aspect-ratio-picker",
+        "sha256": "5cd206f461097e0a636eec1483fcd31927286ec243d009bddc731d5598c70768",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45600,
+        "url": "https://21st.dev/@aadixc0de/components/chat-search",
+        "sha256": "00fef55a1408fd68747b2368d36672bb3427f3ca45f278855d35f5356d486f11",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45601,
+        "url": "https://21st.dev/@aadixc0de/components/sql-result",
+        "sha256": "a8f166ee95e30cafc3713644c203eabd59671222af93326f02f75763ed4ed8c8",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45602,
+        "url": "https://21st.dev/@aadixc0de/components/tool-web-search",
+        "sha256": "4550e4615cfc65db33648110addb3d2ef6d665a969e8ac2b140018848a7da3b8",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45606,
+        "url": "https://21st.dev/@aadixc0de/components/slash-menu",
+        "sha256": "bbfcf41ea99663d309cee5a5021a92fcfff12d7412dfc5bb6473e7e8e332ec0c",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45607,
+        "url": "https://21st.dev/@aadixc0de/components/package-info",
+        "sha256": "9b6f0998cfc9cf9f6951442e230594f241a57e5a79a43019925dc596b734c4b0",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45608,
+        "url": "https://21st.dev/@aadixc0de/components/tool-memory",
+        "sha256": "07450c0c9eadf859762cc72aa9c31882f167122f035b07f0f7084b05aa513d50",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45612,
+        "url": "https://21st.dev/@aadixc0de/components/tool-web-fetch",
+        "sha256": "efc481317272c11ebbb7a4f5f1d90f6c4d3fd322e245e440ac2b9016e94b3dfb",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45613,
+        "url": "https://21st.dev/@aadixc0de/components/settings-panel",
+        "sha256": "cc33501a624d648854b1d1d0c679711f1b80370e3be1d5200b039f2c40385fd1",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45616,
+        "url": "https://21st.dev/@aadixc0de/components/drop-zone",
+        "sha256": "597d4928235f7abf0722f03df16bfa9587e539559d033317f28f917519e65fe0",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45618,
+        "url": "https://21st.dev/@aadixc0de/components/json-viewer",
+        "sha256": "23f8f69c630af51610183ffe4536eacdc6a77664b8fdfb4e8d01ba9027ac7d44",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45621,
+        "url": "https://21st.dev/@aadixc0de/components/sources",
+        "sha256": "5d69f6fe3909b1246c99c80bd6aa05869131342ecb855c8a3ddfce4a335622f8",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45626,
+        "url": "https://21st.dev/@aadixc0de/components/waveform",
+        "sha256": "4c2566b8f3a045417cb07938c578ee160c159e8b2e112c47ecb7c946925aa359",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45627,
+        "url": "https://21st.dev/@aadixc0de/components/document-viewer",
+        "sha256": "214d776c3530dea4ab5b43e92533032500b219c7bc4edc66e2630c343819b090",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45630,
+        "url": "https://21st.dev/@aadixc0de/components/voice-session",
+        "sha256": "21223b329b5d89ec7d0d7a2b3e562fb77051e3ee79001352efd29c293a721a94",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45635,
+        "url": "https://21st.dev/@aadixc0de/components/tool-file-edit",
+        "sha256": "8ae5e9be872816e17cff38722fa19c8e0d7d1d68a8a2a05df02f88231130fc06",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45654,
+        "url": "https://21st.dev/@themeocean/components/bento-grid-product-hero-with-live-metric-cards",
+        "sha256": "0d6d3f410ff1ac92414b5fc2dfdacac1856c587ac4cd22bed2d1e95cb3c21f1c",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45656,
+        "url": "https://21st.dev/@kedhareswer/components/minted-coin-scroll",
+        "sha256": "24ab5c9388740e751365f956ce5779f02eff30c09ae7945238e8621c289bfa2e",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45695,
+        "url": "https://21st.dev/@daiwiikharihar/components/figma-brand-hero",
+        "sha256": "5b49cd6891425f58b4129ad8f8693c28ef11571aec0de6e4deda180384ca5710",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45733,
+        "url": "https://21st.dev/@themeocean/components/floating-glassmorphic-navbar-with-morphing-pill-indicator",
+        "sha256": "910623867855eda6162e955041a0f07e4571d9809dde78447cf2b0c73e06089c",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45806,
+        "url": "https://21st.dev/@konsstepnov/components/shader-art",
+        "sha256": "e9b26e6ebf04c0031b29c006383085cfe2a10be612ccd121569f31b1574ee992",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45843,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-checkbox-list",
+        "sha256": "abd66361d62eb98379b83327434a70f3cc23b32d39f9967581023d09394cd6d1",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45845,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-checkbox-list-item",
+        "sha256": "0ad87027b272704603ca0b7adc75419bec004755912db1268ebe4e1408f801a3",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45848,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-citation",
+        "sha256": "36af3e926bad05319d22d4e80a26e54fd8d976d2068b8d43a0d5a8df53a7518d",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45851,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-clickable-card",
+        "sha256": "c613aa0fe858e15673a08ee8c2949745e0f5cb40ddf633d332bf0cf54ecdf727",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45852,
+        "url": "https://21st.dev/@aloksivastava1025/components/cue-isometric-mechanical-keycap",
+        "sha256": "3ad268e1072dc095cdbb7f1354342105dbb052313615ee24b1e716a4527490da",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45853,
+        "url": "https://21st.dev/@aloksivastava1025/components/cue-expandable-book-search-palette",
+        "sha256": "51fedc4cba5271effc0fed23383ceaa694bee349e62cae0bd3f693aa86bda581",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45854,
+        "url": "https://21st.dev/@aloksivastava1025/components/cue-dynamic-notch-activity-indicator",
+        "sha256": "197150cf4a4fafc0e05dba9195f390ccc4c645521fe838b76b689771bc67b095",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45855,
+        "url": "https://21st.dev/@aloksivastava1025/components/cue-3d-book-carousel-reading-mode",
+        "sha256": "8f538f25995343445c62a3476d274702359d29ca4e7529634e4acad67158fd7c",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45856,
+        "url": "https://21st.dev/@aloksivastava1025/components/cue-flex-grow-benefits-reveal",
+        "sha256": "7452dbc9f96c026e1800d243c12ef241cf1ffe0bf6f54b86b2b672ffe7e0890c",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45864,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-code",
+        "sha256": "81b1f048e6b5ec188a4b2f28eac15ebd2d8d6c5a1d990ec532d1fe1f3964dc4f",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45893,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-code-block",
+        "sha256": "38ec9cded5c237b7f06d6a32562af9f10aa61471bb06ce7c6b44a53964ba2def",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45900,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-collapsible",
+        "sha256": "900e7a51a7e8af6dd5a266a2943c18be25c956d29b7d04e18ce339bef2e9afce",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45902,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-collapsible-group",
+        "sha256": "c6c44f8d68bf250d88863f5e2ca6cde272e4f3593512be022d9adf652ff352f0",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45904,
+        "url": "https://21st.dev/@Astryxdesign/components/astryx-command-palette-empty",
+        "sha256": "020e64f0f032f4dc9e115a413ea2bcebf2180f7a24db3f7ec3fe37d87b21ae07",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45907,
+        "url": "https://21st.dev/@aloksivastava1025/components/cue-chained-spring-arc-carousel",
+        "sha256": "770645c082c9aa18c8bf648861a5e3409018f178fd76c3e87d54c47c104ef19a",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45909,
+        "url": "https://21st.dev/@aloksivastava1025/components/cue-fisheye-chromatic-card-grid",
+        "sha256": "b8c30630c15dae176f8b24ecd5a1676fc70ff0f5c7f547a5b792a50d7647700a",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45926,
+        "url": "https://21st.dev/@aloksivastava1025/components/blue-shade-star-rating",
+        "sha256": "d0307b25cfa870c6c7c9ca7db8dc5a58cc999ea62635701644a4093f1347ec0d",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45927,
+        "url": "https://21st.dev/@aloksivastava1025/components/3-d-book-carousel-reading-mode",
+        "sha256": "04cf48eb18d94d3913058afbc8008ad4871d1d57004b9d80308720b098033bcd",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45929,
+        "url": "https://21st.dev/@aloksivastava1025/components/copy-plus-dual-copy-button",
+        "sha256": "3766f068d7933f5548ac7b8fbfc6c1ffb86d278b938e8530c4ebaabe611ea5be",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45930,
+        "url": "https://21st.dev/@aloksivastava1025/components/dynamic-island-feedback-notch",
+        "sha256": "dde7fcc203804a04d233a1a474997a7d9c20043000bc991474e1e98c0a5d3093",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45931,
+        "url": "https://21st.dev/@aloksivastava1025/components/dynamic-notch-activity-indicator",
+        "sha256": "41acb82655650cc501fc66054e8b2a4445bd72a97009a5635ced22a7d7be0258",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45936,
+        "url": "https://21st.dev/@aloksivastava1025/components/outline-inspector-panel",
+        "sha256": "a061d25d815762a516cafd2957661b09312f67f0f686ed11eddbacd70c829d30",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45937,
+        "url": "https://21st.dev/@aloksivastava1025/components/pixel-perfect-shop-onboarding",
+        "sha256": "a64a5c5c1585df7873eafe70872aba67d7ba5c33ca5e471c89febba1ac50404c",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 45938,
+        "url": "https://21st.dev/@aloksivastava1025/components/sticky-cascade-services-timeline",
+        "sha256": "2b09535df99276ef8476c96ba33dfa10100adb3f6597bb6593fd70384431be84",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46116,
+        "url": "https://21st.dev/@automate_flows/components/daytake-photo-landing",
+        "sha256": "b536fd54bab13ce6f250c3944c246ec1bd6a211eb522d89c4e7eee19566c6f74",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46162,
+        "url": "https://21st.dev/@louisstudios/components/scratch-card",
+        "sha256": "9448b2d51d239a5747db85131d51be52653a7b3dd23fca6652d821232d36f13e",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46163,
+        "url": "https://21st.dev/@louisstudios/components/math-scramble",
+        "sha256": "86187bd94a7ff2be87791922c71b7bd4ecae955f10c5b0726b13c080a3cbe076",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46279,
+        "url": "https://21st.dev/@abushaidislam7/components/fitness-bento-grid",
+        "sha256": "8b8936fe13910f69408f6471e0cc7ed04946a26ae21249dfa8a434346863b6f4",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46280,
+        "url": "https://21st.dev/@sliderrevolution/components/cymatic-particle-hero",
+        "sha256": "4f3947ce46f7ebe88a35df1cb58436ac6a80aaee9703cf2a32e7c4590e9267f3",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46281,
+        "url": "https://21st.dev/@sliderrevolution/components/shadow-light-slider",
+        "sha256": "2dad0dd62ee48db204409916179e4943af309a56bd371927405d94ffe6c254fc",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46282,
+        "url": "https://21st.dev/@sliderrevolution/components/mood-board-carousel",
+        "sha256": "720bcb4a34289d4858948e5b8218e7c91e33775a80dde03828eb4b0364e03a8c",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46283,
+        "url": "https://21st.dev/@louisstudios/components/scribble-clock",
+        "sha256": "5f92ffadc885df53b93fb5e38931b587387900add8283e9d2d0068f015796265",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46285,
+        "url": "https://21st.dev/@vovalopuh13/components/command-palette",
+        "sha256": "32ad77125e160d94c42aaa41199e6bff3f6bef907853c44ac4f210125bee7d28",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46286,
+        "url": "https://21st.dev/@vovalopuh13/components/envelope-subscribe",
+        "sha256": "ec02965fbf8c5b26a2307ace6c1df2e6760eb362a1e95098a46d76fd46385122",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46287,
+        "url": "https://21st.dev/@vovalopuh13/components/faq-liquid-accordion",
+        "sha256": "c6477dd2a2a876948696777978fdfda6c36623f45c6784b8cd229419ead1881e",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46288,
+        "url": "https://21st.dev/@vovalopuh13/components/file-drop-physics",
+        "sha256": "fec8ff0cc7d970f5225c077da80d556d730b8ce05690c0d512bc4f8d4e341cfe",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46289,
+        "url": "https://21st.dev/@vovalopuh13/components/live-contact-form",
+        "sha256": "6c09d0ff3e74fedc0a7f5da782822e6e9e09aeffe2ff9a0853e943dd80e046e9",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46290,
+        "url": "https://21st.dev/@vovalopuh13/components/notification-matrix",
+        "sha256": "495677ec69b98af417dd334cfec55e2e6b3d74de1bfd0750c7ee7dc7e121d72a",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46291,
+        "url": "https://21st.dev/@vovalopuh13/components/photo-review-form",
+        "sha256": "845ee9e3c44b9921de02f1bdecc3b13b7aeb22ba7c9746aa74f7e9fa1709bd19",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46292,
+        "url": "https://21st.dev/@vovalopuh13/components/pricing-plan-tilt",
+        "sha256": "ba45369148860ef19de945bdc27b641e87a72dd2829ef01e0a8268d4f4d2a2b6",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46293,
+        "url": "https://21st.dev/@vovalopuh13/components/slot-week-picker",
+        "sha256": "16943e1b046f6e92faa1eafd943f9f25913f071b04aefb5533a7363c5f272825",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46294,
+        "url": "https://21st.dev/@vovalopuh13/components/testimonial-coverflow",
+        "sha256": "31c57fa5cc122339e8244b91f6db03781651431ff18f8cd1ca7e9ef774d490b4",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46295,
+        "url": "https://21st.dev/@workout_scorpion/components/hanzo-red-silk",
+        "sha256": "fdac90985d858e3cac4f5e81b2656ed4d7b85b6bb5f203ebc03e34fa3b9d7714",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46296,
+        "url": "https://21st.dev/@workout_scorpion/components/hanzo-ember-smoke",
+        "sha256": "d0e353cb6ea8ae15e0c347748d281ddcc34de6c76cef86bd01e15561f02553d9",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46297,
+        "url": "https://21st.dev/@workout_scorpion/components/hanzo-alarm-beacon",
+        "sha256": "94ab3e2b94eb3166cd15a620c5d82f75493ae2cf3369851af7a6d187df87cbfb",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46298,
+        "url": "https://21st.dev/@workout_scorpion/components/hanzo-ember-bloom",
+        "sha256": "b213a6695f5214df550acd83395a831bd4b622736d88aef80260956f5530710d",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46299,
+        "url": "https://21st.dev/@workout_scorpion/components/hanzo-camera-lens",
+        "sha256": "7379ce0ae51805564e3e763c177e5bf281d0c6e25d905f290d3cb80cb06143c5",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46300,
+        "url": "https://21st.dev/@daiwiikharihar/components/loading-animations-demo",
+        "sha256": "3e1425a3322f79b0c21c8113fc88c5d5aa69fde6b6925f782342d675811b2053",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46301,
+        "url": "https://21st.dev/@workout_scorpion/components/hanzo-laser-curtain",
+        "sha256": "5fc11d01dc8eadddce4a27e9f907fd12bb1bd86791ccd2120ae5e09592a9d90f",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46302,
+        "url": "https://21st.dev/@workout_scorpion/components/hanzo-led-matrix",
+        "sha256": "3be570eef5f5d927c74faefb21388cc2ba5f50cd2e40a54f961cf7275deec47f",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46303,
+        "url": "https://21st.dev/@workout_scorpion/components/hanzo-cctv-binary",
+        "sha256": "e32e21c89f28d2e45e98b7aea1529ec936d7041f0850c8dc40d4545b2fa03d7b",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46304,
+        "url": "https://21st.dev/@workout_scorpion/components/hanzo-secure-shield-hex",
+        "sha256": "05ea223485f43d2a6a1f0e1e0d108477a819bc6c5617af4f250734b7cf03d9ef",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46305,
+        "url": "https://21st.dev/@workout_scorpion/components/hanzo-biometric-braille",
+        "sha256": "9d14891dc685b0376a4dbd0a513cce29e689265cbcf065d88c0161435450d71e",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46306,
+        "url": "https://21st.dev/@workout_scorpion/components/hanzo-radar-sweep",
+        "sha256": "d338ab6c8573cc22e6864f0a14d5457d191a259be9ea7b7ee21c7db7682fa372",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46307,
+        "url": "https://21st.dev/@workout_scorpion/components/hanzo-network-led-dots",
+        "sha256": "0673b6c01a33702b36a3977ce2010c715f5e59f5741588683914d855b398b65a",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46308,
+        "url": "https://21st.dev/@workout_scorpion/components/hanzo-fire-alarm-code",
+        "sha256": "d070f4cfa26b205d76a79b8d32e42161f7cda013c09027e435a21bb920c9d99b",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46314,
+        "url": "https://21st.dev/@ash_de90ff1a/components/silk-shader",
+        "sha256": "5db47f2280b8bd1b2700d2cab61bf97beecd433e0153b93ba65a97992daf0bcc",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46319,
+        "url": "https://21st.dev/@neebarp/components/underwater-dashboard",
+        "sha256": "5072ec0fa57a3118a9a2c2757dbe55e23ec6d607aca5f278341a76e3d50d2a6e",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46320,
+        "url": "https://21st.dev/@neebarp/components/burn-away",
+        "sha256": "13513a3861897e8b973dd844e0533938b01d116acae7054d9bbdf51dc6464928",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46323,
+        "url": "https://21st.dev/@prayaniwork/components/ascii-liquid-login",
+        "sha256": "94fd0d85e244465fd49d4ef9a787a8ba235e54f568ff4534610da11b19fca989",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46326,
+        "url": "https://21st.dev/@vovalopuh13/components/st-appearance-lab",
+        "sha256": "f80c9ab72c8700cbbc6c6e8aaf37e447ebccd87faefc4ebab38a3b7a3f4c897c",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46336,
+        "url": "https://21st.dev/@vovalopuh13/components/cd-lens-reel",
+        "sha256": "5c1d6ee78bed0453a2c2286032b3d3e7dea20b1fc4c1d781ab4d39dcfc7c767f",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46364,
+        "url": "https://21st.dev/@vovalopuh13/components/m-a-v-e-n-aurora",
+        "sha256": "7e54151dcc35a39236001d5657cbc7e124b8c3e39f5419e2a8a482ddb754e807",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46382,
+        "url": "https://21st.dev/@aadixc0de/components/thinking-indicator",
+        "sha256": "3f67fca18ed7a67178d3e98eff631b7cdff1540f4108f3753cab1482372c79a6",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46383,
+        "url": "https://21st.dev/@aadixc0de/components/voice-controls",
+        "sha256": "44c5390e7e1a7d4a90c2b2e9277d434b6d7c3686b1cf496eadbf71363a133447",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46384,
+        "url": "https://21st.dev/@aadixc0de/components/file-card",
+        "sha256": "80664d6362a678df6dd33e7e8d4fb0acec1c3e9c3b1a536e29a6eb193c36ec76",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46385,
+        "url": "https://21st.dev/@aadixc0de/components/context-meter",
+        "sha256": "98b6b6c41345b76ba5b8ff1a4adeb474d93f251730090cba481cbb24a75403b4",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46386,
+        "url": "https://21st.dev/@aadixc0de/components/message-feedback",
+        "sha256": "4c97204a35fb1a92ba2289b6644be8bb05ea43035f5614e28ad57c7eb5a78880",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46513,
+        "url": "https://21st.dev/@kiran47455/components/poba-shade",
+        "sha256": "8e462ab9cb646777d88204cda0d6c564e9be63910b54cbc070ae6ca330681402",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46567,
+        "url": "https://21st.dev/@michminlee/components/portfolio-1",
+        "sha256": "a16a5b4c7013ef90bee7b20dad7d2bd21582c966947ed5fef72b9bd6a1501d35",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46610,
+        "url": "https://21st.dev/@arazhaddadi/components/mesh-drift-shader",
+        "sha256": "13483feea03b04f4acf562a60e14935083db51a1bcb3143dfef5a92a3a2144d0",
+        "alreadyRetainedSameSource": false
+      },
+      {
+        "id": 46631,
+        "url": "https://21st.dev/@vayslend/components/arka",
+        "sha256": "c710022d21ab63504e2fdbbff06b37dba63d7c479be29a1c68db971d3c15a51e",
+        "alreadyRetainedSameSource": false
+      }
+    ]
+  },
+  "publicRegistries": {
+    "retained": 18,
+    "unavailable": [
+      {
+        "source": "aceternity",
+        "name": "preview-slider",
+        "url": "https://ui.aceternity.com/registry/preview-slider.json",
+        "status": "unavailable",
+        "reason": "HTTP_401",
+        "published": false
+      }
+    ]
+  },
+  "profitize": {
+    "metadata": 18,
+    "identityFailure": [
+      {
+        "route": "/build/landing-pages/linno",
+        "url": "https://profitize.com.br/build/landing-pages/linno",
+        "status": "unavailable",
+        "reason": "Metadata identity mismatch",
+        "published": false
+      }
+    ],
+    "originalPrompts": "not acquired: authenticated account browser unavailable"
+  },
+  "acceptance": "All new candidates remain staged. No source, cover or compilation is reported as browser/media/prompt/download acceptance. Payments disabled."
+}

@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:45:53.474Z",
+  "metadata": {
+    "type": "component",
+    "id": 45432,
+    "name": "Astryx Chat Message Metadata",
+    "description": "Composable metadata row for chat messages. Renders timestamp, footer content, and delivery status in a single row. Direction reverses for user sender. Omits the row when both slots are omitted or non-rendering scalars and status is omitted.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-chat-message-metadata/default/preview.1794510739951.png",
+    "videoUrl": null,
+    "author": "Astryxdesign",
+    "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-chat-message-metadata?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-message-metadata"
+  },
+  "component": {
+    "id": 45432,
+    "componentId": 26188,
+    "name": "Astryx Chat Message Metadata",
+    "demoName": "Default",
+    "description": "Composable metadata row for chat messages. Renders timestamp, footer content, and delivery status in a single row. Direction reverses for user sender. Omits the row when both slots are omitted or non-rendering scalars and status is omitted.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-chat-message-metadata/default/preview.1794510739951.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-chat-message-metadata?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\nimport \"./astryx-chat-message-metadata-utils/index.css\"\nimport { ChatMessageMetadata } from \"@astryxdesign/core/Chat\"\n\nexport * from \"@astryxdesign/core/Chat\"\nexport default ChatMessageMetadata\n",
+    "demoCode": "// Copyright (c) Meta Platforms, Inc. and affiliates.\n\n'use client';\n\nimport {\n  ChatMessageList,\n  ChatMessage,\n  ChatMessageBubble,\n  ChatMessageMetadata,\n} from '@/components/ui/astryx-chat-message-metadata';\nimport {Timestamp} from '@astryxdesign/core/Timestamp';\nimport {Text} from '@astryxdesign/core/Text';\nimport {Button} from '@astryxdesign/core/Button';\nimport {Icon} from '@astryxdesign/core/Icon';\nimport {HStack, VStack} from '@astryxdesign/core/Layout';\nimport {\n  ClipboardDocumentIcon,\n  ArrowPathIcon,\n  HandThumbUpIcon,\n  HandThumbDownIcon,\n} from '@heroicons/react/24/outline';\n\nfunction ChatMessageMetadataShowcase() {\n  return (\n    <VStack style={{maxWidth: 600}}>\n      <ChatMessageList>\n        <ChatMessage sender=\"assistant\">\n          <ChatMessageBubble\n            metadata={\n              <ChatMessageMetadata\n                timestamp={\n                  <Timestamp value=\"2026-03-15T14:30:00\" format=\"time\" />\n                }\n                status=\"error\"\n                footer={\n                  <HStack gap={1}>\n                    <Button\n                      label=\"Retry\"\n                      variant=\"ghost\"\n                      size=\"sm\"\n                      icon={<Icon icon={ArrowPathIcon} size=\"sm\" />}\n                      isIconOnly\n                      onClick={() => {}}\n                    />\n                  </HStack>\n                }\n              />\n            }>\n            Sorry, something went wrong on my end.\n          </ChatMessageBubble>\n        </ChatMessage>\n\n        <ChatMessage sender=\"user\">\n          <ChatMessageBubble\n            metadata={\n              <ChatMessageMetadata\n                timestamp={\n                  <Timestamp value=\"2026-03-15T14:31:00\" format=\"time\" />\n                }\n                status=\"read\"\n              />\n            }>\n            No worries — try again with just the last 24 hours of logs.\n          </ChatMessageBubble>\n        </ChatMessage>\n\n        <ChatMessage sender=\"assistant\">\n          <ChatMessageBubble\n            metadata={\n              <ChatMessageMetadata\n                timestamp={\n                  <Timestamp value=\"2026-03-15T14:32:00\" format=\"time\" />\n                }\n                footer={\n                  <HStack gap={1}>\n                    <Button\n                      label=\"Copy\"\n                      variant=\"ghost\"\n                      size=\"sm\"\n                      icon={<Icon icon={ClipboardDocumentIcon} size=\"sm\" />}\n                      isIconOnly\n                      onClick={() => {}}\n                    />\n                    <Button\n                      label=\"Retry\"\n                      variant=\"ghost\"\n                      size=\"sm\"\n                      icon={<Icon icon={ArrowPathIcon} size=\"sm\" />}\n                      isIconOnly\n                      onClick={() => {}}\n                    />\n                    <Button\n                      label=\"Good response\"\n                      variant=\"ghost\"\n                      size=\"sm\"\n                      icon={<Icon icon={HandThumbUpIcon} size=\"sm\" />}\n                      isIconOnly\n                      onClick={() => {}}\n                    />\n                    <Button\n                      label=\"Bad response\"\n                      variant=\"ghost\"\n                      size=\"sm\"\n                      icon={<Icon icon={HandThumbDownIcon} size=\"sm\" />}\n                      isIconOnly\n                      onClick={() => {}}\n                    />\n                    <Text type=\"supporting\" color=\"secondary\">\n                      Claude Opus 4.6\n                    </Text>\n                  </HStack>\n                }\n              />\n            }>\n            The canary at 11:42 AM caused a memory spike. Rolled back at 11:58\n            AM.\n          </ChatMessageBubble>\n        </ChatMessage>\n      </ChatMessageList>\n    </VStack>\n  );\n}\n\nexport default function ChatMessageMetadataShowcaseDemo() {\n  return (\n    <div\n      data-astryx-theme=\"neutral\"\n      data-theme=\"light\"\n      style={{colorScheme: 'light', display: 'contents'}}>\n      <ChatMessageMetadataShowcase />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source and usage retrieved through the authorized connector; rendering/media/export acceptance pending."
+}
