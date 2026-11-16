@@ -17,24 +17,26 @@ export default function PlanTiers({account,navigate,english}){
   title:'Plans',description:'Start with a free account. Upgrade as you need more tools and exports.',
   prepared:'Paid plans are in preparation.',account:'Your plan',open:'Try an example',
   starter:'Catalog, favorites, collections and Skills browsing',studio:'creative studio launches per month',starterStudio:'Background Studio launches per month',
-  trial:'starter prompts per month',weeklyPrompts:`${proPromptWeeklyLimit} prompts per week, up to ${planQuotas.pro.prompt} per month`,audit:'site audit runs per month',
+  trial:'starter prompts per month',weeklyPrompts:`${proPromptWeeklyLimit} different prompts per week, up to ${planQuotas.pro.prompt} per month`,audit:'site audit runs per month',
+  reuse:'Copy or download an unlocked prompt again without using another slot.',
   limited:'Audio, textures, shapes, backgrounds and site audit',export:'Source code and package exports',
   all:'Every tool, including Design Systems and Presentation Studio',
   unlimited:'No monthly caps on prompts, studio launches or site audit',
-  left:{prompt:'Prompts left this month',prompt_weekly:'Prompts left this week',studio:'Studio launches left',audit:'Audit runs left'}
+  left:{prompt:'New prompts left this month',prompt_weekly:'New prompts left this week',studio:'Studio launches left',audit:'Audit runs left'}
  }:{
   title:'Planos',description:'Comece com uma conta gratuita. Suba de plano quando precisar de mais ferramentas e exportações.',
   prepared:'Os planos pagos estão em preparação.',account:'Seu plano',open:'Experimentar um exemplo',
   starter:'Catálogo, favoritos, coleções e consulta às Skills',studio:'aberturas de estúdio por mês',starterStudio:'aberturas do Estúdio de fundos por mês',
-  trial:'prompts de demonstração por mês',weeklyPrompts:`${proPromptWeeklyLimit} prompts por semana, até ${planQuotas.pro.prompt} por mês`,audit:'execuções do Raio-X por mês',
+  trial:'prompts de demonstração por mês',weeklyPrompts:`${proPromptWeeklyLimit} prompts diferentes por semana, até ${planQuotas.pro.prompt} por mês`,audit:'execuções do Raio-X por mês',
+  reuse:'Copie ou baixe novamente um prompt liberado sem gastar outra vaga.',
   limited:'Áudio, texturas, formas, fundos e Raio-X',export:'Código e exportação de pacotes',
   all:'Todas as ferramentas, incluindo Design Systems e Estúdio de apresentação',
   unlimited:'Sem cotas mensais de prompts, abertura de estúdios ou Raio-X',
-  left:{prompt:'Prompts restantes no mês',prompt_weekly:'Prompts restantes nesta semana',studio:'Aberturas de estúdio restantes',audit:'Execuções do Raio-X restantes'}
+  left:{prompt:'Novos prompts restantes no mês',prompt_weekly:'Novos prompts restantes nesta semana',studio:'Aberturas de estúdio restantes',audit:'Execuções do Raio-X restantes'}
  };
  const details={
   free:[text.starter,planQuotas.free.prompt+' '+text.trial,planQuotas.free.studio+' '+text.starterStudio],
-  pro:[text.limited,text.export,text.weeklyPrompts,planQuotas.pro.studio+' '+text.studio,planQuotas.pro.audit+' '+text.audit],
+  pro:[text.limited,text.export,text.weeklyPrompts,text.reuse,planQuotas.pro.studio+' '+text.studio,planQuotas.pro.audit+' '+text.audit],
   max:[text.all,text.export,text.unlimited]
  };
  const demo='/component/'+freePromptIds[0];

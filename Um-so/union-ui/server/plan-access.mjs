@@ -37,7 +37,7 @@ export async function consumePlanQuota(getStore,userId,plan,action,resource,oper
  if(limit===null)return {remaining:null,resetAt:null};
  const args={p_user:userId,p_limit:limit,p_operation:operation,p_resource:resource};
  const {data,error}=action==='prompt'
-  ?await getStore().rpc('nitido_consume_prompt_quota',{...args,p_weekly_limit:weeklyLimit})
+  ?await getStore().rpc('nitido_unlock_prompt',{...args,p_weekly_limit:weeklyLimit})
   :await getStore().rpc('nitido_consume_plan_quota',{...args,p_bucket:action});
  if(error)throw fail(503,'Não foi possível consultar sua cota. Tente novamente.','plan_quota_unavailable');
  if(!data?.allowed){

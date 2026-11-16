@@ -31,19 +31,21 @@ test('entitlements are cumulative and only trusted production subscriptions gran
 test('access API lets a signed-in free account browse, while restricted actions require the right tier and quota',async()=>{
  const origin='https://nitido.example';
  let user=null,used=0;
+ const unlocked=new Set();
  const app=createSupabaseApplication({
   origin,billingEnv:{NITIDO_PLAN_ACCESS_ENABLED:'true'},limiter:()=>{},
   clientFactory:()=>({finish:response=>response,client:{auth:{getUser:async()=>({data:{user}})}}}),
   planStore:()=>({rpc:async(name,args)=>{
    if(name==='nitido_read_plan_quotas')return {data:{prompt:used,prompt_weekly:used}};
-   assert.equal(name,'nitido_consume_prompt_quota');
+   assert.equal(name,'nitido_unlock_prompt');
+   if(unlocked.has(args.p_resource))return {data:{allowed:true,remaining:args.p_limit-used}};
    if(args.p_weekly_limit!==null){
     assert.equal(args.p_limit,60);
     assert.equal(args.p_weekly_limit,15);
     if(used>=args.p_weekly_limit)return {data:{allowed:false,period:'week'}};
    }
    const allowed=used<args.p_limit;
-   if(allowed)used++;
+   if(allowed){used++;unlocked.add(args.p_resource);}
    return {data:{allowed,remaining:args.p_limit-used}};
   }})
  });
@@ -57,8 +59,11 @@ test('access API lets a signed-in free account browse, while restricted actions 
  assert.equal(access.canExport,false);
  assert.equal((await prompt('private-example')).status,403);
  assert.equal((await request('/api/site-audit/site',{url:'https://example.org'})).status,403);
- for(let i=0;i<5;i++)assert.equal((await prompt('reactbits--aurora')).status,200);
- assert.equal((await prompt('reactbits--aurora')).status,429);
+ for(const sample of ['reactbits--aurora','reactbits--orb','reactbits--magic-bento','aceternity--background-beams','kokonut-background-paths']){
+  assert.equal((await prompt(sample)).status,200);
+ }
+ assert.equal((await prompt('reactbits--aurora')).status,200);
+ assert.equal(used,5);
  const usage=await (await request('/api/plan-usage')).json();
  assert.equal(usage.quotas.prompt.remaining,0);
  user.app_metadata={nitido_plan:'max'};
@@ -66,8 +71,9 @@ test('access API lets a signed-in free account browse, while restricted actions 
  assert.equal(used,5);
  assert.equal((await request('/api/billing/checkout',{})).status,503);
  user.app_metadata={nitido_plan:'pro'};
- for(let i=0;i<10;i++)assert.equal((await prompt('private-example')).status,200);
- const blocked=await prompt('private-example');
+ for(let i=0;i<10;i++)assert.equal((await prompt('private-example-'+i)).status,200);
+ assert.equal((await prompt('private-example-0')).status,200);
+ const blocked=await prompt('private-example-new');
  assert.equal(blocked.status,429);
  assert.match((await blocked.json()).error,/cota semanal/);
  assert.deepEqual((await (await request('/api/plan-usage')).json()).quotas.prompt_weekly,{limit:15,remaining:0});
@@ -109,5 +115,27 @@ test('monthly quota receipts are idempotent, owner-scoped and only callable by s
   const monthlyBlocked=await consumeWeekly(randomUUID());
   assert.equal(monthlyBlocked.allowed,false);
   assert.equal(monthlyBlocked.remaining,0);
+
+  await db.exec(await readFile(new URL('../supabase/migrations/20261116193000_nitido_prompt_unlocks.sql',import.meta.url),'utf8'));
+  const unlock=async (user,resource)=>(await db.query('select public.nitido_unlock_prompt($1,60,$2,$3,15) result',[user,randomUUID(),resource])).rows[0].result;
+  await db.exec('set role authenticated');
+  await assert.rejects(unlock(other,'demo'),{code:'42501'});
+  await db.exec('set role service_role');
+  assert.equal((await unlock(other,'demo')).allowed,true);
+  assert.equal((await unlock(other,'new')).allowed,false);
+  await db.exec('reset role');
+  const fresh=randomUUID();
+  await db.query('insert into auth.users values($1)',[fresh]);
+  assert.equal((await unlock(fresh,'demo')).weeklyRemaining,14);
+  assert.equal((await unlock(fresh,'demo')).weeklyRemaining,14);
+  for(let i=0;i<14;i++)assert.equal((await unlock(fresh,'new-'+i)).allowed,true);
+  assert.equal((await unlock(fresh,'new-blocked')).period,'week');
+  const repeated=await unlock(fresh,'demo');
+  assert.equal(repeated.allowed,true);
+  assert.equal(repeated.weeklyRemaining,0);
+  await db.query('delete from public.nitido_plan_usage where user_id=$1',[fresh]);
+  assert.equal((await unlock(fresh,'demo')).weeklyRemaining,15);
+  await db.query('delete from auth.users where id=$1',[fresh]);
+  assert.equal((await db.query('select count(*)::int total from public.nitido_prompt_unlocks where user_id=$1',[fresh])).rows[0].total,0);
  }finally{await db.close();}
 });
