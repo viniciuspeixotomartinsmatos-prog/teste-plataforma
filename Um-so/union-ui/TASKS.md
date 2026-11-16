@@ -143,3 +143,6 @@ Auth Modal and Hyper Text now have individual acceptance records, bringing this 
 - [x]11 available original videos individually passed pointer hover playback and leave pause/reset/cover; Stat Card retains its original cover.
 - [x]First10 deploymentfe5bc427e READY; signed-in production Bento CTA state, prompt feedback and actual ZIP download confirmed.
 - [ ]Publish second12 after focused18-test suite/build/packaging. SQL iframe CSV remains unapproved;152 other compiled examples and34 Astryx candidates remain pending.
+
+- [x]Integrate collaborator gallery782395ab3; combined294 tests,4 Sites checks and production build passed. All36 approved artifact graphs preserved. New gallery hover representative checks passed.
+- [ ]Confirm the second12 source additions on the published combined deployment; broader21st backlog remains152 compiled-unapproved and34 original-module-blocked examples, plus templates/older gaps.
