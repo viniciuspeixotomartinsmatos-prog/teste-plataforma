@@ -1,13 +1,13 @@
 {
   "checkedAt": "2026-11-16T13:58:14.490Z",
-  "publishedNewItems": 0,
+  "publishedNewItems": 8,
   "hoverRepair": {
     "commit": "95bbe0697",
     "deployment": "teste-plataforma-puavif2ax-novonormaladm-7417s-projects.vercel.app",
     "state": "READY",
     "affectedExistingCards": 25,
     "codeTests": "12 focused initial checks and7 follow-up checks passed",
-    "visual": "blocked: Local browser access is unavailable for this chat; retried after user re-enable report",
+    "visual": "Authorized IAB restored. Actual published Kairo pointer hover confirmed playing/advancing at3.45 and9.98 seconds; leave paused/reset0/restored cover. Seven new Profitize videos individually passed the same lifecycle in authenticated local review.",
     "scope": "Existing own MP4 bindings restored. Refresh already-open tabs; no visual playback certification."
   },
   "sources": [
@@ -1352,5 +1352,34 @@
     ],
     "originalPrompts": "not acquired: authenticated account browser unavailable"
   },
-  "acceptance": "All new candidates remain staged. No source, cover or compilation is reported as browser/media/prompt/download acceptance. Payments disabled."
+  "acceptance": "Eight Profitize originals approved after actual item-specific browser/media/prompt/download checks. All21st candidates remain staged; native video Space control and complete device/performance audits are not claimed. Payments disabled.",
+  "profitizeOriginalRelease": {
+    "approved": 8,
+    "catalogCount": 10713,
+    "recoveredOriginalCount": 117,
+    "recorded": 7,
+    "interactiveOriginal": 1,
+    "accepted": [
+      "capia",
+      "ceru",
+      "pomo",
+      "solua",
+      "pronto",
+      "dicta",
+      "patina",
+      "doodle-crew-footer"
+    ],
+    "originalsAcquiredThrough": "Normal authenticated Max UI downloads",
+    "quotaRemaining": 0,
+    "nextQuotaAsDisplayed": "17/11 at12h38",
+    "quotaBlocked": 10,
+    "stillUnresolved": "linno metadata identity mismatch",
+    "browserEvidence": "profitize/browser-validation.json",
+    "tests": {
+      "fullPassed": 287,
+      "fullFailed": 0,
+      "sitesPassed": 4
+    },
+    "deployment": "pending push/production acceptance"
+  }
 }

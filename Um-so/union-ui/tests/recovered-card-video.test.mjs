@@ -20,7 +20,7 @@ test('recorded recovered cards expose their own retained video, including Kairo'
   assert.ok(rows.find(row=>row.id==='recovered--kairo').video.endsWith('/previa-card-24f57a10.mp4'));
   assert.deepEqual(await connectRecoveredCardVideos(rows,originals,path.resolve('public')),[],'repeat repair is idempotent');
  }
- assert.equal(count,60);
+ assert.equal(count,74);
 });
 
 test('repair preserves existing videos and rejects missing media instead of borrowing another cover',async()=>{

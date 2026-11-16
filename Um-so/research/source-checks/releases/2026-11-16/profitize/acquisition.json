@@ -1,0 +1,247 @@
+{
+  "checkedAt": "2026-11-16T15:17:26.969181+00:00",
+  "originals": 8,
+  "quotaBlocked": 10,
+  "published": 0,
+  "scope": "Normal authorized UI downloads; public preview retention. No runtime or export acceptance inferred.",
+  "assets": [
+    {
+      "url": "https://profitize.com.br/build/media/057ae0b2-c430-446b-a4d1-73da513a7382/previa-card-72273d20.mp4",
+      "file": "alvio/previa-card-72273d20.mp4",
+      "bytes": 2336550,
+      "sha256": "72273d20806cdf1ee13d09007fd5a596f1e18000f9ec629c0e47b3f8864858e3",
+      "kind": "video"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/057ae0b2-c430-446b-a4d1-73da513a7382/poster-b112cf00.webp",
+      "file": "alvio/poster-b112cf00.webp",
+      "bytes": 16592,
+      "sha256": "b112cf00c0afd13a70f3942f843a63724d51699547076d6483d23c7762eca2a8",
+      "kind": "poster"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/ebd75434-0e23-465f-8501-aa823e72dab5/previa-card-5a274015.mp4",
+      "file": "capia/previa-card-5a274015.mp4",
+      "bytes": 3680673,
+      "sha256": "5a274015d2c3a342cf6c85ddb75a0fd842c2a16ab7596bf8ebd6df1967a35f3f",
+      "kind": "video"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/ebd75434-0e23-465f-8501-aa823e72dab5/poster-05d96ec3.webp",
+      "file": "capia/poster-05d96ec3.webp",
+      "bytes": 38948,
+      "sha256": "05d96ec39a1b1240546cfe6d2ee4074845cadf49bd967e2727f0de58a61816cd",
+      "kind": "poster"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/84d8b41d-bc85-4de5-a9f0-37a66cc8af89/previa-card-3f43b276.mp4",
+      "file": "ceru/previa-card-3f43b276.mp4",
+      "bytes": 2980011,
+      "sha256": "3f43b276702adf82f152c2524b0670c333486a4a571747d5ba26a9913e8105b8",
+      "kind": "video"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/84d8b41d-bc85-4de5-a9f0-37a66cc8af89/poster-5d4b7f94.webp",
+      "file": "ceru/poster-5d4b7f94.webp",
+      "bytes": 145206,
+      "sha256": "5d4b7f94d3fcfac0630b56b5fb0f3e2c30f912e56d69b2b5c939b6ba48f8c7d9",
+      "kind": "poster"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/8445f2db-9fc1-4781-8e1a-d6a5ec0db75a/previa-card-a2902fd4.mp4",
+      "file": "kromo/previa-card-a2902fd4.mp4",
+      "bytes": 4151709,
+      "sha256": "a2902fd4b9a3de7f92c807c6fcdc071f5afa7ce47146fbeb8d4824405e1dac71",
+      "kind": "video"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/8445f2db-9fc1-4781-8e1a-d6a5ec0db75a/poster-597d6a0c.webp",
+      "file": "kromo/poster-597d6a0c.webp",
+      "bytes": 52858,
+      "sha256": "597d6a0c55fc9938886db9646ccd5af54f34fcad748bceec22349a0eb54275dc",
+      "kind": "poster"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/b2094fd8-14c7-4d0c-a850-8767df1efc30/previa-card-0e3470f7.mp4",
+      "file": "lampo/previa-card-0e3470f7.mp4",
+      "bytes": 2000391,
+      "sha256": "0e3470f7f829b040418704895c5f65d5fe03958ecce3f96fad5312a24021762d",
+      "kind": "video"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/b2094fd8-14c7-4d0c-a850-8767df1efc30/poster-b297a234.webp",
+      "file": "lampo/poster-b297a234.webp",
+      "bytes": 26864,
+      "sha256": "b297a234f97fee564828768293d988f58d4ef75cc58226274d5212dc13251928",
+      "kind": "poster"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/685c997a-3489-4baf-a8a8-4131c24721c1/previa-card-abe07530.mp4",
+      "file": "nubo/previa-card-abe07530.mp4",
+      "bytes": 1924102,
+      "sha256": "abe075301e0d459aaae4708241484262a420d4913f40c026f7467f466c9d4ac1",
+      "kind": "video"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/685c997a-3489-4baf-a8a8-4131c24721c1/poster-6f630f3f.webp",
+      "file": "nubo/poster-6f630f3f.webp",
+      "bytes": 32844,
+      "sha256": "6f630f3f1727df6c385b6bd1471793c06386d257c45f424ea5db657e32bdb0a4",
+      "kind": "poster"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/8cafdbed-5b0e-4a53-a3df-aee6453d2f29/previa-card-8ef09e91.mp4",
+      "file": "pelu/previa-card-8ef09e91.mp4",
+      "bytes": 3471526,
+      "sha256": "8ef09e910e98a254228af37116833a84157aa7f68c1a0a70db4a50133b98a5dd",
+      "kind": "video"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/8cafdbed-5b0e-4a53-a3df-aee6453d2f29/poster-d9800273.webp",
+      "file": "pelu/poster-d9800273.webp",
+      "bytes": 64616,
+      "sha256": "d9800273043ea3aafc3402a82bf8aa8357f4aa2b972032388f335cbdffb90a06",
+      "kind": "poster"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/18d6f228-db40-4530-adad-b5421131ac94/previa-card-396b5733.mp4",
+      "file": "pente-fino/previa-card-396b5733.mp4",
+      "bytes": 3021891,
+      "sha256": "396b5733914a3e904df3dfc66e9155271ad258b16b161a702eac9c49274b1017",
+      "kind": "video"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/18d6f228-db40-4530-adad-b5421131ac94/poster-7f548d27.webp",
+      "file": "pente-fino/poster-7f548d27.webp",
+      "bytes": 23466,
+      "sha256": "7f548d27b7249c052a33a80a74578b3408fcf75d6c647f4e2675781819a735d9",
+      "kind": "poster"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/7f2a6f83-c4ed-4094-a32f-0bea2f91ef7d/previa-card-21f1ea16.mp4",
+      "file": "pomo/previa-card-21f1ea16.mp4",
+      "bytes": 2582475,
+      "sha256": "21f1ea162f599c691e4afc46ca8edee2a854df0a8e4f01abb7fe185a9071fca1",
+      "kind": "video"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/7f2a6f83-c4ed-4094-a32f-0bea2f91ef7d/poster-7d3c2452.webp",
+      "file": "pomo/poster-7d3c2452.webp",
+      "bytes": 33820,
+      "sha256": "7d3c24520dd4ce556cd71954aec32b0d6ad01dfd6156413eca85fc5857eecb33",
+      "kind": "poster"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/7ac65346-e4e9-4f30-b695-9cf4a2cf95cf/previa-card-a6a5db1a.mp4",
+      "file": "prega/previa-card-a6a5db1a.mp4",
+      "bytes": 2524768,
+      "sha256": "a6a5db1aea90c2dbed7c4ee83c0c94078b451bc2a5cc4091fffe004e57166c55",
+      "kind": "video"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/7ac65346-e4e9-4f30-b695-9cf4a2cf95cf/poster-af7d42d7.webp",
+      "file": "prega/poster-af7d42d7.webp",
+      "bytes": 24970,
+      "sha256": "af7d42d72d57c24d9ad36d88c1002c0d89943f6f2b4aefd6bf33f005f4e795ed",
+      "kind": "poster"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/36b6b6ab-3026-4c48-aba8-b7dc956e4521/previa-card-4ab84249.mp4",
+      "file": "solua/previa-card-4ab84249.mp4",
+      "bytes": 8194332,
+      "sha256": "4ab8424942ee6936d6333b7aee8f00c829ed32f0a2af297b5ccb66b243fa71bb",
+      "kind": "video"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/36b6b6ab-3026-4c48-aba8-b7dc956e4521/poster-b144d1d5.webp",
+      "file": "solua/poster-b144d1d5.webp",
+      "bytes": 109792,
+      "sha256": "b144d1d5be8354334e686fccc0d780e0e09e6a4a5f61f43287cb9e32a8d89d3e",
+      "kind": "poster"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/0f1940bf-356d-413f-90ae-58afb6e1390b/previa-card-51e31031.mp4",
+      "file": "curva/previa-card-51e31031.mp4",
+      "bytes": 3090578,
+      "sha256": "51e310313306c2747d6edc0645ee01433d448d02fe26706335464353c2b6abaf",
+      "kind": "video"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/0f1940bf-356d-413f-90ae-58afb6e1390b/poster-0bb1ed89.webp",
+      "file": "curva/poster-0bb1ed89.webp",
+      "bytes": 23086,
+      "sha256": "0bb1ed89d1d0091230d427600ca8024253236520d198834aef6ceb7d86c8e95e",
+      "kind": "poster"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/c03364d4-5638-4a15-ba34-1a6db9f7cdf9/previa-card-8372a50a.mp4",
+      "file": "dicta/previa-card-8372a50a.mp4",
+      "bytes": 1163371,
+      "sha256": "8372a50a80a47d1d0970e407b47669ce5b9116536cf3e8d5eff230b879cb5b8f",
+      "kind": "video"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/c03364d4-5638-4a15-ba34-1a6db9f7cdf9/poster-fc21f512.webp",
+      "file": "dicta/poster-fc21f512.webp",
+      "bytes": 12982,
+      "sha256": "fc21f5120f182d60eabb10f80350733895e063d225c852366dc97d297c25b151",
+      "kind": "poster"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/cd42f236-950d-477b-aeb4-3ee1130452d9/previa-card-8e954300.mp4",
+      "file": "patina/previa-card-8e954300.mp4",
+      "bytes": 2409275,
+      "sha256": "8e9543007af9ec422a83c0e438540c2d3662a262722c9ef5ba82ef0062ed9489",
+      "kind": "video"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/cd42f236-950d-477b-aeb4-3ee1130452d9/poster-3e5a94c9.webp",
+      "file": "patina/poster-3e5a94c9.webp",
+      "bytes": 31372,
+      "sha256": "3e5a94c92c6fb9990b213c539e64baaf787b7cd99ea3cbc5107dc8e2de1d21b7",
+      "kind": "poster"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/bb9e92bc-8654-48df-9f63-a748b1fb9419/previa-card-3d964bd8.mp4",
+      "file": "plink/previa-card-3d964bd8.mp4",
+      "bytes": 2023131,
+      "sha256": "3d964bd88054b3ac23199874d5694c095316e455f68f4c44bfc7afdd7867c7fe",
+      "kind": "video"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/bb9e92bc-8654-48df-9f63-a748b1fb9419/poster-fbda6700.webp",
+      "file": "plink/poster-fbda6700.webp",
+      "bytes": 24828,
+      "sha256": "fbda67004c7b2737d01e46a24b4f7e0a2f9801a2a3c0992bc5e94c17257445f3",
+      "kind": "poster"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/ac974e8c-28bf-42a5-8845-f24837b1c94e/previa-card-c8ded86b.mp4",
+      "file": "pronto/previa-card-c8ded86b.mp4",
+      "bytes": 5977692,
+      "sha256": "c8ded86b643f4ad3cb03f023a15ed69349b17dea0773a8b80d2db95bc9dd1d3e",
+      "kind": "video"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/ac974e8c-28bf-42a5-8845-f24837b1c94e/poster-8c4bb019.webp",
+      "file": "pronto/poster-8c4bb019.webp",
+      "bytes": 45084,
+      "sha256": "8c4bb019cc2f8b65cd9284102f9d12253e4297ed9078ee80e4a80089abdcf3ad",
+      "kind": "poster"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/68727c24-1cf3-4272-84ab-5cc98b86240f/previa-card-01ab5bce.mp4",
+      "file": "tato/previa-card-01ab5bce.mp4",
+      "bytes": 3468037,
+      "sha256": "01ab5bced75fc67c49bd3d0c5f56ea2aea7e612c53542afeecab679cd2ff2ea6",
+      "kind": "video"
+    },
+    {
+      "url": "https://profitize.com.br/build/media/68727c24-1cf3-4272-84ab-5cc98b86240f/poster-e60ed327.webp",
+      "file": "tato/poster-e60ed327.webp",
+      "bytes": 5130,
+      "sha256": "e60ed32721f48fbb97d42fb465a5ab059d4139a967762b8c7bfac73a5dee6044",
+      "kind": "poster"
+    }
+  ]
+}

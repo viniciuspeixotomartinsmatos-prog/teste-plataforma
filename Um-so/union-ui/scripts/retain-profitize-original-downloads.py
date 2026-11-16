@@ -9,7 +9,8 @@ import json, hashlib, datetime, zipfile, urllib.request, concurrent.futures, sys
 APP=Path(__file__).resolve().parents[1]
 INTAKE=APP / sys.argv[1]
 DOWNLOADS=Path(sys.argv[2])
-DATE='2026-11-12'
+DATE=sys.argv[3] if len(sys.argv)>3 else '2026-11-12'
+if len(DATE)!=10 or DATE[4]!='-' or DATE[7]!='-' or not DATE.replace('-','').isdigit():raise ValueError('Invalid release date')
 OUT=APP.parent/'research/source-checks/releases'/DATE/'profitize'
 rows=json.loads(INTAKE.read_text(encoding='utf-8-sig'))
 OUT.mkdir(parents=True,exist_ok=True)
@@ -20,8 +21,8 @@ for row in rows:
     folder=OUT/slug;folder.mkdir(exist_ok=True)
     record={**row,'published':False,'sourceUrl':'https://profitize.com.br/build/'+{'landing_page':'landing-pages','motion':'motion','component':'componentes'}[row['type']]+'/'+slug}
     if row['original']:
-        if slug=='lente':
-            content=(DOWNLOADS/'lente.md').read_bytes()
+        if slug=='lente' or row.get('downloadType')=='markdown':
+            content=(DOWNLOADS/(slug+'.md')).read_bytes()
             (folder/'PROMPT-ORIGINAL.md').write_bytes(content)
         else:
             content=(DOWNLOADS/(slug+'.zip')).read_bytes()
@@ -42,7 +43,7 @@ for row in rows:
         prompt=(folder/'PROMPT-ORIGINAL.md').read_bytes()
         record.update(promptSha256=hashlib.sha256(prompt).hexdigest(),status='retained_original_unvalidated')
     else:
-        record.update(status='preview_only_quota_blocked',block='15 weekly copies exhausted; normal UI shows renewal Monday16/11 at10h25. Original prompt/project not retrieved.')
+        record.update(status='preview_only_quota_blocked',block=row.get('block','Original prompt/project not retrieved; source quota or access remains required.'))
     records.append(record)
 
 def media(row):

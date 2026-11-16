@@ -1,9 +1,9 @@
 {
   "capturedAt": "2026-10-29T18:26:20.873Z",
-  "generatedAt": "2026-11-13T13:39:26.789Z",
-  "observed": 109,
-  "published": 109,
-  "newEntries": 93,
+  "generatedAt": "2026-11-16T15:31:12.882Z",
+  "observed": 117,
+  "published": 117,
+  "newEntries": 101,
   "consolidated": [
     {
       "recoveredId": "recovered--animated-mosaic-portrait",
@@ -102,8 +102,8 @@
       "reason": "single-existing-title-retain-id-and-original-pointers"
     }
   ],
-  "executable": 79,
-  "recorded": 30,
+  "executable": 80,
+  "recorded": 37,
   "skipped": [],
   "failed": [],
   "downloadedAssets": 169,
@@ -870,6 +870,62 @@
       "name": "Lente",
       "mode": "interactive-original-source",
       "preview": "/previews/runtime/staged-profitize-lente.html",
+      "promptOrigin": "original"
+    },
+    {
+      "id": "recovered--doodle-crew-footer",
+      "name": "Doodle Crew Footer",
+      "mode": "interactive-original-source",
+      "preview": "/previews/runtime/staged-profitize-doodle-crew-footer.html",
+      "promptOrigin": "original"
+    },
+    {
+      "id": "recovered--capia",
+      "name": "Capiá",
+      "mode": "recorded-video",
+      "preview": "/previews/releases/profitize-2026-11-16/capia.html",
+      "promptOrigin": "original"
+    },
+    {
+      "id": "recovered--ceru",
+      "name": "Ceru",
+      "mode": "recorded-video",
+      "preview": "/previews/releases/profitize-2026-11-16/ceru.html",
+      "promptOrigin": "original"
+    },
+    {
+      "id": "recovered--pomo",
+      "name": "Pomo",
+      "mode": "recorded-video",
+      "preview": "/previews/releases/profitize-2026-11-16/pomo.html",
+      "promptOrigin": "original"
+    },
+    {
+      "id": "recovered--solua",
+      "name": "Solua",
+      "mode": "recorded-video",
+      "preview": "/previews/releases/profitize-2026-11-16/solua.html",
+      "promptOrigin": "original"
+    },
+    {
+      "id": "recovered--dicta",
+      "name": "Dicta",
+      "mode": "recorded-video",
+      "preview": "/previews/releases/profitize-2026-11-16/dicta.html",
+      "promptOrigin": "original"
+    },
+    {
+      "id": "recovered--patina",
+      "name": "Patina",
+      "mode": "recorded-video",
+      "preview": "/previews/releases/profitize-2026-11-16/patina.html",
+      "promptOrigin": "original"
+    },
+    {
+      "id": "recovered--pronto",
+      "name": "Pronto",
+      "mode": "recorded-video",
+      "preview": "/previews/releases/profitize-2026-11-16/pronto.html",
       "promptOrigin": "original"
     }
   ],

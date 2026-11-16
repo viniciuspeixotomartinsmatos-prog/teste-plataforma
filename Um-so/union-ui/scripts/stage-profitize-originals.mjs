@@ -28,6 +28,15 @@ for(const row of records.filter(row=>row.original))try{
   const payload={name:row.title,framework:'react',files:source,demoCode:blocks[2].content,demoPath:source[2].path,dependencies,license:'Original source notices and user-authorized acquisition apply.'};
   const built=await compileStagedItem({id,name:row.title,sourceId:'recovered',framework:'react',category:'Backgrounds',kind:'shader',slug:row.slug},payload,{persist:true});previewPath=built.previewPath;framework='react';recoveryMode='interactive-original-source';
   await fs.writeFile(path.join(folder,'source-files.json'),JSON.stringify({files:source},null,2)+'\n');
+ }else if(row.slug==='doodle-crew-footer'){
+  const blocks=[...prompt.matchAll(/^```tsx\s*\r?\n([\s\S]*?)^```\s*$/gm)].map(match=>match[1]);
+  if(blocks.length!==2||!blocks[1].includes('./ui/doodle-crew-footer'))throw Error('Original footer source shape changed');
+  const source=[{path:'components/ui/doodle-crew-footer.tsx',content:blocks[0]},{path:'components/doodle-crew-footer-demo.tsx',content:blocks[1]}];
+  files.push(...source);dependencies=['react','react-dom'];
+  const payload={name:row.title,framework:'react',files:source,demoCode:blocks[1],demoPath:source[1].path,dependencies,license:'Original source notices and user-authorized acquisition apply.'};
+  const built=await compileStagedItem({id,name:row.title,sourceId:'recovered',framework:'react',category:'Footers',kind:'component',slug:row.slug},payload,{persist:true});
+  previewPath=built.previewPath;framework='react';recoveryMode='interactive-original-source';
+  await fs.writeFile(path.join(folder,'source-files.json'),JSON.stringify({files:source},null,2)+'\n');
  }else{
   const assets=media.filter(asset=>asset.file.startsWith(row.slug+'/'));if(assets.length!==2||assets.some(asset=>asset.error))throw Error('Original preview media incomplete');
   let video;
@@ -39,6 +48,6 @@ for(const row of records.filter(row=>row.original))try{
   const pointer='/code/recovered/bundles/'+row.slug+'-original-'+date+'.zip';await write(pointer,archive);downloadFiles.push({path:row.slug+'-projeto-original.zip',url:pointer});
  }
  const payload={name:row.title,framework,recoveryMode,promptOrigin:'original',originalPrompt:prompt,files,downloadFiles,dependencies,license:'User-authorized original acquisition; retain source notices, bundled licenses and asset restrictions.'};await write(codePath,JSON.stringify(payload));
- const item={id,sourceId:'recovered',name:row.title,slug:row.slug,url:row.sourceUrl,sourceUrl:row.sourceUrl,description:row.niche,category:row.type==='landing_page'?'Heroes':row.type==='motion'?'Interactions':'Backgrounds',kind:row.type==='landing_page'?'template':row.type==='motion'?'motion':'shader',framework,recoveryMode,promptOrigin:'original',availability:framework==='react'?'code':'preview',codePath,previewPath,image,dependencies,license:payload.license,tags:[row.niche,row.type],updated:date};candidates.push(item);
+ const item={id,sourceId:'recovered',name:row.title,slug:row.slug,url:row.sourceUrl,sourceUrl:row.sourceUrl,description:row.niche,category:row.type==='landing_page'?'Heroes':row.type==='motion'?'Interactions':row.slug==='doodle-crew-footer'?'Footers':'Backgrounds',kind:row.type==='landing_page'?'template':row.type==='motion'?'motion':row.slug==='doodle-crew-footer'?'component':'shader',framework,recoveryMode,promptOrigin:'original',availability:framework==='react'?'code':'preview',codePath,previewPath,image,dependencies,license:payload.license,tags:[row.niche,row.type],updated:date};candidates.push(item);
  }catch(error){failures.push({slug:row.slug,reason:error.errors?.map(e=>e.text).join('; ')||error.message});}
 await fs.writeFile(path.join(root,'staged-catalog.json'),JSON.stringify(candidates,null,2)+'\n');await fs.writeFile(path.join(root,'stage-report.json'),JSON.stringify({checkedAt:new Date().toISOString(),published:0,preserved,candidates:candidates.length,failures,quotaBlocked:records.filter(row=>!row.original).map(row=>row.slug)},null,2)+'\n');console.log(JSON.stringify({staged:candidates.length,preserved,failures,quotaBlocked:records.filter(row=>!row.original).length,published:0}));

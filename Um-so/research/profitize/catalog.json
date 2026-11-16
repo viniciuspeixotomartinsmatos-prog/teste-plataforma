@@ -4033,5 +4033,125 @@
     },
     "approvedRelease": "2026-11-12",
     "promptRelease": "2026-11-12"
+  },
+  {
+    "slug": "doodle-crew-footer",
+    "title": "Doodle Crew Footer",
+    "type": "component",
+    "niche": "Rodapé",
+    "tags": [
+      "Rodapé",
+      "component"
+    ],
+    "kind": {
+      "segment": "componentes"
+    },
+    "approvedRelease": "2026-11-16",
+    "promptRelease": "2026-11-16"
+  },
+  {
+    "slug": "capia",
+    "title": "Capiá",
+    "type": "landing_page",
+    "niche": "hamburgueria",
+    "tags": [
+      "hamburgueria",
+      "landing_page"
+    ],
+    "kind": {
+      "segment": "landing-pages"
+    },
+    "approvedRelease": "2026-11-16",
+    "promptRelease": "2026-11-16"
+  },
+  {
+    "slug": "ceru",
+    "title": "Ceru",
+    "type": "landing_page",
+    "niche": "plataforma de IA",
+    "tags": [
+      "plataforma de IA",
+      "landing_page"
+    ],
+    "kind": {
+      "segment": "landing-pages"
+    },
+    "approvedRelease": "2026-11-16",
+    "promptRelease": "2026-11-16"
+  },
+  {
+    "slug": "pomo",
+    "title": "Pomo",
+    "type": "landing_page",
+    "niche": "sucos",
+    "tags": [
+      "sucos",
+      "landing_page"
+    ],
+    "kind": {
+      "segment": "landing-pages"
+    },
+    "approvedRelease": "2026-11-16",
+    "promptRelease": "2026-11-16"
+  },
+  {
+    "slug": "solua",
+    "title": "Solua",
+    "type": "landing_page",
+    "niche": "imobiliaria",
+    "tags": [
+      "imobiliaria",
+      "landing_page"
+    ],
+    "kind": {
+      "segment": "landing-pages"
+    },
+    "approvedRelease": "2026-11-16",
+    "promptRelease": "2026-11-16"
+  },
+  {
+    "slug": "dicta",
+    "title": "Dicta",
+    "type": "motion",
+    "niche": "Lançamento de app",
+    "tags": [
+      "Lançamento de app",
+      "motion"
+    ],
+    "kind": {
+      "segment": "motion"
+    },
+    "approvedRelease": "2026-11-16",
+    "promptRelease": "2026-11-16"
+  },
+  {
+    "slug": "patina",
+    "title": "Patina",
+    "type": "motion",
+    "niche": "Lançamento de produto",
+    "tags": [
+      "Lançamento de produto",
+      "motion"
+    ],
+    "kind": {
+      "segment": "motion"
+    },
+    "approvedRelease": "2026-11-16",
+    "promptRelease": "2026-11-16"
+  },
+  {
+    "slug": "pronto",
+    "title": "Pronto",
+    "type": "motion",
+    "niche": "Lançamento de produto digital",
+    "tags": [
+      "Lançamento de produto digital",
+      "motion"
+    ],
+    "kind": {
+      "segment": "motion"
+    },
+    "approvedRelease": "2026-11-16",
+    "promptRelease": "2026-11-16"
   }
 ]
