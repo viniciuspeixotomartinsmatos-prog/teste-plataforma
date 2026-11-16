@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-16T13:54:11.718Z",
+  "checkedAt": "2026-11-16T16:21:10.190Z",
   "published": 0,
   "results": [
     {
@@ -305,8 +305,10 @@
     {
       "id": "staged-21st-45444",
       "url": "https://21st.dev/@aloksivastava1025/components/cue-stacked-deck-scroll-reveal",
-      "status": "blocked",
-      "reason": "Could not resolve \"lenis\""
+      "status": "compiled",
+      "bytes": 345264,
+      "previewPath": "/previews/runtime/staged-21st-45444.html",
+      "acceptance": "pending-authorized-browser"
     },
     {
       "id": "staged-21st-45446",
@@ -689,8 +691,10 @@
     {
       "id": "staged-21st-45575",
       "url": "https://21st.dev/@aadixc0de/components/file-tree",
-      "status": "blocked",
-      "reason": "Could not resolve \"@tanstack/react-virtual\""
+      "status": "compiled",
+      "bytes": 8650007,
+      "previewPath": "/previews/runtime/staged-21st-45575.html",
+      "acceptance": "pending-authorized-browser"
     },
     {
       "id": "staged-21st-45579",
@@ -936,9 +940,8 @@
       "id": "staged-21st-45654",
       "url": "https://21st.dev/@themeocean/components/bento-grid-product-hero-with-live-metric-cards",
       "status": "compiled",
-      "bytes": 348965,
       "previewPath": "/previews/runtime/staged-21st-45654.html",
-      "acceptance": "pending-authorized-browser"
+      "acceptance": "approved-preserved"
     },
     {
       "id": "staged-21st-45656",
@@ -952,9 +955,8 @@
       "id": "staged-21st-45695",
       "url": "https://21st.dev/@daiwiikharihar/components/figma-brand-hero",
       "status": "compiled",
-      "bytes": 338791,
       "previewPath": "/previews/runtime/staged-21st-45695.html",
-      "acceptance": "pending-authorized-browser"
+      "acceptance": "approved-preserved"
     },
     {
       "id": "staged-21st-45733",
@@ -1149,8 +1151,10 @@
     {
       "id": "staged-21st-46116",
       "url": "https://21st.dev/@automate_flows/components/daytake-photo-landing",
-      "status": "blocked",
-      "reason": "Could not resolve \"@fontsource-variable/manrope\""
+      "status": "compiled",
+      "bytes": 531870,
+      "previewPath": "/previews/runtime/staged-21st-46116.html",
+      "acceptance": "pending-authorized-browser"
     },
     {
       "id": "staged-21st-46162",

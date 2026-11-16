@@ -2,6 +2,8 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import {themeCover} from './lib/theme-cover.mjs';
+import {approvedReleaseRows} from './lib/release-evidence.mjs';
 const read=async file=>JSON.parse(await fs.readFile(file,'utf8'));
 const selectedDate=process.argv[2];if(selectedDate&&!/^\d{4}-\d{2}-\d{2}$/.test(selectedDate))throw Error('Invalid release date');
 const releaseDate=selectedDate||'2026-11-09',out='../research/source-checks/releases/'+releaseDate;
@@ -12,8 +14,12 @@ for(const date of selectedDate?[selectedDate]:['2026-11-05','2026-11-09']){
 }
 await fs.mkdir('public/previews/releases',{recursive:true});await fs.mkdir('public/code/releases',{recursive:true});
 const catalog=await read('public/data/catalog.json'),staged=[];
+const approved=await approvedReleaseRows('public');
 for(const record of rows){
  const t=record.theme,id=(selectedDate?'staged-':'')+'21st-theme-'+t.id,slug=(t.url||'').split('/').pop()||t.id;
+ const preserved=approved.find(row=>row.sourceId==='21st'&&row.url===t.url);if(preserved){const item={...preserved,id};catalog.push(item);staged.push({id,name:t.name,previewPath:item.previewPath,kind:'theme'});continue;}
+ const image='/assets/releases/'+releaseDate+'/'+id+'-palette.svg';
+ await fs.mkdir(path.dirname('public'+image),{recursive:true});await fs.writeFile('public'+image,themeCover(t.name,t.css));
  // Browser color declarations accept modern CSS directly; legacy HSL token triples
  // are wrapped only in this demonstration. Downloaded source CSS stays unchanged.
  const css=t.css.replace(/(--[\w-]+\s*:\s*)([-\d.]+\s+[-\d.]+%\s+[-\d.]+%)(?=\s*[;}])/g,'$1hsl($2)').replace(/@import[^;]*;/g,'').replace(/<\/style/gi,'<\\/style');
@@ -22,7 +28,7 @@ for(const record of rows){
  const previewPath='/previews/releases/'+id+'.html',codePath='/code/releases/'+id+'.json';
  await fs.writeFile('public'+previewPath,html);
  await fs.writeFile('public'+codePath,JSON.stringify({name:t.name,framework:'html',sourceUrl:t.url,license:'Preserve original source terms and notices.',files:[{path:'theme.css',content:t.css},{path:'preview.html',content:html}]}));
- const item={id,sourceId:'21st',name:t.name,slug,description:'Tema de cores com tokens CSS originais e demonstração interativa.',category:'Components',kind:'theme',url:t.url,image:'',previewPath,codePath,availability:'code',framework:'html',dependencies:[],tags:['CSS','Tema'],license:'Source terms',updated:releaseDate,publicSlug:'tema-'+slug+'-'+crypto.createHash('sha1').update(id).digest('hex').slice(0,6)};
+ const item={id,sourceId:'21st',name:t.name,slug,description:'Tema de cores com tokens CSS originais e demonstração interativa.',category:'Components',kind:'theme',url:t.url,image,previewPath,codePath,availability:'code',framework:'html',dependencies:[],tags:['CSS','Tema'],license:'Source terms',updated:releaseDate,publicSlug:'tema-'+slug+'-'+crypto.createHash('sha1').update(id).digest('hex').slice(0,6)};
  const old=catalog.findIndex(r=>r.id===id);if(old<0)catalog.push(item);else catalog[old]=item;
  staged.push({id,name:t.name,previewPath,kind:'theme'});
 }

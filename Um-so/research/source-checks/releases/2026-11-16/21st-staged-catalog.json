@@ -529,6 +529,33 @@
     "previewPath": "/previews/runtime/staged-21st-45443.html"
   },
   {
+    "id": "staged-21st-45444",
+    "sourceId": "21st",
+    "name": "Stacked Deck Scroll Reveal",
+    "slug": "cue-stacked-deck-scroll-reveal",
+    "description": "A pinned scroll sequence where staggered cards stack, then fly out one by one to reveal an editorial case-study deck.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@aloksivastava1025/components/cue-stacked-deck-scroll-reveal",
+    "sourceUrl": "https://21st.dev/@aloksivastava1025/components/cue-stacked-deck-scroll-reveal",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45444.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "gsap",
+      "lenis"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-16",
+    "previewPath": "/previews/runtime/staged-21st-45444.html"
+  },
+  {
     "id": "staged-21st-45446",
     "sourceId": "21st",
     "name": "Phantom Infinite Gallery",
@@ -1680,6 +1707,34 @@
     "previewPath": "/previews/runtime/staged-21st-45574.html"
   },
   {
+    "id": "staged-21st-45575",
+    "sourceId": "21st",
+    "name": "File Tree",
+    "slug": "file-tree",
+    "description": "A file tree for the changes an agent makes: added, modified, deleted and renamed files get letters and line counts, changed folders carry a dot, and arrow keys move through it. Each file opens beside the tree.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@aadixc0de/components/file-tree",
+    "sourceUrl": "https://21st.dev/@aadixc0de/components/file-tree",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45575.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "@tanstack/react-virtual",
+      "@base-ui/react",
+      "shiki"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-16",
+    "previewPath": "/previews/runtime/staged-21st-45575.html"
+  },
+  {
     "id": "staged-21st-45579",
     "sourceId": "21st",
     "name": "Queued Messages",
@@ -2466,7 +2521,7 @@
     "kind": "component",
     "url": "https://21st.dev/@themeocean/components/bento-grid-product-hero-with-live-metric-cards",
     "sourceUrl": "https://21st.dev/@themeocean/components/bento-grid-product-hero-with-live-metric-cards",
-    "image": "",
+    "image": "/assets/releases/2026-11-16/staged-21st-45654-5c7d03c0af8c.webp",
     "codePath": "/code/releases/staged-21st-45654.json",
     "availability": "code",
     "framework": "react",
@@ -2481,7 +2536,11 @@
     ],
     "license": "Source terms; preserve original notices and bundled asset restrictions.",
     "updated": "2026-11-16",
-    "previewPath": "/previews/runtime/staged-21st-45654.html"
+    "previewPath": "/previews/runtime/staged-21st-45654.html",
+    "video": "/assets/releases/2026-11-16/staged-21st-45654-5b4e9d5fd299.mp4",
+    "publicSlug": "bento-grid-product-hero-with-live-metric-cards-773e7a",
+    "approvedRelease": "2026-11-16",
+    "runtimePreviewPath": "/previews/runtime/staged-21st-45654.html"
   },
   {
     "id": "staged-21st-45656",
@@ -2518,7 +2577,7 @@
     "kind": "component",
     "url": "https://21st.dev/@daiwiikharihar/components/figma-brand-hero",
     "sourceUrl": "https://21st.dev/@daiwiikharihar/components/figma-brand-hero",
-    "image": "",
+    "image": "/assets/releases/2026-11-16/staged-21st-45695-f40334360051.webp",
     "codePath": "/code/releases/staged-21st-45695.json",
     "availability": "code",
     "framework": "react",
@@ -2532,7 +2591,11 @@
     ],
     "license": "Source terms; preserve original notices and bundled asset restrictions.",
     "updated": "2026-11-16",
-    "previewPath": "/previews/runtime/staged-21st-45695.html"
+    "previewPath": "/previews/runtime/staged-21st-45695.html",
+    "video": "/assets/releases/2026-11-16/staged-21st-45695-c1cd3ed04791.mp4",
+    "publicSlug": "figma-brand-hero-3c7cf6",
+    "approvedRelease": "2026-11-16",
+    "runtimePreviewPath": "/previews/runtime/staged-21st-45695.html"
   },
   {
     "id": "staged-21st-45733",
@@ -2961,6 +3024,34 @@
     "license": "Source terms; preserve original notices and bundled asset restrictions.",
     "updated": "2026-11-16",
     "previewPath": "/previews/runtime/staged-21st-45938.html"
+  },
+  {
+    "id": "staged-21st-46116",
+    "sourceId": "21st",
+    "name": "Daytake Landing Page",
+    "slug": "daytake-photo-landing",
+    "description": "An editorial photography landing page with a scroll-controlled 3D hero, opposing photo rows, an expanding feature image, floating widgets, and SVG-connected creator cards. Responsive light and dark layouts include pause controls and a reduced-motion fallback.",
+    "category": "Heroes",
+    "kind": "component",
+    "url": "https://21st.dev/@automate_flows/components/daytake-photo-landing",
+    "sourceUrl": "https://21st.dev/@automate_flows/components/daytake-photo-landing",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-46116.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "lucide-react",
+      "gsap",
+      "@gsap/react"
+    ],
+    "tags": [
+      "React",
+      "Heroes"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-16",
+    "previewPath": "/previews/runtime/staged-21st-46116.html"
   },
   {
     "id": "staged-21st-46162",

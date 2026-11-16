@@ -12,6 +12,10 @@ test('release approval binds actual source, preview, media and original archives
   for(const file of ['code/original.zip','previews/movie.mp4','previews/poster.webp'])await fs.writeFile(path.join(root,file),file);
   const proof={id:item.id,checkedAt:new Date().toISOString(),notes:'Synthetic guard fixture; not production browser approval.',...Object.fromEntries(releaseChecks.map(key=>[key,true])),artifacts:await releaseArtifacts(root,item)};
   assert.equal(Object.keys(proof.artifacts).length,5);await verifyReleaseEvidence(root,item,proof);
+  await fs.writeFile(path.join(root,'previews/hover.mp4'),'hover video');
+  const hover={...item,video:'/previews/hover.mp4'},hoverProof={...proof,artifacts:await releaseArtifacts(root,hover)};
+  assert.ok(hoverProof.artifacts['/previews/hover.mp4']);await verifyReleaseEvidence(root,hover,hoverProof);
+  await fs.appendFile(path.join(root,'previews/hover.mp4'),'changed');await assert.rejects(verifyReleaseEvidence(root,hover,hoverProof),/Artifact changed/);
   await assert.rejects(verifyReleaseEvidence(root,item,{...proof,visualConfirmed:false}),/Incomplete authorized browser evidence/);
   await assert.rejects(verifyReleaseEvidence(root,item,{...proof,artifacts:{}}),/Incomplete release artifact evidence/);
   await fs.writeFile(path.join(root,'data/catalog-approved-releases.json'),JSON.stringify({version:1,entries:[{item:{...item,id:'recovered--fixture'},stagedId:item.id,releaseDate:'2026-11-13',evidence:proof}]}));

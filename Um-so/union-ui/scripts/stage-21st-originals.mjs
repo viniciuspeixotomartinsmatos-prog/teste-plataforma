@@ -3,17 +3,22 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {compileStagedItem} from '../server/preview-service.mjs';
+import {approvedReleaseRows} from './lib/release-evidence.mjs';
+import {spawnSync} from 'node:child_process';
 const app=fileURLToPath(new URL('../',import.meta.url));
 const date=process.argv[2]||'2026-11-12';
 if(!/^\d{4}-\d{2}-\d{2}$/.test(date))throw Error('Invalid release date');
 const root=path.resolve(app,'../research/source-checks/releases',date),folder=path.join(root,'21st');
 const read=async file=>JSON.parse(await fs.readFile(file,'utf8'));
 const candidates=[],results=[],seen=new Set();
+const approved=await approvedReleaseRows(path.join(app,'public'));
 for(const filename of (await fs.readdir(folder)).filter(name=>name.endsWith('.json')).sort()){
  const record=await read(path.join(folder,filename)),c=record.component,m=record.metadata;
  if(!c?.isPublic||!c.componentCode||!c.demoCode||!m?.url||seen.has(c.id))continue;
  seen.add(c.id);
  const id='staged-21st-'+c.id,slug=m.url.split('/').pop();
+ const preserved=approved.find(row=>row.sourceId==='21st'&&row.url===m.url);
+ if(preserved){candidates.push({...preserved,id});results.push({id,url:m.url,status:'compiled',previewPath:preserved.previewPath,acceptance:'approved-preserved'});continue;}
  try{
   const files=Object.entries(c.registryDependencies?.filesWithRegistry||{}).filter(([,file])=>typeof file?.code==='string').map(([name,file])=>({path:name.replace(/^\//,''),content:file.code}));
   const imports=[...c.demoCode.matchAll(/from\s*["'](@\/[^"']+)["']/g)].map(match=>match[1].slice(2));
@@ -37,4 +42,5 @@ for(const filename of (await fs.readdir(folder)).filter(name=>name.endsWith('.js
 }
 await fs.writeFile(path.join(root,'21st-staged-catalog.json'),JSON.stringify(candidates,null,2)+'\n');
 await fs.writeFile(path.join(root,'21st-stage-report.json'),JSON.stringify({checkedAt:new Date().toISOString(),published:0,results},null,2)+'\n');
+const styles=spawnSync(process.execPath,['scripts/build-release-preview-styles.mjs',date],{cwd:app,encoding:'utf8'});if(styles.status!==0)throw Error(styles.stderr||'Release styles failed');
 console.log(JSON.stringify({selected:results.length,compiled:candidates.length,blocked:results.filter(row=>row.status==='blocked').length,published:0}));

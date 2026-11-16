@@ -1,0 +1,204 @@
+[
+  {
+    "id": "staged-21st-45654",
+    "checkedAt": "2026-11-16T16:20:01.723Z",
+    "environment": "Authorized ChatGPT IAB; authenticated normal-auth local review http://localhost:4178",
+    "startupVerified": true,
+    "visualConfirmed": true,
+    "interactionVerified": true,
+    "mediaVerified": true,
+    "promptVerified": true,
+    "downloadVerified": true,
+    "notes": "Original React hero visibly rendered after missing release Tailwind utility fix. Actual original interaction exercised (local trial CTA state for Bento; replay action for Figma). Original matching cover/video retained; actual explorer pointer hover playback readyState4 and return to paused/near-start (0–0.034 seconds)/cover observed. Actual prompt UI success and browser ZIP download; exact original component/demo bytes and embedded release CSS checked independently. Demo CTA simulates state and does not send email. Clipboard text was not captured. The actual downloaded standalone HTML was separately opened in IAB and its CTA/replay exercised.",
+    "downloadSha256": "e34523df6da369a6037d9efe8723d5a8b88de36d6c74a4c56e0f26e9ab3b27ec",
+    "artifacts": {
+      "/previews/runtime/staged-21st-45654.html": "99d67e722debc9a9128718db93f502c854b8d94148e52dc223e18021abf3226f",
+      "/code/releases/staged-21st-45654.json": "9b9a44153426ebf26ff747c1539e1a1bf96f50eb6fb19e11bb4c299cd80dc9b7",
+      "/assets/releases/2026-11-16/staged-21st-45654-5c7d03c0af8c.webp": "5c7d03c0af8c42130f2e262999b12a2cf3bea61530a7697154712da6720fe4fd",
+      "/assets/releases/2026-11-16/staged-21st-45654-5b4e9d5fd299.mp4": "5b4e9d5fd299cac26254be3ecb22d2d22dfa5bc14f20926e4f3ce620f29d77de",
+      "/previews/runtime/staged-21st-45654.light.html": "8a5d1907f10354a869a9be3db4b47643b582c191471d0f537256bcb26c7ea8b4",
+      "/assets/preview.css": "3ab717e491e0fc421827b9b027c902ffa77519d5298862a34eee510c466b7a36",
+      "/assets/releases/2026-11-16/21st-examples-d626968ff199fa8c.css": "d626968ff199fa8c7723151c08ed3703f738d3666d1ff31e444a001e30c13ff8",
+      "/previews/runtime/547b97265c358c9d86f4cd3f.js": "547b97265c358c9d86f4cd3fb0dd24385e23d2c36fc9f73731a45b72616e3ae7",
+      "/assets/fonts/Inter.woff2": "dd8a4575be9806105ac3decd02805cd2782fe7c05abb02c582316bc436ce03ae"
+    },
+    "errors": []
+  },
+  {
+    "id": "staged-21st-45695",
+    "checkedAt": "2026-11-16T16:20:01.764Z",
+    "environment": "Authorized ChatGPT IAB; authenticated normal-auth local review http://localhost:4178",
+    "startupVerified": true,
+    "visualConfirmed": true,
+    "interactionVerified": true,
+    "mediaVerified": true,
+    "promptVerified": true,
+    "downloadVerified": true,
+    "notes": "Original React hero visibly rendered after missing release Tailwind utility fix. Actual original interaction exercised (local trial CTA state for Bento; replay action for Figma). Original matching cover/video retained; actual explorer pointer hover playback readyState4 and return to paused/near-start (0–0.034 seconds)/cover observed. Actual prompt UI success and browser ZIP download; exact original component/demo bytes and embedded release CSS checked independently. Demo CTA simulates state and does not send email. Clipboard text was not captured. The actual downloaded standalone HTML was separately opened in IAB and its CTA/replay exercised.",
+    "downloadSha256": "a529c66f4fa2a5711ded7f38e80a6a1db9614b3060dbeff755aad17bf348f66a",
+    "artifacts": {
+      "/previews/runtime/staged-21st-45695.html": "f64758088d8aeab57345da0955c0125ceb9aa9f9d16cf730a3eea881e6783911",
+      "/code/releases/staged-21st-45695.json": "4dc22730f6ef9a82a4ad6d99b3988f0cde798562b9636f1fc9c8029dc2000e5b",
+      "/assets/releases/2026-11-16/staged-21st-45695-f40334360051.webp": "f4033436005135ca019a5371525f8f33d3ff20e8546e8490049604f063435a96",
+      "/assets/releases/2026-11-16/staged-21st-45695-c1cd3ed04791.mp4": "c1cd3ed04791631e4c45813d3daed3a16aea813dca3cafc4444e4c3e5f375fc7",
+      "/previews/runtime/staged-21st-45695.light.html": "2b0da031b7344a662d2e588269ef0a4a33b05792f907f89678b35c64645d7e80",
+      "/assets/preview.css": "3ab717e491e0fc421827b9b027c902ffa77519d5298862a34eee510c466b7a36",
+      "/assets/releases/2026-11-16/21st-examples-d626968ff199fa8c.css": "d626968ff199fa8c7723151c08ed3703f738d3666d1ff31e444a001e30c13ff8",
+      "/previews/runtime/52fbb446cb9751979d58cb55.js": "52fbb446cb9751979d58cb55e073d5b7e4656ce3d3421e5d6bf3cf6ee4375fb8",
+      "/assets/fonts/Inter.woff2": "dd8a4575be9806105ac3decd02805cd2782fe7c05abb02c582316bc436ce03ae"
+    },
+    "errors": []
+  },
+  {
+    "id": "staged-21st-theme-04804ce7-ac35-40c0-9704-ed4dc11001cd",
+    "checkedAt": "2026-11-16T16:20:01.790Z",
+    "environment": "Authorized ChatGPT IAB; authenticated normal-auth local review http://localhost:4178",
+    "startupVerified": true,
+    "visualConfirmed": true,
+    "interactionVerified": true,
+    "mediaVerified": true,
+    "promptVerified": true,
+    "downloadVerified": true,
+    "notes": "Original CSS tokens rendered in an explicitly generated interactive token demonstration. Individually observed light/dark switching, filled project name, saved and cleared status. Actual prompt UI success and actual ZIP download. Exported original CSS/source bytes compared exactly; source notices retained. Palette cover is generated from original tokens, not an original product screenshot. Clipboard text was not captured.",
+    "downloadSha256": "6ee5afc5e03cc305637af799ab318fc05791eead048df21664b4b7b5fbe24fd8",
+    "artifacts": {
+      "/previews/releases/staged-21st-theme-04804ce7-ac35-40c0-9704-ed4dc11001cd.html": "7ceb01f962faf54dde1a661357c04f37976e62dc7e3b4c77566f080e0d4d689b",
+      "/code/releases/staged-21st-theme-04804ce7-ac35-40c0-9704-ed4dc11001cd.json": "c15631548ce5a03e31c744ec8f278ade0a78443f8348e551d9b4a9cf94b17c5c",
+      "/assets/releases/2026-11-16/staged-21st-theme-04804ce7-ac35-40c0-9704-ed4dc11001cd-palette.svg": "d8ba3df5951f0aa663c519bbb446b8402e4b3a8a3da8e3a9a8bd81739e738fb5"
+    },
+    "errors": []
+  },
+  {
+    "id": "staged-21st-theme-570d2294-54f5-41f0-a1e9-e16829869772",
+    "checkedAt": "2026-11-16T16:20:01.800Z",
+    "environment": "Authorized ChatGPT IAB; authenticated normal-auth local review http://localhost:4178",
+    "startupVerified": true,
+    "visualConfirmed": true,
+    "interactionVerified": true,
+    "mediaVerified": true,
+    "promptVerified": true,
+    "downloadVerified": true,
+    "notes": "Original CSS tokens rendered in an explicitly generated interactive token demonstration. Individually observed light/dark switching, filled project name, saved and cleared status. Actual prompt UI success and actual ZIP download. Exported original CSS/source bytes compared exactly; source notices retained. Palette cover is generated from original tokens, not an original product screenshot. Clipboard text was not captured.",
+    "downloadSha256": "03b7dfd5d87113d9b76d90ff4ae76819321724deca955735dcd279572493c576",
+    "artifacts": {
+      "/previews/releases/staged-21st-theme-570d2294-54f5-41f0-a1e9-e16829869772.html": "27aa4c61421893c070e02b548aec60433a1a23b629c4f3466f7a0f58b253df60",
+      "/code/releases/staged-21st-theme-570d2294-54f5-41f0-a1e9-e16829869772.json": "c45017679f66c5205ee09ec81ba588464a651d1a537b9383976ccc6961a1f9c8",
+      "/assets/releases/2026-11-16/staged-21st-theme-570d2294-54f5-41f0-a1e9-e16829869772-palette.svg": "6b88c610906281858b54423dba8ae1a4c331911591ea66d6937f5b1516168ee7"
+    },
+    "errors": []
+  },
+  {
+    "id": "staged-21st-theme-71bccb0b-a6fc-443f-81b3-4ea95ce42861",
+    "checkedAt": "2026-11-16T16:20:01.808Z",
+    "environment": "Authorized ChatGPT IAB; authenticated normal-auth local review http://localhost:4178",
+    "startupVerified": true,
+    "visualConfirmed": true,
+    "interactionVerified": true,
+    "mediaVerified": true,
+    "promptVerified": true,
+    "downloadVerified": true,
+    "notes": "Original CSS tokens rendered in an explicitly generated interactive token demonstration. Individually observed light/dark switching, filled project name, saved and cleared status. Actual prompt UI success and actual ZIP download. Exported original CSS/source bytes compared exactly; source notices retained. Palette cover is generated from original tokens, not an original product screenshot. Clipboard text was not captured.",
+    "downloadSha256": "d88e185f06fac8f71451d7988c00de2ac44e169726f7043a10bf019b4b701cb5",
+    "artifacts": {
+      "/previews/releases/staged-21st-theme-71bccb0b-a6fc-443f-81b3-4ea95ce42861.html": "e0cd3b4d8965caf943c42cac8d2050b12bb0cc606fc65a047166143291a1c655",
+      "/code/releases/staged-21st-theme-71bccb0b-a6fc-443f-81b3-4ea95ce42861.json": "de800b5f9b30d816eb68147305b2c3d687937638bf325131fb438ed8dded87dd",
+      "/assets/releases/2026-11-16/staged-21st-theme-71bccb0b-a6fc-443f-81b3-4ea95ce42861-palette.svg": "7422c0c1f735298b3d0a7566ea300e19a72e86d5122e60b5cbca03078bf28a37"
+    },
+    "errors": []
+  },
+  {
+    "id": "staged-21st-theme-77908019-53ba-41ca-ac1d-96452bf630cc",
+    "checkedAt": "2026-11-16T16:20:01.819Z",
+    "environment": "Authorized ChatGPT IAB; authenticated normal-auth local review http://localhost:4178",
+    "startupVerified": true,
+    "visualConfirmed": true,
+    "interactionVerified": true,
+    "mediaVerified": true,
+    "promptVerified": true,
+    "downloadVerified": true,
+    "notes": "Original CSS tokens rendered in an explicitly generated interactive token demonstration. Individually observed light/dark switching, filled project name, saved and cleared status. Actual prompt UI success and actual ZIP download. Exported original CSS/source bytes compared exactly; source notices retained. Palette cover is generated from original tokens, not an original product screenshot. Clipboard text was not captured.",
+    "downloadSha256": "859f435a9b563a5fc7a97ecc832d1813b49270d7ddfdc86b5ebcdf813db33323",
+    "artifacts": {
+      "/previews/releases/staged-21st-theme-77908019-53ba-41ca-ac1d-96452bf630cc.html": "594e48b8cb385a02e2ec43e80ae18f642360576e40d23f19781f4f7612026fbc",
+      "/code/releases/staged-21st-theme-77908019-53ba-41ca-ac1d-96452bf630cc.json": "95bfea9a4188d77d564dabd1535fef6661ab6babf4b634161dbd479e80bbdbab",
+      "/assets/releases/2026-11-16/staged-21st-theme-77908019-53ba-41ca-ac1d-96452bf630cc-palette.svg": "c743b628c688f39616ebbe15fbac71c2f3d8cab672cadd123817e60a07f50d5e"
+    },
+    "errors": []
+  },
+  {
+    "id": "staged-21st-theme-79950279-9137-4706-bda4-05d6650a085d",
+    "checkedAt": "2026-11-16T16:20:01.827Z",
+    "environment": "Authorized ChatGPT IAB; authenticated normal-auth local review http://localhost:4178",
+    "startupVerified": true,
+    "visualConfirmed": true,
+    "interactionVerified": true,
+    "mediaVerified": true,
+    "promptVerified": true,
+    "downloadVerified": true,
+    "notes": "Original CSS tokens rendered in an explicitly generated interactive token demonstration. Individually observed light/dark switching, filled project name, saved and cleared status. Actual prompt UI success and actual ZIP download. Exported original CSS/source bytes compared exactly; source notices retained. Palette cover is generated from original tokens, not an original product screenshot. Clipboard text was not captured.",
+    "downloadSha256": "c2c8705fa825dbfb23be09e2177f938bfb427aceb8a9d5fb922b0a4959d9a088",
+    "artifacts": {
+      "/previews/releases/staged-21st-theme-79950279-9137-4706-bda4-05d6650a085d.html": "2981283b4ffe96ab73324c0918cccbc38240ca177715a0f4679e6aea497a2747",
+      "/code/releases/staged-21st-theme-79950279-9137-4706-bda4-05d6650a085d.json": "055455ef3e2809f679cb32614be99cd0d9da2dc147303f5f2c3b531d17c2f296",
+      "/assets/releases/2026-11-16/staged-21st-theme-79950279-9137-4706-bda4-05d6650a085d-palette.svg": "5b33f8ddcca72ef93ec35ffc01edce382e48af8602b0bc5d8597a51fdc509325"
+    },
+    "errors": []
+  },
+  {
+    "id": "staged-21st-theme-8ddc87e5-0caf-4a29-96c5-2dcd920f2281",
+    "checkedAt": "2026-11-16T16:20:01.834Z",
+    "environment": "Authorized ChatGPT IAB; authenticated normal-auth local review http://localhost:4178",
+    "startupVerified": true,
+    "visualConfirmed": true,
+    "interactionVerified": true,
+    "mediaVerified": true,
+    "promptVerified": true,
+    "downloadVerified": true,
+    "notes": "Original CSS tokens rendered in an explicitly generated interactive token demonstration. Individually observed light/dark switching, filled project name, saved and cleared status. Actual prompt UI success and actual ZIP download. Exported original CSS/source bytes compared exactly; source notices retained. Palette cover is generated from original tokens, not an original product screenshot. Clipboard text was not captured.",
+    "downloadSha256": "05d14b070cf8b162e07b0ca4c96130c3b758a496072764cdf622f4f877ceb314",
+    "artifacts": {
+      "/previews/releases/staged-21st-theme-8ddc87e5-0caf-4a29-96c5-2dcd920f2281.html": "7d6318220814dcff36dbe21124ab0e44a2f645a7db3b205199478e69d60edb17",
+      "/code/releases/staged-21st-theme-8ddc87e5-0caf-4a29-96c5-2dcd920f2281.json": "f0e1d3a32d3ea551e8dc4b5cfe4049341305f0021bda1e19306d29314209ee36",
+      "/assets/releases/2026-11-16/staged-21st-theme-8ddc87e5-0caf-4a29-96c5-2dcd920f2281-palette.svg": "fd1fa52f373f4927aae7eec0a8becf3f3a84238a069c4ab780681032f454072a"
+    },
+    "errors": []
+  },
+  {
+    "id": "staged-21st-theme-b411079f-d742-42ce-bf07-100ae8f441f1",
+    "checkedAt": "2026-11-16T16:20:01.846Z",
+    "environment": "Authorized ChatGPT IAB; authenticated normal-auth local review http://localhost:4178",
+    "startupVerified": true,
+    "visualConfirmed": true,
+    "interactionVerified": true,
+    "mediaVerified": true,
+    "promptVerified": true,
+    "downloadVerified": true,
+    "notes": "Original CSS tokens rendered in an explicitly generated interactive token demonstration. Individually observed light/dark switching, filled project name, saved and cleared status. Actual prompt UI success and actual ZIP download. Exported original CSS/source bytes compared exactly; source notices retained. Palette cover is generated from original tokens, not an original product screenshot. Clipboard text was not captured.",
+    "downloadSha256": "3944bda1b9f56fa1fa4e39d44ac5b6a2e38c6a527b07597be75aa8813ca7ba24",
+    "artifacts": {
+      "/previews/releases/staged-21st-theme-b411079f-d742-42ce-bf07-100ae8f441f1.html": "a553524d50a79cdbc29b3d2eed1f07e7795d745f3ad6d4dd4b255a397ac3cd0f",
+      "/code/releases/staged-21st-theme-b411079f-d742-42ce-bf07-100ae8f441f1.json": "0748913e176820362b3b6e37cfcd830e058b6eb39b81e39125b39206e7682475",
+      "/assets/releases/2026-11-16/staged-21st-theme-b411079f-d742-42ce-bf07-100ae8f441f1-palette.svg": "8c022506c5fbe491e68713fb1a9f35e6c218e90ddf1af2ae95f98ed2c003df20"
+    },
+    "errors": []
+  },
+  {
+    "id": "staged-21st-theme-ec1f7817-ef65-4394-82f1-6fa6a2d2c333",
+    "checkedAt": "2026-11-16T16:20:01.853Z",
+    "environment": "Authorized ChatGPT IAB; authenticated normal-auth local review http://localhost:4178",
+    "startupVerified": true,
+    "visualConfirmed": true,
+    "interactionVerified": true,
+    "mediaVerified": true,
+    "promptVerified": true,
+    "downloadVerified": true,
+    "notes": "Original CSS tokens rendered in an explicitly generated interactive token demonstration. Individually observed light/dark switching, filled project name, saved and cleared status. Actual prompt UI success and actual ZIP download. Exported original CSS/source bytes compared exactly; source notices retained. Palette cover is generated from original tokens, not an original product screenshot. Clipboard text was not captured.",
+    "downloadSha256": "0a64aa40d16f28deb3eb6d3ab5fd52cf2f8f41a3a8c3e2139b424ded4fac3762",
+    "artifacts": {
+      "/previews/releases/staged-21st-theme-ec1f7817-ef65-4394-82f1-6fa6a2d2c333.html": "569c14b1b8836ccc7fd13a0cee1839a10aa86b0cadca8a115c982f4768ad576b",
+      "/code/releases/staged-21st-theme-ec1f7817-ef65-4394-82f1-6fa6a2d2c333.json": "c90ecd27b2791e96ab3dc3ffa230b1958cae4c737f72c34c003b8599441e68f6",
+      "/assets/releases/2026-11-16/staged-21st-theme-ec1f7817-ef65-4394-82f1-6fa6a2d2c333-palette.svg": "622473c426628cff68284ad5d151233e804244105a27e2871bb6699a231562a8"
+    },
+    "errors": []
+  }
+]

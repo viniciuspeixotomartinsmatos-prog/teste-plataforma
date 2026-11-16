@@ -4,7 +4,7 @@ export const releaseChecks=['startupVerified','visualConfirmed','interactionVeri
 const digest=bytes=>createHash('sha256').update(bytes).digest('hex');
 function target(root,pointer){if(typeof pointer!=='string'||!/^\/(?:assets|previews|code)\//.test(pointer)||pointer.includes('\\')||pointer.includes('?')||pointer.split('/').some(part=>part.startsWith('.')))throw Error('Invalid release artifact path.');const full=path.resolve(root,'.'+pointer);if(!full.startsWith(path.resolve(root)+path.sep))throw Error('Release artifact escaped public root.');return full;}
 export async function releaseArtifacts(root,item){
- const pending=[item.previewPath,item.codePath,...(item.image?[item.image]:[])],artifacts={};
+ const pending=[item.previewPath,item.codePath,...(item.image?[item.image]:[]),...(item.video?[item.video]:[])],artifacts={};
  if(item.previewPath?.startsWith('/previews/runtime/'))pending.push(item.previewPath.replace(/\.html$/,'.light.html'));
  const payload=JSON.parse(await fs.readFile(target(root,item.codePath),'utf8'));for(const file of payload.downloadFiles||[])pending.push(file.url);
  while(pending.length){const pointer=pending.shift();if(pointer in artifacts)continue;if(Object.keys(artifacts).length>=200)throw Error('Release artifact limit exceeded.');

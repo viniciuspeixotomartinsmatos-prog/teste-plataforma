@@ -52,7 +52,7 @@ export async function standalonePreview(item,theme='dark',config,settings){
   const js=await fetchText(match[1]);
   html=html.replace(match[0],()=>'<script>'+js.replace(/<\/script/gi,'<\\/script')+'</script>');
  }
- for(const match of [...html.matchAll(/<link\b[^>]*href=["'](\/assets\/preview\.css)["'][^>]*>/g)]){
+ for(const match of [...html.matchAll(/<link\b[^>]*href=["'](\/assets\/(?:preview\.css|releases\/\d{4}-\d{2}-\d{2}\/[A-Za-z0-9_-]+\.css))["'][^>]*>/g)]){
   let css=await fetchText(match[1]);
   for(const url of new Set([...css.matchAll(/url\(["']?(\/assets\/fonts\/[^)'"\s]+)["']?\)/g)].map(m=>m[1])))css=css.replaceAll(url,await embeddedFont(url));
   html=html.replace(match[0],()=>'<style>'+css.replace(/<\/style/gi,'<\\/style')+'</style>');

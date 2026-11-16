@@ -129,3 +129,11 @@ Auth Modal and Hyper Text now have individual acceptance records, bringing this 
 - [x]287 full tests and4 Sites checks, production compilation and retained packaging.
 - [ ] Confirm the upcoming production deployment and signed-in public8-item release. Source quota blocks10 further originals until the stated next allowance; no bypass.
 - [ ] Continue the separately requested full21st gap integration;200 original candidates and8 themes are staged, not published or fully accepted.
+
+## November16 — 21st acceptance continuation
+- [x] Repair missing release Tailwind classes and embed them in portable exports without altering approved global CSS.
+- [x] Individually accept2 original React heroes and8 original CSS themes, real prompts/downloads, covers and matching hero hover videos.
+- [x] Preserve notices, original source bytes and legitimate theme variants; use full artifact-bound approval and stable IDs.
+- [ ] Validate164 remaining compiled examples individually; recover34 Astryx examples missing local CSS/core files.
+- [ ] Recover actual sources/runtimes for41 template metadata matches and resolve24 templates/5 component routes; older source gaps remain separate.
+- [ ] Confirm this10-item release in production after tests/build/push.
