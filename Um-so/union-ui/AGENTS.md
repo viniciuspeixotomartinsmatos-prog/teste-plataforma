@@ -10,6 +10,8 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 ## Product decisions
 
+- Pro prompts share a quota of 15 per Monday–Sunday week in America/Cuiaba and 60 per UTC calendar month, counting both copy and download. Unused weekly quota does not carry over.
+
 - Use cumulative access tiers: Gratuito after login, Pro with monthly quotas, and Max with access to all tools and no monthly commercial quotas. Keep the comparison available for review. Keep checkout disabled for the new tiers until the approved tier prices, provider mapping and complete enforcement are verified. See `docs/planos-nitido.md`.
 
 - Keep the authenticated header consistent across sections and make Ferramentas directly available on mobile and desktop. Open the catalog in most-recent order by default and preserve relevance for unfiltered search sorting. In the gallery, use the original media proportions and a matching background when a crop would remove meaningful content. Tools directory visuals use captures of the actual tools.

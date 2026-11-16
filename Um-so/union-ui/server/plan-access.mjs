@@ -1,5 +1,5 @@
 import {createClient} from '@supabase/supabase-js';
-import {creativeTools,includesPlan,planPermission,planQuotas} from '../src/plan-access.js';
+import {creativeTools,includesPlan,planPermission,planQuotas,proPromptWeeklyLimit} from '../src/plan-access.js';
 import {paddleId,readPaddleSubscription,fail} from './paddle-access.mjs';
 import packages from '../public/data/skill-packages/index.json' with {type:'json'};
 import {packageType} from '../src/skill-library-model.js';
@@ -32,24 +32,28 @@ export function quotaStore(env){
 }
 
 export async function consumePlanQuota(getStore,userId,plan,action,resource,operation){
- const {allowed,limit}=planPermission(plan,action,resource);
+ const {allowed,limit,weeklyLimit}=planPermission(plan,action,resource);
  if(!allowed||limit===undefined)throw fail(403,'Este recurso precisa de outro plano.','plan_required');
  if(limit===null)return {remaining:null,resetAt:null};
- const {data,error}=await getStore().rpc('nitido_consume_plan_quota',{p_user:userId,p_bucket:action,p_limit:limit,p_operation:operation,p_resource:resource});
+ const args={p_user:userId,p_limit:limit,p_operation:operation,p_resource:resource};
+ const {data,error}=action==='prompt'
+  ?await getStore().rpc('nitido_consume_prompt_quota',{...args,p_weekly_limit:weeklyLimit})
+  :await getStore().rpc('nitido_consume_plan_quota',{...args,p_bucket:action});
  if(error)throw fail(503,'Não foi possível consultar sua cota. Tente novamente.','plan_quota_unavailable');
  if(!data?.allowed){
-  const error=fail(429,'Você atingiu sua cota mensal para este recurso.','plan_quota_reached');
+  const error=fail(429,data?.period==='week'?'Você atingiu sua cota semanal de prompts.':'Você atingiu sua cota mensal para este recurso.','plan_quota_reached');
   const reset=Date.parse(data?.resetAt);
   if(Number.isFinite(reset))error.retryAfter=Math.max(1,Math.ceil((reset-Date.now())/1000));
   throw error;
  }
- return {remaining:data.remaining,resetAt:data.resetAt};
+ return {remaining:data.remaining,resetAt:data.resetAt,...(weeklyLimit===null||weeklyLimit===undefined?{}:{weeklyRemaining:data.weeklyRemaining})};
 }
 
 export async function readPlanQuotas(store,userId,plan){
  const {data,error}=await store.rpc('nitido_read_plan_quotas',{p_user:userId});
  if(error)throw fail(503,'Não foi possível consultar sua cota.','plan_quota_unavailable');
- return Object.fromEntries(Object.entries(planQuotas[plan]).map(([key,limit])=>[key,{limit,remaining:limit===null?null:Math.max(0,limit-(data?.[key]||0))}]));
+ const limits=plan==='pro'?{...planQuotas.pro,prompt_weekly:proPromptWeeklyLimit}:planQuotas[plan];
+ return Object.fromEntries(Object.entries(limits).map(([key,limit])=>[key,{limit,remaining:limit===null?null:Math.max(0,limit-(data?.[key]||0))}]));
 }
 
 export async function enforcePlanAsset(request,plan,user,env){

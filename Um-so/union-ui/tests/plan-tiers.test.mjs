@@ -12,6 +12,7 @@ test('entitlements are cumulative and only trusted production subscriptions gran
  assert.equal(includesPlan('pro','max'),false);
  assert.equal(planPermission('free','prompt','reactbits--aurora').limit,5);
  assert.equal(planPermission('free','prompt','other').allowed,false);
+ assert.deepEqual(planPermission('pro','prompt','demo'),{allowed:true,limit:60,weeklyLimit:15});
  assert.equal(planPermission('pro','studio','center-stage').allowed,false);
  assert.equal(planPermission('max','audit','site').limit,null);
  const user={id:'qa',user_metadata:{nitido_plan:'max'}};
@@ -34,7 +35,13 @@ test('access API lets a signed-in free account browse, while restricted actions 
   origin,billingEnv:{NITIDO_PLAN_ACCESS_ENABLED:'true'},limiter:()=>{},
   clientFactory:()=>({finish:response=>response,client:{auth:{getUser:async()=>({data:{user}})}}}),
   planStore:()=>({rpc:async(name,args)=>{
-   if(name==='nitido_read_plan_quotas')return {data:{prompt:used}};
+   if(name==='nitido_read_plan_quotas')return {data:{prompt:used,prompt_weekly:used}};
+   assert.equal(name,'nitido_consume_prompt_quota');
+   if(args.p_weekly_limit!==null){
+    assert.equal(args.p_limit,60);
+    assert.equal(args.p_weekly_limit,15);
+    if(used>=args.p_weekly_limit)return {data:{allowed:false,period:'week'}};
+   }
    const allowed=used<args.p_limit;
    if(allowed)used++;
    return {data:{allowed,remaining:args.p_limit-used}};
@@ -58,6 +65,12 @@ test('access API lets a signed-in free account browse, while restricted actions 
  assert.equal((await prompt('private-example')).status,200);
  assert.equal(used,5);
  assert.equal((await request('/api/billing/checkout',{})).status,503);
+ user.app_metadata={nitido_plan:'pro'};
+ for(let i=0;i<10;i++)assert.equal((await prompt('private-example')).status,200);
+ const blocked=await prompt('private-example');
+ assert.equal(blocked.status,429);
+ assert.match((await blocked.json()).error,/cota semanal/);
+ assert.deepEqual((await (await request('/api/plan-usage')).json()).quotas.prompt_weekly,{limit:15,remaining:0});
 });
 
 test('monthly quota receipts are idempotent, owner-scoped and only callable by service role',async()=>{
@@ -65,6 +78,7 @@ test('monthly quota receipts are idempotent, owner-scoped and only callable by s
  try{
   await db.exec('create role anon; create role authenticated; create role service_role; create schema auth; create table auth.users(id uuid primary key);');
   await db.exec(await readFile(new URL('../supabase/migrations/20261116183000_nitido_plan_quotas.sql',import.meta.url),'utf8'));
+  await db.exec(await readFile(new URL('../supabase/migrations/20261116190000_nitido_weekly_prompts.sql',import.meta.url),'utf8'));
   const owner=randomUUID(),other=randomUUID(),operation=randomUUID();
   await db.query('insert into auth.users values($1),($2)',[owner,other]);
   const consume=(user,id,resource='demo')=>db.query("select public.nitido_consume_plan_quota($1,'prompt',1,$2,$3) result",[user,id,resource]);
@@ -79,5 +93,21 @@ test('monthly quota receipts are idempotent, owner-scoped and only callable by s
   await db.exec('reset role');
   await db.query('delete from auth.users where id=$1',[owner]);
   assert.equal((await db.query('select count(*)::int total from public.nitido_plan_operations')).rows[0].total,1);
+  const weeklyOperation=randomUUID();
+  const consumeWeekly=async id=>(await db.query('select public.nitido_consume_prompt_quota($1,60,$2,$3,15) result',[other,id,'demo'])).rows[0].result;
+  await db.exec('set role authenticated');
+  await assert.rejects(consumeWeekly(weeklyOperation),{code:'42501'});
+  await db.exec('set role service_role');
+  assert.equal((await consumeWeekly(weeklyOperation)).weeklyRemaining,13);
+  for(let i=0;i<13;i++)assert.equal((await consumeWeekly(randomUUID())).allowed,true);
+  assert.equal((await consumeWeekly(randomUUID())).period,'week');
+  assert.equal((await consumeWeekly(weeklyOperation)).allowed,true);
+  await db.exec('reset role');
+  await db.query("update public.nitido_plan_operations set used_at=now()-interval '7 days' where user_id=$1",[other]);
+  await db.query('update public.nitido_plan_usage set used=59 where user_id=$1',[other]);
+  assert.equal((await consumeWeekly(randomUUID())).weeklyRemaining,14);
+  const monthlyBlocked=await consumeWeekly(randomUUID());
+  assert.equal(monthlyBlocked.allowed,false);
+  assert.equal(monthlyBlocked.remaining,0);
  }finally{await db.close();}
 });
