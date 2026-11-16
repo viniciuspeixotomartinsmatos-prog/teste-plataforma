@@ -68,3 +68,7 @@
  .directory-art img { transition: none; }
  .directory-card:hover .directory-art img { transform: none; }
 }
+
+.tool-plan-label{display:inline-block;margin-left:8px;padding:3px 6px;border-radius:7px;background:var(--raised);color:var(--muted);font-size:10px;vertical-align:middle;letter-spacing:0}
+.tools-plan-filter{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-top:17px;color:var(--muted);font-size:13px}
+.tools-plan-filter select{border:1px solid var(--line);border-radius:9px;padding:7px 28px 7px 10px;background:var(--panel);color:var(--text)}

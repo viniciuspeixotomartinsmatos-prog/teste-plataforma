@@ -2,8 +2,15 @@ import React,{useEffect,useState} from 'react';
 import {ArrowUpRight,Loader2,Check,RefreshCw} from 'lucide-react';
 import {api} from './account.js';
 import {openPaddleCheckout,portalDestination} from './paddle-checkout.js';
+import PlanTiers from './PlanTiers.jsx';
 import './billing.css';
 export default function BillingPage({account,navigate,search=''}){
+ const params=new URLSearchParams(search||window.location.search);
+ if(params.get('view')==='acessos'||account.access.planAccess)return <PlanTiers account={account} navigate={navigate} english={params.get('lang')==='en'}/>;
+ return <LegacyBilling account={account} navigate={navigate} search={search}/>;
+}
+
+function LegacyBilling({account,navigate,search}){
  const english=new URLSearchParams(search||window.location.search).get('lang')==='en',locale=english?'en':'pt-BR';
  const [config,setConfig]=useState(null),[loading,setLoading]=useState(true),[busy,setBusy]=useState(''),[error,setError]=useState(''),[pending,setPending]=useState(false),[currency,setCurrency]=useState('BRL'),[subscription,setSubscription]=useState(null);
  const words=english?{tag:'YOUR CREATIVE WORKSPACE',title:'Choose your own rhythm.',lead:'One workspace. Three access periods. All prices below are totals per billing period.',monthly:'Monthly',quarterly:'Quarterly',yearly:'Yearly',period:['every month','every 3 months','every 12 months'],disabled:'Subscriptions are being prepared. No payments are accepted yet.',test:'Test checkout · no real charges',buy:'Continue',renew:'Automatic renewal. Cancel future renewals in your account.',manage:'Manage subscription',pending:'Payment received by checkout. Waiting for confirmation from the server.',refresh:'Check access',signIn:'Sign in to continue',active:'Your subscription',paid:'Paid access until',cancel:'Renewal cancelled; access continues until the paid-through date.',support:'Questions? Contact',failure:'We could not complete this request. Try again.',back:'Back to the product',noForeign:'International prices will be published before sales open.',currency:'Billing currency'}:{tag:'SEU ESPAÇO PARA CRIAR',title:'Escolha o seu ritmo.',lead:'Um espaço. Três períodos de acesso. Os valores abaixo são os totais por período.',monthly:'Mensal',quarterly:'Trimestral',yearly:'Anual',period:['a cada mês','a cada 3 meses','a cada 12 meses'],disabled:'As assinaturas estão em preparação. Nenhum pagamento é aceito nesta etapa.',test:'Checkout de testes · sem cobrança real',buy:'Continuar',renew:'Renovação automática. Cancele as próximas renovações na sua conta.',manage:'Gerenciar assinatura',pending:'Pagamento recebido no checkout. Aguardando confirmação do servidor.',refresh:'Verificar acesso',signIn:'Entre para continuar',active:'Sua assinatura',paid:'Acesso pago até',cancel:'Renovação cancelada; o acesso continua pelo período já pago.',support:'Dúvidas? Fale com',failure:'Não foi possível concluir. Tente novamente.',back:'Voltar ao produto',noForeign:'Os preços internacionais serão publicados antes da abertura das vendas.',currency:'Moeda da cobrança'};

@@ -31,7 +31,8 @@ test('direct platform links show login; successful login returns to the requeste
   assert.ok(document.querySelector('.auth-card'));assert.equal(document.querySelector('.main-nav'),null);assert.equal(catalogRequests,0);assert.equal(window.location.pathname,'/account');
   await act(async()=>document.querySelector('form').dispatchEvent(new Event('submit',{bubbles:true,cancelable:true})));await settle();
   assert.equal(window.location.pathname,'/tools');assert.ok(document.querySelector('.main-nav'));assert.equal(catalogRequests,1);
-  await click(document.querySelector('.account-trigger'));
+  await click(document.querySelector('.catalog-more summary'));
+  await click(document.querySelector('.catalog-menu a[href="/account"]'));
   await click([...document.querySelectorAll('button')].find(el=>el.textContent.includes('Sair da conta')));
   assert.ok(document.querySelector('.auth-card'));assert.equal(document.querySelector('.main-nav'),null);
  }finally{await act(async()=>root.unmount());dom.window.close();delete globalThis.IS_REACT_ACT_ENVIRONMENT;}

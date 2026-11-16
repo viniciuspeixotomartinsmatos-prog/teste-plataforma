@@ -10,6 +10,8 @@ import {createPaddleBilling,readPaddleSubscription} from './paddle-billing.mjs';
 import {createRequestLimiter,readJSONObject,secureResponse,securityEvent} from './security-controls.mjs';
 import {POLICY_VERSION,exportPersonalData,deletePersonalAccount} from './privacy-service.mjs';
 import {catalogFraming} from './catalog-framing.mjs';
+import {consumePlanQuota,enforcePlanAsset,isPlanAsset,plansActive,quotaStore,readPlanQuotas,resolvePlan} from './plan-access.mjs';
+import {includesPlan,planQuotas} from '../src/plan-access.js';
 
 const json=(data,status=200)=>Response.json(data,{status,headers:{'Cache-Control':'private, no-store'}});
 const fail=(status,message,code)=>Object.assign(Error(message),{status,code});
@@ -20,8 +22,9 @@ function cleanWorkspace(value){
  return{saved:ids(value.saved),collections:(Array.isArray(value.collections)?value.collections:[]).slice(0,500).map(c=>({id:String(c.id||'').slice(0,100),name:String(c.name||'Coleção').slice(0,80),description:String(c.description||'').slice(0,1000),items:ids(c.items)})).filter(c=>c.id)};
 }
 const requestLimit=createRequestLimiter();
-export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientFactory=requestClient,billingEnv=process.env,billingFetch=fetch,limiter=requestLimit,securityLogger=console.info,auditor=siteAuditService}={}){
+export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientFactory=requestClient,billingEnv=process.env,billingFetch=fetch,limiter=requestLimit,securityLogger=console.info,auditor=siteAuditService,planStore=()=>quotaStore(billingEnv)}={}){
  const billing=createPaddleBilling({env:billingEnv,fetchImpl:billingFetch});
+ const tiered=plansActive(billingEnv);
  async function handleInternal(request){
   let finish=response=>response;
   try{
@@ -31,7 +34,7 @@ export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientF
     if(request.method!=='POST')throw fail(405,'Método não permitido.');
     return json(await billing.webhook(request));
    }
-   if(route==='/api/billing/config'&&request.method==='GET')return json(billing.publicConfig());
+   if(route==='/api/billing/config'&&request.method==='GET')return json(tiered?{...billing.publicConfig(),enabled:false,mode:'disabled',clientToken:undefined}:billing.publicConfig());
    // An explicit canonical origin prevents request headers controlling email links.
    if(!origin||!/^https?:\/\//.test(origin))throw fail(503,'O acesso está em configuração. Tente novamente mais tarde.','auth_setup_required');
    if((process.env.NODE_ENV==='production'||process.env.VERCEL)&&!origin.startsWith('https://'))throw fail(503,'O acesso está em configuração.','https_required');
@@ -54,10 +57,26 @@ export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientF
    }
    else if(route==='/api/catalog-framing')response=json(await catalogFraming(request,client,await requireUser(),body));
    else if(route==='/api/access'){
-    const user=await getUser(),subscription=user&&billing.config.enabled?await readPaddleSubscription(client,user.id,billing.config.environment):null;
-    response=json({canExport:Boolean(user)&&(!billing.config.requiresSubscription||Boolean(subscription?.hasAccess)),requiresSubscription:billing.config.requiresSubscription,billingMode:billing.config.mode,subscription});
+    const user=await getUser(),subscription=user&&billing.config.enabled?await readPaddleSubscription(client,user.id,billing.config.environment,{includePrice:tiered}):null;
+    if(tiered){
+     const plan=user?await resolvePlan(client,user,billing.config,billingEnv,subscription):'free';
+     const visible=subscription&&Object.fromEntries(Object.entries(subscription).filter(([key])=>key!=='priceId'));
+     response=json({canExport:Boolean(user)&&includesPlan(plan,'pro'),requiresSubscription:false,billingMode:billing.config.mode,subscription:visible,plan,planAccess:true});
+    }else response=json({canExport:Boolean(user)&&(!billing.config.requiresSubscription||Boolean(subscription?.hasAccess)),requiresSubscription:billing.config.requiresSubscription,billingMode:billing.config.mode,subscription});
    }
-   else if(route==='/api/billing/checkout'&&request.method==='POST')response=json(await billing.checkout(await requireUser(),await body()));
+   else if(route==='/api/plan-usage'&&tiered){
+    const user=await requireUser(),plan=await resolvePlan(client,user,billing.config,billingEnv);
+    if(request.method==='GET')response=json({plan,quotas:plan==='max'?Object.fromEntries(Object.keys(planQuotas.max).map(key=>[key,{limit:null,remaining:null}])):await readPlanQuotas(planStore(),user.id,plan)});
+    else if(request.method==='POST'){
+     const {resource,operation}=await body();
+     if(typeof resource!=='string'||!/^[-\w.:]{1,200}$/.test(resource)||typeof operation!=='string'||!/^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/i.test(operation))throw fail(400,'Prompt inválido.');
+     response=json(await consumePlanQuota(planStore,user.id,plan,'prompt',resource,operation));
+    }else throw fail(405,'Método não permitido.');
+   }
+   else if(route==='/api/billing/checkout'&&request.method==='POST'){
+    if(tiered)throw fail(503,'Os planos pagos estão em preparação.','plan_checkout_unavailable');
+    response=json(await billing.checkout(await requireUser(),await body()));
+   }
    else if(route==='/api/billing/portal'&&request.method==='POST'){
     const input=await body();if(!input||typeof input!=='object'||Object.keys(input).length)throw fail(400,'Dados inválidos.');
     response=json(await billing.portal(await requireUser()));
@@ -66,7 +85,12 @@ export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientF
     const user=await requireUser();response=json({subscription:billing.config.enabled?await readPaddleSubscription(client,user.id,billing.config.environment):null,billingMode:billing.config.mode});
    }
    else if(/^\/api\/site-audit\/(site|lab|render)$/.test(route)&&request.method==='POST'){
-    const user=await requireUser();response=json({ok:true,[route.split('/').at(-1)]:await auditor.run(route.split('/').at(-1),user,await body(),{signal:request.signal})});
+    const user=await requireUser(),kind=route.split('/').at(-1),input=await body();
+    if(tiered){
+     if(typeof input.url!=='string'||!input.url.trim()||Object.keys(input).some(key=>key!=='url'))throw fail(400,'Informe apenas o endereço público do site.');
+     await consumePlanQuota(planStore,user.id,await resolvePlan(client,user,billing.config,billingEnv),'audit',kind,crypto.randomUUID());
+    }
+    response=json({ok:true,[kind]:await auditor.run(kind,user,input,{signal:request.signal})});
    }
    else if(route==='/api/privacy/export'&&request.method==='GET'){
     const user=await requireUser();response=json(await exportPersonalData(user,client,{requiresBillingLedger:billing.config.requiresSubscription}));
@@ -135,7 +159,7 @@ export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientF
   }catch(error){
    // Never expose a raw callback error or reflect the one-time code into a page.
    if(new URL(request.url).pathname==='/api/auth/callback'&&request.method==='GET'&&error.status!==503){const recovery=new URL(request.url).searchParams.get('next')==='/account/reset',missing=error.code==='pkce_code_verifier_not_found';return finish(new Response(null,{status:303,headers:{Location:origin+'/account?auth_error='+(recovery?'recovery_link':missing?'confirmation_browser':'confirmation_link'),'Referrer-Policy':'no-referrer'}}));}
-   if(error.status===429)securityEvent('rate_limit',429,{logger:securityLogger});
+   if(error.status===429&&error.code!=='plan_quota_reached')securityEvent('rate_limit',429,{logger:securityLogger});
    const response=finish(json({error:error.status?error.message:'Não foi possível concluir. Tente novamente.',code:error.code},error.status||500));
    if(error.status===429)response.headers.set('Retry-After',String(error.retryAfter||60));
    return response;
@@ -145,10 +169,20 @@ export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientF
  async function canAccessPlatform(request){
   const {client}=clientFactory(request);const {data,error}=await client.auth.getUser();
   if(error||!data?.user)return false;
-  if(!billing.config.requiresSubscription)return true;
+  if(tiered||!billing.config.requiresSubscription)return true;
   if(!billing.config.enabled)return false;
   return Boolean((await readPaddleSubscription(client,data.user.id,billing.config.environment))?.hasAccess);
  }
+ async function planAssetAccess(request){
+  if(!tiered||!isPlanAsset(decodeURIComponent(new URL(request.url).pathname)))return null;
+  const {client}=clientFactory(request);
+  const {data,error}=await client.auth.getUser();
+  if(error||!data?.user)return json({error:'Entre na sua conta para continuar.'},401);
+  try{
+   await enforcePlanAsset(request,await resolvePlan(client,data.user,billing.config,billingEnv),data.user,billingEnv);
+   return null;
+  }catch(error){return json({error:error.status?error.message:'Não foi possível verificar seu plano.',code:error.code},error.status||503);}
+ }
  async function handle(request){return secureResponse(await handleInternal(request),request.url);}
- return{handle,isSignedIn,canReadCode:canAccessPlatform,canAccessPlatform,origin,close:()=>{}};
+ return{handle,isSignedIn,canReadCode:canAccessPlatform,canAccessPlatform,planAssetAccess,origin,close:()=>{}};
 }

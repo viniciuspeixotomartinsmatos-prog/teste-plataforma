@@ -21,8 +21,8 @@ export function paddleConfig(env=process.env){
 export function subscriptionAccess(subscription,now=Date.now()){
  return Boolean(subscription?.payment_confirmed&&!subscription.revoked&&['active','past_due','canceled'].includes(subscription.status)&&Date.parse(subscription.paid_through)>now);
 }
-export async function readPaddleSubscription(client,userId,environment){
- const {data,error}=await client.from('paddle_subscriptions').select('status,plan_id,paid_through,payment_confirmed,revoked,cancel_at_period_end,environment').eq('user_id',userId).eq('environment',environment).eq('is_current',true).maybeSingle();
+export async function readPaddleSubscription(client,userId,environment,{includePrice=false}={}){
+ const {data,error}=await client.from('paddle_subscriptions').select('status,plan_id,paid_through,payment_confirmed,revoked,cancel_at_period_end,environment'+(includePrice?',price_id':'')).eq('user_id',userId).eq('environment',environment).eq('is_current',true).maybeSingle();
  if(error)throw fail(503,'Não foi possível verificar sua assinatura.','billing_unavailable');
- return data?{status:data.status,planId:data.plan_id,paidThrough:data.paid_through,cancelAtPeriodEnd:data.cancel_at_period_end,hasAccess:subscriptionAccess(data)}:null;
+ return data?{status:data.status,planId:data.plan_id,paidThrough:data.paid_through,cancelAtPeriodEnd:data.cancel_at_period_end,hasAccess:subscriptionAccess(data),...(includePrice?{priceId:data.price_id}:{})}:null;
 }

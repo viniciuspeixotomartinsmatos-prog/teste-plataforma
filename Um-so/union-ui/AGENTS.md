@@ -10,6 +10,8 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 ## Product decisions
 
+- Use cumulative access tiers: Gratuito after login, Pro with monthly quotas, and Max with access to all tools and no monthly commercial quotas. Keep the comparison available for review. Keep checkout disabled for the new tiers until the approved tier prices, provider mapping and complete enforcement are verified. See `docs/planos-nitido.md`.
+
 - Keep the authenticated header consistent across sections and make Ferramentas directly available on mobile and desktop. Open the catalog in most-recent order by default and preserve relevance for unfiltered search sorting. In the gallery, use the original media proportions and a matching background when a crop would remove meaningful content. Tools directory visuals use captures of the actual tools.
 
 - On 2026-11-16 the catalog reference established a horizontal header, real category counts, a three-column desktop gallery and 16:9 previews with small corner radii. Titles appear on hover and keyboard focus in the gallery. Use the same layout in light mode and preserve the original media and delivery labels. The catalog framing editor is reserved for trusted moderators. See `docs/catalog-framing.md` for the capture workflow and review scope.

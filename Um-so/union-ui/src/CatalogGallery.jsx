@@ -29,7 +29,7 @@ export function CatalogTopbar({path, collectionsOverview, navigate, theme, setTh
     <details className="catalog-more" ref={menu} onKeyDown={event=>{if(event.key==='Escape'){menu.current.open=false;menu.current.querySelector('summary').focus();}}}>
      <summary aria-label="Menu da conta"><span className="catalog-avatar">{user.name?.trim().charAt(0).toUpperCase()||'N'}</span><ChevronDown size={15}/></summary>
      <div className="catalog-menu">
-      {[['/account','Minha conta'], ['/builder','Montador'], ['/resources','Recursos']].map(([href,label])=><a key={href} href={href} aria-current={path===href?'page':undefined} onClick={event=>follow(event,href)}>{label}</a>)}
+      {[['/account','Minha conta'], ['/plans?view=acessos','Planos'], ['/builder','Montador'], ['/resources','Recursos']].map(([href,label])=><a key={href} href={href} aria-current={path===href?'page':undefined} onClick={event=>follow(event,href)}>{label}</a>)}
       <button type="button" onClick={()=>{menu.current.open=false;openSearch();}}>Busca global <kbd>Ctrl K</kbd></button>
      </div>
     </details>
