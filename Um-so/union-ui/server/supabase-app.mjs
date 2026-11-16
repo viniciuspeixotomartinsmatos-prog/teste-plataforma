@@ -9,6 +9,7 @@ import {safeNext} from '../src/auth-policy.js';
 import {createPaddleBilling,readPaddleSubscription} from './paddle-billing.mjs';
 import {createRequestLimiter,readJSONObject,secureResponse,securityEvent} from './security-controls.mjs';
 import {POLICY_VERSION,exportPersonalData,deletePersonalAccount} from './privacy-service.mjs';
+import {catalogFraming} from './catalog-framing.mjs';
 
 const json=(data,status=200)=>Response.json(data,{status,headers:{'Cache-Control':'private, no-store'}});
 const fail=(status,message,code)=>Object.assign(Error(message),{status,code});
@@ -47,7 +48,11 @@ export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientF
    if(['/api/collection-shares','/api/shared-collection','/api/sharing/config'].includes(route))response=json(await handleCollectionShare(request,{store:supabaseShareStore(client),requireUser,origin,readBody:body}));
    else if(route==='/api/creator-workspace')response=json(await creatorWorkspace(request,{store:supabaseCreatorStore(client),requireUser,readBody:body}));
    else if(route==='/api/health')response=json({ok:true,auth:'supabase',billingMode:billing.config.mode});
-   else if(route==='/api/auth/get-session')response=json({user:profile(await getUser())});
+   else if(route==='/api/auth/get-session'){
+    const user=await getUser();
+    response=json({user:user?.app_metadata?.nitido_moderator===true?{...profile(user),canManageFraming:true}:profile(user)});
+   }
+   else if(route==='/api/catalog-framing')response=json(await catalogFraming(request,client,await requireUser(),body));
    else if(route==='/api/access'){
     const user=await getUser(),subscription=user&&billing.config.enabled?await readPaddleSubscription(client,user.id,billing.config.environment):null;
     response=json({canExport:Boolean(user)&&(!billing.config.requiresSubscription||Boolean(subscription?.hasAccess)),requiresSubscription:billing.config.requiresSubscription,billingMode:billing.config.mode,subscription});
