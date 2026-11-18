@@ -1,6 +1,6 @@
 import {communityPath} from './community-pages.mjs';
 import {createApplication} from './application.mjs';
-import {protectedPath,signInResponse} from './access-policy.mjs';
+import {catalogSourcePath,catalogSourceResponse,protectedPath,signInResponse} from './access-policy.mjs';
 import {isPlanAsset} from './plan-access.mjs';
 function subscriptionResponse(req){return req.headers.accept?.includes('text/html')?new Response(null,{status:303,headers:{Location:'/plans','Cache-Control':'no-store'}}):Response.json({error:'Assinatura necessária.',code:'subscription_required'},{status:402,headers:{'Cache-Control':'no-store'}});}
 export async function nodeRequest(req,origin,{headersOnly=false}={}){
@@ -28,7 +28,8 @@ export function createApplicationPlugin(options={}){return{name:'umso-applicatio
    if(!await app.isSignedIn(request))return nodeResponse(signInResponse(request),res);
    if(app.canAccessPlatform&&!await app.canAccessPlatform(request))return nodeResponse(subscriptionResponse(req),res);
   }
-  if((path.startsWith('/code/')||path.startsWith('/tools-runtime/'))&&!await app.canReadCode(await nodeRequest(req,app.origin,{headersOnly:true})))return nodeResponse(new Response(JSON.stringify({error:'Assinatura necessária.',code:'subscription_required'}),{status:403,headers:{'Content-Type':'application/json'}}),res);
+  if(catalogSourcePath(path))return nodeResponse(catalogSourceResponse(),res);
+  if(path.startsWith('/tools-runtime/')&&!await app.canReadCode(await nodeRequest(req,app.origin,{headersOnly:true})))return nodeResponse(new Response(JSON.stringify({error:'Assinatura necessária.',code:'subscription_required'}),{status:403,headers:{'Content-Type':'application/json'}}),res);
   if(app.planAssetAccess&&isPlanAsset(path)){const denied=await app.planAssetAccess(await nodeRequest(req,app.origin));if(denied)return nodeResponse(denied,res);}
   next();
  }catch(error){res.statusCode=error.status||400;res.end(JSON.stringify({error:error.status===413?'Arquivo muito grande.':'Requisição inválida.'}));}});

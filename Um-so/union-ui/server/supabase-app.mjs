@@ -12,6 +12,7 @@ import {POLICY_VERSION,exportPersonalData,deletePersonalAccount} from './privacy
 import {catalogFraming} from './catalog-framing.mjs';
 import {consumePlanQuota,enforcePlanAsset,isPlanAsset,plansActive,quotaStore,readPlanQuotas,resolvePlan} from './plan-access.mjs';
 import {includesPlan,planQuotas} from '../src/plan-access.js';
+import {catalogPrompt} from './catalog-prompt.mjs';
 
 const json=(data,status=200)=>Response.json(data,{status,headers:{'Cache-Control':'private, no-store'}});
 const fail=(status,message,code)=>Object.assign(Error(message),{status,code});
@@ -63,6 +64,12 @@ export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientF
      const visible=subscription&&Object.fromEntries(Object.entries(subscription).filter(([key])=>key!=='priceId'));
      response=json({canExport:Boolean(user)&&includesPlan(plan,'pro'),requiresSubscription:false,billingMode:billing.config.mode,subscription:visible,plan,planAccess:true});
     }else response=json({canExport:Boolean(user)&&(!billing.config.requiresSubscription||Boolean(subscription?.hasAccess)),requiresSubscription:billing.config.requiresSubscription,billingMode:billing.config.mode,subscription});
+   }
+   else if(route==='/api/catalog-prompt'&&request.method==='POST'){
+    const user=await requireUser(),{resource,operation,prompt}=catalogPrompt(await body(),origin);
+    if(tiered)await consumePlanQuota(planStore,user.id,await resolvePlan(client,user,billing.config,billingEnv),'prompt',resource,operation);
+    else if(billing.config.requiresSubscription&&(!billing.config.enabled||!(await readPaddleSubscription(client,user.id,billing.config.environment))?.hasAccess))throw fail(403,'Escolha um plano para copiar o prompt.','plan_required');
+    response=json({prompt});
    }
    else if(route==='/api/plan-usage'&&tiered){
     const user=await requireUser(),plan=await resolvePlan(client,user,billing.config,billingEnv);

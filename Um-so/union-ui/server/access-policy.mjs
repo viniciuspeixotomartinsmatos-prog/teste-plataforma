@@ -1,5 +1,10 @@
 import {protectedPath} from '../src/auth-policy.js';
 
+export const catalogSourcePath=pathname=>/^\/(?:public\/)?code(?:\/|$)/i.test(pathname);
+export function catalogSourceResponse(){
+ return Response.json({error:'Use Copiar prompt na página do componente.',code:'catalog_prompt_only'},{status:403,headers:{'Cache-Control':'private, no-store'}});
+}
+
 export function signInResponse(request){
  const url=new URL(request.url);
  if(url.pathname==='/'&&!url.search&&['GET','HEAD'].includes(request.method)){

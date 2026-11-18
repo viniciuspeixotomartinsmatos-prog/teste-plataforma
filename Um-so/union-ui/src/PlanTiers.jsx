@@ -18,8 +18,8 @@ export default function PlanTiers({account,navigate,english}){
   prepared:'Paid plans are in preparation.',account:'Your plan',open:'Try an example',
   starter:'Catalog, favorites, collections and Skills browsing',studio:'creative studio launches per month',starterStudio:'Background Studio launches per month',
   trial:'starter prompts per month',weeklyPrompts:`${proPromptWeeklyLimit} different prompts per week, up to ${planQuotas.pro.prompt} per month`,audit:'site audit runs per month',
-  reuse:'Copy or download an unlocked prompt again without using another slot.',
-  limited:'Audio, textures, shapes, backgrounds and site audit',export:'Source code and package exports',
+  reuse:'Copy any tool’s prompt for an unlocked component without using another slot.',
+  limited:'Audio, textures, shapes, backgrounds and site audit',export:'Integration prompts and Skills downloads',
   all:'Every tool, including Design Systems and Presentation Studio',
   unlimited:'No monthly caps on prompts, studio launches or site audit',
   left:{prompt:'New prompts left this month',prompt_weekly:'New prompts left this week',studio:'Studio launches left',audit:'Audit runs left'}
@@ -28,8 +28,8 @@ export default function PlanTiers({account,navigate,english}){
   prepared:'Os planos pagos estão em preparação.',account:'Seu plano',open:'Experimentar um exemplo',
   starter:'Catálogo, favoritos, coleções e consulta às Skills',studio:'aberturas de estúdio por mês',starterStudio:'aberturas do Estúdio de fundos por mês',
   trial:'prompts de demonstração por mês',weeklyPrompts:`${proPromptWeeklyLimit} prompts diferentes por semana, até ${planQuotas.pro.prompt} por mês`,audit:'execuções do Raio-X por mês',
-  reuse:'Copie ou baixe novamente um prompt liberado sem gastar outra vaga.',
-  limited:'Áudio, texturas, formas, fundos e Raio-X',export:'Código e exportação de pacotes',
+  reuse:'Copie o prompt de qualquer ferramenta para um componente liberado sem gastar outra vaga.',
+  limited:'Áudio, texturas, formas, fundos e Raio-X',export:'Prompts de integração e downloads de Skills',
   all:'Todas as ferramentas, incluindo Design Systems e Estúdio de apresentação',
   unlimited:'Sem cotas mensais de prompts, abertura de estúdios ou Raio-X',
   left:{prompt:'Novos prompts restantes no mês',prompt_weekly:'Novos prompts restantes nesta semana',studio:'Aberturas de estúdio restantes',audit:'Execuções do Raio-X restantes'}

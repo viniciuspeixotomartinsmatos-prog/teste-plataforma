@@ -8,7 +8,7 @@ import {fileURLToPath} from 'node:url';
 import {pipeline} from 'node:stream/promises';
 import {createApplication} from './application.mjs';
 import {nodeRequest,nodeResponse} from './application-plugin.mjs';
-import {protectedPath,signInResponse} from './access-policy.mjs';
+import {catalogSourcePath,catalogSourceResponse,protectedPath,signInResponse} from './access-policy.mjs';
 import {isPlanAsset} from './plan-access.mjs';
 import {renderPublicPage,publicSitemap} from './public-site.mjs';
 import {securityHeaders} from './security-controls.mjs';
@@ -29,7 +29,8 @@ export async function createServer(options={}){
    if(pathname.split('/').some(p=>p.startsWith('.'))||/\.(sqlite|toml|log|pem)(?:-|$|\.)/i.test(pathname))throw Object.assign(Error(),{status:404});
    if(protectedPath(pathname)&&!await app.isSignedIn(await nodeRequest(req,app.origin)))return await nodeResponse(signInResponse(await nodeRequest(req,app.origin)),res);
    if(protectedPath(pathname)&&app.canAccessPlatform&&!await app.canAccessPlatform(await nodeRequest(req,app.origin))){const html=req.headers.accept?.includes('text/html');return await nodeResponse(html?new Response(null,{status:303,headers:{Location:'/plans','Cache-Control':'no-store'}}):Response.json({error:'Assinatura necessária.',code:'subscription_required'},{status:402,headers:{'Cache-Control':'no-store'}}),res);}
-   if((pathname.startsWith('/code/')||pathname.startsWith('/tools-runtime/'))&&!await app.canReadCode(await nodeRequest(req,app.origin)))return await nodeResponse(new Response(JSON.stringify({error:'Assinatura necessária.',code:'subscription_required'}),{status:403,headers:{'Content-Type':'application/json','Cache-Control':'no-store'}}),res);
+   if(catalogSourcePath(pathname))return await nodeResponse(catalogSourceResponse(),res);
+   if(pathname.startsWith('/tools-runtime/')&&!await app.canReadCode(await nodeRequest(req,app.origin)))return await nodeResponse(new Response(JSON.stringify({error:'Assinatura necessária.',code:'subscription_required'}),{status:403,headers:{'Content-Type':'application/json','Cache-Control':'no-store'}}),res);
    if(app.planAssetAccess&&isPlanAsset(pathname)){const denied=await app.planAssetAccess(await nodeRequest(req,app.origin));if(denied)return await nodeResponse(denied,res);}
    const filePath=pathname==='/vendas'||pathname==='/vendas/'?'/vendas/index.html':pathname;
    let target=path.resolve(root,'.'+filePath);

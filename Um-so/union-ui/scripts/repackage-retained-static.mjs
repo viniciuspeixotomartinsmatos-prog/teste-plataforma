@@ -38,6 +38,15 @@ export async function repackageRetainedStatic(outputDirectory){
  return result;
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
- const result=await repackageRetainedStatic(path.resolve('dist/client'));
+ const output=path.resolve('dist/client');
+ if(await fs.realpath(output)!==output)throw Error('Unexpected static output location.');
+ // Vite copies public/code into dist. Keep the retained originals out of hosting artifacts.
+ const source=path.join(output,'code');
+ const sourceStat=await fs.lstat(source).catch(error=>{if(error.code!=='ENOENT')throw error;});
+ if(sourceStat){
+  if(!sourceStat.isDirectory()||sourceStat.isSymbolicLink()||await fs.realpath(source)!==source)throw Error('Unexpected catalog code output location.');
+  await fs.rm(source,{recursive:true,force:true});
+ }
+ const result=await repackageRetainedStatic(output);
  console.log(`Packaged retained static assets: ${result.templates} templates; ${result.rewritten} reference files updated.`);
 }

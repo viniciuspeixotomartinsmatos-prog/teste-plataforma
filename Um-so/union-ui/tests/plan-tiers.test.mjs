@@ -24,6 +24,7 @@ test('entitlements are cumulative and only trusted production subscriptions gran
  assert.equal(await resolvePlan(null,user,{enabled:true,environment:'live'},env,{...paid,hasAccess:false}),'free');
  assert.equal(await resolvePlan(null,{...user,app_metadata:{nitido_plan:'max'}},{enabled:false},{}),'max');
  await assert.rejects(enforcePlanAsset(new Request('https://nitido.example/code/secret.json'),'free',user,{}),{status:403});
+ await assert.rejects(enforcePlanAsset(new Request('https://nitido.example/code/secret.json'),'max',user,{}),{status:403,code:'catalog_prompt_only'});
  await assert.rejects(enforcePlanAsset(new Request('https://nitido.example/data/skill-packages/profitize-estilo-wise.zip'),'pro',user,{}),{status:403});
  await assert.rejects(enforcePlanAsset(new Request('https://nitido.example/tools-runtime/umso.html?tool=center-stage&launch='+randomUUID()),'pro',user,{}),{status:403});
 });
@@ -51,13 +52,31 @@ test('access API lets a signed-in free account browse, while restricted actions 
  });
  const request=(path,value)=>app.handle(new Request(origin+path,value===undefined?undefined:{method:'POST',headers:{Origin:origin,'Content-Type':'application/json'},body:JSON.stringify(value)}));
  const prompt=resource=>request('/api/plan-usage',{resource,operation:randomUUID()});
+ const catalogPrompt=(resource,tool)=>request('/api/catalog-prompt',{resource,tool,operation:randomUUID()});
  assert.equal((await prompt('reactbits--aurora')).status,401);
+ assert.equal((await catalogPrompt('reactbits--aurora','claude')).status,401);
  user={id:randomUUID(),app_metadata:{}};
  assert.equal(await app.canAccessPlatform(new Request(origin+'/')),true);
  const access=await (await request('/api/access')).json();
  assert.equal(access.plan,'free');
  assert.equal(access.canExport,false);
  assert.equal((await prompt('private-example')).status,403);
+ assert.equal((await catalogPrompt('reactbits--aurora','unknown')).status,400);
+ assert.equal((await catalogPrompt('missing','claude')).status,404);
+ assert.equal(used,0);
+ const prompts=new Set();
+ for(const tool of ['claude','codex','gemini','cursor','lovable']){
+  const result=await catalogPrompt('reactbits--aurora',tool);
+  assert.equal(result.status,200);
+  assert.equal(result.headers.get('cache-control'),'private, no-store');
+  const output=await result.json();
+  assert.deepEqual(Object.keys(output),['prompt']);
+  assert.match(output.prompt,/Aurora/);
+  assert.doesNotMatch(output.prompt,/<script\b|<!doctype|\/code\//i);
+  prompts.add(output.prompt);
+ }
+ assert.equal(prompts.size,5);
+ assert.equal(used,1);
  assert.equal((await request('/api/site-audit/site',{url:'https://example.org'})).status,403);
  for(const sample of ['reactbits--aurora','reactbits--orb','reactbits--magic-bento','aceternity--background-beams','kokonut-background-paths']){
   assert.equal((await prompt(sample)).status,200);

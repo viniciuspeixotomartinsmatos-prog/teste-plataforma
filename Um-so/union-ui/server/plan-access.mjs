@@ -58,7 +58,7 @@ export async function readPlanQuotas(store,userId,plan){
 
 export async function enforcePlanAsset(request,plan,user,env){
  const url=new URL(request.url),path=decodeURIComponent(url.pathname);
- if(path.startsWith('/code/')&&!includesPlan(plan,'pro'))throw fail(403,'Código e arquivos completos estão disponíveis no Pro e no Max.','plan_required');
+ if(path.startsWith('/code/'))throw fail(403,'Use Copiar prompt na página do componente.','catalog_prompt_only');
  if(path.startsWith(skillDirectory)){
   const file=path.slice(skillDirectory.length);
   if(designFiles.has(file)&&plan!=='max')throw fail(403,'Design Systems está disponível no Max.','plan_required');

@@ -1,6 +1,6 @@
 import {next} from '@vercel/functions';
 import {requestClient} from './server/supabase-client.mjs';
-import {protectedPath,signInResponse} from './server/access-policy.mjs';
+import {catalogSourcePath,catalogSourceResponse,protectedPath,signInResponse} from './server/access-policy.mjs';
 import {paddleConfig,readPaddleSubscription} from './server/paddle-access.mjs';
 import {enforcePlanAsset,isPlanAsset,plansActive,resolvePlan} from './server/plan-access.mjs';
 
@@ -13,6 +13,7 @@ export default async function middleware(request){
   // Validate against Supabase Auth. Cookie presence alone never grants access.
   const {data,error}=await context.client.auth.getUser();
   if(!error&&data?.user){
+   if(catalogSourcePath(decodeURIComponent(url.pathname)))return finish(catalogSourceResponse());
    const billing=paddleConfig();
    if(plansActive(process.env)){
     if(isPlanAsset(decodeURIComponent(url.pathname))){

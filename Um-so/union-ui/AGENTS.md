@@ -10,7 +10,9 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 ## Product decisions
 
-- Pro can unlock 15 distinct catalog prompts per Monday–Sunday week in America/Cuiaba and 60 per UTC calendar month. Repeating a copy or download of the same unlocked item never consumes another slot while the user's plan permits access to that item. Unused weekly quota does not carry over.
+- Catalog component detail pages offer one integration prompt per supported AI tool via authenticated copy. Keep raw source, historical prompt files and catalog ZIPs out of hosting artifacts. Retain the interactive previews, their controls and the builder.
+
+- Pro can unlock 15 distinct catalog prompts per Monday–Sunday week in America/Cuiaba and 60 per UTC calendar month. Copying any tool-specific prompt for the same unlocked item never consumes another slot while the user's plan permits access to that item. Unused weekly quota does not carry over.
 
 - Use cumulative access tiers: Gratuito after login, Pro with monthly quotas, and Max with access to all tools and no monthly commercial quotas. Keep the comparison available for review. Keep checkout disabled for the new tiers until the approved tier prices, provider mapping and complete enforcement are verified. See `docs/planos-nitido.md`.
 
