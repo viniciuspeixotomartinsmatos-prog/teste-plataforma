@@ -5,12 +5,33 @@ await build({entryPoints:['src/ComponentPage.jsx'],outfile:'var/component-integr
  builder.onLoad({filter:/[\\/]CodeView\.jsx$/},()=>({loader:'jsx',contents:'import React from "react";export function CodeView({code}){return <pre>{code}</pre>}'}));
  }}]});
 const {default:Component}=await import('../var/component-integration-experience.mjs');
-test('component file failure keeps selections and retries to real source and integration controls',async()=>{
- const dom=new JSDOM('<div id="root"></div>',{url:'http://localhost/component/demo'});globalThis.window=dom.window;globalThis.document=dom.window.document;globalThis.localStorage=dom.window.localStorage;globalThis.IS_REACT_ACT_ENVIRONMENT=true;const root=createRoot(document.querySelector('#root'));let requests=0;
- globalThis.fetch=async()=>++requests===1?new Response('',{status:503}):Response.json({files:[{path:'component.jsx',content:'export const Demo = () => "Actual source";'}]});
- try{await act(async()=>root.render(React.createElement(Component,{item:{id:'demo',name:'Demo',availability:'code',framework:'react',codePath:'/code/demo.json',previewPath:'/previews/demo.html',dependencies:['react']},rows:[],collections:[],theme:'dark',notify:()=>{}})));
-  assert.match(document.querySelector('[role="alert"]').textContent,/carregar os arquivos/);assert.ok(document.body.textContent.includes('Isolated preview fixture'));
-  await act(async()=>[...document.querySelectorAll('button')].find(b=>b.textContent==='Tentar carregar arquivos novamente').click());assert.equal(requests,2);assert.equal(document.querySelector('[role="alert"]'),null);
-  await act(async()=>[...document.querySelectorAll('button')].find(b=>b.textContent==='Ver arquivos').click());assert.match(document.body.textContent,/Actual source/);assert.match(document.body.textContent,/react/);
+test('prompt failure preserves the selected tool and preview, and a retry copies only its prompt',async()=>{
+ const dom=new JSDOM('<div id="root"></div>',{url:'http://localhost/component/demo'});
+ globalThis.window=dom.window;globalThis.document=dom.window.document;globalThis.localStorage=dom.window.localStorage;globalThis.IS_REACT_ACT_ENVIRONMENT=true;
+ const root=createRoot(document.querySelector('#root')),requests=[],notifications=[];
+ let clipboard='';
+ Object.defineProperty(globalThis,'navigator',{configurable:true,value:{clipboard:{writeText:async text=>{clipboard=text;}}}});
+ globalThis.fetch=async(url,options)=>{
+  assert.equal(url,'/api/catalog-prompt');
+  requests.push(JSON.parse(options.body));
+  return requests.length===1?Response.json({error:'Tente novamente.'},{status:503}):Response.json({prompt:'Prompt de integração para Gemini.'});
+ };
+ try{
+  await act(async()=>root.render(React.createElement(Component,{item:{id:'demo',name:'Demo',availability:'code',framework:'react',codePath:'/code/demo.json',previewPath:'/previews/demo.html',dependencies:['react']},rows:[],collections:[],theme:'dark',notify:message=>notifications.push(message)})));
+  assert.equal(requests.length,0);
+  const select=document.querySelector('.prompt-tool-select select');
+  await act(async()=>{select.value='gemini';select.dispatchEvent(new dom.window.Event('change',{bubbles:true}));});
+  const copy=()=>[...document.querySelectorAll('button')].find(button=>button.textContent.trim()==='Copiar prompt').click();
+  await act(async()=>copy());
+  assert.equal(notifications.at(-1),'Tente novamente.');
+  assert.equal(clipboard,'');
+  assert.equal(select.value,'gemini');
+  assert.ok(document.body.textContent.includes('Isolated preview fixture'));
+  await act(async()=>copy());
+  assert.equal(clipboard,'Prompt de integração para Gemini.');
+  assert.equal(notifications.at(-1),'Prompt copiado.');
+  assert.deepEqual(requests.map(request=>request.tool),['gemini','gemini']);
+  assert.equal(requests[0].resource,requests[1].resource);
+  assert.equal(document.querySelector('.code-view, .file-tree'),null);
  }finally{await act(async()=>root.unmount());dom.window.close();}
 });
