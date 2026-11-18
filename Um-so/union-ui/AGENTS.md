@@ -10,6 +10,8 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 ## Product decisions
 
+- Production must enforce Gratuito, Pro and Max permissions even while checkout is disabled. Missing or false rollout flags must never grant unrestricted prompt access on Vercel production. Free accounts receive the five listed demonstrations. Copying another tool variant of the same unlocked component does not spend another slot.
+
 - Catalog component detail pages offer one integration prompt per supported AI tool via authenticated copy. Keep raw source, historical prompt files and catalog ZIPs out of hosting artifacts. Retain the interactive previews, their controls and the builder.
 
 - Pro can unlock 15 distinct catalog prompts per Monday–Sunday week in America/Cuiaba and 60 per UTC calendar month. Copying any tool-specific prompt for the same unlocked item never consumes another slot while the user's plan permits access to that item. Unused weekly quota does not carry over.

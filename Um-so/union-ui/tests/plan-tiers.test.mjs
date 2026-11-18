@@ -4,10 +4,14 @@ import {readFile} from 'node:fs/promises';
 import {randomUUID} from 'node:crypto';
 import {PGlite} from '@electric-sql/pglite';
 import {includesPlan,planPermission} from '../src/plan-access.js';
-import {enforcePlanAsset,resolvePlan} from '../server/plan-access.mjs';
+import {enforcePlanAsset,plansActive,resolvePlan} from '../server/plan-access.mjs';
 import {createSupabaseApplication} from '../server/supabase-app.mjs';
 
 test('entitlements are cumulative and only trusted production subscriptions grant a mapped tier',async()=>{
+ assert.equal(plansActive({VERCEL_ENV:'production'}),true);
+ assert.equal(plansActive({VERCEL_ENV:'production',NITIDO_PLAN_ACCESS_ENABLED:'false'}),true);
+ assert.equal(plansActive({NITIDO_PLAN_ACCESS_ENABLED:'true'}),true);
+ assert.equal(plansActive({}),false);
  assert.equal(includesPlan('pro','free'),true);
  assert.equal(includesPlan('pro','max'),false);
  assert.equal(planPermission('free','prompt','reactbits--aurora').limit,5);
@@ -34,7 +38,7 @@ test('access API lets a signed-in free account browse, while restricted actions 
  let user=null,used=0;
  const unlocked=new Set();
  const app=createSupabaseApplication({
-  origin,billingEnv:{NITIDO_PLAN_ACCESS_ENABLED:'true'},limiter:()=>{},
+  origin,billingEnv:{VERCEL_ENV:'production'},limiter:()=>{},
   clientFactory:()=>({finish:response=>response,client:{auth:{getUser:async()=>({data:{user}})}}}),
   planStore:()=>({rpc:async(name,args)=>{
    if(name==='nitido_read_plan_quotas')return {data:{prompt:used,prompt_weekly:used}};

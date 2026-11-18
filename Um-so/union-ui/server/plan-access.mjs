@@ -4,7 +4,8 @@ import {paddleId,readPaddleSubscription,fail} from './paddle-access.mjs';
 import packages from '../public/data/skill-packages/index.json' with {type:'json'};
 import {packageType} from '../src/skill-library-model.js';
 
-export const plansActive=env=>env.NITIDO_PLAN_ACCESS_ENABLED==='true';
+// Production always enforces entitlements, including while checkout is disabled.
+export const plansActive=env=>env.VERCEL_ENV==='production'||env.NITIDO_PLAN_ACCESS_ENABLED==='true';
 const skillDirectory='/data/skill-packages/';
 const designFiles=new Set(packages.filter(row=>packageType(row)==='design').flatMap(row=>[row.id+'.txt',row.id+'.zip',row.markdown].filter(Boolean)));
 export const isPlanAsset=pathname=>/^\/(code\/|data\/skill-packages\/|tools-runtime\/umso\.html$)/.test(pathname);
