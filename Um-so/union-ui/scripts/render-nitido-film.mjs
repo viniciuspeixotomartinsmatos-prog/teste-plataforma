@@ -18,7 +18,17 @@ const server=http.createServer(async(req,res)=>{try{
  const pathname=decodeURIComponent(new URL(req.url,'http://localhost').pathname);
  if(!/^\/(?:index\.html|page\.(?:css|js)|film\.(?:html|css|js)|nitido-apresentacao\.mp4|assets\/[a-zA-Z0-9._-]+)?$/.test(pathname)){res.writeHead(404);return res.end();}
  const target=path.join(out,pathname==='/'?'index.html':pathname.slice(1));
- const data=await fs.readFile(target);res.setHeader('Content-Type',types[path.extname(target)]||'application/octet-stream');res.setHeader('Cache-Control','no-store');res.end(data);
+ const data=await fs.readFile(target);res.setHeader('Content-Type',types[path.extname(target)]||'application/octet-stream');res.setHeader('Cache-Control','no-store');
+ res.setHeader('Accept-Ranges','bytes');
+ if(req.headers.range){
+  const range=/^bytes=(\d*)-(\d*)$/.exec(req.headers.range);
+  if(!range||(!range[1]&&!range[2])){res.writeHead(416,{'Content-Range':`bytes */${data.length}`});return res.end();}
+  const start=range[1]?Number(range[1]):Math.max(0,data.length-Number(range[2]));
+  const end=range[1]&&range[2]?Math.min(Number(range[2]),data.length-1):data.length-1;
+  if(!Number.isSafeInteger(start)||!Number.isSafeInteger(end)||start>end||start>=data.length){res.writeHead(416,{'Content-Range':`bytes */${data.length}`});return res.end();}
+  res.statusCode=206;res.setHeader('Content-Range',`bytes ${start}-${end}/${data.length}`);res.setHeader('Content-Length',end-start+1);return res.end(req.method==='HEAD'?undefined:data.subarray(start,end+1));
+ }
+ res.setHeader('Content-Length',data.length);res.end(req.method==='HEAD'?undefined:data);
  }catch{res.writeHead(404);res.end();}});
 await new Promise(resolve=>server.listen(4188,'127.0.0.1',resolve));
 console.log('Presentation http://127.0.0.1:4188');
@@ -30,7 +40,7 @@ if(process.argv.includes('--render')){
   const errors=[];page.on('pageerror',e=>errors.push(e.message));
   await page.goto('http://127.0.0.1:4188/film.html?render');await page.waitForFunction(()=>window.FILM_READY);
   const output=path.join(out,'nitido-apresentacao.mp4');
-  const encoder=spawn(ffmpeg,['-hide_banner','-loglevel','warning','-y','-f','image2pipe','-vcodec','mjpeg','-framerate',String(fps),'-i','pipe:0','-i',path.join(out,'assets/narracao.mp3'),'-i',path.join(out,'assets/trilha.wav'),'-filter_complex','[1:a]loudnorm=I=-16:TP=-1.5:LRA=9,apad[voice];[2:a]volume=1.4,afade=t=out:st=45:d=3[bed];[voice][bed]amix=inputs=2:duration=longest:normalize=0,alimiter=limit=0.95[audio]','-map','0:v','-map','[audio]','-c:v','libx264','-preset','fast','-crf','18','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-t',String(duration),'-movflags','+faststart',output],{stdio:['pipe','ignore','pipe']});
+  const encoder=spawn(ffmpeg,['-hide_banner','-loglevel','warning','-y','-f','image2pipe','-vcodec','mjpeg','-framerate',String(fps),'-i','pipe:0','-i',path.join(out,'assets/narracao.mp3'),'-i',path.join(out,'assets/trilha.wav'),'-filter_complex','[1:a]loudnorm=I=-16:TP=-1.5:LRA=9,apad[voice];[2:a]volume=1.4,afade=t=out:st=45:d=3[bed];[voice][bed]amix=inputs=2:duration=longest:normalize=0,alimiter=limit=0.95[audio]','-map','0:v','-map','[audio]','-c:v','libx264','-preset','fast','-crf','18','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-ar','48000','-ac','2','-t',String(duration),'-movflags','+faststart',output],{stdio:['pipe','ignore','pipe']});
   let stderr='';encoder.stderr.on('data',b=>{stderr=(stderr+b).slice(-8000)});
   let encoderError;encoder.on('error',e=>{encoderError=e});encoder.stdin.on('error',e=>{encoderError=e});
   const exit=once(encoder,'close');
