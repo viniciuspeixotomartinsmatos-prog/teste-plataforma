@@ -24,7 +24,7 @@ export function ItemCard({item,saved,onSave,onOpen,compared,onCompare,listView=f
      <div className="card-open"><ArrowUpRight size={18}/><span>Explorar componente</span></div>
     </>}
    </div>
-   <div className="card-caption"><div><h3>{name}</h3>{!overlay&&<span className="card-source card-category"><ResourceIcon kind={item.kind} size={12}/>{category}</span>}</div>{!overlay&&<span className="code-status" title={item.availability==='code'?'Código completo local':item.availability==='usage'?'Exemplo de uso local':'Detalhes do recurso'}>{item.availability==='code'?<Code2 size={12}/>:item.availability==='usage'?<span>uso</span>:<ArrowUpRight size={13}/>}</span>}</div>
+   {!overlay&&<div className="card-caption"><div><h3>{name}</h3><span className="card-source card-category"><ResourceIcon kind={item.kind} size={12}/>{category}</span></div><span className="code-status" title="Detalhes do recurso"><ArrowUpRight size={13}/></span></div>}
   </a>
   <div className="card-actions">
    {onFrame&&<button className="icon-button" onClick={()=>onFrame(item)} aria-label={'Editar enquadramento: '+name} title="Editar enquadramento"><LayoutGrid size={15}/></button>}

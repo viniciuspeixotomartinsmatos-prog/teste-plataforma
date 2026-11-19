@@ -11,7 +11,7 @@ test('the sales page and its assets open without exposing other files',async()=>
  }
  assert.equal(protectedPath('/vendas/private.json'),true);
  const html=await fs.readFile('public/vendas/index.html','utf8');
- for(const value of ['85','165','550','/legal/terms','/legal/privacy','/legal/refunds'])assert.ok(html.includes(value),value);
+ for(const value of ['49','89','/plans?tier=pro','/plans?tier=max','/legal/terms','/legal/privacy','/legal/refunds'])assert.ok(html.includes(value),value);
 });
 
 test('all named SPA entrypoints survive direct navigation without rewriting private files to HTML',async()=>{
@@ -27,9 +27,9 @@ test('all named SPA entrypoints survive direct navigation without rewriting priv
  }
  for(const path of ['/data/icon-library/index.json','/data/icon-library/chunks/ph-0.json','/code/example.json','/previews/example.html','/assets/catalog-cover.webp','/tools-runtime/example.html']){
   assert.notEqual(destination(path),'/index.html',path+' must retain its asset/auth handling');
-  assert.equal(protectedPath(path),true,path);
+  assert.equal(protectedPath(path),path.startsWith('/code/')||path.startsWith('/tools-runtime/'),path);
  }
- assert.equal(protectedPath('/icons'),true);
+ assert.equal(protectedPath('/icons'),false);
 });
 
 test('Vercel routes nested auth and workspace requests through a concrete API entrypoint',async()=>{

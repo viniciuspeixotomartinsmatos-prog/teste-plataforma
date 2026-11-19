@@ -23,7 +23,7 @@ export async function resolvePlan(client,user,billing,env=process.env,subscripti
  if(grant==='max'||grant==='pro')return grant;
  if(billing.environment!=='live'||!billing.enabled)return 'free';
  const paid=subscription===undefined?await readPaddleSubscription(client,user.id,'live',{includePrice:true}):subscription;
- return paid?.hasAccess?configuredTier(env,paid.priceId)||'free':'free';
+ return paid?.hasAccess?(billing.tierPlans?.find(plan=>plan.priceId===paid.priceId)?.tier||configuredTier(env,paid.priceId)||'free'):'free';
 }
 
 export function quotaStore(env){

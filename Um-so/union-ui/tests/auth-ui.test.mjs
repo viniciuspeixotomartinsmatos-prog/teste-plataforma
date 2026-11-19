@@ -8,7 +8,7 @@ import {createRoot} from 'react-dom/client';
 let appModule;
 async function loadApp(){appModule??=(async()=>{await fs.mkdir('var',{recursive:true});await build({entryPoints:['src/App.jsx'],outfile:'var/auth-ui-test.mjs',platform:'node',format:'esm',bundle:true,packages:'external',loader:{'.css':'empty'},logLevel:'silent'});return import('../var/auth-ui-test.mjs');})();return appModule;}
 
-test('direct platform links show login; successful login returns to the requested page; logout hides it',async()=>{
+test('the directory opens publicly; explicit login returns to the requested page and account logout stays private',async()=>{
  const dom=new JSDOM('<div id="root"></div>',{url:'http://localhost:4173/tools'});
  for(const key of ['window','document','history','localStorage','HTMLElement','Node','MutationObserver','Event','MouseEvent'])globalThis[key]=dom.window[key];
  globalThis.IS_REACT_ACT_ENVIRONMENT=true;window.scrollTo=()=>{};
@@ -28,9 +28,10 @@ test('direct platform links show login; successful login returns to the requeste
  const click=async element=>{assert.ok(element);await act(async()=>element.dispatchEvent(new MouseEvent('click',{bubbles:true})));await settle();};
  try{
   await act(async()=>root.render(React.createElement(App)));await settle();
-  assert.ok(document.querySelector('.auth-card'));assert.equal(document.querySelector('.main-nav'),null);assert.equal(catalogRequests,0);assert.equal(window.location.pathname,'/account');
+  assert.equal(document.querySelector('.auth-card'),null);assert.ok(document.querySelector('.main-nav'));assert.equal(catalogRequests,1);assert.equal(window.location.pathname,'/tools');
+  await act(async()=>{history.pushState({},'','/account?next=%2Ftools');window.dispatchEvent(new dom.window.PopStateEvent('popstate'));});await settle();
   await act(async()=>document.querySelector('form').dispatchEvent(new Event('submit',{bubbles:true,cancelable:true})));await settle();
-  assert.equal(window.location.pathname,'/tools');assert.ok(document.querySelector('.main-nav'));assert.equal(catalogRequests,1);
+  assert.equal(window.location.pathname,'/tools');assert.ok(document.querySelector('.main-nav'));assert.ok(catalogRequests>=1);
   await click(document.querySelector('.catalog-more summary'));
   await click(document.querySelector('.catalog-menu a[href="/account"]'));
   await click([...document.querySelectorAll('button')].find(el=>el.textContent.includes('Sair da conta')));
@@ -59,7 +60,7 @@ test('email confirmation waits for a user click, sends the token only by POST an
  for(const key of ['window','document','history','localStorage','HTMLElement','Node','MutationObserver','Event','MouseEvent'])globalThis[key]=dom.window[key];
  globalThis.IS_REACT_ACT_ENVIRONMENT=true;
  let verified=0,destination;const account={sessionLoading:false,user:null,refreshAccess:async()=>{},refreshSession:async()=>({id:'one',name:'Teste'})};
- globalThis.fetch=async(url,options)=>{assert.equal(url,'/api/auth/verify-email');assert.equal(options.method,'POST');assert.deepEqual(JSON.parse(options.body),{tokenHash:'a'.repeat(64),type:'email'});verified++;return Response.json({ok:true,next:'/'});};
+ globalThis.fetch=async(url,options)=>{assert.equal(url,'/api/auth/verify-email');assert.equal(options.method,'POST');assert.deepEqual(JSON.parse(options.body),{tokenHash:'a'.repeat(64),type:'email',next:'/'});verified++;return Response.json({ok:true,next:'/'});};
  await build({entryPoints:['src/AccountPage.jsx'],outfile:'var/email-ui-test.mjs',platform:'node',format:'esm',bundle:true,packages:'external',loader:{'.css':'empty'},logLevel:'silent'});
  const {default:AccountPage}=await import('../var/email-ui-test.mjs');const root=createRoot(document.getElementById('root'));
  try{

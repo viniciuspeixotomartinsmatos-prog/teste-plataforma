@@ -33,10 +33,10 @@ test('guest can inspect English plans without catalog access, SDK or enabled pay
  const {App}=await import('../var/billing-ui-app.mjs');const root=createRoot(document.getElementById('root'));
  try{await act(async()=>{root.render(React.createElement(App));await new Promise(resolve=>setTimeout(resolve,100));});await act(async()=>{await new Promise(resolve=>setTimeout(resolve,100));});
  assert.equal(window.location.pathname,'/plans');assert.match(document.body.textContent,/Choose your own rhythm/);assert.doesNotMatch(document.body.textContent,/Payment received/);
- assert.equal(document.querySelectorAll('.billing-grid button:disabled').length,3);assert.equal(requested.includes('/data/catalog-live.json'),false);assert.equal(document.querySelector('script[src*="paddle"]'),null);
+ assert.equal(document.querySelectorAll('.billing-grid button:disabled').length,3);assert.equal(requested.includes('/data/catalog-live.json'),true);assert.equal(document.querySelector('script[src*="paddle"]'),null);
  }finally{await act(async()=>root.unmount());dom.window.close();delete globalThis.IS_REACT_ACT_ENVIRONMENT;}
 });
-test('a signed-in account without a paid period is directed to plans',async()=>{
+test('a signed-in account without a paid period can browse the tool directory',async()=>{
  await fs.mkdir('var',{recursive:true});
  await build({entryPoints:['src/App.jsx'],outfile:'var/locked-billing-ui-app.mjs',platform:'node',format:'esm',bundle:true,packages:'external',loader:{'.css':'empty'},logLevel:'silent'});
  const dom=new JSDOM('<div id="root"></div>',{url:'http://localhost/tools'});
@@ -54,7 +54,7 @@ test('a signed-in account without a paid period is directed to plans',async()=>{
  try{
   await act(async()=>{root.render(React.createElement(App));await new Promise(resolve=>setTimeout(resolve,100));});
   await act(async()=>{await new Promise(resolve=>setTimeout(resolve,100));});
-  assert.equal(window.location.pathname,'/plans');
-  assert.match(document.body.textContent,/Escolha o seu ritmo/);
+  assert.equal(window.location.pathname,'/tools');
+  assert.match(document.body.textContent,/Ferramentas/);
  }finally{await act(async()=>root.unmount());dom.window.close();delete globalThis.IS_REACT_ACT_ENVIRONMENT;}
 });

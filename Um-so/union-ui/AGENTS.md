@@ -10,6 +10,8 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 ## Product decisions
 
+- The catalog, component detail previews, search and tool directory are public. Ask visitors to sign in when copying a component prompt, preserving the selected component as the return destination. Keep account data, prompt delivery and paid tool actions authorized server-side. Remove the floating component-name panel from gallery cards, including hover/focus, and preserve their accessible link names.
+
 - Production must enforce Gratuito, Pro and Max permissions even while checkout is disabled. Missing or false rollout flags must never grant unrestricted prompt access on Vercel production. Free accounts receive the five listed demonstrations. Copying another tool variant of the same unlocked component does not spend another slot.
 
 - Catalog component detail pages offer one integration prompt per supported AI tool via authenticated copy. Keep raw source, historical prompt files and catalog ZIPs out of hosting artifacts. Retain the interactive previews, their controls and the builder.

@@ -29,12 +29,12 @@ export function createPaddleBilling({env=process.env,fetchImpl=fetch,now=Date.no
   const response=await fetchImpl(env.SUPABASE_URL.replace(/\/$/,'')+'/rest/v1/rpc/'+name,{method:'POST',headers:{apikey:env.SUPABASE_SERVICE_ROLE_KEY,Authorization:'Bearer '+env.SUPABASE_SERVICE_ROLE_KEY,'Content-Type':'application/json'},body:JSON.stringify(args),signal:AbortSignal.timeout(15000)});
   if(!response.ok)throw fail(503,'Não foi possível atualizar a assinatura.','billing_persistence_error');return response.json();
  }
- const allPlans=[...config.plans,...config.regionalPlans];
- function publicConfig(){return{provider:'paddle',enabled:config.enabled,mode:config.mode,clientToken:config.clientToken,plans:config.plans.map(({priceId,...p})=>p),regionalPlans:config.regionalPlans.map(({priceId,...p})=>p),currencies:config.currencies,locales:config.locales};}
+ const allPlans=[...config.plans.filter(plan=>paddleId(plan.priceId,'pri')),...config.regionalPlans,...config.tierPlans];
+ function publicConfig(){return{provider:'paddle',enabled:config.enabled,mode:config.mode,clientToken:config.clientToken,plans:config.plans.map(({priceId,...p})=>p),tierPlans:config.tierPlans.map(({priceId,...plan})=>plan),regionalPlans:config.regionalPlans.map(({priceId,...p})=>p),currencies:config.currencies,locales:config.locales};}
  async function checkout(user,input){
   requireEnabled();
-  if(!input||typeof input!=='object'||Array.isArray(input)||Object.keys(input).some(k=>!['planId','locale','currency'].includes(k))||!['pt-BR','en'].includes(input.locale||'pt-BR'))throw fail(400,'Plano inválido.');
-  const plan=allPlans.find(p=>p.id===input.planId&&p.currency===(input.currency||'BRL'));if(!plan)throw fail(400,'Plano inválido.');
+  if(!input||typeof input!=='object'||Array.isArray(input)||Object.keys(input).some(k=>!['planId','tier','locale','currency'].includes(k))||!['pt-BR','en'].includes(input.locale||'pt-BR'))throw fail(400,'Plano inválido.');
+  const plan=allPlans.find(p=>p.id===input.planId&&p.currency===(input.currency||'BRL')&&p.tier===input.tier);if(!plan)throw fail(400,'Plano inválido.');
   // Re-read the server-owned catalog: a dashboard edit cannot silently change agreed terms.
   const price=await api('/prices/'+plan.priceId);
   if(price.status!=='active'||price.product_id!==config.productId||price.unit_price?.currency_code!==plan.currency||String(price.unit_price?.amount)!==String(plan.amount)||price.billing_cycle?.interval!=='month'||price.billing_cycle?.frequency!==plan.months||price.trial_period||price.unit_price_overrides?.length||price.quantity?.minimum!==1||price.quantity?.maximum!==1)throw fail(503,'Este plano está em configuração.','billing_price_mismatch');

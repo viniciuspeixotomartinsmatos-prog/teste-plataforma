@@ -27,9 +27,9 @@ export function CatalogTopbar({path, collectionsOverview, navigate, theme, setTh
    <div className="topbar-actions">
     <button className="icon-button" aria-label={theme==='dark'?'Ativar tema claro':'Ativar tema escuro'} onClick={()=>setTheme(theme==='dark'?'light':'dark')}>{theme==='dark'?<Sun size={17}/>:<Moon size={17}/>}</button>
     <details className="catalog-more" ref={menu} onKeyDown={event=>{if(event.key==='Escape'){menu.current.open=false;menu.current.querySelector('summary').focus();}}}>
-     <summary aria-label="Menu da conta"><span className="catalog-avatar">{user.name?.trim().charAt(0).toUpperCase()||'N'}</span><ChevronDown size={15}/></summary>
+     <summary aria-label="Menu da conta"><span className="catalog-avatar">{user?.name?.trim().charAt(0).toUpperCase()||'N'}</span><ChevronDown size={15}/></summary>
      <div className="catalog-menu">
-      {[['/account','Minha conta'], ['/plans?view=acessos','Planos'], ['/builder','Montador'], ['/resources','Recursos']].map(([href,label])=><a key={href} href={href} aria-current={path===href?'page':undefined} onClick={event=>follow(event,href)}>{label}</a>)}
+      {[['/account',user?'Minha conta':'Entrar ou criar conta'], ['/plans?view=acessos','Planos'], ['/builder','Montador'], ['/resources','Recursos']].map(([href,label])=><a key={href} href={href} aria-current={path===href?'page':undefined} onClick={event=>follow(event,href)}>{label}</a>)}
       <button type="button" onClick={()=>{menu.current.open=false;openSearch();}}>Busca global <kbd>Ctrl K</kbd></button>
      </div>
     </details>

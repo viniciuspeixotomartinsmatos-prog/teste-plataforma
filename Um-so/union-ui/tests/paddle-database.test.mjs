@@ -11,6 +11,7 @@ test('Paddle PostgreSQL RPC ledger is atomic, idempotent, ordered and ownership-
  create function auth.uid() returns uuid language sql as $$ select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid $$;
  grant usage on schema auth to authenticated; grant execute on function auth.uid() to authenticated;`);
  await db.exec(await readFile(new URL('../supabase/migrations/20261106_paddle_billing.sql',import.meta.url),'utf8'));
+ await db.exec(await readFile(new URL('../supabase/migrations/20261119120000_paid_tier_confirmation.sql',import.meta.url),'utf8'));
  const user='11111111-1111-4111-8111-111111111111',other='22222222-2222-4222-8222-222222222222';
  const id=(prefix,letter='a')=>prefix+'_'+letter.repeat(26);
  await db.query('insert into auth.users(id) values($1),($2)',[user,other]);
@@ -34,6 +35,10 @@ test('Paddle PostgreSQL RPC ledger is atomic, idempotent, ordered and ownership-
  await apply(event({type:'subscription.updated',occurred_at:'2026-11-05T12:00:00Z',payment_completed:false,status:'active',paid_through:null}));
  let sub=(await db.query('select * from paddle_subscriptions')).rows[0];assert.equal(sub.status,'canceled');assert.equal(sub.cancel_at_period_end,true);assert.equal(sub.payment_confirmed,true);
  await assert.rejects(()=>apply(event({customer_id:id('ctm','z')})),/customer mismatch|unbound customer/);
+ await apply(event({type:'subscription.updated',occurred_at:'2026-11-08T12:00:00Z',payment_completed:false,paid_through:null,price_id:id('pri','b')}));
+ assert.equal((await db.query('select price_id from paddle_subscriptions')).rows[0].price_id,id('pri'));
+ await apply(event({occurred_at:'2026-11-08T11:00:00Z',paid_through:'2027-01-06T12:00:00Z',price_id:id('pri','b')}));
+ assert.equal((await db.query('select price_id from paddle_subscriptions')).rows[0].price_id,id('pri','b'));
  // An old chargeback still revokes, and a late completed retry never removes revocation.
  await apply(event({type:'adjustment.created',occurred_at:'2026-11-04T12:00:00Z',payment_completed:false,revoke:true,paid_through:null}));
  await apply(event());sub=(await db.query('select * from paddle_subscriptions')).rows[0];assert.equal(sub.revoked,true);
@@ -48,6 +53,7 @@ test('expired/revoked subscriptions can be replaced; late historical events neve
  try{
  await db.exec(`create role anon; create role authenticated; create role service_role;create schema auth;create table auth.users(id uuid primary key);create function auth.uid() returns uuid language sql as $$ select null::uuid $$;`);
  await db.exec(await readFile(new URL('../supabase/migrations/20261106_paddle_billing.sql',import.meta.url),'utf8'));
+ await db.exec(await readFile(new URL('../supabase/migrations/20261119120000_paid_tier_confirmation.sql',import.meta.url),'utf8'));
  const user='11111111-1111-4111-8111-111111111111',id=(p,c='a')=>p+'_'+c.repeat(26);let seq=0;
  await db.query('insert into auth.users values($1)',[user]);
  await db.query('select paddle_bind_customer($1,$2,$3)',[user,'sandbox',id('ctm')]);
@@ -86,6 +92,7 @@ test('reservation RPC serializes double clicks and never expires into a second p
  try{
  await db.exec(`create role anon;create role authenticated;create role service_role;create schema auth;create table auth.users(id uuid primary key);create function auth.uid() returns uuid language sql as $$ select null::uuid $$;`);
  await db.exec(await readFile(new URL('../supabase/migrations/20261106_paddle_billing.sql',import.meta.url),'utf8'));
+ await db.exec(await readFile(new URL('../supabase/migrations/20261119120000_paid_tier_confirmation.sql',import.meta.url),'utf8'));
  const user='11111111-1111-4111-8111-111111111111',one='33333333-3333-4333-8333-333333333333',two='44444444-4444-4444-8444-444444444444',id=(p,c='a')=>p+'_'+c.repeat(26);
  await db.query('insert into auth.users values($1)',[user]);
  await db.query('select paddle_bind_customer($1,$2,$3)',[user,'sandbox',id('ctm')]);

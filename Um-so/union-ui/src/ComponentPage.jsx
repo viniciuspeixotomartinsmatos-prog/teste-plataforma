@@ -14,7 +14,7 @@ import './builder.css';
 
 const particlesDefaults={quantity:180,ease:60,size:0.8,color:'#b79af5',vx:0,vy:0};
 
-export default function ComponentPage({item,rows,saved,onSave,onBack,onOpen,notify,collections,setCollections,onNewCollection,compared,onCompare,theme,canExport=true,accessPlan=null,onUpgrade,onBuild}){
+export default function ComponentPage({item,rows,saved,onSave,onBack,onOpen,notify,collections,setCollections,onNewCollection,compared,onCompare,theme,canExport=true,accessPlan=null,onUpgrade,onRequireAccount,onBuild}){
  const [width,setWidth]=useState('desktop'),[previewTheme,setPreviewTheme]=useState(theme);
  const [tool,setTool]=useState(promptTools[0].id),[prompting,setPrompting]=useState(false),[copied,setCopied]=useState(false);
  const [settings,setSettings]=useState(false),[config,setConfig]=useState(particlesDefaults);
@@ -38,6 +38,7 @@ export default function ComponentPage({item,rows,saved,onSave,onBack,onOpen,noti
  },[copied]);
 
  async function copyPrompt(){
+  if(onRequireAccount){onRequireAccount();return;}
   if(!canPrompt){onUpgrade?.();return;}
   setPrompting(true);
   setCopied(false);

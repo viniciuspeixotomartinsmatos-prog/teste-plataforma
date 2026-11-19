@@ -35,7 +35,7 @@ export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientF
     if(request.method!=='POST')throw fail(405,'Método não permitido.');
     return json(await billing.webhook(request));
    }
-   if(route==='/api/billing/config'&&request.method==='GET')return json(tiered?{...billing.publicConfig(),enabled:false,mode:'disabled',clientToken:undefined}:billing.publicConfig());
+   if(route==='/api/billing/config'&&request.method==='GET')return json(tiered&&billing.config.tierPlans.length!==6?{...billing.publicConfig(),enabled:false,mode:'disabled',clientToken:undefined}:billing.publicConfig());
    // An explicit canonical origin prevents request headers controlling email links.
    if(!origin||!/^https?:\/\//.test(origin))throw fail(503,'O acesso está em configuração. Tente novamente mais tarde.','auth_setup_required');
    if((process.env.NODE_ENV==='production'||process.env.VERCEL)&&!origin.startsWith('https://'))throw fail(503,'O acesso está em configuração.','https_required');
@@ -81,8 +81,10 @@ export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientF
     }else throw fail(405,'Método não permitido.');
    }
    else if(route==='/api/billing/checkout'&&request.method==='POST'){
-    if(tiered)throw fail(503,'Os planos pagos estão em preparação.','plan_checkout_unavailable');
-    response=json(await billing.checkout(await requireUser(),await body()));
+    const user=await requireUser(),input=await body();
+    if(tiered&&billing.config.tierPlans.length!==6)throw fail(503,'As assinaturas Pro e Max aguardam a configuração e aprovação do Paddle.','plan_checkout_unavailable');
+    if(tiered&&!['pro','max'].includes(input.tier))throw fail(400,'Selecione Pro ou Max.','invalid_plan');
+    response=json(await billing.checkout(user,input));
    }
    else if(route==='/api/billing/portal'&&request.method==='POST'){
     const input=await body();if(!input||typeof input!=='object'||Object.keys(input).length)throw fail(400,'Dados inválidos.');
@@ -122,11 +124,11 @@ export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientF
     if(typeof input.tokenHash!=='string'||!/^[A-Za-z0-9_=-]{20,1024}$/.test(input.tokenHash)||!['email','recovery'].includes(input.type))throw fail(400,'Link inválido ou expirado. Solicite um novo link.','confirmation_invalid');
     const data=check(await client.auth.verifyOtp({token_hash:input.tokenHash,type:input.type}));
     if(!data?.session||!data.user)throw fail(400,'Não foi possível validar o link. Solicite um novo link.','confirmation_invalid');
-    response=json({ok:true,next:input.type==='recovery'?'/account/reset':'/'});
+    response=json({ok:true,next:input.type==='recovery'?'/account/reset':safeNext(input.next)});
    }else if(route==='/api/auth/resend-confirmation'&&request.method==='POST'){
     const input=await body();
     if(typeof input.email!=='string'||input.email.length>254||!/^\S+@\S+\.\S+$/.test(input.email))throw fail(400,'Informe um e-mail válido.');
-    check(await client.auth.resend({type:'signup',email:input.email,options:{emailRedirectTo:origin+'/api/auth/callback'}}));
+    check(await client.auth.resend({type:'signup',email:input.email,options:{emailRedirectTo:origin+'/api/auth/callback'+(safeNext(input.next)!=='/'?'?next='+encodeURIComponent(safeNext(input.next)):'')}}));
     response=json({ok:true});
    }else if(route==='/api/auth/sign-up/email'&&request.method==='POST'){
     const input=await body();if(typeof input.name!=='string'||!input.name.trim()||input.name.length>100)throw fail(400,'Informe um nome válido.');
@@ -134,7 +136,7 @@ export function createSupabaseApplication({origin=process.env.APP_ORIGIN,clientF
     if(input.termsAccepted!==true||input.policyVersion!==POLICY_VERSION)throw fail(400,'Leia e aceite os termos atuais.','terms_required');
     if(typeof input.email!=='string'||input.email.length>254||!/^\S+@\S+\.\S+$/.test(input.email)||input.password.length>1024)throw fail(400,'Informe e-mail e senha válidos.');
     // Informational acknowledgement, not a trusted entitlement or consent ledger.
-    const data=check(await client.auth.signUp({email:input.email,password:input.password,options:{data:{name:input.name.trim(),terms_version:POLICY_VERSION,privacy_notice_version:POLICY_VERSION},emailRedirectTo:origin+'/api/auth/callback'}}));
+    const data=check(await client.auth.signUp({email:input.email,password:input.password,options:{data:{name:input.name.trim(),terms_version:POLICY_VERSION,privacy_notice_version:POLICY_VERSION},emailRedirectTo:origin+'/api/auth/callback'+(safeNext(input.next)!=='/'?'?next='+encodeURIComponent(safeNext(input.next)):'')}}));
     response=json({user:profile(data.user),verificationRequired:!data.session});
    }else if(route==='/api/auth/sign-in/email'&&request.method==='POST'){
     const input=await body();if(typeof input.email!=='string'||input.email.length>254||typeof input.password!=='string'||!input.password||input.password.length>1024)throw fail(400,'Informe e-mail e senha válidos.');const data=check(await client.auth.signInWithPassword({email:input.email,password:input.password}));response=json({user:profile(data.user)});

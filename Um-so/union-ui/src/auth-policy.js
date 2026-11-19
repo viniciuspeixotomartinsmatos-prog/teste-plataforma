@@ -4,10 +4,19 @@ export function safeNext(value,fallback='/'){
 }
 export const accountRoute=path=>path==='/account'||path==='/account/reset';
 
-// Boot bundles and the sign-in screen remain public; platform content does not.
+// Browse published catalog content publicly. Actions and personal data stay protected.
 export function protectedPath(path){
  let decoded;try{decoded=decodeURIComponent(path);}catch{return true;}
  if(decoded.includes('\\')||decoded.includes('\0'))return true;
+ if(/%(?:2e|2f|5c)/i.test(decoded))return true;
+ if(decoded.split('/').some(part=>part==='.'||part==='..'||part.startsWith('.')))return true;
+ if(['/','/index.html','/icons','/compare','/sources','/resources','/collections','/tools','/builder'].includes(decoded))return false;
+ if(/^\/(?:component|collections)\/[^/]+\/?$/.test(decoded))return false;
+ if(/^\/tools\/[a-z0-9-]+\/?$/.test(decoded))return false;
+ if(/^\/data\/(?:catalog-live|semantic-index|catalog-framing-media)\.json$/.test(decoded))return false;
+ if(/^\/data\/icon-library\/(?:index\.json|chunks\/[a-z0-9-]+\.json)$/.test(decoded))return false;
+ if(/^\/data\/skill-packages\/(?:index\.json|[a-z0-9-]+\.(?:webp|png|jpg|svg))$/.test(decoded))return false;
+ if(/^\/(?:assets|previews|demos|avatars|mist)\//.test(decoded))return false;
  if(/^\/vendas(?:\/(?:index\.html|styles\.css|app\.js|icon\.svg|geist\.woff2|licencas\.txt)?)?$/.test(decoded))return false;
  if(/^\/legal\/(privacy|cookies|terms|refunds|provider|rights|licenses|ai)\/?$/.test(decoded))return false;
  if(/^\/(pt|en)\/(?:contact\/|terms\/|privacy\/|refunds\/)?$/.test(decoded)||/^\/(pt|en)$/.test(decoded)||decoded==='/sitemap.xml')return false;
@@ -17,8 +26,8 @@ export function protectedPath(path){
  if(decoded==='/api/community'||decoded==='/shared'||decoded==='/api/shared-collection'||decoded==='/api/sharing/config')return false;
  if(decoded==='/plans'||decoded==='/billing'||decoded==='/api/billing/config'||decoded==='/api/billing/webhook')return false;
  if(accountRoute(decoded)||decoded.startsWith('/api/auth/')||decoded==='/api/health'||decoded==='/api/access')return false;
- // Only boot assets are public. Catalog media, studio files and recovered
- // release assets are account content even when their URLs are guessable.
+ // Public browsing includes the catalog and its executable demonstrations.
+ // Prompts, account data, source files and studio launches retain separate authorization.
  // Vite exposes these public boot styles as source modules during local development.
  if(/^\/public\/assets\/(?:brand|apple|glass)\.css$/.test(decoded))return false;
  if(/^\/assets\/(?:auth\/(?:cosmic-login\.png|[^/]+\.(?:svg|webp|png))|fonts\/[^/]+\.(?:woff2?|ttf)|branding\/(?:nitido-company|nitido-glass-layers)\.png|brand\.css|apple\.css|glass\.css|union-icon\.svg|marketing\.(?:css|js)|[A-Za-z][A-Za-z0-9_-]*-[A-Za-z0-9_-]{8,}\.(?:js|css))$/.test(decoded))return false;

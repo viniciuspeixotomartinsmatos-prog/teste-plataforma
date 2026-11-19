@@ -5,20 +5,13 @@ import {createSupabaseApplication} from '../server/supabase-app.mjs';
 import {safeNext,protectedPath} from '../src/auth-policy.js';
 import {signInResponse} from '../server/access-policy.mjs';
 
-test('the domain root leads guests to the public sales page',()=>{
- for(const method of ['GET','HEAD']){
-  const response=signInResponse(new Request('https://nitido.example/',{method}));
-  assert.equal(response.status,303);
-  assert.equal(response.headers.get('location'),'/vendas');
-  assert.equal(response.headers.get('cache-control'),'private, no-store');
- }
-});
+test('the catalog root and component previews are public',()=>{for(const path of ['/','/index.html','/component/demo','/previews/demo.html'])assert.equal(protectedPath(path),false);});
 const origin='https://platform.example';
 const request=(path,body)=>new Request(origin+path,body===undefined?{}:{method:'POST',headers:{origin,'Content-Type':'application/json'},body:JSON.stringify(body)});
 
 test('content and encoded paths are protected; account assets remain public; redirect targets stay internal',()=>{
- for(const path of ['/','/index.html','/tools','/builder','/component/x','/data/catalog-live.json','/code/a.json','/previews/x.html','/tools-runtime/a.js','/code%2fx.json','/assets/demo-cache/a.jpg'])assert.equal(protectedPath(path),true,path);
- for(const path of ['/account','/account/reset','/api/auth/callback','/assets/index-deadbeef.js','/assets/union-icon.svg'])assert.equal(protectedPath(path),false,path);
+ for(const path of ['/code/a.json','/tools-runtime/a.js','/code%2fx.json','/api/catalog-prompt','/api/workspace','/creators'])assert.equal(protectedPath(path),true,path);
+ for(const path of ['/','/index.html','/tools','/builder','/component/x','/data/catalog-live.json','/previews/x.html','/assets/demo-cache/a.jpg','/account','/account/reset','/api/auth/callback','/assets/index-deadbeef.js','/assets/union-icon.svg'])assert.equal(protectedPath(path),false,path);
  for(const next of ['//evil.example','https://evil.example','/\\evil.example','/api/auth/sign-out'])assert.equal(safeNext(next),'/');
  assert.equal(safeNext('/tools?view=1'),'/tools?view=1');
  const redirect=signInResponse(new Request(origin+'/tools',{headers:{accept:'text/html'}}));assert.equal(redirect.status,303);assert.equal(redirect.headers.get('location'),'/account?next=%2Ftools');

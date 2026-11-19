@@ -1,5 +1,6 @@
 export const fail=(status,message,code)=>Object.assign(Error(message),{status,code});
 export const paddleId=(value,prefix)=>typeof value==='string'&&new RegExp('^'+prefix+'_[a-z0-9]{26}$').test(value);
+import {subscriptionPrices} from '../src/billing-catalog.js';
 const catalog=[{id:'monthly',name:'Mensal',amount:8500,currency:'BRL',months:1},{id:'quarterly',name:'Trimestral',amount:16500,currency:'BRL',months:3},{id:'yearly',name:'Anual',amount:55000,currency:'BRL',months:12}];
 export function paddleConfig(env=process.env){
  const environment=env.PADDLE_ENV==='live'?'live':'sandbox';
@@ -15,8 +16,21 @@ export function paddleConfig(env=process.env){
    seen.add(key);priceIds.add(entry.priceId);return{...base,currency:entry.currency,amount:entry.amount,priceId:entry.priceId};
   });
  }catch{regionalValid=false;regionalPlans=[];}
- const enabled=regionalValid&&env.PADDLE_BILLING_ENABLED==='true'&&['sandbox','live'].includes(env.PADDLE_ENV)&&Boolean(env.PADDLE_API_KEY?.startsWith(environment==='sandbox'?'pdl_sdbx_apikey_':'pdl_live_apikey_'))&&Boolean(env.PADDLE_CLIENT_TOKEN?.startsWith(environment==='sandbox'?'test_':'live_'))&&Boolean(env.PADDLE_WEBHOOK_SECRET)&&paddleId(env.PADDLE_PRODUCT_ID,'pro')&&plans.every(p=>paddleId(p.priceId,'pri'))&&new Set(plans.map(p=>p.priceId)).size===3&&Boolean(env.SUPABASE_URL&&env.SUPABASE_SERVICE_ROLE_KEY)&&(environment!=='live'||env.PADDLE_LIVE_APPROVED==='true'&&env.PADDLE_LICENSE_APPROVED==='true');
- return{provider:'paddle',enabled,requiresSubscription:env.PADDLE_BILLING_ENABLED==='true',mode:enabled?environment:'disabled',environment,plans,regionalPlans,currencies:[...new Set(['BRL',...regionalPlans.map(p=>p.currency)])],productId:env.PADDLE_PRODUCT_ID,clientToken:enabled?env.PADDLE_CLIENT_TOKEN:undefined,locales:['pt-BR','en']};
+ let tierPlans=[],tiersValid=true;
+ try{
+  const entries=JSON.parse(env.PADDLE_TIER_PRICES_JSON||'[]');
+  if(!Array.isArray(entries)||entries.length!==0&&entries.length!==6)throw Error('invalid tier catalog');
+  const seen=new Set(),priceIds=new Set();
+  tierPlans=entries.map(entry=>{
+   const base=catalog.find(plan=>plan.id===entry?.planId),pair=entry?.tier+':'+entry?.planId;
+   if(!base||!['pro','max'].includes(entry.tier)||Object.keys(entry).some(key=>!['tier','planId','amount','priceId'].includes(key))||entry.amount!==undefined&&entry.amount!==subscriptionPrices[entry.tier][entry.planId]||!paddleId(entry.priceId,'pri')||priceIds.has(entry.priceId)||seen.has(pair))throw Error('invalid tier price');
+   seen.add(pair);priceIds.add(entry.priceId);
+   return {...base,tier:entry.tier,amount:subscriptionPrices[entry.tier][entry.planId],priceId:entry.priceId};
+  });
+ }catch{tiersValid=false;tierPlans=[];}
+ const catalogConfigured=tiersValid&&(tierPlans.length===6||plans.every(plan=>paddleId(plan.priceId,'pri'))&&new Set(plans.map(plan=>plan.priceId)).size===3);
+ const enabled=catalogConfigured&&regionalValid&&env.PADDLE_BILLING_ENABLED==='true'&&['sandbox','live'].includes(env.PADDLE_ENV)&&Boolean(env.PADDLE_API_KEY?.startsWith(environment==='sandbox'?'pdl_sdbx_apikey_':'pdl_live_apikey_'))&&Boolean(env.PADDLE_CLIENT_TOKEN?.startsWith(environment==='sandbox'?'test_':'live_'))&&Boolean(env.PADDLE_WEBHOOK_SECRET)&&paddleId(env.PADDLE_PRODUCT_ID,'pro')&&Boolean(env.SUPABASE_URL&&env.SUPABASE_SERVICE_ROLE_KEY)&&(environment!=='live'||env.PADDLE_LIVE_APPROVED==='true'&&env.PADDLE_LICENSE_APPROVED==='true');
+ return{provider:'paddle',enabled,requiresSubscription:env.PADDLE_BILLING_ENABLED==='true',mode:enabled?environment:'disabled',environment,plans,tierPlans,regionalPlans,currencies:[...new Set(['BRL',...regionalPlans.map(p=>p.currency)])],productId:env.PADDLE_PRODUCT_ID,clientToken:enabled?env.PADDLE_CLIENT_TOKEN:undefined,locales:['pt-BR','en']};
 }
 export function subscriptionAccess(subscription,now=Date.now()){
  return Boolean(subscription?.payment_confirmed&&!subscription.revoked&&['active','past_due','canceled'].includes(subscription.status)&&Date.parse(subscription.paid_through)>now);

@@ -15,13 +15,15 @@ test('real SDK signup persists HttpOnly PKCE cookies and the callback exchanges 
  const original=globalThis.fetch;let challenge,verifier,redirect;
  globalThis.fetch=async(url,init)=>{const parsed=new URL(url);if(parsed.pathname.endsWith('/signup')){challenge=JSON.parse(init.body).code_challenge;redirect=new URL(parsed.searchParams.get('redirect_to'));return Response.json(user);}if(parsed.pathname.endsWith('/token')){verifier=JSON.parse(init.body).code_verifier;return Response.json(session());}throw Error('Unexpected mock request');};
  try{
-  const app=application(),signup=await app.handle(request('/api/auth/sign-up/email',{name:'Teste',email:user.email,password:'ABCDEFG1',termsAccepted:true,policyVersion:POLICY_VERSION}));
+  const next='/plans?tier=max&period=yearly';
+  const app=application(),signup=await app.handle(request('/api/auth/sign-up/email',{name:'Teste',email:user.email,password:'ABCDEFG1',termsAccepted:true,policyVersion:POLICY_VERSION,next}));
   assert.equal(signup.status,200);assert.equal((await signup.json()).verificationRequired,true);
   const cookies=signup.headers.getSetCookie();assert.ok(cookies.some(cookie=>cookie.includes('code-verifier=')));
   for(const cookie of cookies){assert.match(cookie,/HttpOnly/);assert.match(cookie,/Secure/);assert.match(cookie,/SameSite=Lax/i);}
   const flowId=redirect.searchParams.get('sb_flow_id')||cookies.map(cookie=>cookie.match(/-flow-([a-z0-9]{32})-code-verifier=/)?.[1]).find(Boolean);assert.ok(flowId);
-  const callback=await app.handle(request('/api/auth/callback?code=mock-code&sb_flow_id='+flowId,undefined,cookieHeader(signup)));
-  assert.equal(callback.status,303);assert.equal(callback.headers.get('location'),origin+'/');assert.ok(challenge&&verifier);
+  assert.equal(redirect.searchParams.get('next'),next);
+  const callback=await app.handle(request('/api/auth/callback?code=mock-code&sb_flow_id='+flowId+'&next='+encodeURIComponent(next),undefined,cookieHeader(signup)));
+  assert.equal(callback.status,303);assert.equal(callback.headers.get('location'),origin+next);assert.ok(challenge&&verifier);
   assert.ok(callback.headers.getSetCookie().some(cookie=>cookie.startsWith('sb-authmock-auth-token=')));
  }finally{globalThis.fetch=original;}
 });
