@@ -1,0 +1,24 @@
+{
+  "id": "21st-release-19242",
+  "checkedAt": "2026-11-12T15:09:35.718Z",
+  "before": "H\ny\np\ne\nr\nT\ne\nx\nt",
+  "during": "H\ny\np\ne\nr\nP\nH\nH\nT",
+  "restored": "H\ny\np\ne\nr\nT\ne\nx\nt",
+  "zipSha256": "d720c7bf563a46d1a79233bd3153cba466f32d933bf4b61f0cd08483d1670924",
+  "sourceFiles": [
+    {
+      "path": "components/ui/hyper-text.tsx",
+      "sha256": "1fbf2e58cb72e1a3994617c5cbd4c84e4c976a4347747622f023dc8f4fdf1ea6"
+    },
+    {
+      "path": "__union_demo__.tsx",
+      "sha256": "71f72359a8d8f4e034435258d7fa4438eef484ce8376157aded08e0b61d26c63"
+    },
+    {
+      "path": "lib/utils.ts",
+      "sha256": "4acbc7165a8d54738ff62b51414e772c08fe78434e524e6d8770180d3ba2925f"
+    }
+  ],
+  "screenshot": "var/audits/text-effects-acceptance.png",
+  "textRepel": "Not accepted by this report. Pointer response observed, native pointer-leave acceptance still inconclusive in the private harness."
+}

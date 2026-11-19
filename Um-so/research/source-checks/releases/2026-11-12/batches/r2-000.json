@@ -1,0 +1,138 @@
+[
+  {
+    "route": "/@dhxwhy/components/comparing-radio-cards",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44854,
+      "name": "Comparing Radio Cards – Plan Picker that Shows the Difference from Your Selection",
+      "description": "Comparing Radio Cards for React and Tailwind CSS (shadcn/ui): plan cards in a radio group where the selected card lifts forward and the others show their difference from it as chips (+$12/mo, +200 GB). It is built to answer \"what changes if I pick this one\" without a table. On a new pick the ring slides over, the detail unfolds and chips roll to the new baseline. Real radio inputs, controlled or uncontrolled value, numeric attributes with betterDirection, a live summary, light and dark, instant under reduced motion. Use it for pricing plans, storage tiers, shipping or seats. The included demo scripts three Alder plans and makes no requests. Requires React only, with no animation library.",
+      "previewUrl": "https://cdn.21st.dev/user_35e5ygDqQuDYzujLgyG9331zPPO/comparing-radio-cards/default/preview.1794235309746.webp",
+      "videoUrl": "https://cdn.21st.dev/dhxwhy/comparing-radio-cards/default/video.1794235312721.mp4",
+      "author": "dhxwhy",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_35e5ygDqQuDYzujLgyG9331zPPO/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/dhxwhy/comparing-radio-cards?api_key=REDACTED\"",
+      "url": "https://21st.dev/@dhxwhy/components/comparing-radio-cards"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@dhxwhy/components/delta-number-ticker",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44850,
+      "name": "Delta Number Ticker – Rolling Number with Animated Change Chip and Previous Value",
+      "description": "Delta Number Ticker for React and Tailwind CSS (shadcn/ui): digits roll on every change while a chip with the absolute and percent change lifts off the number and settles beside it, and the old value lingers below as a ghost. It is built to show how much and which way a figure moved. Columns roll with a 20 ms stagger, new columns grow in for extra digits, and goodDirection paints a falling latency as good. Controlled previousValue or own memory, Intl formatting, polite announcements, reduced motion, light and dark. Use it for KPIs, prices, balances, latency and stock. The included demo plays a fixed storefront scenario and makes no requests. Requires React only, with no animation library.",
+      "previewUrl": "https://cdn.21st.dev/user_35e5ygDqQuDYzujLgyG9331zPPO/delta-number-ticker/default/preview.1794235467022.webp",
+      "videoUrl": "https://cdn.21st.dev/dhxwhy/delta-number-ticker/default/video.1794235470419.mp4",
+      "author": "dhxwhy",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_35e5ygDqQuDYzujLgyG9331zPPO/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/dhxwhy/delta-number-ticker?api_key=REDACTED\"",
+      "url": "https://21st.dev/@dhxwhy/components/delta-number-ticker"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@dhxwhy/components/drag-select-checkbox-group",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44853,
+      "name": "Drag Select Checkbox Group – Press and Drag to Check Multiple Rows in One Stroke",
+      "description": "Drag Select Checkbox Group for React and Tailwind CSS (shadcn/ui): press one checkbox and drag to check every row you pass in one stroke; back up and the passed rows are restored. It is built to make bulk selection one gesture instead of many clicks. A translucent band follows the pointer, ticks draw themselves and select-all shows a mixed state. Shift+click ranges, arrow keys, Ctrl/⌘+A, touch long-press, controlled or uncontrolled value, aria labels, reduced motion and light/dark are included. Use it for mail, files, members and tables. The included demo is a mock inbox with embedded headshots and makes no network requests. Requires React only, with no animation library.",
+      "previewUrl": "https://cdn.21st.dev/user_35e5ygDqQuDYzujLgyG9331zPPO/drag-select-checkbox-group/default/preview.1794235365292.webp",
+      "videoUrl": "https://cdn.21st.dev/dhxwhy/drag-select-checkbox-group/default/video.1794235369021.mp4",
+      "author": "dhxwhy",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_35e5ygDqQuDYzujLgyG9331zPPO/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/dhxwhy/drag-select-checkbox-group?api_key=REDACTED\"",
+      "url": "https://21st.dev/@dhxwhy/components/drag-select-checkbox-group"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@dhxwhy/components/early-access-pass-cta",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44844,
+      "name": "Early Access Pass CTA – Email Signup Section that Issues a Holographic Pass",
+      "description": "Early Access Pass CTA for React and Tailwind CSS (shadcn/ui): an email signup section that issues a membership-style pass on submit, printing the name, rolling the number up and stamping the date. It is built to turn a signup into something visitors can hold. The pass tilts toward the pointer with a moving sheen; the form validates the address, shows Try again when the promise rejects and announces the issue politely. Controlled or uncontrolled pass, split or stacked layout, reduced motion, light and dark. Use it for waitlists, newsletters, betas and event registration. The included demo types, issues, retries once and makes no requests. Requires React only, with no animation library.",
+      "previewUrl": "https://cdn.21st.dev/user_35e5ygDqQuDYzujLgyG9331zPPO/early-access-pass-cta/default/preview.1794245022860.webp",
+      "videoUrl": "https://cdn.21st.dev/dhxwhy/early-access-pass-cta/default/video.1794245018997.mp4",
+      "author": "dhxwhy",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_35e5ygDqQuDYzujLgyG9331zPPO/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/dhxwhy/early-access-pass-cta?api_key=REDACTED\"",
+      "url": "https://21st.dev/@dhxwhy/components/early-access-pass-cta"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@dhxwhy/components/expiring-badge",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44855,
+      "name": "Expiring Badge – Status Badge with a Time Rim that Empties and Morphs to Expired",
+      "description": "Expiring Badge for React and Tailwind CSS (shadcn/ui): a status badge whose rim shows the share of time left and empties as time passes, turns amber, then red, and morphs its label to Expired. It is built to show how long a trial, offer or code has left. Pass expiresAt with startedAt or duration; the label can be a function of the time left, live mode rolls its digits each second, onExpire fires once, now() is injectable. Focusable with a tooltip, polite expiry announcement, reduced motion, light and dark. Use it for trials, sales, New labels, codes and sessions. The included demo shows five badges on an account card and makes no requests. Requires React only, with no animation library.",
+      "previewUrl": "https://cdn.21st.dev/user_35e5ygDqQuDYzujLgyG9331zPPO/expiring-badge/default/preview.1794235290139.webp",
+      "videoUrl": "https://cdn.21st.dev/dhxwhy/expiring-badge/default/video.1794235293494.mp4",
+      "author": "dhxwhy",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_35e5ygDqQuDYzujLgyG9331zPPO/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/dhxwhy/expiring-badge?api_key=REDACTED\"",
+      "url": "https://21st.dev/@dhxwhy/components/expiring-badge"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@dhxwhy/components/first-item-empty-state",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44848,
+      "name": "First Item Empty State – Empty List that Turns into Your First Row",
+      "description": "First Item Empty State for React and Tailwind CSS (shadcn/ui): an empty list whose placeholder rows become the first real row on Create. It is built to make the moment after Create feel continuous: the row lifts out of the ghost layer, the title types in, the pill lands, the copy folds into a toolbar and the rest collapse. onCreate returns an item or a promise; a rejection shows Try again. Controlled or uncontrolled items, renderItem, keyboard support, a live region, reduced motion, light and dark. Use it for the first screen of projects, clients or files. The included demo creates two projects, fails once and retries, and makes no requests. Requires React only, with no animation library.",
+      "previewUrl": "https://cdn.21st.dev/user_35e5ygDqQuDYzujLgyG9331zPPO/first-item-empty-state/default/preview.1794235673983.webp",
+      "videoUrl": "https://cdn.21st.dev/dhxwhy/first-item-empty-state/default/video.1794235677924.mp4",
+      "author": "dhxwhy",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_35e5ygDqQuDYzujLgyG9331zPPO/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/dhxwhy/first-item-empty-state?api_key=REDACTED\"",
+      "url": "https://21st.dev/@dhxwhy/components/first-item-empty-state"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@dhxwhy/components/live-activity-dock",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44842,
+      "name": "Live Activity Dock – Dock Navigation with Progress Rings and Expanding Live Cards",
+      "description": "Live Activity Dock for React and Tailwind CSS (shadcn/ui): dock tiles carry live state — progress ring, rolling badge, running dot, error shake — and grow a live card out of the tile with title, percent, time left and actions. It is built to show how far a task has got without leaving the page. The icon flies into the card, other tiles dim, Escape closes it. Controlled or uncontrolled expandedId, animated progress and badge updates. Keyboard, aria, reduced motion, light and dark. Use it for exports, uploads, sync and builds. The included demo scripts an export, a badge change and a failed upload with retry, and makes no requests. Requires React only, with no animation library.",
+      "previewUrl": "https://cdn.21st.dev/user_35e5ygDqQuDYzujLgyG9331zPPO/live-activity-dock/default/preview.1794245132421.webp",
+      "videoUrl": "https://cdn.21st.dev/dhxwhy/live-activity-dock/default/video.1794245126150.mp4",
+      "author": "dhxwhy",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_35e5ygDqQuDYzujLgyG9331zPPO/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/dhxwhy/live-activity-dock?api_key=REDACTED\"",
+      "url": "https://21st.dev/@dhxwhy/components/live-activity-dock"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@dhxwhy/components/natural-language-date-picker",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44857,
+      "name": "Natural Language Date Picker – Type \"next fri 3pm\" and the Calendar Follows",
+      "description": "Natural Language Date Picker for React and Tailwind CSS (shadcn/ui): type \"next fri 3pm\" or \"in 2 weeks\" and the calendar follows. It is built to let people write dates as they say them: a chip shows the reading after a short pause, the calendar turns to its month, the day pulses and Enter confirms. The grammar is an exported pure parseNaturalDate(text, now) with no date library. Controlled or uncontrolled, onValueChange with its source, min/max dates, a keyboard-driven role=\"grid\" calendar, reduced motion, light and dark. Use it for due dates, reminders and filters. The included demo types three phrases on a fixed clock and makes no requests. Requires React only, with no animation library.",
+      "previewUrl": "https://cdn.21st.dev/user_35e5ygDqQuDYzujLgyG9331zPPO/natural-language-date-picker/default/preview.1794235130822.webp",
+      "videoUrl": "https://cdn.21st.dev/dhxwhy/natural-language-date-picker/default/video.1794235135730.mp4",
+      "author": "dhxwhy",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_35e5ygDqQuDYzujLgyG9331zPPO/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/dhxwhy/natural-language-date-picker?api_key=REDACTED\"",
+      "url": "https://21st.dev/@dhxwhy/components/natural-language-date-picker"
+    },
+    "status": "retained_unvalidated"
+  }
+]

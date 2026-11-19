@@ -1,0 +1,16 @@
+{
+  "route": "/@reacthive/templates/dusk-app-website-template",
+  "type": "template",
+  "status": "template_metadata_only",
+  "metadata": {
+    "type": "template",
+    "id": 1338,
+    "name": "Dusk - App Website Template",
+    "description": "A complete website for a sleep or wellness app: eleven pages (Home, How it works, Sounds, Plans, Journal, Article, Support, Download, Privacy, Terms and 404), app screens drawn in code, day and night mode, and a working support form.",
+    "previewUrl": "https://cdn.21st.dev/user_3L4AMaHplnKA3ODrTjGmphloRah/templates/dusk-app-website-template/preview-frame-104335104a.jpg",
+    "author": "reacthive",
+    "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3L4AMaHplnKA3ODrTjGmphloRah/avatar.png",
+    "url": "https://21st.dev/community/templates/dusk-app-website-template",
+    "price": 129
+  }
+}

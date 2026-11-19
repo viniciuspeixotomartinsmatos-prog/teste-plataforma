@@ -1,0 +1,4521 @@
+{
+  "checkedAt": "2026-11-11T19:04:26.342Z",
+  "environment": "http://127.0.0.1:4411",
+  "batch": {
+    "start": 210,
+    "end": 360,
+    "selected": 10679,
+    "total": 10679,
+    "catalogSha256": "c4524292c21b673537bb561eaa7c1dc2cb3c8fac4d068037faea08bd7e477e07",
+    "commit": "c68978f050f573a4a8d15f9f8ff62b3379ecd45e"
+  },
+  "scope": "First paint, video time advancing and bounded synthetic tab/canvas events; not complete manual interaction acceptance.",
+  "records": [
+    {
+      "id": "reactbits--scanner",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Scanner",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:57:55.185Z",
+      "sourceDocumentSha256": "5c4ccdb7e6574d0cf7be2bcef3d8bbd175aa8f73dddcd69cc79efb72033a7cb9",
+      "preparedDocumentSha256": "31f811bd864a9a2e1c3282d074823730a4cbaee7414d66ec7c54e540dda94bb3",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--gradient-ascii",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Gradientascii",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:58:00.959Z",
+      "sourceDocumentSha256": "88218027f2320adc3fe4c454d9fb37e25019f8f8c074ed6af96ef0fc86539940",
+      "preparedDocumentSha256": "734c087d3f06190bf48df3db53bf1dd19b4102485cb6a7735fc00080c8b06e6a",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--grid-distortion",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Grid Distortion",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:58:04.477Z",
+      "sourceDocumentSha256": "833b198b0c8915b5e27ba99c06a7d68e7e265bc369baf856c6e3d54333bc351d",
+      "preparedDocumentSha256": "a8903a286c83f8cd92fe96df45f2048ece4c94cb86003251f001fee551feb110",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--grid-motion",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Any text works too\nOr your own JSX\nAny text works too\nOr your own JSX\nAny text works too\nOr your own JSX\nAny text works too\nOr your own JSX\nAny text works too\nO",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Grid Motion",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:58:07.587Z",
+      "sourceDocumentSha256": "eb841692cbd73402c88ed2dfd4fb692e03526cb47305bf27e9c5c095ff6507d5",
+      "preparedDocumentSha256": "fff42691a0bb8f48e1d8a28fdc9764ead0fecc87d3b00287f386c00e17891fcc",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--grainient",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Grainient",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:58:12.916Z",
+      "sourceDocumentSha256": "9e7e3cb6872b25ddd8a43a0ea72ec8d0cf3866b579b71220077102c976bc32ed",
+      "preparedDocumentSha256": "667ffbc3306781d26f941ad7c66f7be9f78b931d698cea9a104ac754406e1a04",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--hyperspeed",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Hyperspeed",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:58:13.284Z",
+      "sourceDocumentSha256": "d2ce85c4336af4c0527279050a2d2bedd8987f30391fb1483988494079e949b8",
+      "preparedDocumentSha256": "0f80e87fefb5bf56326f199556b700cfdbb0d60b0136a1dca474139fff6e2e4f",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--iridescence",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Iridescence",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:58:16.772Z",
+      "sourceDocumentSha256": "bccf47db53075c36e666eddb0b895e0ea0558bf61ac599ac4a6b46ce83028043",
+      "preparedDocumentSha256": "94f669d78b14b46e843eda805b65386323e2e3890e573dbdccea1bc686111986",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--light-rays",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 502,
+          "height": 314,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Light Rays",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:58:21.654Z",
+      "sourceDocumentSha256": "ec004ea7892892a7b46e54e3c088261eba4a623dff57d634a08d44d2ebcf2039",
+      "preparedDocumentSha256": "981af7f82e2c2921b3b4786f7fd3ff04f80bb77a646a47630ed02ce6c4d53eaa",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--lightning",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Lightning",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:58:27.387Z",
+      "sourceDocumentSha256": "25ea506f869196fffcbe2164be236e6936168b4258f0c0957f8fd74d6ff144f7",
+      "preparedDocumentSha256": "f3c53f24c36824a2dfe7f99e2a66cf3af0b51d211d7eecde2eb6c3b0ff0ca7f8",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--line-waves",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Line Waves",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:58:30.912Z",
+      "sourceDocumentSha256": "3d15c9c87899eda67233970b492cb79f44b40a191e166978fb4d3fd34dfe58ef",
+      "preparedDocumentSha256": "acdfa66e47921b0317abc8b219f00056e5508ef07ca082d02e6acc073443b1e7",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--grid-scan",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Grid Scan",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:58:32.211Z",
+      "sourceDocumentSha256": "8cb3e33b4c8e0c3fde8571b4009cdc7d2c7cae66b22b31f8b612796088a5e918",
+      "preparedDocumentSha256": "448b551290e939b884678822785b9ee5751b8b60c913e75d7cd669ae98fc399b",
+      "ready": false,
+      "passed": false,
+      "reason": "deadline"
+    },
+    {
+      "id": "reactbits--evil-eye",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 960,
+          "height": 720,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Evil Eye",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:58:33.822Z",
+      "sourceDocumentSha256": "afa3098c5176fed433bc2d6ac61ecd284e18ed5da0477390dbfe5b920ec2f30d",
+      "preparedDocumentSha256": "247b30858a4b1324715dedcf84050603a84dd6451e19571188adf9bf11eb00db",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--soft-aurora",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 480,
+          "height": 300,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Soft Aurora",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:58:37.736Z",
+      "sourceDocumentSha256": "b44ad8338411dfbd83d87b1313496cdf99efae9e22b41c4506303b483da72738",
+      "preparedDocumentSha256": "cb80ae20fbe5196df56e4c8d7514c9bc52cff8e763edca9e69d1aa4b65a89a10",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--radar",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Radar",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:58:44.901Z",
+      "sourceDocumentSha256": "f3934c9db7fba3ef7afd09e632594f551068a2e23d3a9b32b8fd98a57bde5b5d",
+      "preparedDocumentSha256": "02f83cdd4fb5e9f81e699e5799d4b2476676c5a8742d4cf50426255e65c30319",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--magic-rings",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 625,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Magic Rings",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:58:47.913Z",
+      "sourceDocumentSha256": "6fb81e96972ca1a145552660cef03216b16485e0247d7ac7ec08619cb79bcd03",
+      "preparedDocumentSha256": "0de598026a6a697d4fe1c1baeaf02a32118cf470b0f55bc7443d43f454574a7a",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--letter-glitch",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Letter Glitch",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:58:50.314Z",
+      "sourceDocumentSha256": "3340fe0d14a112ae60b523a4b1928cdce1818ae86de6d119eed315a179392077",
+      "preparedDocumentSha256": "91aba5150ffdd489905ce796546f0f1852cfd83aeaab846559e9ba670e392b04",
+      "ready": false,
+      "passed": false,
+      "reason": "deadline"
+    },
+    {
+      "id": "reactbits--liquid-chrome",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Liquid Chrome",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:58:51.179Z",
+      "sourceDocumentSha256": "61d042cc1309a7bf72914bacc47466f6f7434ba59a252cd8e069e3cd90ffc3ba",
+      "preparedDocumentSha256": "effebf9af745ad95ed4f8ada7bf52ead621a1c0fd0534f413adec5ab4a3bd922",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--orb",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Orb",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:59:24.946Z",
+      "sourceDocumentSha256": "a305ebf9b8e18c7afc59025e8b12fd36f9c58dffed66eb1dc41b921170e0a0af",
+      "preparedDocumentSha256": "915b7fcf649de90b575f175bacbf75326cd2c7f3298030f9723b7b7830876e02",
+      "ready": false,
+      "passed": false,
+      "reason": "deadline"
+    },
+    {
+      "id": "reactbits--particles",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Particles",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:59:26.219Z",
+      "sourceDocumentSha256": "506e4d613d38b923b0ae685fa7683f1b11420ddbe0331a43cdc0c48cf98c130b",
+      "preparedDocumentSha256": "a29cd15627bdc9126d3d52a03f64ef0ff8222b5eb5da8411a2638ac4bf5ad2c6",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--pixel-blast",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Pixel Blast",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:59:28.208Z",
+      "sourceDocumentSha256": "1b200ee1499318a439f56c05d3321c4641e61094ed303b53261c7a7148e9c16e",
+      "preparedDocumentSha256": "7f30e856e527c64a68c40a5413d3adf8200c7efec5955d7e3994663c029f624d",
+      "ready": false,
+      "passed": false,
+      "reason": "deadline"
+    },
+    {
+      "id": "reactbits--prism",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 600,
+          "height": 375,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Prism",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:59:33.864Z",
+      "sourceDocumentSha256": "59748a6399a2815a64e4073da67ebd48e1b4462ca8807dd63c25f22df9a9258c",
+      "preparedDocumentSha256": "86950db061a49afc87594c26ed9fc82899af56a1a9679cd7baed7c87dd43a2d0",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--plasma",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Plasma",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:59:53.758Z",
+      "sourceDocumentSha256": "1a907b4cf4aecc6b2b84dc4a3a7c12e81a6ca49e4c8014ef525cd92ff97b8202",
+      "preparedDocumentSha256": "872637aceb98ac7ee4956d07e77f7a07d055b6bc46069229cfaaa6b6ca5f7227",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--ripple-grid",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Ripple Grid",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:59:59.199Z",
+      "sourceDocumentSha256": "f3a87f1577619baf7369e6e4fdcde29017267366dea4a7e4e373244b038f5b3a",
+      "preparedDocumentSha256": "9b3c1ceebd450c3812f29afb19fe8cc52e7080dceefc393db681bf610ad89c91",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--plasma-wave",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Plasma Wave",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:00:03.265Z",
+      "sourceDocumentSha256": "58c64bfa049fa236b480dcdd1c5df30938964867e08d47e3ca4afdc3392405be",
+      "preparedDocumentSha256": "df34c009089c50e537fbeeefaf59cd9d6f6b266fcdbeb9a09cffcfeb8ef4b1a2",
+      "ready": false,
+      "passed": false,
+      "reason": "deadline"
+    },
+    {
+      "id": "reactbits--side-rays",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Side Rays",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:00:10.814Z",
+      "sourceDocumentSha256": "afbb96fdba89aea1d6143c2b22bc32b640c0a6dec894489f5308898eb5d5e118",
+      "preparedDocumentSha256": "610158053e931a48d8148573969a377e91bdef757267b700e425eecc71541b87",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--prismatic-burst",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Prismatic Burst",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:00:10.882Z",
+      "sourceDocumentSha256": "a6f66f7454ad764d63eba9ac69af5e301673f7c57fbff120df004828ab60ccc3",
+      "preparedDocumentSha256": "a5bb3cd49bdfda78cb50afe01c06dbc774b44014e829bfbd4c467fe1beeb06d0",
+      "ready": false,
+      "passed": false,
+      "reason": "deadline"
+    },
+    {
+      "id": "reactbits--shape-grid",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "signature": 898517503,
+          "lit": 19
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "signature": 2370447084,
+          "lit": 3
+        },
+        "after": {
+          "signature": 898517503,
+          "lit": 19
+        },
+        "changed": true
+      },
+      "name": "Shape Grid",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:00:26.808Z",
+      "sourceDocumentSha256": "6841e9a92894b0491d5e5641c151ad4449718b55f24faf13e9219602b38c1077",
+      "preparedDocumentSha256": "65de66b83bbfef06170cc9820749cea23d1af66e9fffe246cf01a661fa7addd4",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--silk",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Silk",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:00:29.377Z",
+      "sourceDocumentSha256": "4ad3d21582dcf92052ba98ef1eb6a56d3b1e0797199779621b4a2f04de688d72",
+      "preparedDocumentSha256": "4f82bf4bb26afa12fca49861281f9ff99bb2eb1be99c90791bcfb950a5d505cc",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--threads",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Threads",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:00:29.652Z",
+      "sourceDocumentSha256": "52e3760b7389ae44effa68d4958b074b1702429f2b9ea136123d2353cd918797",
+      "preparedDocumentSha256": "52e526c437e3edc5b9bb7c18c6d6c79ce3fc16ce291386fa1ff027bc6b7ce368",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--waves",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Waves",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:00:38.088Z",
+      "sourceDocumentSha256": "44615d3ce8c5a3fcd1d5fb5a257ad6b6943e720aa37d726d5e9f9e23b12617c3",
+      "preparedDocumentSha256": "3205016a563aa9c780a779ac3c390ba5dfb72525ea01eb8382c85bf4442a5d64",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--liquid-ether",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Liquid Ether",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:00:41.840Z",
+      "sourceDocumentSha256": "e996578cf65f8cbfd07d972ff1c3c5b2140c1f6d2a6805e4fa81051c8417f0d7",
+      "preparedDocumentSha256": "2c42c51c05bdf58ef7e77afe5bb7965e63245c497b17a48a116dc54117020db8",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--floating-lines",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Floating Lines",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:00:44.225Z",
+      "sourceDocumentSha256": "de8bf1b405f8641c49ce8c721b344d15c1b8669ef6179c08da024f4312fb0f35",
+      "preparedDocumentSha256": "139a7072468c1edc5dd5072e1ae50ba408b27551429a6cbbe9d044c23b3f2ffa",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--light-pillar",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Light Pillar",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:00:51.087Z",
+      "sourceDocumentSha256": "1ebc33ae898ffb1904585789d400bf5e7025ef3e0d6ea7619fd22418bea80478",
+      "preparedDocumentSha256": "819f8598f949f9b3cc9ae6f904d17b4fb303448a26d2349c1c4af5eb1dc12d7c",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--pixel-snow",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Pixel Snow",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:00:52.671Z",
+      "sourceDocumentSha256": "bb269c3aa1ab580686531aaae540397b10861de5d0a2ce6452c6d55bcea73d55",
+      "preparedDocumentSha256": "ea03d767b641ba95960b7fc838e1067b48ee4253dfd57ad07a237383c1a1585b",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--squish-switch",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Airplane mode",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Squish Switch",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:00:54.371Z",
+      "sourceDocumentSha256": "58f1f6b5466c896b4bbe1d51f72d6f62f80e257d7b53d4bdc5b5694d0006da85",
+      "preparedDocumentSha256": "6faaf8e594b20d02e35549354c9bc2519f29386619aff3a8465227a296c54eec",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--hold-button",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Hold to delete\nDeleted\nHold to delete\nDeleted\nHold to delete\nDeleted\nPress and hold for 2 seconds to confirm",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Hold Button",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:00:55.935Z",
+      "sourceDocumentSha256": "6f40228af3499b52237117263f95cdcbb81761baa1f95d5bcf13dbe765da9a32",
+      "preparedDocumentSha256": "136f652f945098a06fb77179d3e8414ef92797e8d6952bfab1a6bbe2432d65f1",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--peek-rating",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 5,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Peek Rating",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:00:57.588Z",
+      "sourceDocumentSha256": "5ef9c5634f3731357beab0da3c017537933c3ab9626252a98f06b79b89dd4272",
+      "preparedDocumentSha256": "b250bd4896046382b3230ae4535a9a71f5af1798660cdeace36cbef796ef4200",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--spring-check",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "Ship the build",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Spring Check",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:00:59.139Z",
+      "sourceDocumentSha256": "41ada229d3bdf5b2d0162cfb40bd42a1bda2fdb0f8fbf4ab7852616eed974ba1",
+      "preparedDocumentSha256": "1d6675c33c9ababfe677d7a6527551f362885bff916d8ef0111601057e9784a8",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--pulse-heart",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "1\n.\n2\n0\n4\nLike, 1.204",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Pulse Heart",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:00.319Z",
+      "sourceDocumentSha256": "9caba28605bc9c25136f491647d7190e7be1e1d8387739b7670cf3db2475fb95",
+      "preparedDocumentSha256": "c417454f9727319a159469238a003fd19a94aa07431fdd4d16dc4bcba99f6e99",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--rubber-segment",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Day\nWeek\nMonth\nYear\nDay\nWeek\nMonth\nYear",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Rubber Segment",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:02.488Z",
+      "sourceDocumentSha256": "409020cd5c02c608d0d8f5033725c70bf8e1608ea05c3199f39cf27645a0fff0",
+      "preparedDocumentSha256": "71d3a68186854c528e0eca686ef3251e2c9497b5f12dad501871b6a8b5a426c5",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--slide-commit",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 3,
+      "text": "Slide to pay\nPayment failed\nPaid",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Slide Commit",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:04.291Z",
+      "sourceDocumentSha256": "32e0af071fd10772efd7a3498f4b707e1878a2640bf979c9d03ede07502d19c7",
+      "preparedDocumentSha256": "a593b39e3466d968523f3f391b2f613765e94304f690f0eafa218b966f601494",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--warm-tooltip",
+      "errors": [
+        "BoldIcon is not defined"
+      ],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "The original example could not finish rendering: BoldIcon is not defined",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Warm Tooltip",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:06.192Z",
+      "sourceDocumentSha256": "17ecf80bee1154dd2ef2f4870ca9096a7161d7322dc3defdb311bebc745f873d",
+      "preparedDocumentSha256": "c36fd931f7f3bcc32b88ccfb4b8f1ebbda729b4f31a5af9d8d0077ca957c99a6",
+      "ready": true,
+      "passed": false
+    },
+    {
+      "id": "reactbits--magnet-lines",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 750,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Magnet Lines",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:06.512Z",
+      "sourceDocumentSha256": "0374e51f9a6e57feee2bc6fc73718d4d6bab86868e4d891bb4ec8de9f87d7989",
+      "preparedDocumentSha256": "c1459bfad9fb42fd2ab6ab7b362d3d3e2d6c1dde1b4e05725a4d088fd7cd5d7b",
+      "ready": false,
+      "passed": false,
+      "reason": "deadline"
+    },
+    {
+      "id": "reactbits--fuse-button",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 4,
+      "text": "Archive",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Fuse Button",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:07.868Z",
+      "sourceDocumentSha256": "a1c196207666e3b96e8014ecc96059d80716b2089f756d241bf14b8708f2d8eb",
+      "preparedDocumentSha256": "fd775f7a38f4de250a9150559343996981b5a301b3da5c1450facbc5eb7be1ad",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--scrub-field",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Radius\npx",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Scrub Field",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:10.659Z",
+      "sourceDocumentSha256": "3f0de2ac7787f631e9a7730910700e724ff34e79db2cc8558560289161aac1da",
+      "preparedDocumentSha256": "55c1fbc8fc42b1c365a257394ca61a77b4e32b3b69e8808ee1a809bb8191cc9a",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--lattice-loader",
+      "errors": [
+        "isDone is not defined"
+      ],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "The original example could not finish rendering: isDone is not defined",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Lattice Loader",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:11.083Z",
+      "sourceDocumentSha256": "c85a539975c1305988782dde6650661283e2d5000f34c74c7d7ca86f85485b8e",
+      "preparedDocumentSha256": "669923fe41f88820fde329b9b3eb6100c2676b336efb1de62ff0717e9701edd4",
+      "ready": true,
+      "passed": false
+    },
+    {
+      "id": "reactbits--code-slots",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "0 of 6 digits entered",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Code Slots",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:12.308Z",
+      "sourceDocumentSha256": "0a1bff42a9609a463c9a4089654fa5494278762550dc9dd2e57e891c1d569b84",
+      "preparedDocumentSha256": "ff7b847916b6f107b74926375cdd8fdec91019f09c864420ab543dc154aacf73",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--wake-slider",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "50",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Wake Slider",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:15.578Z",
+      "sourceDocumentSha256": "ed672e35c4e9c326a80a88823679aff0cde96dfef7d44da43666754288493233",
+      "preparedDocumentSha256": "6f60d894a68fc4fac3bd52e0b867d8e74c35628e717157e1223d9e1218fe7835",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--comet-dial",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "62\n%",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Comet Dial",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:15.834Z",
+      "sourceDocumentSha256": "ef83ebf4f8cc1eefd2dee47297e683c850b5517ceebe6a46ee86122b52c629fc",
+      "preparedDocumentSha256": "6bb078b32323ce477b9494c0b5ca044239ac47f9da7f9e0d8b231b2590737cf6",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--swipe-row",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 2,
+      "text": "Archive\nDelete\nDesign review notes\n2 actions",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Swipe Row",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:18.376Z",
+      "sourceDocumentSha256": "cd18d7c5588967922f903a9ced0467b5c2550475566d640b765fbc595cd2ce06",
+      "preparedDocumentSha256": "38272e6152b6334c9a88feb35fc4f81db26ef9fc55a71f48c7f267fc6503a146",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--glide-select",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "PNG",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Glide Select",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:20.692Z",
+      "sourceDocumentSha256": "4cefead9399747492fee5afaf21dce6dcd5361a2b0731db3057a5646d1d16d31",
+      "preparedDocumentSha256": "f2a4dc668525cac4baf7a86bfe15faf1561ac946976f6796d5d0c720e056c1a0",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--call-chip",
+      "errors": [
+        "call is not defined"
+      ],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "The original example could not finish rendering: call is not defined",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Call Chip",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:20.732Z",
+      "sourceDocumentSha256": "1ac0f1e376d59ca51fb179c5c0d22527b02989e3cf6b01c5521f82b8f10d399a",
+      "preparedDocumentSha256": "5c0c774d0f118e6ab3b2dca2ac4bbf446b0e91bb785a23529ae353fece33fb8b",
+      "ready": true,
+      "passed": false
+    },
+    {
+      "id": "reactbits--bell-toggle",
+      "errors": [
+        "unread is not defined"
+      ],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "The original example could not finish rendering: unread is not defined",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Bell Toggle",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:23.455Z",
+      "sourceDocumentSha256": "aaf444a840dde31f8dff3f1cb5583262b0d86360391191ee68c987e2d85c906e",
+      "preparedDocumentSha256": "5983630f6799a6cd72a928aa74b7bfc40b79d9ff4a749ba46af84021a399ea7a",
+      "ready": true,
+      "passed": false
+    },
+    {
+      "id": "reactbits--sling-button",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 2,
+      "text": "Press Enter to send, or drag away and release.",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Sling Button",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:24.503Z",
+      "sourceDocumentSha256": "f486711303118b76409e6fbbc4878827c3104096f274f93f31130eda50ea0ab9",
+      "preparedDocumentSha256": "7e89ded068a0e2b902c4564a3d35c141510d8656575826001debac59ee789e28",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--swipe-toast",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "File archived\nMoved to Archive\nUndo",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Swipe Toast",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:25.031Z",
+      "sourceDocumentSha256": "d83a844e1777b47b99ebc2c4e5703d82fa613170deeb9dca4d07b848eea67b2a",
+      "preparedDocumentSha256": "e102f35036a42d5c6f8f69d1aac606c5cfbbab96b35a1c94339cb5899ff0e3dd",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--prompt-bar",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 300,
+          "height": 150,
+          "signature": 0,
+          "lit": 0
+        }
+      ],
+      "svg": 5,
+      "text": "Nova 3\nHigh",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "signature": 0,
+          "lit": 0
+        },
+        "after": {
+          "signature": 0,
+          "lit": 0
+        },
+        "changed": false
+      },
+      "name": "Prompt Bar",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:28.539Z",
+      "sourceDocumentSha256": "3c7b14f2903ea2194994c402d28ed359066c979be07468039d8f609525fbddb7",
+      "preparedDocumentSha256": "1e0e343af8065f9d049f4360445be8f739f54139d1452baa6207ba9da2c85dfa",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--slosh-gauge",
+      "errors": [
+        "progress is not defined"
+      ],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "The original example could not finish rendering: progress is not defined",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Slosh Gauge",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:28.608Z",
+      "sourceDocumentSha256": "f6db6842f659a9f74fc252d29f95148803b6c1044a035b089807799b17304a4e",
+      "preparedDocumentSha256": "0c75a3f588ffacc5c0c96a746d9ab3f6f2de2d93d9f698573f7f97c5ae3181ca",
+      "ready": true,
+      "passed": false
+    },
+    {
+      "id": "reactbits--voice-pill",
+      "errors": [
+        "Uncaught ReferenceError: startRecording is not defined"
+      ],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 66,
+          "height": 22,
+          "signature": 1670065755,
+          "lit": 11
+        }
+      ],
+      "svg": 2,
+      "text": "Cancel\n0:00",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "signature": 0,
+          "lit": 0
+        },
+        "after": {
+          "signature": 1670065755,
+          "lit": 11
+        },
+        "changed": true
+      },
+      "name": "Voice Pill",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:28.756Z",
+      "sourceDocumentSha256": "c1b72fa58b1a8dfdfed7f187751d37a00dfdeaf834a675479fcdb757dcb6c128",
+      "preparedDocumentSha256": "8c3e94591e7816b878ebfd77cbb90da1afd39f8926cdb5f1b3a63bb854e71741",
+      "ready": true,
+      "passed": false
+    },
+    {
+      "id": "reactbits--refine-frame",
+      "errors": [
+        "job is not defined"
+      ],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "The original example could not finish rendering: job is not defined",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Refine Frame",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:32.440Z",
+      "sourceDocumentSha256": "49a34e1de2c963515ffe8d3fb3b9e8ad0694fdcfc444f15e1caad26d7ce9c852",
+      "preparedDocumentSha256": "5ec3f9f479c9c6ad7630404ae2976735552ffa52c49613bc2eff918fc6d059c8",
+      "ready": true,
+      "passed": false
+    },
+    {
+      "id": "reactbits--thought-line",
+      "errors": [
+        "isStreaming is not defined"
+      ],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "The original example could not finish rendering: isStreaming is not defined",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Thought Line",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:32.477Z",
+      "sourceDocumentSha256": "f735bf65ad8653c7d3bc9d3a2ef703aa44ab6ec9aed2f453fbce20398f637a46",
+      "preparedDocumentSha256": "a031a42672dac4c1f4a6bceaee9c7466f28625f7efe2a8a0e07dbd9d8e955e60",
+      "ready": true,
+      "passed": false
+    },
+    {
+      "id": "reactbits--folder-float",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Try a warmer palette\nTighten the spacing\nLogo feels small\nLove the new hero\nDesign feedback\n4 notes",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Folder Float",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:32.590Z",
+      "sourceDocumentSha256": "55304e747c258a0b0db3aa5ab527de564663f693206998d34e2dc39302271d13",
+      "preparedDocumentSha256": "9c8631279802641d18e283a7c29ba08d4dd36938cb68e5836afd5d9f11dc0712",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--branched-menu",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 5,
+      "text": "Getting started\nInstallation\nQuick start\nConfiguration\nComponents\nButtons\nOverlays",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Branched Menu",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:36.069Z",
+      "sourceDocumentSha256": "df0f5ee832c9f5ba50a3973e8f694ee9dcaa2d09a61c596fec8f925d33b1ea76",
+      "preparedDocumentSha256": "40a408d9bf7db2f9a812692b6ed108a8e7243a2195dfa4dcfbd5633a1e469c33",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--flip-card",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Wooded Landscape\n\n17th century · Rijksmuseum",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Flip Card",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:36.117Z",
+      "sourceDocumentSha256": "bca8db06e6e81c7713757c6db6084bc13faa3182cefaad67f03dd6eb72a5dce6",
+      "preparedDocumentSha256": "8870f5cc4ef76be686586efb0993810c7a143c7dd6a146eed88bb3f6e9a5f502",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--tear-ticket",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 3,
+      "text": "Spectrum\nAdmit one\n\nRooftop gallery · Until 30 Nov\n\nNo. 284619",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Tear Ticket",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:36.357Z",
+      "sourceDocumentSha256": "0f602f501cf0947151dbbebdbd06ea7eeee2d16cecc5c59ac9c4b28bcf3fe1d7",
+      "preparedDocumentSha256": "db62261b49ba9df99cb41348ec95f31f7d5b371d32500ceed596c12bbe797aac",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--shredder",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 525,
+          "height": 175,
+          "signature": 0,
+          "lit": 0
+        }
+      ],
+      "svg": 0,
+      "text": "Harbour at dusk4.1 MB\nStudio, take two2.8 MB\nFog over the bay6.3 MB",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "signature": 0,
+          "lit": 0
+        },
+        "after": {
+          "signature": 0,
+          "lit": 0
+        },
+        "changed": false
+      },
+      "name": "Shredder",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:41.672Z",
+      "sourceDocumentSha256": "11027446a343449a63681fba12fc21fee9abc5b5b642eae4c3911c71c679eb58",
+      "preparedDocumentSha256": "02a0ee247be91357466ce18b6da560533116d8fb82df6ae5557e576aaae5e073",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--flying-button",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1,
+          "height": 550,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "Take off",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Flying Button",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:41.693Z",
+      "sourceDocumentSha256": "a6d23d262a44f17d5ded738374e68888ab9455d1ba763779eec239814a245ad2",
+      "preparedDocumentSha256": "948e1db7f766f4023fe3eb7d30448a4cac52d5f5abc18b4bd95c99edd4db4676",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "reactbits--paper-crumple",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1140,
+          "height": 700,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Paper Crumple",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:42.307Z",
+      "sourceDocumentSha256": "06d7e768a9ab5fa273d664787902fbb0a0c5df0035f5a56698ee29a47728870b",
+      "preparedDocumentSha256": "5448d70b2d20f9740f69d7cd054dd6d41575cc2c76a64cee6938974bf0a95cc5",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--3d-card-effect",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Make things float in air\n\nHover over this card to unleash the power of CSS perspective\n\nTry now →\nSign up",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "3D Card Hover Tilt Effect",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:46.429Z",
+      "sourceDocumentSha256": "e41491f24c5c4b7728766d2c41348a075bf70916ebe42c9e2790b10fd5682a5e",
+      "preparedDocumentSha256": "dc28674b32fe9a8776aeeb01229e332fae936b9c970f3c002fb59c7736bf53a9",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--3d-marquee",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "3D Marquee",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:46.507Z",
+      "sourceDocumentSha256": "720427767ee4ebf6f99bee0cd51bd05c65111c2c8e294ad0faad49a01278f6bc",
+      "preparedDocumentSha256": "f660cac26c418b338ca9d2a97da1acbccc4e7cd9614c52a8ec3bf579ca5e7088",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--3d-pin",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Aceternity UI\nCustomizable Tailwind CSS and Framer Motion Components.\n/ui.aceternity.com",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "3D Animated Pin",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:52.769Z",
+      "sourceDocumentSha256": "d37db3f3e1d6c13082fe6c4a32ca2c3c12322f1529a45f433951cdaffcaddd73",
+      "preparedDocumentSha256": "ef9cdb2a273631267df4b062977d133f425d3b378b3f5faba30ddb1074c426dd",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--animated-modal",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Book your flight\n✈️",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Animated Modal",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:52.867Z",
+      "sourceDocumentSha256": "8f5225094436151b3bd472c6e42cf4984a2ed6024c4263f629a3e27e007817a6",
+      "preparedDocumentSha256": "802d9971dc5dc308a03155b553ba2e02f54789702d77003e43ca9e97d3504999",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--animated-tooltip",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Animated Tooltip",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:58.053Z",
+      "sourceDocumentSha256": "350a11f2e9da175703f0ca8731a9583542a910128863eaf70885d55d0b7f4a4a",
+      "preparedDocumentSha256": "4603c39ceaa0dc10483152c6241cb83900a2a68e6b592fbc709a004bbb3e1a88",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--animated-testimonials",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 2,
+      "text": "Sarah Chen\n\nProduct Manager at TechFlow\n\nThe attention to detail and innovative features have completely transformed our workflow. This is exactly what we've be",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Animated Testimonials",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:01:58.072Z",
+      "sourceDocumentSha256": "cc33d2a65a6b1116c9699689bc50f57f045b300d955f8a916f523e9825bfabfd",
+      "preparedDocumentSha256": "399fd4bf1eea247a914bd8e1980094b0e496f46ecc90fe3681c4e24fd1bb492b",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--ascii-art",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1101,
+          "height": 1101,
+          "signature": 110613996,
+          "lit": 14
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "signature": 3494404971,
+          "lit": 14
+        },
+        "after": {
+          "signature": 110613996,
+          "lit": 14
+        },
+        "changed": true
+      },
+      "name": "ASCII Art",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:02.586Z",
+      "sourceDocumentSha256": "4b3ad005dfaa8d3910fccc1f8b198191b10f90eaa8eb36935b3c03072fdcc128",
+      "preparedDocumentSha256": "07274796469b2f9e54a1847293d025124221f3a9d541a0b9d7811a803b0cd45f",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--apple-cards-carousel",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 2,
+      "text": "Get to know your iSad.\n\nArtificial Intelligence\n\nYou can do more with AI.\n\nProductivity\n\nEnhance your productivity.\n\nProduct\n\nLaunching the new Apple Vision Pro",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Apple Cards Carousel",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:02.933Z",
+      "sourceDocumentSha256": "68f237579b0981166893292caf4810415e904495672c12686d4275267d34119d",
+      "preparedDocumentSha256": "58ee345ffc449fa7439ac43617f38714798085a2bcb567cfa09e3b3978cbd10d",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--background-beams",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "Join the waitlist\n\nWelcome to MailJet, the best transactional email service on the web. We provide reliable, scalable, and customizable email solutions for your",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Background Beams Animation",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:06.863Z",
+      "sourceDocumentSha256": "451064607a4537a72b42b1f4337a5ff5b1f71ee2de3400cf4e5a8453f94375d9",
+      "preparedDocumentSha256": "73f0ad80a670f6538cad2837324870ba8d8f129b673fa017a00bd7c13c9f2c9d",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--background-beams-with-collision",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "What's cooler than Beams? \nExploding beams.\nExploding beams.",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Background Beams With Collision",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:10.696Z",
+      "sourceDocumentSha256": "41177806b991aa34801d123bb423e703fd93a409bb209fc7d75f6f36c34f6d2c",
+      "preparedDocumentSha256": "a37559a1bd930e203a26514e4d85ea07c6a744978e63d5d9f76243cf8d4cff11",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--aurora-background",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Background lights are cool you know.\nAnd this, is chemical burn.\nDebug now",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Aurora Background Animation for Tailwind CSS",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:11.105Z",
+      "sourceDocumentSha256": "4d4f660eb5d091e14d27e56e672972873c6eaa2f1ac2073ddee62f3d790f8376",
+      "preparedDocumentSha256": "2251533de35403b9034eb52705c1104eabd95f8b5be655f304c7db86b3167b20",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--3d-globe",
+      "errors": [
+        "Uncaught "
+      ],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1120,
+          "height": 625,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "3D Globe",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:18.372Z",
+      "sourceDocumentSha256": "bdd77ea2390b4921da7b27e945e443937a3e7e0039ad9081e62bb3ac118c3ddf",
+      "preparedDocumentSha256": "e008b77a62ea997db6ba11c8339da0a5933a68fea908710b5e1aa1c6ac9669a9",
+      "ready": false,
+      "passed": false
+    },
+    {
+      "id": "aceternity--background-boxes",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 3750,
+      "text": "Tailwind is Awesome\n\nFramer motion is the best animation library ngl",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Background Boxes",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:19.032Z",
+      "sourceDocumentSha256": "ca7d30d4ea72ddbee2fe9a63248208b33abdb0f69b7abdb25ce69e4d130c1f4e",
+      "preparedDocumentSha256": "0f8e1a44e2893547a7dd7a3c4f538ba9fbe7e5d7f722a70dc8c85abd337656d6",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--background-cubes-grid",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 1000,
+          "gpu": true
+        }
+      ],
+      "svg": 6,
+      "text": "Page your team on \nDiscord, \nTelegram, \nWhatsApp, \nGoogle Chat, \nMattermost and \nany webhook at once.\n\nRelay is incident alerting for small engineering teams. R",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Background Cubes Grid",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:19.685Z",
+      "sourceDocumentSha256": "cf90a78a21f12bd4b5ce9b0bd09682cdbd4a91d6027247e4f442a8698867fc42",
+      "preparedDocumentSha256": "5e1e196ba6d4ae10515dc6c6c2dacf3b1c93a89a7a0d4bb041486b947990a435",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--background-gradient-animation",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Gradients X Animations",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Animated Gradient Background for Tailwind CSS",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:23.785Z",
+      "sourceDocumentSha256": "94107062457face25b2d958d04b9be7acca897ac05c6ad2afd448173351c5cc2",
+      "preparedDocumentSha256": "1a40725678d01b4fac0d9741d654fd4dc034bb9a72cabec7a67c5732353300e8",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--background-gradient",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Air Jordan 4 Retro Reimagined\n\nThe Air Jordan 4 Retro Reimagined Bred will release on Saturday, February 17, 2024. Your best opportunity to get these right now ",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Background Gradient",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:23.806Z",
+      "sourceDocumentSha256": "e93053791e2e29a1c5e2a286dd1a3fa3d716459f0a2d833c5ec39ff9cdf0ce0c",
+      "preparedDocumentSha256": "87a82be305fd7b36f7c58ecd9ef3bdb6d477e33f205f05a9ac8bfb3864b40579",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--background-lines",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "Sanjana Airlines,\nSajana Textiles.\n\nGet the best advices from our experts, including expert artists, painters, marathon enthusiasts and RDX, totally free.",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Background Lines",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:23.855Z",
+      "sourceDocumentSha256": "dc8c0b1e25dc69a2ad9b50cef4450ac54d85b519ac6223fb4696c1ad8ece8395",
+      "preparedDocumentSha256": "8bab174e17feec5425898431e3829cac534018c58224ad2c28305d26dd91c09e",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--background-ripple-effect",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Interactive Background Boxes Ripple Effect\n\nHover over the boxes above and click.To be used on backgrounds of hero sections OR Call to Action sections. I beg yo",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Background Ripple Effect",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:28.567Z",
+      "sourceDocumentSha256": "43d9e80f91329cc00ac40e83f3652d1ad5b1f897de372e7defd5165d8d04d8d5",
+      "preparedDocumentSha256": "c90f9a6b2f6ce3a8fa8e0712f9708965fad79c5f343983bfd502073b6d48a130",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--bento-grid",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 7,
+      "text": "The Dawn of Innovation\nExplore the birth of groundbreaking ideas and inventions.\nThe Digital Revolution\nDive into the transformative power of technology.\nThe Ar",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Bento Grid Component",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:28.593Z",
+      "sourceDocumentSha256": "2824e63f39447ca537ac111a2c0992d6fa6d455b497e2ea3fc01d17ca8916135",
+      "preparedDocumentSha256": "252d24778dfaf54873d6dfb04aef25aa51a2ec93ffdb5a286ea46e09a1960f43",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--canvas-reveal-effect",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 15,
+      "text": "Sheetal is Nisha\nNisha is Munni\nMunni is Aditi",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Canvas Reveal Effect",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:29.671Z",
+      "sourceDocumentSha256": "692a7e7978cf961160e9c79a8aa37efc42a10a2377252af77857d82442526d4b",
+      "preparedDocumentSha256": "dbc7b475a4b68cfa2e4105cd49a0658fcf18da993a63576acd4ea2f529ec6bf0",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--canvas-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 538,
+          "height": 100,
+          "signature": 3273103710,
+          "lit": 23
+        }
+      ],
+      "svg": 0,
+      "text": "Ship landing pages at",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "signature": 1004830295,
+          "lit": 23
+        },
+        "after": {
+          "signature": 3273103710,
+          "lit": 23
+        },
+        "changed": true
+      },
+      "name": "Canvas Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:32.007Z",
+      "sourceDocumentSha256": "a9be209bb69e83721c3c11098ee52cc218bcb0e8b29746afbe4de1c157875bf0",
+      "preparedDocumentSha256": "bdff948205e03f5a80302e059e936733c06bafe09e9d002e5a013eebb48c1781",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--card-hover-effect",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Stripe\n\nA technology company that builds economic infrastructure for the internet.\n\nNetflix\n\nA streaming service that offers a wide variety of award-winning TV ",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Hover Effect",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:32.172Z",
+      "sourceDocumentSha256": "6bb3d9fb6d8a2025b60cf3b702d51bf1e1709e27619a7c7dfeb46505d83e4851",
+      "preparedDocumentSha256": "146bc5851fde34979db9393e4cf3f5aaa1979fde20e571cef60671f69e4be62a",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--card-spotlight",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 4,
+      "text": "Authentication steps\n\nFollow these steps to secure your account:\n\nEnter your email address\n\nCreate a strong password\n\nSet up two-factor authentication\n\nVerify y",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Card Spotlight",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:35.392Z",
+      "sourceDocumentSha256": "a62341e1c2c05d4c368ded7dd354d7ec035421b7ca27cf01290d62b4a0944005",
+      "preparedDocumentSha256": "ea926b631479a38050eecf7c4a165d31dcaf0716df04b68a7adc1facf45e2776",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--carousel",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 2,
+      "text": "Mystic Mountains\nExplore Component",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Carousel & Image Slider Component",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:35.678Z",
+      "sourceDocumentSha256": "26286401e5175082f64a4afb5020f6d779e543b9f82c1f76c18b9625d7d2fa25",
+      "preparedDocumentSha256": "2c4cf6a3ed57c0ac130f07cacf21b274343241cf090704887439c18dd14a6dcb",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--card-stack",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "These cards are amazing, I want to use them in my project. Framer motion is a godsend ngl tbh fam 🙏\n\nManu Arora\n\nSenior Software Engineer\n\nI dont like this Twi",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Card Stack",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:35.713Z",
+      "sourceDocumentSha256": "00a4a4617db8bd6b976737acf3dd13181536ae513cafe9d362ba88be493c39e5",
+      "preparedDocumentSha256": "ac79291484e70a575af0c08665454302628c12fff3636776c65f3af7c6f60d31",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--cloud-shader",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 800,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Cloud Shader",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:42.713Z",
+      "sourceDocumentSha256": "a96386a67f4c6ebb6566662237f85c779cf7ca49f35ce80fa3c9214046d090d3",
+      "preparedDocumentSha256": "654d86346b54c6f5bd4ab5b6b97be632d3a685cfde62fb08648f1a0b75a76cfc",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--chromatic-image",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 504,
+          "height": 630,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Chromatic Image",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:42.740Z",
+      "sourceDocumentSha256": "8590c152117ea2c314b6bb734d4f6b23567569b1cdb9fec301e0652ce6e0ab5c",
+      "preparedDocumentSha256": "053c35c68a1563aaf32d16d258f09bb2f00a777ac49eb500b66e6a371a274baf",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--code-block",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "DummyComponent.jsx\n1const DummyComponent = () => {\n\n2  const [count, setCount] = React.useState(0);\n\n3\n\n4  const handleClick = () => {\n\n5    setCount(prev => pr",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Code Block",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:43.967Z",
+      "sourceDocumentSha256": "efee3f9b725e2aa3bb26e636e2e948d7ee70c6827cc4fcb86ba4213e52e6f47e",
+      "preparedDocumentSha256": "0b21c5bb734e123cec69996d68cd9fab0412fb91bd08e98813529401a191736a",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--comet-card",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Comet Invitation\n#F7RA",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Comet Card",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:46.191Z",
+      "sourceDocumentSha256": "34677a60bc1c2a17a0b55a3907795d940945439392b94e568f8be2554edcbf99",
+      "preparedDocumentSha256": "1644e8a72bd7037cb7883c2b56197d0009d9d07f034aabdccf1953533571b08e",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--colourful-text",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "The best components\nyou will ever find",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Colourful Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:46.218Z",
+      "sourceDocumentSha256": "41a93a1f26aeb323ef88dc7b185d3f8fcc3f4e5f3cc3ae92cf4d187e38ab3efe",
+      "preparedDocumentSha256": "bf9956655281b4947b0737519e650124c741bb0f5713e9498e2afbaefae2589a",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--compare",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 50,
+          "height": 468,
+          "signature": 2645097135,
+          "lit": 2
+        }
+      ],
+      "svg": 1,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "signature": 2306456461,
+          "lit": 3
+        },
+        "after": {
+          "signature": 2645097135,
+          "lit": 2
+        },
+        "changed": true
+      },
+      "name": "Compare",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:48.291Z",
+      "sourceDocumentSha256": "9291753c228db4eba6c41c7d9f05b8a2fc7161b6eddf6ea2fa73a5286a0d0ef8",
+      "preparedDocumentSha256": "7eb242614bf3ed941ce5dabf776d038f91ddb768049055260cd3205d3bc72a67",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--container-scroll-animation",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Unleash the power of\nScroll Animations",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Container Scroll Animation",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:50.295Z",
+      "sourceDocumentSha256": "51155c46f20cb1b5956823916210e19990aba9ada8e9e4beddf01254b64678ee",
+      "preparedDocumentSha256": "ae82f6358aca98fff74d95795d373062b4e4bb262f3ad6c4eb2ef67c188ab2b1",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--container-cover",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 5,
+      "text": "Build amazing websites\nat \nwarp speed",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Cover",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:50.427Z",
+      "sourceDocumentSha256": "337bff54da4820b98ce3251d42b672153c499b49cfdf1493719beed4cc0ffe36",
+      "preparedDocumentSha256": "3fbb5d5b5a6596c417a22b4015037599a0d6d487c8dbb0f5c1b1dda62d0424ab",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--container-text-flip",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "better",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Container Text Flip",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:51.922Z",
+      "sourceDocumentSha256": "85f349c2fe368ed9d377e7a25dd4881c58cf7d2a3d9efb7087dcb448fac1e536",
+      "preparedDocumentSha256": "b2853d2503abeaa6542e867c3f4ee3a8d698080b9c3196cb93eb56003b982763",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--dither-shader",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 750,
+          "height": 480,
+          "signature": 3710422992,
+          "lit": 34
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "signature": 3710422992,
+          "lit": 34
+        },
+        "after": {
+          "signature": 3710422992,
+          "lit": 34
+        },
+        "changed": false
+      },
+      "name": "Dither Shader",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:53.805Z",
+      "sourceDocumentSha256": "9d3edf3f56705a7bdbbbb0d19e0c1e029ef7c0234f99571fae0807714dc4f0a2",
+      "preparedDocumentSha256": "6838ab236f8f6513ec504ff425e2484da6152cbf3adee12bbd364c560539077e",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--direction-aware-hover",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "In the mountains\n\n$1299 / night",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Direction Aware Hover",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:53.912Z",
+      "sourceDocumentSha256": "abe4fd58e11cb857ec472f14acd9f2934fcdfdf0abe5146d8bf749cf170d61c0",
+      "preparedDocumentSha256": "513133b3987c9982a202b02d4cbb0f5d10898670ce7b141119ffbe53bf7f3e37",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--dotted-glow-background",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 497,
+          "height": 497,
+          "signature": 9017046,
+          "lit": 27
+        }
+      ],
+      "svg": 0,
+      "text": "The modern call scheduling app\n\n→",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "signature": 164148827,
+          "lit": 25
+        },
+        "after": {
+          "signature": 9017046,
+          "lit": 27
+        },
+        "changed": true
+      },
+      "name": "Dotted Glow Background",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:54.689Z",
+      "sourceDocumentSha256": "50d79e62b1d5539eafbf8ce3ce5ce907f62aa37f2385b43cf5c6db1be85392ad",
+      "preparedDocumentSha256": "873a152bfd91a8ad9f9e933cbfab27296987201e8fd700c425b5b5e2a425abe4",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--draggable-card",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "If its your first day at Fight Club, you have to fight.\n\nTyler Durden\nThe Narrator\nIceland\nJapan\nNorway\nNew Zealand\nCanada",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Draggable Card",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:58.028Z",
+      "sourceDocumentSha256": "49a2cfaef73d331d8f3cd73c78ca76edf0b12b536ddd9427ba4f3a55db79ca53",
+      "preparedDocumentSha256": "f79de8bf5544044cfacfbfb5dd98ff208a321a47f7e741ce57f0475feb57bcf5",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--encrypted-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Welcome to the #iI%sph sM3}",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Encrypted Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:58.047Z",
+      "sourceDocumentSha256": "95cda7d11328c5a01d37e4662cd5fce8e76edc66b2864d81c825f509c14b5842",
+      "preparedDocumentSha256": "51ed96037cb84f62626bdef553ae2d064bc5d036a6756618f064748c8b428f81",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--evervault-card",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 4,
+      "text": "gchCTIGyQeQlgsYtY2y7YKZA4Qf0TLj9fJE8ipVWB6S8k3yfnxOmH7PluEPM152v2cgMihMUKLIsf1LDTlkf3dGfitHqVcpHG9ayVcKOD362b4bWfAl28TC4t0oLQQNT9VrGY9FPnXF6k4jFuaxoxlv499hvyTBY",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Evervault Card",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:02:58.361Z",
+      "sourceDocumentSha256": "24a6c777f4f1554f2ed23068f3ca5d3fca466c59c9debd06e777c9c2aee8f99d",
+      "preparedDocumentSha256": "6f28bdbe675896dde10c87feb86b8ef586c842c566595157517212f111fb6e86",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--file-upload",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "Upload file\n\nDrag or drop your files here or click to upload",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "File Upload",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:01.911Z",
+      "sourceDocumentSha256": "a599a9c449db8f929f84a0c9e730a6cdd146e0aa5614b6880e5d8c46c1de45f9",
+      "preparedDocumentSha256": "89cac1817f806f0b71f5b2097a5ceb735b0dd410bc0cf103dc54f6fc4099d930",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--flip-words",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Buildbetter \nwebsites with Aceternity UI",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Flip Words",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:01.938Z",
+      "sourceDocumentSha256": "ba07bf1009a49993ae67f104b8603ed85ee4ed2f434ac2301f08a4f17ebdcea9",
+      "preparedDocumentSha256": "de291eaab08ac01a989221beab96363dd81dd59366301330aa8848d5ef259599",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--floating-dock",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 6,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Floating Dock",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:01.963Z",
+      "sourceDocumentSha256": "33a3e1d770c2c5bc4e469e511a3c16729a4015de745b46f0979010daf7c57294",
+      "preparedDocumentSha256": "6866495912bf0602a9228d76f54345a1b048cff6ae65fd7a118341b27f06d2b7",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--focus-cards",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Forest Adventure\nValley of life\nSala behta hi jayega\nCamping is for pros\nThe road not taken\nThe First Rule",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Focus Cards",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:05.029Z",
+      "sourceDocumentSha256": "97ab067281f3d2c7fc6dcc231972aad633692b1856b2288de8be186ca1e6c951",
+      "preparedDocumentSha256": "85998b528c36fffab4882f9bcb10db03b73a0b74067a3ae1e51f08b89e72bf2f",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--following-pointer",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Amazing Tailwindcss Grid Layout Examples\nGrids are cool, but Tailwindcss grids are cooler. In this article, we will learn how to create amazing Grid layouts wit",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Following Pointer",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:05.246Z",
+      "sourceDocumentSha256": "8b8b705678f1b4906597814f56a61b78cefd547584e30e8d572b6e6d08ab24c2",
+      "preparedDocumentSha256": "ecc93289deb708ef61eea438c3b371db8c540433819ff741457d5dfd4ac08e9a",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--floating-navbar",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Home\nAbout\nContact\nLogin\n\nScroll back up to reveal Navbar",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Floating Navbar",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:05.270Z",
+      "sourceDocumentSha256": "6c1b47f9f922755db9939d281f9066b728d6db8c62339ca3a85e719c9fdd8c89",
+      "preparedDocumentSha256": "f69389ed9dd975565ef97663141843ae5548091bd6ae723e64878e305e7849ee",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--glare-card",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "Aceternity",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Glare Card",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:08.078Z",
+      "sourceDocumentSha256": "7b49827fae83643625369ee258bb12f839d2e55054357ee667131ec5c18dd4fd",
+      "preparedDocumentSha256": "ebca31ec2d63456151d2b61a461251fc6694bbc653bd1e5f16fc3d30e934b450",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--glowing-effect",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 5,
+      "text": "Do things the right way\nRunning out of copy so I'll write anything.\nThe best AI code editor ever.\nYes, it's true. I'm not even kidding. Ask my mom if you don't ",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Glowing Effect Component",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:08.178Z",
+      "sourceDocumentSha256": "f9613ba30fd9f7b7bb50fb6955190e576ecdfadd6f41d00262d93a5fb430841c",
+      "preparedDocumentSha256": "6860d71134ab51e4a7556198792fcc2131385956d35e302cbbeb55967cf61c0a",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--glowing-stars-effect",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "Next.js 14\n\nThe power of full-stack to the frontend. Read the release notes.",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Glowing Background Stars Card",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:14.931Z",
+      "sourceDocumentSha256": "aa8f9d87ac7eaeda96e11dc74f807330cf019c6922bf97c89b06574de5f2ce05",
+      "preparedDocumentSha256": "1e69de1ac3fbbc60d2880f03a34d3844fdc66b571f5ce1c02474b778acc31697",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--github-globe",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1100,
+          "height": 800,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "We sell soap worldwide\n\nThis globe is interactive and customizable. Have fun with it, and don't forget to share it. :)",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "GitHub Globe: 3D Interactive Globe in React",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:14.966Z",
+      "sourceDocumentSha256": "f568da4a19d87e1f7f6e7d83d14124346b1590a85cd6221b3b0380fcdb8d776f",
+      "preparedDocumentSha256": "2fae171e8a26fd9522e5a0c0d4751733087459a58337b938170c43182dc94c0b",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--gooey-input",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Gooey Input",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:14.999Z",
+      "sourceDocumentSha256": "93518388865152794e845bb50c758edc124a9ecfe5da7c4c1561539e254f3ee5",
+      "preparedDocumentSha256": "4ef8f60870c7e2c4a58bc59e513738ed066f3d2a938345f16ef237a829549122",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--hero-highlight",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "With insomnia, nothing's real. Everything is far away. Everything is a copy, of a copy, of a copy.",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Hero Highlight",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:19.062Z",
+      "sourceDocumentSha256": "aa4adda822dd03476516b0453b2a3e632e5bbc55adc0e4776ce64ab6668fe9d9",
+      "preparedDocumentSha256": "f32780d5a3f489390db9b496ea665bea888dbfda6d7488dd82d83c6e83243199",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--hero-parallax",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "The Ultimate\ndevelopment studio\n\nWe build beautiful products with the latest technologies and frameworks. We are a team of passionate developers and designers t",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Hero Parallax",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:19.083Z",
+      "sourceDocumentSha256": "777d1e9c366a27a78b59f4be08e3fce365c1fd86c4249632b8595d9c219989ef",
+      "preparedDocumentSha256": "e8661b224f696b4632adf7801318a05eeaf542201099f72968f7825b9cd7fe09",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--google-gemini-effect",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "Build with Aceternity UI\n\nScroll this component and see the bottom SVG come to life wow this works!\n\nui.aceternity.com",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Google Gemini Effect",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:19.107Z",
+      "sourceDocumentSha256": "a5690b0fdee15e6929817b5de48bd41691f963649f851be2b4494ad02ebd5c31",
+      "preparedDocumentSha256": "901804c496c00790a5dd5b79426ed6bb55e1fa0459ad30558c133ea8ce5f06e4",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--images-badge",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Introducing Agenforce Marketing Template",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Images Badge",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:22.798Z",
+      "sourceDocumentSha256": "b5d55e466dbd33be63249f7a94600aac82ba63bc5c1e565bce0de8fcd2ea3905",
+      "preparedDocumentSha256": "bda55042ee533384122a0031699d0cdabc01ed21cbba9f21bfaaa4f932769ba8",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--hover-border-gradient",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "Aceternity UI",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Hover Border Gradient",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:22.878Z",
+      "sourceDocumentSha256": "dcadeacf45602094f99d404e384f99bf406d49a866afc25f337357e486676e56",
+      "preparedDocumentSha256": "fe702759d6ccbca7bc69d3c056756bfa9271683ae7930ccf6982cd03fadc8a62",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--image-generation-loader",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 981,
+          "height": 736,
+          "signature": 0,
+          "lit": 0
+        }
+      ],
+      "svg": 0,
+      "text": "Manu Arora\n\nMulti cards empty state skeletons",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "signature": 0,
+          "lit": 0
+        },
+        "after": {
+          "signature": 0,
+          "lit": 0
+        },
+        "changed": false
+      },
+      "name": "Image Generation Loader",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:23.070Z",
+      "sourceDocumentSha256": "d90a81a60ed8025f8a9122b7d10428ef9d348c8220c73b66c731a18af8e48c6f",
+      "preparedDocumentSha256": "295668dae46e8385758fa149698836cbeee607291b5eeb940a981581bcdc3ec1",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--infinite-moving-cards",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of in",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Infinite Moving Cards Marquee",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:26.378Z",
+      "sourceDocumentSha256": "03865c90df7f20beb89b64b7027119f3afbdfe19aac6c78b92bc9aa733896091",
+      "preparedDocumentSha256": "13ba47e44fa243cf759cd3673603a2530b0d941a415480276347c8fcac81ead2",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--keyboard",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 22,
+      "text": "esc\nF1\nF2\nF3\nF4\nF5\nF6\nF7\nF8\nF9\nF10\nF11\nF12\n~\n`\n!\n1\n@\n2\n#\n3\n$\n4\n%\n5\n^\n6\n&\n7\n*\n8\n(\n9\n)\n0\n—\n_\n+\n=\ndelete\ntab\nQ\nW\nE\nR\nT\nY\nU\nI\nO\nP\n{\n[\n}\n]\n|\n\\\ncaps lock\nA\nS\nD\nF\nG\nH\n",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Keyboard",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:26.649Z",
+      "sourceDocumentSha256": "c436d6211bd7ab79f1db9d4da120900200a3395d1bf11c845bbf538cd6b7762d",
+      "preparedDocumentSha256": "339b05e549f47c4fe5ddeeabb9c5fd28bc75757f8e73475b36c1bd34e147b735",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--images-slider",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "The hero section slideshow\nnobody asked for\n\nJoin now →",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Images Slider",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:26.715Z",
+      "sourceDocumentSha256": "6fcacdbe95831cf0ba7c6a32dbf55bfefbed86da4d9e4d3fe944641c27d29aab",
+      "preparedDocumentSha256": "6c16269b988d9d01c3afb729cdf5ebe1ada8e1456cf065c95b24f68433b0dc67",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--lamp-effect",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Build lamps\nthe right way",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Lamp Section Header",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:30.098Z",
+      "sourceDocumentSha256": "852c436957d00c5fbef87be827b0e653012d02fbf47958153bdcea3d798dbe9b",
+      "preparedDocumentSha256": "a6e204f12283bac57451b632d1f5b30de10ff5fed98891be6a1c1a76a6be01d2",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--layout-text-flip",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Welcome to\nAceternity UI\n\nExperience the power of modern UI components that bring your ideas to life.",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Layout Text Flip",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:30.151Z",
+      "sourceDocumentSha256": "8d67e8ecf1c704c00609adffbceae5abb72f429476eebe43a8b8181cbfa0ce44",
+      "preparedDocumentSha256": "b1a8a9ca42c521ddabab56aa836a3c2e05a11849989ae8f9a59eb018e0b2b32b",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--layout-grid",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Layout Grid",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:30.169Z",
+      "sourceDocumentSha256": "d98ea64bc5b2e891087e2d9459d76285a47b323e2eb8d6359e1b897824623b43",
+      "preparedDocumentSha256": "82efd7f03abf7e7f99803d0dc40728fd231ef5fcb3c43a9310744a2611a2aec7",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--liquid-glass",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Bend the\nlight.",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Liquid Glass",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:34.031Z",
+      "sourceDocumentSha256": "a9c4b4ff671c7c23b7698f1cc238f0bb9ca4a21214967ae9e14378157cacec48",
+      "preparedDocumentSha256": "d1731ac45cb0a9df2c0f8ea07cf3896c0ddd665addfbe9179a540ae50df3b283",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--lens",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 2,
+      "text": "Apple Vision Pro\n\nThe all new apple vision pro was the best thing that happened around 8 months ago, not anymore.",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Lens",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:34.064Z",
+      "sourceDocumentSha256": "54bc56e151c01738d718d295ea7570aa17729ad699ca5112abbd9b0baac1a83d",
+      "preparedDocumentSha256": "2161727f0c4b22915455212e2c849645955ab9e0751607422b0b858edd0773f4",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--link-preview",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Tailwind CSS and Framer Motion are a great way to build modern websites.\n\nVisit Aceternity UI for amazing Tailwind and Framer Motion components.",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Link Preview",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:34.190Z",
+      "sourceDocumentSha256": "0168f4497787dbc6eaceb7018a790e0a895387c68d60f7e2c5e7ea39d0a43890",
+      "preparedDocumentSha256": "df36242e6c6f6f030e65c402673dab3d4c738de0b1a4790683bfbf83bb513993",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--loader",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Loaders",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:37.771Z",
+      "sourceDocumentSha256": "64ddc9d94c9870c5b1090260e034a92e97e03eef2541a461429140b67ad171a3",
+      "preparedDocumentSha256": "64ca0354a6700af3a5b867e4530899f58209f9ec9befa291582680767758f0ee",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--magnetic-button",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Follow @mannupaaji",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Magnetic Button",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:37.791Z",
+      "sourceDocumentSha256": "f6d800f99eec8b028acc8c86ce12e659288a951941ae0a33ae50cae6dd9de736",
+      "preparedDocumentSha256": "87d2e5aeb0a50c0b09da38bc8fc0b5f167834cd18c9063f992a43f2d9ef07504",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--macbook-scroll",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 24,
+      "text": "This Macbook is built with Tailwindcss.\nNo kidding.\nesc\nF1\nF2\nF3\nF4\nF5\nF6\nF7\nF8\nF8\nF10\nF11\nF12\n~\n`\n!\n1\n@\n2\n#\n3\n$\n4\n%\n5\n^\n6\n&\n7\n*\n8\n(\n9\n)\n0\n—\n_\n+\n=\ndelete\ntab\nQ\n",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "MacBook Scroll Animation",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:37.808Z",
+      "sourceDocumentSha256": "f135509a1ec0415829f0fd5b7cdfe9482b3ad42a21f4c0484b4c2ec069a215f5",
+      "preparedDocumentSha256": "e316fab5e7a251b5ebae0ea3b507262eadefe2a78ac3232e7690c0735c55f29f",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--meteors",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "Meteors because they're cool\n\nI don't know what to write so I'll just paste something cool here. One more sentence because lorem ipsum is just unacceptable. Won",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Meteor Effect",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:41.097Z",
+      "sourceDocumentSha256": "ccf99492292567885011159edd1935824066549ee6ba11d7da7ed0a661674e14",
+      "preparedDocumentSha256": "a80fe1094be3d0f4275f25fadec48857ef2ed3f9f14d1a77e864b4226b591def",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--moving-border",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "Borders are cool",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Moving Border Animation",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:41.117Z",
+      "sourceDocumentSha256": "47802d72da81a1e9fba82b9b46ab4f006526ac5d74fc11e46898c7dd47955d45",
+      "preparedDocumentSha256": "e9d4e0fcad192f5131e6bbfe4382ea9a68060d1dc0e5b340ae3d587745df5918",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--multi-step-loader",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Click to load",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Multi Step Loader",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:41.163Z",
+      "sourceDocumentSha256": "234eaa5b257cf22af143c61a5f7482ffb93b13eed8ad9197eddd4e860448cc73",
+      "preparedDocumentSha256": "9f22db32d1b8c4f9e0a735032ff0909b6c7a5b38d44465038356d75636af6117",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--navbar-menu",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Services\n\nProducts\n\nPricing\n\nHover over the navbar to see the menu",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Navbar Menu Component",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:44.680Z",
+      "sourceDocumentSha256": "26db5825b862abb6e44f5807485e85ec2332351349f8f77d98c5c4a5e92fff38",
+      "preparedDocumentSha256": "5bfe8d518e025138b437249ada3c24a6fc295647b92fe4414c3e4583b4745b23",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--noise-background",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Start publishing →",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Noise Background",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:44.704Z",
+      "sourceDocumentSha256": "4cad41962287a24002aa82b91bd9689039c1c72f24bea3957f316d1b555f0507",
+      "preparedDocumentSha256": "d01a51437f72cdfaeee2f6730e1f800f26c010980aa610d93eaa4943b3792805",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--notch",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "The serenity of the sea\n\nUse the notch below to change my background color and text alignment.\n\nClick over here\nBackground\nBlue\nAlignment\nCenter",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Notch",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:44.723Z",
+      "sourceDocumentSha256": "62785fa1e362a5bd2aefa16ee5c32a192ecd7349d4b55e34a89ea1b7dbf6d50a",
+      "preparedDocumentSha256": "5431ce5795dd346a03c4c258523d8b770949525d0090532c0ac8aacaa3ac258b",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--parallax-hero-images",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "State of the art, cutting edge images, everywhere.\n\nMove your mouse to see the parallax effect. Images at different depths move at different speeds.",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Parallax Hero Images",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:48.308Z",
+      "sourceDocumentSha256": "d33d70782dc5af46c1554ce9268505324b782fecf9bd3e00d3d711dde21cd607",
+      "preparedDocumentSha256": "0259e1e709e5aa718ff900994f1bc684b50f2d68e1ea0bd428a09da408418d56",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--parallax-scroll",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Parallax Scroll Component",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:48.325Z",
+      "sourceDocumentSha256": "b80ab47654c2794631b96bd25b05e11794f476da6fce2bc9fb8b633cee6a5f2c",
+      "preparedDocumentSha256": "e87d9d92ef9d8cb5a955a4471cba9198efc3111221c58b8d86f693af7d129221",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--pixelated-canvas",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 500,
+          "height": 625,
+          "signature": 2013592793,
+          "lit": 17
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "signature": 792707260,
+          "lit": 17
+        },
+        "after": {
+          "signature": 2013592793,
+          "lit": 17
+        },
+        "changed": true
+      },
+      "name": "Pixelated Canvas",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:48.439Z",
+      "sourceDocumentSha256": "9a71ed6ebbc78bfc5c502a7032c88558189dea90566719c623bf750b02db6d2e",
+      "preparedDocumentSha256": "0fcc8293d2223117156637a5141b6477487fce3908bb4d4d1cfbd8427cbf7f25",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--pointer-highlight",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "The best way to grow is to\ncollaborate",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Pointer Highlight",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:51.813Z",
+      "sourceDocumentSha256": "b3682b5a7aff434318584367a0cb90ac768bc524cbb15cabfc11b47c69e72a96",
+      "preparedDocumentSha256": "58ce65324f58ef961c01f590ea4a7af380b6ef7eebdcde36ebbcbf20b8cfd39a",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--placeholders-and-vanish-input",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 800,
+          "height": 800,
+          "signature": 0,
+          "lit": 0
+        }
+      ],
+      "svg": 1,
+      "text": "Ask Aceternity UI Anything\n\nWhat's the first rule of Fight Club?",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "signature": 0,
+          "lit": 0
+        },
+        "after": {
+          "signature": 0,
+          "lit": 0
+        },
+        "changed": false
+      },
+      "name": "Placeholders And Vanish Input",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:51.833Z",
+      "sourceDocumentSha256": "e503ca70132c109e3786963fd3144a77843d11ae46c50d022e60fb54f12f731c",
+      "preparedDocumentSha256": "94f16b46299d14a532262edd9672fe7c48d3e35b7c1fba2bcd354bf3cecf6465",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--resizable-navbar",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "Startup\nCheck the navbar at the top of the container\n\nFor demo purpose we have kept the position as Sticky. Keep in mind that this component is fixed and will n",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Resizable Navbar: Shrink on Scroll in React",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:51.898Z",
+      "sourceDocumentSha256": "6a6a904ed94698319f1e1fccf2c9f02e584df3031dfcc789799acd3ed1d3eb64",
+      "preparedDocumentSha256": "41a64e361bea66d019273b571c332c38a99efea031f65514c21eb9d0b78ae673",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--shooting-stars-and-stars-background",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 960,
+          "height": 640,
+          "signature": 0,
+          "lit": 0
+        }
+      ],
+      "svg": 1,
+      "text": "Shooting Star\nx\nStar Background",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "signature": 0,
+          "lit": 0
+        },
+        "after": {
+          "signature": 0,
+          "lit": 0
+        },
+        "changed": false
+      },
+      "name": "Shooting Stars Background Animation",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:54.674Z",
+      "sourceDocumentSha256": "c42c32e69898f9f6e925a7dc6f8ab950ba4a4e0046420f9ff57ec91200f8d479",
+      "preparedDocumentSha256": "789e18b5a17914b9ba50de198966015519ebcce1a15295e7203fa97f32847ff6",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "aceternity--scales",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Scales",
+      "kind": "component",
+      "checkedAt": "2026-11-11T19:03:54.677Z",
+      "sourceDocumentSha256": "0f886435ad752c5ce39e1f6fba8d5634a8ac3f4b9d8ece4ec79bcf1d3690e0a7",
+      "preparedDocumentSha256": "8e6d63cdada4ea3957f627c8be37b0b8b350d43f20761f1cfcb180780bb6c614",
+      "ready": true,
+      "passed": true
+    }
+  ]
+}

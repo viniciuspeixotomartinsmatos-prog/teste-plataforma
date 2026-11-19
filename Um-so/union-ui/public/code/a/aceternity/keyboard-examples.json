@@ -1,0 +1,21 @@
+{
+  "name": "keyboard-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/keyboard-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport React from \"react\";\nimport { Keyboard } from \"@/components/ui/keyboard\";\n\nexport function KeyboardDemo() {\n  return (\n    <div className=\"flex min-h-96 w-full items-center justify-center py-10 md:min-h-180\">\n      <Keyboard enableSound />\n    </div>\n  );\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/keyboard-no-sound-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport React from \"react\";\nimport { Keyboard } from \"@/components/ui/keyboard\";\n\nexport function KeyboardNoSoundDemo() {\n  return (\n    <div className=\"flex min-h-96 w-full items-center justify-center py-10 md:min-h-180\">\n      <Keyboard />\n    </div>\n  );\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/keyboard-with-preview-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport React from \"react\";\nimport { Keyboard } from \"@/components/ui/keyboard\";\n\nexport function KeyboardWithPreviewDemo() {\n  return (\n    <div className=\"flex min-h-96 w-full items-center justify-center py-10 md:min-h-180\">\n      <Keyboard enableSound showPreview />\n    </div>\n  );\n}\n"
+    }
+  ]
+}

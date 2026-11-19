@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 19242,
+    "name": "Hyper Text",
+    "description": "An animated text effect that scrambles and cycles through random characters before revealing the final text on hover or load.",
+    "previewUrl": "https://cdn.21st.dev/componentry/hyper-text/default/preview.1783715127296.png",
+    "videoUrl": "https://cdn.21st.dev/componentry/hyper-text/default/video.1783715127296.mp4",
+    "author": "harshjadhavconnect",
+    "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2yK9eXm6fOaK6ljmiFzPax3KBeK/avatar.jpeg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/harshjadhavconnect/hyper-text?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@harshjadhavconnect/components/hyper-text"
+  },
+  "component": {
+    "id": 19242,
+    "componentId": 9824,
+    "authorUserId": "user_2yK9eXm6fOaK6ljmiFzPax3KBeK",
+    "name": "Hyper Text",
+    "demoName": "Default",
+    "description": "An animated text effect that scrambles and cycles through random characters before revealing the final text on hover or load.",
+    "previewUrl": "https://cdn.21st.dev/componentry/hyper-text/default/preview.1783715127296.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/harshjadhavconnect/hyper-text?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\";\n\nimport { cn } from \"@/lib/utils\";\nimport { useEffect, useRef, useState } from \"react\";\n\ninterface HyperTextProps {\n    className?: string;\n    duration?: number;\n    text: string;\n    animateOnLoad?: boolean;\n}\n\nconst alphabets = \"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789\";\n\nexport const HyperText = ({\n    className,\n    duration = 800,\n    text,\n    animateOnLoad = true,\n}: HyperTextProps) => {\n    const [displayText, setDisplayText] = useState(text.split(\"\"));\n    const [trigger, setTrigger] = useState(false);\n    const iterations = useRef(0);\n    const isFirstRender = useRef(true);\n\n    const triggerAnimation = () => {\n        iterations.current = 0;\n        setTrigger(true);\n    };\n\n    useEffect(() => {\n        const interval = setInterval(() => {\n            if (!animateOnLoad && isFirstRender.current) {\n                clearInterval(interval);\n                isFirstRender.current = false;\n                return;\n            }\n            if (iterations.current < text.length) {\n                setDisplayText((t) =>\n                    t.map((l, i) =>\n                        l === \" \"\n                            ? l\n                            : i <= iterations.current\n                                ? text[i] ?? \"\"\n                                : alphabets[Math.floor(Math.random() * alphabets.length)]\n                    )\n                );\n                iterations.current = iterations.current + 0.1;\n            } else {\n                setTrigger(false);\n                clearInterval(interval);\n            }\n        }, duration / (text.length * 10));\n        // Clean up interval on unmount\n        return () => clearInterval(interval);\n    }, [text, duration, trigger, animateOnLoad]);\n\n    return (\n        <div\n            className={cn(\"flex cursor-default overflow-hidden py-2 font-mono\", className)}\n            onMouseEnter={triggerAnimation}\n        >\n            {displayText.map((letter, i) => (\n                <span key={i} className=\"min-w-[0.1em]\">\n                    {letter}\n                </span>\n            ))}\n        </div>\n    );\n};\n\nexport default HyperText;\n",
+    "demoCode": "import { HyperText } from \"@/components/ui/hyper-text\";\n\nexport default function HyperTextDemo() {\n  return (\n    <div className=\"flex min-h-[300px] w-full items-center justify-center\">\n      <HyperText text=\"Hyper Text\" className=\"text-4xl font-bold\" />\n    </div>\n  );\n}",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "validation": "Acquired through the existing entitled connection. Browser validation and application publication pending."
+}

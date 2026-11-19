@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:45:53.240Z",
+  "metadata": {
+    "type": "component",
+    "id": 45851,
+    "name": "Astryx Clickable Card",
+    "description": "An interactive card for navigation or action targets. Nested interactive elements work independently.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-clickable-card/clickable-card-with-nested-button/preview.1794515554281.png",
+    "videoUrl": null,
+    "author": "Astryxdesign",
+    "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-clickable-card?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-clickable-card"
+  },
+  "component": {
+    "id": 45851,
+    "componentId": 26412,
+    "name": "Astryx Clickable Card",
+    "demoName": "Clickable Card — Nested Button",
+    "description": "An interactive card for navigation or action targets. Nested interactive elements work independently.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-clickable-card/clickable-card-with-nested-button/preview.1794515554281.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-clickable-card?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\nimport \"./astryx-clickable-card-utils/index.css\"\nimport { ClickableCard } from \"@astryxdesign/core/ClickableCard\"\n\nexport * from \"@astryxdesign/core/ClickableCard\"\nexport default ClickableCard\n",
+    "demoCode": "'use client';\n\nimport {ClickableCard} from '@/components/ui/astryx-clickable-card';\nimport {Stack} from '@astryxdesign/core/Layout';\nimport {Text, Heading} from '@astryxdesign/core/Text';\nimport {Button} from '@astryxdesign/core/Button';\n\nfunction ClickableCardWithNestedButton() {\n  return (\n    <ClickableCard label=\"Product\" href=\"#\" width={320}>\n      <Stack direction=\"vertical\" gap={3}>\n        <Stack direction=\"vertical\" gap={1}>\n          <Heading level={4}>Wireless Headphones</Heading>\n          <Text type=\"body\" color=\"secondary\">\n            $79.99\n          </Text>\n        </Stack>\n        <Button label=\"Add to cart\" onClick={() => {}} variant=\"primary\" />\n      </Stack>\n    </ClickableCard>\n  );\n}\n\nexport default function ClickableCardWithNestedButtonDemo() {\n  return (\n    <div\n      data-astryx-theme=\"neutral\"\n      data-theme=\"light\"\n      style={{colorScheme: 'light', display: 'contents'}}>\n      <ClickableCardWithNestedButton />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source and usage retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

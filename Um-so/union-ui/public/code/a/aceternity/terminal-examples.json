@@ -1,0 +1,11 @@
+{
+  "name": "terminal-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/terminal-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport { Terminal } from \"@/components/ui/terminal\";\n\nexport function TerminalDemo() {\n  return (\n    <section className=\"w-full py-10 md:py-20\">\n      <Terminal\n        commands={[\n          \"npx shadcn@latest init\",\n          \"npm install motion\",\n          \"npx shadcn@latest add button card\",\n          \"Term Deez Nuts\",\n        ]}\n        outputs={{\n          0: [\n            \"✔ Preflight checks passed.\",\n            \"✔ Created components.json\",\n            \"✔ Initialized project.\",\n          ],\n          1: [\"added 1 package in 2s\"],\n          2: [\"✔ Done. Installed button, card.\"],\n        }}\n        typingSpeed={45}\n        delayBetweenCommands={1000}\n      />\n    </section>\n  );\n}\n"
+    }
+  ]
+}

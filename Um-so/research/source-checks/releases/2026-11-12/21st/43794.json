@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 43794,
+    "name": "Row Expand",
+    "description": "An accordion-style list of rows that expand in place to reveal detail content, with a smooth height animation and staggered entrance.",
+    "previewUrl": "https://cdn.21st.dev/user_registry_f0rextasy_1791204275988/row-expand/default/preview.1794427983436.png",
+    "videoUrl": "https://cdn.21st.dev/user_registry_f0rextasy_1791204275988/row-expand/default/video.1794427893467.mp4",
+    "author": "f0rextasy",
+    "authorImage": "https://avatars.githubusercontent.com/u/99847357?v=4",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/f0rextasy/row-expand?api_key=REDACTED\"",
+    "url": "https://21st.dev/@f0rextasy/components/row-expand"
+  },
+  "requestedRoute": "/@f0rextasy/components/row-expand",
+  "checkedAt": "2026-11-13T02:09:10.996Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 43794,
+    "componentId": 25236,
+    "authorUserId": "user_registry_f0rextasy_1791204275988",
+    "name": "Row Expand",
+    "demoName": "Default",
+    "description": "An accordion-style list of rows that expand in place to reveal detail content, with a smooth height animation and staggered entrance.",
+    "previewUrl": "https://cdn.21st.dev/user_registry_f0rextasy_1791204275988/row-expand/default/preview.1794427983436.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/f0rextasy/row-expand?api_key=REDACTED\"",
+    "componentCode": "\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface RowExpandItem {\n  id: string;\n  label: string;\n  detail: React.ReactNode;\n}\n\nexport interface RowExpandListProps extends React.HTMLAttributes<HTMLDivElement> {\n  items: RowExpandItem[];\n}\n\n/** Expandable row list: accordion details with height animation. */\nexport function RowExpandList({\n  items,\n  className,\n  ...props\n}: RowExpandListProps) {\n  const [openId, setOpenId] = React.useState<string | null>(null);\n\n  return (\n    <div\n      className={cn(\n        \"w-full max-w-md divide-y divide-border/60 overflow-hidden rounded-lg border border-border bg-card\",\n        className,\n      )}\n      {...props}\n    >\n      <style>{`@keyframes reIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }`}</style>\n      {items.map((item, idx) => {\n        const open = openId === item.id;\n        return (\n          <div\n            key={item.id}\n            className=\"animate-[reIn_0.3s_ease-out_both] motion-reduce:animate-none\"\n            style={{ animationDelay: `${idx * 50}ms` }}\n          >\n            <button\n              onClick={() => setOpenId(open ? null : item.id)}\n              aria-expanded={open}\n              className=\"flex w-full items-center justify-between gap-3 px-4 py-3 text-start transition-colors hover:bg-secondary/40 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-inset motion-reduce:transition-none\"\n            >\n              <span className=\"text-sm font-medium\">{item.label}</span>\n              <svg\n                width=\"14\"\n                height=\"14\"\n                viewBox=\"0 0 24 24\"\n                fill=\"none\"\n                stroke=\"currentColor\"\n                strokeWidth=\"2\"\n                strokeLinecap=\"round\"\n                strokeLinejoin=\"round\"\n                className={cn(\n                  \"shrink-0 text-muted-foreground transition-transform duration-300 motion-reduce:transition-none\",\n                  open && \"rotate-180\",\n                )}\n                aria-hidden=\"true\"\n              >\n                <path d=\"M6 9l6 6 6-6\" />\n              </svg>\n            </button>\n            <div\n              className={cn(\n                \"grid transition-all duration-300 ease-out motion-reduce:transition-none\",\n                open\n                  ? \"grid-rows-[1fr] opacity-100\"\n                  : \"grid-rows-[0fr] opacity-0\",\n              )}\n            >\n              <div className=\"overflow-hidden\">\n                <div className=\"border-t border-dashed border-border/50 bg-secondary/30 px-4 py-3 text-sm text-muted-foreground\">\n                  {item.detail}\n                </div>\n              </div>\n            </div>\n          </div>\n        );\n      })}\n    </div>\n  );\n}\n\nexport default RowExpandList;\n",
+    "demoCode": "\"use client\";\n\nimport RowExpand from \"@/components/ui/row-expand\";\n\nexport default function RowExpandDemo() {\n  const items = [\n    {\n      id: \"1\",\n      label: \"Order confirmation\",\n      detail:\n        \"Your order #1042 has been confirmed and is being prepared for shipment.\",\n    },\n    {\n      id: \"2\",\n      label: \"Shipping details\",\n      detail: \"Estimated delivery: 3-5 business days via standard shipping.\",\n    },\n    {\n      id: \"3\",\n      label: \"Payment summary\",\n      detail: \"Visa ending in 4242 — $128.50 charged on checkout.\",\n    },\n  ];\n\n  return (\n    <div className=\"flex min-h-[400px] w-full items-center justify-center bg-background p-8 text-foreground\">\n      <RowExpand items={items} />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": "user_registry_f0rextasy_1791204275988"
+  }
+}

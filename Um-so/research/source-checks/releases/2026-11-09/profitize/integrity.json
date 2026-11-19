@@ -1,0 +1,227 @@
+{
+  "files": [
+    {
+      "file": "alisio/arquivos.zip",
+      "bytes": 10334767,
+      "sha256": "3b2d4cab71911fdb973e539db3858fedfdd1151d005d091c8e73819db973c746"
+    },
+    {
+      "file": "alisio/GUIDE-ORIGINAL.md",
+      "bytes": 16119,
+      "sha256": "823f4b947d99ca8863e688013c5fdbde8a1db29545b6346b99ad5515cc1d6b45"
+    },
+    {
+      "file": "alisio/poster-fc0ad19a.webp",
+      "bytes": 44222,
+      "sha256": "fc0ad19ae8d0fcec60bc996b2346b9cdea937c52e0ab9401d3c7e59bb7c6627c"
+    },
+    {
+      "file": "alisio/previa-card-de13a9d1.mp4",
+      "bytes": 2389894,
+      "sha256": "de13a9d1fe82ad21a2a6952ca2b8cc3b3827f30ff63064a6cdbd28833b7c6cae"
+    },
+    {
+      "file": "alisio/PROMPT-ORIGINAL.md",
+      "bytes": 23030,
+      "sha256": "0df96f35f8e560cc33d31207570879c411e89a45da9954a35d54009fb978df62"
+    },
+    {
+      "file": "arbo/arquivos.zip",
+      "bytes": 22449438,
+      "sha256": "1883f5d399130f3050c144cb8baf5f9876041020a7f4baeccf63b62b067bb3d2"
+    },
+    {
+      "file": "arbo/GUIDE-ORIGINAL.md",
+      "bytes": 13068,
+      "sha256": "f5c92d2afbf39736292e4b3c35f987aa76406ebc6e2fe8a1f0e380acba66af52"
+    },
+    {
+      "file": "arbo/poster-185d582a.webp",
+      "bytes": 63314,
+      "sha256": "185d582a071d2ebbad29699e4cc5a26338495e6fca715929ff3654a65accacf8"
+    },
+    {
+      "file": "arbo/previa-card-34806ea2.mp4",
+      "bytes": 3599541,
+      "sha256": "34806ea23af45efbac4514244cafd314b6d6d733ade781f3098be5e0cdfe60db"
+    },
+    {
+      "file": "arbo/PROMPT-ORIGINAL.md",
+      "bytes": 11124,
+      "sha256": "af6d18e5cf95660eee2401f0d0915d74e2fc02b2a10a8b1068bb08bb9e00c0ac"
+    },
+    {
+      "file": "browser-validation.json",
+      "bytes": 6607,
+      "sha256": "85fb80c1995986909ad16c4e1752b9abff5a062bd71c82de269d99b192c36e9c"
+    },
+    {
+      "file": "candidates.json",
+      "bytes": 9502,
+      "sha256": "b154cb1b3c40acba0a6b50970d843e8236537f05e786221691e7220c9043afea"
+    },
+    {
+      "file": "kairo/arquivos.zip",
+      "bytes": 3628602,
+      "sha256": "1e4e693968f21576e06753742a2ebe9eee791b2edb617dd8290e0ddaf8d89390"
+    },
+    {
+      "file": "kairo/GUIDE-ORIGINAL.md",
+      "bytes": 14325,
+      "sha256": "c1e801dce90aa28c67d3981e49896d408a92e42d4b1ce613d3cc84d2171b09ca"
+    },
+    {
+      "file": "kairo/poster-f4671b5b.webp",
+      "bytes": 43034,
+      "sha256": "f4671b5bb06d4ade879cefcdc76d0bbd452b019ed69bfeb8864e1a8ee0874a94"
+    },
+    {
+      "file": "kairo/previa-card-24f57a10.mp4",
+      "bytes": 2393827,
+      "sha256": "24f57a108a3592254fc7916f27a0943382f1d143aa752ddf2de219732b4c9100"
+    },
+    {
+      "file": "kairo/PROMPT-ORIGINAL.md",
+      "bytes": 14215,
+      "sha256": "26821eb9fc9cf6e54ed611c1d1ffe76edc88dad169331b613cb01517757d3709"
+    },
+    {
+      "file": "kairo/README.md",
+      "bytes": 1348,
+      "sha256": "372bead1c7b09ca89c85b5febc1bc5ab06bb94e4c3c2755ca3e20bd780e28005"
+    },
+    {
+      "file": "orbo/arquivos.zip",
+      "bytes": 2728306,
+      "sha256": "489a1674d6fef2fb57e4d1aed23e33d178565f70f628fcc5c7e288865c98837d"
+    },
+    {
+      "file": "orbo/GUIDE-ORIGINAL.md",
+      "bytes": 20229,
+      "sha256": "9a31da541363b3abef69d20717eb057db64ab5037fe3e388ac3a589e887fac51"
+    },
+    {
+      "file": "orbo/poster-e2c236b0.webp",
+      "bytes": 21656,
+      "sha256": "e2c236b038fe64f163f17b4a12b85b2fd09ecd51f2cf9320820f0bd451e6371d"
+    },
+    {
+      "file": "orbo/previa-card-6742589a.mp4",
+      "bytes": 1686249,
+      "sha256": "6742589a03eeeda80beead74bef728863c89351bed12a729cf9461a6a22f0bdd"
+    },
+    {
+      "file": "orbo/PROMPT-ORIGINAL.md",
+      "bytes": 18081,
+      "sha256": "ebe8ad9d887d1a3ef428c9177c4409d518b4094423ef5e6805ae41d066d7459a"
+    },
+    {
+      "file": "patio/arquivos.zip",
+      "bytes": 9409592,
+      "sha256": "edbf6ffb9501572c54ab4405ffa3ac23b57d9ffcab732d00777c3a3991145a79"
+    },
+    {
+      "file": "patio/GUIDE-ORIGINAL.md",
+      "bytes": 13505,
+      "sha256": "1e4e75c2f8df3549edc9b51be6a292039b87d51f2672a57785a5b266fafa1032"
+    },
+    {
+      "file": "patio/poster-3a454b38.webp",
+      "bytes": 63892,
+      "sha256": "3a454b38a041a7be70e4ef497d105e8e62eacbfde564d6f92fc0a89d626ea070"
+    },
+    {
+      "file": "patio/previa-card-f7d5022a.mp4",
+      "bytes": 2032066,
+      "sha256": "f7d5022af24477e4170cbab41c29fe8c4e24c5b3b1a8a663856bedda13218422"
+    },
+    {
+      "file": "patio/PROMPT-ORIGINAL.md",
+      "bytes": 36575,
+      "sha256": "dcfc47e368fd55a882bc92fb26114a832edc580c1e36b5a22eb5f56e4ef6219f"
+    },
+    {
+      "file": "public-media.json",
+      "bytes": 3815,
+      "sha256": "fabdad8453c84f4d1d70201cb82396b0b17b8ed3f665a5bfaf8c2f7b7ab1be2c"
+    },
+    {
+      "file": "scoopie/arquivos.zip",
+      "bytes": 9110483,
+      "sha256": "70e0ae6484980b6b4629f2ea5439fedd8a888104ec0fdfcd8c2e363c847ec410"
+    },
+    {
+      "file": "scoopie/GUIDE-ORIGINAL.md",
+      "bytes": 25511,
+      "sha256": "7a32f6cf8658c0a7a977b5c0c20e3f6bee1ff1dd89bf4a2d58ef77bda1836343"
+    },
+    {
+      "file": "scoopie/poster-470c3d85.webp",
+      "bytes": 34940,
+      "sha256": "470c3d85795accfe15db9793c1b2e71f16f5cd965df55c82f6ba2a8de1413589"
+    },
+    {
+      "file": "scoopie/previa-card-81b0aea5.mp4",
+      "bytes": 3561630,
+      "sha256": "81b0aea59d2933581000dfc22b6459b1765a4269df6363623b19144e95431df4"
+    },
+    {
+      "file": "scoopie/PROMPT-ORIGINAL.md",
+      "bytes": 18873,
+      "sha256": "afbcaaead8850bbf037a6f947e789e207df139b1967260370178d4969b0c9ee6"
+    },
+    {
+      "file": "sticker-slap-footer/PROMPT-ORIGINAL.md",
+      "bytes": 65221,
+      "sha256": "aa3d38668158f19675426f535fc6e68159c68f282ec4035b87e18c2bafca5ccf"
+    },
+    {
+      "file": "sticker-slap-footer/source-0.tsx",
+      "bytes": 55984,
+      "sha256": "e6c6db34fb77ed11a8ff18a617edf9c35d1b165befee9701286b2b7a35c6efa8"
+    },
+    {
+      "file": "sticker-slap-footer/source-1.tsx",
+      "bytes": 526,
+      "sha256": "f8fe4cb1db45cfc3404fe4f72586d604815b2b9676cd66b48bd7dddc43897563"
+    },
+    {
+      "file": "sticker-slap-footer/source-files.json",
+      "bytes": 58098,
+      "sha256": "7ab3436bf43c6c0b62aabe5343ee53fc91763d42fed37524b9f2d97d650784df"
+    },
+    {
+      "file": "trami/arquivos.zip",
+      "bytes": 5831427,
+      "sha256": "2389bf4c2d0dae97b204c6de4742f7b6da16589cf4a7f8b9849ddd0ea1af4ff7"
+    },
+    {
+      "file": "trami/GUIDE-ORIGINAL.md",
+      "bytes": 19284,
+      "sha256": "47495fd9e0dbcb0507a1d5c93c3a0120aa12943a56955cbaaa713b06743a34b9"
+    },
+    {
+      "file": "trami/poster-4d4b714b.webp",
+      "bytes": 42222,
+      "sha256": "4d4b714bcc66f2a6b766e1b9e8ae951fc03e30feea0e948dcc87ef8543b68810"
+    },
+    {
+      "file": "trami/previa-card-171eb86e.mp4",
+      "bytes": 2020544,
+      "sha256": "171eb86e1a3cd0b1ca240252729895ebf97b7c34605051972b53e6be1b05ea18"
+    },
+    {
+      "file": "trami/PROMPT-ORIGINAL.md",
+      "bytes": 15686,
+      "sha256": "744092e6df38cb07cc80ce16a236ee574ec3a873ef21def759da537732b2175e"
+    },
+    {
+      "file": "video-validation.json",
+      "bytes": 2959,
+      "sha256": "344a752e32c87c0a88c9eaa3fad33d5d6bfce4065a4b0f06b707aceca7630a1f"
+    }
+  ],
+  "published": true,
+  "instructionsAreSourceContent": true,
+  "scope": "8 original prompts; 7 recorded videos; 1 original TSX component; supporting ZIPs retained without execution"
+}

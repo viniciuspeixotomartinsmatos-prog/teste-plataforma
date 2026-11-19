@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:45:53.402Z",
+  "metadata": {
+    "type": "component",
+    "id": 45454,
+    "name": "Astryx Chat Tokenized Text",
+    "description": "Renders a text string with token patterns replaced by inline token content. Wrap any message body inside ChatMessageBubble to turn raw @mentions, #tags, or /commands into styled content. When no non-empty token matches or none are provided, the text renders as-is, so you can use ChatTokenizedText unconditionally on every message.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-chat-tokenized-text/default/preview.1794506324773.png",
+    "videoUrl": null,
+    "author": "Astryxdesign",
+    "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-chat-tokenized-text?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-tokenized-text"
+  },
+  "component": {
+    "id": 45454,
+    "componentId": 26200,
+    "name": "Astryx Chat Tokenized Text",
+    "demoName": "Default",
+    "description": "Renders a text string with token patterns replaced by inline token content. Wrap any message body inside ChatMessageBubble to turn raw @mentions, #tags, or /commands into styled content. When no non-empty token matches or none are provided, the text renders as-is, so you can use ChatTokenizedText unconditionally on every message.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-chat-tokenized-text/default/preview.1794506324773.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-chat-tokenized-text?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\nimport \"./astryx-chat-tokenized-text-utils/index.css\"\nimport { ChatTokenizedText } from \"@astryxdesign/core/Chat\"\n\nexport * from \"@astryxdesign/core/Chat\"\nexport default ChatTokenizedText\n",
+    "demoCode": "// Copyright (c) Meta Platforms, Inc. and affiliates.\n\n'use client';\n\nimport {\n  ChatTokenizedText,\n  ChatMessage,\n  ChatMessageBubble,\n  ChatMessageList,\n} from '@/components/ui/astryx-chat-tokenized-text';\n\nconst mixedTokens = [\n  {value: '@cindy', label: '@Cindy', variant: 'blue' as const},\n  {value: '#bug', label: '#bug', variant: 'red' as const},\n  {value: '#feat', label: '#feature', variant: 'green' as const},\n];\n\nfunction ChatTokenizedTextShowcase() {\n  return (\n    <ChatMessageList>\n      <ChatMessage sender=\"system\">\n        <ChatMessageBubble>\n          <ChatTokenizedText tokens={mixedTokens}>\n            @cindy filed #bug and #feat for the sprint\n          </ChatTokenizedText>\n        </ChatMessageBubble>\n      </ChatMessage>\n    </ChatMessageList>\n  );\n}\n\nexport default function ChatTokenizedTextShowcaseDemo() {\n  return (\n    <div\n      data-astryx-theme=\"neutral\"\n      data-theme=\"light\"\n      style={{colorScheme: 'light', display: 'contents'}}>\n      <ChatTokenizedTextShowcase />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source and usage retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

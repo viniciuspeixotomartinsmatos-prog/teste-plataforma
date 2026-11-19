@@ -1,0 +1,30 @@
+{
+  "id": "21st-release-20038",
+  "checkedAt": "2026-11-12T15:07:00.433Z",
+  "zipSha256": "95faf0c497331d4fdf046d420f90238dcb42675ce259786bc0bd68386a6bc7ce",
+  "originalSha256": "56336ed617e6d72a664083cd25cc292c69cc7b01ce051b7b4a8acca7d712a33d",
+  "sourceFiles": [
+    {
+      "path": "components/ui/auth-modal.tsx",
+      "sha256": "e08d31fe63f29e1c31a4a91b00865a2decfae2157d68cc17e8d847ca7a152889"
+    },
+    {
+      "path": "original/auth-modal.original.tsx",
+      "sha256": "56336ed617e6d72a664083cd25cc292c69cc7b01ce051b7b4a8acca7d712a33d"
+    },
+    {
+      "path": "DEMO-NOTES.md",
+      "sha256": "b7349479dc202b9c19ce79eaaf2c8ca5a22f18ae407e5414b2a9f410362d7993"
+    },
+    {
+      "path": "__union_demo__.tsx",
+      "sha256": "b5e92ea3966948ef68b1cd4d4d21e960cf7628ecf62ead820de268864397edc7"
+    },
+    {
+      "path": "lib/utils.ts",
+      "sha256": "4acbc7165a8d54738ff62b51414e772c08fe78434e524e6d8770180d3ba2925f"
+    }
+  ],
+  "scope": "Authorized opaque-frame review: actual animated modal rendered. Required/invalid email blocks callback; valid email click and Enter emit explicit demo status. All five provider callbacks tested without external authentication. Tab/Shift+Tab contain focus, Escape closes and restores trigger focus; close button labelled. Generated integration prompt copied, actual ZIP downloaded/unzipped and original acquisition plus all adapted source files verified byte-for-byte. Only a frontend demonstration; not real OAuth/email authentication. Original source and adaptation notes retained.",
+  "screenshot": "var/audits/auth-modal-repaired.png"
+}

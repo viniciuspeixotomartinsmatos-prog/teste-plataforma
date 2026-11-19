@@ -1,0 +1,11 @@
+{
+  "name": "hero-highlight-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/hero-highlight-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport { motion } from \"motion/react\";\nimport { HeroHighlight, Highlight } from \"../ui/hero-highlight\";\n\nexport function HeroHighlightDemo() {\n  return (\n    <HeroHighlight>\n      <motion.h1\n        initial={{\n          opacity: 0,\n          y: 20,\n        }}\n        animate={{\n          opacity: 1,\n          y: [20, -5, 0],\n        }}\n        transition={{\n          duration: 0.5,\n          ease: [0.4, 0.0, 0.2, 1],\n        }}\n        className=\"text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto \"\n      >\n        With insomnia, nothing&apos;s real. Everything is far away. Everything\n        is a{\" \"}\n        <Highlight className=\"text-black dark:text-white\">\n          copy, of a copy, of a copy.\n        </Highlight>\n      </motion.h1>\n    </HeroHighlight>\n  );\n}\n"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "images-badge-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/images-badge-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport { ImagesBadge } from \"@/components/ui/images-badge\";\n\nexport function ImagesBadgeDemo() {\n  return (\n    <div className=\"flex h-[10rem] w-full items-center justify-center\">\n      <ImagesBadge\n        text=\"Introducing Agenforce Marketing Template\"\n        images={[\n          \"https://assets.aceternity.com/pro/agenforce-1.webp\",\n          \"https://assets.aceternity.com/pro/agenforce-2.webp\",\n          \"https://assets.aceternity.com/pro/agenforce-3.webp\",\n        ]}\n      />\n    </div>\n  );\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/images-badge-demo-2.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport { ImagesBadge } from \"@/components/ui/images-badge\";\n\nexport function ImagesBadgeDemoTwo() {\n  return (\n    <div className=\"flex w-full items-center justify-center\">\n      <ImagesBadge\n        text=\"Introducing Aceternity UI Pro\"\n        images={[\n          \"https://assets.aceternity.com/pro/agenforce-2.webp\",\n          \"https://assets.aceternity.com/pro/minimal-3-min.webp\",\n          \"https://assets.aceternity.com/pro/bento-4.png\",\n        ]}\n        folderSize={{ width: 48, height: 36 }}\n        teaserImageSize={{ width: 40, height: 28 }}\n        hoverImageSize={{ width: 140, height: 108 }}\n        hoverTranslateY={-110}\n        hoverSpread={50}\n      />\n    </div>\n  );\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/images-badge-demo-3.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport { ImagesBadge } from \"@/components/ui/images-badge\";\n\nexport function ImagesBadgeDemoThree() {\n  return (\n    <div className=\"flex h-[8rem] w-full items-center justify-center\">\n      <ImagesBadge\n        text=\"Quick Preview\"\n        images={[\n          \"https://assets.aceternity.com/pro/agenforce-1.webp\",\n          \"https://assets.aceternity.com/pro/agenforce-2.webp\",\n        ]}\n        folderSize={{ width: 24, height: 18 }}\n        teaserImageSize={{ width: 14, height: 10 }}\n        hoverImageSize={{ width: 36, height: 24 }}\n        hoverTranslateY={-28}\n        hoverSpread={14}\n      />\n    </div>\n  );\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/images-badge-demo-4.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport { ImagesBadge } from \"@/components/ui/images-badge\";\n\nexport function ImagesBadgeDemoFour() {\n  return (\n    <div className=\"flex h-[10rem] w-full items-center justify-center\">\n      <ImagesBadge\n        text=\"Gallery View\"\n        images={[\n          \"https://assets.aceternity.com/pro/agenforce-1.webp\",\n          \"https://assets.aceternity.com/pro/agenforce-2.webp\",\n          \"https://assets.aceternity.com/pro/agenforce-3.webp\",\n        ]}\n        hoverSpread={35}\n        hoverRotation={20}\n      />\n    </div>\n  );\n}\n"
+    }
+  ]
+}

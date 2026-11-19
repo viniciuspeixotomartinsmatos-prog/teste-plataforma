@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:45:58.841Z",
+  "metadata": {
+    "type": "component",
+    "id": 45326,
+    "name": "Astryx Breadcrumb Item",
+    "description": "An individual Astryx breadcrumb item supporting links, current-page text, icons, and click handlers.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-breadcrumb-item/breadcrumb-item-basic/preview.1794509772528.png",
+    "videoUrl": null,
+    "author": "Astryxdesign",
+    "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-breadcrumb-item-aloksivastava1025?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-breadcrumb-item-aloksivastava1025"
+  },
+  "component": {
+    "id": 45326,
+    "componentId": 26158,
+    "name": "Astryx Breadcrumb Item",
+    "demoName": "BreadcrumbItem — Basic",
+    "description": "An individual Astryx breadcrumb item supporting links, current-page text, icons, and click handlers.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-breadcrumb-item/breadcrumb-item-basic/preview.1794509772528.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-breadcrumb-item-aloksivastava1025?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\nimport \"./astryx-breadcrumb-item-utils/index.css\"\nimport { BreadcrumbItem } from \"@astryxdesign/core/Breadcrumbs\"\n\nexport * from \"@astryxdesign/core/Breadcrumbs\"\nexport default BreadcrumbItem\n",
+    "demoCode": "'use client';\n\nimport {Breadcrumbs, BreadcrumbItem} from '@/components/ui/astryx-breadcrumb-item';\n\nfunction BreadcrumbItemBasic() {\n  return (\n    <Breadcrumbs>\n      <BreadcrumbItem href=\"/\">Home</BreadcrumbItem>\n      <BreadcrumbItem href=\"/settings\">Settings</BreadcrumbItem>\n      <BreadcrumbItem isCurrent>Profile</BreadcrumbItem>\n    </Breadcrumbs>\n  );\n}\n\nexport default function BreadcrumbItemBasicDemo() {\n  return (\n    <div\n      data-astryx-theme=\"neutral\"\n      data-theme=\"light\"\n      style={{colorScheme: 'light', display: 'contents'}}>\n      <BreadcrumbItemBasic />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source and usage retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

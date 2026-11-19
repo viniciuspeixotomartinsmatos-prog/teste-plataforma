@@ -1,0 +1,534 @@
+[
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1351,
+      "name": "Repair Shop Website Template for Codex: Free HTML Phone and Laptop Repair Site with CSS Scroll Animations, No Libraries",
+      "description": "Free repair shop website template for a phone and laptop repair shop: free diagnosis, price wall, three grades of parts, refurbished stock, business pickups, repair by post and a booking form. One HTML file, CSS scroll-driven animations, no libraries, no build step, MIT; GSAP build included. AGENTS.md and README prompt included. Page: 8b.com/templates/reflow. Source: github.com/8bsite/repair-shop-website-template.",
+      "previewUrl": "https://cdn.21st.dev/user_3KmjaED73wExVzAuo4R9Vve8QQV/templates/repair-shop-website-template-for-codex-free-html-phone-and-l/preview-1793894546797.png",
+      "author": "8b",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3KmjaED73wExVzAuo4R9Vve8QQV/avatar.jpeg",
+      "url": "https://21st.dev/community/templates/repair-shop-website-template-for-codex-free-html-phone-and-laptop-repair-site-with-css-scroll-animations-no-libraries",
+      "price": 0
+    },
+    "links": [
+      {
+        "url": "https://8b.com/templates/reflow/demo.html",
+        "label": "Open preview"
+      },
+      {
+        "url": "https://8b.com/templates/reflow/demo.html",
+        "label": "Preview"
+      },
+      {
+        "url": "https://github.com/21st-dev",
+        "label": "GitHub"
+      }
+    ],
+    "bytes": 218968
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1185,
+      "name": "Bistro - Shadcn UI Restaurant Template",
+      "description": "Bistro is a free modern Shadcn UI restaurant template built with Next.js for restaurants, cafés, food brands, designers, and agencies. It includes a hero, menu highlights, featured dishes, chef story, testimonials, offers, and contact sections, with smooth animations, light/dark theme support, and a fully responsive, SEO-friendly layout.",
+      "previewUrl": "https://cdn.21st.dev/user_3HXZ8yZwEeyMnsdcuMHzruPMNoj/templates/bistro-shadcn-ui-restaurant-template/preview-1793896576578.png",
+      "author": "clevision",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3HXZ8yZwEeyMnsdcuMHzruPMNoj/avatar.jpeg",
+      "url": "https://21st.dev/community/templates/bistro-shadcn-ui-restaurant-template",
+      "price": 0
+    },
+    "links": [
+      {
+        "url": "https://shadcnstudio.com/preview/templates/shadcn-nextjs-bistro-landing-page",
+        "label": "Open preview"
+      },
+      {
+        "url": "https://shadcnstudio.com/preview/templates/shadcn-nextjs-bistro-landing-page",
+        "label": "Preview"
+      },
+      {
+        "url": "https://github.com/21st-dev",
+        "label": "GitHub"
+      }
+    ],
+    "bytes": 218449
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1183,
+      "name": "Ink - Shadcn UI Blog Template",
+      "description": "Ink is a free modern Shadcn UI blog template built with Next.js for writers, SaaS teams, designers, and agencies to publish articles and insights. It includes a hero, featured posts, categories, article grid, blog detail page, related posts, and CTA, with smooth animations, light/dark theme support, and a fully responsive, SEO-friendly layout.",
+      "previewUrl": "https://cdn.21st.dev/user_3HXZ8yZwEeyMnsdcuMHzruPMNoj/templates/ink-shadcn-ui-blog-template/preview-1793896272689.png",
+      "author": "clevision",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3HXZ8yZwEeyMnsdcuMHzruPMNoj/avatar.jpeg",
+      "url": "https://21st.dev/community/templates/ink-shadcn-ui-blog-template",
+      "price": 0
+    },
+    "links": [
+      {
+        "url": "https://shadcnstudio.com/preview/templates/shadcn-nextjs-ink-landing-page",
+        "label": "Open preview"
+      },
+      {
+        "url": "https://shadcnstudio.com/preview/templates/shadcn-nextjs-ink-landing-page",
+        "label": "Preview"
+      },
+      {
+        "url": "https://github.com/21st-dev",
+        "label": "GitHub"
+      }
+    ],
+    "bytes": 216581
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1184,
+      "name": "Track - Shadcn UI Changelog Template",
+      "description": "Track is a free modern Shadcn UI changelog template built with Next.js for SaaS products, startups, product teams, and indie makers to publish updates and release notes. It includes versioned updates, release summaries, feature additions, improvements, bug fixes, and an FAQ section, with smooth animations, light/dark theme support, and a fully responsive, SEO-friendly layout.",
+      "previewUrl": "https://cdn.21st.dev/user_3HXZ8yZwEeyMnsdcuMHzruPMNoj/templates/track-shadcn-ui-changelog-template/preview-1793898289841.png",
+      "author": "clevision",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3HXZ8yZwEeyMnsdcuMHzruPMNoj/avatar.jpeg",
+      "url": "https://21st.dev/community/templates/track-shadcn-ui-changelog-template",
+      "price": 0
+    },
+    "links": [
+      {
+        "url": "https://shadcnstudio.com/preview/templates/shadcn-nextjs-track-landing-page",
+        "label": "Open preview"
+      },
+      {
+        "url": "https://shadcnstudio.com/preview/templates/shadcn-nextjs-track-landing-page",
+        "label": "Preview"
+      },
+      {
+        "url": "https://github.com/21st-dev",
+        "label": "GitHub"
+      }
+    ],
+    "bytes": 218201
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1182,
+      "name": "Zolt - Shadcn UI Portfolio Template",
+      "description": "Zolt is a Free modern Shadcn UI Portfolio Template built with Next.js for designers, developers, freelancers, and agencies to create fast, responsive, and SEO-friendly portfolio websites.",
+      "previewUrl": "https://cdn.21st.dev/user_3HXZ8yZwEeyMnsdcuMHzruPMNoj/templates/zolt-shadcn-ui-portfolio-template/preview-1793898108047.png",
+      "author": "clevision",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3HXZ8yZwEeyMnsdcuMHzruPMNoj/avatar.jpeg",
+      "url": "https://21st.dev/community/templates/zolt-shadcn-ui-portfolio-template",
+      "price": 0
+    },
+    "links": [
+      {
+        "url": "https://shadcn-nextjs-zolt-landing-page.vercel.app/",
+        "label": "Open preview"
+      },
+      {
+        "url": "https://shadcn-nextjs-zolt-landing-page.vercel.app/",
+        "label": "Preview"
+      },
+      {
+        "url": "https://github.com/21st-dev",
+        "label": "GitHub"
+      }
+    ],
+    "bytes": 216458
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1355,
+      "name": "Koira",
+      "description": "Next.js template for an AI agent workspace. Build with agents.",
+      "previewUrl": "https://cdn.21st.dev/user_37TqCAC00s9KcfmZ614YPQ0tnLG/templates/koira/preview-1793897814280.png",
+      "author": "diarmuradi",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_37TqCAC00s9KcfmZ614YPQ0tnLG/avatar.svg+xml",
+      "url": "https://21st.dev/community/templates/koira",
+      "price": 0
+    },
+    "links": [
+      {
+        "url": "https://koira.diarmuradi.com/",
+        "label": "Open preview"
+      },
+      {
+        "url": "https://koira.diarmuradi.com/",
+        "label": "Preview"
+      },
+      {
+        "url": "https://github.com/21st-dev",
+        "label": "GitHub"
+      }
+    ],
+    "bytes": 213380
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1342,
+      "name": "Dashboard 4",
+      "description": "Commerce dashboard with revenue trends, refund rates, category ranking pie, and quick action items.",
+      "previewUrl": "https://cdn.21st.dev/user_2tWTE0rCrloVAVylFPYfp10xU92/templates/dashboard-4/preview-1793895903657.png",
+      "author": "efferd",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2tWTE0rCrloVAVylFPYfp10xU92/avatar.png",
+      "url": "https://21st.dev/community/templates/dashboard-4",
+      "price": 0
+    },
+    "links": [
+      {
+        "url": "https://efferd.com/view/dashboard-4",
+        "label": "Open preview"
+      },
+      {
+        "url": "https://efferd.com/view/dashboard-4",
+        "label": "Preview"
+      },
+      {
+        "url": "https://github.com/21st-dev",
+        "label": "GitHub"
+      }
+    ],
+    "bytes": 210649
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1360,
+      "name": "Portfolio template",
+      "description": "A minimal-looking portfolio template with AI",
+      "previewUrl": "https://cdn.21st.dev/user_36CTWW3UmqEeCTlDPyTgz0qIlWT/templates/portfolio-template-2/preview-1793897246623.png",
+      "author": "harshvirani91",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_36CTWW3UmqEeCTlDPyTgz0qIlWT/avatar.png",
+      "url": "https://21st.dev/community/templates/portfolio-template-2",
+      "price": 0
+    },
+    "links": [
+      {
+        "url": "https://www.harshvirani.dev",
+        "label": "Open preview"
+      },
+      {
+        "url": "https://www.harshvirani.dev",
+        "label": "Preview"
+      },
+      {
+        "url": "https://github.com/21st-dev",
+        "label": "GitHub"
+      }
+    ],
+    "bytes": 208952
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1343,
+      "name": "Midnight Lite",
+      "description": "Midnight Lite is a free, dark landing page template for AI and SaaS products, under the MIT license.\n\nNext.js 16, React 19, Tailwind CSS v4, shadcn/ui, TypeScript. One page: a header, a hero with a night sky and an engraved guilloche rosette, product tiles with cited sources, a closing call to action and a footer, laid out separately for phones. Every word sits in one file, and AGENTS.md and DESIGN.md tell your AI editor how the page is built.\n\nThe theme and sections also install one by one with npx shadcn add from the @vilqor registry: midnight-lite.vilqor.com/r/registry.json\n\nCode: github.com/vilqor/midnight-lite\n\nThe full Midnight adds seven more sections, working forms, analytics and a second language: templates.vilqor.com/midnight",
+      "previewUrl": "https://cdn.21st.dev/user_3Kf6bVFeeahTD29rrdgg9TKLqfa/templates/midnight-lite/preview-1793895803702.png",
+      "author": "info_7f581b58",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3Kf6bVFeeahTD29rrdgg9TKLqfa/avatar.png",
+      "url": "https://21st.dev/community/templates/midnight-lite",
+      "price": 0
+    },
+    "links": [
+      {
+        "url": "https://midnight-lite.vilqor.com",
+        "label": "Open preview"
+      },
+      {
+        "url": "https://midnight-lite.vilqor.com",
+        "label": "Preview"
+      },
+      {
+        "url": "https://github.com/21st-dev",
+        "label": "GitHub"
+      }
+    ],
+    "bytes": 217124
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1356,
+      "name": "Craft Beer Product Landing Page Template",
+      "description": "Craft beer product landing page template for an Indian brewery's monsoon IPA: the bottle rides the scroll on a sticky layer while the hero, tasting notes, brewing story, food pairings and a where-to-buy section move past it, all choreographed with GSAP.",
+      "previewUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/templates/craft-beer-product-landing-page-template/preview-1793897513606.png",
+      "author": "kedhareswer",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+      "url": "https://21st.dev/community/templates/craft-beer-product-landing-page-template",
+      "price": 0
+    },
+    "links": [
+      {
+        "url": "https://21stdev-my-components-one.vercel.app/#craft-beer-product-template",
+        "label": "Open preview"
+      },
+      {
+        "url": "https://21stdev-my-components-one.vercel.app/#craft-beer-product-template",
+        "label": "Preview"
+      },
+      {
+        "url": "https://github.com/21st-dev",
+        "label": "GitHub"
+      }
+    ],
+    "bytes": 213558
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1352,
+      "name": "Design Studio Website Template",
+      "description": "Design studio website template told as a film: nine full-screen scenes joined by deliberate cuts: a living eye badge, a showreel that grows to full bleed, sideways pastel cards, a self-building product UI, a scroll-lit quote, a 3D text cube and a contact form.",
+      "previewUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/templates/design-studio-website-template/preview-1793897990060.png",
+      "author": "kedhareswer",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+      "url": "https://21st.dev/community/templates/design-studio-website-template",
+      "price": 0
+    },
+    "links": [
+      {
+        "url": "https://21stdev-my-components-one.vercel.app/#oriel-studio-template",
+        "label": "Open preview"
+      },
+      {
+        "url": "https://21stdev-my-components-one.vercel.app/#oriel-studio-template",
+        "label": "Preview"
+      },
+      {
+        "url": "https://github.com/21st-dev",
+        "label": "GitHub"
+      }
+    ],
+    "bytes": 213273
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1347,
+      "name": "Hourline: Scheduling Landing Page with Animated Product UI",
+      "description": "A light landing page for a booking and scheduling product, with nine animated Illos assets drawn as the product's own UI in the page's font and corners. Team tabs and setup tabs that work with the keyboard, a monthly and yearly pricing switch, and an FAQ. Plain HTML, CSS and JS built with Vite. More animated assets at illos.dev.",
+      "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/templates/hourline-scheduling-landing-page-with-animated-product-ui/preview-1793895296748.png",
+      "author": "navedux",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/avatar.png",
+      "url": "https://21st.dev/community/templates/hourline-scheduling-landing-page-with-animated-product-ui",
+      "price": 0
+    },
+    "links": [
+      {
+        "url": "https://illos-hourline-template.vercel.app",
+        "label": "Open preview"
+      },
+      {
+        "url": "https://illos-hourline-template.vercel.app",
+        "label": "Preview"
+      },
+      {
+        "url": "https://github.com/21st-dev",
+        "label": "GitHub"
+      }
+    ],
+    "bytes": 213977
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1346,
+      "name": "Kilnworks: Developer Landing Page with Animated Isometric Assets",
+      "description": "A light landing page for a background jobs and queues product, with ten animated Illos Isometric assets that loop while in view and hold still under reduced motion. Product tabs with keyboard support, stacked step cards with copyable code, a quote wall and pricing. Plain HTML, CSS and JS built with Vite. More animated assets at illos.dev.",
+      "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/templates/kilnworks-developer-landing-page-with-animated-isometric-ass/preview-1793895452018.png",
+      "author": "navedux",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/avatar.png",
+      "url": "https://21st.dev/community/templates/kilnworks-developer-landing-page-with-animated-isometric-assets",
+      "price": 0
+    },
+    "links": [
+      {
+        "url": "https://illos-kilnworks-template.vercel.app",
+        "label": "Open preview"
+      },
+      {
+        "url": "https://illos-kilnworks-template.vercel.app",
+        "label": "Preview"
+      },
+      {
+        "url": "https://github.com/21st-dev",
+        "label": "GitHub"
+      }
+    ],
+    "bytes": 214174
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1349,
+      "name": "Orrery: AI Model Landing Page with Animated Product UI",
+      "description": "A light landing page for a made-up AI model company, with eleven animated Illos assets in the Interface style: a command bar in the hero, product cards, an answer that cites its sources and an agent that asks before it pays. They loop while in view and hold still under reduced motion. Plain HTML, CSS and JS with a small Node build and no dependencies. More animated assets at illos.dev.",
+      "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/templates/orrery-ai-model-landing-page-with-animated-product-ui/preview-1793894923943.png",
+      "author": "navedux",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/avatar.png",
+      "url": "https://21st.dev/community/templates/orrery-ai-model-landing-page-with-animated-product-ui",
+      "price": 0
+    },
+    "links": [
+      {
+        "url": "https://illos-orrery-template.vercel.app",
+        "label": "Open preview"
+      },
+      {
+        "url": "https://illos-orrery-template.vercel.app",
+        "label": "Preview"
+      },
+      {
+        "url": "https://github.com/21st-dev",
+        "label": "GitHub"
+      }
+    ],
+    "bytes": 214247
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1345,
+      "name": "Sounder: AI Search Landing Page with Animated Shader Art",
+      "description": "A light landing page for a vector search and RAG product, with eight animated Illos assets in the Shader style that loop while in view and hold still under reduced motion. Working language tabs, a usage estimate with sliders, and questions that open and close. Plain HTML, CSS and JS built with Vite. More animated assets at illos.dev.",
+      "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/templates/sounder-ai-search-landing-page-with-animated-shader-art/preview-1793895595501.png",
+      "author": "navedux",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/avatar.png",
+      "url": "https://21st.dev/community/templates/sounder-ai-search-landing-page-with-animated-shader-art",
+      "price": 0
+    },
+    "links": [
+      {
+        "url": "https://illos-sounder-template.vercel.app",
+        "label": "Open preview"
+      },
+      {
+        "url": "https://illos-sounder-template.vercel.app",
+        "label": "Preview"
+      },
+      {
+        "url": "https://github.com/21st-dev",
+        "label": "GitHub"
+      }
+    ],
+    "bytes": 213885
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1348,
+      "name": "Tollgate: Billing Landing Page with Animated UI Art",
+      "description": "A light landing page for a usage-based billing product, with six animated Illos assets in its own font and corners, a working invoice estimate (plan picker and usage slider), code tabs and pricing with add-ons. The assets loop while in view and hold still under reduced motion. Plain HTML, CSS and JS built with Vite. More animated assets at illos.dev.",
+      "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/templates/tollgate-billing-landing-page-with-animated-ui-art/preview-1793895067904.png",
+      "author": "navedux",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/avatar.png",
+      "url": "https://21st.dev/community/templates/tollgate-billing-landing-page-with-animated-ui-art",
+      "price": 0
+    },
+    "links": [
+      {
+        "url": "https://illos-tollgate-template.vercel.app",
+        "label": "Open preview"
+      },
+      {
+        "url": "https://illos-tollgate-template.vercel.app",
+        "label": "Preview"
+      },
+      {
+        "url": "https://github.com/21st-dev",
+        "label": "GitHub"
+      }
+    ],
+    "bytes": 213905
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1344,
+      "name": "Wardline: Security Landing Page with Animated HUD Art",
+      "description": "A light landing page for a security monitoring product, with six animated Illos HUD assets floating on deep night gradients. Hero with live status cards, Detect, Respond and Prove rows, a coverage grid, a numbered response rail, a customer story and pricing. Assets loop while in view and hold still under reduced motion. Plain HTML, CSS and JS built with Vite. More at illos.dev.",
+      "previewUrl": "https://cdn.21st.dev/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/templates/wardline-security-landing-page-with-animated-hud-art/preview-1793895690492.png",
+      "author": "navedux",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3KuGvWdbc75gTjMpiJs4KqUW0K0/avatar.png",
+      "url": "https://21st.dev/community/templates/wardline-security-landing-page-with-animated-hud-art",
+      "price": 0
+    },
+    "links": [
+      {
+        "url": "https://illos-wardline-template.vercel.app",
+        "label": "Open preview"
+      },
+      {
+        "url": "https://illos-wardline-template.vercel.app",
+        "label": "Preview"
+      },
+      {
+        "url": "https://github.com/21st-dev",
+        "label": "GitHub"
+      }
+    ],
+    "bytes": 214235
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1353,
+      "name": "Motoko Base — Production-Ready Next.js SaaS Starter",
+      "description": null,
+      "previewUrl": "https://cdn.21st.dev/user_39720J8FZrHCoGeL23ljF4x20L3/templates/motoko-base-production-ready-next-js-saas-starter/preview-1793894728311.png",
+      "author": "senommu",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_39720J8FZrHCoGeL23ljF4x20L3/avatar.jpeg",
+      "url": "https://21st.dev/community/templates/motoko-base-production-ready-next-js-saas-starter",
+      "price": 0
+    },
+    "links": [
+      {
+        "url": "https://base.motokoui.com",
+        "label": "Open preview"
+      },
+      {
+        "url": "https://base.motokoui.com",
+        "label": "Preview"
+      },
+      {
+        "url": "https://github.com/21st-dev",
+        "label": "GitHub"
+      }
+    ],
+    "bytes": 209495
+  },
+  {
+    "metadata": {
+      "type": "template",
+      "id": 1350,
+      "name": "Cerio Labs",
+      "description": "Premium AI SaaS & B2B Next.js Website Template.\n\nA sophisticated website template for the next generation of AI-powered businesses.\n\nPREVIEW👉\n\nCerio Labs is a modern, beautifully crafted Next.js website template designed for AI startups, SaaS platforms, B2B software companies, and innovative technology brands.\n\n\n\nCombining elegant editorial typography, a refined visual identity, immersive geometric backgrounds, and thoughtfully designed interactions, Cerio Labs helps ambitious software companies establish a distinctive digital presence.\n\n\n\nBuilt with a focus on aesthetics, performance, and flexibility, Cerio Labs provides a polished starting point for launching your next AI product, showcasing your technology, or building a compelling software marketing website.\n\n\n\nHighlights\n\nPremium Visual Design — Elegant typography, sophisticated layouts, and a refined forest-green color palette.\n\nNext.js & Modern Frontend — Built using Next.js, React, TypeScript, and Tailwind CSS.\n\nImmersive Visual Effects — A distinctive geometric network background with a futuristic, technology-inspired aesthetic.\n\nConversion-Focused Layouts — Clear messaging, prominent calls to action, and thoughtfully structured content.\n\nCustomizable Design System — Reusable UI components and design tokens for effortless brand customization.\n\nStatic-Ready Architecture — Designed for fast, efficient static website deployment.\n\n\n\nPerfect For\n\nAI startups, SaaS products, B2B software companies, automation platforms, technology startups, and digital product businesses.",
+      "previewUrl": "https://cdn.21st.dev/user_3LEBkCe07lgqMJ1A0LgFkPmRBhz/templates/cerio-labs-2/preview-1793893631565.png",
+      "author": "vermachaman001",
+      "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zTEVCa0NuV2h6d0ZNaWpXN3JSdE1LMFNSSWgifQ",
+      "url": "https://21st.dev/community/templates/cerio-labs-2",
+      "price": 0
+    },
+    "links": [
+      {
+        "url": "https://cerio-ai.vercel.app/",
+        "label": "Open preview"
+      },
+      {
+        "url": "https://cerio-ai.vercel.app/",
+        "label": "Preview"
+      },
+      {
+        "url": "https://github.com/21st-dev",
+        "label": "GitHub"
+      }
+    ],
+    "bytes": 219544
+  }
+]

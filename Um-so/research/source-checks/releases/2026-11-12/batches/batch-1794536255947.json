@@ -1,0 +1,104 @@
+[
+  {
+    "route": "/@themeocean/components/ai-chain-of-thought-reasoning-accordion",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45131,
+      "name": "AI Chain-of-Thought Reasoning Accordion",
+      "description": "A sleek, collapsible reasoning container designed for AI chat interfaces. Displays live thinking timers, step-by-step logic traces, and auto-collapses smoothly once the final response begins.",
+      "previewUrl": "https://cdn.21st.dev/user_3KgWzslqJFclZ2iRrfddAtKvi27/ai-chain-of-thought-reasoning-accordion/default/preview.1794406862153.png",
+      "videoUrl": "https://cdn.21st.dev/user_3KgWzslqJFclZ2iRrfddAtKvi27/ai-chain-of-thought-reasoning-accordion/default/video.1794406828484.mp4",
+      "author": "themeocean",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3KgWzslqJFclZ2iRrfddAtKvi27/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/themeocean/ai-chain-of-thought-reasoning-accordion?api_key=REDACTED\"",
+      "url": "https://21st.dev/@themeocean/components/ai-chain-of-thought-reasoning-accordion"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@themeocean/components/interactive-ai-agent-workflow-node-card",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45135,
+      "name": "Interactive AI Agent Workflow Node Card",
+      "description": "A modular, node-based workflow card built for visual AI agent builders. Features input/output connection ports, live execution status rings, and inline parameter toggles.",
+      "previewUrl": "https://cdn.21st.dev/themeocean/interactive-ai-agent-workflow-node-card/default/preview.1794381430429-1ebb4da4-c3b8-424e-8540-7a4698c350f5.jpg",
+      "videoUrl": null,
+      "author": "themeocean",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3KgWzslqJFclZ2iRrfddAtKvi27/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/themeocean/interactive-ai-agent-workflow-node-card?api_key=REDACTED\"",
+      "url": "https://21st.dev/@themeocean/components/interactive-ai-agent-workflow-node-card"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@themeocean/components/interactive-ai-chat-input-with-micro-interactions",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44839,
+      "name": "Interactive AI Chat Input with Micro-Interactions",
+      "description": "A highly polished, responsive AI chat input component built with React, Tailwind CSS, and Lucide icons. Supports expand-on-type, file attachments visualization, and smooth focus-ring states for modern AI applications.",
+      "previewUrl": "https://cdn.21st.dev/user_3KgWzslqJFclZ2iRrfddAtKvi27/interactive-ai-chat-input-with-micro-interactions/default/preview.1794245268154.webp",
+      "videoUrl": "https://cdn.21st.dev/user_3KgWzslqJFclZ2iRrfddAtKvi27/interactive-ai-chat-input-with-micro-interactions/default/video.1794245225919.mp4",
+      "author": "themeocean",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3KgWzslqJFclZ2iRrfddAtKvi27/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/themeocean/interactive-ai-chat-input-with-micro-interactions?api_key=REDACTED\"",
+      "url": "https://21st.dev/@themeocean/components/interactive-ai-chat-input-with-micro-interactions"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@themeocean/components/interactive-ai-voice-assistant-audio-visualizer",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45130,
+      "name": "Interactive AI Voice Assistant Audio Visualizer",
+      "description": "A highly polished, state-driven audio wave visualizer designed for AI voice interactions. Features seamless switching between 'listening', 'thinking', and 'speaking' states using hardware-accelerated fluid animations.",
+      "previewUrl": "https://cdn.21st.dev/user_3KgWzslqJFclZ2iRrfddAtKvi27/interactive-ai-voice-assistant-audio-visualizer/default/preview.1794406747557.png",
+      "videoUrl": "https://cdn.21st.dev/user_3KgWzslqJFclZ2iRrfddAtKvi27/interactive-ai-voice-assistant-audio-visualizer/default/video.1794406705210.mp4",
+      "author": "themeocean",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3KgWzslqJFclZ2iRrfddAtKvi27/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/themeocean/interactive-ai-voice-assistant-audio-visualizer?api_key=REDACTED\"",
+      "url": "https://21st.dev/@themeocean/components/interactive-ai-voice-assistant-audio-visualizer"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@themeocean/components/interactive-expandable-notification-stack",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45134,
+      "name": "Interactive Expandable Notification Stack",
+      "description": "A sleek, Dynamic-Island inspired stacked notification widget. Compresses multiple alerts into a layered 3D card deck that fans out smoothly on hover or click with individual dismiss actions.",
+      "previewUrl": "https://cdn.21st.dev/user_3KgWzslqJFclZ2iRrfddAtKvi27/interactive-expandable-notification-stack/default/preview.1794407044704.png",
+      "videoUrl": "https://cdn.21st.dev/user_3KgWzslqJFclZ2iRrfddAtKvi27/interactive-expandable-notification-stack/default/video.1794407027889.mp4",
+      "author": "themeocean",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3KgWzslqJFclZ2iRrfddAtKvi27/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/themeocean/interactive-expandable-notification-stack?api_key=REDACTED\"",
+      "url": "https://21st.dev/@themeocean/components/interactive-expandable-notification-stack"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@themeocean/components/minimalist-spotlight-hero-with-kinetic-typography",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45143,
+      "name": "Minimalist Spotlight Hero with Kinetic Typography",
+      "description": "An ultra-clean, high-impact hero section powered by Framer Motion word-by-word blur-to-clear reveal animations, a mouse-reactive ambient spotlight, and crisp social proof avatars.",
+      "previewUrl": "https://cdn.21st.dev/themeocean/minimalist-spotlight-hero-with-kinetic-typography/default/preview.1794393974329-7aaf329c-f107-48f2-8927-e423238e93b7.jpg",
+      "videoUrl": null,
+      "author": "themeocean",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3KgWzslqJFclZ2iRrfddAtKvi27/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/themeocean/minimalist-spotlight-hero-with-kinetic-typography?api_key=REDACTED\"",
+      "url": "https://21st.dev/@themeocean/components/minimalist-spotlight-hero-with-kinetic-typography"
+    },
+    "status": "retained_unvalidated"
+  }
+]

@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 45165,
+    "name": "Glimm HTML-in-Canvas",
+    "description": "The original Glimm HTML-in-Canvas invoice transition demonstration in a responsive media frame.",
+    "previewUrl": "https://cdn.21st.dev/larsen66/glimm-html-in-canvas/default/preview.1794407392085-950e4ca0-c0e5-472d-85dd-09cc0e014e85.png",
+    "videoUrl": "https://cdn.21st.dev/larsen66/glimm-html-in-canvas/default/video.1794407392085-950e4ca0-c0e5-472d-85dd-09cc0e014e85.mp4",
+    "author": "nomanjack",
+    "authorImage": "https://github.com/nomanjack.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/nomanjack/glimm-html-in-canvas?api_key=REDACTED\"",
+    "url": "https://21st.dev/@nomanjack/components/glimm-html-in-canvas"
+  },
+  "requestedRoute": "/@nomanjack/components/glimm-html-in-canvas",
+  "checkedAt": "2026-11-13T02:13:44.029Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 45165,
+    "componentId": 26123,
+    "authorUserId": "user_registry_nomanjack_1793739459000",
+    "name": "Glimm HTML-in-Canvas",
+    "demoName": "Default",
+    "description": "The original Glimm HTML-in-Canvas invoice transition demonstration in a responsive media frame.",
+    "previewUrl": "https://cdn.21st.dev/larsen66/glimm-html-in-canvas/default/preview.1794407392085-950e4ca0-c0e5-472d-85dd-09cc0e014e85.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/nomanjack/glimm-html-in-canvas?api_key=REDACTED\"",
+    "componentCode": "\"use client\"\n\nimport * as React from \"react\"\n\ntype GlimmHtmlInCanvasProps = {\n  className?: string\n  autoPlay?: boolean\n}\n\nfunction GlimmHtmlInCanvas({ className, autoPlay = true }: GlimmHtmlInCanvasProps) {\n  const videoRef = React.useRef<HTMLVideoElement>(null)\n\n  React.useEffect(() => {\n    if (!autoPlay || !videoRef.current) return\n    const video = videoRef.current\n    const observer = new IntersectionObserver(([entry]) => {\n      if (entry?.isIntersecting) void video.play().catch(() => undefined)\n      else video.pause()\n    }, { threshold: 0.3 })\n    observer.observe(video)\n    return () => observer.disconnect()\n  }, [autoPlay])\n\n  return (\n    <main className={className} style={{ alignItems: \"center\", background: \"#fff\", display: \"flex\", justifyContent: \"center\", minHeight: \"100vh\", padding: \"48px 32px\", width: \"100%\" }}>\n      <video\n        ref={videoRef}\n        aria-label=\"An invoice paid banner drops into an app as the glimm band breaks across, and the page gathers toward it, ripples and settles\"\n        loop\n        muted\n        playsInline\n        poster=\"https://cdn.21st.dev/assets/mirror/3f/3fcd14fe995e6cad7b9f9f213f72722cbee531ed3e8611cbdbd9ccaeb4f34e30.jpg\"\n        preload=\"metadata\"\n        src=\"https://cdn.21st.dev/assets/mirror/96/9634d397fe221306949a7f4815c29fc8c2ab2224f818409d5fb1434f558e277a.mp4\"\n        style={{ aspectRatio: \"16 / 10\", background: \"#f7f7f7\", borderRadius: \"12px\", boxShadow: \"0 0 0 0.5px rgba(0,0,0,0.08)\", display: \"block\", maxWidth: \"634px\", objectFit: \"cover\", width: \"100%\" }}\n      />\n    </main>\n  )\n}\n\nexport { GlimmHtmlInCanvas }\nexport default GlimmHtmlInCanvas\n",
+    "demoCode": "\"use client\"\n\nimport GlimmHtmlInCanvas from \"@/components/ui/glimm-html-in-canvas\"\n\nexport default function GlimmHtmlInCanvasDemo() {\n  return <GlimmHtmlInCanvas />\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  }
+}

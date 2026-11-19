@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 45150,
+    "name": "Caution Tape Text",
+    "description": "Heavy condensed headline with warning caution-tape strips weaving across words and smooth load animations.",
+    "previewUrl": "https://cdn.21st.dev/user_332oxzW8MyPod4IDIdKq9rbPYuk/caution-tape-text/default/preview.1794401840672.webp",
+    "videoUrl": "https://cdn.21st.dev/user_332oxzW8MyPod4IDIdKq9rbPYuk/caution-tape-text/default/video.1794401821639.mp4",
+    "author": "daiwiikharihar",
+    "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_332oxzW8MyPod4IDIdKq9rbPYuk/avatar.jpeg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/daiwiikharihar/caution-tape-text?api_key=REDACTED\"",
+    "url": "https://21st.dev/@daiwiikharihar/components/caution-tape-text"
+  },
+  "requestedRoute": "/@daiwiikharihar/components/caution-tape-text",
+  "checkedAt": "2026-11-12T21:14:30.118Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 45150,
+    "componentId": 26114,
+    "authorUserId": "user_332oxzW8MyPod4IDIdKq9rbPYuk",
+    "name": "Caution Tape Text",
+    "demoName": "Default",
+    "description": "Heavy condensed headline with warning caution-tape strips weaving across words and smooth load animations.",
+    "previewUrl": "https://cdn.21st.dev/user_332oxzW8MyPod4IDIdKq9rbPYuk/caution-tape-text/default/preview.1794401840672.webp",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/daiwiikharihar/caution-tape-text?api_key=REDACTED\"",
+    "componentCode": "\"use client\";\nimport { useState } from \"react\";\nimport { motion } from \"framer-motion\";\n\nconst words = [\n  { main: \"MAKE\", tape: \"SOLVE PROBLEMS\", tapePos: \"-top-1 -left-6 rotate-[10deg]\" },\n  { main: \"THINGS\", tape: \"INSPIRE PEOPLE\", tapePos: \"top-3 -right-8 -rotate-[18deg]\" },\n  { main: \"THAT\", tape: \"THINK DEEPLY\", tapePos: \"top-1 -left-10 rotate-[24deg]\" },\n  { main: \"MATTERS\", tape: \"CREATE BOLDLY\", tapePos: \"top-2 right-0 -rotate-[20deg]\" },\n];\n\nexport default function CautionTapeText() {\n  const [animationKey, setAnimationKey] = useState(0);\n\n  const handleReplay = () => {\n    setAnimationKey((prev) => prev + 1);\n  };\n\n  return (\n    <div\n      key={animationKey}\n      onClick={handleReplay}\n      className=\"flex flex-col items-center justify-center p-12 bg-neutral-950 rounded-2xl overflow-hidden select-none cursor-pointer group relative shadow-2xl border border-neutral-800\"\n      title=\"Click anywhere to replay animation\"\n    >\n      <div className=\"flex flex-col items-center space-y-1\">\n        {words.map((item, idx) => (\n          <div key={idx} className=\"relative inline-block\">\n            <span className=\"block font-black text-5xl sm:text-6xl tracking-tighter text-white leading-[0.88]\">\n              {item.main}\n            </span>\n            <motion.span\n              initial={{ scaleX: 0, opacity: 0 }}\n              animate={{ scaleX: 1, opacity: 1 }}\n              transition={{\n                delay: idx * 0.25 + 0.2,\n                duration: 0.8,\n                ease: [0.16, 1, 0.3, 1],\n              }}\n              style={{ originX: 0 }}\n              className={`absolute ${item.tapePos} bg-[#f5d90a] text-neutral-950 font-extrabold text-[10px] sm:text-xs tracking-wider px-2.5 py-0.5 shadow-lg uppercase whitespace-nowrap z-10`}\n            >\n              {item.tape}\n            </motion.span>\n          </div>\n        ))}\n      </div>\n\n      {/* Subtle Replay Hint */}\n      <span className=\"absolute bottom-3 text-[10px] font-medium tracking-widest uppercase text-neutral-500 opacity-0 group-hover:opacity-100 transition-opacity\">\n        Click to replay ⟳\n      </span>\n    </div>\n  );\n}",
+    "demoCode": "import CautionTapeText from \"@/components/ui/caution-tape-text\";\n\nexport default function DemoPage() {\n  return (\n    <main className=\"min-h-screen w-full bg-[#ECECEC] dark:bg-[#05070E] transition-colors duration-500 flex items-center justify-center p-4 sm:p-8\">\n      <CautionTapeText />\n    </main>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": "user_332oxzW8MyPod4IDIdKq9rbPYuk"
+  }
+}

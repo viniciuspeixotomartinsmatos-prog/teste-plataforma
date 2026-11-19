@@ -1,0 +1,11 @@
+{
+  "name": "background-ripple-effect-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/background-ripple-effect-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport React from \"react\";\nimport { BackgroundRippleEffect } from \"@/components/ui/background-ripple-effect\";\n\nexport function BackgroundRippleEffectDemo() {\n  return (\n    <div className=\"relative flex min-h-screen w-full flex-col items-start justify-start overflow-hidden\">\n      <BackgroundRippleEffect />\n      <div className=\"mt-60 w-full\">\n        <h2 className=\"relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold text-neutral-800 md:text-4xl lg:text-7xl dark:text-neutral-100\">\n          Interactive Background Boxes Ripple Effect\n        </h2>\n        <p className=\"relative z-10 mx-auto mt-4 max-w-xl text-center text-neutral-800 dark:text-neutral-500\">\n          Hover over the boxes above and click.To be used on backgrounds of hero\n          sections OR Call to Action sections. I beg you don&apos;t use it\n          everywhere.\n        </p>\n      </div>\n    </div>\n  );\n}\n"
+    }
+  ]
+}

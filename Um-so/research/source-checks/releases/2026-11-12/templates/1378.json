@@ -1,0 +1,16 @@
+{
+  "route": "/@lyanchouss/templates/kora-3d-creative-agency",
+  "type": "template",
+  "status": "template_metadata_only",
+  "metadata": {
+    "type": "template",
+    "id": 1378,
+    "name": "Kora - 3D Creative Agency",
+    "description": "Animated 3D portfolio for a creative agency. A glossy bunny mascot travels through three WebGL scenes with refraction, bloom and kinetic type, then hands off to a dark contact scene with a floating iridescent form and a contact form. Next.js 16, React 19 and Three.js; scroll, drag, keyboard and dot navigation; the renderer pauses off-screen.",
+    "previewUrl": "https://cdn.21st.dev/user_2xFgBhIEcC8WVjxizPEzB14AOkb/templates/kora-3d-creative-agency/preview-fc963700a0.jpg",
+    "author": "lyanchouss",
+    "authorImage": "https://daliagents.com/og-mark.png",
+    "url": "https://21st.dev/community/templates/kora-3d-creative-agency",
+    "price": 69
+  }
+}

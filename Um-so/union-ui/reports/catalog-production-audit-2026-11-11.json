@@ -1,0 +1,191 @@
+{
+  "date": "2026-11-11",
+  "commit": "c68978f050f573a4a8d15f9f8ff62b3379ecd45e",
+  "deployment": "https://teste-plataforma-4h997hg8h-novonormaladm-7417s-projects.vercel.app",
+  "vercelStatus": "READY",
+  "environment": "https://teste-plataforma-delta.vercel.app",
+  "anonymous": [
+    {
+      "path": "/data/catalog-live.json",
+      "status": [
+        401,
+        401,
+        401
+      ]
+    },
+    {
+      "path": "/previews/expanded/21st-84b5c4cf7d2f.html",
+      "status": [
+        401,
+        401,
+        401
+      ]
+    },
+    {
+      "path": "/code/recovered/recovered--mosaik.json",
+      "status": [
+        401,
+        401,
+        401
+      ]
+    },
+    {
+      "path": "/assets/demo-cache/c721f302e4673e41bbd2b395.compat.webm",
+      "status": [
+        401,
+        401,
+        401
+      ]
+    },
+    {
+      "path": "/previews/recovered/demos/mosaik/draco/draco_decoder.wasm",
+      "status": [
+        401,
+        401,
+        401
+      ]
+    }
+  ],
+  "authenticated": [
+    {
+      "path": "/previews/expanded/21st-84b5c4cf7d2f.html",
+      "status": 200,
+      "range": 206,
+      "mime": "text/html; charset=utf-8",
+      "sha256": "01ec058180f60851301165a03b8ff1a1000848dbf2e07ee8f763f117798aa137"
+    },
+    {
+      "path": "/assets/demo-cache/c721f302e4673e41bbd2b395.compat.webm",
+      "status": 200,
+      "range": 206,
+      "mime": "video/webm",
+      "sha256": "44143820a1e4a199379732dd73b5a17eaae0ee847d80b275398f2c93c127f227"
+    },
+    {
+      "path": "/previews/recovered/demos/mosaik/draco/draco_decoder.wasm",
+      "status": 200,
+      "range": 206,
+      "mime": "application/wasm",
+      "sha256": "0103c8bff79532c2f1a496dd9ea0764ac692ed8585d9136596ef9f043873a61f"
+    },
+    {
+      "path": "/assets/demo-cache/a173a27bb35f6ab1e3f1fa8f.compat.webm",
+      "status": 200,
+      "range": 206,
+      "mime": "video/webm",
+      "sha256": "e0e1a118aeb7445578c5c09b65f1f05473e4e2e4d2933b9b856bdada767f6e09"
+    },
+    {
+      "path": "/previews/recovered/demos/mosaik/draco/draco_wasm_wrapper.js",
+      "status": 200,
+      "range": 206,
+      "mime": "application/javascript; charset=utf-8",
+      "sha256": "b93f6384147828f857456c84845f4dbceada5b7a8455991109c853e236a1f018"
+    }
+  ],
+  "details": [
+    {
+      "id": "21st-8712cd5ba9a6",
+      "route": "/component/hls-video-player-6294ce",
+      "status": 200
+    },
+    {
+      "id": "21st-d17b0be2c3ab",
+      "route": "/component/liquid-aurora-cf2df7",
+      "status": 200
+    },
+    {
+      "id": "21st-5cc4f0384464",
+      "route": "/component/loader-d520a5",
+      "status": 200
+    },
+    {
+      "id": "21st-de702b2d1c88",
+      "route": "/component/loader-10-a48780",
+      "status": 200
+    },
+    {
+      "id": "21st-84b5c4cf7d2f",
+      "route": "/component/mine-e601be",
+      "status": 200
+    },
+    {
+      "id": "21st-000947d76d8c",
+      "route": "/component/oval-eggs-d95097",
+      "status": 200
+    },
+    {
+      "id": "21st-5f81db12ac28",
+      "route": "/component/progress-b07b18",
+      "status": 200
+    },
+    {
+      "id": "21st-d4aa2cb3b048",
+      "route": "/component/rising-ball-2ca251",
+      "status": 200
+    },
+    {
+      "id": "recovered--mosaik",
+      "route": "/component/mosaik-89586b",
+      "status": 200
+    }
+  ],
+  "archives": [
+    {
+      "id": "21st-8712cd5ba9a6",
+      "files": 16,
+      "bytes": 266284,
+      "sha256": "f475787c6abde6d5f3f8eb5116a90ca220841bd270435c73dcc32efb2baee61a"
+    },
+    {
+      "id": "21st-d17b0be2c3ab",
+      "files": 16,
+      "bytes": 88346,
+      "sha256": "b0c8b2617fa018ab1fbb7c6e728c510cfb8411370e0c0ffe71d13cd7d8aa15ea"
+    },
+    {
+      "id": "21st-5cc4f0384464",
+      "files": 16,
+      "bytes": 88700,
+      "sha256": "9bcd5985820f4fe57ff13e8d147b92302575bb6e89e7bc753f43e327d4f96339"
+    },
+    {
+      "id": "21st-de702b2d1c88",
+      "files": 16,
+      "bytes": 97399,
+      "sha256": "387fade081982125987d28a5a9cce38899242f9bfbc1aa6d7dfabaa29cf95162"
+    },
+    {
+      "id": "21st-84b5c4cf7d2f",
+      "files": 21,
+      "bytes": 9962666,
+      "sha256": "0b36b36df03d53bb222a0de82a706b194461ae484f1b9e4a3593018581da35c6"
+    },
+    {
+      "id": "21st-000947d76d8c",
+      "files": 21,
+      "bytes": 8751008,
+      "sha256": "351a9f1fdbf63ea2f212da05c5920cb4be5d211a920d2864bf57e44e82afb71e"
+    },
+    {
+      "id": "21st-5f81db12ac28",
+      "files": 16,
+      "bytes": 88586,
+      "sha256": "9e682fb012133d3cfe44cfb2a91890592056e2957f79e5cb8da6236b9c92a0fc"
+    },
+    {
+      "id": "21st-d4aa2cb3b048",
+      "files": 16,
+      "bytes": 87312,
+      "sha256": "8edc373b335d1235575e05ec8924f3db95ae23cac1a85f30a4cf9866a4be05ac"
+    },
+    {
+      "id": "recovered--mosaik",
+      "files": 46,
+      "bytes": 1118533,
+      "sha256": "a9db26bebdabaf4f892d8d090a73eed76430308bbe2b5355b0ca43d7fb1b3ea1"
+    }
+  ],
+  "cleanup": true,
+  "billingMode": "disabled"
+}

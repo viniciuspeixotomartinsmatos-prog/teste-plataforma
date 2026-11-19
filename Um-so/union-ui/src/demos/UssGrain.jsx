@@ -1,0 +1,22 @@
+import React,{useEffect,useRef,useState} from 'react';
+
+// The upstream video and its poster return 404. This executable reconstruction
+// uses the surviving reference for this same item, with live grain and parallax.
+export default function UssGrain(){
+ const canvas=useRef(null),pointer=useRef({x:0,y:0}),[grain,setGrain]=useState(.35),[playing,setPlaying]=useState(true),settings=useRef({grain,playing});
+ settings.current={grain,playing};
+ useEffect(()=>{
+  const node=canvas.current,context=node.getContext('2d'),image=new Image();let frame=0,stopped=false,last=0;
+  image.src='/assets/thumbnails/recovered/21st-852d57575034.webp';
+  function draw(time){
+   if(stopped)return;frame=requestAnimationFrame(draw);if(!image.complete||!image.naturalWidth||time-last<32)return;if(!settings.current.playing&&last)return;last=time;
+   const width=node.width,height=node.height,shift=pointer.current.x*12,vertical=pointer.current.y*9;
+   context.fillStyle='#12140f';context.fillRect(0,0,width,height);context.save();context.translate(width/2+shift,height/2+vertical);context.rotate(Math.sin(time*.00015)*.004);context.drawImage(image,-width*.515,-height*.515,width*1.03,height*1.03);context.restore();
+   const amount=settings.current.grain;context.globalAlpha=amount*.35;
+   for(let i=0;i<1600;i++){const n=Math.sin(i*127.1+time*.002)*43758.5453,x=(n-Math.floor(n))*width,m=Math.sin(i*311.7+time*.003)*19642.349,y=(m-Math.floor(m))*height;context.fillStyle=i%3?'#0e120c':'#fffde4';context.fillRect(x,y,i%4===0?2:1,1);}
+   context.globalAlpha=1;
+  }
+  frame=requestAnimationFrame(draw);return()=>{stopped=true;cancelAnimationFrame(frame);};
+ },[]);
+ return <section style={{width:'100%',minHeight:'100vh',display:'grid',placeItems:'center',padding:24,background:'#090b08',color:'#f4f5ec'}}><div style={{width:'100%',maxWidth:900}}><canvas ref={canvas} width={1000} height={748} aria-label="Composição com grão animado e paralaxe" onPointerMove={event=>{const rect=event.currentTarget.getBoundingClientRect();pointer.current={x:(event.clientX-rect.left)/rect.width-.5,y:(event.clientY-rect.top)/rect.height-.5};}} onPointerLeave={()=>pointer.current={x:0,y:0}} style={{display:'block',width:'100%',aspectRatio:'1000/748',borderRadius:16}}/><div style={{display:'flex',gap:20,alignItems:'center',justifyContent:'space-between',padding:'18px 0',flexWrap:'wrap'}}><span style={{fontSize:12,opacity:.75}}>Mova o cursor para explorar a luz.</span><label style={{display:'flex',gap:10,fontSize:12,alignItems:'center'}}>Grão<input aria-label="Intensidade do grão" type="range" min="0" max="1" step=".05" value={grain} onChange={event=>setGrain(+event.target.value)}/></label><button onClick={()=>setPlaying(value=>!value)} style={{background:'#252c22',color:'inherit',border:'1px solid #44523a',borderRadius:8,padding:'9px 18px'}}>{playing?'Pausar':'Reproduzir'}</button></div></div></section>;
+}

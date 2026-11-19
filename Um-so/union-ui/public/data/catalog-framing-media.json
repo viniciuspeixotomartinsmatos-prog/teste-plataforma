@@ -1,0 +1,490 @@
+{
+  "21st-0afc9472f37e": {
+    "source": "/assets/thumbnails/21st-captured-e5d451e298ba8a90.png",
+    "captured": true,
+    "size": {
+      "width": 1280,
+      "height": 720
+    },
+    "previewFraming": {
+      "background": "sampled",
+      "color": "#ffffff",
+      "region": {
+        "left": 0.2,
+        "top": 0.34375,
+        "right": 0.8,
+        "bottom": 0.6118055555555556
+      }
+    },
+    "review": false,
+    "variants": [
+      {
+        "src": "/assets/thumbnails/framed/4046254c2c538bf3fe747974-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/thumbnails/framed/4046254c2c538bf3fe747974-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "21st-3d91f7f0af60": {
+    "source": "/assets/thumbnails/21st-3d91f7f0af60.webp",
+    "captured": true,
+    "size": {
+      "width": 1280,
+      "height": 720
+    },
+    "previewFraming": {
+      "background": "sampled",
+      "color": "#000003"
+    },
+    "review": false,
+    "variants": [
+      {
+        "src": "/assets/thumbnails/framed/0db011d7774312e3773b8f30-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/thumbnails/framed/0db011d7774312e3773b8f30-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "21st-41edcaec9f66": {
+    "source": "/assets/thumbnails/21st-captured-7f713e618f0388e3.png",
+    "captured": true,
+    "size": {
+      "width": 1280,
+      "height": 720
+    },
+    "previewFraming": {
+      "background": "sampled",
+      "color": "#ffffff",
+      "region": {
+        "left": 0.15,
+        "top": 0.37083333333333335,
+        "right": 0.85,
+        "bottom": 0.6194444444444445
+      }
+    },
+    "review": false,
+    "variants": [
+      {
+        "src": "/assets/thumbnails/framed/124c3dff5f7a8c89ef6fae54-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/thumbnails/framed/124c3dff5f7a8c89ef6fae54-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "21st-555ef8454bbe": {
+    "source": "/assets/thumbnails/21st-captured-49e6f28b275fc689.png",
+    "captured": true,
+    "size": {
+      "width": 1280,
+      "height": 720
+    },
+    "previewFraming": {
+      "background": "sampled",
+      "color": "#262626",
+      "fit": "custom",
+      "customFit": "cover",
+      "zoom": 1.12,
+      "safeArea": false
+    },
+    "review": false,
+    "variants": [
+      {
+        "src": "/assets/thumbnails/framed/13c3caf37bd7d92eb7f2edb9-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/thumbnails/framed/13c3caf37bd7d92eb7f2edb9-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "21st-653d994b61aa": {
+    "source": "/assets/thumbnails/21st-653d994b61aa.webp",
+    "captured": false,
+    "size": {
+      "width": 384,
+      "height": 288
+    },
+    "previewFraming": {
+      "background": "sampled",
+      "color": "#050505"
+    },
+    "review": true,
+    "variants": [
+      {
+        "src": "/assets/thumbnails/framed/8a1a1e2f9a0e4b777e5c5d5e-384.webp",
+        "width": 384
+      }
+    ]
+  },
+  "21st-7dad5377edb3": {
+    "source": "/assets/thumbnails/21st-captured-b4846644240e16e6.webp",
+    "captured": true,
+    "size": {
+      "width": 1440,
+      "height": 810
+    },
+    "previewFraming": {
+      "background": "neutral",
+      "region": {
+        "left": 0.14444444444444443,
+        "top": 0,
+        "right": 0.9888888888888889,
+        "bottom": 1
+      }
+    },
+    "review": false,
+    "variants": [
+      {
+        "src": "/assets/thumbnails/framed/45b41bd8becd023364cb5211-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/thumbnails/framed/45b41bd8becd023364cb5211-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "21st-7e5bd153ace5": {
+    "source": "/assets/thumbnails/21st-captured-5842470623ca5bd1.png",
+    "captured": true,
+    "size": {
+      "width": 1440,
+      "height": 810
+    },
+    "previewFraming": {
+      "background": "neutral",
+      "region": {
+        "left": 0.022222222222222223,
+        "top": 0.0345679012345679,
+        "right": 0.9833333333333333,
+        "bottom": 0.9851851851851852
+      }
+    },
+    "review": false,
+    "variants": [
+      {
+        "src": "/assets/thumbnails/framed/a81a3996315dd8981aeb6808-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/thumbnails/framed/a81a3996315dd8981aeb6808-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "21st-8017e8c98ea8": {
+    "source": "/assets/thumbnails/21st-captured-9b627f2d69246a7a.png",
+    "captured": true,
+    "size": {
+      "width": 1440,
+      "height": 810
+    },
+    "previewFraming": {
+      "background": "sampled",
+      "color": "#47270e",
+      "region": {
+        "left": 0.18174913194444445,
+        "top": 0.30962213586877896,
+        "right": 0.8182400173611111,
+        "bottom": 0.7975308641975308
+      }
+    },
+    "review": false,
+    "variants": [
+      {
+        "src": "/assets/thumbnails/framed/712486303bf0f6d29023be64-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/thumbnails/framed/712486303bf0f6d29023be64-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "21st-84d474ceb176": {
+    "source": "/assets/thumbnails/21st-84d474ceb176.webp",
+    "captured": true,
+    "size": {
+      "width": 1440,
+      "height": 810
+    },
+    "previewFraming": {
+      "background": "neutral",
+      "region": {
+        "left": 0.23355034722222223,
+        "top": 0.02962962962962963,
+        "right": 0.9444444444444444,
+        "bottom": 0.808641975308642
+      }
+    },
+    "review": false,
+    "variants": [
+      {
+        "src": "/assets/thumbnails/framed/86dc77754dff32c337c34f6b-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/thumbnails/framed/86dc77754dff32c337c34f6b-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "21st-9f3a7a837c19": {
+    "source": "/assets/thumbnails/21st-captured-cfb3a6dac84acef2.png",
+    "captured": false,
+    "size": {
+      "width": 640,
+      "height": 358
+    },
+    "previewFraming": {
+      "background": "sampled",
+      "color": "#fafafa"
+    },
+    "review": false,
+    "variants": [
+      {
+        "src": "/assets/thumbnails/framed/4d0fa4337a7910a9515b103c-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/thumbnails/framed/4d0fa4337a7910a9515b103c-640.webp",
+        "width": 640
+      }
+    ]
+  },
+  "21st-a10e6def9ad1": {
+    "source": "/assets/thumbnails/21st-a10e6def9ad1.webp",
+    "captured": true,
+    "size": {
+      "width": 1280,
+      "height": 720
+    },
+    "previewFraming": {
+      "background": "sampled",
+      "color": "#0b0c0e",
+      "region": {
+        "left": 0.3149658203125,
+        "top": 0.3337604734632704,
+        "right": 0.6850341796875,
+        "bottom": 0.683760494656033
+      },
+      "fit": "custom",
+      "customFit": "cover",
+      "zoom": 1.13,
+      "safeArea": false
+    },
+    "review": false,
+    "variants": [
+      {
+        "src": "/assets/thumbnails/framed/6700fd1b95543862e1899600-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/thumbnails/framed/6700fd1b95543862e1899600-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "21st-ab54688d9f83": {
+    "source": "/assets/thumbnails/21st-captured-7532eb8f2ae9b0f4.png",
+    "captured": true,
+    "size": {
+      "width": 1280,
+      "height": 720
+    },
+    "previewFraming": {
+      "background": "sampled",
+      "color": "#f8f9fa",
+      "region": {
+        "left": 0.45552978515625,
+        "top": 0.6999763488769531,
+        "right": 0.54447021484375,
+        "bottom": 0.7555319044325087
+      }
+    },
+    "review": false,
+    "variants": [
+      {
+        "src": "/assets/thumbnails/framed/683e2a21779322788e3102c1-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/thumbnails/framed/683e2a21779322788e3102c1-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "21st-bf52852fce4f": {
+    "source": "/assets/thumbnails/21st-bf52852fce4f.webp",
+    "captured": false,
+    "size": {
+      "width": 384,
+      "height": 239
+    },
+    "previewFraming": {
+      "background": "sampled",
+      "color": "#040404"
+    },
+    "review": true,
+    "variants": [
+      {
+        "src": "/assets/thumbnails/framed/955267ea4f35950b0d8f9dbf-384.webp",
+        "width": 384
+      }
+    ]
+  },
+  "21st-ebf4e598c148": {
+    "source": "/assets/thumbnails/21st-captured-64998f0149dddd5f.png",
+    "captured": true,
+    "size": {
+      "width": 1440,
+      "height": 810
+    },
+    "previewFraming": {
+      "background": "sampled",
+      "color": "#ffffff",
+      "region": {
+        "left": 0.26666666666666666,
+        "top": 0.24814814814814815,
+        "right": 0.7333333333333333,
+        "bottom": 0.7518518518518519
+      }
+    },
+    "review": false,
+    "variants": [
+      {
+        "src": "/assets/thumbnails/framed/f22a94a45b2ad92501d79fed-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/thumbnails/framed/f22a94a45b2ad92501d79fed-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "aceternity--background-beams": {
+    "source": "/assets/thumbnails/aceternity--background-beams.webp",
+    "captured": true,
+    "size": {
+      "width": 1280,
+      "height": 720
+    },
+    "previewFraming": {
+      "background": "sampled",
+      "color": "#0a0a0a",
+      "region": {
+        "left": 0.29085693359375,
+        "top": 0.2986111111111111,
+        "right": 0.70914306640625,
+        "bottom": 0.5208333333333334
+      }
+    },
+    "review": false,
+    "variants": [
+      {
+        "src": "/assets/thumbnails/framed/c159f56893169ebdfc7bc262-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/thumbnails/framed/c159f56893169ebdfc7bc262-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "kokonut-background-paths": {
+    "source": "/assets/thumbnails/21st-captured-7f713e618f0388e3.png",
+    "captured": true,
+    "size": {
+      "width": 1280,
+      "height": 720
+    },
+    "previewFraming": {
+      "background": "sampled",
+      "color": "#0b0b0d",
+      "region": {
+        "left": 0.35,
+        "top": 0.29444444444444445,
+        "right": 0.65,
+        "bottom": 0.48333333333333334
+      }
+    },
+    "review": false,
+    "variants": [
+      {
+        "src": "/assets/thumbnails/framed/e4ecb5a297c5a0f707ea160e-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/thumbnails/framed/e4ecb5a297c5a0f707ea160e-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "reactbits--magic-bento": {
+    "source": "/assets/thumbnails/reactbits--magic-bento.webp",
+    "captured": true,
+    "size": {
+      "width": 1280,
+      "height": 720
+    },
+    "previewFraming": {
+      "background": "neutral",
+      "region": {
+        "left": 0.03203125,
+        "top": 0.29466145833333335,
+        "right": 0.96796875,
+        "bottom": 0.9097222222222222
+      }
+    },
+    "review": false,
+    "variants": [
+      {
+        "src": "/assets/thumbnails/framed/5c90bc11151270b812b5b043-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/thumbnails/framed/5c90bc11151270b812b5b043-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "tailark-base-dusk-hero-section-8": {
+    "source": "/assets/thumbnails/tailark-base-dusk-hero-section-8.png",
+    "captured": true,
+    "size": {
+      "width": 1440,
+      "height": 810
+    },
+    "previewFraming": {
+      "background": "sampled",
+      "color": "#0e0e10",
+      "region": {
+        "left": 0.07222222222222222,
+        "top": 0.024691358024691357,
+        "right": 0.9277777777777778,
+        "bottom": 0.951520076798804
+      }
+    },
+    "review": false,
+    "variants": [
+      {
+        "src": "/assets/thumbnails/framed/4b223bc23c89826d9e94405e-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/thumbnails/framed/4b223bc23c89826d9e94405e-960.webp",
+        "width": 960
+      }
+    ]
+  }
+}

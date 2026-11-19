@@ -1,0 +1,4 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="842f3b7b-912d-dff3-b4d0-24dadc059ee2")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,563491,e=>{"use strict";var s=e.i(843476),n=e.i(662537),t=e.i(271645);e.s(["default",0,function({error:e,reset:l}){return(0,t.useEffect)(()=>{n.y(e)},[e]),(0,s.jsx)("html",{lang:"pt-BR",children:(0,s.jsx)("body",{children:(0,s.jsxs)("main",{className:"nf",children:[(0,s.jsx)("h1",{className:"nf-title",children:"Algo deu errado."}),(0,s.jsx)("p",{className:"lead",children:"Já fomos avisados. Tente de novo em instantes."}),(0,s.jsx)("button",{className:"btn btn-glass",onClick:l,children:"Tentar de novo"})]})})})}])}]);
+
+//# debugId=842f3b7b-912d-dff3-b4d0-24dadc059ee2

@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><script src="/previews/recovered/compat.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nanquim — casa de tatuagem autoral em BH</title>
+  <meta name="description" content="Quatro artistas, quatro macas. Fine line, blackwork, realismo e autoral, com desenho feito do zero. R. Sapucaí 271, Floresta, Belo Horizonte." />
+  <meta name="theme-color" content="#0a0909" />
+  <link rel="icon" href="/previews/recovered/demos/nanquim/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" as="image" imagesrcset="/previews/recovered/demos/nanquim/img/hero-1536.jpg 1536w, /previews/recovered/demos/nanquim/img/hero-3072.jpg 3072w" imagesizes="(max-aspect-ratio: 3/2) 150vh, 100vw" />
+  <script type="module" crossorigin src="/previews/recovered/demos/nanquim/assets/index-DTgucPd8.js"></script>
+  <link rel="stylesheet" crossorigin href="/previews/recovered/demos/nanquim/assets/index-BVkbtaRA.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- limiar vermelho: foto vira pontos vermelhos sobre preto (rosto da galeria e hover das fotos) -->
+  <svg class="defs" aria-hidden="true" width="0" height="0">
+    <filter id="limiar" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="0.3 0.55 0.15 0 0  0.3 0.55 0.15 0 0  0.3 0.55 0.15 0 0  0 0 0 1 0" result="cinza" />
+      <feTurbulence type="fractalNoise" baseFrequency="0.95" numOctaves="2" seed="7" result="ruido" />
+      <feComposite in="cinza" in2="ruido" operator="arithmetic" k1="0" k2="1.55" k3="0.45" k4="-0.3" result="mix" />
+      <feComponentTransfer in="mix">
+        <feFuncR type="discrete" tableValues="0.035 0.035 0.32 0.88" />
+        <feFuncG type="discrete" tableValues="0.03 0.03 0.05 0.15" />
+        <feFuncB type="discrete" tableValues="0.03 0.03 0.04 0.11" />
+      </feComponentTransfer>
+    </filter>
+  </svg>
+
+  <!-- Nav -->
+  <header class="nav">
+    <a class="nav__logo" href="#estudio" aria-label="Nanquim, início">nanquim</a>
+    <nav class="nav__links" aria-label="Principal">
+      <span class="nav__pill" aria-hidden="true"></span>
+      <a href="#estudio" data-spy="estudio">Estúdio</a>
+      <a href="#artistas" data-spy="artistas">Artistas</a>
+      <a href="#trabalhos" data-spy="trabalhos">Trabalhos</a>
+      <a href="#contato" data-spy="contato">Contato</a>
+    </nav>
+    <a class="btn btn--light nav__cta" href="#contato">Agendar</a>
+    <button class="nav__menu" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+  </header>
+
+  <div class="menu" id="menu" hidden>
+    <nav aria-label="Menu">
+      <a href="#estudio">Estúdio</a>
+      <a href="#artistas">Artistas</a>
+      <a href="#trabalhos">Trabalhos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <p class="caps">R. Sapucaí 271, sala 2 · Floresta<br />Ter a sáb · 11h às 20h</p>
+  </div>
+
+  <main>
+    <!-- Hero / Estúdio -->
+    <section class="hero" id="estudio" aria-label="Nanquim, casa de tatuagem">
+      <div class="hero__photo">
+        <img class="hero__img" src="/previews/recovered/demos/nanquim/img/hero-3072.jpg" srcset="/previews/recovered/demos/nanquim/img/hero-1536.jpg 1536w, /previews/recovered/demos/nanquim/img/hero-3072.jpg 3072w" sizes="(max-aspect-ratio: 3/2) 150vh, 100vw" width="3072" height="2048" fetchpriority="high" alt="Tatuador concentrado, sob luz vermelha, fazendo um botânico em fine line nas costas de um cliente" />
+      </div>
+
+      <p class="hero__manifesto caps" data-scramble>
+        Casa de tatuagem autoral.<br />
+        Quatro artistas, quatro macas.<br />
+        Cada desenho é feito uma vez<br />
+        e não volta pro catálogo.
+      </p>
+      <ul class="hero__styles caps" data-scramble>
+        <li>Fine line</li>
+        <li>Blackwork</li>
+        <li>Realismo</li>
+        <li>Autoral</li>
+      </ul>
+
+      <h1 class="hero__word word" aria-label="Nanquim"><span class="word__inner" aria-hidden="true">nanquim</span></h1>
+
+      <div class="hero__thumb" aria-hidden="true">
+        <div class="hero__slides">
+          <figure class="ink" data-slide><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/w03-juno.jpg" alt="" /><span class="ink__edge"></span></figure>
+          <figure class="ink" data-slide><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/w06-bento.jpg" alt="" /><span class="ink__edge"></span></figure>
+          <figure class="ink" data-slide><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/w08-odara.jpg" alt="" /><span class="ink__edge"></span></figure>
+          <figure class="ink" data-slide><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/w11-caio.jpg" alt="" /><span class="ink__edge"></span></figure>
+        </div>
+        <ol class="hero__bars"><li><i></i></li><li><i></i></li><li><i></i></li><li><i></i></li></ol>
+      </div>
+
+      <p class="hero__city caps">Belo Horizonte, MG</p>
+      <p class="hero__addr caps">R. Sapucaí 271, sala 2 · Floresta</p>
+    </section>
+
+    <!-- A sessão: a tatuagem se faz no braço enquanto a página rola (pin) -->
+    <section class="sessao" id="sessao" aria-label="Como é uma sessão">
+      <div class="sessao__stage">
+        <canvas class="sessao__canvas" aria-hidden="true"></canvas>
+        <img loading="lazy" decoding="async" class="sessao__fallback" src="/previews/recovered/demos/nanquim/sessao/final.jpg" alt="Antebraço com um cravo em fine line envolto por uma fita, de traço fino e pontilhado leve" />
+
+        <div class="sessao__head">
+          <h2 class="wide sessao__title"><span class="line"><span>Sessão</span></span></h2>
+          <p class="caps" data-scramble>Um cravo fine line no antebraço.<br />Quatro horas e vinte de maca.</p>
+          <i class="tick tick--red" aria-hidden="true"></i>
+        </div>
+
+        <div class="sessao__clock">
+          <p class="sessao__time wide" aria-hidden="true">00:00</p>
+          <p class="caps sessao__unit">de sessão</p>
+        </div>
+
+        <ol class="sessao__steps">
+          <li class="step is-active">
+            <p class="step__head caps"><span>01</span> Risco <time>00:00</time></p>
+            <p class="step__text">O desenho é seu, feito do zero. Passa pra pele em decalque e ainda dá pra mexer.</p>
+          </li>
+          <li class="step">
+            <p class="step__head caps"><span>02</span> Traço <time>00:35</time></p>
+            <p class="step__text">Agulha de uma ponta só, linha por linha, de baixo pra cima.</p>
+          </li>
+          <li class="step">
+            <p class="step__head caps"><span>03</span> Sombra <time>02:50</time></p>
+            <p class="step__text">Pontilhado em camadas. Pausa de dez minutos a cada hora.</p>
+          </li>
+          <li class="step">
+            <p class="step__head caps"><span>04</span> Cura <time>21 dias</time></p>
+            <p class="step__text">Filme por três dias, pomada por quinze. Retoque grátis até 60 dias.</p>
+          </li>
+        </ol>
+
+        <ol class="pager sessao__pager" aria-hidden="true"><li class="is-active">01</li><li>02</li><li>03</li><li>04</li></ol>
+      </div>
+    </section>
+
+    <!-- Artistas: dois por tela, troca de par no scroll (pin) -->
+    <section class="artistas" id="artistas" aria-label="Artistas">
+      <div class="artistas__stage">
+
+        <div class="pair is-active" data-pair="0">
+          <article class="artist" data-artist="juno">
+            <div class="artist__photos">
+              <figure class="ink artist__portrait"><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/p-juno.jpg" alt="Juno, de cabelo cacheado preso e cachecol, numa calçada no fim da tarde" /><span class="ink__edge"></span></figure>
+              <figure class="ink"><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/w01-juno.jpg" alt="Orquídea em fine line na clavícula" /><span class="ink__edge"></span></figure>
+              <figure class="ink"><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/w02-juno.jpg" alt="Andorinha com ramo de alecrim no pulso" /><span class="ink__edge"></span></figure>
+            </div>
+            <header class="artist__head">
+              <h3 class="artist__name"><span class="line"><span>Juno</span></span></h3>
+              <p class="artist__tag caps">Tatuadora • Fine line</p>
+            </header>
+            <p class="artist__bio">Traço de uma agulha só, botânico e miúdo. Desenha cada peça a partir de meia hora de conversa e de uma foto do lugar do corpo.</p>
+            <p class="artist__facts caps">Agenda: novembro · a partir de R$ 500</p>
+            <i class="tick" aria-hidden="true"></i>
+            <a class="artist__link caps" href="#trabalhos" data-filter="juno">Ver trabalhos <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="artist" data-artist="bento">
+            <div class="artist__photos">
+              <figure class="ink artist__portrait"><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/p-bento.jpg" alt="Bento, de cabeça raspada e barba, com blackwork no pescoço, sob flash" /><span class="ink__edge"></span></figure>
+              <figure class="ink"><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/w05-bento.jpg" alt="Blackwork de pinceladas e respingos no braço" /><span class="ink__edge"></span></figure>
+              <figure class="ink"><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/w04-bento.jpg" alt="Faixa de espinhos em blackwork na panturrilha" /><span class="ink__edge"></span></figure>
+            </div>
+            <header class="artist__head">
+              <h3 class="artist__name"><span class="line"><span>Bento</span></span></h3>
+              <p class="artist__tag caps">Tatuador • Blackwork</p>
+            </header>
+            <p class="artist__bio">Preto chapado, pincel e espinho. Faz peça grande em duas ou três sessões e não repete desenho de outro corpo.</p>
+            <p class="artist__facts caps">Agenda: janeiro · a partir de R$ 900</p>
+            <i class="tick" aria-hidden="true"></i>
+            <a class="artist__link caps" href="#trabalhos" data-filter="bento">Ver trabalhos <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+
+        <div class="pair" data-pair="1">
+          <article class="artist" data-artist="odara">
+            <div class="artist__photos">
+              <figure class="ink artist__portrait"><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/p-odara.jpg" alt="Odara, de tranças e óculos redondos, desenhando sob luz alaranjada" /><span class="ink__edge"></span></figure>
+              <figure class="ink"><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/w07-odara.jpg" alt="Retrato realista de uma senhora de lenço no antebraço" /><span class="ink__edge"></span></figure>
+              <figure class="ink"><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/w09-odara.jpg" alt="Retrato realista de um cachorro no braço" /><span class="ink__edge"></span></figure>
+            </div>
+            <header class="artist__head">
+              <h3 class="artist__name"><span class="line"><span>Odara</span></span></h3>
+              <p class="artist__tag caps">Tatuadora • Realismo</p>
+            </header>
+            <p class="artist__bio">Retrato em preto e cinza: gente, bicho, casa de infância. Pede três fotos de referência e devolve um estudo em sete dias.</p>
+            <p class="artist__facts caps">Agenda: dezembro · a partir de R$ 1.200</p>
+            <i class="tick" aria-hidden="true"></i>
+            <a class="artist__link caps" href="#trabalhos" data-filter="odara">Ver trabalhos <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="artist" data-artist="caio">
+            <div class="artist__photos">
+              <figure class="ink artist__portrait"><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/p-caio.jpg" alt="Caio, de chapéu e óculos de aro fino, protegendo os olhos do sol" /><span class="ink__edge"></span></figure>
+              <figure class="ink is-color"><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/w10-caio.jpg" alt="Cavalo correndo em rabisco de tinta vermelha no antebraço" /><span class="ink__edge"></span></figure>
+              <figure class="ink"><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/w11-caio.jpg" alt="Eclipse em pontilhismo no braço" /><span class="ink__edge"></span></figure>
+            </div>
+            <header class="artist__head">
+              <h3 class="artist__name"><span class="line"><span>Caio</span></span></h3>
+              <p class="artist__tag caps">Tatuador • Autoral</p>
+            </header>
+            <p class="artist__bio">Rabisco solto, pontilhado e tinta vermelha. Traz um caderno de desenhos próprios; o seu desenho entra nele.</p>
+            <p class="artist__facts caps">Agenda: aberta · a partir de R$ 600</p>
+            <i class="tick" aria-hidden="true"></i>
+            <a class="artist__link caps" href="#trabalhos" data-filter="caio">Ver trabalhos <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+
+        <ol class="pager artistas__pager" aria-hidden="true"><li class="is-active">01</li><li>02</li></ol>
+      </div>
+    </section>
+
+    <!-- Trabalhos: galeria que corre na horizontal (pin) -->
+    <section class="galeria" id="trabalhos" aria-label="Trabalhos">
+      <div class="galeria__stage">
+        <header class="galeria__head">
+          <h2 class="wide galeria__title"><span class="line"><span>Galeria</span></span></h2>
+          <p class="galeria__sub caps" data-scramble>Tatuagens feitas<br />aqui, em BH.</p>
+          <p class="galeria__a caps" data-scramble>Nenhuma<br />se repete.</p>
+          <figure class="galeria__face" aria-hidden="true">
+            <img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/rosto.jpg" alt="" />
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+              <line x1="0" y1="10" x2="0.6" y2="100" />
+              <line x1="-4" y1="38" x2="56" y2="49" />
+              <line x1="36" y1="98" x2="104" y2="92" />
+              <line x1="64" y1="-2" x2="62" y2="40" />
+            </svg>
+          </figure>
+          <p class="galeria__b caps" data-scramble>Corpos<br />Histórias<br />Traços<br />Pessoas</p>
+        </header>
+
+        <div class="galeria__rail">
+          <div class="galeria__track">
+            <div class="col col--lead">
+              <figure class="work ink" data-artist="odara"><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/w07-odara.jpg" alt="Retrato realista de uma senhora de lenço no antebraço" /><span class="ink__edge"></span><img loading="lazy" decoding="async" class="work__red" src="/previews/recovered/demos/nanquim/img/w07-odara.jpg" alt="" aria-hidden="true" /><figcaption class="caps">Odara · Realismo · 6 h</figcaption></figure>
+              <div class="col__foot">
+                <i class="tick tick--red" aria-hidden="true"></i>
+                <p class="caps">Diferentes traços.<br />Mesmo cuidado.</p>
+              </div>
+            </div>
+            <div class="col col--three">
+              <figure class="work ink" data-artist="juno"><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/w01-juno.jpg" alt="Orquídea em fine line na clavícula" /><span class="ink__edge"></span><img loading="lazy" decoding="async" class="work__red" src="/previews/recovered/demos/nanquim/img/w01-juno.jpg" alt="" aria-hidden="true" /><figcaption class="caps">Juno · Fine line · 2 h</figcaption></figure>
+              <figure class="work ink" data-artist="caio"><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/w11-caio.jpg" alt="Eclipse em pontilhismo no braço" /><span class="ink__edge"></span><img loading="lazy" decoding="async" class="work__red" src="/previews/recovered/demos/nanquim/img/w11-caio.jpg" alt="" aria-hidden="true" /><figcaption class="caps">Caio · Pontilhismo · 3 h</figcaption></figure>
+              <figure class="work ink" data-artist="bento"><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/w04-bento.jpg" alt="Faixa de espinhos em blackwork na panturrilha" /><span class="ink__edge"></span><img loading="lazy" decoding="async" class="work__red" src="/previews/recovered/demos/nanquim/img/w04-bento.jpg" alt="" aria-hidden="true" /><figcaption class="caps">Bento · Blackwork · 4 h</figcaption></figure>
+            </div>
+            <div class="col col--tall-top">
+              <figure class="work ink" data-artist="bento"><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/w05-bento.jpg" alt="Blackwork de pinceladas e respingos no braço" /><span class="ink__edge"></span><img loading="lazy" decoding="async" class="work__red" src="/previews/recovered/demos/nanquim/img/w05-bento.jpg" alt="" aria-hidden="true" /><figcaption class="caps">Bento · Blackwork · 7 h</figcaption></figure>
+              <figure class="work ink" data-artist="odara"><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/w08-odara.jpg" alt="Onça-pintada realista na coxa" /><span class="ink__edge"></span><img loading="lazy" decoding="async" class="work__red" src="/previews/recovered/demos/nanquim/img/w08-odara.jpg" alt="" aria-hidden="true" /><figcaption class="caps">Odara · Realismo · 8 h</figcaption></figure>
+            </div>
+            <div class="col col--tall-bottom">
+              <figure class="work ink" data-artist="juno"><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/w02-juno.jpg" alt="Andorinha com ramo de alecrim no pulso" /><span class="ink__edge"></span><img loading="lazy" decoding="async" class="work__red" src="/previews/recovered/demos/nanquim/img/w02-juno.jpg" alt="" aria-hidden="true" /><figcaption class="caps">Juno · Fine line · 1 h</figcaption></figure>
+              <figure class="work ink" data-artist="caio"><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/w10-caio.jpg" alt="Cavalo correndo em rabisco de tinta vermelha no antebraço" /><span class="ink__edge"></span><img loading="lazy" decoding="async" class="work__red" src="/previews/recovered/demos/nanquim/img/w10-caio.jpg" alt="" aria-hidden="true" /><figcaption class="caps">Caio · Autoral · 3 h</figcaption></figure>
+            </div>
+            <div class="col col--one">
+              <figure class="work ink" data-artist="odara"><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/w09-odara.jpg" alt="Retrato realista de um cachorro no braço" /><span class="ink__edge"></span><img loading="lazy" decoding="async" class="work__red" src="/previews/recovered/demos/nanquim/img/w09-odara.jpg" alt="" aria-hidden="true" /><figcaption class="caps">Odara · Realismo · 5 h</figcaption></figure>
+            </div>
+            <div class="col col--two">
+              <figure class="work ink" data-artist="juno"><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/w03-juno.jpg" alt="Três ramos de lavanda descendo pela coluna" /><span class="ink__edge"></span><img loading="lazy" decoding="async" class="work__red" src="/previews/recovered/demos/nanquim/img/w03-juno.jpg" alt="" aria-hidden="true" /><figcaption class="caps">Juno · Botânico · 3 h</figcaption></figure>
+              <figure class="work ink" data-artist="caio"><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/w12-caio.jpg" alt="Duas mãos quase se tocando em rabisco preto e vermelho na costela" /><span class="ink__edge"></span><img loading="lazy" decoding="async" class="work__red" src="/previews/recovered/demos/nanquim/img/w12-caio.jpg" alt="" aria-hidden="true" /><figcaption class="caps">Caio · Autoral · 4 h</figcaption></figure>
+            </div>
+            <div class="col col--one">
+              <figure class="work ink" data-artist="bento"><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/w06-bento.jpg" alt="Ornamental de espinhos em blackwork descendo pela nuca" /><span class="ink__edge"></span><img loading="lazy" decoding="async" class="work__red" src="/previews/recovered/demos/nanquim/img/w06-bento.jpg" alt="" aria-hidden="true" /><figcaption class="caps">Bento · Ornamental · 5 h</figcaption></figure>
+            </div>
+          </div>
+        </div>
+
+        <button class="galeria__filter caps" type="button" hidden>Só <span></span> <span aria-hidden="true">✕</span></button>
+        <ol class="pager galeria__pager" aria-hidden="true"><li class="is-active">01</li><li>02</li><li>03</li><li>04</li></ol>
+        <p class="galeria__city caps">Belo<br />Horizonte<br />BR</p>
+      </div>
+    </section>
+
+    <!-- Contato: monta o pedido e manda pelo WhatsApp -->
+    <section class="contato" id="contato" aria-label="Agendar">
+      <div class="contato__head">
+        <h2 class="wide contato__title word"><span class="word__inner">Agendar</span></h2>
+        <p class="caps" data-scramble>Orçamento em até 48 h,<br />pelo WhatsApp.</p>
+      </div>
+
+      <form class="pedido" action="https://wa.me/5531990000271" method="get" target="_blank" rel="noopener">
+        <fieldset class="pedido__step">
+          <legend class="caps"><span>01</span> Com quem</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="artista" value="Juno" checked /><span>Juno</span></label>
+            <label class="chip"><input type="radio" name="artista" value="Bento" /><span>Bento</span></label>
+            <label class="chip"><input type="radio" name="artista" value="Odara" /><span>Odara</span></label>
+            <label class="chip"><input type="radio" name="artista" value="Caio" /><span>Caio</span></label>
+            <label class="chip"><input type="radio" name="artista" value="" /><span>Tanto faz</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="pedido__step">
+          <legend class="caps"><span>02</span> Onde no corpo</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="onde" value="antebraço" checked /><span>Antebraço</span></label>
+            <label class="chip"><input type="radio" name="onde" value="braço" /><span>Braço</span></label>
+            <label class="chip"><input type="radio" name="onde" value="costas" /><span>Costas</span></label>
+            <label class="chip"><input type="radio" name="onde" value="costela" /><span>Costela</span></label>
+            <label class="chip"><input type="radio" name="onde" value="perna" /><span>Perna</span></label>
+            <label class="chip"><input type="radio" name="onde" value="pescoço" /><span>Pescoço</span></label>
+            <label class="chip"><input type="radio" name="onde" value="outro lugar" /><span>Outro</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="pedido__step">
+          <legend class="caps"><span>03</span> Tamanho</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="tamanho" value="até 5 cm" /><span>Até 5 cm</span></label>
+            <label class="chip"><input type="radio" name="tamanho" value="de 5 a 15 cm" checked /><span>5 a 15 cm</span></label>
+            <label class="chip"><input type="radio" name="tamanho" value="de 15 a 30 cm" /><span>15 a 30 cm</span></label>
+            <label class="chip"><input type="radio" name="tamanho" value="fechamento" /><span>Fechamento</span></label>
+          </div>
+        </fieldset>
+        <div class="pedido__step">
+          <label class="caps pedido__label" for="ideia"><span>04</span> A ideia</label>
+          <textarea id="ideia" name="ideia" rows="2" maxlength="240" placeholder="Conta em duas linhas. Referência você manda depois, no WhatsApp."></textarea>
+        </div>
+
+        <div class="pedido__out">
+          <p class="caps pedido__label"><span>→</span> Sua mensagem</p>
+          <p class="pedido__msg" aria-live="polite"></p>
+          <input type="hidden" name="text" />
+          <button class="btn btn--red" type="submit">Mandar no WhatsApp <span aria-hidden="true">↗</span></button>
+        </div>
+      </form>
+
+      <ul class="regras caps">
+        <li><span>Sinal</span> R$ 150, abatido no valor final</li>
+        <li><span>Mínimo</span> R$ 500 por sessão</li>
+        <li><span>Retoque</span> Grátis até 60 dias</li>
+        <li><span>Idade</span> Só maiores de 18, com documento</li>
+        <li><span>Horário</span> Ter a sáb · 11h às 20h</li>
+        <li><span>Endereço</span> R. Sapucaí 271, sala 2 · Floresta</li>
+      </ul>
+
+      <figure class="contato__foto" aria-hidden="true">
+        <div class="contato__crop"><img loading="lazy" decoding="async" src="/previews/recovered/demos/nanquim/img/hero-1536.jpg" alt="" /></div>
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+          <line x1="8" y1="-4" x2="5" y2="104" />
+          <line x1="-4" y1="70" x2="104" y2="78" />
+        </svg>
+        <figcaption class="caps">Maca 2 · terça, 15h</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__row caps">
+      <p>Casa de tatuagem autoral<br />Belo Horizonte, MG</p>
+      <p>R. Sapucaí 271, sala 2<br />Floresta</p>
+      <p><a href="https://wa.me/5531990000271" target="_blank" rel="noopener">WhatsApp (31) 99000-0271</a><br /><a href="#">Instagram ↗</a></p>
+      <p>© 2026 Nanquim<br />Todos os desenhos são dos artistas</p>
+    </div>
+    <p class="footer__word word" aria-hidden="true"><span class="word__inner">nanquim</span></p>
+  </footer>
+</body>
+</html>

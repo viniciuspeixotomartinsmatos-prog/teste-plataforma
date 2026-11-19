@@ -1,0 +1,1583 @@
+{
+  "checkedAt": "2026-11-11T18:47:41.366Z",
+  "environment": "http://127.0.0.1:4411",
+  "batch": {
+    "start": 0,
+    "end": 60,
+    "selected": 10679,
+    "total": 10679,
+    "catalogSha256": "c4524292c21b673537bb561eaa7c1dc2cb3c8fac4d068037faea08bd7e477e07",
+    "commit": "1214db1fa5700bb5ba9537cba5c1775f6e9edce9"
+  },
+  "scope": "First paint, video time advancing and bounded synthetic tab/canvas events; not complete manual interaction acceptance.",
+  "records": [
+    {
+      "id": "magic--android",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Android",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:02.620Z",
+      "sourceDocumentSha256": "70bcd7a9148e94b85e65badec1b1bb47f4616b4affc4969df9a8a60ec44479ac",
+      "preparedDocumentSha256": "496029602d096f54d930f96adb6d4aba563bd5bdc32f822183fc067558d5e540",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--warp-background",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Congratulations on Your Promotion!\nYour hard work and dedication have paid off. We're thrilled to see you take this next step in your career. Keep up the fantas",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Warp Background",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:03.315Z",
+      "sourceDocumentSha256": "a43b7996ef337dc97f73997acbc1ecd890f86b17c215ed63dd367272c3fd27ab",
+      "preparedDocumentSha256": "8db68bc6c5eadc453fb452fa139a7e50dc9cd5d29d69e0d79395e1b6bd377100",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--magic-card",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Login\nEnter your credentials to access your account\nEmail\nPassword\nSign In",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Magic Card",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:03.374Z",
+      "sourceDocumentSha256": "50f1c1c098e76a3e516b9382e2f4184e47d65a7569ad1cabeb74a8933c5ad261",
+      "preparedDocumentSha256": "ec62764b0903e097f1d0101332e82ef7f89930286b6607999d0b4b31bffd2d63",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--line-shadow-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "ShipFast",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Line Shadow Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:05.757Z",
+      "sourceDocumentSha256": "2e950b75f097ba09c2f2822328dbfe482ef7ca2855ba684013a4934ded608507",
+      "preparedDocumentSha256": "6a8b6e98dad3fa8ea74ae33e64c2856725a5f654371e639a3f4d4d05313649d0",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--aurora-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Ship \nbeautiful\nbeautiful",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Aurora Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:06.198Z",
+      "sourceDocumentSha256": "ee16d10670804c83e12af75e80adc0eeecf57303bbf29812149249b6f4fc4b3b",
+      "preparedDocumentSha256": "878f6fa10f0bf589ba6c07071394c41570e172aeaa2d27768b6417552612c2ee",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--morphing-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Hello\nMorphing",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Morphing Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:06.293Z",
+      "sourceDocumentSha256": "d6513a82735fa1eb0c5636f25c572999608764997571c3903b31119c67a8041d",
+      "preparedDocumentSha256": "4efbcc92cef9152d9a8cf4bbd42316748a486f7d13ecf3a68ecfd83e6d610ed6",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--scroll-progress",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Note: The scroll progress is shown below the navbar of the page.",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Scroll Progress",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:08.979Z",
+      "sourceDocumentSha256": "4a39d798b7a592f99466d833d4e1519b4ef372c2338c2c6150ed2e233acbbf5b",
+      "preparedDocumentSha256": "f213e002f9d1250d484fad7f11f37b51bea47bf3f00a82aa8b8b099393d56df2",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--lens",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Your next camp\nSee our latest and best camp destinations all across the five continents of the globe.\nLet's go\nAnother time",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Lens",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:09.977Z",
+      "sourceDocumentSha256": "77081e464c391fd6f67c932efd432999ef293e89663c13ffbf17cdcbead5c433",
+      "preparedDocumentSha256": "28ab07c8c1db6642d5d13cdcff478317f8e000899860acb99103c5daf80156e2",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--pointer",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Animated Pointer\n\nAnimated pointer\n\nColored Pointer\n\nA custom pointer with different color\n\nCustom Shape\n\nA pointer with a custom SVG shape\n\nEmoji Pointer\n\nUsin",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Pointer",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:10.054Z",
+      "sourceDocumentSha256": "c24ad67a8e1eefff089006428e1d0e21bbb564263ac8a5909939d355e4633ce5",
+      "preparedDocumentSha256": "745e487b908ab1c2979b67498b78be92d696c6f08b3e9f0892c37212e125813c",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--smooth-cursor",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "Move your mouse around",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Smooth Cursor",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:11.946Z",
+      "sourceDocumentSha256": "f40c34ddd8af111e41e5af6740aafa5d8fb3f3c0bb08bf994e61e06683f01bdd",
+      "preparedDocumentSha256": "90ca8b7b4b33eb2050d8f8ea77f81e3e22238a536f5e2aac61dbe7b6df1d3d45",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--progressive-blur",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Progressive Blur",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:13.805Z",
+      "sourceDocumentSha256": "546c5a0854f406c6546bfc821018499c0cce94cb4ec28aacfa77202b988f8349",
+      "preparedDocumentSha256": "ce63c8e50e555afc267201a5aacff61e746b04e824e2d782ec7c219d89105de8",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--neon-gradient-card",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Neon Gradient Card",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Neon Gradient Card",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:14.157Z",
+      "sourceDocumentSha256": "4611e4d7a6e389f67240eb7a154ab5c444d55744cc2d56194def9ca4b83ac681",
+      "preparedDocumentSha256": "3c73fe91a912aed71927dc979d2f9af9d85bf763bd28c886d0361950f62eef5f",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--noise-texture",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Noise Texture",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:16.216Z",
+      "sourceDocumentSha256": "ee0794fb4904660b9db9a396723a37698977aeb1b7c22169133c522ede88840f",
+      "preparedDocumentSha256": "b14bb1688a480f3073766e355fa7911df087ac2f55261b87013485d66d63beb3",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--meteors",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Meteors",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Meteors",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:16.436Z",
+      "sourceDocumentSha256": "863c29cdc45bf67aab9d25150c46f7a82c2c36dc430c48e4a88eb36a96375618",
+      "preparedDocumentSha256": "57502b24576b2d0dc1f884634b91a79281907eb80326015d1d442f227fc3079c",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--grid-pattern",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 2,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Grid Pattern",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:16.655Z",
+      "sourceDocumentSha256": "d0233d3c37e105aebd7f47bfd3d577e435c97e9192571b521629614fe26680df",
+      "preparedDocumentSha256": "aead88f8437439b00dce87b81b8e735cb2f4141e2b2921f69f5c8cf9faca3896",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--hexagon-pattern",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 2,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Hexagon Pattern",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:18.909Z",
+      "sourceDocumentSha256": "d6e85f75079871e6ed4c116f60e8c2581b5de36dc04907fe8f64eab9fc88bcf1",
+      "preparedDocumentSha256": "c97189f80a219cc517222779d840554f661259ccb00c068dd46e929912651760",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--striped-pattern",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Striped Pattern",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:19.141Z",
+      "sourceDocumentSha256": "c339c5c98fbd24ec1afe9ad3032d8cb08bd283c4ce340a007570d7fa13eb9beb",
+      "preparedDocumentSha256": "c83c16e783dc3688353f8fac810f1ca00f27cf5b44d027f5cafb7ce6858cb3ae",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--interactive-grid-pattern",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Interactive Grid Pattern",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:19.382Z",
+      "sourceDocumentSha256": "d21db907c4e4303dd1882e83b8c4877d668500f2c288a76ee6b62944885f87d5",
+      "preparedDocumentSha256": "1a28975e68489f3e4185756e1dd5ab89a9c957594e30edd049bb96c91d263cba",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--dot-pattern",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Dot Pattern",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:22.726Z",
+      "sourceDocumentSha256": "43bd80f288a9f85b0b6b9301fb218f80e1a1576cca2866f540095293ef4f55e6",
+      "preparedDocumentSha256": "f809112d3fba8a799e126d844568f72e9d2b095d5c3452199ebba263635a3057",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--hero-video-dialog",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Hero Video Dialog",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:22.911Z",
+      "sourceDocumentSha256": "94ff26bf6d17ca12539de8ffb0de60e141456b98b25fa25f23242970c2dd2abb",
+      "preparedDocumentSha256": "9eba2635e2c1051a263c58c9fcc668625cd0354acb60aedc40ae94931faf3a7f",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--flickering-grid",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1000,
+          "height": 1000,
+          "signature": 3661500113,
+          "lit": 64
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "signature": 4002468114,
+          "lit": 64
+        },
+        "after": {
+          "signature": 3661500113,
+          "lit": 64
+        },
+        "changed": true
+      },
+      "name": "Flickering Grid",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:24.122Z",
+      "sourceDocumentSha256": "503aa797417adbcd2665d688fa64931d530237e677cde930327207ddd60ff3bf",
+      "preparedDocumentSha256": "23bb2fccd2a3757b4754f5c72684f7db1192da09bf142289ae129f6575f51150",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--marquee",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Jack\n\n@jack\n\nI've never seen anything like this before. It's amazing. I love it.\nJill\n\n@jill\n\nI don't know what to say. I'm speechless. This is amazing.\nJohn\n\n@",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Marquee",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:26.322Z",
+      "sourceDocumentSha256": "7521721f5986fc66de7a18a7a84561e9acfb13812a1a1ac9b5802c0634bf50a2",
+      "preparedDocumentSha256": "834c37ee1258c96e42fbb5f6d19d07c3004fa2035c1bc6d0e6ee88498ec6ccd3",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--globe",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 2400,
+          "height": 2400,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "Globe",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Globe",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:28.538Z",
+      "sourceDocumentSha256": "14c2e975fb34d1ffc1a766a9cf8c092290c7036bfdfe2c4a0f72027856e9935f",
+      "preparedDocumentSha256": "c3011241813d3abc1e45e711836a898a11e7af3e3fe8ddb67f4c1e3c7d9af036",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--code-comparison",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 2,
+      "text": "middleware.ts\nbefore\nimport { NextRequest } from 'next/server';\n\nexport const middleware = async (req: NextRequest) => {\n  let user = undefined;\n  let team = un",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Code Comparison",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:35.720Z",
+      "sourceDocumentSha256": "9d9ed46ee7e4bd34d75a23fc0748caa6b1cdeb0da03e647f96af9e7c7e5e4b81",
+      "preparedDocumentSha256": "9c8851bf6c25a759bdea78d321f843dc8dc8135bf3e05f3d57b09cc85d9efb1d",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--glare-hover",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 4,
+      "text": "Pro\nPopular\nFor teams that need more.\n$49\n/mo\nUnlimited projects\nTeam collaboration\nAdvanced analytics\nSSO (coming soon)\nGet started",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Glare Hover",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:36.381Z",
+      "sourceDocumentSha256": "6295cbc8543b2624f73d50fe63d4d8bce6ca33a3844ad5a2e80ad5a2f68ca1d4",
+      "preparedDocumentSha256": "5304410913c8cc5612f7d7bd7e7b4f6c104c60e81a0f0668cd1ed762bef67b1e",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--shimmer-button",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Shimmer Button",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Shimmer Button",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:38.115Z",
+      "sourceDocumentSha256": "2f1efdf812427b557d1c38f3bae2ad570cb6dd2d0fbff5c9de28c5094c3b3400",
+      "preparedDocumentSha256": "90e549edee2670382e95201030e10bf95887482083ce180398b9b615a9122e08",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--tweet-card",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [
+        {
+          "loaded": true,
+          "advanced": true,
+          "before": 0,
+          "time": 0.0697,
+          "width": 480,
+          "height": 270,
+          "error": false,
+          "src": "https://video.twimg.com/ext_tw_video/1668388166598787079/pu/pl/jH_-zF5KwTei1htv.m3u8",
+          "capabilities": {
+            "nativeHls": "maybe",
+            "avc": "probably",
+            "mseAvc": true,
+            "vp9": "probably"
+          }
+        }
+      ],
+      "canvases": [],
+      "svg": 2,
+      "text": "Dillion\n@dillionverma\nLink to tweet\nCompanies spend $30,000+ and several weeks to build beautiful landing pages like @linear, @wopehq and @reflectnotes ✨I built",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Tweet Card",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:39.260Z",
+      "sourceDocumentSha256": "5f2c61eb5ef856ee1a8c17b6cbedb20f865ae18e6427b77634bb2e65a678124a",
+      "preparedDocumentSha256": "590c9e34ccf22c670575d86db45b3158c76e52df1b361118eff445a6a49ea050",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--particles",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1200,
+          "height": 900,
+          "signature": 0,
+          "lit": 0
+        }
+      ],
+      "svg": 0,
+      "text": "MOVIMENTO EM CADA DETALHE\n\nPartículas.\n\nMova o cursor. O espaço acompanha você.",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "signature": 0,
+          "lit": 0
+        },
+        "after": {
+          "signature": 0,
+          "lit": 0
+        },
+        "changed": false
+      },
+      "name": "Particles",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:39.809Z",
+      "sourceDocumentSha256": "400f14b00053ff381b34afcf1ba127776f734668ba6836f75b9f317448350921",
+      "preparedDocumentSha256": "f63b73845478d3476c81ef539f2fe974c6e89780c8d534c77a39fe94d3dedd06",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--number-ticker",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "88",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Number Ticker",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:42.010Z",
+      "sourceDocumentSha256": "6c9542f2b3f48c1d433e2e84e43d7416e4a8e7b89c606da8f7ef3fe32df1b485",
+      "preparedDocumentSha256": "db8b7367786e99263c00d113208d5d87f2c068a0dcceb899113cde023460550f",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--ripple",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Ripple",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Ripple",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:42.238Z",
+      "sourceDocumentSha256": "013a15205feb72526623ba3cfee9ed717a52fa8a7f12c10e521aa61e00afd8e4",
+      "preparedDocumentSha256": "e0323762ed364a782dc4ffffefc9c6ac5ed2caaffe5ca6d695c44d19ec1908b2",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--retro-grid",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1117,
+          "height": 622,
+          "gpu": true
+        }
+      ],
+      "svg": 0,
+      "text": "Retro Grid",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "gpu": true
+        },
+        "after": {
+          "gpu": true
+        },
+        "changed": null
+      },
+      "name": "Retro Grid",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:44.611Z",
+      "sourceDocumentSha256": "893595f6306867f4260289a72ac6fb87c917c09bd42d8f8b339027ff789e903e",
+      "preparedDocumentSha256": "c23d9c19cf7b2253cc7b6570bf5ced1ac29e331a7a58e305fe69728b6c8dae7a",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--animated-list",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "👤\nUser signed up\n·\n10m ago\n\nMagic UI\n\n💸\nPayment received\n·\n15m ago\n\nMagic UI",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Animated List",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:45.251Z",
+      "sourceDocumentSha256": "2ae4f456bf7307d36d521283060c9c48315cd02226dffc668f9a8ad51778f46e",
+      "preparedDocumentSha256": "d48e796d65dccfd34c90557c880bb34c008cb5b824762778be103c1fe5ff461d",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--animated-shiny-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "✨ Introducing Magic UI",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Animated Shiny Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:47.141Z",
+      "sourceDocumentSha256": "427a2c947a37707eb625faa50375d1566ac09558435ad225beda22dc47a08364",
+      "preparedDocumentSha256": "d3270837804bef1f0641ececb60e74b6595a57df6a92cb5cd4f632fe25525684",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--animated-grid-pattern",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 2,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Animated Grid Pattern",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:48.423Z",
+      "sourceDocumentSha256": "85c9308874acead7c82ee9d7aca7cc9ede898044050c64dd724c80a514082796",
+      "preparedDocumentSha256": "4ffce630f23f131b35751f70a02aef2801baaa0e14d63f9e98a6ad9a32c7b7c8",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--border-beam",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Login\nEnter your credentials to access your account.\nEmail\nPassword\nRegister\nLogin",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Border Beam",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:51.551Z",
+      "sourceDocumentSha256": "bf726aba8db8abdfdfeb03a14f94f995cf72d7f461feac5cb1b615c46db212d7",
+      "preparedDocumentSha256": "4080bf75b8d833645fd64b8914d20e85a0d98fd631312d75ba8fcc863eda7400",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--animated-beam",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 13,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Animated Beam",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:52.166Z",
+      "sourceDocumentSha256": "17f5c92fa104cc37cc4b9c598ec4cb158dcfed41ca7e47c7d0d1e61e65e80a86",
+      "preparedDocumentSha256": "0fa6854f54a6ddf07efd9af8eae4005c387bc61965fcaa445fa52b93d1b95444",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--text-reveal",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Magic\nMagic\nUI\nUI\nwill\nwill\nchange\nchange\nthe\nthe\nway\nway\nyou\nyou\ndesign.\ndesign.",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Text Reveal",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:54.561Z",
+      "sourceDocumentSha256": "c58e269571a795cb92c47e9bed97b867e2db6173bab2afffde8cf2cf2c72ff7d",
+      "preparedDocumentSha256": "f45660ea1fd362338662de46e1e1fb3926e24c8be13c4586851f9906ca8dd746",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--dia-text-reveal",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Magic UI",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Dia Text Reveal",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:54.856Z",
+      "sourceDocumentSha256": "5374af2b4641637dac742274ebeb45d97c517c1dda6a759a348ef8fee31ba16c",
+      "preparedDocumentSha256": "4989d8fe187a9647fa6ac8f58cf9fcb616facd6e67dd36eebca86ca3900872a0",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--animated-gradient-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "🎉\nIntroducing Magic UI",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Animated Gradient Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:57.478Z",
+      "sourceDocumentSha256": "d9d3eb3eaae47ecf914de9474bdf303732b0e2d56e2c8c8056079a28605ce707",
+      "preparedDocumentSha256": "35386f1ef0d4884afc6a2fcfd3f63f7834c765d0a552da2f419b0ca3d8bb99ff",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--hyper-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "HOVER ME!",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Hyper Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:57.612Z",
+      "sourceDocumentSha256": "722f455ecd4c9881229c9f99f9388184cb4ae933e22f3014af1b7826e70ad742",
+      "preparedDocumentSha256": "f71b4be39a4ef95e5fe0c0156b8d0a61cc302db58ad39f40aa3c3adf6e8cb3e5",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--orbiting-circles",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 11,
+      "text": "",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Orbiting Circles",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:45:59.746Z",
+      "sourceDocumentSha256": "c37f8514954d9032e8388a0d088ceecc992dd203c734572e15f835d2e86de524",
+      "preparedDocumentSha256": "6f5f3a9f42090cd5d0ac8e25cfc92b4f84a3f1403d36c2ddee0bcd2e2c8a6c0a",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--dock",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 6,
+      "text": "Dock",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Dock",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:46:00.726Z",
+      "sourceDocumentSha256": "6ae5592291e260a905538e6da925208826bb46f6922d75c59c48141e6ddc41b3",
+      "preparedDocumentSha256": "88e24defd4021749f7f31a8402a63031c81d21cd5036e4d3fdfe885172e25a41",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--word-rotate",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Word",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Word Rotate",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:46:02.576Z",
+      "sourceDocumentSha256": "c3b2e4fafd09bb753e473facb179d80e08dbde637861577bc4d69d0d7de2f9f2",
+      "preparedDocumentSha256": "e1cbaef84eb9c288b56fdea9e7e02080654e6a903ef67c3d322b74f0dfea0bf8",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--avatar-circles",
+      "errors": [],
+      "requests": [],
+      "images": [
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        },
+        {
+          "src": "blob:[embedded]",
+          "loaded": true
+        }
+      ],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "+99",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Avatar Circles",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:46:03.122Z",
+      "sourceDocumentSha256": "4e93f95192fe06552fc19409cf47cb2ce23c6c9dd86c5e61bb3b8df9cb7f9c41",
+      "preparedDocumentSha256": "5a627be91f2180aeb6ce7c227882a1cc4fecb8755a9a70cb4e24cc996a02a60b",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--glyph-matrix",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 1117,
+          "height": 497,
+          "signature": 928160264,
+          "lit": 1
+        }
+      ],
+      "svg": 0,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "signature": 928160264,
+          "lit": 1
+        },
+        "after": {
+          "signature": 928160264,
+          "lit": 1
+        },
+        "changed": false
+      },
+      "name": "Glyph Matrix",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:46:03.343Z",
+      "sourceDocumentSha256": "5913b605d611dad2864ba94fcb17899ab5a4241015f6cb3d36b06dfe90714346",
+      "preparedDocumentSha256": "f6433aefbf67ec457d37906824f3a38439958ad2262422aba5f513e013725889",
+      "ready": false,
+      "passed": false,
+      "reason": "deadline"
+    },
+    {
+      "id": "magic--typing-animation",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Hello Wo|",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Typing Animation",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:46:05.713Z",
+      "sourceDocumentSha256": "bd8ef7cad9fd67efe9769f699c9bddd0c8d57483715e58a64bef31943dda7eb1",
+      "preparedDocumentSha256": "a81b4a86899bb4cc7e7cf5be330276e7452819c145988bcc5b3bcfebf499e05a",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--sparkles-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 6,
+      "text": "Magic UI",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Sparkles Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:46:05.974Z",
+      "sourceDocumentSha256": "452fff41b35efd6d6704a2d0b805751dfd4c1f187ae09bdf0dc19837e04ddba1",
+      "preparedDocumentSha256": "eb1fa2d95ecfac78b3a12a1bf3d28a197047057c4a83560901f79bfee8fd3719",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--spinning-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "l\ne\na\nr\nn\nm\no\nr\ne\n•\ne\na\nr\nn\nm\no\nr\ne\n•\ng\nr\no\nw\nm\no\nr\ne\n•\nlearn more • earn more • grow more •",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Spinning Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:46:06.128Z",
+      "sourceDocumentSha256": "85e5d3e86c7130524741b8f27458e216e8c81d41e45d0d85e6a53cc1bf465bcc",
+      "preparedDocumentSha256": "a5488333c71e598ec341b68499f8edc4befafd0efecb2ab1afb47fe8c91df4fb",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--comic-text",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "BOOM!",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Comic Text",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:46:09.414Z",
+      "sourceDocumentSha256": "243d982c98efb34d2b06f25b5913d7a97a569d40befbeabe17543f99c25f57c4",
+      "preparedDocumentSha256": "9be90656bf22a7d9c85cdce18ad0138fb0f43897247f4c2b9a51f102efbb5a58",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--text-animate",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Blur in by character\nBlur in by character",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Text Animate",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:46:12.097Z",
+      "sourceDocumentSha256": "c8e1774c0863c2b3bef9e2a1f1e8e6c2ab22af60aded99d748d36ef29411b936",
+      "preparedDocumentSha256": "d4d7feede920dbeb676dea83a99fa318af4cd91b60ade83c663b90b91fe157b5",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--icon-cloud",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 400,
+          "height": 400,
+          "signature": 2408280877,
+          "lit": 1
+        }
+      ],
+      "svg": 1,
+      "text": "",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "signature": 0,
+          "lit": 0
+        },
+        "after": {
+          "signature": 2408280877,
+          "lit": 1
+        },
+        "changed": true
+      },
+      "name": "Icon Cloud",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:46:12.308Z",
+      "sourceDocumentSha256": "8e4b08f4fc27f16e775e7044dfef39b546223b45664f68cd9060ef8861d67166",
+      "preparedDocumentSha256": "4273513c61d1287f5c182792b72fad96e420ae6cd239d77f113b30c7c1000f19",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--scroll-based-velocity",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Velocity Scroll\nVelocity Scroll\nVelocity Scroll\nVelocity Scroll\nVelocity Scroll\nVelocity Scroll\nVelocity Scroll\nVelocity Scroll",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Scroll Based Velocity",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:46:13.759Z",
+      "sourceDocumentSha256": "dabab7e74aeb93e640b9317bdee0f1261c0d2e453fddd71ab1243d34119b3724",
+      "preparedDocumentSha256": "016f3ff969e5a030779c7735462fdac369079ec93405452c70428eb769f88528",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--shine-border",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Login\nEnter your credentials to access your account\nEmail\nPassword\nSign In",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Shine Border",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:46:14.915Z",
+      "sourceDocumentSha256": "b624f09dbc45d852c46f3b5160917046014ec15a07766e0c78cd50218615089e",
+      "preparedDocumentSha256": "a7932b1360157100fd43f61614d32ad0c429ea885447fbd90ad865d9f2e9b5d0",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--shiny-button",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "SHINY BUTTON",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Shiny Button",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:46:15.015Z",
+      "sourceDocumentSha256": "31afb88f020711469932223698c6f192f33f632f629176b9a1f8a08dd597c00d",
+      "preparedDocumentSha256": "76eeb2c5dc6433bf01c2bbaf818df75164dafb3597075fb79ea2126028eca422",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--animated-circular-progress-bar",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 1,
+      "text": "10",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Animated Circular Progress Bar",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:46:16.250Z",
+      "sourceDocumentSha256": "2c0a70e7b46a7a014c85ec8c6bcd0d52e7914122c5df2fa36fd6172cab4da15a",
+      "preparedDocumentSha256": "6f9e8b4ec35a5428a4ce2b272fa60014fc7f323eaacb9210b29573109d7d351b",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--confetti",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [
+        {
+          "width": 894,
+          "height": 498,
+          "unreadable": true
+        }
+      ],
+      "svg": 0,
+      "text": "Confetti",
+      "interaction": {
+        "kind": "canvas",
+        "before": {
+          "unreadable": true
+        },
+        "after": {
+          "unreadable": true
+        },
+        "changed": null
+      },
+      "name": "Confetti",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:46:17.367Z",
+      "sourceDocumentSha256": "73a76628fdddcf890c6f2d42f0b5123ba7730b9121435012fba029bfd8aebf91",
+      "preparedDocumentSha256": "f4bfee37276481e3a7928d7aecc6e5767e9bb356e3bd4e50c1ebe17f1b09d1ce",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--cool-mode",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Click Me!",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Cool Mode",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:46:17.488Z",
+      "sourceDocumentSha256": "22cef69f4d31c33076d062d9cca87b8a87db7ec0224340a92d4f8678dfbd20f7",
+      "preparedDocumentSha256": "32c1e740a1622ab772cc8d28bdeccbd979be0959196361a684e83029cc88116e",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--pulsating-button",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Join Affiliate Program",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Pulsating Button",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:46:18.671Z",
+      "sourceDocumentSha256": "0ea7098d01e82f5c54b0a4325936905be2b9a0066439dfebbe1d4312a4719931",
+      "preparedDocumentSha256": "afb650a4dd4b042e4f413af8a738faea2900533bb2bb8c9e3907f4bc4d026240",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--ripple-button",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 0,
+      "text": "Click me",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "Ripple Button",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:46:20.158Z",
+      "sourceDocumentSha256": "b0aae7e3640827cc854dbab5a305d8e891d139b8c076144984fd7ad5191ab1f2",
+      "preparedDocumentSha256": "04284f48cdad766605f511e31916aba3d5ec52bd9d23e05271c9571500131439",
+      "ready": true,
+      "passed": true
+    },
+    {
+      "id": "magic--file-tree",
+      "errors": [],
+      "requests": [],
+      "images": [],
+      "videos": [],
+      "canvases": [],
+      "svg": 11,
+      "text": "src\napp\nlayout.tsx\npage.tsx\ncomponents\nui\nbutton.tsx\nfooter.tsx\nheader.tsx\nlib\nutils.ts",
+      "interaction": {
+        "kind": "none",
+        "after": null,
+        "changed": null
+      },
+      "name": "File Tree",
+      "kind": "component",
+      "checkedAt": "2026-11-11T18:46:20.316Z",
+      "sourceDocumentSha256": "a9a29d58d8045ff8e54b93863d5231b2c6b6350119c79ac342db24fd4ce8aaaf",
+      "preparedDocumentSha256": "b28b33055f651a307a6bea0694710f1353d2015c839e1ef4d4fe561aff45bc21",
+      "ready": true,
+      "passed": true
+    }
+  ]
+}

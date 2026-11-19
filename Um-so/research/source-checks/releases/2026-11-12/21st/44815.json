@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 44815,
+    "name": "Nvidia Dgx Pod",
+    "description": "Isometric NVIDIA DGX SuperPOD rack machine with slide-out blades",
+    "previewUrl": "https://cdn.21st.dev/user_332oxzW8MyPod4IDIdKq9rbPYuk/nvidia-dgx-pod/default/preview.1794245398507.webp",
+    "videoUrl": "https://cdn.21st.dev/user_332oxzW8MyPod4IDIdKq9rbPYuk/nvidia-dgx-pod/default/video.1794245393658.mp4",
+    "author": "daiwiikharihar",
+    "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_332oxzW8MyPod4IDIdKq9rbPYuk/avatar.jpeg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/daiwiikharihar/nvidia-dgx-pod?api_key=REDACTED\"",
+    "url": "https://21st.dev/@daiwiikharihar/components/nvidia-dgx-pod"
+  },
+  "requestedRoute": "/@daiwiikharihar/components/nvidia-dgx-pod",
+  "checkedAt": "2026-11-12T21:14:33.378Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 44815,
+    "componentId": 25883,
+    "authorUserId": "user_332oxzW8MyPod4IDIdKq9rbPYuk",
+    "name": "Nvidia Dgx Pod",
+    "demoName": "Default",
+    "description": "Isometric NVIDIA DGX SuperPOD rack machine with slide-out blades",
+    "previewUrl": "https://cdn.21st.dev/user_332oxzW8MyPod4IDIdKq9rbPYuk/nvidia-dgx-pod/default/preview.1794245398507.webp",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/daiwiikharihar/nvidia-dgx-pod?api_key=REDACTED\"",
+    "componentCode": "\"use client\";\n\nimport { useEffect, useRef, useState, type CSSProperties } from \"react\";\nimport { Box, Plate, Press, playSound, type Box3 } from \"react-isokit\";\nimport \"react-isokit/styles.css\";\nimport \"react-isokit/themes.css\";\n\nconst COS = Math.cos(Math.PI / 6);\nconst SIN = Math.sin(Math.PI / 6);\n\nfunction shift(box: Box3, dx = 0, dy = 0, dz = 0): Box3 {\n  return { ...box, x: box.x + dx, y: box.y + dy, z: box.z + dz };\n}\n\nfunction isoMove(\n  dx = 0,\n  dy = 0,\n  dz = 0,\n  stagger = 0,\n  ease = \"cubic-bezier(0.34, 1.56, 0.64, 1)\" // Premium springy ease\n): CSSProperties {\n  const sx = (dx - dy) * COS;\n  const sy = (dx + dy) * SIN - dz;\n  return {\n    transform: `translate(${sx.toFixed(2)}px, ${sy.toFixed(2)}px)`,\n    transition: `transform var(--ik-t-move, 0.6s) ${ease} calc(${stagger} * var(--ik-stagger, 50ms))`,\n  };\n}\n\nfunction useMotor() {\n  const stop = useRef<(() => void) | null>(null);\n  useEffect(() => () => stop.current?.(), []);\n  return {\n    start(duration: number) {\n      stop.current?.();\n      stop.current = playSound(\"motor\", { duration });\n    },\n    cut() {\n      stop.current?.();\n      stop.current = null;\n    },\n  };\n}\n\nfunction LiveMark({ x, y, w }: { x: number; y: number; w: number }) {\n  return <path className=\"ik-live\" d={`M ${x} ${y} h ${w}`} />;\n}\n\nfunction plateProps(fig: string, name: string, hint: string) {\n  return { fig, name, hint, aspect: 1.25, pad: 0.11 } as const;\n}\n\nconst FLOOR: Box3 = { x: 8, y: 6, z: 0, w: 148, d: 86, h: 6 };\nconst LEFT: Box3 = { x: 8, y: 6, z: 6, w: 10, d: 86, h: 72 };\nconst BACK: Box3 = { x: 18, y: 6, z: 6, w: 128, d: 8, h: 72 };\nconst SLIDE_X = 12;\nconst SLIDE_Y = 30;\n\nfunction blade(i: number): Box3 {\n  return { x: 22, y: 16, z: 10 + i * 16, w: 118, d: 56, h: 13 };\n}\n\nconst LINES = [\n  \"rack idle · blades seated\",\n  \"bay travel · motor out\",\n  \"8x H100 SXM5 · 32 PFLOPS\",\n];\n\nexport default function NvidiaDgxPod() {\n  const [out, setOut] = useState<boolean[]>([false, false, false, false]);\n  const [focus, setFocus] = useState(0);\n  const [line, setLine] = useState(0);\n  const motor = useMotor();\n  const blades = [0, 1, 2, 3];\n\n  const toggle = (index: number) => {\n    setOut((prev) => prev.map((open, i) => (i === index ? !open : open)));\n    setFocus(index);\n    setLine((n) => (n + 1) % LINES.length);\n    motor.start(0.7);\n    playSound(\"tick\");\n  };\n\n  // Static order naturally enforces Z-index priority (higher racks overlap lower ones)\n  const order = [0, 1, 2, 3];\n\n  return (\n    <Plate\n      label=\"NVIDIA DGX SuperPOD rack\"\n      fit={[\n        FLOOR,\n        LEFT,\n        BACK,\n        ...blades.flatMap((i) => [\n          blade(i),\n          shift(blade(i), SLIDE_X, SLIDE_Y, 0),\n        ]),\n      ]}\n      readout={LINES[line]}\n      {...plateProps(\"Fig. 01\", \"DGX SuperPOD\", \"press a blade\")}\n    >\n      <Box {...FLOOR} r={4} />\n      <Box {...BACK} r={2} />\n      <Box\n        {...LEFT}\n        r={2}\n        side={\n          <g>\n            {[0, 1, 2, 3].map((i) => (\n              <path\n                key={i}\n                className=\"ik-detail\"\n                d={`M 8 ${14 + i * 16} h 70`}\n              />\n            ))}\n          </g>\n        }\n      />\n      {order.map((i) => {\n        const body = blade(i);\n        return (\n          <Press\n            key={i}\n            label={`Slide blade U${i + 1}`}\n            material=\"metal\"\n            onPress={() => toggle(i)}\n          >\n            <g>\n              <g\n                style={isoMove(\n                  out[i] ? SLIDE_X : 0,\n                  out[i] ? SLIDE_Y : 0,\n                  0\n                )}\n              >\n                <Box\n                  {...body}\n                  r={3}\n                  front={\n                    <g>\n                      <rect\n                        className=\"ik-well\"\n                        x={8}\n                        y={3}\n                        width={body.w - 16}\n                        height={3}\n                        rx={1}\n                      />\n                      <text\n                        className=\"ik-label\"\n                        x={10}\n                        y={body.h / 2 + 1}\n                        style={{ fontSize: 5 }}\n                      >\n                        {`U${i + 1}`}\n                      </text>\n                      {focus === i && (\n                        <LiveMark x={10} y={8} w={body.w - 20} />\n                      )}\n                    </g>\n                  }\n                  top={\n                    <g>\n                      {[0, 1, 2, 3, 4].map((n) => (\n                        <rect\n                          key={n}\n                          className=\"ik-well\"\n                          x={10 + n * 20}\n                          y={8}\n                          width={12}\n                          height={body.d - 16}\n                          rx={1}\n                        />\n                      ))}\n                    </g>\n                  }\n                />\n              </g>\n            </g>\n          </Press>\n        );\n      })}\n    </Plate>\n  );\n}",
+    "demoCode": "import PublishedComponent from \"@/components/ui/nvidia-dgx-pod\"\n\nexport default function Demo() {\n  return <PublishedComponent />\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": "user_332oxzW8MyPod4IDIdKq9rbPYuk"
+  }
+}

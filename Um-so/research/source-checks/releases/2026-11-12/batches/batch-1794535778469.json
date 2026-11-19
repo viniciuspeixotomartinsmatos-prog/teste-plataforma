@@ -1,0 +1,80 @@
+[
+  {
+    "route": "/@felix-au/components/matrix-rain-cursor",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44753,
+      "name": "Matrix Rain Cursor",
+      "description": "A full-screen canvas cursor effect that renders a Matrix-style falling character rain which brightens and speeds up near the mouse pointer.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_felix-au_1793377473758/matrix-rain-cursor/default/preview.1794262930779.png",
+      "videoUrl": "https://cdn.21st.dev/user_registry_felix-au_1793377473758/matrix-rain-cursor/default/video.1794262201638.mp4",
+      "author": "felix-au",
+      "authorImage": "https://avatars.githubusercontent.com/u/186883698?v=4",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/felix-au/matrix-rain-cursor?api_key=REDACTED\"",
+      "url": "https://21st.dev/@felix-au/components/matrix-rain-cursor"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@felix-au/components/rainbow-comet-cursor",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44750,
+      "name": "Rainbow Comet Cursor",
+      "description": "A canvas-based custom cursor that trails a glowing, hue-cycling rainbow comet tail behind the mouse, with a glow boost on hoverable elements and a radial rainbow spark burst on click.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_felix-au_1793377473758/rainbow-comet-cursor/default/preview.1794407416138.webp",
+      "videoUrl": "https://cdn.21st.dev/user_registry_felix-au_1793377473758/rainbow-comet-cursor/default/video.1794407178247.mp4",
+      "author": "felix-au",
+      "authorImage": "https://avatars.githubusercontent.com/u/186883698?v=4",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/felix-au/rainbow-comet-cursor?api_key=REDACTED\"",
+      "url": "https://21st.dev/@felix-au/components/rainbow-comet-cursor"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@felix-au/components/wind-stream-cursor",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44783,
+      "name": "Wind Stream Cursor",
+      "description": "A canvas-based custom cursor effect that trails bezier-curved wind streams behind mouse movement, thickens near clickable elements, and bursts into a multicolor radial gust on click.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_felix-au_1793377473758/wind-stream-cursor/default/preview.1794340597274.webp",
+      "videoUrl": "https://cdn.21st.dev/user_registry_felix-au_1793377473758/wind-stream-cursor/default/video.1794340577975.mp4",
+      "author": "felix-au",
+      "authorImage": "https://avatars.githubusercontent.com/u/186883698?v=4",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/felix-au/wind-stream-cursor?api_key=REDACTED\"",
+      "url": "https://21st.dev/@felix-au/components/wind-stream-cursor"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@flohoeller/components/decision-inbox",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 43819,
+      "name": "Decision Inbox",
+      "description": "A tray of pending yes/no decisions where each item has two quick-answer buttons, confirms the choice, and folds away as the open count goes down.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_flohoeller_1791204299841/decision-inbox/default/preview.1794428893286.webp",
+      "videoUrl": "https://cdn.21st.dev/user_registry_flohoeller_1791204299841/decision-inbox/default/video.1794428880976.mp4",
+      "author": "flohoeller",
+      "authorImage": "https://avatars.githubusercontent.com/u/276071968?v=4",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/flohoeller/decision-inbox?api_key=REDACTED\"",
+      "url": "https://21st.dev/@flohoeller/components/decision-inbox"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@florian_b5934dbd/themes/feedier-indigo-vivid-1794390807081",
+    "type": "theme",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@florian_b5934dbd/themes/feedier-indigo-vivid-2-1794391457434",
+    "type": "theme",
+    "status": "metadata_unresolved"
+  }
+]

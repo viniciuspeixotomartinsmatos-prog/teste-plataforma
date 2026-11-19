@@ -1,0 +1,11 @@
+{
+  "name": "floating-dock-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/floating-dock-demo.tsx",
+      "type": "registry:example",
+      "content": "import React from \"react\";\nimport { FloatingDock } from \"@/components/ui/floating-dock\";\nimport {\n  IconBrandGithub,\n  IconBrandX,\n  IconExchange,\n  IconHome,\n  IconNewSection,\n  IconTerminal2,\n} from \"@tabler/icons-react\";\n\nexport function FloatingDockDemo() {\n  const links = [\n    {\n      title: \"Home\",\n      icon: (\n        <IconHome className=\"h-full w-full text-neutral-500 dark:text-neutral-300\" />\n      ),\n      href: \"#\",\n    },\n\n    {\n      title: \"Products\",\n      icon: (\n        <IconTerminal2 className=\"h-full w-full text-neutral-500 dark:text-neutral-300\" />\n      ),\n      href: \"#\",\n    },\n    {\n      title: \"Components\",\n      icon: (\n        <IconNewSection className=\"h-full w-full text-neutral-500 dark:text-neutral-300\" />\n      ),\n      href: \"#\",\n    },\n    {\n      title: \"Aceternity UI\",\n      icon: (\n        <img\n          src=\"https://assets.aceternity.com/logo-dark.png\"\n          width={20}\n          height={20}\n          alt=\"Aceternity Logo\"\n        />\n      ),\n      href: \"#\",\n    },\n    {\n      title: \"Changelog\",\n      icon: (\n        <IconExchange className=\"h-full w-full text-neutral-500 dark:text-neutral-300\" />\n      ),\n      href: \"#\",\n    },\n\n    {\n      title: \"Twitter\",\n      icon: (\n        <IconBrandX className=\"h-full w-full text-neutral-500 dark:text-neutral-300\" />\n      ),\n      href: \"#\",\n    },\n    {\n      title: \"GitHub\",\n      icon: (\n        <IconBrandGithub className=\"h-full w-full text-neutral-500 dark:text-neutral-300\" />\n      ),\n      href: \"#\",\n    },\n  ];\n  return (\n    <div className=\"flex items-center justify-center h-[35rem] w-full\">\n      <FloatingDock\n        mobileClassName=\"translate-y-20\" // only for demo, remove for production\n        items={links}\n      />\n    </div>\n  );\n}\n"
+    }
+  ]
+}

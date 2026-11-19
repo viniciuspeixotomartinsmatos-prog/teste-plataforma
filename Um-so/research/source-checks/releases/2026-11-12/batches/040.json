@@ -1,0 +1,42 @@
+[
+  {
+    "route": "/@aloksivastava1025/components/astryx-chat-message-bubble",
+    "type": "component",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@aloksivastava1025/components/astryx-chat-message-metadata",
+    "type": "component",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@aloksivastava1025/components/astryx-chat-send-button",
+    "type": "component",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@aloksivastava1025/components/astryx-chat-system-message",
+    "type": "component",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@aloksivastava1025/components/astryx-chat-tokenized-text",
+    "type": "component",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@aloksivastava1025/components/astryx-chat-tool-calls",
+    "type": "component",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@aloksivastava1025/components/astryx-checkbox-input",
+    "type": "component",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@aloksivastava1025/components/astryx-checkbox-list",
+    "type": "component",
+    "status": "metadata_unresolved"
+  }
+]

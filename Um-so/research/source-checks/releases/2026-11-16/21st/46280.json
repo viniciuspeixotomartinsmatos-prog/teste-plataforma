@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:46:37.177Z",
+  "metadata": {
+    "type": "component",
+    "id": 46280,
+    "name": "Cymatic Particle Hero",
+    "description": "A full-screen landing-page hero: a 3D particle sculpture morphs between ten forms under a large headline. Built in Slider Revolution's visual editor; make it yours with a free SR Anywhere account and pass your module's embed key. No slider library in your bundle.",
+    "previewUrl": "https://cdn.21st.dev/sliderrevolution/cymatic-particle-hero/default/preview.1794560741466-6abc153a-1e5c-49a8-848e-57c42c659ca0.png",
+    "videoUrl": "https://cdn.21st.dev/sliderrevolution/cymatic-particle-hero/default/video.1794560741466-6abc153a-1e5c-49a8-848e-57c42c659ca0.mp4",
+    "author": "sliderrevolution",
+    "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3M2rEV5KHZxjTtA82jni74jnLJN/avatar.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/sliderrevolution/cymatic-particle-hero?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@sliderrevolution/components/cymatic-particle-hero"
+  },
+  "component": {
+    "id": 46280,
+    "componentId": 26582,
+    "name": "Cymatic Particle Hero",
+    "demoName": "Cymatic",
+    "description": "A full-screen landing-page hero: a 3D particle sculpture morphs between ten forms under a large headline. Built in Slider Revolution's visual editor; make it yours with a free SR Anywhere account and pass your module's embed key. No slider library in your bundle.",
+    "previewUrl": "https://cdn.21st.dev/sliderrevolution/cymatic-particle-hero/default/preview.1794560741466-6abc153a-1e5c-49a8-848e-57c42c659ca0.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/sliderrevolution/cymatic-particle-hero?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\";\n\nimport { useEffect, useRef, useState } from \"react\";\n\nexport interface SliderRevolutionHeroProps {\n  /**\n   * The embed key of your module in Slider Revolution Anywhere (anywhere.sliderrevolution.com):\n   * open the module, click Embed and copy the `ek_‚Ä¶` part. A free account is enough.\n   */\n  embedKey: string;\n  /** Accessible name of the region, read by screen readers. Default: \"Animated hero\". */\n  ariaLabel?: string;\n  /** Extra classes for the outer section, for example \"overflow-hidden rounded-xl\". */\n  className?: string;\n  /**\n   * Classes for the loading placeholder, shown until the module has drawn.\n   * Default: \"h-svh min-h-[700px]\". The module fills the screen and is at least 700 px tall, so the placeholder reserves the same space.\n   */\n  placeholderClassName?: string;\n}\n\nconst join = (...c: Array<string | false | undefined>) => c.filter(Boolean).join(\" \");\n\n/**\n * An animated full-screen hero for the top of a landing page, made in Slider Revolution Anywhere.\n * Design, words and motion live in your SR Anywhere module: publish it again there and every app\n * that shows this key updates. No slider library in your bundle; the module's script loads async\n * from Slider Revolution's edge.\n */\nexport function SliderRevolutionHero({\n  embedKey,\n  ariaLabel = \"Animated hero\",\n  className,\n  placeholderClassName = \"h-svh min-h-[700px]\",\n}: SliderRevolutionHeroProps) {\n  const host = useRef<HTMLDivElement>(null);\n  const [ready, setReady] = useState(false);\n  const [failed, setFailed] = useState(false);\n\n  useEffect(() => {\n    const el = host.current;\n    if (!el || !embedKey) return;\n    setReady(false);\n    setFailed(false);\n    const script = document.createElement(\"script\");\n    script.src = `https://embed.sliderrevolution.com/i/${embedKey}/embed.js`;\n    script.async = true;\n    script.onerror = () => setFailed(true);\n    el.appendChild(script);\n    // The module draws itself into the host; the placeholder goes as soon as the host has a height.\n    const observer = new ResizeObserver(() => {\n      if (el.offsetHeight > 0) setReady(true);\n    });\n    observer.observe(el);\n    return () => {\n      observer.disconnect();\n      // Lets the module load again when the user navigates back to this page.\n      el.replaceChildren();\n      const loaders = (window as unknown as { __sraLoaders?: Record<string, unknown> }).__sraLoaders;\n      if (loaders) delete loaders[\"SR7_\" + embedKey.replace(/[^A-Za-z0-9]/g, \"\") + \"_1\"];\n    };\n  }, [embedKey]);\n\n  return (\n    <section aria-label={ariaLabel} aria-busy={!ready && !failed} className={join(\"relative w-full\", className)}>\n      {!ready && (\n        <div\n          aria-hidden=\"true\"\n          className={join(\"w-full rounded-md bg-muted\", !failed && \"animate-pulse\", placeholderClassName)}\n        />\n      )}\n      <div ref={host} className=\"sr-anywhere-embed-host w-full\" />\n    </section>\n  );\n}\n\nexport default SliderRevolutionHero;\n",
+    "demoCode": "import { SliderRevolutionHero } from \"@/components/ui/cymatic-particle-hero\";\n\n// The demo key plays \"Cymatic\": a 3D particle sculpture that morphs between ten forms on its own.\n// It runs on Slider Revolution's demo account; make your own module with a free SR Anywhere account\n// (anywhere.sliderrevolution.com/platforms/ai-builders) and pass its key instead.\nexport function Demo() {\n  return (\n    <div className=\"w-full bg-background\">\n      <SliderRevolutionHero embedKey=\"ek_biqgfhte6l7dhaya3qyw\" />\n    </div>\n  );\n}\n\nexport default Demo;\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source and usage retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

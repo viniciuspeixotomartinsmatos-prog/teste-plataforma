@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:45:53.179Z",
+  "metadata": {
+    "type": "component",
+    "id": 45893,
+    "name": "Astryx Code Block",
+    "description": "Fenced code block with syntax highlighting. Use for multi-line code snippets.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-code-block/code-block-code-terminal/preview.1794512959952.png",
+    "videoUrl": null,
+    "author": "Astryxdesign",
+    "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-code-block?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-code-block"
+  },
+  "component": {
+    "id": 45893,
+    "componentId": 26423,
+    "name": "Astryx Code Block",
+    "demoName": "Code — Terminal",
+    "description": "Fenced code block with syntax highlighting. Use for multi-line code snippets.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-code-block/code-block-code-terminal/preview.1794512959952.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-code-block?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\nimport \"./astryx-code-block-utils/index.css\"\nimport { CodeBlock } from \"@astryxdesign/core/CodeBlock\"\n\nexport * from \"@astryxdesign/core/CodeBlock\"\nexport default CodeBlock\n",
+    "demoCode": "'use client';\n\nimport {SyntaxTheme} from '@astryxdesign/core/theme';\nimport {githubDark} from '@astryxdesign/core/theme/syntax';\nimport {CodeBlock} from '@/components/ui/astryx-code-block';\n\nconst commands = `$ astryx init --features agents\n✓ AI agent docs installed → AGENTS.md\n$ pnpm astryx component CodeBlock --dense`;\n\nfunction CodeBlockTerminal() {\n  return (\n    <SyntaxTheme theme={githubDark}>\n      <CodeBlock\n        code={commands}\n        language=\"bash\"\n        hasCopyButton\n        style={{width: '100%', maxWidth: 480}}\n      />\n    </SyntaxTheme>\n  );\n}\n\nexport default function CodeBlockTerminalDemo() {\n  return (\n    <div\n      data-astryx-theme=\"neutral\"\n      data-theme=\"light\"\n      style={{colorScheme: 'light', display: 'contents'}}>\n      <CodeBlockTerminal />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source and usage retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

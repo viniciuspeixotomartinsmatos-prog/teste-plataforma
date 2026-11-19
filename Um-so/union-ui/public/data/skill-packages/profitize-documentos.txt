@@ -1,0 +1,589 @@
+---
+name: documentos
+description: "Use esta skill sempre que o usuário quiser criar, ler, editar ou manipular documentos do Word (arquivos .docx). Acione quando houver qualquer menção a 'documento do Word', 'arquivo do Word', 'doc do Word', '.docx', ou pedidos de documentos profissionais com formatação como sumário, títulos, números de página ou papel timbrado. Use também para extrair ou reorganizar o conteúdo de arquivos .docx, inserir ou substituir imagens em documentos, fazer localizar e substituir em arquivos do Word, trabalhar com alterações controladas ou comentários, ou transformar conteúdo num documento do Word bem acabado. Se o usuário pedir um 'relatório', 'memorando', 'carta', 'modelo', 'template' ou entrega parecida como arquivo do Word ou .docx, use esta skill. NÃO use para PDFs, planilhas, Google Docs nem tarefas gerais de programação sem relação com a geração de documentos."
+---
+
+# Criar, editar e analisar DOCX
+
+## Visão geral
+
+Um arquivo .docx é um arquivo ZIP com arquivos XML dentro.
+
+## Referência rápida
+
+| Tarefa | Abordagem |
+|------|----------|
+| Ler/analisar o conteúdo | `pandoc` ou desempacotar para ver o XML cru |
+| Criar documento novo | Use o `docx-js`: veja Criar documentos novos abaixo |
+| Editar documento existente | Desempacotar → editar o XML → reempacotar: veja Editar documentos existentes abaixo |
+
+### Converter .doc em .docx
+
+Arquivos `.doc` antigos têm de ser convertidos antes da edição:
+
+```bash
+python scripts/office/soffice.py --headless --convert-to docx document.doc
+```
+
+### Ler o conteúdo
+
+```bash
+# Extrair o texto com as alterações controladas
+pandoc --track-changes=all document.docx -o output.md
+
+# Acesso ao XML cru
+python scripts/office/unpack.py document.docx unpacked/
+```
+
+### Converter em imagens
+
+```bash
+python scripts/office/soffice.py --headless --convert-to pdf document.docx
+pdftoppm -jpeg -r 150 document.pdf page
+```
+
+### Aceitar alterações controladas
+
+Para gerar um documento limpo com todas as alterações controladas aceitas (exige o LibreOffice):
+
+```bash
+python scripts/accept_changes.py input.docx output.docx
+```
+
+---
+
+## Criar documentos novos
+
+Gere arquivos .docx com JavaScript e depois valide. Instalação: `npm install -g docx`
+
+### Configuração
+```javascript
+const { Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, ImageRun,
+        Header, Footer, AlignmentType, PageOrientation, LevelFormat, ExternalHyperlink,
+        InternalHyperlink, Bookmark, FootnoteReferenceRun, PositionalTab,
+        PositionalTabAlignment, PositionalTabRelativeTo, PositionalTabLeader,
+        TabStopType, TabStopPosition, Column, SectionType,
+        TableOfContents, HeadingLevel, BorderStyle, WidthType, ShadingType,
+        VerticalAlign, PageNumber, PageBreak } = require('docx');
+
+const doc = new Document({ sections: [{ children: [/* conteúdo */] }] });
+Packer.toBuffer(doc).then(buffer => fs.writeFileSync("doc.docx", buffer));
+```
+
+### Validação
+Depois de criar o arquivo, valide. Se a validação falhar, desempacote, corrija o XML e reempacote.
+```bash
+python scripts/office/validate.py doc.docx
+```
+
+### Tamanho da página
+
+```javascript
+// CRÍTICO: o docx-js usa A4 por padrão, não US Letter
+// Sempre defina o tamanho da página explicitamente para resultados consistentes
+sections: [{
+  properties: {
+    page: {
+      size: {
+        width: 12240,   // 8,5 polegadas em DXA
+        height: 15840   // 11 polegadas em DXA
+      },
+      margin: { top: 1440, right: 1440, bottom: 1440, left: 1440 } // margens de 1 polegada
+    }
+  },
+  children: [/* conteúdo */]
+}]
+```
+
+**Tamanhos de página comuns (em DXA, o vigésimo de ponto; 1440 DXA = 1 polegada, ou 2,54 cm):**
+
+| Papel | Largura | Altura | Largura útil (margens de 1") |
+|-------|-------|--------|---------------------------|
+| US Letter (o Carta do Word) | 12240 | 15840 | 9360 |
+| A4 (padrão) | 11906 | 16838 | 9026 |
+
+**Orientação paisagem:** o docx-js troca largura e altura internamente, então passe as medidas do retrato e deixe que ele faça a troca:
+```javascript
+size: {
+  width: 12240,   // Passe o lado CURTO como largura
+  height: 15840,  // Passe o lado LONGO como altura
+  orientation: PageOrientation.LANDSCAPE  // o docx-js troca os dois no XML
+},
+// Largura útil = 15840 - margem esquerda - margem direita (usa o lado longo)
+```
+
+### Estilos (sobrescrever os títulos nativos)
+
+Use Arial como fonte padrão (aceita em todo lugar). Mantenha os títulos em preto para facilitar a leitura.
+
+```javascript
+const doc = new Document({
+  styles: {
+    default: { document: { run: { font: "Arial", size: 24 } } }, // padrão de 12 pt
+    paragraphStyles: [
+      // IMPORTANTE: use os IDs exatos para sobrescrever os estilos nativos
+      { id: "Heading1", name: "Heading 1", basedOn: "Normal", next: "Normal", quickFormat: true,
+        run: { size: 32, bold: true, font: "Arial" },
+        paragraph: { spacing: { before: 240, after: 240 }, outlineLevel: 0 } }, // outlineLevel é obrigatório para o sumário
+      { id: "Heading2", name: "Heading 2", basedOn: "Normal", next: "Normal", quickFormat: true,
+        run: { size: 28, bold: true, font: "Arial" },
+        paragraph: { spacing: { before: 180, after: 180 }, outlineLevel: 1 } },
+    ]
+  },
+  sections: [{
+    children: [
+      new Paragraph({ heading: HeadingLevel.HEADING_1, children: [new TextRun("Título")] }),
+    ]
+  }]
+});
+```
+
+### Listas (NUNCA use marcadores Unicode)
+
+```javascript
+// ❌ ERRADO: nunca insira caracteres de marcador à mão
+new Paragraph({ children: [new TextRun("• Item")] })  // ERRADO
+new Paragraph({ children: [new TextRun("\u2022 Item")] })  // ERRADO
+
+// ✅ CORRETO: use a configuração de numeração com LevelFormat.BULLET
+const doc = new Document({
+  numbering: {
+    config: [
+      { reference: "bullets",
+        levels: [{ level: 0, format: LevelFormat.BULLET, text: "•", alignment: AlignmentType.LEFT,
+          style: { paragraph: { indent: { left: 720, hanging: 360 } } } }] },
+      { reference: "numbers",
+        levels: [{ level: 0, format: LevelFormat.DECIMAL, text: "%1.", alignment: AlignmentType.LEFT,
+          style: { paragraph: { indent: { left: 720, hanging: 360 } } } }] },
+    ]
+  },
+  sections: [{
+    children: [
+      new Paragraph({ numbering: { reference: "bullets", level: 0 },
+        children: [new TextRun("Item com marcador")] }),
+      new Paragraph({ numbering: { reference: "numbers", level: 0 },
+        children: [new TextRun("Item numerado")] }),
+    ]
+  }]
+});
+
+// ⚠️ Cada reference cria uma numeração INDEPENDENTE
+// Mesma reference = continua (1,2,3 e depois 4,5,6)
+// Reference diferente = recomeça (1,2,3 e depois 1,2,3)
+```
+
+### Tabelas
+
+**CRÍTICO: tabelas precisam das duas larguras**: defina `columnWidths` na tabela E `width` em cada célula. Sem as duas, as tabelas saem erradas em algumas plataformas.
+
+```javascript
+// CRÍTICO: sempre defina a largura da tabela para uma renderização consistente
+// CRÍTICO: use ShadingType.CLEAR (não SOLID) para evitar fundos pretos
+const border = { style: BorderStyle.SINGLE, size: 1, color: "CCCCCC" };
+const borders = { top: border, bottom: border, left: border, right: border };
+
+new Table({
+  width: { size: 9360, type: WidthType.DXA }, // Sempre use DXA (porcentagens quebram no Google Docs)
+  columnWidths: [4680, 4680], // A soma tem de dar a largura da tabela (DXA: 1440 = 1 polegada)
+  rows: [
+    new TableRow({
+      children: [
+        new TableCell({
+          borders,
+          width: { size: 4680, type: WidthType.DXA }, // Defina também em cada célula
+          shading: { fill: "D5E8F0", type: ShadingType.CLEAR }, // CLEAR, não SOLID
+          margins: { top: 80, bottom: 80, left: 120, right: 120 }, // Margem interna da célula (por dentro, não soma à largura)
+          children: [new Paragraph({ children: [new TextRun("Célula")] })]
+        })
+      ]
+    })
+  ]
+})
+```
+
+**Cálculo da largura da tabela:**
+
+Sempre use `WidthType.DXA`: `WidthType.PERCENTAGE` quebra no Google Docs.
+
+```javascript
+// Largura da tabela = soma de columnWidths = largura útil
+// US Letter com margens de 1": 12240 - 2880 = 9360 DXA
+width: { size: 9360, type: WidthType.DXA },
+columnWidths: [7000, 2360]  // A soma tem de dar a largura da tabela
+```
+
+**Regras de largura:**
+- **Sempre use `WidthType.DXA`**: nunca `WidthType.PERCENTAGE` (incompatível com o Google Docs)
+- A largura da tabela tem de ser igual à soma de `columnWidths`
+- O `width` da célula tem de bater com o `columnWidth` correspondente
+- As `margins` da célula são margem interna: reduzem a área do conteúdo, não somam à largura da célula
+- Para tabelas de largura total: use a largura útil (a largura da página menos as margens esquerda e direita)
+
+### Imagens
+
+```javascript
+// CRÍTICO: o parâmetro type é OBRIGATÓRIO
+new Paragraph({
+  children: [new ImageRun({
+    type: "png", // Obrigatório: png, jpg, jpeg, gif, bmp, svg
+    data: fs.readFileSync("image.png"),
+    transformation: { width: 200, height: 150 },
+    altText: { title: "Título", description: "Descrição", name: "Nome" } // Os três são obrigatórios
+  })]
+})
+```
+
+### Quebras de página
+
+```javascript
+// CRÍTICO: o PageBreak tem de ficar dentro de um Paragraph
+new Paragraph({ children: [new PageBreak()] })
+
+// Ou use pageBreakBefore
+new Paragraph({ pageBreakBefore: true, children: [new TextRun("Página nova")] })
+```
+
+### Links
+
+```javascript
+// Link externo
+new Paragraph({
+  children: [new ExternalHyperlink({
+    children: [new TextRun({ text: "Clique aqui", style: "Hyperlink" })],
+    link: "https://example.com",
+  })]
+})
+
+// Link interno (indicador + referência)
+// 1. Crie o indicador no destino
+new Paragraph({ heading: HeadingLevel.HEADING_1, children: [
+  new Bookmark({ id: "chapter1", children: [new TextRun("Capítulo 1")] }),
+]})
+// 2. Aponte o link para ele
+new Paragraph({ children: [new InternalHyperlink({
+  children: [new TextRun({ text: "Veja o Capítulo 1", style: "Hyperlink" })],
+  anchor: "chapter1",
+})]})
+```
+
+### Notas de rodapé
+
+```javascript
+const doc = new Document({
+  footnotes: {
+    1: { children: [new Paragraph("Fonte: Relatório Anual 2024")] },
+    2: { children: [new Paragraph("Veja a metodologia no apêndice")] },
+  },
+  sections: [{
+    children: [new Paragraph({
+      children: [
+        new TextRun("A receita cresceu 15%"),
+        new FootnoteReferenceRun(1),
+        new TextRun(" com métricas ajustadas"),
+        new FootnoteReferenceRun(2),
+      ],
+    })]
+  }]
+});
+```
+
+### Paradas de tabulação
+
+```javascript
+// Alinhe texto à direita na mesma linha (ex.: a data do lado oposto a um título)
+new Paragraph({
+  children: [
+    new TextRun("Nome da Empresa"),
+    new TextRun("\tJaneiro de 2025"),
+  ],
+  tabStops: [{ type: TabStopType.RIGHT, position: TabStopPosition.MAX }],
+})
+
+// Preenchimento pontilhado (ex.: no estilo de sumário)
+new Paragraph({
+  children: [
+    new TextRun("Introdução"),
+    new TextRun({ children: [
+      new PositionalTab({
+        alignment: PositionalTabAlignment.RIGHT,
+        relativeTo: PositionalTabRelativeTo.MARGIN,
+        leader: PositionalTabLeader.DOT,
+      }),
+      "3",
+    ]}),
+  ],
+})
+```
+
+### Layouts em várias colunas
+
+```javascript
+// Colunas de mesma largura
+sections: [{
+  properties: {
+    column: {
+      count: 2,          // número de colunas
+      space: 720,        // espaço entre as colunas em DXA (720 = 0,5 polegada)
+      equalWidth: true,
+      separate: true,    // linha vertical entre as colunas
+    },
+  },
+  children: [/* o conteúdo corre naturalmente pelas colunas */]
+}]
+
+// Colunas de largura personalizada (equalWidth tem de ser false)
+sections: [{
+  properties: {
+    column: {
+      equalWidth: false,
+      children: [
+        new Column({ width: 5400, space: 720 }),
+        new Column({ width: 3240 }),
+      ],
+    },
+  },
+  children: [/* conteúdo */]
+}]
+```
+
+Force uma quebra de coluna com uma seção nova usando `type: SectionType.NEXT_COLUMN`.
+
+### Sumário
+
+```javascript
+// CRÍTICO: os títulos têm de usar SÓ HeadingLevel, sem estilos personalizados
+new TableOfContents("Sumário", { hyperlink: true, headingStyleRange: "1-3" })
+```
+
+### Cabeçalhos e rodapés
+
+```javascript
+sections: [{
+  properties: {
+    page: { margin: { top: 1440, right: 1440, bottom: 1440, left: 1440 } } // 1440 = 1 polegada
+  },
+  headers: {
+    default: new Header({ children: [new Paragraph({ children: [new TextRun("Cabeçalho")] })] })
+  },
+  footers: {
+    default: new Footer({ children: [new Paragraph({
+      children: [new TextRun("Página "), new TextRun({ children: [PageNumber.CURRENT] })]
+    })] })
+  },
+  children: [/* conteúdo */]
+}]
+```
+
+### Regras críticas do docx-js
+
+- **Defina o tamanho da página explicitamente**: o docx-js usa A4 por padrão; use US Letter (12240 x 15840 DXA) em documentos dos EUA
+- **Paisagem: passe as medidas do retrato**: o docx-js troca largura e altura internamente; passe o lado curto como `width`, o lado longo como `height` e defina `orientation: PageOrientation.LANDSCAPE`
+- **Nunca use `\n`**: use elementos Paragraph separados
+- **Nunca use marcadores Unicode**: use `LevelFormat.BULLET` com a configuração de numeração
+- **O PageBreak tem de ficar num Paragraph**: sozinho, gera XML inválido
+- **O ImageRun exige `type`**: sempre informe png/jpg/etc.
+- **Sempre defina o `width` da tabela em DXA**: nunca use `WidthType.PERCENTAGE` (quebra no Google Docs)
+- **Tabelas precisam das duas larguras**: o array `columnWidths` E o `width` da célula, e os dois têm de bater
+- **Largura da tabela = soma de columnWidths**: em DXA, confira se a soma fecha exatamente
+- **Sempre adicione margens às células**: use `margins: { top: 80, bottom: 80, left: 120, right: 120 }` para uma margem interna legível
+- **Use `ShadingType.CLEAR`**: nunca SOLID no sombreamento de tabelas
+- **Nunca use tabelas como divisórias/linhas**: as células têm altura mínima e aparecem como caixas vazias (inclusive em cabeçalhos e rodapés); use `border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: "2E75B6", space: 1 } }` num Paragraph. Para rodapés de duas colunas, use paradas de tabulação (veja a seção Paradas de tabulação), não tabelas
+- **O sumário exige só HeadingLevel**: nada de estilos personalizados nos parágrafos de título
+- **Sobrescreva os estilos nativos**: use os IDs exatos: "Heading1", "Heading2" etc. (Título 1 e Título 2 no Word em português)
+- **Inclua `outlineLevel`**: obrigatório para o sumário (0 para H1, 1 para H2 etc.)
+
+---
+
+## Editar documentos existentes
+
+**Siga os 3 passos, na ordem.**
+
+### Passo 1: desempacotar
+```bash
+python scripts/office/unpack.py document.docx unpacked/
+```
+Extrai o XML, formata com indentação, junta runs (trechos com a mesma formatação, o `<w:r>`) vizinhos e converte as aspas curvas (as "aspas inteligentes" do Word) em entidades XML (`&#x201C;` etc.) para elas sobreviverem à edição. Use `--merge-runs false` para não juntar os runs.
+
+### Passo 2: editar o XML
+
+Edite os arquivos em `unpacked/word/`. Veja os padrões em Referência do XML abaixo.
+
+**Use "Claude" como autor** das alterações controladas e dos comentários, a menos que o usuário peça explicitamente outro nome.
+
+**Use a ferramenta Edit diretamente para substituir strings. Não escreva scripts em Python.** Scripts trazem complexidade desnecessária. A ferramenta Edit mostra exatamente o que está sendo substituído.
+
+**CRÍTICO: use aspas curvas no conteúdo novo.** Ao adicionar texto com apóstrofos ou aspas, use entidades XML para gerar aspas curvas:
+```xml
+<!-- Use estas entidades para uma tipografia profissional -->
+<w:t>Here&#x2019;s a quote: &#x201C;Hello&#x201D;</w:t>
+```
+| Entidade | Caractere |
+|--------|-----------|
+| `&#x2018;` | ‘ (simples de abertura) |
+| `&#x2019;` | ’ (simples de fechamento / apóstrofo) |
+| `&#x201C;` | “ (dupla de abertura) |
+| `&#x201D;` | ” (dupla de fechamento) |
+
+**Adicionar comentários:** use o `comment.py` para cuidar do código repetitivo em vários arquivos XML (o texto tem de vir já escapado para XML):
+```bash
+python scripts/comment.py unpacked/ 0 "Comment text with &amp; and &#x2019;"
+python scripts/comment.py unpacked/ 1 "Texto da resposta" --parent 0  # resposta ao comentário 0
+python scripts/comment.py unpacked/ 0 "Texto" --author "Autor Personalizado"  # nome de autor personalizado
+```
+Depois, adicione as marcações ao document.xml (veja Comentários em Referência do XML).
+
+### Passo 3: empacotar
+```bash
+python scripts/office/pack.py unpacked/ output.docx --original document.docx
+```
+Valida com reparo automático, compacta o XML e cria o DOCX. Use `--validate false` para pular.
+
+**O reparo automático corrige:**
+- `durableId` >= 0x7FFFFFFF (gera de novo um ID válido)
+- `xml:space="preserve"` faltando em `<w:t>` com espaços
+
+**O reparo automático não corrige:**
+- XML malformado, aninhamento de elementos inválido, relacionamentos faltando, violações do schema
+
+### Armadilhas comuns
+
+- **Substitua elementos `<w:r>` inteiros**: ao adicionar alterações controladas, substitua o bloco `<w:r>...</w:r>` inteiro por `<w:del>...<w:ins>...` como irmãos. Não injete tags de alteração controlada dentro de um run.
+- **Preserve a formatação do `<w:rPr>`**: copie o bloco `<w:rPr>` do run original para os runs da alteração controlada, para manter o negrito, o tamanho da fonte etc.
+
+---
+
+## Referência do XML
+
+### Conformidade com o schema
+
+- **Ordem dos elementos em `<w:pPr>`**: `<w:pStyle>`, `<w:numPr>`, `<w:spacing>`, `<w:ind>`, `<w:jc>`, `<w:rPr>` por último
+- **Espaços**: adicione `xml:space="preserve"` a `<w:t>` com espaços no início ou no fim
+- **RSIDs**: têm de ser hexadecimais de 8 dígitos (ex.: `00AB1234`)
+
+### Alterações controladas
+
+**Inserção:**
+```xml
+<w:ins w:id="1" w:author="Claude" w:date="2025-01-01T00:00:00Z">
+  <w:r><w:t>texto inserido</w:t></w:r>
+</w:ins>
+```
+
+**Exclusão:**
+```xml
+<w:del w:id="2" w:author="Claude" w:date="2025-01-01T00:00:00Z">
+  <w:r><w:delText>texto excluído</w:delText></w:r>
+</w:del>
+```
+
+**Dentro de `<w:del>`**: use `<w:delText>` no lugar de `<w:t>` e `<w:delInstrText>` no lugar de `<w:instrText>`.
+
+**Edições mínimas**: marque só o que muda:
+```xml
+<!-- Mude "30 dias" para "60 dias" -->
+<w:r><w:t>O prazo é de </w:t></w:r>
+<w:del w:id="1" w:author="Claude" w:date="...">
+  <w:r><w:delText>30</w:delText></w:r>
+</w:del>
+<w:ins w:id="2" w:author="Claude" w:date="...">
+  <w:r><w:t>60</w:t></w:r>
+</w:ins>
+<w:r><w:t> dias.</w:t></w:r>
+```
+
+**Excluir parágrafos ou itens de lista inteiros**: ao tirar TODO o conteúdo de um parágrafo, marque também a marca de parágrafo como excluída, para ele se juntar ao parágrafo seguinte. Adicione `<w:del/>` dentro de `<w:pPr><w:rPr>`:
+```xml
+<w:p>
+  <w:pPr>
+    <w:numPr>...</w:numPr>  <!-- numeração da lista, se houver -->
+    <w:rPr>
+      <w:del w:id="1" w:author="Claude" w:date="2025-01-01T00:00:00Z"/>
+    </w:rPr>
+  </w:pPr>
+  <w:del w:id="2" w:author="Claude" w:date="2025-01-01T00:00:00Z">
+    <w:r><w:delText>Conteúdo do parágrafo inteiro sendo excluído...</w:delText></w:r>
+  </w:del>
+</w:p>
+```
+Sem o `<w:del/>` em `<w:pPr><w:rPr>`, aceitar as alterações deixa um parágrafo ou item de lista vazio.
+
+**Rejeitar a inserção de outro autor**: aninhe a exclusão dentro da inserção dele:
+```xml
+<w:ins w:author="Ana" w:id="5">
+  <w:del w:author="Claude" w:id="10">
+    <w:r><w:delText>o texto que ela inseriu</w:delText></w:r>
+  </w:del>
+</w:ins>
+```
+
+**Restaurar a exclusão de outro autor**: adicione uma inserção depois (não mexa na exclusão dele):
+```xml
+<w:del w:author="Ana" w:id="5">
+  <w:r><w:delText>texto excluído</w:delText></w:r>
+</w:del>
+<w:ins w:author="Claude" w:id="10">
+  <w:r><w:t>texto excluído</w:t></w:r>
+</w:ins>
+```
+
+### Comentários
+
+Depois de executar o `comment.py` (veja o Passo 2), adicione as marcações ao document.xml. Nas respostas, use a flag `--parent` e aninhe as marcações dentro das do comentário pai.
+
+**CRÍTICO: `<w:commentRangeStart>` e `<w:commentRangeEnd>` são irmãos de `<w:r>`, nunca ficam dentro de `<w:r>`.**
+
+```xml
+<!-- As marcações de comentário são filhas diretas de w:p, nunca ficam dentro de w:r -->
+<w:commentRangeStart w:id="0"/>
+<w:del w:id="1" w:author="Claude" w:date="2025-01-01T00:00:00Z">
+  <w:r><w:delText>excluído</w:delText></w:r>
+</w:del>
+<w:r><w:t> mais texto</w:t></w:r>
+<w:commentRangeEnd w:id="0"/>
+<w:r><w:rPr><w:rStyle w:val="CommentReference"/></w:rPr><w:commentReference w:id="0"/></w:r>
+
+<!-- Comentário 0 com a resposta 1 aninhada dentro -->
+<w:commentRangeStart w:id="0"/>
+  <w:commentRangeStart w:id="1"/>
+  <w:r><w:t>texto</w:t></w:r>
+  <w:commentRangeEnd w:id="1"/>
+<w:commentRangeEnd w:id="0"/>
+<w:r><w:rPr><w:rStyle w:val="CommentReference"/></w:rPr><w:commentReference w:id="0"/></w:r>
+<w:r><w:rPr><w:rStyle w:val="CommentReference"/></w:rPr><w:commentReference w:id="1"/></w:r>
+```
+
+### Imagens
+
+1. Adicione o arquivo da imagem a `word/media/`
+2. Adicione o relacionamento a `word/_rels/document.xml.rels`:
+```xml
+<Relationship Id="rId5" Type=".../image" Target="media/image1.png"/>
+```
+3. Adicione o tipo de conteúdo a `[Content_Types].xml`:
+```xml
+<Default Extension="png" ContentType="image/png"/>
+```
+4. Faça a referência no document.xml:
+```xml
+<w:drawing>
+  <wp:inline>
+    <wp:extent cx="914400" cy="914400"/>  <!-- EMUs: 914400 = 1 polegada -->
+    <a:graphic>
+      <a:graphicData uri=".../picture">
+        <pic:pic>
+          <pic:blipFill><a:blip r:embed="rId5"/></pic:blipFill>
+        </pic:pic>
+      </a:graphicData>
+    </a:graphic>
+  </wp:inline>
+</w:drawing>
+```
+
+---
+
+## Dependências
+
+- **pandoc**: extração de texto
+- **docx**: `npm install -g docx` (documentos novos)
+- **LibreOffice**: conversão para PDF (configurado automaticamente para ambientes em sandbox via `scripts/office/soffice.py`)
+- **Poppler**: `pdftoppm` para as imagens

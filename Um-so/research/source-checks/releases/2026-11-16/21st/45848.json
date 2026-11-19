@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:45:53.266Z",
+  "metadata": {
+    "type": "component",
+    "id": 45848,
+    "name": "Astryx Citation",
+    "description": "Citations display inline references to external sources. Use them to attribute information within AI-generated responses, articles, or anywhere provenance and source links are needed.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-citation/citation-source-list/preview.1794515702799.png",
+    "videoUrl": null,
+    "author": "Astryxdesign",
+    "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-citation?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-citation"
+  },
+  "component": {
+    "id": 45848,
+    "componentId": 26411,
+    "name": "Astryx Citation",
+    "demoName": "Citation — Source List",
+    "description": "Citations display inline references to external sources. Use them to attribute information within AI-generated responses, articles, or anywhere provenance and source links are needed.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-citation/citation-source-list/preview.1794515702799.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-citation?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\nimport \"./astryx-citation-utils/index.css\"\nimport { Citation } from \"@astryxdesign/core/Citation\"\n\nexport * from \"@astryxdesign/core/Citation\"\nexport default Citation\n",
+    "demoCode": "'use client';\n\nimport {Citation} from '@/components/ui/astryx-citation';\nimport {Stack} from '@astryxdesign/core/Layout';\nimport {Text} from '@astryxdesign/core/Text';\n\nconst sources = [\n  {\n    title: 'React Documentation',\n    url: 'https://react.dev',\n    icon: 'https://cdn.21st.dev/assets/mirror/b5/b5c3ee3158773e36fd4f42ef319564ab549b4746ee6cc6a3e220447618ad8559.png',\n  },\n  {\n    title: 'TypeScript Handbook',\n    url: 'https://www.typescriptlang.org/docs/handbook/',\n    icon: 'https://cdn.21st.dev/assets/mirror/a5/a5b6010ffce7ff3b2e601dd2c4f87e3bde8c563b42c8f99a6e0892aa1d8313d9.png',\n  },\n  {\n    title: 'MDN Web Docs',\n    url: 'https://developer.mozilla.org',\n    icon: 'https://developer.mozilla.org/favicon-48x48.cbbd161b.png',\n  },\n  {\n    title: 'W3C WAI-ARIA Specification',\n    url: 'https://www.w3.org/TR/wai-aria/',\n  },\n];\n\nfunction CitationSourceList() {\n  return (\n    <Stack direction=\"vertical\" gap={3}>\n      <Text type=\"supporting\" color=\"secondary\">\n        Sources\n      </Text>\n      <Stack direction=\"horizontal\" gap={2} style={{flexWrap: 'wrap'}}>\n        {sources.map((source, i) => (\n          <Citation\n            key={source.title}\n            source={source}\n            number={i + 1}\n            variant=\"label\"\n          />\n        ))}\n      </Stack>\n    </Stack>\n  );\n}\n\nexport default function CitationSourceListDemo() {\n  return (\n    <div\n      data-astryx-theme=\"neutral\"\n      data-theme=\"light\"\n      style={{colorScheme: 'light', display: 'contents'}}>\n      <CitationSourceList />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source and usage retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

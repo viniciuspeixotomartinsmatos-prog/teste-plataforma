@@ -1,0 +1,4 @@
+/assets/*
+  Access-Control-Allow-Origin: *
+/previews/*
+  Access-Control-Allow-Origin: *

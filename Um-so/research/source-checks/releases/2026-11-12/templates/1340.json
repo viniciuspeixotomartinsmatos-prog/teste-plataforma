@@ -1,0 +1,16 @@
+{
+  "route": "/@getastrothemes/templates/taskly-task-management-saas-astro-theme",
+  "type": "template",
+  "status": "template_metadata_only",
+  "metadata": {
+    "type": "template",
+    "id": 1340,
+    "name": "Taskly - Task Management SaaS Astro Theme",
+    "description": "An Astro theme for a task management SaaS product.",
+    "previewUrl": "https://cdn.21st.dev/user_3JlcKOi10WzS9V2noR9oTgWH79v/templates/taskly-task-management-saas-astro-theme/preview-1794247946276.png",
+    "author": "getastrothemes",
+    "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3JlcKOi10WzS9V2noR9oTgWH79v/avatar.png",
+    "url": "https://21st.dev/community/templates/taskly-task-management-saas-astro-theme",
+    "price": 59
+  }
+}

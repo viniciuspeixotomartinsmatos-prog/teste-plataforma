@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "type": "theme",
+    "id": "8ddc87e5-0caf-4a29-96c5-2dcd920f2281",
+    "name": "OneBhoomi",
+    "description": null,
+    "previewUrl": null,
+    "author": "happyanand06",
+    "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18yeW8zY1hRZHZLVDN2WDg1MDNCRWFkV1cxeWMifQ",
+    "url": "https://21st.dev/community/themes/onebhoomi-1794708423263"
+  },
+  "bundle": {
+    "theme": {
+      "id": "8ddc87e5-0caf-4a29-96c5-2dcd920f2281",
+      "name": "OneBhoomi",
+      "author": "happyanand06",
+      "url": "https://21st.dev/community/themes/onebhoomi-1794708423263",
+      "css": ":root {\r\n  --background: #F8FAFC;\r\n  --foreground: #0F172A;\r\n  --card: #FFFFFF;\r\n  --card-foreground: #0F172A;\r\n  --primary: #7C3AED;\r\n  --primary-foreground: #FFFFFF;\r\n  --secondary: #EEF2FF;\r\n  --secondary-foreground: #0F172A;\r\n  --muted: #F1F5F9;\r\n  --muted-foreground: #475569;\r\n  --accent: #0891B2;\r\n  --accent-foreground: #FFFFFF;\r\n  --destructive: #DC2626;\r\n  --destructive-foreground: #FFFFFF;\r\n  --border: #E2E8F0;\r\n  --input: #E2E8F0;\r\n  --ring: #7C3AED;\r\n  --radius: 0.75rem;\r\n}\r\n\r\n.dark {\r\n  --background: #0F172A;\r\n  --foreground: #FFFFFF;\r\n  --card: #192134;\r\n  --card-foreground: #FFFFFF;\r\n  --primary: #7C3AED;\r\n  --primary-foreground: #FFFFFF;\r\n  --secondary: #6366F1;\r\n  --secondary-foreground: #FFFFFF;\r\n  --muted: #131936;\r\n  --muted-foreground: #94A3B8;\r\n  --accent: #0891B2;\r\n  --accent-foreground: #FFFFFF;\r\n  --destructive: #DC2626;\r\n  --destructive-foreground: #FFFFFF;\r\n  --border: rgba(255, 255, 255, 0.14);\r\n  --input: rgba(255, 255, 255, 0.14);\r\n  --ring: #7C3AED;\r\n  --radius: 0.75rem;\r\n}\r\n"
+    }
+  }
+}

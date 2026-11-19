@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:45:53.376Z",
+  "metadata": {
+    "type": "component",
+    "id": 45458,
+    "name": "Astryx Chat Tool Calls",
+    "description": "ChatToolCalls displays tool or function call invocations from an LLM response. Pass an array of calls and the component handles the rest: a single call renders inline, while multiple calls collapse into a summary with the latest call visible at the surface. Use it anywhere an AI agent shows what actions it took.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-chat-tool-calls/chat-tool-calls-statuses/preview.1794506176083.webp",
+    "videoUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-chat-tool-calls/chat-tool-calls-statuses/video.1794506169070.mp4",
+    "author": "Astryxdesign",
+    "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-chat-tool-calls?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-tool-calls"
+  },
+  "component": {
+    "id": 45458,
+    "componentId": 26201,
+    "name": "Astryx Chat Tool Calls",
+    "demoName": "ChatToolCalls — Statuses",
+    "description": "ChatToolCalls displays tool or function call invocations from an LLM response. Pass an array of calls and the component handles the rest: a single call renders inline, while multiple calls collapse into a summary with the latest call visible at the surface. Use it anywhere an AI agent shows what actions it took.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-chat-tool-calls/chat-tool-calls-statuses/preview.1794506176083.webp",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-chat-tool-calls?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\nimport \"./astryx-chat-tool-calls-utils/index.css\"\nimport { ChatToolCalls } from \"@astryxdesign/core/Chat\"\n\nexport * from \"@astryxdesign/core/Chat\"\nexport default ChatToolCalls\n",
+    "demoCode": "'use client';\n\nimport {ChatToolCalls} from '@/components/ui/astryx-chat-tool-calls';\n\nfunction ChatToolCallsStatuses() {\n  return (\n    <ChatToolCalls\n      defaultIsExpanded\n      calls={[\n        {\n          key: 'pending',\n          name: 'bash',\n          target: 'yarn build',\n          status: 'pending',\n        },\n        {\n          key: 'running',\n          name: 'bash',\n          target: 'yarn test',\n          status: 'running',\n        },\n        {\n          key: 'complete',\n          name: 'edit',\n          target: 'src/App.tsx',\n          status: 'complete',\n          duration: '120ms',\n          additions: 8,\n          deletions: 2,\n        },\n        {\n          key: 'error',\n          name: 'bash',\n          target: 'yarn lint',\n          status: 'error',\n          duration: '0.8s',\n          errorMessage: '3 lint errors found',\n        },\n      ]}\n    />\n  );\n}\n\nexport default function ChatToolCallsStatusesDemo() {\n  return (\n    <div\n      data-astryx-theme=\"neutral\"\n      data-theme=\"light\"\n      style={{colorScheme: 'light', display: 'contents'}}>\n      <ChatToolCallsStatuses />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source and usage retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

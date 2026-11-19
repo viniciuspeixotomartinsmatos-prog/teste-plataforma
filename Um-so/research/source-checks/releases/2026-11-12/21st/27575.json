@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 27575,
+    "name": "Empty State",
+    "description": "A placeholder layout for empty lists, search results, or error screens with an optional icon, title, description, and action buttons.",
+    "previewUrl": "https://cdn.21st.dev/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/empty-state/default/preview.1794339099055.png",
+    "videoUrl": null,
+    "author": "wensity",
+    "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/avatar.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/wensity/empty-state?api_key=REDACTED\"",
+    "url": "https://21st.dev/@wensity/components/empty-state"
+  },
+  "requestedRoute": "/@wensity/components/empty-state",
+  "checkedAt": "2026-11-13T02:18:40.299Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 27575,
+    "componentId": 14058,
+    "authorUserId": "user_3JFJF7Mbb5ImA8DO9hE1FECx2fT",
+    "name": "Empty State",
+    "demoName": "Default",
+    "description": "A placeholder layout for empty lists, search results, or error screens with an optional icon, title, description, and action buttons.",
+    "previewUrl": "https://cdn.21st.dev/user_3JFJF7Mbb5ImA8DO9hE1FECx2fT/empty-state/default/preview.1794339099055.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/wensity/empty-state?api_key=REDACTED\"",
+    "componentCode": "\"use client\";\n\nimport * as React from \"react\";\nimport { motion, useReducedMotion } from \"framer-motion\";\nimport { cn } from \"@/lib/utils\";\n\n/* ─── Types ─────────────────────────────────────────────────── */\n\nexport interface EmptyStateProps {\n  /** Large icon or illustration displayed above the text. */\n  icon?: React.ReactNode;\n  /** Primary heading. */\n  title: string;\n  /** Supporting description beneath the title. */\n  description?: string;\n  /** Optional action slot. Pass a single button, a button group, or an input. */\n  action?: React.ReactNode;\n  /** Optional footer slot rendered below the action (links, secondary text). */\n  footer?: React.ReactNode;\n  /** Additional class name on the root wrapper. */\n  className?: string;\n}\n\n/* ─── EmptyState ────────────────────────────────────────────── */\n\nexport function EmptyState({\n  icon,\n  title,\n  description,\n  action,\n  footer,\n  className,\n}: EmptyStateProps) {\n  const reduceMotion = useReducedMotion();\n\n  return (\n    <div\n      data-wensity-primitive=\"\"\n      className={cn(\n        \"flex flex-col items-center justify-center gap-4 px-6 py-12 text-center\",\n        className,\n      )}\n    >\n      {icon && (\n        <motion.div\n          initial={reduceMotion ? undefined : { opacity: 0, scale: 0.92 }}\n          animate={{ opacity: 1, scale: 1 }}\n          transition={{\n            type: \"spring\",\n            stiffness: 360,\n            damping: 28,\n            mass: 0.6,\n          }}\n        >\n          {icon}\n        </motion.div>\n      )}\n      <div className=\"flex flex-col items-center gap-1.5\">\n        <p className=\"font-[family-name:var(--primitive-font-display)] text-[15px] font-semibold tracking-[-0.01em] text-[var(--foreground)]\">\n          {title}\n        </p>\n        {description && (\n          <p className=\"max-w-[22rem] text-[13px] leading-relaxed text-[var(--muted-foreground)]\">\n            {description}\n          </p>\n        )}\n      </div>\n      {action && (\n        <div className=\"flex flex-wrap items-center justify-center gap-2\">\n          {action}\n        </div>\n      )}\n      {footer && <div>{footer}</div>}\n    </div>\n  );\n}\n\n/* ─── Illustrations (icon slots) ────────────────────────────── */\n\n/** A subtle, larger icon container for the illustration variant. */\nexport function EmptyStateIllustration({\n  children,\n  className,\n}: {\n  children: React.ReactNode;\n  className?: string;\n}) {\n  return (\n    <div\n      className={cn(\n        \"flex size-16 items-center justify-center rounded-[var(--primitive-radius-surface)]\",\n        \"border border-[var(--border)]\",\n        \"bg-[color-mix(in_srgb,var(--foreground)_3%,var(--background))]\",\n        \"text-[var(--muted-foreground)]\",\n        className,\n      )}\n    >\n      {children}\n    </div>\n  );\n}\n\nexport default EmptyState;\n",
+    "demoCode": "import EmptyState, {\n  EmptyStateIllustration,\n} from \"@/components/ui/empty-state\";\n\nfunction InboxIcon() {\n  return (\n    <svg\n      xmlns=\"http://www.w3.org/2000/svg\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      stroke=\"currentColor\"\n      strokeWidth=\"1.5\"\n      className=\"size-7\"\n    >\n      <path\n        strokeLinecap=\"round\"\n        strokeLinejoin=\"round\"\n        d=\"M3 8.25V15a2.25 2.25 0 0 0 2.25 2.25h13.5A2.25 2.25 0 0 0 21 15V8.25M3 8.25 5.056 4.19A1.5 1.5 0 0 1 6.4 3.375h11.2a1.5 1.5 0 0 1 1.344.815L21 8.25M3 8.25h4.243a1.5 1.5 0 0 1 1.342.83l.6 1.2a1.5 1.5 0 0 0 1.342.83h2.946a1.5 1.5 0 0 0 1.342-.83l.6-1.2a1.5 1.5 0 0 1 1.342-.83H21\"\n      />\n    </svg>\n  );\n}\n\nexport default function EmptyStateDemo() {\n  return (\n    <div className=\"flex w-full items-center justify-center bg-[var(--background)] p-8\">\n      <EmptyState\n        icon={\n          <EmptyStateIllustration>\n            <InboxIcon />\n          </EmptyStateIllustration>\n        }\n        title=\"No messages yet\"\n        description=\"When someone sends you a message, it will show up here.\"\n        action={\n          <button className=\"inline-flex h-9 items-center justify-center rounded-[var(--primitive-radius-control)] bg-[var(--foreground)] px-4 text-[13px] font-medium text-[var(--background)] transition-opacity hover:opacity-90\">\n            Compose message\n          </button>\n        }\n      />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": "user_3JFJF7Mbb5ImA8DO9hE1FECx2fT"
+  }
+}

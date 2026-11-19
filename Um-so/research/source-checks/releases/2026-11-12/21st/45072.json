@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 45072,
+    "name": "Dusk Crossing",
+    "description": "Pure CSS gradient background in the Silk Blend style, made with the 21st.dev Gradient Builder. 4-color palette (#8295D4, #4A7AE8, #FF6A00, #7E56C2). Features: film grain. A drop-in, zero-dependency React component for hero sections, cards, and page backgrounds.",
+    "previewUrl": "https://cdn.21st.dev/alihamza91/dusk-crossing/default/preview.1794324333457-04ef88bd-1762-4e08-b2cd-f9ad5be5fabd.webp",
+    "videoUrl": null,
+    "author": "alihamza91",
+    "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3FFpdySEWasaDxnJKRelu2qkAth/avatar.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/alihamza91/dusk-crossing?api_key=REDACTED\"",
+    "url": "https://21st.dev/@alihamza91/components/dusk-crossing"
+  },
+  "requestedRoute": "/@alihamza91/components/dusk-crossing",
+  "checkedAt": "2026-11-12T21:13:19.612Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 45072,
+    "componentId": 26062,
+    "authorUserId": "user_3FFpdySEWasaDxnJKRelu2qkAth",
+    "name": "Dusk Crossing",
+    "demoName": "Default",
+    "description": "Pure CSS gradient background in the Silk Blend style, made with the 21st.dev Gradient Builder. 4-color palette (#8295D4, #4A7AE8, #FF6A00, #7E56C2). Features: film grain. A drop-in, zero-dependency React component for hero sections, cards, and page backgrounds.",
+    "previewUrl": "https://cdn.21st.dev/alihamza91/dusk-crossing/default/preview.1794324333457-04ef88bd-1762-4e08-b2cd-f9ad5be5fabd.webp",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/alihamza91/dusk-crossing?api_key=REDACTED\"",
+    "componentCode": "// GradientBackground — \"Dusk Crossing\", made with the 21st.dev Gradient\n// Builder and exported as live CSS (the builder's own Copy-CSS background,\n// plus its soften-blur and grain passes). Zero dependencies: one <div> that\n// fills its parent. Drop it behind your content:\n// <div className=\"relative h-96\"><GradientBackground className=\"absolute inset-0\" /></div>\n// Remix the source recipe (colors, mode, finish) in the editor:\n// https://21st.dev/community/gradients/editor?from=0b52d630-1985-4d1b-9e2a-b599b7939872\nexport function GradientBackground({ className }: { className?: string }) {\n  return (\n    <div\n      aria-hidden=\"true\"\n      className={className}\n      style={{\n        position: \"relative\",\n        overflow: \"hidden\",\n        width: \"100%\",\n        height: \"100%\",\n        containerType: \"size\",\n      }}\n    >\n      <div\n        style={{\n          position: \"absolute\",\n        inset: 0,\n        backgroundColor: \"#8295D4\",\n        backgroundImage:\n          \"url(\\\"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.080'/></svg>\\\"), linear-gradient(165deg, #8295D4 0%, #4A7AE8 26%, #FF6A00 62%, #7E56C2 87%)\",\n        backgroundSize: \"120px 120px, auto\",\n        backgroundBlendMode: \"overlay, normal\",\n        }}\n      />\n      <svg\n        aria-hidden=\"true\"\n        style={{\n          position: \"absolute\",\n          inset: 0,\n          width: \"100%\",\n          height: \"100%\",\n          opacity: 0.080,\n          mixBlendMode: \"overlay\",\n        }}\n      >\n        <filter id=\"grain-0b52d630\">\n          <feTurbulence\n            type=\"fractalNoise\"\n            baseFrequency=\"0.8\"\n            numOctaves=\"2\"\n            stitchTiles=\"stitch\"\n          />\n          <feColorMatrix type=\"saturate\" values=\"0\" />\n        </filter>\n        <rect width=\"100%\" height=\"100%\" filter=\"url(#grain-0b52d630)\" />\n      </svg>\n    </div>\n  )\n}\n",
+    "demoCode": "import { GradientBackground } from \"@/components/ui/dusk-crossing\"\n\nexport default function GradientBackgroundDemo() {\n  return (\n    <div className=\"relative h-[440px] w-full overflow-hidden rounded-xl\">\n      <GradientBackground className=\"h-full w-full\" />\n    </div>\n  )\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  }
+}

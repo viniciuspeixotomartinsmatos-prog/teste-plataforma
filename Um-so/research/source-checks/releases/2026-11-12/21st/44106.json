@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 44106,
+    "name": "Ticket Card",
+    "description": "An event ticket card with a perforated stub that loosens on hover and tears away with an animation when clicked.",
+    "previewUrl": "https://cdn.21st.dev/user_3Bft2c6Th5yLxMZYOKsM8H4TjMH/ticket-card/default/preview.1794424583393.png",
+    "videoUrl": "https://cdn.21st.dev/user_3Bft2c6Th5yLxMZYOKsM8H4TjMH/ticket-card/default/video.1794424563107.mp4",
+    "author": "ham7a311",
+    "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18zQmZ0MllLbnVkRFlYUzlQaG0zOGNrbHZ2dDcifQ",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/ham7a311/ticket-card?api_key=REDACTED\"",
+    "url": "https://21st.dev/@ham7a311/components/ticket-card"
+  },
+  "requestedRoute": "/@ham7a311/components/ticket-card",
+  "checkedAt": "2026-11-13T02:10:27.980Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 44106,
+    "componentId": 25417,
+    "authorUserId": "user_3Bft2c6Th5yLxMZYOKsM8H4TjMH",
+    "name": "Ticket Card",
+    "demoName": "Default",
+    "description": "An event ticket card with a perforated stub that loosens on hover and tears away with an animation when clicked.",
+    "previewUrl": "https://cdn.21st.dev/user_3Bft2c6Th5yLxMZYOKsM8H4TjMH/ticket-card/default/preview.1794424583393.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/ham7a311/ticket-card?api_key=REDACTED\"",
+    "componentCode": "\"use client\";\n\nimport { useState, type ReactNode } from \"react\";\nimport \"./ticket-card.css\";\n\n/**\n * Ticket Card\n * An event ticket with a perforated stub. Hover and the stub loosens along its\n * perforation; click and it tears away, leaving a clean edge and a \"torn\" mark,\n * while the main ticket settles.\n */\n\ntype Props = {\n  event: string;\n  venue: string;\n  date: string;\n  time: string;\n  seat: { label: string; value: string }[];\n  code: string;\n  stubLabel?: string;\n  onTear?: () => void;\n  footer?: ReactNode;\n};\n\nexport function TicketCard({\n  event,\n  venue,\n  date,\n  time,\n  seat,\n  code,\n  stubLabel = \"Admit one\",\n  onTear,\n}: Props) {\n  const [torn, setTorn] = useState(false);\n  return (\n    <article className={`tk ${torn ? \"tk--torn\" : \"\"}`}>\n      <div className=\"tk__main\">\n        <p className=\"tk__kicker\">\n          {date} · {time}\n        </p>\n        <h3 className=\"tk__event\">{event}</h3>\n        <p className=\"tk__venue\">{venue}</p>\n        <dl className=\"tk__seat\">\n          {seat.map((s) => (\n            <div key={s.label}>\n              <dt>{s.label}</dt>\n              <dd>{s.value}</dd>\n            </div>\n          ))}\n        </dl>\n        <span className=\"tk__notch tk__notch--t\" aria-hidden=\"true\" />\n        <span className=\"tk__notch tk__notch--b\" aria-hidden=\"true\" />\n      </div>\n\n      <button\n        type=\"button\"\n        className=\"tk__stub\"\n        onClick={() => {\n          if (torn) return;\n          setTorn(true);\n          onTear?.();\n        }}\n        aria-pressed={torn}\n        aria-label={\n          torn\n            ? `${stubLabel} — stub detached`\n            : `${stubLabel} — tear off the stub`\n        }\n      >\n        <span className=\"tk__perf\" aria-hidden=\"true\" />\n        <span className=\"tk__stub-label\">{torn ? \"Detached\" : stubLabel}</span>\n        <span className=\"tk__bars\" aria-hidden=\"true\" />\n        <span className=\"tk__code\">{code}</span>\n        <span className=\"tk__hint\" aria-hidden=\"true\">\n          {torn ? \"✓\" : \"tear ↗\"}\n        </span>\n      </button>\n    </article>\n  );\n}\n\nexport default TicketCard;\n",
+    "demoCode": "\"use client\";\n\nimport { TicketCard } from \"@/components/ui/ticket-card\";\n\nexport default function Demo() {\n  return (\n    <div className=\"flex min-h-full w-full items-center justify-center bg-[#0b080d] p-8 [container-type:inline-size]\">\n      <TicketCard\n        event=\"Northstar Build Summit\"\n        venue=\"Harbour Hall · Level 2 · Main Stage\"\n        date=\"Sat 24 Oct\"\n        time=\"09:00\"\n        seat={[\n          { label: \"Row\", value: \"C\" },\n          { label: \"Seat\", value: \"14\" },\n          { label: \"Gate\", value: \"2\" },\n        ]}\n        code=\"NS-24-0417-C14\"\n      />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": "user_3Bft2c6Th5yLxMZYOKsM8H4TjMH"
+  }
+}

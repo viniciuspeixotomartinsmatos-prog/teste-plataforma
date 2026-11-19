@@ -1,0 +1,217 @@
+{
+  "checkedAt": "2026-11-16T17:27:34.091Z",
+  "published": 0,
+  "dependencyVersions": {
+    "@astryxdesign/core": "0.7.16",
+    "@stylexjs/stylex": "0.19.2",
+    "@heroicons/react": "2.2.0"
+  },
+  "source": "https://github.com/meta/astryx/tree/d57f216913d78405b1bd45d00a07ee2128f25394",
+  "scope": "Official dependency adaptation, not recovery of original generated local CSS. All results require individual browser acceptance.",
+  "results": [
+    {
+      "id": "staged-21st-45177",
+      "status": "compiled-adapted",
+      "bytes": 550156,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45285",
+      "status": "compiled-adapted",
+      "bytes": 467461,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45286",
+      "status": "compiled-adapted",
+      "bytes": 527648,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45287",
+      "status": "compiled-adapted",
+      "bytes": 398332,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45288",
+      "status": "compiled-adapted",
+      "bytes": 426756,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45311",
+      "status": "compiled-adapted",
+      "bytes": 376084,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45317",
+      "status": "compiled-adapted",
+      "bytes": 490199,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45322",
+      "status": "compiled-adapted",
+      "bytes": 607452,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45324",
+      "status": "compiled-adapted",
+      "bytes": 585990,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45326",
+      "status": "compiled-adapted",
+      "bytes": 483076,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45331",
+      "status": "compiled-adapted",
+      "bytes": 429410,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45338",
+      "status": "compiled-adapted",
+      "bytes": 319581,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45341",
+      "status": "compiled-adapted",
+      "bytes": 432209,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45344",
+      "status": "compiled-adapted",
+      "bytes": 331001,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45352",
+      "status": "compiled-adapted",
+      "bytes": 456528,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45354",
+      "status": "compiled-adapted",
+      "bytes": 541822,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45423",
+      "status": "compiled-adapted",
+      "bytes": 457676,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45430",
+      "status": "compiled-adapted",
+      "bytes": 426634,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45431",
+      "status": "compiled-adapted",
+      "bytes": 434768,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45432",
+      "status": "compiled-adapted",
+      "bytes": 437359,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45433",
+      "status": "compiled-adapted",
+      "bytes": 399010,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45434",
+      "status": "compiled-adapted",
+      "bytes": 346662,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45454",
+      "status": "compiled-adapted",
+      "bytes": 353049,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45458",
+      "status": "compiled-adapted",
+      "bytes": 357914,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45468",
+      "status": "compiled-adapted",
+      "bytes": 411170,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45843",
+      "status": "compiled-adapted",
+      "bytes": 479239,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45845",
+      "status": "compiled-adapted",
+      "bytes": 476814,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45848",
+      "status": "compiled-adapted",
+      "bytes": 352964,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45851",
+      "status": "compiled-adapted",
+      "bytes": 416546,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45864",
+      "status": "compiled-adapted",
+      "bytes": 306471,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45893",
+      "status": "compiled-adapted",
+      "bytes": 442833,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45900",
+      "status": "compiled-adapted",
+      "bytes": 368319,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45902",
+      "status": "compiled-adapted",
+      "bytes": 367260,
+      "originalCssRecovered": false
+    },
+    {
+      "id": "staged-21st-45904",
+      "status": "compiled-adapted",
+      "bytes": 455883,
+      "originalCssRecovered": false
+    }
+  ]
+}

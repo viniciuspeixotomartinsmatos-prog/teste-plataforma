@@ -1,0 +1,72 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Heritage Athletic Club</title><style>/* Heritage Athletic Club - shadcn-style theme tokens for the member site (published to 21st.dev) */
+:root {
+  --background: #F4EEE1;
+  --foreground: #1B2233;
+  --card: #FBF8F1;
+  --card-foreground: #1B2233;
+  --popover: #FBF8F1;
+  --popover-foreground: #1B2233;
+  --primary: #14213D;
+  --primary-foreground: #F4EEE1;
+  --secondary: #EAE0CB;
+  --secondary-foreground: #14213D;
+  --muted: #EAE0CB;
+  --muted-foreground: #5F5A4E;
+  --accent: #C9A45C;
+  --accent-foreground: #14213D;
+  --destructive: #7A1F26;
+  --destructive-foreground: #FBF8F1;
+  --border: #DDD2BA;
+  --input: #DDD2BA;
+  --ring: #B08D57;
+  --chart-1: #14213D;
+  --chart-2: #B08D57;
+  --chart-3: #1F5A3E;
+  --chart-4: #7A1F26;
+  --chart-5: #E3A33B;
+  --radius: 0.875rem;
+  --sidebar: #14213D;
+  --sidebar-foreground: #F4EEE1;
+  --sidebar-primary: #C9A45C;
+  --sidebar-primary-foreground: #14213D;
+  --sidebar-accent: #1F3260;
+  --sidebar-accent-foreground: #E9CF8F;
+  --sidebar-border: #2B3A5C;
+  --sidebar-ring: #C9A45C;
+}
+.dark {
+  --background: #0F1A2E;
+  --foreground: #F4EEE1;
+  --card: #14213D;
+  --card-foreground: #F4EEE1;
+  --popover: #14213D;
+  --popover-foreground: #F4EEE1;
+  --primary: #C9A45C;
+  --primary-foreground: #14213D;
+  --secondary: #1F3260;
+  --secondary-foreground: #F4EEE1;
+  --muted: #1A2846;
+  --muted-foreground: #B9B09E;
+  --accent: #E9CF8F;
+  --accent-foreground: #14213D;
+  --destructive: #C0505A;
+  --destructive-foreground: #F4EEE1;
+  --border: #2B3A5C;
+  --input: #2B3A5C;
+  --ring: #C9A45C;
+  --chart-1: #C9A45C;
+  --chart-2: #E9CF8F;
+  --chart-3: #4FA27A;
+  --chart-4: #C0505A;
+  --chart-5: #E3A33B;
+  --radius: 0.875rem;
+  --sidebar: #0D1730;
+  --sidebar-foreground: #F4EEE1;
+  --sidebar-primary: #C9A45C;
+  --sidebar-primary-foreground: #14213D;
+  --sidebar-accent: #1F3260;
+  --sidebar-accent-foreground: #E9CF8F;
+  --sidebar-border: #2B3A5C;
+  --sidebar-ring: #C9A45C;
+}
+</style><style>*{box-sizing:border-box}body{margin:0;background:var(--background);color:var(--foreground);font-family:var(--font-sans,system-ui);padding:clamp(18px,5vw,64px)}main{max-width:920px;margin:auto}header{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:38px}h1{font-size:38px;margin:8px 0;letter-spacing:-.04em}p{line-height:1.6}small{color:var(--muted-foreground)}section{border:1px solid var(--border);border-radius:var(--radius,12px);background:var(--card);color:var(--card-foreground);padding:26px;min-width:0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.swatches{display:flex;gap:10px;margin:24px 0}.swatches i{width:48px;height:48px;border-radius:var(--radius,8px);border:1px solid var(--border)}button,input,select{font:inherit;border-radius:var(--radius,8px);padding:12px 16px;border:1px solid var(--border)}button{cursor:pointer;background:var(--primary);color:var(--primary-foreground)}button.secondary{background:var(--secondary);color:var(--secondary-foreground)}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--ring);outline-offset:3px}label{display:flex;flex-direction:column;gap:8px;margin:20px 0}input,select{width:100%;background:var(--background);color:var(--foreground)}.actions{display:flex;gap:10px;flex-wrap:wrap}output{display:block;margin-top:15px;color:var(--muted-foreground)}@media(max-width:600px){.grid{grid-template-columns:1fr}h1{font-size:28px}header{align-items:flex-start}}</style></head><body><main><header><div><small>CORES E TIPOGRAFIA</small><h1>Heritage Athletic Club</h1><p>Experimente os tokens deste tema.</p></div><button class="secondary" id="theme" aria-pressed="false">Alternar tema</button></header><div class="grid"><section><h2>Seu próximo projeto</h2><p>Uma paleta aplicada a elementos reais da interface.</p><div class="swatches" aria-label="Cores do tema"><i style="background:var(--primary)"></i><i style="background:var(--secondary)"></i><i style="background:var(--accent)"></i><i style="background:var(--destructive)"></i></div><label>Nome do projeto<input placeholder="Minha próxima ideia"></label><label>Categoria<select><option>Aplicativo</option><option>Portfólio</option><option>Loja</option></select></label><div class="actions"><button id="save">Salvar projeto</button><button class="secondary" id="reset">Limpar</button></div><output id="status" aria-live="polite"></output></section><section><h2>Configurações</h2><p>Ajuste as opções e confira o contraste da paleta.</p><label>Notificações<input type="checkbox" checked></label><label>Intensidade<input type="range" min="0" max="100" value="65"></label><p>Texto de apoio e estados de foco usam os tokens originais.</p></section></div></main><script>document.querySelector('#theme').onclick=e=>{const dark=document.documentElement.classList.toggle('dark');e.currentTarget.setAttribute('aria-pressed',String(dark))};document.querySelector('#save').onclick=()=>document.querySelector('#status').textContent='Projeto salvo nesta demonstração.';document.querySelector('#reset').onclick=()=>{document.querySelector('input').value='';document.querySelector('#status').textContent='Campos limpos.'};</script></body></html>

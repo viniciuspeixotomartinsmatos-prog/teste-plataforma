@@ -1,0 +1,21 @@
+{
+  "imported": 1784,
+  "failed": [
+    {
+      "file": "src/css/fonts.css",
+      "imported": "../../node_modules/geist/dist/fonts/geist-sans/Geist-Variable.woff2"
+    },
+    {
+      "file": "src/css/fonts.css",
+      "imported": "../../node_modules/geist/dist/fonts/geist-sans/Geist-Italic[wght].woff2"
+    },
+    {
+      "file": "src/css/fonts.css",
+      "imported": "../../node_modules/geist/dist/fonts/geist-mono/GeistMono-Variable.woff2"
+    },
+    {
+      "file": "src/css/fonts.css",
+      "imported": "../../node_modules/geist/dist/fonts/geist-mono/GeistMono-Italic[wght].woff2"
+    }
+  ]
+}

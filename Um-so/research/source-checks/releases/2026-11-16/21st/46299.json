@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:46:42.319Z",
+  "metadata": {
+    "type": "component",
+    "id": 46299,
+    "name": "HANZO Camera Lens",
+    "description": "Pure CSS gradient background in the Echo Rings style, made with the 21st.dev Gradient Builder. 4-color palette (#0A0A0A, #DC2828, #811D1D, #262626). A drop-in, zero-dependency React component for hero sections, cards, and page backgrounds.",
+    "previewUrl": "https://cdn.21st.dev/workout_scorpion/hanzo-camera-lens/default/preview.1794567344688-0ae3de58-445e-4355-9112-21c9a619043c.webp",
+    "videoUrl": null,
+    "author": "workout_scorpion",
+    "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zR1BHVUtXS3k2NnZ5T2pNRzdNQmk1VWdqYzYifQ",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/workout_scorpion/hanzo-camera-lens?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@workout_scorpion/components/hanzo-camera-lens"
+  },
+  "component": {
+    "id": 46299,
+    "componentId": 26601,
+    "name": "HANZO Camera Lens",
+    "demoName": "Default",
+    "description": "Pure CSS gradient background in the Echo Rings style, made with the 21st.dev Gradient Builder. 4-color palette (#0A0A0A, #DC2828, #811D1D, #262626). A drop-in, zero-dependency React component for hero sections, cards, and page backgrounds.",
+    "previewUrl": "https://cdn.21st.dev/workout_scorpion/hanzo-camera-lens/default/preview.1794567344688-0ae3de58-445e-4355-9112-21c9a619043c.webp",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/workout_scorpion/hanzo-camera-lens?api_key=$API_KEY_21ST\"",
+    "componentCode": "// GradientBackground — \"HANZO Camera Lens\", made with the 21st.dev Gradient\n// Builder and exported as live CSS (the builder's own Copy-CSS background,\n// plus its soften-blur and grain passes). Zero dependencies: one <div> that\n// fills its parent. Drop it behind your content:\n// <div className=\"relative h-96\"><GradientBackground className=\"absolute inset-0\" /></div>\n// Remix the source recipe (colors, mode, finish) in the editor:\n// https://21st.dev/community/gradients/editor?from=cc4cdb76-4f67-480e-a01d-ee545a0504aa\nexport function GradientBackground({ className }: { className?: string }) {\n  return (\n    <div\n      aria-hidden=\"true\"\n      className={className}\n      style={{\n        position: \"relative\",\n        overflow: \"hidden\",\n        width: \"100%\",\n        height: \"100%\",\n        containerType: \"size\",\n      }}\n    >\n      <div\n        style={{\n          position: \"absolute\",\n        inset: 0,\n        backgroundColor: \"#0A0A0A\",\n        backgroundImage:\n          \"radial-gradient(circle at 50% 50%, #0a0a0a 0%, #0a0a0a 14.5%, #881c1c 18.83%, #881c1c 31.17%, #ca2626 35.5%, #ca2626 47.83%, #931f1f 52.17%, #931f1f 64.5%, #5d2121 68.83%, #5d2121 81.17%, #262626 85.5%, #262626 100%)\",\n        }}\n      />\n    </div>\n  )\n}\n",
+    "demoCode": "import { GradientBackground } from \"@/components/ui/hanzo-camera-lens\"\n\nexport default function GradientBackgroundDemo() {\n  return (\n    <div className=\"relative h-[440px] w-full overflow-hidden rounded-xl\">\n      <GradientBackground className=\"h-full w-full\" />\n    </div>\n  )\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source and usage retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

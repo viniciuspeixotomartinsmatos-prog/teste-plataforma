@@ -1,0 +1,61 @@
+{
+  "name": "ascii-art-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/ascii-art-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport { AsciiArt } from \"@/components/ui/ascii-art\";\n\nexport function AsciiArtDemo() {\n  return (\n    <AsciiArt\n      src=\"https://assets.aceternity.com/avatars/manu.webp\"\n      resolution={100}\n      color=\"var(--color-neutral-500)\"\n      animationStyle=\"fade\"\n      animationDuration={1.5}\n      animateOnView={false}\n      className=\"mx-auto aspect-square w-full max-w-lg bg-neutral-950\"\n    />\n  );\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/ascii-art-demo-matrix.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport { AsciiArt } from \"@/components/ui/ascii-art\";\n\nexport function AsciiArtMatrixDemo() {\n  return (\n    <AsciiArt\n      src=\"https://assets.aceternity.com/avatars/manu.webp\"\n      resolution={80}\n      color=\"#00ff00\"\n      animationStyle=\"matrix\"\n      inverted\n      animateOnView={false}\n      className=\"mx-auto aspect-square w-full max-w-lg bg-black\"\n    />\n  );\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/ascii-art-demo-typewriter.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport { AsciiArt } from \"@/components/ui/ascii-art\";\n\nexport function AsciiArtTypewriterDemo() {\n  return (\n    <AsciiArt\n      src=\"https://assets.aceternity.com/avatars/manu.webp\"\n      resolution={80}\n      color=\"#fbbf24\"\n      animationStyle=\"typewriter\"\n      inverted\n      animateOnView={false}\n      className=\"mx-auto aspect-square w-full max-w-lg bg-neutral-900\"\n    />\n  );\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/ascii-art-demo-blocks.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport { AsciiArt } from \"@/components/ui/ascii-art\";\n\nexport function AsciiArtBlocksDemo() {\n  return (\n    <AsciiArt\n      src=\"https://assets.aceternity.com/avatars/manu.webp\"\n      resolution={80}\n      charset=\"blocks\"\n      color=\"#a855f7\"\n      inverted\n      animated={false}\n      className=\"mx-auto aspect-square w-full max-w-lg bg-neutral-950\"\n    />\n  );\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/ascii-art-demo-binary.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport { AsciiArt } from \"@/components/ui/ascii-art\";\n\nexport function AsciiArtBinaryDemo() {\n  return (\n    <AsciiArt\n      src=\"https://assets.aceternity.com/avatars/manu.webp\"\n      resolution={80}\n      charset=\"binary\"\n      color=\"#22c55e\"\n      inverted\n      animated={false}\n      className=\"mx-auto aspect-square w-full max-w-lg bg-neutral-950\"\n    />\n  );\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/ascii-art-demo-dots.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport { AsciiArt } from \"@/components/ui/ascii-art\";\n\nexport function AsciiArtDotsDemo() {\n  return (\n    <AsciiArt\n      src=\"https://assets.aceternity.com/avatars/manu.webp\"\n      resolution={80}\n      charset=\"dots\"\n      color=\"#ec4899\"\n      inverted\n      animated={false}\n      className=\"mx-auto aspect-square w-full max-w-lg bg-neutral-950\"\n    />\n  );\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/ascii-art-demo-braille.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport { AsciiArt } from \"@/components/ui/ascii-art\";\n\nexport function AsciiArtBrailleDemo() {\n  return (\n    <AsciiArt\n      src=\"https://assets.aceternity.com/avatars/manu.webp\"\n      resolution={80}\n      charset=\"braille\"\n      color=\"#06b6d4\"\n      inverted\n      animated={false}\n      className=\"mx-auto aspect-square w-full max-w-lg bg-neutral-950\"\n    />\n  );\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/ascii-art-demo-dense.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport { AsciiArt } from \"@/components/ui/ascii-art\";\n\nexport function AsciiArtDenseDemo() {\n  return (\n    <AsciiArt\n      src=\"https://assets.aceternity.com/avatars/manu.webp\"\n      resolution={80}\n      charset=\"dense\"\n      color=\"#f97316\"\n      inverted\n      animated={false}\n      className=\"mx-auto aspect-square w-full max-w-lg bg-neutral-950\"\n    />\n  );\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/ascii-art-demo-circles.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport { AsciiArt } from \"@/components/ui/ascii-art\";\n\nexport function AsciiArtCirclesDemo() {\n  return (\n    <AsciiArt\n      src=\"https://assets.aceternity.com/avatars/manu.webp\"\n      resolution={80}\n      charset=\"circles\"\n      color=\"#eab308\"\n      inverted\n      animated={false}\n      className=\"mx-auto aspect-square w-full max-w-lg bg-neutral-950\"\n    />\n  );\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/ascii-art-demo-stars.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport { AsciiArt } from \"@/components/ui/ascii-art\";\n\nexport function AsciiArtStarsDemo() {\n  return (\n    <AsciiArt\n      src=\"https://assets.aceternity.com/avatars/manu.webp\"\n      resolution={80}\n      charset=\"stars\"\n      color=\"#f43f5e\"\n      inverted\n      animated={false}\n      className=\"mx-auto aspect-square w-full max-w-lg bg-neutral-950\"\n    />\n  );\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/ascii-art-demo-css-vars.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport { AsciiArt } from \"@/components/ui/ascii-art\";\n\nexport function AsciiArtCssVarsDemo() {\n  return (\n    <AsciiArt\n      src=\"https://assets.aceternity.com/avatars/manu.webp\"\n      resolution={80}\n      charset=\"blocks\"\n      color=\"var(--color-purple-500)\"\n      inverted\n      animated={false}\n      className=\"mx-auto aspect-square w-full max-w-lg bg-neutral-950\"\n    />\n  );\n}\n"
+    }
+  ]
+}

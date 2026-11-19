@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:45:53.615Z",
+  "metadata": {
+    "type": "component",
+    "id": 45352,
+    "name": "Astryx Chat Composer",
+    "description": "An Astryx chat-composer shell arranging input, drawer, header, footer, send actions, status, and keyboard focus behavior.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-chat-composer/chat-composer-validation/preview.1794509899638.png",
+    "videoUrl": null,
+    "author": "Astryxdesign",
+    "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-chat-composer?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-composer"
+  },
+  "component": {
+    "id": 45352,
+    "componentId": 26166,
+    "name": "Astryx Chat Composer",
+    "demoName": "ChatComposer — Validation",
+    "description": "An Astryx chat-composer shell arranging input, drawer, header, footer, send actions, status, and keyboard focus behavior.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-chat-composer/chat-composer-validation/preview.1794509899638.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-chat-composer?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\nimport \"./astryx-chat-composer-utils/index.css\"\nimport { ChatComposer } from \"@astryxdesign/core/Chat\"\n\nexport * from \"@astryxdesign/core/Chat\"\nexport default ChatComposer\n",
+    "demoCode": "'use client';\n\nimport {ChatComposer} from '@/components/ui/astryx-chat-composer';\nimport {Stack} from '@astryxdesign/core/Layout';\nimport {Text} from '@astryxdesign/core/Text';\n\nfunction ChatComposerValidation() {\n  return (\n    <Stack direction=\"vertical\" gap={4} width={450} maxWidth=\"100%\">\n      <Stack direction=\"vertical\" gap={1}>\n        <Text type=\"supporting\" color=\"secondary\">\n          Error message (with top position)\n        </Text>\n        <ChatComposer\n          onSubmit={value => {\n            console.log('Sent:', value);\n          }}\n          statusPosition=\"top\"\n          status={{\n            type: 'error',\n            message: 'Failed to send message. Please try again.',\n          }}\n        />\n      </Stack>\n      <Stack direction=\"vertical\" gap={1}>\n        <Text type=\"supporting\" color=\"secondary\">\n          Warning message (with bottom position)\n        </Text>\n        <ChatComposer\n          onSubmit={value => {\n            console.log('Sent:', value);\n          }}\n          status={{\n            type: 'warning',\n            message: 'Context window is 90% full.',\n          }}\n        />\n      </Stack>\n    </Stack>\n  );\n}\n\nexport default function ChatComposerValidationDemo() {\n  return (\n    <div\n      data-astryx-theme=\"neutral\"\n      data-theme=\"light\"\n      style={{colorScheme: 'light', display: 'contents'}}>\n      <ChatComposerValidation />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source and usage retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

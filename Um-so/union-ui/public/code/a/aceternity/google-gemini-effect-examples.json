@@ -1,0 +1,11 @@
+{
+  "name": "google-gemini-effect-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/google-gemini-effect-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport { useScroll, useTransform } from \"motion/react\";\nimport React from \"react\";\nimport { GoogleGeminiEffect } from \"../ui/google-gemini-effect\";\n\nexport function GoogleGeminiEffectDemo() {\n  const ref = React.useRef(null);\n  const { scrollYProgress } = useScroll({\n    target: ref,\n    offset: [\"start start\", \"end start\"],\n  });\n\n  const pathLengthFirst = useTransform(scrollYProgress, [0, 0.8], [0.2, 1.2]);\n  const pathLengthSecond = useTransform(scrollYProgress, [0, 0.8], [0.15, 1.2]);\n  const pathLengthThird = useTransform(scrollYProgress, [0, 0.8], [0.1, 1.2]);\n  const pathLengthFourth = useTransform(scrollYProgress, [0, 0.8], [0.05, 1.2]);\n  const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2]);\n\n  return (\n    <div\n      className=\"h-[400vh] bg-black w-full dark:border dark:border-white/[0.1] rounded-md relative pt-40 overflow-clip\"\n      ref={ref}\n    >\n      <GoogleGeminiEffect\n        pathLengths={[\n          pathLengthFirst,\n          pathLengthSecond,\n          pathLengthThird,\n          pathLengthFourth,\n          pathLengthFifth,\n        ]}\n      />\n    </div>\n  );\n}\n"
+    }
+  ]
+}

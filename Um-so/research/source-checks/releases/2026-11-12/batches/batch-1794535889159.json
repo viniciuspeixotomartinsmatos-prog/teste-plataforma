@@ -1,0 +1,92 @@
+[
+  {
+    "route": "/@info_9e5144cf/themes/test-1-1794424852634",
+    "type": "theme",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@isaiahbjork/components/diff-review",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44249,
+      "name": "Diff Review",
+      "description": "A hunk-by-hunk code diff viewer that lets a user accept or reject each changed block of an AI-suggested edit and get back the merged result.",
+      "previewUrl": "https://cdn.21st.dev/user_2tkbBPFWYn8YMjZNHwgIuP3yzvd/diff-review/default/preview.1794424048236.png",
+      "videoUrl": "https://cdn.21st.dev/user_2tkbBPFWYn8YMjZNHwgIuP3yzvd/diff-review/default/video.1794423974090.mp4",
+      "author": "isaiahbjork",
+      "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18ydGtiQlBjalhzMzl1eGNmR2h3c3VTWE1VU1YifQ",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/isaiahbjork/diff-review?api_key=REDACTED\"",
+      "url": "https://21st.dev/@isaiahbjork/components/diff-review"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@isaiahbjork/components/spark-table",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44279,
+      "name": "Spark Table",
+      "description": "A metrics table where every row shows its own sparkline and all rows share one scrubbable crosshair, so dragging across any row rewinds every value to that day.",
+      "previewUrl": "https://cdn.21st.dev/user_2tkbBPFWYn8YMjZNHwgIuP3yzvd/spark-table/default/preview.1794423785028.png",
+      "videoUrl": "https://cdn.21st.dev/user_2tkbBPFWYn8YMjZNHwgIuP3yzvd/spark-table/default/video.1794423761046.mp4",
+      "author": "isaiahbjork",
+      "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18ydGtiQlBjalhzMzl1eGNmR2h3c3VTWE1VU1YifQ",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/isaiahbjork/spark-table?api_key=REDACTED\"",
+      "url": "https://21st.dev/@isaiahbjork/components/spark-table"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@joseestevez520/components/progress-button",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 43761,
+      "name": "Progress Button",
+      "description": "A button that turns into its own progress bar and result state — pressed, it fills with a percentage, morphs its label through working/done/error phases, and returns to idle on its own.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_joseestevez520_1791205682558/progress-button/default/preview.1794426876631.png",
+      "videoUrl": "https://cdn.21st.dev/user_registry_joseestevez520_1791205682558/progress-button/default/video.1794426840498.mp4",
+      "author": "joseestevez520",
+      "authorImage": "https://avatars.githubusercontent.com/u/231288624?v=4",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/joseestevez520/progress-button?api_key=REDACTED\"",
+      "url": "https://21st.dev/@joseestevez520/components/progress-button"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@kedhareswer/components/3d-curved-carousel",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44872,
+      "name": "3D Curved Carousel",
+      "description": "3D curved carousel: a WebGL image slider that bends photo cards around a cylinder like a lens. Drag, swipe or use the arrows; captions and a progress counter follow the active slide. Falls back to plain images without WebGL.",
+      "previewUrl": "https://cdn.21st.dev/kedhareswer/3d-curved-carousel/default/preview.1794154544838-1256e543-75e3-4f9e-9d23-3967c1ddcf29.jpg",
+      "videoUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/3d-curved-carousel/default/video.1794234685188.mp4",
+      "author": "kedhareswer",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/kedhareswer/3d-curved-carousel?api_key=REDACTED\"",
+      "url": "https://21st.dev/@kedhareswer/components/3d-curved-carousel"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@kedhareswer/components/overprint-swarm-template",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44772,
+      "name": "Overprint Swarm Template",
+      "description": "A scroll-built riso festival landing page where collaborator cursors type copy, draw print marks, arrange speakers and stamp tickets. Built with GSAP and ScrollTrigger, with responsive layouts and reduced-motion support.",
+      "previewUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/overprint-swarm-template/default/preview.1794245871720.webp",
+      "videoUrl": "https://cdn.21st.dev/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/overprint-swarm-template/default/video.1794245822445.mp4",
+      "author": "kedhareswer",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_30fkm37UoBFJx1GiK2Q4Sy8lSrO/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/kedhareswer/overprint-swarm-template?api_key=REDACTED\"",
+      "url": "https://21st.dev/@kedhareswer/components/overprint-swarm-template"
+    },
+    "status": "retained_unvalidated"
+  }
+]

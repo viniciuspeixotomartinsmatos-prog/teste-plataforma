@@ -1,0 +1,52 @@
+---
+name: banco-de-dados
+description: Princípios e decisões de design de banco de dados. Modelagem do schema, estratégia de índices, escolha do ORM, bancos serverless.
+allowed-tools: Read, Write, Edit, Glob, Grep
+---
+
+# Design de banco de dados
+
+> **Aprenda a PENSAR, não a copiar padrões de SQL.**
+
+## 🎯 Regra da leitura seletiva
+
+**Leia SÓ os arquivos relevantes para o pedido!** Confira o mapa de conteúdo e ache o que precisa.
+
+| Arquivo | Descrição | Quando ler |
+|------|-------------|--------------|
+| `database-selection.md` | PostgreSQL vs Neon vs Turso vs SQLite | Ao escolher o banco |
+| `orm-selection.md` | Drizzle vs Prisma vs Kysely | Ao escolher o ORM |
+| `schema-design.md` | Normalização, PKs, relacionamentos | Ao modelar o schema |
+| `indexing.md` | Tipos de índice, índices compostos | Ao ajustar o desempenho |
+| `optimization.md` | N+1, EXPLAIN ANALYZE | Ao otimizar consultas |
+| `migrations.md` | Migrações seguras, bancos serverless | Ao mudar o schema |
+
+---
+
+## ⚠️ Princípio central
+
+- PERGUNTE ao usuário qual banco ele prefere quando isso não estiver claro
+- Escolha o banco e o ORM pelo CONTEXTO
+- Não use PostgreSQL para tudo por padrão
+
+---
+
+## Checklist de decisão
+
+Antes de modelar o schema (a estrutura do banco: tabelas, colunas e chaves):
+
+- [ ] Perguntou ao usuário qual banco ele prefere?
+- [ ] Escolheu o banco para ESTE contexto?
+- [ ] Considerou o ambiente de deploy?
+- [ ] Planejou a estratégia de índices?
+- [ ] Definiu os tipos de relacionamento?
+
+---
+
+## Antipadrões
+
+❌ Usar PostgreSQL por padrão em apps simples (o SQLite pode bastar)
+❌ Pular os índices
+❌ Usar SELECT * em produção
+❌ Guardar JSON quando dados estruturados seriam melhores
+❌ Ignorar consultas N+1 (1 consulta para a lista e mais 1 por item)

@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 44630,
+    "name": "Card Resize Toggle",
+    "description": "A card that smoothly animates its width and height between a large and a small size when toggled, using an eased CSS transition.",
+    "previewUrl": "https://cdn.21st.dev/user_2vHC2hNE6X5X6EE72FGhVeRzcQp/card-resize/default/preview.1794408187072.png",
+    "videoUrl": "https://cdn.21st.dev/user_2vHC2hNE6X5X6EE72FGhVeRzcQp/card-resize/default/video.1794408030572.mp4",
+    "author": "marvkr",
+    "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18ydkhDMmNWVk5idGtGNlloenFDSm91MzZJZ1MifQ",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/marvkr/card-resize?api_key=REDACTED\"",
+    "url": "https://21st.dev/@marvkr/components/card-resize"
+  },
+  "requestedRoute": "/@marvkr/components/card-resize",
+  "checkedAt": "2026-11-13T02:12:59.863Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 44630,
+    "componentId": 25725,
+    "authorUserId": "user_2vHC2hNE6X5X6EE72FGhVeRzcQp",
+    "name": "Card Resize Toggle",
+    "demoName": "Default",
+    "description": "A card that smoothly animates its width and height between a large and a small size when toggled, using an eased CSS transition.",
+    "previewUrl": "https://cdn.21st.dev/user_2vHC2hNE6X5X6EE72FGhVeRzcQp/card-resize/default/preview.1794408187072.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/marvkr/card-resize?api_key=REDACTED\"",
+    "componentCode": "\"use client\";\n\nimport * as React from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\n// Card resize transition — ported from transitions.dev\n// https://github.com/Jakubantalik/transitions.dev (MIT)\n// Tweens width + height with cubic-bezier easing.\n\nconst CARD_RESIZE_CSS = `\n.t-resize-scope {\n  --resize-dur: 300ms;\n  --resize-ease: cubic-bezier(0.22, 1, 0.36, 1);\n}\n.t-resize {\n  transition:\n    width  var(--resize-dur) var(--resize-ease),\n    height var(--resize-dur) var(--resize-ease);\n  will-change: width, height;\n}\n@media (prefers-reduced-motion: reduce) {\n  .t-resize { transition: none !important; }\n}\n`;\n\n// useInsertionEffect runs before the browser paints, so the resting state\n// these rules define lands on the first frame instead of after it. The DOM\n// query replaces a module-level flag, which stayed true if the tag was ever\n// removed and never fired for a second document.\nfunction useStyles() {\n  React.useInsertionEffect(() => {\n    if (typeof document === \"undefined\") return;\n    if (document.querySelector(\"style[data-t-card-resize]\")) return;\n    const el = document.createElement(\"style\");\n    el.setAttribute(\"data-t-card-resize\", \"\");\n    el.textContent = CARD_RESIZE_CSS;\n    document.head.appendChild(el);\n  }, []);\n}\n\nexport function CardResize({\n  large = { width: 260, height: 180 },\n  small = { width: 160, height: 100 },\n  className,\n}: {\n  large?: { width: number; height: number };\n  small?: { width: number; height: number };\n  className?: string;\n}) {\n  useStyles();\n  const [isSmall, setSmall] = React.useState(false);\n  const dims = isSmall ? small : large;\n  return (\n    <div\n      className={cn(\n        \"t-resize-scope flex flex-col items-center gap-3\",\n        className,\n      )}\n    >\n      <button\n        type=\"button\"\n        onClick={() => setSmall((v) => !v)}\n        className=\"rounded-md border border-border bg-card px-3 py-1.5 text-sm font-medium text-foreground hover:bg-muted\"\n      >\n        {isSmall ? \"Expand\" : \"Shrink\"}\n      </button>\n      <div\n        className=\"t-resize overflow-hidden rounded-lg border border-border bg-card p-4 text-card-foreground shadow-sm\"\n        style={{ width: dims.width, height: dims.height }}\n      >\n        <div className=\"flex h-full flex-col gap-2\">\n          <div className=\"h-2 w-1/2 rounded bg-muted\" />\n          <div className=\"h-2 w-2/3 rounded bg-muted\" />\n          <div className=\"h-2 w-1/3 rounded bg-muted\" />\n          <div className=\"mt-auto h-2 w-3/4 rounded bg-muted\" />\n          <div className=\"h-2 w-1/2 rounded bg-muted\" />\n        </div>\n      </div>\n    </div>\n  );\n}\n\nexport default CardResize;\n",
+    "demoCode": "import { CardResize } from \"@/components/ui/card-resize\";\n\nexport default function CardResizeDemo() {\n  return (\n    <div className=\"flex min-h-screen w-full items-center justify-center bg-background p-8\">\n      <CardResize />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": "user_2vHC2hNE6X5X6EE72FGhVeRzcQp"
+  }
+}

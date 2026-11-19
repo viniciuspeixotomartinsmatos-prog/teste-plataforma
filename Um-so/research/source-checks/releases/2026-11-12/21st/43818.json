@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 43818,
+    "name": "Noise Field",
+    "description": "A decorative animated noise/blob background layer that adds subtle depth and texture behind hero sections or product surfaces.",
+    "previewUrl": "https://cdn.21st.dev/user_registry_bagherifarzad_1791205672729/noise-field/default/preview.1794428579625.webp",
+    "videoUrl": "https://cdn.21st.dev/user_registry_bagherifarzad_1791205672729/noise-field/default/video.1794428562777.mp4",
+    "author": "bagherifarzad",
+    "authorImage": "https://avatars.githubusercontent.com/u/56923236?v=4",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/bagherifarzad/noise-field?api_key=REDACTED\"",
+    "url": "https://21st.dev/@bagherifarzad/components/noise-field"
+  },
+  "requestedRoute": "/@bagherifarzad/components/noise-field",
+  "checkedAt": "2026-11-12T21:14:04.473Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 43818,
+    "componentId": 25246,
+    "authorUserId": "user_registry_bagherifarzad_1791205672729",
+    "name": "Noise Field",
+    "demoName": "Default",
+    "description": "A decorative animated noise/blob background layer that adds subtle depth and texture behind hero sections or product surfaces.",
+    "previewUrl": "https://cdn.21st.dev/user_registry_bagherifarzad_1791205672729/noise-field/default/preview.1794428579625.webp",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/bagherifarzad/noise-field?api_key=REDACTED\"",
+    "componentCode": "export interface NoiseFieldProps {\n  color?: string;\n  background?: string;\n  opacity?: number;\n  scale?: number;\n  speed?: number;\n  animated?: boolean;\n  className?: string;\n}\n\nexport function NoiseField({\n  color = \"#8f73ff\",\n  background = \"#0b0b0f\",\n  opacity = 0.3,\n  scale = 1,\n  speed = 6,\n  animated = true,\n  className = \"\",\n}: NoiseFieldProps) {\n  return (\n    <div\n      className={`fb-noise-field ${className}`}\n      style={{\n        background,\n      }}\n    >\n      <div\n        className={`fb-noise-field__blob fb-noise-field__blob--one ${\n          animated ? \"fb-noise-field__blob--animated\" : \"\"\n        }`}\n        style={{\n          background: color,\n\n          opacity,\n\n          transform: `scale(${scale})`,\n\n          animationDuration: `${speed}s`,\n        }}\n      />\n\n      <div\n        className={`fb-noise-field__blob fb-noise-field__blob--two ${\n          animated ? \"fb-noise-field__blob--animated\" : \"\"\n        }`}\n        style={{\n          background: color,\n\n          opacity: opacity * 0.7,\n\n          transform: `scale(${scale * 0.8})`,\n\n          animationDuration: `${speed * 1.2}s`,\n        }}\n      />\n\n      <div\n        className={`fb-noise-field__texture ${\n          animated ? \"fb-noise-field__texture--animated\" : \"\"\n        }`}\n        style={{\n          opacity: opacity * 0.5,\n\n          animationDuration: `${speed * 0.85}s`,\n        }}\n      />\n    </div>\n  );\n}\n\nexport default NoiseField;\n",
+    "demoCode": "import { NoiseField } from \"@/components/ui/noise-field\";\n\nexport default function NoiseFieldDemo() {\n  return (\n    <div className=\"relative w-full h-screen overflow-hidden\">\n      <NoiseField />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": "user_registry_bagherifarzad_1791205672729"
+  }
+}

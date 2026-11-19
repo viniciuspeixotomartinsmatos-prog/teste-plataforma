@@ -1,0 +1,3805 @@
+[
+  {
+    "id": "staged-21st-10004",
+    "sourceId": "21st",
+    "name": "Block Text",
+    "slug": "block-text",
+    "description": "A self-contained, mobile-responsive React component using GSAP and Tailwind CSS to create a repeating \"physics-based\" text reveal animation where color overlays fall away as you scroll.",
+    "category": "Text effects",
+    "kind": "component",
+    "url": "https://21st.dev/@daiwiikharihar/components/block-text",
+    "sourceUrl": "https://21st.dev/@daiwiikharihar/components/block-text",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-10004.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "gsap"
+    ],
+    "tags": [
+      "React",
+      "Text effects"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-10004.html"
+  },
+  {
+    "id": "staged-21st-15761",
+    "sourceId": "21st",
+    "name": "BeUI Text Animation",
+    "slug": "be-ui-text-animation",
+    "description": "",
+    "category": "Text effects",
+    "kind": "component",
+    "url": "https://21st.dev/@starc007/components/be-ui-text-animation",
+    "sourceUrl": "https://21st.dev/@starc007/components/be-ui-text-animation",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-15761.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "clsx",
+      "tailwind-merge",
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Text effects"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-15761.html"
+  },
+  {
+    "id": "staged-21st-16170",
+    "sourceId": "21st",
+    "name": "BeUI Expanable Action Bar",
+    "slug": "be-ui-expanable-action-bar",
+    "description": "",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@starc007/components/be-ui-expanable-action-bar",
+    "sourceUrl": "https://21st.dev/@starc007/components/be-ui-expanable-action-bar",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-16170.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "motion",
+      "react",
+      "clsx",
+      "tailwind-merge",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-16170.html"
+  },
+  {
+    "id": "staged-21st-16250",
+    "sourceId": "21st",
+    "name": "BeUI 404 / Not Found",
+    "slug": "be-ui-404-not-found",
+    "description": "",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@starc007/components/be-ui-404-not-found",
+    "sourceUrl": "https://21st.dev/@starc007/components/be-ui-404-not-found",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-16250.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "clsx",
+      "tailwind-merge",
+      "react",
+      "motion"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-16250.html"
+  },
+  {
+    "id": "staged-21st-27536",
+    "sourceId": "21st",
+    "name": "Text Flip",
+    "slug": "text-flip",
+    "description": "A 3D flip-text headline effect that rotates each character to reveal a back face on hover, click, or an imperative trigger, with staggered timing and reduced-motion support.",
+    "category": "Text effects",
+    "kind": "component",
+    "url": "https://21st.dev/@wensity/components/text-flip",
+    "sourceUrl": "https://21st.dev/@wensity/components/text-flip",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-27536.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Text effects"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-27536.html"
+  },
+  {
+    "id": "staged-21st-27575",
+    "sourceId": "21st",
+    "name": "Empty State",
+    "slug": "empty-state",
+    "description": "A placeholder layout for empty lists, search results, or error screens with an optional icon, title, description, and action buttons.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@wensity/components/empty-state",
+    "sourceUrl": "https://21st.dev/@wensity/components/empty-state",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-27575.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "framer-motion"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-27575.html"
+  },
+  {
+    "id": "staged-21st-27580",
+    "sourceId": "21st",
+    "name": "Marker",
+    "slug": "marker",
+    "description": "A small status marker component for showing live state, order position, icons, or contextual status labels with dot, pulse, numbered, icon and status variants.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@wensity/components/marker",
+    "sourceUrl": "https://21st.dev/@wensity/components/marker",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-27580.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "framer-motion",
+      "@base-ui/react",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-27580.html"
+  },
+  {
+    "id": "staged-21st-27632",
+    "sourceId": "21st",
+    "name": "Spinner",
+    "slug": "spinner",
+    "description": "A loading spinner primitive with multiple animation styles (spin, ring, dots, pulse), size and color-tone options, plus an overlay variant for blocking a panel while content loads.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@wensity/components/spinner",
+    "sourceUrl": "https://21st.dev/@wensity/components/spinner",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-27632.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-27632.html"
+  },
+  {
+    "id": "staged-21st-27697",
+    "sourceId": "21st",
+    "name": "Infinite Marquee",
+    "slug": "infinite-marquee",
+    "description": "A horizontally scrolling marquee that loops logos or content seamlessly forever, with soft fade at both edges.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@wensity/components/infinite-marquee",
+    "sourceUrl": "https://21st.dev/@wensity/components/infinite-marquee",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-27697.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-27697.html"
+  },
+  {
+    "id": "staged-21st-27845",
+    "sourceId": "21st",
+    "name": "Animated Tabs",
+    "slug": "animated-tabs",
+    "description": "A tab switcher that shows a physical stack of photo cards with pill-shaped animated tab triggers, where hovering fans the stacked cards out to either side.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@wensity/components/animated-tabs",
+    "sourceUrl": "https://21st.dev/@wensity/components/animated-tabs",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-27845.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "framer-motion"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-27845.html"
+  },
+  {
+    "id": "staged-21st-27862",
+    "sourceId": "21st",
+    "name": "Eclipse Corona",
+    "slug": "eclipse-corona",
+    "description": "Movable solar eclipse with fanning corona; cursor and click drive totality.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@daiwiikharihar/components/eclipse-corona",
+    "sourceUrl": "https://21st.dev/@daiwiikharihar/components/eclipse-corona",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-27862.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-27862.html"
+  },
+  {
+    "id": "staged-21st-28757",
+    "sourceId": "21st",
+    "name": "Prismatic",
+    "slug": "prismatic-display",
+    "description": "An interactive, Canvas-based React component that renders a shape-shifting 3D mesh background with physics-driven topologies (Torus, Sphere, Vortex) and responsive cursor interactions.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@daiwiikharihar/components/prismatic-display",
+    "sourceUrl": "https://21st.dev/@daiwiikharihar/components/prismatic-display",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-28757.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "lucide-react",
+      "clsx",
+      "tailwind-merge"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-28757.html"
+  },
+  {
+    "id": "staged-21st-28776",
+    "sourceId": "21st",
+    "name": "3D Topology Mesh",
+    "slug": "3d-topology-mesh",
+    "description": "A dynamic React Canvas component that renders an interactive, physics-driven 3D mesh seamlessly morphing between complex topologies like a Möbius strip and Helix.",
+    "category": "Backgrounds",
+    "kind": "component",
+    "url": "https://21st.dev/@daiwiikharihar/components/3d-topology-mesh",
+    "sourceUrl": "https://21st.dev/@daiwiikharihar/components/3d-topology-mesh",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-28776.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "lucide-react",
+      "clsx",
+      "tailwind-merge"
+    ],
+    "tags": [
+      "React",
+      "Backgrounds"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-28776.html"
+  },
+  {
+    "id": "staged-21st-30464",
+    "sourceId": "21st",
+    "name": "Text Scribble",
+    "slug": "text-scribble",
+    "description": "A React text wrapper that draws a hand-drawn scribble, underline, or strike-through mark over inline text when it enters the viewport, on hover, or on mount.",
+    "category": "Text effects",
+    "kind": "component",
+    "url": "https://21st.dev/@wensity/components/text-scribble",
+    "sourceUrl": "https://21st.dev/@wensity/components/text-scribble",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-30464.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Text effects"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-30464.html"
+  },
+  {
+    "id": "staged-21st-30468",
+    "sourceId": "21st",
+    "name": "Text Word Flip",
+    "slug": "text-word-flip",
+    "description": "An animated inline text element that cycles through a list of words with a spring flip and letter-blur stagger effect, useful for rotating headlines or hero copy.",
+    "category": "Text effects",
+    "kind": "component",
+    "url": "https://21st.dev/@wensity/components/text-word-flip",
+    "sourceUrl": "https://21st.dev/@wensity/components/text-word-flip",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-30468.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "framer-motion"
+    ],
+    "tags": [
+      "React",
+      "Text effects"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-30468.html"
+  },
+  {
+    "id": "staged-21st-30492",
+    "sourceId": "21st",
+    "name": "Text Spectrum",
+    "slug": "text-spectrum",
+    "description": "Animated multi-color gradient text fill for headlines that drifts across the glyphs using a CSS-only background-position loop, with reduced-motion and off-screen auto-pause support.",
+    "category": "Text effects",
+    "kind": "component",
+    "url": "https://21st.dev/@wensity/components/text-spectrum",
+    "sourceUrl": "https://21st.dev/@wensity/components/text-spectrum",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-30492.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Text effects"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-30492.html"
+  },
+  {
+    "id": "staged-21st-31199",
+    "sourceId": "21st",
+    "name": "Voice Aurora Wave",
+    "slug": "voice-aurora-wave",
+    "description": "Voice reactive orb for React AI voice agents. It swells with microphone input or a controlled audio level and settles between turns.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@wensity/components/voice-aurora-wave",
+    "sourceUrl": "https://21st.dev/@wensity/components/voice-aurora-wave",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-31199.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "framer-motion",
+      "@tabler/icons-react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-31199.html"
+  },
+  {
+    "id": "staged-21st-31331",
+    "sourceId": "21st",
+    "name": "Text Chroma Reveal",
+    "slug": "text-chroma-reveal",
+    "description": "A headline reveal that paints text into view with a sweeping chromatic gradient ribbon. Loop through several phrases or reveal once, with reduced motion support.",
+    "category": "Text effects",
+    "kind": "component",
+    "url": "https://21st.dev/@wensity/components/text-chroma-reveal",
+    "sourceUrl": "https://21st.dev/@wensity/components/text-chroma-reveal",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-31331.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "framer-motion",
+      "clsx",
+      "tailwind-merge"
+    ],
+    "tags": [
+      "React",
+      "Text effects"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-31331.html"
+  },
+  {
+    "id": "staged-21st-31332",
+    "sourceId": "21st",
+    "name": "Text Glitch",
+    "slug": "text-glitch",
+    "description": "A CSS only glitch text effect with RGB channel split and clip path slices. GPU friendly and reduced motion safe, ideal for gaming, tech and cyberpunk headlines.",
+    "category": "Text effects",
+    "kind": "component",
+    "url": "https://21st.dev/@wensity/components/text-glitch",
+    "sourceUrl": "https://21st.dev/@wensity/components/text-glitch",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-31332.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "clsx",
+      "tailwind-merge"
+    ],
+    "tags": [
+      "React",
+      "Text effects"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-31332.html"
+  },
+  {
+    "id": "staged-21st-31414",
+    "sourceId": "21st",
+    "name": "3D Folder Card",
+    "slug": "three-d-folder",
+    "description": "An interactive folder card that fans out stacked project thumbnails on hover and opens a keyboard-navigable lightbox gallery when a thumbnail is clicked.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@support_596fe4b8/components/three-d-folder",
+    "sourceUrl": "https://21st.dev/@support_596fe4b8/components/three-d-folder",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-31414.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "framer-motion",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-31414.html"
+  },
+  {
+    "id": "staged-21st-39225",
+    "sourceId": "21st",
+    "name": "Gloss Button",
+    "slug": "gloss-button",
+    "description": "A rounded button with a glossy top-light gradient and inset sheen, built on Base UI's Button primitive with size variants.",
+    "category": "Buttons",
+    "kind": "component",
+    "url": "https://21st.dev/@diarmuradi/components/gloss-button",
+    "sourceUrl": "https://21st.dev/@diarmuradi/components/gloss-button",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-39225.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "@base-ui/react",
+      "class-variance-authority",
+      "cn"
+    ],
+    "tags": [
+      "React",
+      "Buttons"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-39225.html"
+  },
+  {
+    "id": "staged-21st-40112",
+    "sourceId": "21st",
+    "name": "Pill Button",
+    "slug": "pill-button",
+    "description": "A rounded, glossy pill-shaped button built on Base UI with size variants for primary actions and icon buttons.",
+    "category": "Buttons",
+    "kind": "component",
+    "url": "https://21st.dev/@diarmuradi/components/pill-button",
+    "sourceUrl": "https://21st.dev/@diarmuradi/components/pill-button",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-40112.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "@base-ui/react",
+      "class-variance-authority",
+      "cn"
+    ],
+    "tags": [
+      "React",
+      "Buttons"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-40112.html"
+  },
+  {
+    "id": "staged-21st-43131",
+    "sourceId": "21st",
+    "name": "Metric Trend Chart",
+    "slug": "metric-switcher-trend-chart-demo",
+    "description": "Switchable multi-metric trend chart with previous-period comparison, event annotations, keyboard-accessible readout and CSV export.\n",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@wrapcoders/components/metric-switcher-trend-chart-demo",
+    "sourceUrl": "https://21st.dev/@wrapcoders/components/metric-switcher-trend-chart-demo",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-43131.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-43131.html"
+  },
+  {
+    "id": "staged-21st-43735",
+    "sourceId": "21st",
+    "name": "Feedback Widget",
+    "slug": "feedback-widget",
+    "description": "A floating corner button that opens a compact feedback form for capturing a quick good/bad mood rating and an optional message.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@f0rextasy/components/feedback-widget",
+    "sourceUrl": "https://21st.dev/@f0rextasy/components/feedback-widget",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-43735.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-43735.html"
+  },
+  {
+    "id": "staged-21st-43743",
+    "sourceId": "21st",
+    "name": "Swipe Actions",
+    "slug": "swipe-actions",
+    "description": "A swipeable list row (like a mobile ticket stub) that reveals action buttons such as pin or void when swiped or tapped.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@f0rextasy/components/swipe-actions",
+    "sourceUrl": "https://21st.dev/@f0rextasy/components/swipe-actions",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-43743.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-43743.html"
+  },
+  {
+    "id": "staged-21st-43757",
+    "sourceId": "21st",
+    "name": "Console Panel",
+    "slug": "console-panel",
+    "description": "An interactive terminal-style console panel that displays colored log lines (input, output, error, success) with autoscroll and a command prompt input.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@f0rextasy/components/console-panel",
+    "sourceUrl": "https://21st.dev/@f0rextasy/components/console-panel",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-43757.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-43757.html"
+  },
+  {
+    "id": "staged-21st-43794",
+    "sourceId": "21st",
+    "name": "Row Expand",
+    "slug": "row-expand",
+    "description": "An accordion-style list of rows that expand in place to reveal detail content, with a smooth height animation and staggered entrance.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@f0rextasy/components/row-expand",
+    "sourceUrl": "https://21st.dev/@f0rextasy/components/row-expand",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-43794.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-43794.html"
+  },
+  {
+    "id": "staged-21st-43807",
+    "sourceId": "21st",
+    "name": "Fan Deck Card",
+    "slug": "fan-deck-card",
+    "description": "A stack of itinerary/content cards that behaves like a hand of cards: resting as a tidy pile, fanning into an arc on hover or focus, and letting you pick a card to bring it to the top with swipe, click or arrow-key support.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@ham7a311/components/fan-deck-card",
+    "sourceUrl": "https://21st.dev/@ham7a311/components/fan-deck-card",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-43807.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-43807.html"
+  },
+  {
+    "id": "staged-21st-43818",
+    "sourceId": "21st",
+    "name": "Noise Field",
+    "slug": "noise-field",
+    "description": "A decorative animated noise/blob background layer that adds subtle depth and texture behind hero sections or product surfaces.",
+    "category": "Backgrounds",
+    "kind": "component",
+    "url": "https://21st.dev/@bagherifarzad/components/noise-field",
+    "sourceUrl": "https://21st.dev/@bagherifarzad/components/noise-field",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-43818.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [],
+    "tags": [
+      "React",
+      "Backgrounds"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-43818.html"
+  },
+  {
+    "id": "staged-21st-43819",
+    "sourceId": "21st",
+    "name": "Decision Inbox",
+    "slug": "decision-inbox",
+    "description": "A tray of pending yes/no decisions where each item has two quick-answer buttons, confirms the choice, and folds away as the open count goes down.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@flohoeller/components/decision-inbox",
+    "sourceUrl": "https://21st.dev/@flohoeller/components/decision-inbox",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-43819.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-43819.html"
+  },
+  {
+    "id": "staged-21st-43831",
+    "sourceId": "21st",
+    "name": "Password Strength Meter",
+    "slug": "password-strength",
+    "description": "A segmented password strength meter that scores an input against length, casing, digit and symbol rules and shows a live criteria checklist.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@f0rextasy/components/password-strength",
+    "sourceUrl": "https://21st.dev/@f0rextasy/components/password-strength",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-43831.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-43831.html"
+  },
+  {
+    "id": "staged-21st-44109",
+    "sourceId": "21st",
+    "name": "Ribbon Flow",
+    "slug": "ribbon-flow",
+    "description": "An animated canvas background of translucent, silk-like ribbons that drift and glow where they overlap, with a reduced-motion fallback and pointer-reactive bending.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@ham7a311/components/ribbon-flow",
+    "sourceUrl": "https://21st.dev/@ham7a311/components/ribbon-flow",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44109.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44109.html"
+  },
+  {
+    "id": "staged-21st-44319",
+    "sourceId": "21st",
+    "name": "Underline Animation",
+    "slug": "underline-animation",
+    "description": "An animated CSS hover underline for links with multiple motion styles (slide, center, fill, wavy, gradient) that supports active/current-page state and respects reduced motion.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@wensity/components/underline-animation",
+    "sourceUrl": "https://21st.dev/@wensity/components/underline-animation",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44319.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      ": from,\n    "
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44319.html"
+  },
+  {
+    "id": "staged-21st-44630",
+    "sourceId": "21st",
+    "name": "Card Resize Toggle",
+    "slug": "card-resize",
+    "description": "A card that smoothly animates its width and height between a large and a small size when toggled, using an eased CSS transition.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@marvkr/components/card-resize",
+    "sourceUrl": "https://21st.dev/@marvkr/components/card-resize",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44630.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44630.html"
+  },
+  {
+    "id": "staged-21st-44680",
+    "sourceId": "21st",
+    "name": "Constellation Cursor",
+    "slug": "constellation-cursor",
+    "description": "An animated canvas cursor effect that scatters drifting star particles and draws glowing constellation lines between nearby stars and the mouse pointer.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@felix-au/components/constellation-cursor",
+    "sourceUrl": "https://21st.dev/@felix-au/components/constellation-cursor",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44680.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44680.html"
+  },
+  {
+    "id": "staged-21st-44683",
+    "sourceId": "21st",
+    "name": "Arc Light",
+    "slug": "arc-light",
+    "description": "A soft arc of light that the pointer stirs like ink in water.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@hyperiux/components/arc-light",
+    "sourceUrl": "https://21st.dev/@hyperiux/components/arc-light",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44683.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44683.html"
+  },
+  {
+    "id": "staged-21st-44684",
+    "sourceId": "21st",
+    "name": "ASCII Band",
+    "slug": "ascii-band",
+    "description": "A band of light drawn in flickering ASCII characters.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@hyperiux/components/ascii-band",
+    "sourceUrl": "https://21st.dev/@hyperiux/components/ascii-band",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44684.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44684.html"
+  },
+  {
+    "id": "staged-21st-44750",
+    "sourceId": "21st",
+    "name": "Rainbow Comet Cursor",
+    "slug": "rainbow-comet-cursor",
+    "description": "A canvas-based custom cursor that trails a glowing, hue-cycling rainbow comet tail behind the mouse, with a glow boost on hoverable elements and a radial rainbow spark burst on click.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@felix-au/components/rainbow-comet-cursor",
+    "sourceUrl": "https://21st.dev/@felix-au/components/rainbow-comet-cursor",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44750.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44750.html"
+  },
+  {
+    "id": "staged-21st-44753",
+    "sourceId": "21st",
+    "name": "Matrix Rain Cursor",
+    "slug": "matrix-rain-cursor",
+    "description": "A full-screen canvas cursor effect that renders a Matrix-style falling character rain which brightens and speeds up near the mouse pointer.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@felix-au/components/matrix-rain-cursor",
+    "sourceUrl": "https://21st.dev/@felix-au/components/matrix-rain-cursor",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44753.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44753.html"
+  },
+  {
+    "id": "staged-21st-44754",
+    "sourceId": "21st",
+    "name": "Bubble Float Cursor",
+    "slug": "bubble-float-cursor",
+    "description": "A canvas-based custom cursor effect that spawns translucent soap bubbles which rise, wobble, and fade as the mouse moves inside a container, and pop into droplets on click.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@felix-au/components/bubble-float-cursor",
+    "sourceUrl": "https://21st.dev/@felix-au/components/bubble-float-cursor",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44754.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44754.html"
+  },
+  {
+    "id": "staged-21st-44769",
+    "sourceId": "21st",
+    "name": "Neon Hello",
+    "slug": "neon-hello",
+    "description": "A glass neon tube writes hello in flowing rainbow light, ringed by a breathing frame of edge glow that turns and pulses when the word is done.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@louisstudios/components/neon-hello",
+    "sourceUrl": "https://21st.dev/@louisstudios/components/neon-hello",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44769.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44769.html"
+  },
+  {
+    "id": "staged-21st-44770",
+    "sourceId": "21st",
+    "name": "Chrome Arcs",
+    "slug": "chrome-arcs",
+    "description": "Glossy black chrome rings sweep across the dark, each catching a thin-film streak of amber, white and blue that climbs slowly as the stack flows outward.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@louisstudios/components/chrome-arcs",
+    "sourceUrl": "https://21st.dev/@louisstudios/components/chrome-arcs",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44770.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44770.html"
+  },
+  {
+    "id": "staged-21st-44772",
+    "sourceId": "21st",
+    "name": "Overprint Swarm Template",
+    "slug": "overprint-swarm-template",
+    "description": "A scroll-built riso festival landing page where collaborator cursors type copy, draw print marks, arrange speakers and stamp tickets. Built with GSAP and ScrollTrigger, with responsive layouts and reduced-motion support.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@kedhareswer/components/overprint-swarm-template",
+    "sourceUrl": "https://21st.dev/@kedhareswer/components/overprint-swarm-template",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44772.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "gsap"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44772.html"
+  },
+  {
+    "id": "staged-21st-44777",
+    "sourceId": "21st",
+    "name": "Pixel Perfect Command Palette",
+    "slug": "pixel-perfect-command-palette",
+    "description": "A keyboard-driven command palette (⌘K launcher) with search, key-cap chords, letter sequences, recent commands, file search and toast feedback on run.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@aloksivastava1025/components/pixel-perfect-command-palette",
+    "sourceUrl": "https://21st.dev/@aloksivastava1025/components/pixel-perfect-command-palette",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44777.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44777.html"
+  },
+  {
+    "id": "staged-21st-44778",
+    "sourceId": "21st",
+    "name": "DNA Helix Cursor",
+    "slug": "dna-helix-cursor",
+    "description": "A custom canvas cursor trail that draws two sine-wave strands spiraling behind the mouse like a double helix, with hover and click reactive animations.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@felix-au/components/dna-helix-cursor",
+    "sourceUrl": "https://21st.dev/@felix-au/components/dna-helix-cursor",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44778.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44778.html"
+  },
+  {
+    "id": "staged-21st-44783",
+    "sourceId": "21st",
+    "name": "Wind Stream Cursor",
+    "slug": "wind-stream-cursor",
+    "description": "A canvas-based custom cursor effect that trails bezier-curved wind streams behind mouse movement, thickens near clickable elements, and bursts into a multicolor radial gust on click.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@felix-au/components/wind-stream-cursor",
+    "sourceUrl": "https://21st.dev/@felix-au/components/wind-stream-cursor",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44783.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44783.html"
+  },
+  {
+    "id": "staged-21st-44784",
+    "sourceId": "21st",
+    "name": "Interactive Logo Grid",
+    "slug": "interactive-logo-grid",
+    "description": "An interactive 1px border bento grid showcasing client logos with smooth hover states, tags, and case study excerpts.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@abushaidislam7/components/interactive-logo-grid",
+    "sourceUrl": "https://21st.dev/@abushaidislam7/components/interactive-logo-grid",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44784.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "framer-motion"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44784.html"
+  },
+  {
+    "id": "staged-21st-44790",
+    "sourceId": "21st",
+    "name": "Voice Orb",
+    "slug": "voice-orb",
+    "description": "A line-drawn 3D voice orb with eight conversation states that reacts to live mic and agent audio levels, with reduced motion support.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@aadixc0de/components/voice-orb",
+    "sourceUrl": "https://21st.dev/@aadixc0de/components/voice-orb",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44790.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44790.html"
+  },
+  {
+    "id": "staged-21st-44800",
+    "sourceId": "21st",
+    "name": "Audio Visualizer",
+    "slug": "audio-visualizer",
+    "description": "Five canvas audio visualizers (bars, radial, grid, line, dots) for voice agents that read live frequency bands from a mic or agent audio.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@aadixc0de/components/audio-visualizer",
+    "sourceUrl": "https://21st.dev/@aadixc0de/components/audio-visualizer",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44800.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44800.html"
+  },
+  {
+    "id": "staged-21st-44801",
+    "sourceId": "21st",
+    "name": "Reasoning",
+    "slug": "reasoning",
+    "description": "A model's thinking block that streams in with a live step summary and elapsed time, then settles into a collapsible summary.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@aadixc0de/components/reasoning",
+    "sourceUrl": "https://21st.dev/@aadixc0de/components/reasoning",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44801.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "@base-ui/react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44801.html"
+  },
+  {
+    "id": "staged-21st-44802",
+    "sourceId": "21st",
+    "name": "Agent Lanes",
+    "slug": "agent-lanes",
+    "description": "Run several coding agents side by side on one task, each with live status, streamed output and a pick the winner action.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@aadixc0de/components/agent-lanes",
+    "sourceUrl": "https://21st.dev/@aadixc0de/components/agent-lanes",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44802.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44802.html"
+  },
+  {
+    "id": "staged-21st-44803",
+    "sourceId": "21st",
+    "name": "Computer View",
+    "slug": "computer-view",
+    "description": "Watch a browser agent work: live screenshots with the click it is about to make, a pause for the steps a person must do, take over and hand back, then a timeline to scrub every step.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@aadixc0de/components/computer-view",
+    "sourceUrl": "https://21st.dev/@aadixc0de/components/computer-view",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44803.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44803.html"
+  },
+  {
+    "id": "staged-21st-44814",
+    "sourceId": "21st",
+    "name": "Neon Pulse",
+    "slug": "neon-pulse",
+    "description": "A heavy slanted word lit in electric blue neon, pulsing every two seconds with a glow that ripples out from the centre to the ends. Move the pointer to move where the ripple starts, click to send an extra pulse.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@louisstudios/components/neon-pulse",
+    "sourceUrl": "https://21st.dev/@louisstudios/components/neon-pulse",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44814.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44814.html"
+  },
+  {
+    "id": "staged-21st-44837",
+    "sourceId": "21st",
+    "name": "EZPZ Rubber Duck",
+    "slug": "ezpz-rubber-duck",
+    "description": "Squeeze, drag and release a 3D rubber duck on rippling water. Editable React and Three.js component with configurable color, optional synthesized squeak, keyboard interaction and reduced-motion support. No visible controls. Duck mesh adapted from Sony Computer Entertainment’s SCEA Duck via Khronos under the SCEA Shared Source License 1.0. Full asset license and modification notes retained in source. Complete editable project: https://github.com/ezam0000/ezpz-rubber-duck. Application code MIT licensed.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@ezam0000/components/ezpz-rubber-duck",
+    "sourceUrl": "https://21st.dev/@ezam0000/components/ezpz-rubber-duck",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44837.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "three"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44837.html"
+  },
+  {
+    "id": "staged-21st-44838",
+    "sourceId": "21st",
+    "name": "3D Animated Tilt & Dynamic Glow Card",
+    "slug": "3d-animated-tilt-dynamic-glow-card",
+    "description": "A premium Bento-grid ready card featuring an interactive 3D perspective tilt effect and a mouse-tracking neon glow border. Fully accessible, type-safe, and perfect for highlighting feature sections.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@themeocean/components/3d-animated-tilt-dynamic-glow-card",
+    "sourceUrl": "https://21st.dev/@themeocean/components/3d-animated-tilt-dynamic-glow-card",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44838.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44838.html"
+  },
+  {
+    "id": "staged-21st-44839",
+    "sourceId": "21st",
+    "name": "Interactive AI Chat Input with Micro-Interactions",
+    "slug": "interactive-ai-chat-input-with-micro-interactions",
+    "description": "A highly polished, responsive AI chat input component built with React, Tailwind CSS, and Lucide icons. Supports expand-on-type, file attachments visualization, and smooth focus-ring states for modern AI applications.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@themeocean/components/interactive-ai-chat-input-with-micro-interactions",
+    "sourceUrl": "https://21st.dev/@themeocean/components/interactive-ai-chat-input-with-micro-interactions",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44839.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44839.html"
+  },
+  {
+    "id": "staged-21st-44842",
+    "sourceId": "21st",
+    "name": "Live Activity Dock – Dock Navigation with Progress Rings and Expanding Live Cards",
+    "slug": "live-activity-dock",
+    "description": "Live Activity Dock for React and Tailwind CSS (shadcn/ui): dock tiles carry live state — progress ring, rolling badge, running dot, error shake — and grow a live card out of the tile with title, percent, time left and actions. It is built to show how far a task has got without leaving the page. The icon flies into the card, other tiles dim, Escape closes it. Controlled or uncontrolled expandedId, animated progress and badge updates. Keyboard, aria, reduced motion, light and dark. Use it for exports, uploads, sync and builds. The included demo scripts an export, a badge change and a failed upload with retry, and makes no requests. Requires React only, with no animation library.",
+    "category": "Navigation",
+    "kind": "component",
+    "url": "https://21st.dev/@dhxwhy/components/live-activity-dock",
+    "sourceUrl": "https://21st.dev/@dhxwhy/components/live-activity-dock",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44842.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Navigation"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44842.html"
+  },
+  {
+    "id": "staged-21st-44843",
+    "sourceId": "21st",
+    "name": "Wordmark Reveal Footer – Giant Logo Footer with Reflection, Status and Local Time",
+    "slug": "wordmark-reveal-footer",
+    "description": "Wordmark Reveal Footer for React and Tailwind CSS (shadcn/ui): a footer whose giant wordmark rises letter by letter through the floor line, lights a reflection, then switches on a status band with live local time per office. It is built to close a page with a brand moment that feels alive instead of a static logo. Props: brand, columns, newsletter, socials, legal, status tone, offices with IANA time zones, reflection, reveal on mount, in view or manual, controlled revealed with onRevealEnd. Landmarks, reduced motion, light and dark. Use it for SaaS, studio and agency sites. The included demo replays the reveal once and makes no requests. Requires React only, with no animation library.",
+    "category": "Footers",
+    "kind": "component",
+    "url": "https://21st.dev/@dhxwhy/components/wordmark-reveal-footer",
+    "sourceUrl": "https://21st.dev/@dhxwhy/components/wordmark-reveal-footer",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44843.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Footers"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44843.html"
+  },
+  {
+    "id": "staged-21st-44844",
+    "sourceId": "21st",
+    "name": "Early Access Pass CTA – Email Signup Section that Issues a Holographic Pass",
+    "slug": "early-access-pass-cta",
+    "description": "Early Access Pass CTA for React and Tailwind CSS (shadcn/ui): an email signup section that issues a membership-style pass on submit, printing the name, rolling the number up and stamping the date. It is built to turn a signup into something visitors can hold. The pass tilts toward the pointer with a moving sheen; the form validates the address, shows Try again when the promise rejects and announces the issue politely. Controlled or uncontrolled pass, split or stacked layout, reduced motion, light and dark. Use it for waitlists, newsletters, betas and event registration. The included demo types, issues, retries once and makes no requests. Requires React only, with no animation library.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@dhxwhy/components/early-access-pass-cta",
+    "sourceUrl": "https://21st.dev/@dhxwhy/components/early-access-pass-cta",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44844.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44844.html"
+  },
+  {
+    "id": "staged-21st-44845",
+    "sourceId": "21st",
+    "name": "Allocation Slider – Split 100% Across Segments with Draggable Dividers and Locks",
+    "slug": "allocation-slider",
+    "description": "Allocation Slider for React and Tailwind CSS (shadcn/ui): drag a divider between segments and its two neighbours trade share, so the total always stays at 100. It is built to make splitting a whole feel direct: only the two segments you move roll to new shares and amounts while the rest hold still. Locked segments are skipped over, minimums stop the drag, double-click evens neighbours, Reset restores the start. Controlled or uncontrolled, keyboard sliders with aria-valuetext, reduced motion, light and dark. Use it for budgets, portfolio weights or team time. The included demo drags, locks and resets a monthly budget and makes no requests. Requires React only, with no animation library.",
+    "category": "Galleries",
+    "kind": "component",
+    "url": "https://21st.dev/@dhxwhy/components/allocation-slider",
+    "sourceUrl": "https://21st.dev/@dhxwhy/components/allocation-slider",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44845.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Galleries"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44845.html"
+  },
+  {
+    "id": "staged-21st-44846",
+    "sourceId": "21st",
+    "name": "Read Along Text – Word Highlight Synced to Speech or Audio Progress",
+    "slug": "read-along-text",
+    "description": "Read Along Text for React and Tailwind CSS (shadcn/ui): a paragraph whose words light up in time with speech, the current word lifted on a soft highlight with a caret under it and a breath after punctuation. It is built to show listeners where the voice is, so a transcript can be followed and tapped. It owns no clock: drive it with progress or currentTime, or use playing with wordsPerSecond. Click or Enter on a word calls onSeek, arrow keys move between words, reduced motion keeps colors only. Use it for AI voice answers, transcripts and read-aloud modes. The included demo plays a fake voice reply and makes no requests. Requires React only, with no animation library.",
+    "category": "Text effects",
+    "kind": "component",
+    "url": "https://21st.dev/@dhxwhy/components/read-along-text",
+    "sourceUrl": "https://21st.dev/@dhxwhy/components/read-along-text",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44846.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Text effects"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44846.html"
+  },
+  {
+    "id": "staged-21st-44847",
+    "sourceId": "21st",
+    "name": "Breakdown Stat Card – KPI Card that Splits a Number into Animated Segments",
+    "slug": "breakdown-stat-card",
+    "description": "Breakdown Stat Card for React and Tailwind CSS (shadcn/ui): a KPI tile whose big number opens like a drawer into its segments. The bar grows from the left, amounts roll up from zero, and hovering or focusing a segment rolls the headline value to its amount. It is built to show what a metric is made of without leaving the dashboard. Shares always sum to 100; expanded state and highlighted segment are controlled or uncontrolled. Roving-tabindex keyboard, polite announcements, light and dark, instant reduced motion. Use it for revenue, users, traffic or cost tiles. The included demo scripts two Alder tiles and makes no requests. Requires React only, with no animation library.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@dhxwhy/components/breakdown-stat-card",
+    "sourceUrl": "https://21st.dev/@dhxwhy/components/breakdown-stat-card",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44847.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44847.html"
+  },
+  {
+    "id": "staged-21st-44848",
+    "sourceId": "21st",
+    "name": "First Item Empty State – Empty List that Turns into Your First Row",
+    "slug": "first-item-empty-state",
+    "description": "First Item Empty State for React and Tailwind CSS (shadcn/ui): an empty list whose placeholder rows become the first real row on Create. It is built to make the moment after Create feel continuous: the row lifts out of the ghost layer, the title types in, the pill lands, the copy folds into a toolbar and the rest collapse. onCreate returns an item or a promise; a rejection shows Try again. Controlled or uncontrolled items, renderItem, keyboard support, a live region, reduced motion, light and dark. Use it for the first screen of projects, clients or files. The included demo creates two projects, fails once and retries, and makes no requests. Requires React only, with no animation library.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@dhxwhy/components/first-item-empty-state",
+    "sourceUrl": "https://21st.dev/@dhxwhy/components/first-item-empty-state",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44848.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44848.html"
+  },
+  {
+    "id": "staged-21st-44849",
+    "sourceId": "21st",
+    "name": "Progressive Sign Up Form – Fields Appear as You Go, No Steps",
+    "slug": "progressive-sign-up-form",
+    "description": "Progressive Sign Up Form for React and Tailwind CSS (shadcn/ui): one card that starts with an email field and grows the next field only when the previous one is valid, with no step pages. The name slides in under a valid email, the password brings a four-segment strength meter that fills rule by rule, and the terms row arrives as the button morphs from Continue to Create account. Earlier fields stay editable. An async onSubmit fills the button, then the card morphs into a welcome state or offers Try again. Use it for SaaS onboarding and newsletter sign-ups. The demo types a sign-up, fails once and retries, with no requests. Requires React only.",
+    "category": "Backgrounds",
+    "kind": "component",
+    "url": "https://21st.dev/@dhxwhy/components/progressive-sign-up-form",
+    "sourceUrl": "https://21st.dev/@dhxwhy/components/progressive-sign-up-form",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44849.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Backgrounds"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44849.html"
+  },
+  {
+    "id": "staged-21st-44850",
+    "sourceId": "21st",
+    "name": "Delta Number Ticker – Rolling Number with Animated Change Chip and Previous Value",
+    "slug": "delta-number-ticker",
+    "description": "Delta Number Ticker for React and Tailwind CSS (shadcn/ui): digits roll on every change while a chip with the absolute and percent change lifts off the number and settles beside it, and the old value lingers below as a ghost. It is built to show how much and which way a figure moved. Columns roll with a 20 ms stagger, new columns grow in for extra digits, and goodDirection paints a falling latency as good. Controlled previousValue or own memory, Intl formatting, polite announcements, reduced motion, light and dark. Use it for KPIs, prices, balances, latency and stock. The included demo plays a fixed storefront scenario and makes no requests. Requires React only, with no animation library.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@dhxwhy/components/delta-number-ticker",
+    "sourceUrl": "https://21st.dev/@dhxwhy/components/delta-number-ticker",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44850.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44850.html"
+  },
+  {
+    "id": "staged-21st-44851",
+    "sourceId": "21st",
+    "name": "Scrub Pagination – Drag a Track to Scrub Pages, Ellipsis Morphs into Jump Input",
+    "slug": "scrub-pagination",
+    "description": "Scrub Pagination for React and Tailwind CSS (shadcn/ui): page numbers over a thin track that scrubs hundreds of pages at once. It is built to reach page 37 of 120 in one drag. A click slides the pill and rolls the numbers; the dragged handle shows a live “Page 37 / 120” tooltip and snaps on release; the ellipsis morphs into a jump field. onPageChange fires only on commit while onScrub reports the live page; controlled or uncontrolled, a keyboard role=\"slider\" handle, aria-current, reduced motion, light and dark. Use it for data tables, search results and log viewers. The included demo pages through 720 invoices and makes no requests. Requires React only, with no animation library.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@dhxwhy/components/scrub-pagination",
+    "sourceUrl": "https://21st.dev/@dhxwhy/components/scrub-pagination",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44851.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44851.html"
+  },
+  {
+    "id": "staged-21st-44852",
+    "sourceId": "21st",
+    "name": "Status Dropdown Select – Status and Priority Picker where the Chosen Dot Flies to the Trigger",
+    "slug": "status-dropdown-select",
+    "description": "Status Dropdown Select for React and Tailwind CSS (shadcn/ui): a status picker whose chosen dot, icon or photo flies from the list to the trigger, tinting the pill and rolling the label on landing. It is built to make a change in a row readable at a glance. Portal listbox with groups, shortcuts, type-ahead and arrow keys; opens upward when space is short. Controlled or uncontrolled, dot, icon or avatar kinds, full ARIA, reduced motion, light and dark. Use it for issue status, priority, assignees and orders. The included demo plays pointer and keyboard scenes, stops when you interact, uses embedded headshots and makes no network requests. Requires React only, with no animation library.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@dhxwhy/components/status-dropdown-select",
+    "sourceUrl": "https://21st.dev/@dhxwhy/components/status-dropdown-select",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44852.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44852.html"
+  },
+  {
+    "id": "staged-21st-44853",
+    "sourceId": "21st",
+    "name": "Drag Select Checkbox Group – Press and Drag to Check Multiple Rows in One Stroke",
+    "slug": "drag-select-checkbox-group",
+    "description": "Drag Select Checkbox Group for React and Tailwind CSS (shadcn/ui): press one checkbox and drag to check every row you pass in one stroke; back up and the passed rows are restored. It is built to make bulk selection one gesture instead of many clicks. A translucent band follows the pointer, ticks draw themselves and select-all shows a mixed state. Shift+click ranges, arrow keys, Ctrl/⌘+A, touch long-press, controlled or uncontrolled value, aria labels, reduced motion and light/dark are included. Use it for mail, files, members and tables. The included demo is a mock inbox with embedded headshots and makes no network requests. Requires React only, with no animation library.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@dhxwhy/components/drag-select-checkbox-group",
+    "sourceUrl": "https://21st.dev/@dhxwhy/components/drag-select-checkbox-group",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44853.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44853.html"
+  },
+  {
+    "id": "staged-21st-44854",
+    "sourceId": "21st",
+    "name": "Comparing Radio Cards – Plan Picker that Shows the Difference from Your Selection",
+    "slug": "comparing-radio-cards",
+    "description": "Comparing Radio Cards for React and Tailwind CSS (shadcn/ui): plan cards in a radio group where the selected card lifts forward and the others show their difference from it as chips (+$12/mo, +200 GB). It is built to answer \"what changes if I pick this one\" without a table. On a new pick the ring slides over, the detail unfolds and chips roll to the new baseline. Real radio inputs, controlled or uncontrolled value, numeric attributes with betterDirection, a live summary, light and dark, instant under reduced motion. Use it for pricing plans, storage tiers, shipping or seats. The included demo scripts three Alder plans and makes no requests. Requires React only, with no animation library.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@dhxwhy/components/comparing-radio-cards",
+    "sourceUrl": "https://21st.dev/@dhxwhy/components/comparing-radio-cards",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44854.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44854.html"
+  },
+  {
+    "id": "staged-21st-44855",
+    "sourceId": "21st",
+    "name": "Expiring Badge – Status Badge with a Time Rim that Empties and Morphs to Expired",
+    "slug": "expiring-badge",
+    "description": "Expiring Badge for React and Tailwind CSS (shadcn/ui): a status badge whose rim shows the share of time left and empties as time passes, turns amber, then red, and morphs its label to Expired. It is built to show how long a trial, offer or code has left. Pass expiresAt with startedAt or duration; the label can be a function of the time left, live mode rolls its digits each second, onExpire fires once, now() is injectable. Focusable with a tooltip, polite expiry announcement, reduced motion, light and dark. Use it for trials, sales, New labels, codes and sessions. The included demo shows five badges on an account card and makes no requests. Requires React only, with no animation library.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@dhxwhy/components/expiring-badge",
+    "sourceUrl": "https://21st.dev/@dhxwhy/components/expiring-badge",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44855.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44855.html"
+  },
+  {
+    "id": "staged-21st-44856",
+    "sourceId": "21st",
+    "name": "Avatar Status Ring – Presence Ring that Animates Speaking Level, Upload Progress and Status Changes",
+    "slug": "avatar-status-ring",
+    "description": "Avatar Status Ring for React and Tailwind CSS (shadcn/ui): presence drawn as a ring instead of a dot — solid online, dashed away, red busy, thicker with the voice level while speaking, filling clockwise while uploading. It is built to show what a person is doing right now, animating every change in colour, dash pattern and thickness. Controlled status, level and progress props, tone overrides, silhouette fallback, aria-label, reduced motion, light and dark, and a stacked group. Use it for call grids, chat headers, team lists and voice agents. The included demo scripts a speaker and an upload and makes no network requests. Requires React and lucide-react only, with no animation library.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@dhxwhy/components/avatar-status-ring",
+    "sourceUrl": "https://21st.dev/@dhxwhy/components/avatar-status-ring",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44856.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44856.html"
+  },
+  {
+    "id": "staged-21st-44857",
+    "sourceId": "21st",
+    "name": "Natural Language Date Picker – Type \"next fri 3pm\" and the Calendar Follows",
+    "slug": "natural-language-date-picker",
+    "description": "Natural Language Date Picker for React and Tailwind CSS (shadcn/ui): type \"next fri 3pm\" or \"in 2 weeks\" and the calendar follows. It is built to let people write dates as they say them: a chip shows the reading after a short pause, the calendar turns to its month, the day pulses and Enter confirms. The grammar is an exported pure parseNaturalDate(text, now) with no date library. Controlled or uncontrolled, onValueChange with its source, min/max dates, a keyboard-driven role=\"grid\" calendar, reduced motion, light and dark. Use it for due dates, reminders and filters. The included demo types three phrases on a fixed clock and makes no requests. Requires React only, with no animation library.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@dhxwhy/components/natural-language-date-picker",
+    "sourceUrl": "https://21st.dev/@dhxwhy/components/natural-language-date-picker",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44857.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "lucide-react",
+      ", "
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44857.html"
+  },
+  {
+    "id": "staged-21st-44858",
+    "sourceId": "21st",
+    "name": "Rail Panel Sidebar – Icon Rail with Context Panels, Pin to Collapse and Hover Peek",
+    "slug": "rail-panel-sidebar",
+    "description": "Rail Panel Sidebar for React and Tailwind CSS (shadcn/ui): an icon rail plus a context panel per section. It is built to show where you just went: the active marker slides along the rail and the panel content enters from the direction of travel. Unpin it and the panel folds into the rail; hover or focus the rail and the panel peeks over the content as a floating layer. Controlled or uncontrolled activeId, pinned and peeking, arrow keys, Enter and Escape, aria-current, reduced motion, light and dark. Use it for workspace app shells. The included demo plays a scripted tour on local data and makes no network requests (inline avatars). Requires React only, with no animation library.",
+    "category": "Text effects",
+    "kind": "component",
+    "url": "https://21st.dev/@dhxwhy/components/rail-panel-sidebar",
+    "sourceUrl": "https://21st.dev/@dhxwhy/components/rail-panel-sidebar",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44858.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Text effects"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44858.html"
+  },
+  {
+    "id": "staged-21st-44862",
+    "sourceId": "21st",
+    "name": "Callout",
+    "slug": "callout",
+    "description": "A left-accented note box for highlighting an editorial tip, warning, or informational aside inside article or docs content.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@alwkala/components/callout",
+    "sourceUrl": "https://21st.dev/@alwkala/components/callout",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44862.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44862.html"
+  },
+  {
+    "id": "staged-21st-44863",
+    "sourceId": "21st",
+    "name": "Multi-State Action Button with Micro-Animations",
+    "slug": "multi-state-action-button-with-micro-animations",
+    "description": "A highly interactive form submission button built with React, Tailwind CSS, and Framer Motion. Transitions smoothly through 'Idle', 'Loading' (with spinner), and 'Success' (with an animated checkmark) states.",
+    "category": "Buttons",
+    "kind": "component",
+    "url": "https://21st.dev/@themeocean/components/multi-state-action-button-with-micro-animations",
+    "sourceUrl": "https://21st.dev/@themeocean/components/multi-state-action-button-with-micro-animations",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44863.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "framer-motion"
+    ],
+    "tags": [
+      "React",
+      "Buttons"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44863.html"
+  },
+  {
+    "id": "staged-21st-44867",
+    "sourceId": "21st",
+    "name": "Dot Graph Card",
+    "slug": "dot-graph-card",
+    "description": "A revenue card with an animated percentage counter and a dot-matrix bar chart whose dots pop in and show tooltips on hover, with daily/weekly/monthly tabs.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@aloksivastava1025/components/dot-graph-card",
+    "sourceUrl": "https://21st.dev/@aloksivastava1025/components/dot-graph-card",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44867.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44867.html"
+  },
+  {
+    "id": "staged-21st-44870",
+    "sourceId": "21st",
+    "name": "OTP Input",
+    "slug": "otp-input",
+    "description": "Three one-time-code inputs: soft pill boxes, an underline row that fills dot by dot, and an iOS-style Messages banner that autofills the code. Paste, backspace and arrow keys all work. Part of Nexus UI: nexus-ui.com/components/otp-input",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@support_596fe4b8/components/otp-input",
+    "sourceUrl": "https://21st.dev/@support_596fe4b8/components/otp-input",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44870.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "framer-motion"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44870.html"
+  },
+  {
+    "id": "staged-21st-44872",
+    "sourceId": "21st",
+    "name": "3D Curved Carousel",
+    "slug": "3d-curved-carousel",
+    "description": "3D curved carousel: a WebGL image slider that bends photo cards around a cylinder like a lens. Drag, swipe or use the arrows; captions and a progress counter follow the active slide. Falls back to plain images without WebGL.",
+    "category": "Galleries",
+    "kind": "component",
+    "url": "https://21st.dev/@kedhareswer/components/3d-curved-carousel",
+    "sourceUrl": "https://21st.dev/@kedhareswer/components/3d-curved-carousel",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44872.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Galleries"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44872.html"
+  },
+  {
+    "id": "staged-21st-44873",
+    "sourceId": "21st",
+    "name": "Mac Keyboard",
+    "slug": "mac-keyboard",
+    "description": "A full Mac keyboard with soft keycaps that press down as you type. Works with your real keyboard and with taps, and the typed text shows in the bar above. Part of Nexus UI: nexus-ui.com/components/mac-keyboard",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@support_596fe4b8/components/mac-keyboard",
+    "sourceUrl": "https://21st.dev/@support_596fe4b8/components/mac-keyboard",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44873.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "framer-motion"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44873.html"
+  },
+  {
+    "id": "staged-21st-44874",
+    "sourceId": "21st",
+    "name": "Pixel Atlas",
+    "slug": "pixel-atlas",
+    "description": "A world map built from pixels, with a glowing activity heatmap, pins you can open for details, filters, and zoom. Drag to pan. Part of Nexus UI: nexus-ui.com/components/pixel-atlas",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@support_596fe4b8/components/pixel-atlas",
+    "sourceUrl": "https://21st.dev/@support_596fe4b8/components/pixel-atlas",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44874.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "framer-motion"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44874.html"
+  },
+  {
+    "id": "staged-21st-44875",
+    "sourceId": "21st",
+    "name": "Aquarium Prompt",
+    "slug": "aquarium-prompt",
+    "description": "An AI prompt box floating in a pixel-art aquarium. Fish school behind the frosted glass, scatter from your pointer, crowd round the caret as you type, and swim into the box when you send. Part of Nexus UI: nexus-ui.com/components/aquarium-prompt",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@support_596fe4b8/components/aquarium-prompt",
+    "sourceUrl": "https://21st.dev/@support_596fe4b8/components/aquarium-prompt",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44875.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "framer-motion"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44875.html"
+  },
+  {
+    "id": "staged-21st-44876",
+    "sourceId": "21st",
+    "name": "Mercury Upload",
+    "slug": "mercury-upload",
+    "description": "A file upload that pours the file in as liquid mercury. Drops fall from the file chip into a pool that spreads as the progress, then pulls into a bead with a check. Part of Nexus UI: nexus-ui.com/components/mercury-upload",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@support_596fe4b8/components/mercury-upload",
+    "sourceUrl": "https://21st.dev/@support_596fe4b8/components/mercury-upload",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44876.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "framer-motion"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44876.html"
+  },
+  {
+    "id": "staged-21st-44877",
+    "sourceId": "21st",
+    "name": "Googly Eye Cursor",
+    "slug": "googly-eye-cursor",
+    "description": "An interactive custom cursor featuring playful googly eyes that track pointer movement with smooth physics. Built by  goodmotion.vercel.app/",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@goodmotion/components/googly-eye-cursor",
+    "sourceUrl": "https://21st.dev/@goodmotion/components/googly-eye-cursor",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44877.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "gsap",
+      "@gsap/react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44877.html"
+  },
+  {
+    "id": "staged-21st-44878",
+    "sourceId": "21st",
+    "name": "Profile Menu Expander",
+    "slug": "grid-row-profile-expander",
+    "description": "A profile card that expands upward to reveal a navigation menu and a light/dark/system theme switcher, using a grid-row 0fr-to-1fr animation.",
+    "category": "Navigation",
+    "kind": "component",
+    "url": "https://21st.dev/@aloksivastava1025/components/grid-row-profile-expander",
+    "sourceUrl": "https://21st.dev/@aloksivastava1025/components/grid-row-profile-expander",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44878.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Navigation"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44878.html"
+  },
+  {
+    "id": "staged-21st-44880",
+    "sourceId": "21st",
+    "name": "Glossy Slider Call Button",
+    "slug": "glossy-slider-call-button",
+    "description": "A dark pill button with an acid-green slider that expands on hover, swapping a dotted arrow icon for a ringing-phone icon while the label fades out.",
+    "category": "Galleries",
+    "kind": "component",
+    "url": "https://21st.dev/@aloksivastava1025/components/glossy-slider-call-button",
+    "sourceUrl": "https://21st.dev/@aloksivastava1025/components/glossy-slider-call-button",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44880.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [],
+    "tags": [
+      "React",
+      "Galleries"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44880.html"
+  },
+  {
+    "id": "staged-21st-44903",
+    "sourceId": "21st",
+    "name": "Expandable Book Search Palette",
+    "slug": "expandable-book-search-palette",
+    "description": "A search bar that expands into a filterable genre grid using a CSS grid-rows accordion animation, useful for a book catalog or library browse page.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@aloksivastava1025/components/expandable-book-search-palette",
+    "sourceUrl": "https://21st.dev/@aloksivastava1025/components/expandable-book-search-palette",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44903.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44903.html"
+  },
+  {
+    "id": "staged-21st-44918",
+    "sourceId": "21st",
+    "name": "Tube Grid",
+    "slug": "tube-grid",
+    "description": "A grid of glowing electric blue tubes seen end on, stretching toward a drifting vanishing point, with soft breathing light. Move the pointer to steer the tunnel, click to send a pulse of light down every tube.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@louisstudios/components/tube-grid",
+    "sourceUrl": "https://21st.dev/@louisstudios/components/tube-grid",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44918.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44918.html"
+  },
+  {
+    "id": "staged-21st-44921",
+    "sourceId": "21st",
+    "name": "LED Badges",
+    "slug": "led-badges",
+    "description": "A loose pile of 3D LED name badges in gunmetal bezels, each scrolling its own neon dot-matrix marquee while winking smileys glow. Move the pointer to tilt the pile, click to flash every LED.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@louisstudios/components/led-badges",
+    "sourceUrl": "https://21st.dev/@louisstudios/components/led-badges",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44921.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44921.html"
+  },
+  {
+    "id": "staged-21st-44922",
+    "sourceId": "21st",
+    "name": "Neon Loop",
+    "slug": "neon-loop",
+    "description": "Bold extruded letters orbit two interlinked neon rings with a cyan to coral iridescent finish and a warm halo. Move the pointer to tilt the rings, drag to spin them.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@louisstudios/components/neon-loop",
+    "sourceUrl": "https://21st.dev/@louisstudios/components/neon-loop",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44922.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44922.html"
+  },
+  {
+    "id": "staged-21st-44926",
+    "sourceId": "21st",
+    "name": "Animated Number",
+    "slug": "animated-number",
+    "description": "A number display that rolls to a new value when it changes, sliding up for increases and down for decreases so the direction is readable at a glance.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@ikascom/components/animated-number",
+    "sourceUrl": "https://21st.dev/@ikascom/components/animated-number",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44926.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "@radix-ui/react-slot",
+      "class-variance-authority",
+      "react",
+      "motion",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44926.html"
+  },
+  {
+    "id": "staged-21st-44928",
+    "sourceId": "21st",
+    "name": "Scroll Stacking Cards",
+    "slug": "scroll-stacking-cards",
+    "description": "Sticky scroll stacking cards for a portfolio or project showcase. As you scroll, each card rises from below, leaning toward you and out of focus, then flattens and sharpens as it lands in the centre, while the cards beneath sink back and peek out above like a deck. Every card shows a whole website edge to edge, with its name and link set into a cut-out corner, one click from the live site. Pinned, spring-smoothed and 60fps, with a reduced motion fallback. Pass your own projects and screenshots.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@aakashmehra/components/scroll-stacking-cards",
+    "sourceUrl": "https://21st.dev/@aakashmehra/components/scroll-stacking-cards",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44928.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "motion",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44928.html"
+  },
+  {
+    "id": "staged-21st-44930",
+    "sourceId": "21st",
+    "name": "Sleek AI Command Menu (CMDK) with Fuzzy Search",
+    "slug": "sleek-ai-command-menu-cmdk-with-fuzzy-search",
+    "description": "A premium, keyboard-accessible command menu dialog optimized for AI platforms. Features dynamic search filtering, shortcut key indicators, recent AI prompts history, and buttery smooth fade/scale transitions.",
+    "category": "Navigation",
+    "kind": "component",
+    "url": "https://21st.dev/@themeocean/components/sleek-ai-command-menu-cmdk-with-fuzzy-search",
+    "sourceUrl": "https://21st.dev/@themeocean/components/sleek-ai-command-menu-cmdk-with-fuzzy-search",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44930.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom"
+    ],
+    "tags": [
+      "React",
+      "Navigation"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44930.html"
+  },
+  {
+    "id": "staged-21st-44952",
+    "sourceId": "21st",
+    "name": "Spinny thing",
+    "slug": "spinny-thing",
+    "description": "Pure CSS gradient background in the Orbit Sweep style, made with the 21st.dev Gradient Builder. 6-color palette (#2F51C1, #123A6B, #DC2C2C, #DD2C2C, #530097, #6500B8). Features: soft blur finish, vignette. A drop-in, zero-dependency React component for hero sections, cards, and page backgrounds.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@paulkatz996/components/spinny-thing",
+    "sourceUrl": "https://21st.dev/@paulkatz996/components/spinny-thing",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44952.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44952.html"
+  },
+  {
+    "id": "staged-21st-44953",
+    "sourceId": "21st",
+    "name": "mix",
+    "slug": "mix",
+    "description": "Pure CSS gradient background in the Layered Tide style, made with the 21st.dev Gradient Builder. 6-color palette (#0136E4, #123A6B, #DC2C2C, #DD2C2C, #530097, #6500B8). Features: film grain, vignette. A drop-in, zero-dependency React component for hero sections, cards, and page backgrounds.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@paulkatz996/components/mix",
+    "sourceUrl": "https://21st.dev/@paulkatz996/components/mix",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44953.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44953.html"
+  },
+  {
+    "id": "staged-21st-44954",
+    "sourceId": "21st",
+    "name": "Red Blue",
+    "slug": "red-blue",
+    "description": "Pure CSS gradient background in the Bloom Field style, made with the 21st.dev Gradient Builder. 7-color palette (#081D63, #0051B4, #DC2C2C, #DD2C2C, #530097, #6500B8, #DD2C2C). Features: film grain, vignette. A drop-in, zero-dependency React component for hero sections, cards, and page backgrounds.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@paulkatz996/components/red-blue",
+    "sourceUrl": "https://21st.dev/@paulkatz996/components/red-blue",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44954.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44954.html"
+  },
+  {
+    "id": "staged-21st-44955",
+    "sourceId": "21st",
+    "name": "Smoke Login",
+    "slug": "smoke-login",
+    "description": "A split sign-in page. Live WebGL smoke with an acid green thread drifts across a stack of paper on the left and swirls around your pointer; the form sits on plain paper on the right. Opens in dark mode with a light / dark switch, blur-in entrance, Inter.",
+    "category": "Authentication",
+    "kind": "component",
+    "url": "https://21st.dev/@aakashmehra/components/smoke-login",
+    "sourceUrl": "https://21st.dev/@aakashmehra/components/smoke-login",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44955.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "motion",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Authentication"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44955.html"
+  },
+  {
+    "id": "staged-21st-44958",
+    "sourceId": "21st",
+    "name": "Contour Land Map",
+    "slug": "contur-land-map",
+    "description": "Contur Land is a full-screen landing page hero for a land and regional mapping company based in Denver, Colorado. A live, animated topographic contour map fills the background and rises toward the cursor, while a coordinate readout shows latitude, longitude, and elevation",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@admin-pstzxid/components/contur-land-map",
+    "sourceUrl": "https://21st.dev/@admin-pstzxid/components/contur-land-map",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44958.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44958.html"
+  },
+  {
+    "id": "staged-21st-44959",
+    "sourceId": "21st",
+    "name": "Rotary Passcode",
+    "slug": "rotary-passcode",
+    "description": "A gold rotary phone that guards your content. Dial the passcode by turning the finger wheel (it spins back with a ratchet click per number); the right code rings the bell, lifts the handset and reveals what's inside, a wrong one rattles it, and a decoy code gets an apology. Once unlocked it's a working phone: dial tone, dial any number, ring-back, connect to named contacts with a call timer. While locked, incoming calls ring and can be answered by lifting the handset. Keyboard dialing, light and dark theme, synthesized sounds.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@aakashmehra/components/rotary-passcode",
+    "sourceUrl": "https://21st.dev/@aakashmehra/components/rotary-passcode",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44959.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "motion",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44959.html"
+  },
+  {
+    "id": "staged-21st-44960",
+    "sourceId": "21st",
+    "name": "AI Composer",
+    "slug": "ai-composer",
+    "description": "A white pill to talk to an assistant. Hover and it opens into a rectangle with a model picker, Search and Research toggles, and an attach button. The placeholder cycles through example asks, the mic dictates a demo message, and it turns into a send arrow once there's text. Soft drifting pink and blue brush strokes behind.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@aakashmehra/components/ai-composer",
+    "sourceUrl": "https://21st.dev/@aakashmehra/components/ai-composer",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44960.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "motion",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44960.html"
+  },
+  {
+    "id": "staged-21st-44968",
+    "sourceId": "21st",
+    "name": "Silk Blend Gradient",
+    "slug": "silk-blend-gradient",
+    "description": "Pure CSS gradient background in the Silk Blend style, made with the 21st.dev Gradient Builder. 4-color palette (#000000, #820853, #0F0609, #2C1A00). Features: film grain. A drop-in, zero-dependency React component for hero sections, cards, and page backgrounds.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@bayagbono/components/silk-blend-gradient",
+    "sourceUrl": "https://21st.dev/@bayagbono/components/silk-blend-gradient",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44968.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44968.html"
+  },
+  {
+    "id": "staged-21st-44978",
+    "sourceId": "21st",
+    "name": "Chip Filter",
+    "slug": "chip-filter",
+    "description": "A row of pill-shaped filter chips that behaves like a single-select radio group, with an accent ring on the active chip, for quick filters above lists and tables.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@amankaushik481/components/chip-filter",
+    "sourceUrl": "https://21st.dev/@amankaushik481/components/chip-filter",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44978.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44978.html"
+  },
+  {
+    "id": "staged-21st-44998",
+    "sourceId": "21st",
+    "name": "Button New & Search",
+    "slug": "button-new-search",
+    "description": "A compact, centered toolbar made of two elements: a search field and a “New Folder” button. Together they form a single 540px-wide row, placed in the middle of the screen both horizontally and vertically.",
+    "category": "Buttons",
+    "kind": "component",
+    "url": "https://21st.dev/@admin-pstzxid/components/button-new-search",
+    "sourceUrl": "https://21st.dev/@admin-pstzxid/components/button-new-search",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-44998.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Buttons"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-44998.html"
+  },
+  {
+    "id": "staged-21st-45013",
+    "sourceId": "21st",
+    "name": "Y2K Dreamy Text",
+    "slug": "y2k-dreamy-text",
+    "description": "A dreamy Y2K bloom text effect powered by GSAP with fluid cursor proximity glow and seamless auto-sweep animation.\nExplore a curated collection of interactive motion components at: https://goodmotion.vercel.app/",
+    "category": "Text effects",
+    "kind": "component",
+    "url": "https://21st.dev/@goodmotion/components/y2k-dreamy-text",
+    "sourceUrl": "https://21st.dev/@goodmotion/components/y2k-dreamy-text",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45013.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "gsap",
+      "@gsap/react"
+    ],
+    "tags": [
+      "React",
+      "Text effects"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45013.html"
+  },
+  {
+    "id": "staged-21st-45021",
+    "sourceId": "21st",
+    "name": "Glow Rocker",
+    "slug": "glow-rocker",
+    "description": "A raymarched 3D rocker switch that tips on its hinge, flips the whole scene from soft grey daylight to black, and spills violet light from under its lifted edge. Click it or press Space to rock it, and pick a camera view.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@louisstudios/components/glow-rocker",
+    "sourceUrl": "https://21st.dev/@louisstudios/components/glow-rocker",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45021.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45021.html"
+  },
+  {
+    "id": "staged-21st-45026",
+    "sourceId": "21st",
+    "name": "Waving Hand Poster",
+    "slug": "waving-hand-poster",
+    "description": "An interactive, responsive greeting poster featuring an animated waving hand ribbon, smooth SVG graphics, and dynamic typography.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@daiwiikharihar/components/waving-hand-poster",
+    "sourceUrl": "https://21st.dev/@daiwiikharihar/components/waving-hand-poster",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45026.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45026.html"
+  },
+  {
+    "id": "staged-21st-45027",
+    "sourceId": "21st",
+    "name": "Curly Wave Poster",
+    "slug": "curly-wave-poster",
+    "description": "An animated, vintage-inspired motivational poster featuring interwoven brush stroke ribbons and dynamic typography with interactive replay.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@daiwiikharihar/components/curly-wave-poster",
+    "sourceUrl": "https://21st.dev/@daiwiikharihar/components/curly-wave-poster",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45027.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45027.html"
+  },
+  {
+    "id": "staged-21st-45030",
+    "sourceId": "21st",
+    "name": "Color Pairing Card",
+    "slug": "color-pairing-card",
+    "description": "An interactive SVG-notched bento color palette card with inverted corner cutouts, one-click hex copying, live color dominance swapping, and dual light/dark mode support.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@daiwiikharihar/components/color-pairing-card",
+    "sourceUrl": "https://21st.dev/@daiwiikharihar/components/color-pairing-card",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45030.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45030.html"
+  },
+  {
+    "id": "staged-21st-45038",
+    "sourceId": "21st",
+    "name": "didar",
+    "slug": "didar",
+    "description": "Animated WebGL shader background in the God Rays style. Ether variant. Generated by the 21st.dev Shader Builder. Adapted from Paper Shaders under Apache-2.0. 4-color palette (#140A00, #FF6D00, #FFC300, #FFF1B8). Features: high intensity. A drop-in, zero-dependency React component for hero sections and animated gradient/noise backgrounds.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@parsavashghani10/components/didar",
+    "sourceUrl": "https://21st.dev/@parsavashghani10/components/didar",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45038.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45038.html"
+  },
+  {
+    "id": "staged-21st-45051",
+    "sourceId": "21st",
+    "name": "Emoji Picker",
+    "slug": "emoji-picker",
+    "description": "A compact grid of emoji reactions, built with listbox/option roles, that calls a callback with the chosen emoji — useful for message reaction bars and quick-react buttons.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@amankaushik481/components/emoji-picker",
+    "sourceUrl": "https://21st.dev/@amankaushik481/components/emoji-picker",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45051.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45051.html"
+  },
+  {
+    "id": "staged-21st-45064",
+    "sourceId": "21st",
+    "name": "Contour line map",
+    "slug": "contur-line-map",
+    "description": "effect contur line area map",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@admin-pstzxid/components/contur-line-map",
+    "sourceUrl": "https://21st.dev/@admin-pstzxid/components/contur-line-map",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45064.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45064.html"
+  },
+  {
+    "id": "staged-21st-45065",
+    "sourceId": "21st",
+    "name": "21 st Contour Line",
+    "slug": "21-contur-line",
+    "description": "Contur line effect 21 st dev",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@admin-pstzxid/components/21-contur-line",
+    "sourceUrl": "https://21st.dev/@admin-pstzxid/components/21-contur-line",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45065.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45065.html"
+  },
+  {
+    "id": "staged-21st-45067",
+    "sourceId": "21st",
+    "name": "Sign In Water Effect Glass",
+    "slug": "sign-in-water-effect-glass",
+    "description": "Water effect panel liquid glass for sign up",
+    "category": "Authentication",
+    "kind": "component",
+    "url": "https://21st.dev/@admin-pstzxid/components/sign-in-water-effect-glass",
+    "sourceUrl": "https://21st.dev/@admin-pstzxid/components/sign-in-water-effect-glass",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45067.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Authentication"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45067.html"
+  },
+  {
+    "id": "staged-21st-45072",
+    "sourceId": "21st",
+    "name": "Dusk Crossing",
+    "slug": "dusk-crossing",
+    "description": "Pure CSS gradient background in the Silk Blend style, made with the 21st.dev Gradient Builder. 4-color palette (#8295D4, #4A7AE8, #FF6A00, #7E56C2). Features: film grain. A drop-in, zero-dependency React component for hero sections, cards, and page backgrounds.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@alihamza91/components/dusk-crossing",
+    "sourceUrl": "https://21st.dev/@alihamza91/components/dusk-crossing",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45072.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45072.html"
+  },
+  {
+    "id": "staged-21st-45075",
+    "sourceId": "21st",
+    "name": "Contour line Mountain",
+    "slug": "contour-line-mountain",
+    "description": "Efect contour line mountain area",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@admin-pstzxid/components/contour-line-mountain",
+    "sourceUrl": "https://21st.dev/@admin-pstzxid/components/contour-line-mountain",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45075.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45075.html"
+  },
+  {
+    "id": "staged-21st-45082",
+    "sourceId": "21st",
+    "name": "Color Fill Card",
+    "slug": "color-fill-card",
+    "description": "A high-performance card component featuring an ultra-slow, cinematic radial color flood on hover with seamless contrast transitions.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@mohammedsahil0003/components/color-fill-card",
+    "sourceUrl": "https://21st.dev/@mohammedsahil0003/components/color-fill-card",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45082.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45082.html"
+  },
+  {
+    "id": "staged-21st-45089",
+    "sourceId": "21st",
+    "name": "Chapter Player",
+    "slug": "chapter-player",
+    "description": "A cinematic video player on a violet stage: a light rides the frame edge, and chapter tabs carry a sweeping glow that doubles as each chapter's progress bar. Works with any video URL, with a built-in demo reel.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@louisstudios/components/chapter-player",
+    "sourceUrl": "https://21st.dev/@louisstudios/components/chapter-player",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45089.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45089.html"
+  },
+  {
+    "id": "staged-21st-45090",
+    "sourceId": "21st",
+    "name": "Warp Carousel",
+    "slug": "warp-carousel",
+    "description": "A ring of glowing stat cards that turns in 3D, its side cards flaring through a wide lens with cyan rims, mirrored backs and colour-matched glows. Drag, click or use the arrow keys.",
+    "category": "Galleries",
+    "kind": "component",
+    "url": "https://21st.dev/@louisstudios/components/warp-carousel",
+    "sourceUrl": "https://21st.dev/@louisstudios/components/warp-carousel",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45090.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Galleries"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45090.html"
+  },
+  {
+    "id": "staged-21st-45091",
+    "sourceId": "21st",
+    "name": "Assistant Wall",
+    "slug": "assistant-wall",
+    "description": "A wall of frosted glass assistant cards that glides upward, handing focus to the next friendly message with soft motion blur, glossy avatar spheres and a pink light bloom.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@louisstudios/components/assistant-wall",
+    "sourceUrl": "https://21st.dev/@louisstudios/components/assistant-wall",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45091.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45091.html"
+  },
+  {
+    "id": "staged-21st-45097",
+    "sourceId": "21st",
+    "name": "lsm",
+    "slug": "lsm",
+    "description": "Animated (flicker) ASCII art in the Dots style, made with the 21st ASCII editor and baked to a looping video. A drop-in, zero-dependency React component for hero sections, cards, and retro terminal-style backgrounds.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@studiostargazing/components/lsm",
+    "sourceUrl": "https://21st.dev/@studiostargazing/components/lsm",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45097.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45097.html"
+  },
+  {
+    "id": "staged-21st-45108",
+    "sourceId": "21st",
+    "name": "Hover Card",
+    "slug": "hover-card",
+    "description": "A popover that shows extra preview content, like a profile summary or link preview, when a user hovers over a trigger element.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@sopo/components/hover-card",
+    "sourceUrl": "https://21st.dev/@sopo/components/hover-card",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45108.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "@base-ui/react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45108.html"
+  },
+  {
+    "id": "staged-21st-45129",
+    "sourceId": "21st",
+    "name": "Receipt Printer",
+    "slug": "receipt-printer",
+    "description": "A thermal printer seen from above. Press the red PRINT button and a receipt rises smoothly out of the slot with a motor whir. The paper is one continuous strip: press PRINT mid-print to stop, press again to print another receipt joined on, and pull the strip to tear it off along a zigzag edge. Sound toggle included.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@aakashmehra/components/receipt-printer",
+    "sourceUrl": "https://21st.dev/@aakashmehra/components/receipt-printer",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45129.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "motion",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45129.html"
+  },
+  {
+    "id": "staged-21st-45130",
+    "sourceId": "21st",
+    "name": "Interactive AI Voice Assistant Audio Visualizer",
+    "slug": "interactive-ai-voice-assistant-audio-visualizer",
+    "description": "A highly polished, state-driven audio wave visualizer designed for AI voice interactions. Features seamless switching between 'listening', 'thinking', and 'speaking' states using hardware-accelerated fluid animations.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@themeocean/components/interactive-ai-voice-assistant-audio-visualizer",
+    "sourceUrl": "https://21st.dev/@themeocean/components/interactive-ai-voice-assistant-audio-visualizer",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45130.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "framer-motion"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45130.html"
+  },
+  {
+    "id": "staged-21st-45131",
+    "sourceId": "21st",
+    "name": "AI Chain-of-Thought Reasoning Accordion",
+    "slug": "ai-chain-of-thought-reasoning-accordion",
+    "description": "A sleek, collapsible reasoning container designed for AI chat interfaces. Displays live thinking timers, step-by-step logic traces, and auto-collapses smoothly once the final response begins.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@themeocean/components/ai-chain-of-thought-reasoning-accordion",
+    "sourceUrl": "https://21st.dev/@themeocean/components/ai-chain-of-thought-reasoning-accordion",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45131.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "framer-motion",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45131.html"
+  },
+  {
+    "id": "staged-21st-45134",
+    "sourceId": "21st",
+    "name": "Interactive Expandable Notification Stack",
+    "slug": "interactive-expandable-notification-stack",
+    "description": "A sleek, Dynamic-Island inspired stacked notification widget. Compresses multiple alerts into a layered 3D card deck that fans out smoothly on hover or click with individual dismiss actions.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@themeocean/components/interactive-expandable-notification-stack",
+    "sourceUrl": "https://21st.dev/@themeocean/components/interactive-expandable-notification-stack",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45134.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "framer-motion",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45134.html"
+  },
+  {
+    "id": "staged-21st-45135",
+    "sourceId": "21st",
+    "name": "Interactive AI Agent Workflow Node Card",
+    "slug": "interactive-ai-agent-workflow-node-card",
+    "description": "A modular, node-based workflow card built for visual AI agent builders. Features input/output connection ports, live execution status rings, and inline parameter toggles.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@themeocean/components/interactive-ai-agent-workflow-node-card",
+    "sourceUrl": "https://21st.dev/@themeocean/components/interactive-ai-agent-workflow-node-card",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45135.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45135.html"
+  },
+  {
+    "id": "staged-21st-45136",
+    "sourceId": "21st",
+    "name": "Sketchy Blueprint Text",
+    "slug": "sketchy-blueprint-text",
+    "description": "An interactive, hand-drawn SVG blueprint typography component built with React, Tailwind CSS, and Framer Motion.",
+    "category": "Text effects",
+    "kind": "component",
+    "url": "https://21st.dev/@daiwiikharihar/components/sketchy-blueprint-text",
+    "sourceUrl": "https://21st.dev/@daiwiikharihar/components/sketchy-blueprint-text",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45136.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "tags": [
+      "React",
+      "Text effects"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45136.html"
+  },
+  {
+    "id": "staged-21st-45141",
+    "sourceId": "21st",
+    "name": "Modern AI SaaS Hero with Interactive Live Preview",
+    "slug": "modern-ai-saa-s-hero-with-interactive-live-preview",
+    "description": "A conversion-focused SaaS hero section featuring a subtle animated background grid, gradient badge, staggered text reveal, dual CTAs, and an interactive product preview frame.",
+    "category": "Heroes",
+    "kind": "component",
+    "url": "https://21st.dev/@themeocean/components/modern-ai-saa-s-hero-with-interactive-live-preview",
+    "sourceUrl": "https://21st.dev/@themeocean/components/modern-ai-saa-s-hero-with-interactive-live-preview",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45141.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "framer-motion",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Heroes"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45141.html"
+  },
+  {
+    "id": "staged-21st-45143",
+    "sourceId": "21st",
+    "name": "Minimalist Spotlight Hero with Kinetic Typography",
+    "slug": "minimalist-spotlight-hero-with-kinetic-typography",
+    "description": "An ultra-clean, high-impact hero section powered by Framer Motion word-by-word blur-to-clear reveal animations, a mouse-reactive ambient spotlight, and crisp social proof avatars.",
+    "category": "Heroes",
+    "kind": "component",
+    "url": "https://21st.dev/@themeocean/components/minimalist-spotlight-hero-with-kinetic-typography",
+    "sourceUrl": "https://21st.dev/@themeocean/components/minimalist-spotlight-hero-with-kinetic-typography",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45143.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "framer-motion",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Heroes"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45143.html"
+  },
+  {
+    "id": "staged-21st-45146",
+    "sourceId": "21st",
+    "name": "Split Developer Hero with Interactive Code Terminal",
+    "slug": "split-developer-hero-with-interactive-code-terminal",
+    "description": "A responsive two-column hero section tailored for developer tools and APIs. Pairs bold value-proposition copy with an interactive tabbed code snippet terminal featuring one-click copy feedback.",
+    "category": "Heroes",
+    "kind": "component",
+    "url": "https://21st.dev/@themeocean/components/split-developer-hero-with-interactive-code-terminal",
+    "sourceUrl": "https://21st.dev/@themeocean/components/split-developer-hero-with-interactive-code-terminal",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45146.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "@nimbus/sdk"
+    ],
+    "tags": [
+      "React",
+      "Heroes"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45146.html"
+  },
+  {
+    "id": "staged-21st-45150",
+    "sourceId": "21st",
+    "name": "Caution Tape Text",
+    "slug": "caution-tape-text",
+    "description": "Heavy condensed headline with warning caution-tape strips weaving across words and smooth load animations.",
+    "category": "Text effects",
+    "kind": "component",
+    "url": "https://21st.dev/@daiwiikharihar/components/caution-tape-text",
+    "sourceUrl": "https://21st.dev/@daiwiikharihar/components/caution-tape-text",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45150.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "framer-motion"
+    ],
+    "tags": [
+      "React",
+      "Text effects"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45150.html"
+  },
+  {
+    "id": "staged-21st-45152",
+    "sourceId": "21st",
+    "name": "Button Payment",
+    "slug": "button-payment",
+    "description": "Button payment effect bubble",
+    "category": "Buttons",
+    "kind": "component",
+    "url": "https://21st.dev/@admin-pstzxid/components/button-payment",
+    "sourceUrl": "https://21st.dev/@admin-pstzxid/components/button-payment",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45152.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Buttons"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45152.html"
+  },
+  {
+    "id": "staged-21st-45153",
+    "sourceId": "21st",
+    "name": "Glimm Presets",
+    "slug": "glimm-spectrum-transition",
+    "description": "The original Glimm presets interface with all seven palettes and their real WebGL sweep previews.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@larsen66/components/glimm-spectrum-transition",
+    "sourceUrl": "https://21st.dev/@larsen66/components/glimm-spectrum-transition",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45153.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "glimm"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45153.html"
+  },
+  {
+    "id": "staged-21st-45155",
+    "sourceId": "21st",
+    "name": "Endless",
+    "slug": "endless",
+    "description": "Full-viewport 3D image corridor hero with two perspective walls and images flying toward the camera in an infinite loop.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@helloweblisy/components/endless",
+    "sourceUrl": "https://21st.dev/@helloweblisy/components/endless",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45155.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "gsap"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45155.html"
+  },
+  {
+    "id": "staged-21st-45158",
+    "sourceId": "21st",
+    "name": "Circle Reveal Loader",
+    "slug": "circle-reveal-loader",
+    "description": "A smooth staggered circular ripple page loader for entry transitions. Explore more free GSAP components at goodmotion.vercel.app",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@goodmotion/components/circle-reveal-loader",
+    "sourceUrl": "https://21st.dev/@goodmotion/components/circle-reveal-loader",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45158.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "react-dom",
+      "gsap",
+      "@gsap/react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45158.html"
+  },
+  {
+    "id": "staged-21st-45159",
+    "sourceId": "21st",
+    "name": "Glimm Easing",
+    "slug": "glimm-easing",
+    "description": "The original Glimm easing explorer with its live curve graph and real WebGL sweep preview.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@larsen66/components/glimm-easing",
+    "sourceUrl": "https://21st.dev/@larsen66/components/glimm-easing",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45159.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "glimm"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45159.html"
+  },
+  {
+    "id": "staged-21st-45162",
+    "sourceId": "21st",
+    "name": "Glimm Band Width",
+    "slug": "glimm-band-width",
+    "description": "The original Glimm band width control with a draggable bandTight preview and real WebGL sweep.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@nomanjack/components/glimm-band-width",
+    "sourceUrl": "https://21st.dev/@nomanjack/components/glimm-band-width",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45162.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "glimm"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45162.html"
+  },
+  {
+    "id": "staged-21st-45164",
+    "sourceId": "21st",
+    "name": "Glimm Custom Palette",
+    "slug": "glimm-custom-palette",
+    "description": "The original Glimm custom palette explorer with live cosine colors, shuffle, and a soft WebGL preview transition.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@nomanjack/components/glimm-custom-palette",
+    "sourceUrl": "https://21st.dev/@nomanjack/components/glimm-custom-palette",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45164.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "glimm"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45164.html"
+  },
+  {
+    "id": "staged-21st-45165",
+    "sourceId": "21st",
+    "name": "Glimm HTML-in-Canvas",
+    "slug": "glimm-html-in-canvas",
+    "description": "The original Glimm HTML-in-Canvas invoice transition demonstration in a responsive media frame.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@nomanjack/components/glimm-html-in-canvas",
+    "sourceUrl": "https://21st.dev/@nomanjack/components/glimm-html-in-canvas",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45165.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45165.html"
+  },
+  {
+    "id": "staged-21st-45171",
+    "sourceId": "21st",
+    "name": "Glimm Generate Data",
+    "slug": "glimm-generate-data",
+    "description": "A faithful Glimm spreadsheet generation demo where structured deal data appears behind a real shader sweep.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@larsen66/components/glimm-generate-data",
+    "sourceUrl": "https://21st.dev/@larsen66/components/glimm-generate-data",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45171.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "glimm"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45171.html"
+  },
+  {
+    "id": "staged-21st-45172",
+    "sourceId": "21st",
+    "name": "Glimm Teammate Joins",
+    "slug": "glimm-teammate-joins",
+    "description": "A faithful Glimm workspace demo that reveals a new teammate notification behind a real shader sweep.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@nomanjack/components/glimm-teammate-joins",
+    "sourceUrl": "https://21st.dev/@nomanjack/components/glimm-teammate-joins",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45172.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "glimm"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45172.html"
+  },
+  {
+    "id": "staged-21st-45173",
+    "sourceId": "21st",
+    "name": "Glimm Invoice Paid",
+    "slug": "glimm-invoice-paid",
+    "description": "A faithful Glimm billing dashboard demo that reveals a paid-invoice banner behind a real shader sweep.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@nomanjack/components/glimm-invoice-paid",
+    "sourceUrl": "https://21st.dev/@nomanjack/components/glimm-invoice-paid",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45173.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "glimm"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45173.html"
+  },
+  {
+    "id": "staged-21st-45180",
+    "sourceId": "21st",
+    "name": "Glimm Upgrade to Pro",
+    "slug": "glimm-upgrade-to-pro",
+    "description": "A faithful Glimm pricing upgrade scene where a shader sweep reveals the Pro plan.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@nomanjack/components/glimm-upgrade-to-pro",
+    "sourceUrl": "https://21st.dev/@nomanjack/components/glimm-upgrade-to-pro",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45180.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "glimm"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45180.html"
+  },
+  {
+    "id": "staged-21st-45182",
+    "sourceId": "21st",
+    "name": "Glimm Usage Reset",
+    "slug": "glimm-usage-reset",
+    "description": "A faithful Glimm composer demo where a timed limit reset is revealed by a bottom-up shader sweep.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@nomanjack/components/glimm-usage-reset",
+    "sourceUrl": "https://21st.dev/@nomanjack/components/glimm-usage-reset",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45182.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "glimm"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45182.html"
+  },
+  {
+    "id": "staged-21st-45185",
+    "sourceId": "21st",
+    "name": "Glimm Publish",
+    "slug": "glimm-publish",
+    "description": "A faithful Glimm editor publishing flow that transitions from the canvas into a success screen.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@nomanjack/components/glimm-publish",
+    "sourceUrl": "https://21st.dev/@nomanjack/components/glimm-publish",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45185.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "glimm"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45185.html"
+  },
+  {
+    "id": "staged-21st-45194",
+    "sourceId": "21st",
+    "name": "Glimm Autopilot",
+    "slug": "glimm-autopilot",
+    "description": "A faithful Glimm dashboard scene where enabling Autopilot reveals its engaged state through a shader sweep.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@nomanjack/components/glimm-autopilot",
+    "sourceUrl": "https://21st.dev/@nomanjack/components/glimm-autopilot",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45194.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "glimm"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45194.html"
+  },
+  {
+    "id": "staged-21st-45196",
+    "sourceId": "21st",
+    "name": "Glimm Theme",
+    "slug": "glimm-theme",
+    "description": "A faithful Glimm theme toggle that sweeps a complete dashboard between light and dark appearances.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@nomanjack/components/glimm-theme",
+    "sourceUrl": "https://21st.dev/@nomanjack/components/glimm-theme",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45196.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "glimm"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45196.html"
+  },
+  {
+    "id": "staged-21st-45199",
+    "sourceId": "21st",
+    "name": "Glimm To-dos",
+    "slug": "glimm-to-dos",
+    "description": "A faithful Glimm task list with interactive checkboxes and a completion sweep when every task is done.",
+    "category": "Components",
+    "kind": "component",
+    "url": "https://21st.dev/@nomanjack/components/glimm-to-dos",
+    "sourceUrl": "https://21st.dev/@nomanjack/components/glimm-to-dos",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45199.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "glimm"
+    ],
+    "tags": [
+      "React",
+      "Components"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45199.html"
+  },
+  {
+    "id": "staged-21st-45249",
+    "sourceId": "21st",
+    "name": "Mesh Gradient shader",
+    "slug": "mesh-gradient-shader",
+    "description": "Animated WebGL shader background in the Mesh Gradient style. Default variant. Generated by the 21st.dev Shader Builder. Adapted from Paper Shaders under Apache-2.0. 4-color palette (#120D31, #6C4CF1, #EF5DA8, #FFD166). A drop-in, zero-dependency React component for hero sections and animated gradient/noise backgrounds.",
+    "category": "Backgrounds",
+    "kind": "component",
+    "url": "https://21st.dev/@parivajawat/components/mesh-gradient-shader",
+    "sourceUrl": "https://21st.dev/@parivajawat/components/mesh-gradient-shader",
+    "image": "",
+    "codePath": "/code/releases/staged-21st-45249.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react"
+    ],
+    "tags": [
+      "React",
+      "Backgrounds"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-21st-45249.html"
+  }
+]

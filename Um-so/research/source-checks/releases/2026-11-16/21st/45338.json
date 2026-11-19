@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:45:58.772Z",
+  "metadata": {
+    "type": "component",
+    "id": 45338,
+    "name": "Astryx Card",
+    "description": "A bordered and elevated Astryx container for discrete, self-contained content and independently interactive items.",
+    "previewUrl": "https://cdn.21st.dev/larsen66/astryx-card/card-variants/preview.1794510740885-0016e2af-465d-4dfe-bee8-a05ebe3ec41c.png",
+    "videoUrl": null,
+    "author": "Astryxdesign",
+    "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-card?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-card"
+  },
+  "component": {
+    "id": 45338,
+    "componentId": 26160,
+    "name": "Astryx Card",
+    "demoName": "Card — Variants",
+    "description": "A bordered and elevated Astryx container for discrete, self-contained content and independently interactive items.",
+    "previewUrl": "https://cdn.21st.dev/larsen66/astryx-card/card-variants/preview.1794510740885-0016e2af-465d-4dfe-bee8-a05ebe3ec41c.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-card?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\nimport \"./astryx-card-utils/index.css\"\nimport { Card } from \"@astryxdesign/core/Card\"\n\nexport * from \"@astryxdesign/core/Card\"\nexport default Card\n",
+    "demoCode": "'use client';\n\nimport {Card} from '@/components/ui/astryx-card';\nimport {Stack} from '@astryxdesign/core/Layout';\nimport {Text} from '@astryxdesign/core/Text';\n\nconst VARIANTS = [\n  {variant: 'default' as const, label: 'General', note: '4 tasks due today'},\n  {\n    variant: 'muted' as const,\n    label: 'Archived',\n    note: 'No activity in 30 days',\n  },\n  {variant: 'blue' as const, label: 'Engineering', note: '12 open issues'},\n  {variant: 'green' as const, label: 'Marketing', note: '3 campaigns active'},\n  {variant: 'orange' as const, label: 'Urgent', note: '2 items need review'},\n  {variant: 'purple' as const, label: 'Design', note: '5 drafts in progress'},\n];\n\nfunction CardVariants() {\n  return (\n    <Stack direction=\"horizontal\" gap={3} style={{flexWrap: 'wrap'}}>\n      {VARIANTS.map(({variant, label, note}) => (\n        <Card key={variant} variant={variant} width={160} padding={4}>\n          <Stack direction=\"vertical\" gap={1}>\n            <Text type=\"body\" weight=\"bold\">\n              {label}\n            </Text>\n            <Text type=\"supporting\" color=\"secondary\">\n              {note}\n            </Text>\n          </Stack>\n        </Card>\n      ))}\n    </Stack>\n  );\n}\n\nexport default function CardVariantsDemo() {\n  return (\n    <div\n      data-astryx-theme=\"neutral\"\n      data-theme=\"light\"\n      style={{colorScheme: 'light', display: 'contents'}}>\n      <CardVariants />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source and usage retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

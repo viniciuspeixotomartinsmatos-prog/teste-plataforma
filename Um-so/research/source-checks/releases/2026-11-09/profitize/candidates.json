@@ -1,0 +1,332 @@
+[
+  {
+    "id": "70735098-f023-470b-85cb-f2ecc9dda80d",
+    "slug": "kairo",
+    "title": "Kairo",
+    "type": "landing_page",
+    "kind": {
+      "id": "landing_page",
+      "label": "Landing page",
+      "plural": "Landing pages",
+      "segment": "landing-pages",
+      "sortOrder": 0
+    },
+    "niche": "Portfólio de dev",
+    "description": "Portfólio de engenheiro de IA montado ao vivo por um enxame de cursores, que desenha, copia e encaixa cada bloco na frente de quem vê.",
+    "tags": [
+      "portfolio",
+      "dev",
+      "freelancer",
+      "ia",
+      "cursores-multiplayer",
+      "pagina-que-se-monta",
+      "editor",
+      "foto-recortada",
+      "comparador",
+      "tour",
+      "escuro",
+      "vermelho",
+      "condensada",
+      "gsap"
+    ],
+    "isNew": true,
+    "free": false,
+    "tone": "escuro",
+    "industry": "tech",
+    "preview": {
+      "poster": "/build/media/70735098-f023-470b-85cb-f2ecc9dda80d/poster-f4671b5b.webp",
+      "video": "/build/media/70735098-f023-470b-85cb-f2ecc9dda80d/previa-card-24f57a10.mp4",
+      "mode": "cover"
+    },
+    "aspect": "16/10",
+    "publishedAt": "2026-11-06T16:50:49.779512+00:00",
+    "updatedAt": "2026-11-07T20:46:03.988093+00:00"
+  },
+  {
+    "id": "29e20283-ae43-417c-9661-07c962010c0b",
+    "slug": "alisio",
+    "title": "Alísio",
+    "type": "landing_page",
+    "kind": {
+      "id": "landing_page",
+      "label": "Landing page",
+      "plural": "Landing pages",
+      "segment": "landing-pages",
+      "sortOrder": 0
+    },
+    "niche": "Turismo",
+    "description": "Agência de viagens: as persianas de três janelas de avião em 3D sobem e a câmera atravessa a do meio, descendo até o destino.",
+    "tags": [
+      "turismo",
+      "viagens",
+      "agencia",
+      "3d",
+      "three.js",
+      "webgl",
+      "camadas-de-foto",
+      "globo",
+      "pin",
+      "transicoes",
+      "gsap",
+      "lenis",
+      "escuro",
+      "mobile"
+    ],
+    "isNew": true,
+    "free": false,
+    "tone": "escuro",
+    "industry": "turismo",
+    "preview": {
+      "poster": "/build/media/29e20283-ae43-417c-9661-07c962010c0b/poster-fc0ad19a.webp",
+      "video": "/build/media/29e20283-ae43-417c-9661-07c962010c0b/previa-card-de13a9d1.mp4",
+      "mode": "cover"
+    },
+    "aspect": "40/23",
+    "publishedAt": "2026-11-06T14:50:11.753763+00:00",
+    "updatedAt": "2026-11-07T20:46:03.988093+00:00"
+  },
+  {
+    "id": "87885a7a-0ccf-49d6-8d1c-90666d12e8fb",
+    "slug": "trami",
+    "title": "Trami",
+    "type": "landing_page",
+    "kind": {
+      "id": "landing_page",
+      "label": "Landing page",
+      "plural": "Landing pages",
+      "segment": "landing-pages",
+      "sortOrder": 0
+    },
+    "niche": "SaaS",
+    "description": "SaaS de automação: o painel do produto nasce de trás da floresta ao pôr do sol e sai das árvores no scroll, com o fluxo rodando.",
+    "tags": [
+      "saas",
+      "automacao",
+      "b2b",
+      "painel-em-html",
+      "paisagem",
+      "parallax",
+      "camadas-de-foto",
+      "integracoes",
+      "precos",
+      "depoimentos",
+      "escuro",
+      "serifa",
+      "lenis",
+      "mobile"
+    ],
+    "isNew": false,
+    "free": false,
+    "tone": "escuro",
+    "industry": "tech",
+    "preview": {
+      "poster": "/build/media/87885a7a-0ccf-49d6-8d1c-90666d12e8fb/poster-4d4b714b.webp",
+      "video": "/build/media/87885a7a-0ccf-49d6-8d1c-90666d12e8fb/previa-card-171eb86e.mp4",
+      "mode": "cover"
+    },
+    "aspect": "16/10",
+    "publishedAt": "2026-11-05T17:13:19.42135+00:00",
+    "updatedAt": "2026-11-07T20:46:03.988093+00:00"
+  },
+  {
+    "id": "ee6f6f25-357a-43f2-b958-3cd3c75a8eee",
+    "slug": "orbo",
+    "title": "ORBO",
+    "type": "landing_page",
+    "kind": {
+      "id": "landing_page",
+      "label": "Landing page",
+      "plural": "Landing pages",
+      "segment": "landing-pages",
+      "sortOrder": 0
+    },
+    "niche": "Estética automotiva",
+    "description": "Estética automotiva: o carro em 3D visto de cima chega empoeirado, sai limpo e vira desenho técnico com cada serviço aceso.",
+    "tags": [
+      "estetica-automotiva",
+      "carro",
+      "automotivo",
+      "3d",
+      "three.js",
+      "webgl",
+      "desenho-tecnico",
+      "pin",
+      "trilho",
+      "polaroides",
+      "azul",
+      "gsap",
+      "lenis",
+      "mobile"
+    ],
+    "isNew": true,
+    "free": false,
+    "tone": "escuro",
+    "industry": "automotivo",
+    "preview": {
+      "poster": "/build/media/ee6f6f25-357a-43f2-b958-3cd3c75a8eee/poster-e2c236b0.webp",
+      "video": "/build/media/ee6f6f25-357a-43f2-b958-3cd3c75a8eee/previa-card-6742589a.mp4",
+      "mode": "cover"
+    },
+    "aspect": "40/23",
+    "publishedAt": "2026-11-07T04:24:24.679135+00:00",
+    "updatedAt": "2026-11-07T20:46:03.988093+00:00"
+  },
+  {
+    "id": "b7b59975-2f95-485e-997f-46208fbddde4",
+    "slug": "sticker-slap-footer",
+    "title": "Sticker Slap Footer",
+    "type": "component",
+    "kind": {
+      "id": "component",
+      "label": "Componente",
+      "plural": "Componentes",
+      "segment": "componentes",
+      "sortOrder": 1
+    },
+    "niche": "Rodapé",
+    "description": "Rodapé com o nome da marca numa cursiva enorme que se escreve sozinha, com adesivos que batem na palavra quando a caneta passa: dá para arrastar cada um, mandar de volta e escrever tudo de novo.",
+    "tags": [
+      "Adesivos",
+      "Tipografia"
+    ],
+    "isNew": false,
+    "free": false,
+    "tone": "claro",
+    "industry": null,
+    "preview": {
+      "poster": "$undefined",
+      "video": "$undefined",
+      "mode": "cover"
+    },
+    "aspect": "4/3",
+    "publishedAt": "2026-11-05T15:00:00+00:00",
+    "updatedAt": "2026-11-05T23:41:56.18756+00:00"
+  },
+  {
+    "id": "fe34928a-190f-4617-86b1-5f3352310b24",
+    "slug": "scoopie",
+    "title": "Scoopie",
+    "type": "landing_page",
+    "kind": {
+      "id": "landing_page",
+      "label": "Landing page",
+      "plural": "Landing pages",
+      "segment": "landing-pages",
+      "sortOrder": 0
+    },
+    "niche": "Sorveteria",
+    "description": "Sorveteria artesanal: o pote em 3D desce a página, rola e o rótulo descola virando a faixa que abre os sabores.",
+    "tags": [
+      "sorveteria",
+      "sorvete",
+      "gelato",
+      "acai",
+      "doceria",
+      "delivery",
+      "3d",
+      "three.js",
+      "webgl",
+      "embalagem",
+      "rotulo",
+      "fisica",
+      "colagem",
+      "rosa",
+      "pin",
+      "gsap",
+      "lenis",
+      "mobile"
+    ],
+    "isNew": true,
+    "free": false,
+    "tone": "claro",
+    "industry": "comida",
+    "preview": {
+      "poster": "/build/media/fe34928a-190f-4617-86b1-5f3352310b24/poster-470c3d85.webp",
+      "video": "/build/media/fe34928a-190f-4617-86b1-5f3352310b24/previa-card-81b0aea5.mp4",
+      "mode": "cover"
+    },
+    "aspect": "40/23",
+    "publishedAt": "2026-11-07T05:50:30.223333+00:00",
+    "updatedAt": "2026-11-07T20:46:03.988093+00:00"
+  },
+  {
+    "id": "19f71697-2482-4572-9b67-14d0ca9c975c",
+    "slug": "arbo",
+    "title": "Arbo",
+    "type": "landing_page",
+    "kind": {
+      "id": "landing_page",
+      "label": "Landing page",
+      "plural": "Landing pages",
+      "segment": "landing-pages",
+      "sortOrder": 0
+    },
+    "niche": "Imobiliária",
+    "description": "Lançamento residencial: passe o mouse nos andares da torre à noite, clique e o andar vira a maquete 3D mobiliada.",
+    "tags": [
+      "imobiliaria",
+      "lancamento",
+      "alto-padrao",
+      "3d",
+      "three.js",
+      "maquete",
+      "blender",
+      "hover",
+      "galeria",
+      "escuro",
+      "serifa",
+      "gsap",
+      "mobile"
+    ],
+    "isNew": false,
+    "free": false,
+    "tone": "escuro",
+    "industry": "imoveis",
+    "preview": {
+      "poster": "/build/media/19f71697-2482-4572-9b67-14d0ca9c975c/poster-185d582a.webp",
+      "video": "/build/media/19f71697-2482-4572-9b67-14d0ca9c975c/previa-card-34806ea2.mp4",
+      "mode": "cover"
+    },
+    "aspect": "16/10",
+    "publishedAt": "2026-11-05T03:39:15.531011+00:00",
+    "updatedAt": "2026-11-07T20:46:03.988093+00:00"
+  },
+  {
+    "id": "27c89638-f444-49b6-a007-43a66ac2cf78",
+    "slug": "patio",
+    "title": "Pátio",
+    "type": "landing_page",
+    "kind": {
+      "id": "landing_page",
+      "label": "Landing page",
+      "plural": "Landing pages",
+      "segment": "landing-pages",
+      "sortOrder": 0
+    },
+    "niche": "Condomínio",
+    "description": "App de condomínio: cards de foto que andam em passos com o app em vidro e uma foto aérea parada sob as telas do síndico e do morador.",
+    "tags": [
+      "condominio",
+      "app",
+      "saas",
+      "carrossel",
+      "fotos",
+      "claro",
+      "verde",
+      "rolagem-nativa",
+      "sem-gsap"
+    ],
+    "isNew": false,
+    "free": false,
+    "tone": "claro",
+    "industry": "tech",
+    "preview": {
+      "poster": "/build/media/27c89638-f444-49b6-a007-43a66ac2cf78/poster-3a454b38.webp",
+      "video": "/build/media/27c89638-f444-49b6-a007-43a66ac2cf78/previa-card-f7d5022a.mp4",
+      "mode": "cover"
+    },
+    "aspect": "960/536",
+    "publishedAt": "2026-11-06T03:40:04.56543+00:00",
+    "updatedAt": "2026-11-07T20:46:03.988093+00:00"
+  }
+]

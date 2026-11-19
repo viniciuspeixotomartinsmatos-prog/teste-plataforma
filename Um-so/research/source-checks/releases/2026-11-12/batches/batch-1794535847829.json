@@ -1,0 +1,80 @@
+[
+  {
+    "route": "/@harpal.ghai.01/themes/sky-soft-1794302885286",
+    "type": "theme",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@helloweblisy/components/endless",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45155,
+      "name": "Endless",
+      "description": "Full-viewport 3D image corridor hero with two perspective walls and images flying toward the camera in an infinite loop.",
+      "previewUrl": "https://cdn.21st.dev/user_3LxdB9yi2Hi6dhK8oxG95rElHOm/endless/default/preview.1794406186853.webp",
+      "videoUrl": "https://cdn.21st.dev/helloweblisy/endless/default/video.1794403891933-1e8418eb-659e-4653-b239-3b28e7743339.mp4",
+      "author": "helloweblisy",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3LxdB9yi2Hi6dhK8oxG95rElHOm/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/helloweblisy/endless?api_key=REDACTED\"",
+      "url": "https://21st.dev/@helloweblisy/components/endless"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@hyperiux/components/arc-light",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44683,
+      "name": "Arc Light",
+      "description": "A soft arc of light that the pointer stirs like ink in water.",
+      "previewUrl": "https://cdn.21st.dev/hyperiux/arc-light/default/preview.1793948713012-03b8dde1-b514-4e1c-9d1d-e83e4f8fa506.jpg",
+      "videoUrl": "https://cdn.21st.dev/user_3IlVIzEF1oziaTRKTKA3Qak2f5C/arc-light/default/video.1793948992115.mp4",
+      "author": "hyperiux",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3IlVIzEF1oziaTRKTKA3Qak2f5C/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/hyperiux/arc-light?api_key=REDACTED\"",
+      "url": "https://21st.dev/@hyperiux/components/arc-light"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@hyperiux/components/ascii-band",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44684,
+      "name": "ASCII Band",
+      "description": "A band of light drawn in flickering ASCII characters.",
+      "previewUrl": "https://cdn.21st.dev/hyperiux/ascii-band/default/preview.1793948775909-02e84ab0-67eb-4ba7-8161-e9714197dcf6.png",
+      "videoUrl": "https://cdn.21st.dev/user_3IlVIzEF1oziaTRKTKA3Qak2f5C/ascii-band/default/video.1793948940614.mp4",
+      "author": "hyperiux",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3IlVIzEF1oziaTRKTKA3Qak2f5C/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/hyperiux/ascii-band?api_key=REDACTED\"",
+      "url": "https://21st.dev/@hyperiux/components/ascii-band"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@hyperiux/templates/the-missing-pixel-design-studio-template",
+    "type": "template",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@ikascom/components/animated-number",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44926,
+      "name": "Animated Number",
+      "description": "A number display that rolls to a new value when it changes, sliding up for increases and down for decreases so the direction is readable at a glance.",
+      "previewUrl": "https://cdn.21st.dev/ikascom/animated-number/default/preview.1794187006981-c2aaeff9-a5a8-4d32-9984-a799a949f8e8.png",
+      "videoUrl": "https://cdn.21st.dev/ikascom/animated-number/default/video.1794187006981-c2aaeff9-a5a8-4d32-9984-a799a949f8e8.mp4",
+      "author": "ikascom",
+      "authorImage": "https://github.com/ikascom.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/ikascom/animated-number?api_key=REDACTED\"",
+      "url": "https://21st.dev/@ikascom/components/animated-number"
+    },
+    "status": "retained_unvalidated"
+  }
+]

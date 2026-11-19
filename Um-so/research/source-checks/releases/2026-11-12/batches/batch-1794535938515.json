@@ -1,0 +1,104 @@
+[
+  {
+    "route": "/@larsen66/components/glimm-generate-data",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45171,
+      "name": "Glimm Generate Data",
+      "description": "A faithful Glimm spreadsheet generation demo where structured deal data appears behind a real shader sweep.",
+      "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/glimm-generate-data/default/preview.1794431086997.webp",
+      "videoUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/glimm-generate-data/default/video.1794431062671.mp4",
+      "author": "larsen66",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/larsen66/glimm-generate-data?api_key=REDACTED\"",
+      "url": "https://21st.dev/@larsen66/components/glimm-generate-data"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@larsen66/components/glimm-spectrum-transition",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45153,
+      "name": "Glimm Presets",
+      "description": "The original Glimm presets interface with all seven palettes and their real WebGL sweep previews.",
+      "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/glimm-spectrum-transition/default/preview.1794414015685.png",
+      "videoUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/glimm-spectrum-transition/default/video.1794413999740.mp4",
+      "author": "larsen66",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/larsen66/glimm-spectrum-transition?api_key=REDACTED\"",
+      "url": "https://21st.dev/@larsen66/components/glimm-spectrum-transition"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@louisstudios/components/assistant-wall",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45091,
+      "name": "Assistant Wall",
+      "description": "A wall of frosted glass assistant cards that glides upward, handing focus to the next friendly message with soft motion blur, glossy avatar spheres and a pink light bloom.",
+      "previewUrl": "https://cdn.21st.dev/user_33BVOicUp8BXVinjTnIXzbdQeeR/assistant-wall/default/preview.1794403657428.webp",
+      "videoUrl": "https://cdn.21st.dev/user_33BVOicUp8BXVinjTnIXzbdQeeR/assistant-wall/default/video.1794403651990.mp4",
+      "author": "louisstudios",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_33BVOicUp8BXVinjTnIXzbdQeeR/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/louisstudios/assistant-wall?api_key=REDACTED\"",
+      "url": "https://21st.dev/@louisstudios/components/assistant-wall"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@louisstudios/components/chapter-player",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45089,
+      "name": "Chapter Player",
+      "description": "A cinematic video player on a violet stage: a light rides the frame edge, and chapter tabs carry a sweeping glow that doubles as each chapter's progress bar. Works with any video URL, with a built-in demo reel.",
+      "previewUrl": "https://cdn.21st.dev/user_33BVOicUp8BXVinjTnIXzbdQeeR/chapter-player/default/preview.1794341191372.webp",
+      "videoUrl": "https://cdn.21st.dev/user_33BVOicUp8BXVinjTnIXzbdQeeR/chapter-player/default/video.1794341182400.mp4",
+      "author": "louisstudios",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_33BVOicUp8BXVinjTnIXzbdQeeR/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/louisstudios/chapter-player?api_key=REDACTED\"",
+      "url": "https://21st.dev/@louisstudios/components/chapter-player"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@louisstudios/components/chrome-arcs",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44770,
+      "name": "Chrome Arcs",
+      "description": "Glossy black chrome rings sweep across the dark, each catching a thin-film streak of amber, white and blue that climbs slowly as the stack flows outward.",
+      "previewUrl": "https://cdn.21st.dev/user_33BVOicUp8BXVinjTnIXzbdQeeR/chrome-arcs/default/preview.1794244756056.webp",
+      "videoUrl": "https://cdn.21st.dev/user_33BVOicUp8BXVinjTnIXzbdQeeR/chrome-arcs/default/video.1794244748566.mp4",
+      "author": "louisstudios",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_33BVOicUp8BXVinjTnIXzbdQeeR/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/louisstudios/chrome-arcs?api_key=REDACTED\"",
+      "url": "https://21st.dev/@louisstudios/components/chrome-arcs"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@louisstudios/components/glow-rocker",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45021,
+      "name": "Glow Rocker",
+      "description": "A raymarched 3D rocker switch that tips on its hinge, flips the whole scene from soft grey daylight to black, and spills violet light from under its lifted edge. Click it or press Space to rock it, and pick a camera view.",
+      "previewUrl": "https://cdn.21st.dev/user_33BVOicUp8BXVinjTnIXzbdQeeR/glow-rocker/default/preview.1794312262538.webp",
+      "videoUrl": "https://cdn.21st.dev/user_33BVOicUp8BXVinjTnIXzbdQeeR/glow-rocker/default/video.1794312256883.mp4",
+      "author": "louisstudios",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_33BVOicUp8BXVinjTnIXzbdQeeR/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/louisstudios/glow-rocker?api_key=REDACTED\"",
+      "url": "https://21st.dev/@louisstudios/components/glow-rocker"
+    },
+    "status": "retained_unvalidated"
+  }
+]

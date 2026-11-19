@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:49:36.075Z",
+  "metadata": {
+    "type": "component",
+    "id": 45287,
+    "name": "Astryx Chat Layout Scroll Button",
+    "description": "An Astryx floating scroll-to-bottom button that appears when the user moves away from the newest chat messages.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-chat-layout-scroll-button/default/preview.1794510349250.png",
+    "videoUrl": null,
+    "author": "Astryxdesign",
+    "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-chat-layout-scroll-button?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-chat-layout-scroll-button"
+  },
+  "component": {
+    "id": 45287,
+    "componentId": 26173,
+    "name": "Astryx Chat Layout Scroll Button",
+    "demoName": "Default",
+    "description": "An Astryx floating scroll-to-bottom button that appears when the user moves away from the newest chat messages.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-chat-layout-scroll-button/default/preview.1794510349250.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-chat-layout-scroll-button?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\nimport \"./astryx-chat-layout-scroll-button-utils/index.css\"\nimport { ChatLayoutScrollButton } from \"@astryxdesign/core/Chat\"\n\nexport * from \"@astryxdesign/core/Chat\"\nexport default ChatLayoutScrollButton\n",
+    "demoCode": "// Copyright (c) Meta Platforms, Inc. and affiliates.\n\n'use client';\n\nimport {ChatLayoutScrollButton} from '@/components/ui/astryx-chat-layout-scroll-button';\nimport {Stack} from '@astryxdesign/core/Layout';\nimport {Text} from '@astryxdesign/core/Text';\n\nexport default function ChatLayoutScrollButtonStates() {\n  return (\n    <div\n      data-astryx-theme=\"neutral\"\n      data-theme=\"light\"\n      style={{colorScheme: 'light', display: 'contents'}}>\n      <Stack direction=\"vertical\" gap={4}>\n        <Stack direction=\"vertical\" gap={1}>\n          <Text type=\"supporting\" color=\"secondary\">\n            Hidden (user is at bottom)\n          </Text>\n          <ChatLayoutScrollButton isVisible={false} onClick={() => {}} />\n        </Stack>\n        <Stack direction=\"vertical\" gap={1}>\n          <Text type=\"supporting\" color=\"secondary\">\n            Visible (user scrolled up)\n          </Text>\n          <ChatLayoutScrollButton isVisible={true} onClick={() => {}} />\n        </Stack>\n        <Stack direction=\"vertical\" gap={1}>\n          <Text type=\"supporting\" color=\"secondary\">\n            Expanded with label (new messages arrived)\n          </Text>\n          <ChatLayoutScrollButton\n            isVisible={true}\n            label=\"New messages\"\n            onClick={() => {}}\n          />\n        </Stack>\n      </Stack>\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 45002,
+    "name": "Accordion",
+    "description": "A headless, render-prop accordion for building collapsible content sections like FAQs or settings panels, with keyboard navigation and single or multiple expand modes.",
+    "previewUrl": "https://cdn.21st.dev/user_registry_mayurrawte_1793377663685/accordion/default/preview.1794334485021.png",
+    "videoUrl": "https://cdn.21st.dev/user_registry_mayurrawte_1793377663685/accordion/default/video.1794334311625.mp4",
+    "author": "mayurrawte",
+    "authorImage": "https://avatars.githubusercontent.com/u/32830023?v=4",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/mayurrawte/accordion?api_key=REDACTED\"",
+    "url": "https://21st.dev/@mayurrawte/components/accordion"
+  },
+  "requestedRoute": "/@mayurrawte/components/accordion",
+  "checkedAt": "2026-11-13T02:12:59.898Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 45002,
+    "componentId": 26013,
+    "authorUserId": "user_registry_mayurrawte_1793377663685",
+    "name": "Accordion",
+    "demoName": "Default",
+    "description": "A headless, render-prop accordion for building collapsible content sections like FAQs or settings panels, with keyboard navigation and single or multiple expand modes.",
+    "previewUrl": "https://cdn.21st.dev/user_registry_mayurrawte_1793377663685/accordion/default/preview.1794334485021.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/mayurrawte/accordion?api_key=REDACTED\"",
+    "componentCode": "import { useState, useMemo } from \"react\";\nimport { cn, createAccordion } from \"@mcp-elements/core\";\nimport type { AccordionItemConfig, AccordionConfig } from \"@mcp-elements/core\";\n\nexport function useAccordion(\n  items: AccordionItemConfig[],\n  config: Omit<AccordionConfig, \"onValueChange\"> = {},\n) {\n  const [expandedValues, setExpandedValues] = useState<string[]>([]);\n\n  const api = useMemo(\n    () =>\n      createAccordion(items, { ...config, onValueChange: setExpandedValues }),\n    [items, config.type, config.collapsible],\n  );\n\n  return { expandedValues, setExpandedValues, ...api };\n}\n\nexport interface AccordionProps {\n  items: AccordionItemConfig[];\n  type?: AccordionConfig[\"type\"];\n  collapsible?: boolean;\n  children: (api: ReturnType<typeof useAccordion>) => React.ReactNode;\n  className?: string;\n}\n\nexport function Accordion({\n  items,\n  type,\n  collapsible,\n  children,\n  className,\n}: AccordionProps) {\n  const api = useAccordion(items, { type, collapsible });\n  return <div className={className}>{children(api)}</div>;\n}\n\nexport function AccordionItem({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLDivElement>) {\n  return <div className={cn(\"mcpe-accordion-item\", className)} {...props} />;\n}\n\nexport interface AccordionTriggerProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {\n  isExpanded?: boolean;\n}\n\nexport function AccordionTrigger({\n  isExpanded,\n  className,\n  children,\n  ...props\n}: AccordionTriggerProps) {\n  return (\n    <h3>\n      <button\n        aria-expanded={isExpanded}\n        className={cn(\"mcpe-accordion-trigger\", className)}\n        {...props}\n      >\n        {children}\n        <svg\n          className=\"mcpe-accordion-chevron\"\n          xmlns=\"http://www.w3.org/2000/svg\"\n          viewBox=\"0 0 24 24\"\n          fill=\"none\"\n          stroke=\"currentColor\"\n          strokeWidth=\"2\"\n          strokeLinecap=\"round\"\n          strokeLinejoin=\"round\"\n        >\n          <path d=\"m6 9 6 6 6-6\" />\n        </svg>\n      </button>\n    </h3>\n  );\n}\n\nexport function AccordionContent({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLDivElement>) {\n  return (\n    <div\n      role=\"region\"\n      className={cn(\"mcpe-accordion-content\", className)}\n      {...props}\n    />\n  );\n}\n\nexport default Accordion;\n",
+    "demoCode": "import {\n  Accordion,\n  AccordionItem,\n  AccordionTrigger,\n  AccordionContent,\n} from \"@/components/ui/accordion\";\n\nconst items = [{ value: \"transport\" }, { value: \"auth\" }, { value: \"tools\" }];\n\nconst descriptions: Record<string, string> = {\n  transport:\n    \"mcp-elements speaks both stdio and streamable HTTP. The client negotiates the transport during the initialize handshake.\",\n  auth: \"OAuth 2.1 with PKCE is supported out of the box. Tokens are scoped per-server and refreshed automatically.\",\n  tools:\n    \"Tools are listed via tools/list and invoked with tools/call. Schemas are validated against the advertised JSON Schema.\",\n};\n\nexport default function AccordionDemo() {\n  return (\n    <Accordion items={items} collapsible className=\"w-full max-w-md\">\n      {({ expandedValues, getTriggerProps, getContentProps }) => (\n        <>\n          {items.map((item) => (\n            <AccordionItem key={item.value}>\n              <AccordionTrigger\n                {...getTriggerProps(item.value, expandedValues)}\n                isExpanded={expandedValues.includes(item.value)}\n              >\n                {item.value}\n              </AccordionTrigger>\n              <AccordionContent\n                {...getContentProps(item.value, expandedValues)}\n              >\n                {descriptions[item.value]}\n              </AccordionContent>\n            </AccordionItem>\n          ))}\n        </>\n      )}\n    </Accordion>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": "user_registry_mayurrawte_1793377663685"
+  }
+}

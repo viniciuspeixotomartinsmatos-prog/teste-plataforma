@@ -1,0 +1,16 @@
+{
+  "route": "/@shadcnspace/templates/saazio-shadcn-saas-product-website-template",
+  "type": "template",
+  "status": "template_metadata_only",
+  "metadata": {
+    "type": "template",
+    "id": 1339,
+    "name": "Saazio - Shadcn SaaS Product Website Template",
+    "description": "A Next.js and shadcn/ui website template for SaaS products.",
+    "previewUrl": "https://cdn.21st.dev/user_38qAOtph5HovpSn2yjNYXjbTOm2/templates/saazio-shadcn-saas-product-website-template/preview-frame-f89727d4fb.jpg",
+    "author": "shadcnspace",
+    "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zOHFBT3VLQWpSb3c5SjlUdGttSGhYZnBiZ28ifQ",
+    "url": "https://21st.dev/community/templates/saazio-shadcn-saas-product-website-template",
+    "price": 49
+  }
+}

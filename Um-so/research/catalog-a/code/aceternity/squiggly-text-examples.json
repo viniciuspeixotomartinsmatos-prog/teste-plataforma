@@ -1,0 +1,11 @@
+{
+  "name": "squiggly-text-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/squiggly-text-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport React from \"react\";\nimport { SquigglyText } from \"@/components/ui/squiggly-text\";\n\nexport function SquigglyTextDemo() {\n  return (\n    <div className=\"flex h-[40rem] w-full items-center justify-center\">\n      <h1 className=\"text-center text-5xl leading-tight font-bold text-neutral-900 md:text-7xl lg:text-8xl dark:text-neutral-100\">\n        How many{\" \"}\n        <SquigglyText\n          stepDuration={70}\n          scale={[6, 9]}\n          className=\"text-amber-500\"\n        >\n          drinks\n        </SquigglyText>{\" \"}\n        <br />\n        are <SquigglyText scale={5}>too many</SquigglyText> drinks?\n      </h1>\n    </div>\n  );\n}\n"
+    }
+  ]
+}

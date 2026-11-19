@@ -1,0 +1,171 @@
+[
+  {
+    "id": "staged-profitize-doodle-crew-footer",
+    "checkedAt": "2026-11-16T15:31:11.331Z",
+    "environment": "Authorized ChatGPT IAB; authenticated local normal-auth review server http://localhost:4178",
+    "startupVerified": true,
+    "visualConfirmed": true,
+    "interactionVerified": true,
+    "mediaVerified": true,
+    "promptVerified": true,
+    "downloadVerified": true,
+    "notes": "Original React source rendered the hand-drawn Construa footer. Bruno pointer click produced its actual speech; Piu Enter produced its speech. Source has no external images/fonts. Prompt integration button showed Copiado and actual ZIP download completed. Independent downloaded-ZIP checks preserve exact original prompt/source/archive/media bytes and notices. Clipboard content was not captured. This is item acceptance, not whole-catalog validation.",
+    "downloadSha256": "75dc7254a9f5751a6859337fb1be931b6b69e5b0a61f99b0011d011c7d97a408",
+    "artifacts": {
+      "/previews/runtime/staged-profitize-doodle-crew-footer.html": "9267169486a908108a6d18fab576cfe0bf21442678e400cfe42ee05302e0021b",
+      "/code/releases/staged-profitize-doodle-crew-footer.json": "bc35557c220857df2e16183617ade149aa3030ac28a64d9d69086542cbb7a463",
+      "/previews/runtime/staged-profitize-doodle-crew-footer.light.html": "2d8e859cfe64d4487234a0912fb73e848aa6483d506f041ca35ee7087ea6d9ca",
+      "/assets/preview.css": "3ab717e491e0fc421827b9b027c902ffa77519d5298862a34eee510c466b7a36",
+      "/previews/runtime/0dcd72742665b45e387e0784.js": "0dcd72742665b45e387e07843aba917c7d9ed280fdb7120b393c9e84b17dde36",
+      "/assets/fonts/Inter.woff2": "dd8a4575be9806105ac3decd02805cd2782fe7c05abb02c582316bc436ce03ae"
+    },
+    "errors": []
+  },
+  {
+    "id": "staged-profitize-capia",
+    "checkedAt": "2026-11-16T15:31:11.473Z",
+    "environment": "Authorized ChatGPT IAB; authenticated local normal-auth review server http://localhost:4178",
+    "startupVerified": true,
+    "visualConfirmed": true,
+    "interactionVerified": true,
+    "mediaVerified": true,
+    "promptVerified": true,
+    "downloadVerified": true,
+    "notes": "Actual original video decoded and visibly played in the authenticated local detail page, with correct content and advancing frames. Explorer trusted pointer hover separately verified readyState4/playing, then paused/reset0 on pointer leave for this item. Original prompt UI success feedback and actual browser ZIP download observed. Native Space pause/resume was not established by this run. Independent downloaded-ZIP checks preserve exact original prompt/source/archive/media bytes and notices. Clipboard content was not captured. This is item acceptance, not whole-catalog validation.",
+    "downloadSha256": "b2df7f676be37c0e878c1e4c2e744b421aa14288fe1acae97c3425b2109bff6d",
+    "artifacts": {
+      "/previews/releases/profitize-2026-11-16/capia.html": "6ccc8e0205aa55283759ca63ea774088341c4ce9b191283ec6a633640a5a394e",
+      "/code/releases/staged-profitize-capia.json": "f0fbebe76ee9f2d549b9c3241155dcc9ba5f11a7ca340bff529246a40f722dcb",
+      "/previews/recovered/build/media/ebd75434-0e23-465f-8501-aa823e72dab5/poster-05d96ec3.webp": "05d96ec39a1b1240546cfe6d2ee4074845cadf49bd967e2727f0de58a61816cd",
+      "/code/recovered/bundles/capia-original-2026-11-16.zip": "105bc1ea4d556394c10a5fa97f82b69652257ba0f80549f62945d2dd20b2e147",
+      "/previews/recovered/build/media/ebd75434-0e23-465f-8501-aa823e72dab5/previa-card-5a274015.mp4": "5a274015d2c3a342cf6c85ddb75a0fd842c2a16ab7596bf8ebd6df1967a35f3f"
+    },
+    "errors": []
+  },
+  {
+    "id": "staged-profitize-ceru",
+    "checkedAt": "2026-11-16T15:31:11.585Z",
+    "environment": "Authorized ChatGPT IAB; authenticated local normal-auth review server http://localhost:4178",
+    "startupVerified": true,
+    "visualConfirmed": true,
+    "interactionVerified": true,
+    "mediaVerified": true,
+    "promptVerified": true,
+    "downloadVerified": true,
+    "notes": "Actual original video decoded and visibly played in the authenticated local detail page, with correct content and advancing frames. Explorer trusted pointer hover separately verified readyState4/playing, then paused/reset0 on pointer leave for this item. Original prompt UI success feedback and actual browser ZIP download observed. Native Space pause/resume was not established by this run. Independent downloaded-ZIP checks preserve exact original prompt/source/archive/media bytes and notices. Clipboard content was not captured. This is item acceptance, not whole-catalog validation.",
+    "downloadSha256": "c83518846d5da72e9fadad6b75cb66c24a1c0d22659298f830f809c3fd5b88ec",
+    "artifacts": {
+      "/previews/releases/profitize-2026-11-16/ceru.html": "9b65f53c4bfed7454e28aaadc6fe3c1e129ebd033f43256fea19d93ae763f3d4",
+      "/code/releases/staged-profitize-ceru.json": "bf900c682c73f49a1742b7bb9cd0b2de18764d13380f3d0d2f060a51494b148d",
+      "/previews/recovered/build/media/84d8b41d-bc85-4de5-a9f0-37a66cc8af89/poster-5d4b7f94.webp": "5d4b7f94d3fcfac0630b56b5fb0f3e2c30f912e56d69b2b5c939b6ba48f8c7d9",
+      "/code/recovered/bundles/ceru-original-2026-11-16.zip": "8566722c83c2b19d34fa2d2b5493bceb8d4aac000643d93a5b280721750e6065",
+      "/previews/recovered/build/media/84d8b41d-bc85-4de5-a9f0-37a66cc8af89/previa-card-3f43b276.mp4": "3f43b276702adf82f152c2524b0670c333486a4a571747d5ba26a9913e8105b8"
+    },
+    "errors": []
+  },
+  {
+    "id": "staged-profitize-pomo",
+    "checkedAt": "2026-11-16T15:31:11.679Z",
+    "environment": "Authorized ChatGPT IAB; authenticated local normal-auth review server http://localhost:4178",
+    "startupVerified": true,
+    "visualConfirmed": true,
+    "interactionVerified": true,
+    "mediaVerified": true,
+    "promptVerified": true,
+    "downloadVerified": true,
+    "notes": "Actual original video decoded and visibly played in the authenticated local detail page, with correct content and advancing frames. Explorer trusted pointer hover separately verified readyState4/playing, then paused/reset0 on pointer leave for this item. Original prompt UI success feedback and actual browser ZIP download observed. Native Space pause/resume was not established by this run. Independent downloaded-ZIP checks preserve exact original prompt/source/archive/media bytes and notices. Clipboard content was not captured. This is item acceptance, not whole-catalog validation.",
+    "downloadSha256": "c7ced8b125d5691561c2c34eb10b337921c5fe2a3ac6b0ba5f80ce70b74c73b4",
+    "artifacts": {
+      "/previews/releases/profitize-2026-11-16/pomo.html": "9bf6d0e56db499ad50f059d9e0c0e28c3531eb197bf4e88a78dd25b0a5eb6be7",
+      "/code/releases/staged-profitize-pomo.json": "5fa9e5456e19abb876c24be1953bec28b491f3042455bd22f87187696fb737d8",
+      "/previews/recovered/build/media/7f2a6f83-c4ed-4094-a32f-0bea2f91ef7d/poster-7d3c2452.webp": "7d3c24520dd4ce556cd71954aec32b0d6ad01dfd6156413eca85fc5857eecb33",
+      "/code/recovered/bundles/pomo-original-2026-11-16.zip": "803961f1a94bc70dfff2e4ba67bee2deccdd6733fec4850fc9b45fe219ade6ea",
+      "/previews/recovered/build/media/7f2a6f83-c4ed-4094-a32f-0bea2f91ef7d/previa-card-21f1ea16.mp4": "21f1ea162f599c691e4afc46ca8edee2a854df0a8e4f01abb7fe185a9071fca1"
+    },
+    "errors": []
+  },
+  {
+    "id": "staged-profitize-solua",
+    "checkedAt": "2026-11-16T15:31:11.870Z",
+    "environment": "Authorized ChatGPT IAB; authenticated local normal-auth review server http://localhost:4178",
+    "startupVerified": true,
+    "visualConfirmed": true,
+    "interactionVerified": true,
+    "mediaVerified": true,
+    "promptVerified": true,
+    "downloadVerified": true,
+    "notes": "Actual original video decoded and visibly played in the authenticated local detail page, with correct content and advancing frames. Explorer trusted pointer hover separately verified readyState4/playing, then paused/reset0 on pointer leave for this item. Original prompt UI success feedback and actual browser ZIP download observed. Native Space pause/resume was not established by this run. Independent downloaded-ZIP checks preserve exact original prompt/source/archive/media bytes and notices. Clipboard content was not captured. This is item acceptance, not whole-catalog validation.",
+    "downloadSha256": "324973938251ba65d96cefad812005aad0de454c37810e8f4324a55203dfb71c",
+    "artifacts": {
+      "/previews/releases/profitize-2026-11-16/solua.html": "83deac86152840bb0d6c45b6ef537230aa668ac593103c27c00ac48de4e14610",
+      "/code/releases/staged-profitize-solua.json": "2c12dd6e71cda5d1a493fdc05aedd8f4a48e660b68ce5686a543d9f0a3c01843",
+      "/previews/recovered/build/media/36b6b6ab-3026-4c48-aba8-b7dc956e4521/poster-b144d1d5.webp": "b144d1d5be8354334e686fccc0d780e0e09e6a4a5f61f43287cb9e32a8d89d3e",
+      "/code/recovered/bundles/solua-original-2026-11-16.zip": "b02218c62f2f27d8d4abd505605035f1c3db26c0de9fa99e75234134bd690248",
+      "/previews/recovered/build/media/36b6b6ab-3026-4c48-aba8-b7dc956e4521/previa-card-4ab84249.mp4": "4ab8424942ee6936d6333b7aee8f00c829ed32f0a2af297b5ccb66b243fa71bb"
+    },
+    "errors": []
+  },
+  {
+    "id": "staged-profitize-dicta",
+    "checkedAt": "2026-11-16T15:31:12.005Z",
+    "environment": "Authorized ChatGPT IAB; authenticated local normal-auth review server http://localhost:4178",
+    "startupVerified": true,
+    "visualConfirmed": true,
+    "interactionVerified": true,
+    "mediaVerified": true,
+    "promptVerified": true,
+    "downloadVerified": true,
+    "notes": "Actual original video decoded and visibly played in the authenticated local detail page, with correct content and advancing frames. Explorer trusted pointer hover separately verified readyState4/playing, then paused/reset0 on pointer leave for this item. Original prompt UI success feedback and actual browser ZIP download observed. Native Space pause/resume was not established by this run. Independent downloaded-ZIP checks preserve exact original prompt/source/archive/media bytes and notices. Clipboard content was not captured. This is item acceptance, not whole-catalog validation.",
+    "downloadSha256": "196c9181fb5a85ff33a4e5185a1d49f010e047e418e489ab37f589bbda7e16f0",
+    "artifacts": {
+      "/previews/releases/profitize-2026-11-16/dicta.html": "465e8c4385948496f2e2f43d58a261e4b46539d7cc074a07a19e82ede5b95623",
+      "/code/releases/staged-profitize-dicta.json": "2240aac9fc0dadfaa38a0ccc294274f4179450fdc215f8f1cf43d9da7f460fe8",
+      "/previews/recovered/build/media/c03364d4-5638-4a15-ba34-1a6db9f7cdf9/poster-fc21f512.webp": "fc21f5120f182d60eabb10f80350733895e063d225c852366dc97d297c25b151",
+      "/code/recovered/bundles/dicta-original-2026-11-16.zip": "6a00117e973b78fb8dc5d0181d9b83fdf63d78fe41c726a234f4a987e256ac5c",
+      "/previews/recovered/build/media/c03364d4-5638-4a15-ba34-1a6db9f7cdf9/previa-card-8372a50a.mp4": "8372a50a80a47d1d0970e407b47669ce5b9116536cf3e8d5eff230b879cb5b8f"
+    },
+    "errors": []
+  },
+  {
+    "id": "staged-profitize-patina",
+    "checkedAt": "2026-11-16T15:31:12.179Z",
+    "environment": "Authorized ChatGPT IAB; authenticated local normal-auth review server http://localhost:4178",
+    "startupVerified": true,
+    "visualConfirmed": true,
+    "interactionVerified": true,
+    "mediaVerified": true,
+    "promptVerified": true,
+    "downloadVerified": true,
+    "notes": "Actual original video decoded and visibly played in the authenticated local detail page, with correct content and advancing frames. Explorer trusted pointer hover separately verified readyState4/playing, then paused/reset0 on pointer leave for this item. Original prompt UI success feedback and actual browser ZIP download observed. Native Space pause/resume was not established by this run. Independent downloaded-ZIP checks preserve exact original prompt/source/archive/media bytes and notices. Clipboard content was not captured. This is item acceptance, not whole-catalog validation.",
+    "downloadSha256": "abb9f97924659c2f272c96336eab278617965cb049d4fe3a749ef19fddcf1206",
+    "artifacts": {
+      "/previews/releases/profitize-2026-11-16/patina.html": "fd3b63f10b8f695ebdcc33805681f30bdd5076307d946a09acc351d4b02e8732",
+      "/code/releases/staged-profitize-patina.json": "2dfe589b7960d42aca6a2213e6ce00f9b6422cc41b40d687fa6cbfb2f0d4f1dc",
+      "/previews/recovered/build/media/cd42f236-950d-477b-aeb4-3ee1130452d9/poster-3e5a94c9.webp": "3e5a94c92c6fb9990b213c539e64baaf787b7cd99ea3cbc5107dc8e2de1d21b7",
+      "/code/recovered/bundles/patina-original-2026-11-16.zip": "0f8cedad8790715b20d46efe5f6761f790953ea3daf532c63d23959978dde216",
+      "/previews/recovered/build/media/cd42f236-950d-477b-aeb4-3ee1130452d9/previa-card-8e954300.mp4": "8e9543007af9ec422a83c0e438540c2d3662a262722c9ef5ba82ef0062ed9489"
+    },
+    "errors": []
+  },
+  {
+    "id": "staged-profitize-pronto",
+    "checkedAt": "2026-11-16T15:31:12.436Z",
+    "environment": "Authorized ChatGPT IAB; authenticated local normal-auth review server http://localhost:4178",
+    "startupVerified": true,
+    "visualConfirmed": true,
+    "interactionVerified": true,
+    "mediaVerified": true,
+    "promptVerified": true,
+    "downloadVerified": true,
+    "notes": "Actual original video decoded and visibly played in the authenticated local detail page, with correct content and advancing frames. Explorer trusted pointer hover separately verified readyState4/playing, then paused/reset0 on pointer leave for this item. Original prompt UI success feedback and actual browser ZIP download observed. Native Space pause/resume was not established by this run. Independent downloaded-ZIP checks preserve exact original prompt/source/archive/media bytes and notices. Clipboard content was not captured. This is item acceptance, not whole-catalog validation.",
+    "downloadSha256": "b765147c0c0e391bba35a333ecb49acf652c36567a163a43b5260e88ec249209",
+    "artifacts": {
+      "/previews/releases/profitize-2026-11-16/pronto.html": "f248f18cf4725137d37e23fba82e3f2197687d0b01827dd03dfdd413b50306ad",
+      "/code/releases/staged-profitize-pronto.json": "12422331d40bb15704c7570d3a53a5da744e2659432030eef26273db3e6904af",
+      "/previews/recovered/build/media/ac974e8c-28bf-42a5-8845-f24837b1c94e/poster-8c4bb019.webp": "8c4bb019cc2f8b65cd9284102f9d12253e4297ed9078ee80e4a80089abdcf3ad",
+      "/code/recovered/bundles/pronto-original-2026-11-16.zip": "9f2f9093f8e2cf3cba37ed4a8f60e5358897d7ecf81cfd495f7324d2e195b8ca",
+      "/previews/recovered/build/media/ac974e8c-28bf-42a5-8845-f24837b1c94e/previa-card-c8ded86b.mp4": "c8ded86b643f4ad3cb03f023a15ed69349b17dea0773a8b80d2db95bc9dd1d3e"
+    },
+    "errors": []
+  }
+]

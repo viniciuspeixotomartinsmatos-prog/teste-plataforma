@@ -1,0 +1,104 @@
+[
+  {
+    "route": "/@lumesec/components/geo-region-picker",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44609,
+      "name": "Region Picker",
+      "description": "A deployment-region selector with an interactive dot-map globe strip that shows estimated round-trip latency per region and lets users pick visually or from a keyboard-navigable list.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_lumesec_1793377338131/geo-region-picker/default/preview.1794423292106.png",
+      "videoUrl": "https://cdn.21st.dev/user_registry_lumesec_1793377338131/geo-region-picker/default/video.1794423279525.mp4",
+      "author": "lumesec",
+      "authorImage": "https://github.com/lumesec.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/lumesec/geo-region-picker?api_key=REDACTED\"",
+      "url": "https://21st.dev/@lumesec/components/geo-region-picker"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@lumesec/components/px-accordion",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44868,
+      "name": "Pixel Accordion",
+      "description": "An accordion whose small pixel plus-sign icons fold into minus signs as panels open smoothly, for FAQs and collapsible content sections that allow one or several items open at once.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_lumesec_1793377338131/px-accordion/default/preview.1794336779051.png",
+      "videoUrl": "https://cdn.21st.dev/user_registry_lumesec_1793377338131/px-accordion/default/video.1794336684877.mp4",
+      "author": "lumesec",
+      "authorImage": "https://github.com/lumesec.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/lumesec/px-accordion?api_key=REDACTED\"",
+      "url": "https://21st.dev/@lumesec/components/px-accordion"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@lumesec/components/px-bars",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44562,
+      "name": "Pixel Bar Chart",
+      "description": "A canvas-drawn bar chart with a retro pixel look whose bars grow in cell by cell and spring to new data, showing exact values in a tooltip on hover or arrow-key navigation.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_lumesec_1793377338131/px-bars/default/preview.1794340965624.webp",
+      "videoUrl": "https://cdn.21st.dev/user_registry_lumesec_1793377338131/px-bars/default/video.1794340873180.mp4",
+      "author": "lumesec",
+      "authorImage": "https://github.com/lumesec.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/lumesec/px-bars?api_key=REDACTED\"",
+      "url": "https://21st.dev/@lumesec/components/px-bars"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@lumesec/components/px-command",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44961,
+      "name": "Command Palette",
+      "description": "A ⌘K / Ctrl+K command palette that opens from a trigger button, with grouped commands, fuzzy search, keyboard navigation and an animated pixel highlight that follows the selected row.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_lumesec_1793377338131/px-command/default/preview.1794253814045.webp",
+      "videoUrl": "https://cdn.21st.dev/user_registry_lumesec_1793377338131/px-command/default/video.1794253774465.mp4",
+      "author": "lumesec",
+      "authorImage": "https://github.com/lumesec.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/lumesec/px-command?api_key=REDACTED\"",
+      "url": "https://21st.dev/@lumesec/components/px-command"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@lumesec/components/px-date",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44957,
+      "name": "Date Picker",
+      "description": "A month-grid calendar for picking a single date or a date range, with keyboard navigation and a springy pixel-drawn selection highlight.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_lumesec_1793377338131/px-date/default/preview.1794254923859.png",
+      "videoUrl": "https://cdn.21st.dev/user_registry_lumesec_1793377338131/px-date/default/video.1794254826527.mp4",
+      "author": "lumesec",
+      "authorImage": "https://github.com/lumesec.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/lumesec/px-date?api_key=REDACTED\"",
+      "url": "https://21st.dev/@lumesec/components/px-date"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@lumesec/components/px-select",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44977,
+      "name": "Pixel Select",
+      "description": "A dropdown select menu with a pixel-art highlight that springs between options, type-ahead-by-letter search, and an animated rolling label for the chosen value.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_lumesec_1793377338131/px-select/default/preview.1794336248255.png",
+      "videoUrl": "https://cdn.21st.dev/user_registry_lumesec_1793377338131/px-select/default/video.1794335918565.mp4",
+      "author": "lumesec",
+      "authorImage": "https://github.com/lumesec.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/lumesec/px-select?api_key=REDACTED\"",
+      "url": "https://21st.dev/@lumesec/components/px-select"
+    },
+    "status": "retained_unvalidated"
+  }
+]

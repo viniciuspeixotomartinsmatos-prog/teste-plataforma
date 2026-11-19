@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><script src="/previews/recovered/compat.js"></script><script>window.Image=class extends window.Image{constructor(...args){super(...args);this.crossOrigin="anonymous";}};</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corda — relógio automático com 72 horas de reserva</title>
+  <meta name="description" content="Corda CR-01: relógio automático esqueletado, 186 peças montadas à mão por um relojoeiro só, 72 horas de reserva de marcha." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" href="/previews/recovered/demos/corda/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" as="image" href="/previews/recovered/demos/corda/frames/cap-1/0001.webp" fetchpriority="high" />
+  <style>html{background:#000}.loader{z-index:100;color:#ece8e1;background:radial-gradient(120% 90% at 70% 40%,#161412 0%,#0a0909 45%,#000 100%);place-items:center;display:grid;position:fixed;inset:0}.loader__dial{aspect-ratio:1;width:min(42vw,280px);position:relative}.loader__dial>svg:first-child{width:100%;height:100%;position:absolute;inset:0;overflow:visible}.loader__star{width:20%;height:20%;position:absolute;top:40%;left:40%}.loader__foot{letter-spacing:.18em;justify-content:space-between;padding:0 clamp(16px,3vw,44px) clamp(20px,3vw,36px);font:500 12px/1 ui-monospace,monospace;display:flex;position:absolute;bottom:0;left:0;right:0}html.is-reduced .loader,html.no-loader .loader{display:none}</style>
+  <script>
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('is-reduced');
+    // ?reel (ou ?reel=0.6): baixa o contraste para gravar a tela com o celular sem estourar o relógio
+    (function () {
+      var r = new URLSearchParams(location.search).get('reel');
+      if (r === null) return;
+      var k = Math.min(1, Math.max(0.4, parseFloat(r) || 0.7));
+      document.documentElement.style.filter = 'contrast(' + k + ') brightness(' + k + ')';
+    })();
+    // failsafe: se o JS não subir, a página aparece mesmo assim
+    setTimeout(function () { if (!window.__booted) document.documentElement.classList.add('no-loader'); }, 5000);
+  </script>
+  <script type="module" crossorigin src="/previews/recovered/demos/corda/assets/index-CSdbdDNl.js"></script>
+  <link rel="stylesheet" crossorigin href="/previews/recovered/demos/corda/assets/index-CU_40E49.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="star" viewBox="0 0 100 100"><path d="M50 0 C53 34 66 47 100 50 C66 53 53 66 50 100 C47 66 34 53 0 50 C34 47 47 34 50 0 Z" fill="currentColor"/></symbol>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"/></symbol>
+  </svg>
+
+  <div class="loader" aria-hidden="true">
+    <div class="loader__dial">
+      <svg viewBox="0 0 200 200">
+        <g class="loader__ticks"></g>
+        <circle class="loader__track" cx="100" cy="100" r="88" fill="none" stroke="rgba(244,242,255,.14)" stroke-width="1" />
+        <circle class="loader__arc" cx="100" cy="100" r="88" fill="none" stroke="#f4f2ff" stroke-width="1.5" stroke-linecap="round" pathLength="1" stroke-dasharray="0 1" transform="rotate(-90 100 100)" />
+        <circle class="loader__tip" cx="100" cy="12" r="3" fill="#e0457b" />
+      </svg>
+      <svg class="loader__star"><use href="#star" /></svg>
+    </div>
+    <div class="loader__foot"><span>Dando corda</span><span><b class="loader__h">00</b> h / 72 h</span></div>
+  </div>
+
+  <header class="nav" data-state="top" data-theme="dark">
+    <a class="nav__logo" href="#topo" data-go="topo" aria-label="Corda, voltar ao topo">
+      <svg class="nav__star"><use href="#star" /></svg>
+      <span class="nav__word">Corda</span>
+    </a>
+    <nav class="nav__links" aria-label="Seções">
+      <a class="ulink" href="#mecanismo" data-go="mecanismo">Mecanismo</a>
+      <a class="ulink" href="#colecao" data-go="colecao">Coleção</a>
+      <a class="ulink" href="#atelie" data-go="atelie">Ateliê</a>
+      <a class="ulink" href="#garantia" data-go="garantia">Garantia</a>
+    </nav>
+    <a class="btn btn--ghost btn--s nav__cta" href="#reserva" data-go="reserva"><span class="btn__l" data-l="Reservar">Reservar</span></a>
+    <button class="nav__menu" aria-expanded="false" aria-controls="menu"><span>Menu</span></button>
+  </header>
+  <div class="menu" id="menu" hidden>
+    <a href="#mecanismo" data-go="mecanismo"><i>01</i>Mecanismo</a>
+    <a href="#colecao" data-go="colecao"><i>02</i>Coleção</a>
+    <a href="#atelie" data-go="atelie"><i>03</i>Ateliê</a>
+    <a href="#garantia" data-go="garantia"><i>04</i>Garantia</a>
+    <a href="#reserva" data-go="reserva"><i>05</i>Reservar</a>
+  </div>
+
+  <main>
+    <!-- 01 Peça: hero + filme em 4 capítulos + ficha, um pin só -->
+    <section class="peca" id="topo" aria-label="O relógio" data-theme="dark">
+      <div class="peca__stage">
+       <div class="peca__scene">
+        <canvas class="film" aria-hidden="true"></canvas>
+        <div class="veil" aria-hidden="true"></div>
+
+        <div class="hero">
+          <h1 class="hero__title"><span class="line"><span class="line__in">Corda</span></span></h1>
+          <p class="hero__lead">Um relógio automático com 72 horas de reserva. Você tira à noite e ele ainda marca a hora na segunda.</p>
+          <div class="hero__cta">
+            <a class="btn btn--light" href="#reserva" data-go="reserva"><span class="btn__l" data-l="Reservar o meu">Reservar o meu</span></a>
+            <a class="alink" href="#mecanismo" data-go="mecanismo"><span>Abrir o mecanismo</span><svg><use href="#arrow" /></svg></a>
+          </div>
+        </div>
+
+        <div class="beat beat--1" id="mostrador">
+          <h2 class="beat__h"><span class="line"><span class="line__in">Dá para ver</span></span><span class="line"><span class="line__in">o tempo passar.</span></span></h2>
+          <p class="beat__p">O mostrador é vazado: pelo vidro aparece o calibre inteiro trabalhando.</p>
+        </div>
+        <div class="beat beat--2" id="mecanismo">
+          <h2 class="beat__h"><span class="line"><span class="line__in">Oito batidas</span></span><span class="line"><span class="line__in">por segundo.</span></span></h2>
+          <p class="beat__p">O balanço vai e volta 691.200 vezes por dia. É ele que divide o segundo.</p>
+        </div>
+        <div class="beat beat--3">
+          <h2 class="beat__h"><span class="line"><span class="line__in">186 peças.</span></span><span class="line"><span class="line__in">Montadas à mão.</span></span></h2>
+        </div>
+
+        <div class="callouts" aria-label="Peças do relógio">
+          <div class="callout"><svg class="callout__line"><line x1="0" y1="0" x2="0" y2="0" pathLength="1" /></svg><i class="callout__dot"></i><p class="callout__t"><b>01 · Mostrador</b><span>Esqueletado, o calibre à vista</span></p></div>
+          <div class="callout"><svg class="callout__line"><line x1="0" y1="0" x2="0" y2="0" pathLength="1" /></svg><i class="callout__dot"></i><p class="callout__t"><b>02 · Balanço</b><span>Oscila 8 vezes por segundo</span></p></div>
+          <div class="callout"><svg class="callout__line"><line x1="0" y1="0" x2="0" y2="0" pathLength="1" /></svg><i class="callout__dot"></i><p class="callout__t"><b>03 · Rotor</b><span>Carrega a mola com o pulso</span></p></div>
+          <div class="callout"><svg class="callout__line"><line x1="0" y1="0" x2="0" y2="0" pathLength="1" /></svg><i class="callout__dot"></i><p class="callout__t"><b>04 · Caixa</b><span>Aço 316L, 40 mm, 50 m</span></p></div>
+        </div>
+
+        <div class="ficha" id="ficha">
+          <h2 class="ficha__h"><span class="line"><span class="line__in">72 horas</span></span><span class="line"><span class="line__in">de reserva.</span></span></h2>
+          <p class="ficha__p">Você tira na sexta à noite e ele ainda marca a hora na segunda.</p>
+          <p class="ficha__spec">Aço 316L · 40 mm · Safira · 50 m</p>
+          <div class="ficha__buy">
+            <p class="ficha__price"><span>R$</span> 14.800</p>
+            <a class="btn btn--light" href="#reserva" data-go="reserva"><span class="btn__l" data-l="Reservar o meu">Reservar o meu</span></a>
+          </div>
+        </div>
+
+       </div>
+
+      </div>
+    </section>
+
+    <!-- 02 Coleção: um relógio por gesto, na horizontal -->
+    <section class="colecao" id="colecao" aria-label="Coleção" data-theme="dark">
+      <div class="colecao__stage">
+        <h2 class="colecao__h"><span class="line"><span class="line__in">Um calibre. Três noites.</span></span></h2>
+        <div class="colecao__track">
+          <img class="cw" src="/previews/recovered/demos/corda/img/colecao-noite.webp" alt="Corda Noite: mostrador azul-noite, pulseira de couro azul" width="800" height="1200" />
+          <img class="cw" src="/previews/recovered/demos/corda/img/colecao-musgo.webp" alt="Corda Musgo: aro cinza, pulseira de couro verde-musgo" width="800" height="1200" />
+          <img class="cw" src="/previews/recovered/demos/corda/img/colecao-areia.webp" alt="Corda Areia: mostrador creme, pulseira de couro caramelo" width="800" height="1200" />
+        </div>
+        <div class="colecao__cap" aria-live="polite">
+          <p class="colecao__name"><span>Noite</span><span>Musgo</span><span>Areia</span></p>
+          <p class="colecao__desc">Mostrador azul-noite, couro azul</p>
+        </div>
+        <div class="colecao__dots" role="group" aria-label="Versões">
+          <button data-i="0" aria-label="Noite"></button><button data-i="1" aria-label="Musgo"></button><button data-i="2" aria-label="Areia"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 Ateliê: a foto abre de uma janela até a tela inteira -->
+    <section class="atelie" id="atelie" aria-label="O ateliê" data-theme="dark">
+      <div class="atelie__stage">
+        <figure class="atelie__photo"><img src="/previews/recovered/demos/corda/img/atelie-montagem.webp" alt="Mãos com pinça encaixam uma engrenagem no relógio aberto, na bancada" width="1800" height="1200" loading="lazy" /></figure>
+        <div class="atelie__text">
+          <h2 class="atelie__h"><span class="line"><span class="line__in">Um relojoeiro só,</span></span><span class="line"><span class="line__in">do começo ao fim.</span></span></h2>
+          <p class="atelie__p">Vinte e um dias na bancada, nas mãos da mesma pessoa. O nome de quem montou vai gravado no fundo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 Garantia: o fundo do relógio, inteiro -->
+    <section class="garantia" id="garantia" aria-label="Garantia" data-theme="dark">
+      <img class="garantia__watch" src="/previews/recovered/demos/corda/img/garantia-fundo.webp" alt="O fundo de safira do Corda, com o rotor dourado e o mecanismo à vista" width="1024" height="1536" loading="lazy" />
+      <div class="garantia__text">
+        <h2 class="garantia__h"><span class="line"><span class="line__in">Dez anos</span></span><span class="line"><span class="line__in">de garantia.</span></span></h2>
+        <p class="garantia__p">E revisão pela vida toda, feita por quem montou.</p>
+      </div>
+    </section>
+
+    <!-- 05 Reserva -->
+    <section class="reserva" id="reserva" aria-label="Reservar uma visita" data-theme="dark">
+      <h2 class="reserva__h"><span class="line"><span class="line__in">Venha dar</span></span><span class="line"><span class="line__in">corda.</span></span></h2>
+      <p class="reserva__p">O ateliê recebe com hora marcada, de terça a sábado.</p>
+      <form class="form" novalidate>
+        <label class="fi"><span>Nome</span><input name="nome" autocomplete="name" required /></label>
+        <label class="fi"><span>WhatsApp</span><input name="whatsapp" inputmode="tel" autocomplete="tel" required /></label>
+        <button class="btn btn--light" type="submit"><span class="btn__l" data-l="Agendar visita">Agendar visita</span></button>
+      </form>
+      <p class="form__msg" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="foot" data-theme="dark">
+    <div class="foot__row">
+      <a class="ulink" href="#" aria-label="Instagram">Instagram</a>
+      <a class="ulink" href="#reserva" data-go="reserva">Atendimento</a>
+      <a class="ulink" href="#topo" data-go="topo">Voltar ao topo</a>
+      <small>Site de demonstração · Marca fictícia</small>
+    </div>
+    <p class="foot__word" aria-hidden="true"><span>C</span><span>o</span><span>r</span><span>d</span><span>a</span></p>
+  </footer>
+
+  <div class="cursor" aria-hidden="true"><i></i></div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {createCanvas,loadImage} from '@napi-rs/canvas';
+import {injectDemoAssets} from '../src/demo-asset-bridge.js';
+const root=path.resolve('public'),manifestFile=path.join(root,'data/demo-local-assets.json'),manifest=JSON.parse(await fs.readFile(manifestFile,'utf8')),report=JSON.parse(await fs.readFile('var/audits/demo-resources.json','utf8'));
+manifest.reconstructed??=[];const items=manifest.items,urls=manifest.urls;
+const directory=path.join(root,'assets/demo-examples');await fs.mkdir(directory,{recursive:true});
+const escape=value=>String(value).replace(/[<>&"]/g,'');
+function illustration(seed,kind='landscape'){
+ const hue=parseInt(crypto.createHash('sha256').update(seed).digest('hex').slice(0,4),16)%360;
+ const background=`<defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="hsl(${hue} 45% 23%)"/><stop offset="1" stop-color="hsl(${(hue+45)%360} 60% 68%)"/></linearGradient></defs><rect width="1200" height="800" fill="url(#sky)"/>`;
+ let shapes='';
+ if(kind==='portrait')shapes='<circle cx="600" cy="315" r="140" fill="#ead0b1"/><path d="M452 320Q410 65 610 110Q800 120 750 350L710 240Q580 290 480 230Z" fill="#262b36"/><path d="M325 800Q335 480 600 500Q875 490 890 800Z" fill="#202f47"/><ellipse cx="555" cy="320" rx="12" ry="9" fill="#252535"/><ellipse cx="650" cy="320" rx="12" ry="9" fill="#252535"/><path d="M555 405Q605 435 655 402" stroke="#a66f65" stroke-width="10" fill="none"/>';
+ else if(kind==='dashboard')shapes='<rect x="95" y="90" width="1010" height="620" rx="25" fill="#101514"/><rect x="95" y="90" width="205" height="620" rx="25" fill="#19201d"/>'+Array.from({length:6},(_,i)=>`<rect x="120" y="${190+i*65}" width="145" height="15" rx="6" fill="${i?'#3c4c42':'#b9f9ab'}"/>`).join('')+'<text x="345" y="165" fill="#eef7f0" font-size="30" font-family="sans-serif">Visão geral</text>'+Array.from({length:3},(_,i)=>`<rect x="${340+i*245}" y="205" width="220" height="135" rx="15" fill="#25322b"/><text x="${360+i*245}" y="290" fill="#b9f9ab" font-size="36" font-family="sans-serif">${[1280,864,96][i]}</text>`).join('')+'<path d="M350 610L440 540L510 560L610 445L710 480L810 390L1010 410" fill="none" stroke="#b9f9ab" stroke-width="12" stroke-linejoin="round"/>';
+ else if(kind==='logo')shapes='<g transform="translate(450 250)" stroke="#ecfaee" stroke-width="20" fill="none"><path d="M0 70L150 0L300 70L150 140Z"/><path d="M0 135L150 205L300 135M0 200L150 270L300 200"/></g>';
+ else shapes='<circle cx="875" cy="190" r="95" fill="#ffedc0" opacity=".85"/><path d="M0 610L245 180L540 610L770 280L1200 640V800H0Z" fill="#263944"/><path d="M170 310L245 180L335 335L260 300Z" fill="#ecf1e9"/><path d="M0 645Q340 520 620 665T1200 620V800H0Z" fill="#486b70"/><path d="M0 745Q360 675 690 745T1200 710V800H0Z" fill="#8cadaa"/>';
+ return '<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">'+background+shapes+'</svg>';
+}
+async function example(seed,kind){const file='/assets/demo-examples/'+crypto.createHash('sha256').update(kind+seed).digest('hex').slice(0,20)+'.webp';try{await fs.access(path.join(root,file));}catch{const image=await loadImage(Buffer.from(illustration(seed,kind))),canvas=createCanvas(1200,800);canvas.getContext('2d').drawImage(image,0,0);await fs.writeFile(path.join(root,file),await canvas.encode('webp',88));}return file;}
+async function retrieve(url){const response=await fetch(url,{signal:AbortSignal.timeout(12000)});if(!response.ok)throw Error('HTTP '+response.status);const type=response.headers.get('content-type')||'',bytes=Buffer.from(await response.arrayBuffer());if(!bytes.length||bytes.length>50*1024*1024)throw Error('Invalid size');const glb=bytes.subarray(0,4).toString()==='glTF';if(!/^(image|audio|video)\//.test(type)&&!glb)throw Error('Not media');let ext=glb?'glb':type.includes('svg')?'svg':type.includes('png')?'png':type.includes('webp')?'webp':type.includes('gif')?'gif':type.includes('mp4')?'mp4':type.includes('audio')?'mp3':'jpg';if(type.startsWith('image/')&&!type.includes('svg')&&!type.includes('gif'))await loadImage(bytes);const file='/assets/demo-examples/'+crypto.createHash('sha256').update(url).digest('hex').slice(0,24)+'.'+ext;await fs.writeFile(path.join(root,file),bytes);return file;}
+const icons=['salesforce','hubspot','zoho','pipedrive','freshworks','copper','insightly','github','linear','slack','googledocs','googlesheets','google','notion','twitter','linkedin','reddit','figma','instagram','youtube','spotify','netflix','vercel','amazon','alibaba'];
+function iconName(url){if(/\.(glb|gltf|exr|hdr)(?:\?|$)/i.test(url))return;const name=decodeURIComponent(url).toLowerCase().replaceAll('_','').replaceAll('-','');return icons.find(icon=>name.includes(icon));}
+const noise='/assets/demo-examples/noise.svg';await fs.writeFile(path.join(root,noise),'<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" opacity=".55" filter="url(#noise)"/></svg>');
+const wave='/assets/demo-examples/click.wav';const rate=44100,samples=11025,buffer=Buffer.alloc(44+samples*2);buffer.write('RIFF');buffer.writeUInt32LE(buffer.length-8,4);buffer.write('WAVEfmt ',8);buffer.writeUInt32LE(16,16);buffer.writeUInt16LE(1,20);buffer.writeUInt16LE(1,22);buffer.writeUInt32LE(rate,24);buffer.writeUInt32LE(rate*2,28);buffer.writeUInt16LE(2,32);buffer.writeUInt16LE(16,34);buffer.write('data',36);buffer.writeUInt32LE(samples*2,40);for(let i=0;i<samples;i++)buffer.writeInt16LE(Math.round(Math.sin(i/rate*2*Math.PI*(800-i/samples*500))*Math.exp(-i/samples*8)*18000),44+i*2);await fs.writeFile(path.join(root,wave),buffer);
+const pending=new Map();for(const entry of report.missingLocal){const file=entry.url.split('?')[0];try{await fs.access(path.join(root,file));continue;}catch{}if(file==='/vite.svg'||urls[entry.url])continue;pending.set(entry.url,{...entry,local:true});}for(const entry of manifest.failures){if(entry.resolvedUsing||entry.url.endsWith('photo-')||urls[entry.url])continue;pending.set(entry.url,entry);}
+let cursor=0;const list=[...pending.values()];
+await Promise.all(Array.from({length:6},async()=>{while(cursor<list.length){const entry=list[cursor++],url=entry.url;let local,method='reconstructed-demo-example';const name=iconName(url);
+ const candidates=[];
+ if(url.includes('/%20'))candidates.push(url.replaceAll('/%20','/'));
+ if(entry.local&&url.startsWith('/images/block/'))candidates.push('https://cdn.shadcnblocks.com'+url);
+ if(entry.local&&/jordans|linear\.webp|manu\.png|thumbnail\.png/.test(url))candidates.push('https://assets.aceternity.com'+url);
+ if(url.includes('/_next/image?')){const parsed=new URL(url),source=parsed.searchParams.get('url');if(source?.startsWith('/')){if(parsed.hostname==='tailark.com'){try{const bytes=await fs.readFile(path.join('../research/catalog-b/tailark-repo/public',source));local='/assets/demo-examples/'+crypto.createHash('sha256').update(source).digest('hex').slice(0,24)+path.extname(source);await fs.writeFile(path.join(root,local),bytes);method='recovered-public-original';}catch{candidates.push(parsed.origin+source);}}else candidates.push('https://assets.aceternity.com'+source);}}
+ if(name)candidates.push('https://cdn.simpleicons.org/'+name);
+ if(/figma\.fbx\.glb/.test(url))candidates.push(url);
+ if(/^\/(p|n)[xyz]\.png$/.test(url)){const axis={px:'posx',nx:'negx',py:'posy',ny:'negy',pz:'posz',nz:'negz'}[url.slice(1,-4)];candidates.push('https://threejs.org/examples/textures/cube/Bridge2/'+axis+'.jpg');}
+ if(url.includes('earth-texture'))candidates.push('https://threejs.org/examples/textures/planets/earth_atmos_2048.jpg');
+ if(url.includes('earth-bump'))candidates.push('https://threejs.org/examples/textures/planets/earth_bump_2048.jpg');
+ if(url.includes('earth-specular'))candidates.push('https://threejs.org/examples/textures/planets/earth_specular_2048.jpg');
+ for(const candidate of candidates){if(local)break;try{local=await retrieve(candidate);method='recovered-public-original';break;}catch{}}
+ if(!local){if(/noise\.(gif|svg)/.test(url))local=noise;else if(/\.(mp3|ogg|wav)(?:\?|$)/.test(url))local=wave;else if(/\.(mp4|webm)(?:\?|$)/.test(url))local='/assets/demo/fuji-dawn.mp4';else if(/\.(glb|hdr|exr)(?:\?|$)/.test(url)){console.log('UNRESOLVED MODEL',url);continue;}else local=await example(url,/avatar|member|portrait|people|voice|person|face/i.test(url)?'portrait':name||/logo|icon|bandage|path-3/i.test(url)?'logo':/linear|dashboard|thumbnail|screenshot|\.supabase\.co/i.test(url)?'dashboard':'landscape');}
+ urls[url]=local;for(const id of entry.ids||[]){items[id]??={};items[id][url]=local;if(entry.local&&url.includes('?'))items[id][url.split('?')[0]]=local;}entry.resolvedUsing=local;entry.method=method;manifest.reconstructed.push({original:url,local,method,ids:entry.ids});
+ console.log('RESOLVED',method,url);
+}}));
+// Empty src attributes in incomplete gallery examples are also real broken
+// images. Recompose their example data, rather than replacing the component.
+const latest=new Map((await fs.readFile('var/audits/browser/results.ndjson','utf8')).trim().split('\n').filter(Boolean).map(line=>{const r=JSON.parse(line);return[r.id,r];}));for(const row of latest.values())if(row.images?.some(i=>!i.src)){items[row.id]??={};items[row.id].__emptyImage=await example(row.id,'landscape');}
+await fs.writeFile(manifestFile,JSON.stringify(manifest));
+const rows=JSON.parse(await fs.readFile(path.join(root,'data/catalog-live.json'),'utf8'));for(const row of rows){const mapping=items[row.id];if(!mapping)continue;const preview=row.runtimePreviewPath||row.previewPath;for(const file of [preview,...(preview.startsWith('/previews/runtime/')?[preview.replace(/\.html$/,'.light.html')]:[])]){const target=path.join(root,file),html=await fs.readFile(target,'utf8');await fs.writeFile(target,injectDemoAssets(html,mapping));}}
+console.log('Resolved/recomposed records:',manifest.reconstructed.length);

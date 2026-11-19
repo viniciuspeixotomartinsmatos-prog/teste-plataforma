@@ -1,0 +1,889 @@
+{
+  "scope": "DOM initialization in isolated sandbox; interaction states not exhaustively verified",
+  "initialized": 82,
+  "total": 82,
+  "dependencyWarnings": 1,
+  "results": [
+    {
+      "qaId": "21st-09a318832265",
+      "errors": [],
+      "text": 178,
+      "canvases": 1,
+      "controls": 2,
+      "images": [],
+      "name": "Halftone Wordmark Footer",
+      "ok": true
+    },
+    {
+      "qaId": "21st-9f9f01a9001c",
+      "errors": [],
+      "text": 0,
+      "canvases": 1,
+      "controls": 0,
+      "images": [],
+      "name": "Animated Mosaic Portrait",
+      "ok": true
+    },
+    {
+      "qaId": "21st-eed058c323d7",
+      "errors": [],
+      "text": 0,
+      "canvases": 0,
+      "controls": 14,
+      "images": [],
+      "name": "Card Fan Carousel",
+      "ok": true
+    },
+    {
+      "qaId": "21st-e55a11521090",
+      "errors": [],
+      "text": 107,
+      "canvases": 1,
+      "controls": 0,
+      "images": [],
+      "name": "Cobe Globe",
+      "ok": true
+    },
+    {
+      "qaId": "21st-6fc2d8d57282",
+      "errors": [],
+      "text": 249,
+      "canvases": 0,
+      "controls": 47,
+      "images": [],
+      "name": "Dashboard Sidebar",
+      "ok": true
+    },
+    {
+      "qaId": "21st-4d18a6da85c4",
+      "errors": [],
+      "text": 985,
+      "canvases": 0,
+      "controls": 0,
+      "images": [],
+      "name": "Draggable Widget Grid",
+      "ok": true
+    },
+    {
+      "qaId": "21st-66d9e4f594af",
+      "errors": [],
+      "text": 893,
+      "canvases": 0,
+      "controls": 19,
+      "images": [],
+      "name": "Finance Bento",
+      "ok": true
+    },
+    {
+      "qaId": "21st-e6baa579733c",
+      "errors": [],
+      "text": 2688,
+      "canvases": 0,
+      "controls": 8,
+      "images": [],
+      "name": "Indicator Chart",
+      "ok": true
+    },
+    {
+      "qaId": "21st-c222aff32987",
+      "errors": [],
+      "text": 311,
+      "canvases": 0,
+      "controls": 15,
+      "images": [],
+      "name": "Interactive Selector",
+      "ok": true
+    },
+    {
+      "qaId": "21st-e69ce91a8d2a",
+      "errors": [],
+      "text": 195,
+      "canvases": 0,
+      "controls": 9,
+      "images": [],
+      "name": "Perspective Tunnel Hero",
+      "ok": true
+    },
+    {
+      "qaId": "21st-d0cd0e792a0f",
+      "errors": [],
+      "text": 184,
+      "canvases": 0,
+      "controls": 12,
+      "images": [
+        "/previews/recovered/build/componentes/polaroid-line-carousel/320w/acima-das-nuvens.webp",
+        "/previews/recovered/build/componentes/polaroid-line-carousel/320w/lago-de-vidro.webp",
+        "/previews/recovered/build/componentes/polaroid-line-carousel/320w/vale-dourado.webp",
+        "/previews/recovered/build/componentes/polaroid-line-carousel/320w/linha-da-neve.webp",
+        "/previews/recovered/build/componentes/polaroid-line-carousel/320w/serras-azuis.webp",
+        "/previews/recovered/build/componentes/polaroid-line-carousel/320w/ponte-da-cascata.webp"
+      ],
+      "name": "Polaroid Line Carousel",
+      "ok": true
+    },
+    {
+      "qaId": "21st-18a66baf5b9f",
+      "errors": [],
+      "text": 109,
+      "canvases": 0,
+      "controls": 10,
+      "images": [],
+      "name": "Progress Metric Card",
+      "ok": true
+    },
+    {
+      "qaId": "21st-4edf4db17950",
+      "errors": [],
+      "text": 23,
+      "canvases": 0,
+      "controls": 3,
+      "images": [],
+      "name": "Progressive Blur Card",
+      "ok": true
+    },
+    {
+      "qaId": "21st-7a9ac2e76797",
+      "errors": [],
+      "text": 271,
+      "canvases": 0,
+      "controls": 11,
+      "images": [],
+      "name": "Sign In Page",
+      "ok": true
+    },
+    {
+      "qaId": "21st-f54d65a5d33b",
+      "errors": [],
+      "text": 1170,
+      "canvases": 0,
+      "controls": 53,
+      "images": [],
+      "name": "Web3 Bento",
+      "ok": true
+    },
+    {
+      "qaId": "21st-9b3f0393f89f",
+      "errors": [],
+      "text": 117,
+      "canvases": 0,
+      "controls": 27,
+      "images": [],
+      "name": "Works Wheel",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--3d-globe",
+      "errors": [],
+      "text": 23,
+      "canvases": 1,
+      "controls": 13,
+      "images": [],
+      "name": "3D Globe",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--3d-testimonials",
+      "errors": [],
+      "text": 7451,
+      "canvases": 0,
+      "controls": 109,
+      "images": [],
+      "name": "3D Testimonials",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--ai-prompt-box",
+      "errors": [],
+      "text": 0,
+      "canvases": 0,
+      "controls": 11,
+      "images": [],
+      "name": "AI Prompt Box",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--ancora",
+      "errors": [],
+      "text": 597,
+      "canvases": 0,
+      "controls": 1,
+      "images": [],
+      "name": "Âncora",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--apoteose",
+      "errors": [],
+      "text": 0,
+      "canvases": 2,
+      "controls": 0,
+      "images": [],
+      "name": "Apoteose",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--aurora",
+      "errors": [],
+      "text": 0,
+      "canvases": 1,
+      "controls": 0,
+      "images": [],
+      "name": "Aurora",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--avatar-group",
+      "errors": [],
+      "text": 2,
+      "canvases": 0,
+      "controls": 5,
+      "images": [],
+      "name": "Avatar Group",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--campo",
+      "errors": [],
+      "text": 195,
+      "canvases": 0,
+      "controls": 2,
+      "images": [],
+      "name": "Campo",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--circular-navigation",
+      "errors": [],
+      "text": 89,
+      "canvases": 0,
+      "controls": 12,
+      "images": [],
+      "name": "Circular Navigation",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--clothing-rail-hero",
+      "errors": [],
+      "text": 156,
+      "canvases": 0,
+      "controls": 63,
+      "images": [
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/camiseta-osso-lado.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/camiseta-osso-frente.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/camiseta-osso-costas.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/camiseta-preta-lado.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/camiseta-preta-frente.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/camiseta-preta-costas.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/oxford-ceu-lado.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/oxford-ceu-frente.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/oxford-ceu-costas.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/cardiga-oliva-lado.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/cardiga-oliva-frente.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/cardiga-oliva-costas.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/moletom-mescla-lado.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/moletom-mescla-frente.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/moletom-mescla-costas.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/moletom-lilas-lado.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/moletom-lilas-frente.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/moletom-lilas-costas.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/polo-floresta-lado.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/polo-floresta-frente.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/polo-floresta-costas.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/henley-tijolo-lado.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/henley-tijolo-frente.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/henley-tijolo-costas.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/listrada-lado.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/listrada-frente.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/listrada-costas.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/camiseta-ocre-lado.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/camiseta-ocre-frente.webp",
+        "/previews/recovered/build/componentes/clothing-rail-hero/260w/camiseta-ocre-costas.webp"
+      ],
+      "name": "Clothing Rail Hero",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--cristal",
+      "errors": [],
+      "text": 30,
+      "canvases": 0,
+      "controls": 1,
+      "images": [],
+      "name": "Cristal",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--cromo",
+      "errors": [],
+      "text": 0,
+      "canvases": 1,
+      "controls": 0,
+      "images": [],
+      "name": "Cromo",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--esteira",
+      "errors": [],
+      "text": 4226,
+      "canvases": 0,
+      "controls": 18,
+      "images": [],
+      "name": "Esteira",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--floating-dock",
+      "errors": [],
+      "text": 0,
+      "canvases": 0,
+      "controls": 17,
+      "images": [],
+      "name": "Floating Dock",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--flue",
+      "errors": [],
+      "text": 0,
+      "canvases": 1,
+      "controls": 0,
+      "images": [],
+      "name": "Flue",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--fluxo",
+      "errors": [],
+      "text": 0,
+      "canvases": 1,
+      "controls": 0,
+      "images": [],
+      "name": "Fluxo",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--glass-folder",
+      "errors": [],
+      "text": 94,
+      "canvases": 3,
+      "controls": 8,
+      "images": [],
+      "name": "Glass Folder",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--gota",
+      "errors": [],
+      "text": 9,
+      "canvases": 0,
+      "controls": 0,
+      "images": [],
+      "name": "Gota",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--helice",
+      "errors": [],
+      "text": 220,
+      "canvases": 1,
+      "controls": 4,
+      "images": [],
+      "name": "Hélice",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--holo-card",
+      "errors": [],
+      "text": 153,
+      "canvases": 0,
+      "controls": 1,
+      "images": [],
+      "name": "Holo Card",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--holo-trading-card",
+      "errors": [],
+      "text": 0,
+      "canvases": 1,
+      "controls": 1,
+      "images": [],
+      "name": "Holo Trading Card",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--limalha",
+      "errors": [],
+      "text": 0,
+      "canvases": 1,
+      "controls": 0,
+      "images": [],
+      "name": "Limalha",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--liquid-glass-dock",
+      "errors": [],
+      "text": 0,
+      "canvases": 0,
+      "controls": 8,
+      "images": [],
+      "name": "Liquid Glass Dock",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--liquid-glass",
+      "errors": [],
+      "text": 13,
+      "canvases": 0,
+      "controls": 2,
+      "images": [],
+      "name": "Liquid Glass",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--mercurio",
+      "errors": [],
+      "text": 13,
+      "canvases": 1,
+      "controls": 2,
+      "images": [],
+      "name": "Mercúrio",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--moldura",
+      "errors": [],
+      "text": 0,
+      "canvases": 1,
+      "controls": 0,
+      "images": [],
+      "name": "Moldura",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--nebulosa",
+      "errors": [],
+      "text": 0,
+      "canvases": 1,
+      "controls": 0,
+      "images": [],
+      "name": "Nebulosa",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--pontilhado",
+      "errors": [],
+      "text": 0,
+      "canvases": 1,
+      "controls": 0,
+      "images": [],
+      "name": "Pontilhado",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--relevo",
+      "errors": [],
+      "text": 1330,
+      "canvases": 0,
+      "controls": 27,
+      "images": [],
+      "name": "Relevo",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--tipos",
+      "errors": [],
+      "text": 0,
+      "canvases": 1,
+      "controls": 0,
+      "images": [],
+      "name": "Tipos",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--topografia",
+      "errors": [],
+      "text": 0,
+      "canvases": 1,
+      "controls": 0,
+      "images": [],
+      "name": "Topografia",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--alto",
+      "errors": [],
+      "text": 2122,
+      "canvases": 1,
+      "controls": 41,
+      "images": [],
+      "name": "Alto",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--aroeira",
+      "errors": [],
+      "text": 3587,
+      "canvases": 1,
+      "controls": 13,
+      "images": [],
+      "name": "Aroeira",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--brasa",
+      "errors": [],
+      "text": 87,
+      "canvases": 2,
+      "controls": 37,
+      "images": [],
+      "name": "Brasa",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--breu",
+      "errors": [],
+      "text": 3035,
+      "canvases": 1,
+      "controls": 39,
+      "images": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "name": "Breu",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--classe-g",
+      "errors": [],
+      "text": 50,
+      "canvases": 0,
+      "controls": 1,
+      "images": [],
+      "name": "Classe G",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--clausula",
+      "errors": [],
+      "text": 2486,
+      "canvases": 0,
+      "controls": 33,
+      "images": [],
+      "name": "Cláusula",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--corda",
+      "errors": [],
+      "text": 548,
+      "canvases": 1,
+      "controls": 21,
+      "images": [],
+      "name": "Corda",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--fermento",
+      "errors": [],
+      "text": 215,
+      "canvases": 0,
+      "controls": 21,
+      "images": [],
+      "name": "Fermento",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--gaivota",
+      "errors": [],
+      "text": 1991,
+      "canvases": 3,
+      "controls": 13,
+      "images": [],
+      "name": "Gaivota",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--grau",
+      "errors": [],
+      "text": 50,
+      "canvases": 0,
+      "controls": 1,
+      "images": [],
+      "name": "Grau",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--lastro",
+      "errors": [],
+      "text": 1401,
+      "canvases": 1,
+      "controls": 2,
+      "images": [],
+      "name": "Lastro",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--m4-competition",
+      "errors": [],
+      "text": 50,
+      "canvases": 0,
+      "controls": 1,
+      "images": [],
+      "name": "M4 Competition",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--margem",
+      "errors": [],
+      "text": 1436,
+      "canvases": 1,
+      "controls": 45,
+      "images": [
+        null
+      ],
+      "name": "Margem",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--mia",
+      "errors": [],
+      "text": 1395,
+      "canvases": 1,
+      "controls": 9,
+      "images": [],
+      "name": "Mia",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--mosaik",
+      "errors": [
+        "Failed to fetch"
+      ],
+      "text": 3646,
+      "canvases": 1,
+      "controls": 109,
+      "notices": [
+        "Demonstração visual: um serviço externo está indisponível. O backend original não faz parte desta recuperação."
+      ],
+      "images": [],
+      "name": "Mosaik",
+      "ok": true,
+      "dependencyWarning": true
+    },
+    {
+      "qaId": "recovered--nanquim",
+      "errors": [],
+      "text": 1769,
+      "canvases": 1,
+      "controls": 67,
+      "images": [],
+      "name": "Nanquim",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--norte",
+      "errors": [],
+      "text": 2055,
+      "canvases": 1,
+      "controls": 29,
+      "images": [],
+      "name": "Norte",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--nota",
+      "errors": [],
+      "text": 1836,
+      "canvases": 1,
+      "controls": 5,
+      "images": [],
+      "name": "Nota",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--prado",
+      "errors": [],
+      "text": 3454,
+      "canvases": 0,
+      "controls": 83,
+      "images": [
+        "/previews/recovered/demos/prado/img/hero-ceu.webp",
+        "/previews/recovered/demos/prado/img/hero-colinas.webp"
+      ],
+      "name": "Prado",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--proa",
+      "errors": [],
+      "text": 1472,
+      "canvases": 1,
+      "controls": 54,
+      "images": [],
+      "name": "Proa",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--prumo",
+      "errors": [],
+      "text": 2449,
+      "canvases": 1,
+      "controls": 19,
+      "images": [],
+      "name": "Prumo",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--rastro",
+      "errors": [],
+      "text": 50,
+      "canvases": 0,
+      "controls": 1,
+      "images": [],
+      "name": "Rastro",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--sereno",
+      "errors": [],
+      "text": 1640,
+      "canvases": 1,
+      "controls": 15,
+      "images": [],
+      "name": "Sereno",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--sinal",
+      "errors": [],
+      "text": 2625,
+      "canvases": 1,
+      "controls": 6,
+      "images": [],
+      "name": "Sinal",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--sopro",
+      "errors": [],
+      "text": 1616,
+      "canvases": 1,
+      "controls": 31,
+      "images": [],
+      "name": "Sopro",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--taboa",
+      "errors": [],
+      "text": 1238,
+      "canvases": 0,
+      "controls": 45,
+      "images": [],
+      "name": "Taboa",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--tecla",
+      "errors": [],
+      "text": 357,
+      "canvases": 2,
+      "controls": 4,
+      "images": [],
+      "name": "Tecla",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--torra",
+      "errors": [],
+      "text": 1131,
+      "canvases": 1,
+      "controls": 39,
+      "images": [],
+      "name": "Torra",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--traco",
+      "errors": [],
+      "text": 3629,
+      "canvases": 0,
+      "controls": 36,
+      "images": [],
+      "name": "Traço",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--trilha",
+      "errors": [],
+      "text": 50,
+      "canvases": 0,
+      "controls": 1,
+      "images": [],
+      "name": "Trilha",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--veio",
+      "errors": [],
+      "text": 2167,
+      "canvases": 1,
+      "controls": 35,
+      "images": [],
+      "name": "Veio",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--vulto",
+      "errors": [],
+      "text": 2122,
+      "canvases": 2,
+      "controls": 80,
+      "images": [],
+      "name": "Vulto",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--zenite",
+      "errors": [],
+      "text": 584,
+      "canvases": 0,
+      "controls": 26,
+      "images": [],
+      "name": "Zênite",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--conhecaoclaude",
+      "errors": [],
+      "text": 50,
+      "canvases": 0,
+      "controls": 1,
+      "images": [],
+      "name": "Esse é o Claude",
+      "ok": true
+    },
+    {
+      "qaId": "recovered--estreia",
+      "errors": [],
+      "text": 50,
+      "canvases": 0,
+      "controls": 1,
+      "images": [],
+      "name": "Nova Feature",
+      "ok": true
+    }
+  ]
+}

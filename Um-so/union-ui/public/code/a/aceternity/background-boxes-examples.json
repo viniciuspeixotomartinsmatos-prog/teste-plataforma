@@ -1,0 +1,11 @@
+{
+  "name": "background-boxes-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/background-boxes-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport React from \"react\";\nimport { Boxes } from \"../ui/background-boxes\";\nimport { cn } from \"@/lib/utils\";\n\nexport function BackgroundBoxesDemo() {\n  return (\n    <div className=\"h-96 relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg\">\n      <div className=\"absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none\" />\n\n      <Boxes />\n      <h1 className={cn(\"md:text-4xl text-xl text-white relative z-20\")}>\n        Tailwind is Awesome\n      </h1>\n      <p className=\"text-center mt-2 text-neutral-300 relative z-20\">\n        Framer motion is the best animation library ngl\n      </p>\n    </div>\n  );\n}\n"
+    }
+  ]
+}

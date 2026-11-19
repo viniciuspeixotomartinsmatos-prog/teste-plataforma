@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 44954,
+    "name": "Red Blue",
+    "description": "Pure CSS gradient background in the Bloom Field style, made with the 21st.dev Gradient Builder. 7-color palette (#081D63, #0051B4, #DC2C2C, #DD2C2C, #530097, #6500B8, #DD2C2C). Features: film grain, vignette. A drop-in, zero-dependency React component for hero sections, cards, and page backgrounds.",
+    "previewUrl": "https://cdn.21st.dev/paulkatz996/red-blue/default/preview.1794232543205-c1c0fb99-415b-46fd-afd8-888a30fbe53b.webp",
+    "videoUrl": null,
+    "author": "paulkatz996",
+    "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zSlFaMFAwR1cwWWtickl2RGlBdHRwNVZPM2cifQ",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/paulkatz996/red-blue?api_key=REDACTED\"",
+    "url": "https://21st.dev/@paulkatz996/components/red-blue"
+  },
+  "requestedRoute": "/@paulkatz996/components/red-blue",
+  "checkedAt": "2026-11-13T02:14:30.050Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 44954,
+    "componentId": 25976,
+    "authorUserId": "user_3JQZ0M01O6QogmdLPNbnt3sf7UO",
+    "name": "Red Blue",
+    "demoName": "Default",
+    "description": "Pure CSS gradient background in the Bloom Field style, made with the 21st.dev Gradient Builder. 7-color palette (#081D63, #0051B4, #DC2C2C, #DD2C2C, #530097, #6500B8, #DD2C2C). Features: film grain, vignette. A drop-in, zero-dependency React component for hero sections, cards, and page backgrounds.",
+    "previewUrl": "https://cdn.21st.dev/paulkatz996/red-blue/default/preview.1794232543205-c1c0fb99-415b-46fd-afd8-888a30fbe53b.webp",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/paulkatz996/red-blue?api_key=REDACTED\"",
+    "componentCode": "// GradientBackground — \"Red Blue\", made with the 21st.dev Gradient\n// Builder and exported as live CSS (the builder's own Copy-CSS background,\n// plus its soften-blur and grain passes). Zero dependencies: one <div> that\n// fills its parent. Drop it behind your content:\n// <div className=\"relative h-96\"><GradientBackground className=\"absolute inset-0\" /></div>\n// Remix the source recipe (colors, mode, finish) in the editor:\n// https://21st.dev/community/gradients/editor?from=4aee9fd8-6bfb-42f3-8b0e-c9ad4ecbfbbf\nexport function GradientBackground({ className }: { className?: string }) {\n  return (\n    <div\n      aria-hidden=\"true\"\n      className={className}\n      style={{\n        position: \"relative\",\n        overflow: \"hidden\",\n        width: \"100%\",\n        height: \"100%\",\n        containerType: \"size\",\n      }}\n    >\n      <div\n        style={{\n          position: \"absolute\",\n        inset: 0,\n        backgroundColor: \"#DD2C2C\",\n        backgroundImage:\n          \"url(\\\"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.165'/></svg>\\\"), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0.384) 100%), radial-gradient(circle at 66.96% 42.71%, rgba(8, 29, 99, 1) 0%, rgba(8, 29, 99, 0.844) 14.04%, rgba(8, 29, 99, 0.5) 28.07%, rgba(8, 29, 99, 0.156) 42.11%, rgba(8, 29, 99, 0) 56.15%), radial-gradient(circle at 40.53% 70.28%, rgba(0, 81, 180, 1) 0%, rgba(0, 81, 180, 0.844) 13.51%, rgba(0, 81, 180, 0.5) 27.02%, rgba(0, 81, 180, 0.156) 40.54%, rgba(0, 81, 180, 0) 54.05%), radial-gradient(circle at 45.87% 23.93%, rgba(220, 44, 44, 1) 0%, rgba(220, 44, 44, 0.844) 11.5%, rgba(220, 44, 44, 0.5) 23%, rgba(220, 44, 44, 0.156) 34.5%, rgba(220, 44, 44, 0) 46%), radial-gradient(circle at 74.13% 75.93%, rgba(221, 44, 44, 1) 0%, rgba(221, 44, 44, 0.844) 17.19%, rgba(221, 44, 44, 0.5) 34.38%, rgba(221, 44, 44, 0.156) 51.56%, rgba(221, 44, 44, 0) 68.75%), radial-gradient(circle at 10.15% 39.91%, rgba(83, 0, 151, 1) 0%, rgba(83, 0, 151, 0.844) 15.44%, rgba(83, 0, 151, 0.5) 30.88%, rgba(83, 0, 151, 0.156) 46.31%, rgba(83, 0, 151, 0) 61.75%), radial-gradient(circle at 82.7% 24.05%, rgba(101, 0, 184, 1) 0%, rgba(101, 0, 184, 0.844) 15%, rgba(101, 0, 184, 0.5) 30%, rgba(101, 0, 184, 0.156) 45%, rgba(101, 0, 184, 0) 60%), radial-gradient(circle at 38.09% 90.99%, rgba(221, 44, 44, 1) 0%, rgba(221, 44, 44, 0.844) 16.23%, rgba(221, 44, 44, 0.5) 32.45%, rgba(221, 44, 44, 0.156) 48.68%, rgba(221, 44, 44, 0) 64.9%)\",\n        backgroundSize: \"120px 120px, auto, auto, auto, auto, auto, auto, auto, auto\",\n        backgroundBlendMode: \"overlay, normal, normal, normal, normal, normal, normal, normal, normal\",\n        }}\n      />\n      <svg\n        aria-hidden=\"true\"\n        style={{\n          position: \"absolute\",\n          inset: 0,\n          width: \"100%\",\n          height: \"100%\",\n          opacity: 0.165,\n          mixBlendMode: \"overlay\",\n        }}\n      >\n        <filter id=\"grain-4aee9fd8\">\n          <feTurbulence\n            type=\"fractalNoise\"\n            baseFrequency=\"0.8\"\n            numOctaves=\"2\"\n            stitchTiles=\"stitch\"\n          />\n          <feColorMatrix type=\"saturate\" values=\"0\" />\n        </filter>\n        <rect width=\"100%\" height=\"100%\" filter=\"url(#grain-4aee9fd8)\" />\n      </svg>\n    </div>\n  )\n}\n",
+    "demoCode": "import { GradientBackground } from \"@/components/ui/red-blue\"\n\nexport default function GradientBackgroundDemo() {\n  return (\n    <div className=\"relative h-[440px] w-full overflow-hidden rounded-xl\">\n      <GradientBackground className=\"h-full w-full\" />\n    </div>\n  )\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  }
+}

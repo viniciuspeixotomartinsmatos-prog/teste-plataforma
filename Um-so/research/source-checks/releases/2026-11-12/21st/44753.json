@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 44753,
+    "name": "Matrix Rain Cursor",
+    "description": "A full-screen canvas cursor effect that renders a Matrix-style falling character rain which brightens and speeds up near the mouse pointer.",
+    "previewUrl": "https://cdn.21st.dev/user_registry_felix-au_1793377473758/matrix-rain-cursor/default/preview.1794262930779.png",
+    "videoUrl": "https://cdn.21st.dev/user_registry_felix-au_1793377473758/matrix-rain-cursor/default/video.1794262201638.mp4",
+    "author": "felix-au",
+    "authorImage": "https://avatars.githubusercontent.com/u/186883698?v=4",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/felix-au/matrix-rain-cursor?api_key=REDACTED\"",
+    "url": "https://21st.dev/@felix-au/components/matrix-rain-cursor"
+  },
+  "requestedRoute": "/@felix-au/components/matrix-rain-cursor",
+  "checkedAt": "2026-11-13T02:09:35.100Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 44753,
+    "componentId": 25836,
+    "authorUserId": "user_registry_felix-au_1793377473758",
+    "name": "Matrix Rain Cursor",
+    "demoName": "Default",
+    "description": "A full-screen canvas cursor effect that renders a Matrix-style falling character rain which brightens and speeds up near the mouse pointer.",
+    "previewUrl": "https://cdn.21st.dev/user_registry_felix-au_1793377473758/matrix-rain-cursor/default/preview.1794262930779.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/felix-au/matrix-rain-cursor?api_key=REDACTED\"",
+    "componentCode": "import { useEffect, useRef } from \"react\";\n\nexport default function MatrixRainCursor() {\n  const canvasRef = useRef(null);\n\n  useEffect(() => {\n    const canvas = canvasRef.current;\n    const ctx = canvas.getContext(\"2d\");\n    const FS = 14;\n    const CHARS = \"アイウエオカキクケコサシスセソ0123456789ABCDEF</>{}[]=>|\";\n    let cols,\n      drops,\n      mx = 0,\n      my = 0,\n      raf;\n\n    const init = () => {\n      canvas.width = innerWidth;\n      canvas.height = innerHeight;\n      cols = Math.floor(canvas.width / FS);\n      drops = Array(cols).fill(1);\n    };\n    init();\n    window.addEventListener(\"resize\", init);\n\n    const onMove = (e) => {\n      mx = e.clientX;\n      my = e.clientY;\n    };\n    window.addEventListener(\"mousemove\", onMove);\n\n    const draw = () => {\n      ctx.fillStyle = \"rgba(0,0,0,0.06)\";\n      ctx.fillRect(0, 0, canvas.width, canvas.height);\n      ctx.font = FS + \"px monospace\";\n\n      for (let i = 0; i < drops.length; i++) {\n        const x = i * FS;\n        const distX = Math.abs(x - mx);\n        const bri = distX < 60 ? 1 : distX < 130 ? 0.55 : 0.22;\n        const g = Math.floor(210 * bri);\n        const b = Math.floor(90 * bri);\n        ctx.fillStyle = `rgba(0,${g},${b},${bri})`;\n        const char = CHARS[Math.floor(Math.random() * CHARS.length)];\n        ctx.fillText(char, x, drops[i] * FS);\n\n        const reset = distX < 80 ? 0.045 : 0.012;\n        if (drops[i] * FS > canvas.height && Math.random() < reset)\n          drops[i] = 0;\n        drops[i]++;\n      }\n      raf = requestAnimationFrame(draw);\n    };\n    draw();\n\n    return () => {\n      window.removeEventListener(\"resize\", init);\n      window.removeEventListener(\"mousemove\", onMove);\n      cancelAnimationFrame(raf);\n    };\n  }, []);\n\n  return (\n    <canvas\n      ref={canvasRef}\n      style={{\n        position: \"fixed\",\n        inset: 0,\n        pointerEvents: \"none\",\n        zIndex: 9997,\n      }}\n    />\n  );\n}\n",
+    "demoCode": "import MatrixRainCursor from \"@/components/ui/matrix-rain-cursor\";\n\nexport default function MatrixRainCursorDemo() {\n  return (\n    <div className=\"relative w-full h-screen bg-black overflow-hidden\">\n      <MatrixRainCursor />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": "user_registry_felix-au_1793377473758"
+  }
+}

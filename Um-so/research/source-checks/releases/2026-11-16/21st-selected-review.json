@@ -1,0 +1,243 @@
+[
+  {
+    "id": "staged-21st-45654",
+    "sourceId": "21st",
+    "name": "Bento Grid Product Hero with Live Metric Cards",
+    "slug": "bento-grid-product-hero-with-live-metric-cards",
+    "description": "A modern, structured hero section pairing crisp value-proposition copy with an asymmetric bento grid of interactive feature cards, live status badges, and staggered Framer Motion animations.",
+    "category": "Heroes",
+    "kind": "component",
+    "url": "https://21st.dev/@themeocean/components/bento-grid-product-hero-with-live-metric-cards",
+    "sourceUrl": "https://21st.dev/@themeocean/components/bento-grid-product-hero-with-live-metric-cards",
+    "image": "/assets/releases/2026-11-16/staged-21st-45654-5c7d03c0af8c.webp",
+    "codePath": "/code/releases/staged-21st-45654.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "framer-motion",
+      "lucide-react"
+    ],
+    "tags": [
+      "React",
+      "Heroes"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-16",
+    "previewPath": "/previews/runtime/staged-21st-45654.html",
+    "video": "/assets/releases/2026-11-16/staged-21st-45654-5b4e9d5fd299.mp4",
+    "publicSlug": "staged-21st-45654"
+  },
+  {
+    "id": "staged-21st-45695",
+    "sourceId": "21st",
+    "name": "Figma Brand Hero",
+    "slug": "figma-brand-hero",
+    "description": "An eye-catching Figma-inspired hero section featuring animated multiplayer cursors, bounding box highlights, and smooth Framer Motion entry effects.",
+    "category": "Heroes",
+    "kind": "component",
+    "url": "https://21st.dev/@daiwiikharihar/components/figma-brand-hero",
+    "sourceUrl": "https://21st.dev/@daiwiikharihar/components/figma-brand-hero",
+    "image": "/assets/releases/2026-11-16/staged-21st-45695-f40334360051.webp",
+    "codePath": "/code/releases/staged-21st-45695.json",
+    "availability": "code",
+    "framework": "react",
+    "dependencies": [
+      "react",
+      "framer-motion"
+    ],
+    "tags": [
+      "React",
+      "Heroes"
+    ],
+    "license": "Source terms; preserve original notices and bundled asset restrictions.",
+    "updated": "2026-11-16",
+    "previewPath": "/previews/runtime/staged-21st-45695.html",
+    "video": "/assets/releases/2026-11-16/staged-21st-45695-c1cd3ed04791.mp4",
+    "publicSlug": "staged-21st-45695"
+  },
+  {
+    "id": "staged-21st-theme-04804ce7-ac35-40c0-9704-ed4dc11001cd",
+    "sourceId": "21st",
+    "name": "HANZO Crimson Noir",
+    "slug": "hanzo-crimson-noir-1794566808897",
+    "description": "Tema de cores com tokens CSS originais e demonstração interativa.",
+    "category": "Components",
+    "kind": "theme",
+    "url": "https://21st.dev/community/themes/hanzo-crimson-noir-1794566808897",
+    "image": "/assets/releases/2026-11-16/staged-21st-theme-04804ce7-ac35-40c0-9704-ed4dc11001cd-palette.svg",
+    "previewPath": "/previews/releases/staged-21st-theme-04804ce7-ac35-40c0-9704-ed4dc11001cd.html",
+    "codePath": "/code/releases/staged-21st-theme-04804ce7-ac35-40c0-9704-ed4dc11001cd.json",
+    "availability": "code",
+    "framework": "html",
+    "dependencies": [],
+    "tags": [
+      "CSS",
+      "Tema"
+    ],
+    "license": "Source terms",
+    "updated": "2026-11-16",
+    "publicSlug": "staged-21st-theme-04804ce7-ac35-40c0-9704-ed4dc11001cd"
+  },
+  {
+    "id": "staged-21st-theme-570d2294-54f5-41f0-a1e9-e16829869772",
+    "sourceId": "21st",
+    "name": "HANZO Blueprint Sketch",
+    "slug": "hanzo-blueprint-sketch-1794566892771",
+    "description": "Tema de cores com tokens CSS originais e demonstração interativa.",
+    "category": "Components",
+    "kind": "theme",
+    "url": "https://21st.dev/community/themes/hanzo-blueprint-sketch-1794566892771",
+    "image": "/assets/releases/2026-11-16/staged-21st-theme-570d2294-54f5-41f0-a1e9-e16829869772-palette.svg",
+    "previewPath": "/previews/releases/staged-21st-theme-570d2294-54f5-41f0-a1e9-e16829869772.html",
+    "codePath": "/code/releases/staged-21st-theme-570d2294-54f5-41f0-a1e9-e16829869772.json",
+    "availability": "code",
+    "framework": "html",
+    "dependencies": [],
+    "tags": [
+      "CSS",
+      "Tema"
+    ],
+    "license": "Source terms",
+    "updated": "2026-11-16",
+    "publicSlug": "staged-21st-theme-570d2294-54f5-41f0-a1e9-e16829869772"
+  },
+  {
+    "id": "staged-21st-theme-71bccb0b-a6fc-443f-81b3-4ea95ce42861",
+    "sourceId": "21st",
+    "name": "mine_a",
+    "slug": "mine-a-1794761728912",
+    "description": "Tema de cores com tokens CSS originais e demonstração interativa.",
+    "category": "Components",
+    "kind": "theme",
+    "url": "https://21st.dev/community/themes/mine-a-1794761728912",
+    "image": "/assets/releases/2026-11-16/staged-21st-theme-71bccb0b-a6fc-443f-81b3-4ea95ce42861-palette.svg",
+    "previewPath": "/previews/releases/staged-21st-theme-71bccb0b-a6fc-443f-81b3-4ea95ce42861.html",
+    "codePath": "/code/releases/staged-21st-theme-71bccb0b-a6fc-443f-81b3-4ea95ce42861.json",
+    "availability": "code",
+    "framework": "html",
+    "dependencies": [],
+    "tags": [
+      "CSS",
+      "Tema"
+    ],
+    "license": "Source terms",
+    "updated": "2026-11-16",
+    "publicSlug": "staged-21st-theme-71bccb0b-a6fc-443f-81b3-4ea95ce42861"
+  },
+  {
+    "id": "staged-21st-theme-77908019-53ba-41ca-ac1d-96452bf630cc",
+    "sourceId": "21st",
+    "name": "HANZO Graphite Signal",
+    "slug": "hanzo-graphite-signal-1794566963149",
+    "description": "Tema de cores com tokens CSS originais e demonstração interativa.",
+    "category": "Components",
+    "kind": "theme",
+    "url": "https://21st.dev/community/themes/hanzo-graphite-signal-1794566963149",
+    "image": "/assets/releases/2026-11-16/staged-21st-theme-77908019-53ba-41ca-ac1d-96452bf630cc-palette.svg",
+    "previewPath": "/previews/releases/staged-21st-theme-77908019-53ba-41ca-ac1d-96452bf630cc.html",
+    "codePath": "/code/releases/staged-21st-theme-77908019-53ba-41ca-ac1d-96452bf630cc.json",
+    "availability": "code",
+    "framework": "html",
+    "dependencies": [],
+    "tags": [
+      "CSS",
+      "Tema"
+    ],
+    "license": "Source terms",
+    "updated": "2026-11-16",
+    "publicSlug": "staged-21st-theme-77908019-53ba-41ca-ac1d-96452bf630cc"
+  },
+  {
+    "id": "staged-21st-theme-79950279-9137-4706-bda4-05d6650a085d",
+    "sourceId": "21st",
+    "name": "Sky Vivid",
+    "slug": "sky-vivid-1794579764848",
+    "description": "Tema de cores com tokens CSS originais e demonstração interativa.",
+    "category": "Components",
+    "kind": "theme",
+    "url": "https://21st.dev/community/themes/sky-vivid-1794579764848",
+    "image": "/assets/releases/2026-11-16/staged-21st-theme-79950279-9137-4706-bda4-05d6650a085d-palette.svg",
+    "previewPath": "/previews/releases/staged-21st-theme-79950279-9137-4706-bda4-05d6650a085d.html",
+    "codePath": "/code/releases/staged-21st-theme-79950279-9137-4706-bda4-05d6650a085d.json",
+    "availability": "code",
+    "framework": "html",
+    "dependencies": [],
+    "tags": [
+      "CSS",
+      "Tema"
+    ],
+    "license": "Source terms",
+    "updated": "2026-11-16",
+    "publicSlug": "staged-21st-theme-79950279-9137-4706-bda4-05d6650a085d"
+  },
+  {
+    "id": "staged-21st-theme-8ddc87e5-0caf-4a29-96c5-2dcd920f2281",
+    "sourceId": "21st",
+    "name": "OneBhoomi",
+    "slug": "onebhoomi-1794708423263",
+    "description": "Tema de cores com tokens CSS originais e demonstração interativa.",
+    "category": "Components",
+    "kind": "theme",
+    "url": "https://21st.dev/community/themes/onebhoomi-1794708423263",
+    "image": "/assets/releases/2026-11-16/staged-21st-theme-8ddc87e5-0caf-4a29-96c5-2dcd920f2281-palette.svg",
+    "previewPath": "/previews/releases/staged-21st-theme-8ddc87e5-0caf-4a29-96c5-2dcd920f2281.html",
+    "codePath": "/code/releases/staged-21st-theme-8ddc87e5-0caf-4a29-96c5-2dcd920f2281.json",
+    "availability": "code",
+    "framework": "html",
+    "dependencies": [],
+    "tags": [
+      "CSS",
+      "Tema"
+    ],
+    "license": "Source terms",
+    "updated": "2026-11-16",
+    "publicSlug": "staged-21st-theme-8ddc87e5-0caf-4a29-96c5-2dcd920f2281"
+  },
+  {
+    "id": "staged-21st-theme-b411079f-d742-42ce-bf07-100ae8f441f1",
+    "sourceId": "21st",
+    "name": "Orange Dark",
+    "slug": "orange-dark-1794696867595",
+    "description": "Tema de cores com tokens CSS originais e demonstração interativa.",
+    "category": "Components",
+    "kind": "theme",
+    "url": "https://21st.dev/community/themes/orange-dark-1794696867595",
+    "image": "/assets/releases/2026-11-16/staged-21st-theme-b411079f-d742-42ce-bf07-100ae8f441f1-palette.svg",
+    "previewPath": "/previews/releases/staged-21st-theme-b411079f-d742-42ce-bf07-100ae8f441f1.html",
+    "codePath": "/code/releases/staged-21st-theme-b411079f-d742-42ce-bf07-100ae8f441f1.json",
+    "availability": "code",
+    "framework": "html",
+    "dependencies": [],
+    "tags": [
+      "CSS",
+      "Tema"
+    ],
+    "license": "Source terms",
+    "updated": "2026-11-16",
+    "publicSlug": "staged-21st-theme-b411079f-d742-42ce-bf07-100ae8f441f1"
+  },
+  {
+    "id": "staged-21st-theme-ec1f7817-ef65-4394-82f1-6fa6a2d2c333",
+    "sourceId": "21st",
+    "name": "Sky Vivid",
+    "slug": "sky-vivid-1794668755639",
+    "description": "Tema de cores com tokens CSS originais e demonstração interativa.",
+    "category": "Components",
+    "kind": "theme",
+    "url": "https://21st.dev/community/themes/sky-vivid-1794668755639",
+    "image": "/assets/releases/2026-11-16/staged-21st-theme-ec1f7817-ef65-4394-82f1-6fa6a2d2c333-palette.svg",
+    "previewPath": "/previews/releases/staged-21st-theme-ec1f7817-ef65-4394-82f1-6fa6a2d2c333.html",
+    "codePath": "/code/releases/staged-21st-theme-ec1f7817-ef65-4394-82f1-6fa6a2d2c333.json",
+    "availability": "code",
+    "framework": "html",
+    "dependencies": [],
+    "tags": [
+      "CSS",
+      "Tema"
+    ],
+    "license": "Source terms",
+    "updated": "2026-11-16",
+    "publicSlug": "staged-21st-theme-ec1f7817-ef65-4394-82f1-6fa6a2d2c333"
+  }
+]

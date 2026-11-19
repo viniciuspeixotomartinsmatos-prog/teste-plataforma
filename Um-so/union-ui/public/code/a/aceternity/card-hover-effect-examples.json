@@ -1,0 +1,11 @@
+{
+  "name": "card-hover-effect-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/card-hover-effect-demo.tsx",
+      "type": "registry:example",
+      "content": "import { HoverEffect } from \"../ui/card-hover-effect\";\n\nexport function CardHoverEffectDemo() {\n  return (\n    <div className=\"max-w-5xl mx-auto px-8\">\n      <HoverEffect items={projects} />\n    </div>\n  );\n}\nexport const projects = [\n  {\n    title: \"Stripe\",\n    description:\n      \"A technology company that builds economic infrastructure for the internet.\",\n    link: \"https://stripe.com\",\n  },\n  {\n    title: \"Netflix\",\n    description:\n      \"A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.\",\n    link: \"https://netflix.com\",\n  },\n  {\n    title: \"Google\",\n    description:\n      \"A multinational technology company that specializes in Internet-related services and products.\",\n    link: \"https://google.com\",\n  },\n  {\n    title: \"Meta\",\n    description:\n      \"A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.\",\n    link: \"https://meta.com\",\n  },\n  {\n    title: \"Amazon\",\n    description:\n      \"A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.\",\n    link: \"https://amazon.com\",\n  },\n  {\n    title: \"Microsoft\",\n    description:\n      \"A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.\",\n    link: \"https://microsoft.com\",\n  },\n];\n"
+    }
+  ]
+}

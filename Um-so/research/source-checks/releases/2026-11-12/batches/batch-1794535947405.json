@@ -1,0 +1,104 @@
+[
+  {
+    "route": "/@louisstudios/components/led-badges",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44921,
+      "name": "LED Badges",
+      "description": "A loose pile of 3D LED name badges in gunmetal bezels, each scrolling its own neon dot-matrix marquee while winking smileys glow. Move the pointer to tilt the pile, click to flash every LED.",
+      "previewUrl": "https://cdn.21st.dev/user_33BVOicUp8BXVinjTnIXzbdQeeR/led-badges/default/preview.1794234059151.webp",
+      "videoUrl": "https://cdn.21st.dev/user_33BVOicUp8BXVinjTnIXzbdQeeR/led-badges/default/video.1794234054148.mp4",
+      "author": "louisstudios",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_33BVOicUp8BXVinjTnIXzbdQeeR/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/louisstudios/led-badges?api_key=REDACTED\"",
+      "url": "https://21st.dev/@louisstudios/components/led-badges"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@louisstudios/components/neon-hello",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44769,
+      "name": "Neon Hello",
+      "description": "A glass neon tube writes hello in flowing rainbow light, ringed by a breathing frame of edge glow that turns and pulses when the word is done.",
+      "previewUrl": "https://cdn.21st.dev/user_33BVOicUp8BXVinjTnIXzbdQeeR/neon-hello/default/preview.1794244785572.webp",
+      "videoUrl": "https://cdn.21st.dev/user_33BVOicUp8BXVinjTnIXzbdQeeR/neon-hello/default/video.1794244779102.mp4",
+      "author": "louisstudios",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_33BVOicUp8BXVinjTnIXzbdQeeR/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/louisstudios/neon-hello?api_key=REDACTED\"",
+      "url": "https://21st.dev/@louisstudios/components/neon-hello"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@louisstudios/components/neon-loop",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44922,
+      "name": "Neon Loop",
+      "description": "Bold extruded letters orbit two interlinked neon rings with a cyan to coral iridescent finish and a warm halo. Move the pointer to tilt the rings, drag to spin them.",
+      "previewUrl": "https://cdn.21st.dev/user_33BVOicUp8BXVinjTnIXzbdQeeR/neon-loop/default/preview.1794233933230.webp",
+      "videoUrl": "https://cdn.21st.dev/user_33BVOicUp8BXVinjTnIXzbdQeeR/neon-loop/default/video.1794233927227.mp4",
+      "author": "louisstudios",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_33BVOicUp8BXVinjTnIXzbdQeeR/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/louisstudios/neon-loop?api_key=REDACTED\"",
+      "url": "https://21st.dev/@louisstudios/components/neon-loop"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@louisstudios/components/neon-pulse",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44814,
+      "name": "Neon Pulse",
+      "description": "A heavy slanted word lit in electric blue neon, pulsing every two seconds with a glow that ripples out from the centre to the ends. Move the pointer to move where the ripple starts, click to send an extra pulse.",
+      "previewUrl": "https://cdn.21st.dev/user_33BVOicUp8BXVinjTnIXzbdQeeR/neon-pulse/default/preview.1794244726490.webp",
+      "videoUrl": "https://cdn.21st.dev/user_33BVOicUp8BXVinjTnIXzbdQeeR/neon-pulse/default/video.1794244720549.mp4",
+      "author": "louisstudios",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_33BVOicUp8BXVinjTnIXzbdQeeR/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/louisstudios/neon-pulse?api_key=REDACTED\"",
+      "url": "https://21st.dev/@louisstudios/components/neon-pulse"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@louisstudios/components/tube-grid",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44918,
+      "name": "Tube Grid",
+      "description": "A grid of glowing electric blue tubes seen end on, stretching toward a drifting vanishing point, with soft breathing light. Move the pointer to steer the tunnel, click to send a pulse of light down every tube.",
+      "previewUrl": "https://cdn.21st.dev/user_33BVOicUp8BXVinjTnIXzbdQeeR/tube-grid/default/preview.1794234175071.webp",
+      "videoUrl": "https://cdn.21st.dev/user_33BVOicUp8BXVinjTnIXzbdQeeR/tube-grid/default/video.1794234168852.mp4",
+      "author": "louisstudios",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_33BVOicUp8BXVinjTnIXzbdQeeR/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/louisstudios/tube-grid?api_key=REDACTED\"",
+      "url": "https://21st.dev/@louisstudios/components/tube-grid"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@louisstudios/components/warp-carousel",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45090,
+      "name": "Warp Carousel",
+      "description": "A ring of glowing stat cards that turns in 3D, its side cards flaring through a wide lens with cyan rims, mirrored backs and colour-matched glows. Drag, click or use the arrow keys.",
+      "previewUrl": "https://cdn.21st.dev/user_33BVOicUp8BXVinjTnIXzbdQeeR/warp-carousel/default/preview.1794341108955.webp",
+      "videoUrl": "https://cdn.21st.dev/user_33BVOicUp8BXVinjTnIXzbdQeeR/warp-carousel/default/video.1794341083903.mp4",
+      "author": "louisstudios",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_33BVOicUp8BXVinjTnIXzbdQeeR/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/louisstudios/warp-carousel?api_key=REDACTED\"",
+      "url": "https://21st.dev/@louisstudios/components/warp-carousel"
+    },
+    "status": "retained_unvalidated"
+  }
+]

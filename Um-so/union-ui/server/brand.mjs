@@ -1,0 +1,1 @@
+export function brandMarkup(iconOnly=false){return `<span role="img" aria-label="nitido company" class="nitido-brand ${iconOnly?'nitido-brand--icon':''}"><img src="/assets/branding/nitido-company.png" alt="" width="2172" height="724"><span class="nitido-brand__word" aria-hidden="true"></span><span class="nitido-brand__energy" aria-hidden="true"></span></span>`;}

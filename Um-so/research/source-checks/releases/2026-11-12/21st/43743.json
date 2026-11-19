@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 43743,
+    "name": "Swipe Actions",
+    "description": "A swipeable list row (like a mobile ticket stub) that reveals action buttons such as pin or void when swiped or tapped.",
+    "previewUrl": "https://cdn.21st.dev/user_registry_f0rextasy_1791204275988/swipe-actions/default/preview.1794426211879.png",
+    "videoUrl": "https://cdn.21st.dev/user_registry_f0rextasy_1791204275988/swipe-actions/default/video.1794426184024.mp4",
+    "author": "f0rextasy",
+    "authorImage": "https://avatars.githubusercontent.com/u/99847357?v=4",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/f0rextasy/swipe-actions?api_key=REDACTED\"",
+    "url": "https://21st.dev/@f0rextasy/components/swipe-actions"
+  },
+  "requestedRoute": "/@f0rextasy/components/swipe-actions",
+  "checkedAt": "2026-11-13T02:09:11.016Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 43743,
+    "componentId": 25208,
+    "authorUserId": "user_registry_f0rextasy_1791204275988",
+    "name": "Swipe Actions",
+    "demoName": "Default",
+    "description": "A swipeable list row (like a mobile ticket stub) that reveals action buttons such as pin or void when swiped or tapped.",
+    "previewUrl": "https://cdn.21st.dev/user_registry_f0rextasy_1791204275988/swipe-actions/default/preview.1794426211879.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/f0rextasy/swipe-actions?api_key=REDACTED\"",
+    "componentCode": "\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/components/ui/swipe-actions-utils/utils\";\n\nexport interface SwipeAction {\n  id: string;\n  label: string;\n  tone?: \"accent\" | \"danger\";\n  onSelect?: (id: string) => void;\n}\n\nexport interface SwipeActionsProps extends React.HTMLAttributes<HTMLDivElement> {\n  actions?: SwipeAction[];\n  children?: React.ReactNode;\n}\n\nconst FALLBACK: SwipeAction[] = [\n  { id: \"pin\", label: \"Pin\" },\n  { id: \"void\", label: \"Void\", tone: \"danger\" },\n];\n\n/** Swipeable row revealing stub actions. */\nexport function SwipeActions({\n  actions = FALLBACK,\n  children,\n  className,\n  ...props\n}: SwipeActionsProps) {\n  const [revealed, setRevealed] = React.useState(false);\n  const startX = React.useRef(0);\n  return (\n    <div\n      className={cn(\n        \"relative w-full overflow-hidden rounded-lg border-2 border-foreground bg-card\",\n        className,\n      )}\n      {...props}\n    >\n      <div className=\"absolute inset-y-0 right-0 flex\" aria-hidden={!revealed}>\n        {actions.map((a) => (\n          <button\n            key={a.id}\n            type=\"button\"\n            tabIndex={revealed ? 0 : -1}\n            onClick={() => {\n              a.onSelect?.(a.id);\n              setRevealed(false);\n            }}\n            className={cn(\n              \"px-4 font-mono text-[11px] font-bold uppercase focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring\",\n              a.tone === \"danger\"\n                ? \"bg-destructive text-white\"\n                : \"bg-accent text-accent-foreground\",\n            )}\n          >\n            {a.label}\n          </button>\n        ))}\n      </div>\n      <div\n        className={cn(\n          \"relative bg-card px-4 py-3 font-mono text-xs text-foreground transition-transform motion-reduce:transition-none\",\n          revealed && \"-translate-x-32\",\n        )}\n        onTouchStart={(e) => {\n          startX.current = e.touches[0].clientX;\n        }}\n        onTouchEnd={(e) => {\n          const dx = e.changedTouches[0].clientX - startX.current;\n          if (dx < -40) setRevealed(true);\n          if (dx > 40) setRevealed(false);\n        }}\n      >\n        <button\n          type=\"button\"\n          onClick={() => setRevealed((r) => !r)}\n          aria-expanded={revealed}\n          className=\"flex w-full items-center justify-between focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring\"\n        >\n          <span>{children ?? \"ORDER BB-90210 - 2 STUBS\"}</span>\n          <span className=\"text-muted-foreground\" aria-hidden=\"true\">\n            {\"<\"}\n          </span>\n        </button>\n      </div>\n    </div>\n  );\n}\n\nexport default SwipeActions;\n",
+    "demoCode": "import { SwipeActions } from \"@/components/ui/swipe-actions\";\n\nexport default function SwipeActionsDemo() {\n  return (\n    <div className=\"flex w-full max-w-sm items-center justify-center bg-background p-8\">\n      <SwipeActions />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": "user_registry_f0rextasy_1791204275988"
+  }
+}

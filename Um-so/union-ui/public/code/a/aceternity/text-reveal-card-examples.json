@@ -1,0 +1,11 @@
+{
+  "name": "text-reveal-card-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/text-reveal-card-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport React from \"react\";\nimport {\n  TextRevealCard,\n  TextRevealCardDescription,\n  TextRevealCardTitle,\n} from \"../ui/text-reveal-card\";\n\nexport function TextRevealCardPreview() {\n  return (\n    <div className=\"flex items-center justify-center bg-[#0E0E10] h-[40rem] rounded-2xl w-full\">\n      <TextRevealCard\n        text=\"You know the business\"\n        revealText=\"I know the chemistry \"\n      >\n        <TextRevealCardTitle>\n          Sometimes, you just need to see it.\n        </TextRevealCardTitle>\n        <TextRevealCardDescription>\n          This is a text reveal card. Hover over the card to reveal the hidden\n          text.\n        </TextRevealCardDescription>\n      </TextRevealCard>\n    </div>\n  );\n}\n"
+    }
+  ]
+}

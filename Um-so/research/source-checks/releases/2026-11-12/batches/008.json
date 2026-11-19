@@ -1,0 +1,138 @@
+[
+  {
+    "route": "/@aakashmehra/components/ai-composer",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44960,
+      "name": "AI Composer",
+      "description": "A white pill to talk to an assistant. Hover and it opens into a rectangle with a model picker, Search and Research toggles, and an attach button. The placeholder cycles through example asks, the mic dictates a demo message, and it turns into a send arrow once there's text. Soft drifting pink and blue brush strokes behind.",
+      "previewUrl": "https://cdn.21st.dev/user_3LYLgwJ6QI0pqW5236yVVu72Qtj/ai-composer/default/preview.1794244814542.webp",
+      "videoUrl": "https://cdn.21st.dev/user_3LYLgwJ6QI0pqW5236yVVu72Qtj/ai-composer/default/video.1794244807709.mp4",
+      "author": "aakashmehra",
+      "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18zTFlMaDNZM01NTm5mS1VBbVZ6cDBkSTZ5OGkifQ",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/aakashmehra/ai-composer?api_key=REDACTED\"",
+      "url": "https://21st.dev/@aakashmehra/components/ai-composer"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@aakashmehra/components/receipt-printer",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45129,
+      "name": "Receipt Printer",
+      "description": "A thermal printer seen from above. Press the red PRINT button and a receipt rises smoothly out of the slot with a motor whir. The paper is one continuous strip: press PRINT mid-print to stop, press again to print another receipt joined on, and pull the strip to tear it off along a zigzag edge. Sound toggle included.",
+      "previewUrl": "https://cdn.21st.dev/user_3LYLgwJ6QI0pqW5236yVVu72Qtj/receipt-printer/default/preview.1794406651929.png",
+      "videoUrl": "https://cdn.21st.dev/user_3LYLgwJ6QI0pqW5236yVVu72Qtj/receipt-printer/default/video.1794406373773.mp4",
+      "author": "aakashmehra",
+      "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18zTFlMaDNZM01NTm5mS1VBbVZ6cDBkSTZ5OGkifQ",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/aakashmehra/receipt-printer?api_key=REDACTED\"",
+      "url": "https://21st.dev/@aakashmehra/components/receipt-printer"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@aakashmehra/components/rotary-passcode",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44959,
+      "name": "Rotary Passcode",
+      "description": "A gold rotary phone that guards your content. Dial the passcode by turning the finger wheel (it spins back with a ratchet click per number); the right code rings the bell, lifts the handset and reveals what's inside, a wrong one rattles it, and a decoy code gets an apology. Once unlocked it's a working phone: dial tone, dial any number, ring-back, connect to named contacts with a call timer. While locked, incoming calls ring and can be answered by lifting the handset. Keyboard dialing, light and dark theme, synthesized sounds.",
+      "previewUrl": "https://cdn.21st.dev/aakashmehra/rotary-passcode/default/preview.1794286488398-2a016578-7613-4d21-9545-aebc81c4cf4c.png",
+      "videoUrl": "https://cdn.21st.dev/aakashmehra/rotary-passcode/default/video.1794286488398-2a016578-7613-4d21-9545-aebc81c4cf4c.mp4",
+      "author": "aakashmehra",
+      "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18zTFlMaDNZM01NTm5mS1VBbVZ6cDBkSTZ5OGkifQ",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/aakashmehra/rotary-passcode?api_key=REDACTED\"",
+      "url": "https://21st.dev/@aakashmehra/components/rotary-passcode"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@aakashmehra/components/scroll-stacking-cards",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44928,
+      "name": "Scroll Stacking Cards",
+      "description": "Sticky scroll stacking cards for a portfolio or project showcase. As you scroll, each card rises from below, leaning toward you and out of focus, then flattens and sharpens as it lands in the centre, while the cards beneath sink back and peek out above like a deck. Every card shows a whole website edge to edge, with its name and link set into a cut-out corner, one click from the live site. Pinned, spring-smoothed and 60fps, with a reduced motion fallback. Pass your own projects and screenshots.",
+      "previewUrl": "https://cdn.21st.dev/aakashmehra/scroll-stacking-cards/default/preview.1794202498830-c5f696f1-04c2-4711-ae70-d1f44f6463ef.png",
+      "videoUrl": "https://cdn.21st.dev/aakashmehra/scroll-stacking-cards/default/video.1794202498830-c5f696f1-04c2-4711-ae70-d1f44f6463ef.mp4",
+      "author": "aakashmehra",
+      "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18zTFlMaDNZM01NTm5mS1VBbVZ6cDBkSTZ5OGkifQ",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/aakashmehra/scroll-stacking-cards?api_key=REDACTED\"",
+      "url": "https://21st.dev/@aakashmehra/components/scroll-stacking-cards"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@aakashmehra/components/smoke-login",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44955,
+      "name": "Smoke Login",
+      "description": "A split sign-in page. Live WebGL smoke with an acid green thread drifts across a stack of paper on the left and swirls around your pointer; the form sits on plain paper on the right. Opens in dark mode with a light / dark switch, blur-in entrance, Inter.",
+      "previewUrl": "https://cdn.21st.dev/user_3LYLgwJ6QI0pqW5236yVVu72Qtj/smoke-login/default/preview.1794244930926.webp",
+      "videoUrl": "https://cdn.21st.dev/user_3LYLgwJ6QI0pqW5236yVVu72Qtj/smoke-login/default/video.1794244922898.mp4",
+      "author": "aakashmehra",
+      "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18zTFlMaDNZM01NTm5mS1VBbVZ6cDBkSTZ5OGkifQ",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/aakashmehra/smoke-login?api_key=REDACTED\"",
+      "url": "https://21st.dev/@aakashmehra/components/smoke-login"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@abushaidislam7/components/interactive-logo-grid",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44784,
+      "name": "Interactive Logo Grid",
+      "description": "An interactive 1px border bento grid showcasing client logos with smooth hover states, tags, and case study excerpts.",
+      "previewUrl": "https://cdn.21st.dev/abushaidislam7/interactive-logo-grid/default/preview.1794053483161-ab0dbd24-7d4e-4fa6-891a-2b427afc0322.png",
+      "videoUrl": "https://cdn.21st.dev/abushaidislam7/interactive-logo-grid/default/video.1794053483161-ab0dbd24-7d4e-4fa6-891a-2b427afc0322.mp4",
+      "author": "abushaidislam7",
+      "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18yemJyc05aelk1S1JieGhOMlJUcHZWU2JsVEQifQ",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/abushaidislam7/interactive-logo-grid?api_key=REDACTED\"",
+      "url": "https://21st.dev/@abushaidislam7/components/interactive-logo-grid"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@adit-firdaus/components/popover",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 43776,
+      "name": "Popover",
+      "description": "An anchored floating panel that opens from a trigger button, auto-flips and shifts to stay inside the viewport, and dismisses on outside press, Escape, or focus leaving it.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_adit-firdaus_1791308692007/popover/placements/preview.1794427430406.png",
+      "videoUrl": "https://cdn.21st.dev/user_registry_adit-firdaus_1791308692007/popover/placements/video.1794427382038.mp4",
+      "author": "adit-firdaus",
+      "authorImage": "https://avatars.githubusercontent.com/u/64578017?v=4",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/adit-firdaus/popover?api_key=REDACTED\"",
+      "url": "https://21st.dev/@adit-firdaus/components/popover"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@adit-firdaus/components/steps",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 43788,
+      "name": "Steps",
+      "description": "A numbered progress stepper for walking a user through a multi-step sequence like checkout or device setup, with horizontal/vertical layouts, per-step status (complete/current/upcoming/error), and an optional clickable mode with a sliding selection thumb.",
+      "previewUrl": "https://cdn.21st.dev/adit-firdaus/steps/sizes/preview.1793440992793-d3abc7b7-1d53-4595-8cdd-fb0dd4e0c4c3.png",
+      "videoUrl": null,
+      "author": "adit-firdaus",
+      "authorImage": "https://avatars.githubusercontent.com/u/64578017?v=4",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/adit-firdaus/steps?api_key=REDACTED\"",
+      "url": "https://21st.dev/@adit-firdaus/components/steps"
+    },
+    "status": "retained_unvalidated"
+  }
+]

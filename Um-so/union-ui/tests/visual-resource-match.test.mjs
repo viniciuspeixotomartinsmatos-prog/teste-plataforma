@@ -1,0 +1,3 @@
+import test from'node:test';import assert from'node:assert/strict';import{visualDescriptor,rankVisualResources}from'../src/visual-resource-match.js';
+const pixels=(r,g,b)=>new Uint8ClampedArray(Array.from({length:16},()=>[r,g,b,255]).flat());
+test('actual pixel descriptors rank matching visual resources without inventing semantic equivalence',()=>{const red=visualDescriptor(pixels(255,0,0),4,4),blue=visualDescriptor(pixels(0,0,255),4,4);assert.equal(red.length,16);assert.equal(rankVisualResources(red,[{id:'blue',vector:blue},{id:'red',vector:red}])[0].id,'red');assert.equal(rankVisualResources(red,[{id:'red',vector:red}])[0].distance,0);assert.deepEqual(rankVisualResources([NaN],[]),[]);assert.equal(visualDescriptor(new Uint8Array(64),4,4),null);});

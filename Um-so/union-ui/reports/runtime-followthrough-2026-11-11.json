@@ -1,0 +1,946 @@
+{
+  "scope": "103 selected previews: 80 without a prior browser record and 23 old failures. First paint/media and bounded synthetic events, not complete manual interaction acceptance.",
+  "authenticated": true,
+  "sandbox": "opaque allow-scripts allow-downloads",
+  "results": [
+    {
+      "id": "21st-02c21638dade",
+      "name": "Ball Model Picker",
+      "checkedAt": "2026-11-11T12:28:02.071Z",
+      "documentSha256": "34e2e1523898a156d9f03849987132f18d9a11d2a8c0427d87bb4bed5a4c3b26",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "21st-d0e4067d93f1",
+      "name": "3D Ascii Model Viewer",
+      "checkedAt": "2026-11-11T12:43:16.772Z",
+      "documentSha256": "86aa74691a708b3e1e1255b25e04cae92daa61830f11a9d2829c59f04cd9b2bd",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "21st-144fcbfa1a18",
+      "name": "Chatgpt Model Selector",
+      "checkedAt": "2026-11-11T12:28:02.654Z",
+      "documentSha256": "f42687cc4202fdda99d65118c8174378d9da49f0ecbc6e0ca6ba1c5a92ac8d26",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "21st-69a8df2670a9",
+      "name": "Claude Model Selector",
+      "checkedAt": "2026-11-11T12:28:03.751Z",
+      "documentSha256": "aca076b250238a482fdb66ac101f9fd20a6ad238d584cd49acd3d97f699ead1e",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "21st-c31b2034c9ea",
+      "name": "Energy Beam",
+      "checkedAt": "2026-11-11T12:43:16.753Z",
+      "documentSha256": "75de315f26d3f18788784f795ba1dc07f4e37f9a320be5f778e7d557dd39720a",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "21st-e1e32102c2c9",
+      "name": "Contributors Section",
+      "checkedAt": "2026-11-11T12:28:04.428Z",
+      "documentSha256": "15b825a20ad9210d2fd73dc190e51402fd846e6b2e4974d5fff981664fc12a6a",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "21st-3df6cd94eb26",
+      "name": "Featured Crm Demo Section",
+      "checkedAt": "2026-11-11T12:28:05.363Z",
+      "documentSha256": "622b7cfe6c29a202f4d22b746a24e22f558a01481405ee1ec81cd6485dbf697a",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "21st-8712cd5ba9a6",
+      "name": "Hls Video Player",
+      "checkedAt": "2026-11-11T12:43:17.450Z",
+      "documentSha256": "7babc45ead8a89402bd60014456816c4c52855e77f474ac70cf2dbddc0c55074",
+      "passed": false,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "21st-33e4b907bec1",
+      "name": "Liquid Connector",
+      "checkedAt": "2026-11-11T12:28:06.965Z",
+      "documentSha256": "8e35882c13218b25de85743c5c89c575a0e53b688e23ff4a32f2bc55567422c9",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "21st-d17b0be2c3ab",
+      "name": "Liquid Aurora",
+      "checkedAt": "2026-11-11T12:43:53.770Z",
+      "documentSha256": "4084d35a2383f97948d24de6440126cc2fdfc37801cc5ea739a447f1815df068",
+      "passed": false,
+      "ready": false,
+      "errors": [],
+      "reason": "deadline"
+    },
+    {
+      "id": "21st-5cc4f0384464",
+      "name": "Loader",
+      "checkedAt": "2026-11-11T12:43:53.779Z",
+      "documentSha256": "5e22e90125cbbef7f582b094c7d72befc57bdc018faf9250af760a8d8e0e2a95",
+      "passed": false,
+      "ready": false,
+      "errors": [],
+      "reason": "deadline"
+    },
+    {
+      "id": "21st-fa6fb3a3c735",
+      "name": "Markdown",
+      "checkedAt": "2026-11-11T12:43:55.449Z",
+      "documentSha256": "02f2cbc09f51c15494dfe6df146034df602d9a28edae888ec308af5ac55b4607",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "21st-de702b2d1c88",
+      "name": "Loader 10",
+      "checkedAt": "2026-11-11T12:43:54.457Z",
+      "documentSha256": "462a163e48ebfef191ccbfd641130a6e24869b54a596c0dc5cb8bbb9b28b7c2a",
+      "passed": false,
+      "ready": false,
+      "errors": [],
+      "reason": "deadline"
+    },
+    {
+      "id": "21st-cf994246c1c7",
+      "name": "Model Picker",
+      "checkedAt": "2026-11-11T12:28:44.724Z",
+      "documentSha256": "2b0916ec2a987d4a9d1224cf918787a5b2a008a6fad5124fcf12c1455385f689",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "21st-84b5c4cf7d2f",
+      "name": "Mine",
+      "checkedAt": "2026-11-11T12:44:30.797Z",
+      "documentSha256": "01ec058180f60851301165a03b8ff1a1000848dbf2e07ee8f763f117798aa137",
+      "passed": false,
+      "ready": false,
+      "errors": [],
+      "reason": "deadline"
+    },
+    {
+      "id": "21st-000947d76d8c",
+      "name": "Oval Eggs",
+      "checkedAt": "2026-11-11T12:44:31.473Z",
+      "documentSha256": "cf419c460f37dee7458872cfd374277be6619c34f40f6f86b51e83cfdc5118a4",
+      "passed": false,
+      "ready": false,
+      "errors": [],
+      "reason": "deadline"
+    },
+    {
+      "id": "21st-5f81db12ac28",
+      "name": "Progress",
+      "checkedAt": "2026-11-11T12:44:32.458Z",
+      "documentSha256": "c880c61d02117369d948e720d54b552931976376e8d89a2f970c487000180085",
+      "passed": false,
+      "ready": false,
+      "errors": [],
+      "reason": "deadline"
+    },
+    {
+      "id": "21st-bdc5c25e6da3",
+      "name": "Shared Element Transition Dialog",
+      "checkedAt": "2026-11-11T12:29:22.684Z",
+      "documentSha256": "8afc57e726bdd492b8b4391d8990ce901a1c76b2d1e218426362a3b6b4c8d999",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "21st-f133768758ce",
+      "name": "Sparkles",
+      "checkedAt": "2026-11-11T12:29:23.551Z",
+      "documentSha256": "0d61765bdeb586e9cce7acd6c198e09dc1ca2a2eef0baa8a1fa664d1387af7ff",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "21st-456e520bdd30",
+      "name": "Status Indicator",
+      "checkedAt": "2026-11-11T12:29:24.358Z",
+      "documentSha256": "ea01fcc8aa384420e06093d2793a8950b884f30f65008834d8ddd7c01eb38e77",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "21st-1bdc946da52c",
+      "name": "Table Of Content",
+      "checkedAt": "2026-11-11T12:29:25.149Z",
+      "documentSha256": "8aae0800d4b4395a3170285ff3b34513a14d824bdc660ebf52f52c1a556f3dfd",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "21st-96d1b7e8f0f7",
+      "name": "Warp Gradient",
+      "checkedAt": "2026-11-11T12:29:25.980Z",
+      "documentSha256": "385ba165eb905298427b76892dfaf7f9e5c3abe08c0e33a9607ec0529c6010a8",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "magic--dither-field",
+      "name": "Dither Field",
+      "checkedAt": "2026-11-11T12:29:26.902Z",
+      "documentSha256": "98db5a9b12eaad83c5daf769334a82f09a3a392056d7825bc4af51b4c10fa0b5",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--3d-globe",
+      "name": "3D Globe",
+      "checkedAt": "2026-11-11T12:44:33.360Z",
+      "documentSha256": "914cadd9783ae82ae9a28e48fc07446bad53f1a745dc7d1333a117217f48a712",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--3d-testimonials",
+      "name": "3D Testimonials",
+      "checkedAt": "2026-11-11T12:29:28.935Z",
+      "documentSha256": "a946480394ef6d97484b3f2ce1bc48ab99c0d5980e4084d1166ee8f2e38f91d2",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--ai-prompt-box",
+      "name": "AI Prompt Box",
+      "checkedAt": "2026-11-11T12:29:29.691Z",
+      "documentSha256": "2ccfd01d8c70940e6eecf580f16abf50b5bb67fef338eafe42ef9137b5003144",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--ancora",
+      "name": "Âncora",
+      "checkedAt": "2026-11-11T12:29:30.739Z",
+      "documentSha256": "505ea6cfe0566456852ea5441db4c4ff4ecc2ba3b7c23389aa4e130d857e50a3",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--apoteose",
+      "name": "Apoteose",
+      "checkedAt": "2026-11-11T12:29:31.502Z",
+      "documentSha256": "af92074f0ff84d7b5b7e456bfc67cc626ecf45ea73b2ff13a0d9a24c1cdcc432",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--avatar-group",
+      "name": "Avatar Group",
+      "checkedAt": "2026-11-11T12:29:33.306Z",
+      "documentSha256": "304b690c67b3181eeaeff9e3b8dd8513a15da357572463a0ff541995ab4ca7ea",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--campo",
+      "name": "Campo",
+      "checkedAt": "2026-11-11T12:29:35.121Z",
+      "documentSha256": "55f160536b50590dc7cb63f4dd53637aa1d7cc71f5ef86b85a2a701f3c59b744",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--circular-navigation",
+      "name": "Circular Navigation",
+      "checkedAt": "2026-11-11T12:29:36.919Z",
+      "documentSha256": "c86e9ea5ed88e50f451031f39da881fd22efdcc10b4298505679879682863cc7",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--clothing-rail-hero",
+      "name": "Clothing Rail Hero",
+      "checkedAt": "2026-11-11T12:44:35.177Z",
+      "documentSha256": "8a87a1fd50ea36362d55e8642886a54144efb32e465c26701e611048cf6c5f65",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--cristal",
+      "name": "Cristal",
+      "checkedAt": "2026-11-11T12:29:40.495Z",
+      "documentSha256": "49f4e073099ecc7e372e97032d3f4271602e22ffb87ec7627173bad3ce957ab2",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--cromo",
+      "name": "Cromo",
+      "checkedAt": "2026-11-11T12:29:42.293Z",
+      "documentSha256": "ff77cb76c034e6b1ca4e05f57eddfb02bd4845b5052d73270efdf242679b09f6",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--esteira",
+      "name": "Esteira",
+      "checkedAt": "2026-11-11T12:29:44.085Z",
+      "documentSha256": "f6515c8be08532c3f884d7e7b0d121845ba06550fefacf1fb76b661fe410e40f",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--floating-dock",
+      "name": "Floating Dock",
+      "checkedAt": "2026-11-11T12:29:45.904Z",
+      "documentSha256": "a6a4081094de5d05cca595dce148ea4d957aa4900937e2c87a0e32fa540a3432",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--flue",
+      "name": "Flue",
+      "checkedAt": "2026-11-11T12:29:47.710Z",
+      "documentSha256": "76e0c93c30d8797d90400526789460b6f8582f61b61af19ddd571931273c1354",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "21st-d4aa2cb3b048",
+      "name": "Rising Ball",
+      "checkedAt": "2026-11-11T12:45:07.808Z",
+      "documentSha256": "6e81c7bcc64241598330331c4e5392eb28049265f2691ab503c9667263208b6a",
+      "passed": false,
+      "ready": false,
+      "errors": [],
+      "reason": "deadline"
+    },
+    {
+      "id": "recovered--glass-folder",
+      "name": "Glass Folder",
+      "checkedAt": "2026-11-11T12:29:58.916Z",
+      "documentSha256": "cb080847d898ef2a10fd294acc0d37b34d50321cfe066503bc357e97c9288b65",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--gota",
+      "name": "Gota",
+      "checkedAt": "2026-11-11T12:30:00.707Z",
+      "documentSha256": "dfb36d19bd587e1476bfae9fca245eff32240e2a6028fcc99bef59438f9df0fc",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--helice",
+      "name": "Hélice",
+      "checkedAt": "2026-11-11T12:30:02.498Z",
+      "documentSha256": "1b72e2c7df078ede144c63861b66995546dbc25af5354a88f4292510ee7562a0",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--holo-card",
+      "name": "Holo Card",
+      "checkedAt": "2026-11-11T12:30:04.275Z",
+      "documentSha256": "59c1d22c496754c40ff72f14bf12f84a7ca89a9963d963d87dd2325607db6f6d",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--holo-trading-card",
+      "name": "Holo Trading Card",
+      "checkedAt": "2026-11-11T12:30:06.064Z",
+      "documentSha256": "bce6e638b50352484c17f1515e02fc884af7cacbeb7627f02675013dd8465a6b",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--aurora",
+      "name": "Aurora",
+      "checkedAt": "2026-11-11T12:44:34.284Z",
+      "documentSha256": "2ac6aa3112131222ec01b121ac0ec64ac31c083505d53fec5413a67b495441f2",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--liquid-glass-dock",
+      "name": "Liquid Glass Dock",
+      "checkedAt": "2026-11-11T12:30:09.521Z",
+      "documentSha256": "e0153bf0a82ab19c7d187fa2b632d0ced3db0f4b0b4b8fe6b4d46c04e6ef2ef2",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--liquid-glass",
+      "name": "Liquid Glass",
+      "checkedAt": "2026-11-11T12:30:11.317Z",
+      "documentSha256": "aa9b2bfaee5c238e8bc6dc37ca8e14cb60e4a749a468390b94f820f8e25fa79b",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--mercurio",
+      "name": "Mercúrio",
+      "checkedAt": "2026-11-11T12:30:13.123Z",
+      "documentSha256": "ad97b165854aef5f10ee2d97dcc8a09896c875ebba0ffcd24ff55bb71b5ff360",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--fluxo",
+      "name": "Fluxo",
+      "checkedAt": "2026-11-11T12:44:36.082Z",
+      "documentSha256": "ea34cdccdca54c036ffe4db349015b6b24d6b4bacbe3a89b5bc8da4de2a54175",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--nebulosa",
+      "name": "Nebulosa",
+      "checkedAt": "2026-11-11T12:30:26.540Z",
+      "documentSha256": "5804ff75c40b6fe5a8ba739b865db17139fd58be52583d2a7dd103a2ed7be658",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--limalha",
+      "name": "Limalha",
+      "checkedAt": "2026-11-11T12:44:36.984Z",
+      "documentSha256": "b1b4161d4ca039317203bd83d0e352cb0e1c0ff181eb5e4c3aaaed87d8431e73",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--relevo",
+      "name": "Relevo",
+      "checkedAt": "2026-11-11T12:30:44.875Z",
+      "documentSha256": "d5df1118a9db1e55bea870d774ffe25736518ef0ee84e07bd1b84850bdd04304",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--moldura",
+      "name": "Moldura",
+      "checkedAt": "2026-11-11T12:44:39.486Z",
+      "documentSha256": "3f66ae2cf783d13cd4fcd77844bbf70a40b1b85ba6004a855149139d15e5400c",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--pontilhado",
+      "name": "Pontilhado",
+      "checkedAt": "2026-11-11T12:44:38.775Z",
+      "documentSha256": "14a3d2e4266558361d61e7e0e575c299b436a053a02785341f61c3785220e910",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--alto",
+      "name": "Alto",
+      "checkedAt": "2026-11-11T12:31:06.647Z",
+      "documentSha256": "ebb271335e25b1dc1f4dce6657a843d35c25d18e938fd9534f24e0d945dd3018",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--aroeira",
+      "name": "Aroeira",
+      "checkedAt": "2026-11-11T12:31:08.798Z",
+      "documentSha256": "c0aae87da2a275e2a785ef871e51c155d4774b46066f7226b1b389c84ed2f45f",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--brasa",
+      "name": "Brasa",
+      "checkedAt": "2026-11-11T12:31:11.003Z",
+      "documentSha256": "fdee5c98d643de45870c629df9c87de24e6b24dd5b91f1f43b9bee249dffd588",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--breu",
+      "name": "Breu",
+      "checkedAt": "2026-11-11T12:31:13.128Z",
+      "documentSha256": "c349027ffb40514e9cc140b9d26e09c6529b1f5b2f9ad7ef554b5b1518ad0f46",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--classe-g",
+      "name": "Classe G",
+      "checkedAt": "2026-11-11T12:31:14.707Z",
+      "documentSha256": "dfd0ba2689d62d7eb7b135179501751cc4fafff9dd00a8a17685baa801b13e4b",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--clausula",
+      "name": "Cláusula",
+      "checkedAt": "2026-11-11T12:31:16.897Z",
+      "documentSha256": "e5d4f3cdc742ef2cba8c4cd97c9d6571ee7f03637c69aeac39494200b7aff4e3",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--corda",
+      "name": "Corda",
+      "checkedAt": "2026-11-11T12:31:19.078Z",
+      "documentSha256": "82ee366767545ad69d337caa7fdb5564ed500f578fe414546731fcf6cfeed6d1",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--fermento",
+      "name": "Fermento",
+      "checkedAt": "2026-11-11T12:31:21.100Z",
+      "documentSha256": "906580d828a29d061605ca943b9c8645a13b4f38383387ac5d82325e4cf73d9b",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--tipos",
+      "name": "Tipos",
+      "checkedAt": "2026-11-11T12:44:40.567Z",
+      "documentSha256": "f63445ff860255661329819bfbad4da8c0fa51fa7b03c9f1a9ff8cd3503006b3",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--gaivota",
+      "name": "Gaivota",
+      "checkedAt": "2026-11-11T12:31:23.163Z",
+      "documentSha256": "1565a450b91aedefc44ea9746aa7444bb025e83fc50aadeaa729e7becb4624f3",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--grau",
+      "name": "Grau",
+      "checkedAt": "2026-11-11T12:31:23.469Z",
+      "documentSha256": "f54aaeaa5e9530d2155f8d9200335fe010a89f9f16fc355688bf1f0463d4664c",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--m4-competition",
+      "name": "M4 Competition",
+      "checkedAt": "2026-11-11T12:31:25.543Z",
+      "documentSha256": "8bd88664b706cc68bf7dcbbd2e9b49d7709efa277c800e73ac48ab4b61fc1707",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--lastro",
+      "name": "Lastro",
+      "checkedAt": "2026-11-11T12:31:25.835Z",
+      "documentSha256": "627ff80f268ca4637a28a73906136324e9a0f33a3c4152c0b201a3eaa595f01b",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--topografia",
+      "name": "Topografia",
+      "checkedAt": "2026-11-11T12:44:41.295Z",
+      "documentSha256": "c26c79d89f33292b224d6557169b466fad62fd0881b1b38f6a3158c6d90005a5",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--mia",
+      "name": "Mia",
+      "checkedAt": "2026-11-11T12:31:28.641Z",
+      "documentSha256": "135fb166f2b22222b6f9a2da7f38a741a8bf6949e32fa7eee0ccaafdfc0d9326",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--mosaik",
+      "name": "Mosaik",
+      "checkedAt": "2026-11-11T12:44:44.014Z",
+      "documentSha256": "64b5adf7652294b7b700cba142dc8a7d99858fe7fa083c43250d0afa74a04b2e",
+      "passed": false,
+      "ready": true,
+      "errors": [
+        "Failed to fetch"
+      ]
+    },
+    {
+      "id": "recovered--nanquim",
+      "name": "Nanquim",
+      "checkedAt": "2026-11-11T12:31:30.802Z",
+      "documentSha256": "60b08072c736d67168fc3bfb137235493df60dc8ce1b8fa2318054619c232857",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--norte",
+      "name": "Norte",
+      "checkedAt": "2026-11-11T12:31:32.212Z",
+      "documentSha256": "186941829a285cfde4e5e93b738580af27c1e19f53d9573ebd86110091af5945",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--nota",
+      "name": "Nota",
+      "checkedAt": "2026-11-11T12:31:33.289Z",
+      "documentSha256": "ee6dde81e696a8ca0263fc2037e8a489a893bcc3a1a6eb1f3f1c8ebefdbc3700",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--prado",
+      "name": "Prado",
+      "checkedAt": "2026-11-11T12:31:34.295Z",
+      "documentSha256": "dbecd2d8ec1cf227c085f6019b3867ede9cfef7244842f4408d2d5adf0ce039b",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--proa",
+      "name": "Proa",
+      "checkedAt": "2026-11-11T12:31:35.515Z",
+      "documentSha256": "b9be5c7ec55c1aa0c8fb248630ce582ffba3aeab919f433fb611944e8ae4671a",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--prumo",
+      "name": "Prumo",
+      "checkedAt": "2026-11-11T12:31:36.381Z",
+      "documentSha256": "e4e8e5f0319d9bceb8c5b23f97095386d8551cb71fd182af4048969c8ec5933b",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--rastro",
+      "name": "Rastro",
+      "checkedAt": "2026-11-11T12:31:37.100Z",
+      "documentSha256": "369ecfd6f474f30771629d4d4c9a4f184c1ea065d5ca804649dedc3b9c5beed5",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--sereno",
+      "name": "Sereno",
+      "checkedAt": "2026-11-11T12:31:38.551Z",
+      "documentSha256": "317535e36b98f15b0ef3f28a577842144403ed5bf0055c742c9acfdf492e7de7",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--sinal",
+      "name": "Sinal",
+      "checkedAt": "2026-11-11T12:31:39.170Z",
+      "documentSha256": "4d5efc2f39ccfb1e54f15512bd668030c79d2d14c170f49ad66e51c1bbccddda",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--sopro",
+      "name": "Sopro",
+      "checkedAt": "2026-11-11T12:31:40.724Z",
+      "documentSha256": "4857f4cb45671d8e6cb8a126710a846a8418f682bd56b87df07afbc25590b09a",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--taboa",
+      "name": "Taboa",
+      "checkedAt": "2026-11-11T12:31:41.712Z",
+      "documentSha256": "10d20b848ef44fee63855293c8062e09442b10fb49076f32d562a5bcd641c8bb",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--tecla",
+      "name": "Tecla",
+      "checkedAt": "2026-11-11T12:31:43.614Z",
+      "documentSha256": "bc01e376ec31ecd24feb8d7f87e70adb57f2c2947a1d3e65165259526a546bc1",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--torra",
+      "name": "Torra",
+      "checkedAt": "2026-11-11T12:31:44.970Z",
+      "documentSha256": "096cb83cd0feed1e1920cc9d69cbb0959662d3eecea3ba71ac5f472ca85d1fe5",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--traco",
+      "name": "Traço",
+      "checkedAt": "2026-11-11T12:31:46.152Z",
+      "documentSha256": "c05dd23bf932f546479c492bfa7a92d047bb84e921cd1dca2e500158b19a8712",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--trilha",
+      "name": "Trilha",
+      "checkedAt": "2026-11-11T12:31:46.610Z",
+      "documentSha256": "9ac29050ac47ff7d7ca834ea48ebfbb53bbd5ff56138617392fc9cefb3e58896",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--veio",
+      "name": "Veio",
+      "checkedAt": "2026-11-11T12:31:48.691Z",
+      "documentSha256": "c39180aeefcc95cad3df667fa9b1ebf1cf48f167022ce55268ac06d24df236e1",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--vulto",
+      "name": "Vulto",
+      "checkedAt": "2026-11-11T12:31:48.756Z",
+      "documentSha256": "8bcd8f651bb9e45c10e7b89bf2abc076a10e1841cf6d4338375bf559f6f93b98",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--conhecaoclaude",
+      "name": "Esse é o Claude",
+      "checkedAt": "2026-11-11T12:31:50.342Z",
+      "documentSha256": "6b10a20e4a5cd13522e3e9286943b1772defc87c261366be4836f8b2bb805c70",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--zenite",
+      "name": "Zênite",
+      "checkedAt": "2026-11-11T12:31:50.655Z",
+      "documentSha256": "72e292c6a82a986a7b3f115e7a9aa3f31726a833da9b4ff9299eaa6cc74ba0ff",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--estreia",
+      "name": "Nova Feature",
+      "checkedAt": "2026-11-11T12:31:51.922Z",
+      "documentSha256": "c46aac824532e4a808108928c6d976798e58d552ded6967fa6cf0e287c933350",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--lusco",
+      "name": "Lusco",
+      "checkedAt": "2026-11-11T12:31:52.242Z",
+      "documentSha256": "641b0fc9dfe1498078eb41e8f4b85246730cb4ae388e86923a0fa9612deb9638",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--sushi-conveyor-menu",
+      "name": "Sushi Conveyor Menu",
+      "checkedAt": "2026-11-11T12:31:53.824Z",
+      "documentSha256": "3099509a9c23b502543ed784f89883e48d50f9e41c94c1915ea4fac7254d3341",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--maison",
+      "name": "Maison",
+      "checkedAt": "2026-11-11T12:31:53.848Z",
+      "documentSha256": "3f65e69b0e0727acee7765f46917f95e702039478e16810a0050a6062959d5ee",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--clareira",
+      "name": "Clareira",
+      "checkedAt": "2026-11-11T12:31:55.404Z",
+      "documentSha256": "3b5d936b27ed7d987cc394a4d7f2198827805c67dc8c52a8de033c55a0381fba",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--akari",
+      "name": "Akari",
+      "checkedAt": "2026-11-11T12:31:55.431Z",
+      "documentSha256": "fb2c6170a82eb69a80c610d5f68e96b296967a0a6512524cfa76057230dd381b",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--ollo",
+      "name": "Ollo",
+      "checkedAt": "2026-11-11T12:31:56.983Z",
+      "documentSha256": "ebd0534b2acad776c29f1105977fa70c7a2d78a8dd83edd949c12f238f4f5424",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--glassy-coverflow-carousel",
+      "name": "Glassy Coverflow Carousel",
+      "checkedAt": "2026-11-11T12:31:57.301Z",
+      "documentSha256": "27ddd45af933fe820fcd43ba40785e69fd97dd5d75966f89e9c0c5dc0d159b55",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--sulko",
+      "name": "Sulko",
+      "checkedAt": "2026-11-11T12:31:58.559Z",
+      "documentSha256": "51838805d915260627f238f1c9c86631569ff27e2fea34870011ec14dbcbd8f3",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--shari",
+      "name": "Shari",
+      "checkedAt": "2026-11-11T12:31:58.878Z",
+      "documentSha256": "1a704ebf9097f8dbf2b3d783c02ceb6af189ffd635aa58f4b1f2da51fe6e8d35",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--argila",
+      "name": "argila",
+      "checkedAt": "2026-11-11T12:32:00.134Z",
+      "documentSha256": "faf37781f627bc8b6eb5eca168e056d87c66a94d5c72896bcd2974d8ce72eaa4",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--lavri",
+      "name": "Lavri",
+      "checkedAt": "2026-11-11T12:32:00.454Z",
+      "documentSha256": "9f93a3c8e7b24b81a7d7167497d26e0a4d64d4c0dd4a1cd4af14ec7839d61e3b",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--skeleton",
+      "name": "Skeleton",
+      "checkedAt": "2026-11-11T12:32:01.722Z",
+      "documentSha256": "4fbabb8ab4d9bb3be53d689a4204aa7d8d5c95f8b104a02d3873aba03f17be9e",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--colina",
+      "name": "Colina",
+      "checkedAt": "2026-11-11T12:32:02.031Z",
+      "documentSha256": "0c3d24bd57b2a54eb1af857a459ad97b39c698670d723d2a49e07532975f1b11",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    },
+    {
+      "id": "recovered--margem",
+      "name": "Margem",
+      "checkedAt": "2026-11-11T12:44:43.359Z",
+      "documentSha256": "2f75c2c4f20fb54af822464761a14e325c634647e0e17b3d026a03d0a9c3e618",
+      "passed": true,
+      "ready": true,
+      "errors": []
+    }
+  ],
+  "passed": 94,
+  "pending": 9,
+  "finalRevisionBrowserValidation": "Blocked by Work setting after the second completed batch. CSS/native-progress/media-readiness follow-up changes have code tests only. No complete-catalog claim."
+}

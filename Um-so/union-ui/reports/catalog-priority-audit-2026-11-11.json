@@ -1,0 +1,889 @@
+{
+  "date": "2026-11-11",
+  "baseCommit": "1214db1fa5700bb5ba9537cba5c1775f6e9edce9",
+  "catalogSha256": "c4524292c21b673537bb561eaa7c1dc2cb3c8fac4d068037faea08bd7e477e07",
+  "staticInventory": {
+    "file": "reports/catalog-static-inventory-2026-11-11.jsonl",
+    "published": 10679,
+    "previewDocuments": 10679,
+    "missing": 0,
+    "invalid": 0
+  },
+  "results": [
+    {
+      "id": "21st-5cc4f0384464",
+      "name": "Loader",
+      "kind": "component",
+      "environment": "http://127.0.0.1:4411",
+      "checkedAt": "2026-11-11T18:43:08.410Z",
+      "sourceDocumentSha256": "5e22e90125cbbef7f582b094c7d72befc57bdc018faf9250af760a8d8e0e2a95",
+      "preparedDocumentSha256": "5e22e90125cbbef7f582b094c7d72befc57bdc018faf9250af760a8d8e0e2a95",
+      "baseline": {
+        "id": "21st-5cc4f0384464",
+        "errors": [],
+        "requests": [],
+        "images": [],
+        "videos": [],
+        "canvases": [],
+        "svg": 0,
+        "text": "",
+        "interaction": {
+          "kind": "none",
+          "after": null,
+          "changed": null
+        },
+        "name": "Loader",
+        "kind": "component",
+        "checkedAt": "2026-11-11T16:42:39.584Z",
+        "sourceDocumentSha256": "5e22e90125cbbef7f582b094c7d72befc57bdc018faf9250af760a8d8e0e2a95",
+        "preparedDocumentSha256": "5e22e90125cbbef7f582b094c7d72befc57bdc018faf9250af760a8d8e0e2a95",
+        "ready": true,
+        "passed": true
+      },
+      "browser": {
+        "scope": "Protected harness, opaque sandbox. Startup/media and bounded synthetic events only.",
+        "startup": true,
+        "images": [],
+        "videos": [],
+        "canvas": [],
+        "requests": [],
+        "errors": [],
+        "interaction": {
+          "kind": "none",
+          "after": null,
+          "changed": null
+        },
+        "result": "passed"
+      },
+      "prompt": {
+        "bytes": 227953,
+        "sha256": "1db566d0f6acb92447b33027774802a195a01bf52b76b5a5e1671c795e3e9924",
+        "includesItemName": true
+      },
+      "zip": {
+        "bytes": 88794,
+        "sha256": "e80acf1f41912e3029b2fb3a406bc8d9bee5ad9baed86ee88d6e896c75db0758",
+        "files": 16,
+        "previewSha256": "94e6a62230aedfa007bdffa242a7b849c2dc53bccd976657fe906f6392601648"
+      },
+      "manual": {
+        "standalone": "Opened the extracted preview at a separate origin; actual rendered pixels were visually observed. Progress showed the filled segment with value 30 of 100.",
+        "viewport": {
+          "desktop": 1179,
+          "mobile": 388
+        }
+      },
+      "acceptance": "partial",
+      "next": "Confirm remaining manual interactions, responsive layouts, clipboard, standalone packages and production for this item."
+    },
+    {
+      "id": "21st-d17b0be2c3ab",
+      "name": "Liquid Aurora",
+      "kind": "component",
+      "environment": "http://127.0.0.1:4411",
+      "checkedAt": "2026-11-11T18:43:08.502Z",
+      "sourceDocumentSha256": "4084d35a2383f97948d24de6440126cc2fdfc37801cc5ea739a447f1815df068",
+      "preparedDocumentSha256": "4084d35a2383f97948d24de6440126cc2fdfc37801cc5ea739a447f1815df068",
+      "baseline": {
+        "id": "21st-d17b0be2c3ab",
+        "errors": [],
+        "requests": [],
+        "images": [],
+        "videos": [],
+        "canvases": [],
+        "svg": 0,
+        "text": "",
+        "interaction": {
+          "kind": "none",
+          "after": null,
+          "changed": null
+        },
+        "name": "Liquid Aurora",
+        "kind": "component",
+        "checkedAt": "2026-11-11T16:42:39.560Z",
+        "sourceDocumentSha256": "4084d35a2383f97948d24de6440126cc2fdfc37801cc5ea739a447f1815df068",
+        "preparedDocumentSha256": "4084d35a2383f97948d24de6440126cc2fdfc37801cc5ea739a447f1815df068",
+        "ready": true,
+        "passed": true
+      },
+      "browser": {
+        "scope": "Protected harness, opaque sandbox. Startup/media and bounded synthetic events only.",
+        "startup": true,
+        "images": [],
+        "videos": [],
+        "canvas": [],
+        "requests": [],
+        "errors": [],
+        "interaction": {
+          "kind": "none",
+          "after": null,
+          "changed": null
+        },
+        "result": "passed"
+      },
+      "prompt": {
+        "bytes": 225857,
+        "sha256": "77834c44c4020b5e6151e31ed40ffc7a22f5e8d015020a93023dbf4c4fc48a12",
+        "includesItemName": true
+      },
+      "zip": {
+        "bytes": 88440,
+        "sha256": "2e6ce60aca1992717ad9dd49d4e0ee9502a601b9e94a1956aa760a064e58dc1a",
+        "files": 16,
+        "previewSha256": "04ef1223e3537d68d7edc40a5ab660cdc1d4ea706684d5cad623b94fa8bb6104"
+      },
+      "manual": {
+        "visual": "Authenticated component page displayed the gradient; selected the mobile preview control.",
+        "clipboard": "Actual Copy prompt button returned a string containing Liquid Aurora (230751 characters on baseline).",
+        "standalone": "Opened the extracted preview at a separate origin; actual rendered pixels were visually observed. Progress showed the filled segment with value 30 of 100.",
+        "appDownload": "Actual ZIP action wrote liquid-aurora-cf2df7.zip (90,693 bytes).",
+        "viewport": {
+          "desktop": 1179,
+          "mobile": 388
+        }
+      },
+      "acceptance": "partial",
+      "next": "Confirm remaining manual interactions, responsive layouts, clipboard, standalone packages and production for this item."
+    },
+    {
+      "id": "21st-de702b2d1c88",
+      "name": "Loader 10",
+      "kind": "component",
+      "environment": "http://127.0.0.1:4411",
+      "checkedAt": "2026-11-11T18:43:09.828Z",
+      "sourceDocumentSha256": "462a163e48ebfef191ccbfd641130a6e24869b54a596c0dc5cb8bbb9b28b7c2a",
+      "preparedDocumentSha256": "462a163e48ebfef191ccbfd641130a6e24869b54a596c0dc5cb8bbb9b28b7c2a",
+      "baseline": {
+        "id": "21st-de702b2d1c88",
+        "errors": [],
+        "requests": [],
+        "images": [],
+        "videos": [],
+        "canvases": [],
+        "svg": 0,
+        "text": "",
+        "interaction": {
+          "kind": "none",
+          "after": null,
+          "changed": null
+        },
+        "name": "Loader 10",
+        "kind": "component",
+        "checkedAt": "2026-11-11T16:42:40.831Z",
+        "sourceDocumentSha256": "462a163e48ebfef191ccbfd641130a6e24869b54a596c0dc5cb8bbb9b28b7c2a",
+        "preparedDocumentSha256": "462a163e48ebfef191ccbfd641130a6e24869b54a596c0dc5cb8bbb9b28b7c2a",
+        "ready": true,
+        "passed": true
+      },
+      "browser": {
+        "scope": "Protected harness, opaque sandbox. Startup/media and bounded synthetic events only.",
+        "startup": true,
+        "images": [],
+        "videos": [],
+        "canvas": [],
+        "requests": [],
+        "errors": [],
+        "interaction": {
+          "kind": "none",
+          "after": null,
+          "changed": null
+        },
+        "result": "passed"
+      },
+      "prompt": {
+        "bytes": 255521,
+        "sha256": "8669a4689c74ef56f36b9d18ec8ba28b57ce3b15e5371b406e6664104086d75c",
+        "includesItemName": true
+      },
+      "zip": {
+        "bytes": 97493,
+        "sha256": "17ddd26428548eb4e652183255bbba502531798de28ab998c3681bb651456248",
+        "files": 16,
+        "previewSha256": "c66fad3513b5e2e881e72ad6476175c2e1244043e9b3328a2f3e747186690978"
+      },
+      "manual": {
+        "standalone": "Opened the extracted preview at a separate origin; actual rendered pixels were visually observed. Progress showed the filled segment with value 30 of 100.",
+        "viewport": {
+          "desktop": 1179,
+          "mobile": 388
+        }
+      },
+      "acceptance": "partial",
+      "next": "Confirm remaining manual interactions, responsive layouts, clipboard, standalone packages and production for this item."
+    },
+    {
+      "id": "21st-8712cd5ba9a6",
+      "name": "Hls Video Player",
+      "kind": "component",
+      "environment": "http://127.0.0.1:4411",
+      "checkedAt": "2026-11-11T18:43:10.010Z",
+      "sourceDocumentSha256": "7babc45ead8a89402bd60014456816c4c52855e77f474ac70cf2dbddc0c55074",
+      "preparedDocumentSha256": "cb1382650bbbe36e1fb7877f636a17f04282ddf24420739fdd4167db0a08a755",
+      "baseline": {
+        "id": "21st-8712cd5ba9a6",
+        "errors": [],
+        "requests": [],
+        "images": [],
+        "videos": [
+          {
+            "loaded": false,
+            "advanced": false,
+            "before": 0,
+            "time": 0,
+            "width": 0,
+            "height": 0,
+            "error": true,
+            "errorCode": 4,
+            "errorMessage": "",
+            "src": "https://stream.mux.com/VZtzUzGRv02OhRnZCxcNg49OilvolTqdnFLEqBsTwaxU.m3u8",
+            "capabilities": {
+              "nativeHls": "maybe",
+              "avc": "probably",
+              "mseAvc": true,
+              "vp9": "probably"
+            }
+          }
+        ],
+        "canvases": [],
+        "svg": 0,
+        "text": "",
+        "interaction": {
+          "kind": "none",
+          "after": null,
+          "changed": null
+        },
+        "name": "Hls Video Player",
+        "kind": "component",
+        "checkedAt": "2026-11-11T16:43:15.137Z",
+        "sourceDocumentSha256": "7babc45ead8a89402bd60014456816c4c52855e77f474ac70cf2dbddc0c55074",
+        "preparedDocumentSha256": "7babc45ead8a89402bd60014456816c4c52855e77f474ac70cf2dbddc0c55074",
+        "ready": false,
+        "passed": false,
+        "reason": "deadline"
+      },
+      "browser": {
+        "scope": "Protected harness, opaque sandbox. Startup/media and bounded synthetic events only.",
+        "startup": true,
+        "images": [],
+        "videos": [
+          {
+            "loaded": true,
+            "advanced": true,
+            "before": 1.047168,
+            "time": 1.20701,
+            "width": 480,
+            "height": 270,
+            "error": false,
+            "src": "blob:[embedded]",
+            "capabilities": {
+              "nativeHls": "maybe",
+              "avc": "probably",
+              "mseAvc": true,
+              "vp9": "probably"
+            }
+          }
+        ],
+        "canvas": [],
+        "requests": [],
+        "errors": [],
+        "interaction": {
+          "kind": "none",
+          "after": null,
+          "changed": null
+        },
+        "result": "passed"
+      },
+      "prompt": {
+        "bytes": 771948,
+        "sha256": "4217bcd9fa6bbdb0328de4589ca0909500e8b97de3f32aed93ef7ac8a3485edd",
+        "includesItemName": true
+      },
+      "zip": {
+        "bytes": 266378,
+        "sha256": "0f66ecc0e51a8cb27ef7e9c60d54b0ebc5be179094b80a2a0eb805eafb434136",
+        "files": 16,
+        "previewSha256": "5b6cef0fb2266d4a354a1f8cc70d64ba4a912f523eec19f9fc4483516216b2bd"
+      },
+      "manual": {
+        "standalone": "Extracted preview ran at a separate local origin with no application session. The video decoded at 640px wide and reached 6.66s; original Mux network source required.",
+        "viewport": {
+          "desktop": 1179,
+          "mobile": 388
+        }
+      },
+      "acceptance": "partial",
+      "next": "Confirm remaining manual interactions, responsive layouts, clipboard, standalone packages and production for this item."
+    },
+    {
+      "id": "21st-84b5c4cf7d2f",
+      "name": "Mine",
+      "kind": "component",
+      "environment": "http://127.0.0.1:4411",
+      "checkedAt": "2026-11-11T18:43:10.048Z",
+      "sourceDocumentSha256": "01ec058180f60851301165a03b8ff1a1000848dbf2e07ee8f763f117798aa137",
+      "preparedDocumentSha256": "3bb66d0c1e334908fbbffebf1bafa6f9791216f7f860f3aee4cd385b49e1b8f6",
+      "baseline": {
+        "id": "21st-84b5c4cf7d2f",
+        "errors": [],
+        "requests": [],
+        "images": [],
+        "videos": [
+          {
+            "loaded": false,
+            "advanced": false,
+            "before": 0,
+            "time": 0,
+            "width": 960,
+            "height": 540,
+            "error": true,
+            "errorCode": 3,
+            "errorMessage": "PipelineStatus::PIPELINE_ERROR_DECODE: Failed to send video packet for decoding: {timestamp=166667 duration=166667 size=16965 is_key_frame=0 encrypted=0}",
+            "src": "blob:[embedded]",
+            "capabilities": {
+              "nativeHls": "maybe",
+              "avc": "probably",
+              "mseAvc": true,
+              "vp9": "probably"
+            }
+          }
+        ],
+        "canvases": [],
+        "svg": 0,
+        "text": "",
+        "interaction": {
+          "kind": "none",
+          "after": null,
+          "changed": null
+        },
+        "name": "Mine",
+        "kind": "component",
+        "checkedAt": "2026-11-11T16:43:16.604Z",
+        "sourceDocumentSha256": "01ec058180f60851301165a03b8ff1a1000848dbf2e07ee8f763f117798aa137",
+        "preparedDocumentSha256": "01ec058180f60851301165a03b8ff1a1000848dbf2e07ee8f763f117798aa137",
+        "ready": false,
+        "passed": false,
+        "reason": "deadline"
+      },
+      "browser": {
+        "scope": "Protected harness, opaque sandbox. Startup/media and bounded synthetic events only.",
+        "startup": true,
+        "images": [],
+        "videos": [
+          {
+            "loaded": true,
+            "advanced": true,
+            "before": 0.9336,
+            "time": 1.0956,
+            "width": 960,
+            "height": 540,
+            "error": false,
+            "src": "blob:[embedded]",
+            "capabilities": {
+              "nativeHls": "maybe",
+              "avc": "probably",
+              "mseAvc": true,
+              "vp9": "probably"
+            }
+          }
+        ],
+        "canvas": [],
+        "requests": [],
+        "errors": [],
+        "interaction": {
+          "kind": "none",
+          "after": null,
+          "changed": null
+        },
+        "result": "passed"
+      },
+      "prompt": {
+        "bytes": 7154286,
+        "sha256": "34d515b467f33fb484d5a9bf34b36fd823fd5d462ea7e9a13d4f9b74592a4eca",
+        "includesItemName": true
+      },
+      "zip": {
+        "bytes": 9962760,
+        "sha256": "259037ca4661dac9019eadd5879f93948c0fda122b30c1cc7905f8d0576f60f0",
+        "files": 21,
+        "previewSha256": "76382f2b15044ff17104b4ba91596d8ea48b896c4a4908677267752d7b1a43b4",
+        "originalAndCompatibleVideo": true
+      },
+      "manual": {
+        "standalone": "Extracted preview used embedded WebM at a separate local origin, readyState 4, width 960, playback observed at 2.30s.",
+        "clipboard": "Actual Copy prompt action returned 7,158,410 characters including the Mine introduction.",
+        "appDownload": "Actual ZIP action wrote mine-e601be.zip (9,965,002 bytes).",
+        "viewport": {
+          "mobileSelected": true
+        }
+      },
+      "acceptance": "partial",
+      "next": "Confirm remaining manual interactions, responsive layouts, clipboard, standalone packages and production for this item."
+    },
+    {
+      "id": "21st-5f81db12ac28",
+      "name": "Progress",
+      "kind": "component",
+      "environment": "http://127.0.0.1:4411",
+      "checkedAt": "2026-11-11T18:43:11.368Z",
+      "sourceDocumentSha256": "c880c61d02117369d948e720d54b552931976376e8d89a2f970c487000180085",
+      "preparedDocumentSha256": "c880c61d02117369d948e720d54b552931976376e8d89a2f970c487000180085",
+      "baseline": {
+        "id": "21st-5f81db12ac28",
+        "errors": [],
+        "requests": [],
+        "images": [],
+        "videos": [],
+        "canvases": [],
+        "svg": 0,
+        "text": "",
+        "interaction": {
+          "kind": "none",
+          "after": null,
+          "changed": null
+        },
+        "name": "Progress",
+        "kind": "component",
+        "checkedAt": "2026-11-11T16:43:16.389Z",
+        "sourceDocumentSha256": "c880c61d02117369d948e720d54b552931976376e8d89a2f970c487000180085",
+        "preparedDocumentSha256": "c880c61d02117369d948e720d54b552931976376e8d89a2f970c487000180085",
+        "ready": true,
+        "passed": true
+      },
+      "browser": {
+        "scope": "Protected harness, opaque sandbox. Startup/media and bounded synthetic events only.",
+        "startup": true,
+        "images": [],
+        "videos": [],
+        "canvas": [],
+        "requests": [],
+        "errors": [],
+        "interaction": {
+          "kind": "none",
+          "after": null,
+          "changed": null
+        },
+        "result": "passed"
+      },
+      "prompt": {
+        "bytes": 227078,
+        "sha256": "c687f4c33e6fc3e34fc3078aa489e252760d8c1bceb5712c9136571ce7a3d365",
+        "includesItemName": true
+      },
+      "zip": {
+        "bytes": 88680,
+        "sha256": "4309fcbab436bd942dbb69152f4118503380100e80dd56f1a38b4d161653b8ec",
+        "files": 16,
+        "previewSha256": "fb47bf591cad988ef48c1ba029839dc31c03a70bf519e18f9d1675259b6725d4"
+      },
+      "manual": {
+        "standalone": "Opened the extracted preview at a separate origin; actual rendered pixels were visually observed. Progress showed the filled segment with value 30 of 100.",
+        "viewport": {
+          "desktop": 1179,
+          "mobile": 388
+        }
+      },
+      "acceptance": "partial",
+      "next": "Confirm remaining manual interactions, responsive layouts, clipboard, standalone packages and production for this item."
+    },
+    {
+      "id": "21st-000947d76d8c",
+      "name": "Oval Eggs",
+      "kind": "component",
+      "environment": "http://127.0.0.1:4411",
+      "checkedAt": "2026-11-11T18:43:11.390Z",
+      "sourceDocumentSha256": "cf419c460f37dee7458872cfd374277be6619c34f40f6f86b51e83cfdc5118a4",
+      "preparedDocumentSha256": "5667fd1a961b90b18870fc6a71d05d5da05d2d7c4346f564bd15e68219025e6f",
+      "baseline": {
+        "id": "21st-000947d76d8c",
+        "errors": [],
+        "requests": [],
+        "images": [],
+        "videos": [
+          {
+            "loaded": false,
+            "advanced": false,
+            "before": 0,
+            "time": 0,
+            "width": 960,
+            "height": 540,
+            "error": true,
+            "errorCode": 3,
+            "errorMessage": "PipelineStatus::PIPELINE_ERROR_DECODE: Failed to send video packet for decoding: {timestamp=166667 duration=166667 size=7169 is_key_frame=0 encrypted=0}",
+            "src": "blob:[embedded]",
+            "capabilities": {
+              "nativeHls": "maybe",
+              "avc": "probably",
+              "mseAvc": true,
+              "vp9": "probably"
+            }
+          }
+        ],
+        "canvases": [],
+        "svg": 0,
+        "text": "",
+        "interaction": {
+          "kind": "none",
+          "after": null,
+          "changed": null
+        },
+        "name": "Oval Eggs",
+        "kind": "component",
+        "checkedAt": "2026-11-11T16:43:17.855Z",
+        "sourceDocumentSha256": "cf419c460f37dee7458872cfd374277be6619c34f40f6f86b51e83cfdc5118a4",
+        "preparedDocumentSha256": "cf419c460f37dee7458872cfd374277be6619c34f40f6f86b51e83cfdc5118a4",
+        "ready": false,
+        "passed": false,
+        "reason": "deadline"
+      },
+      "browser": {
+        "scope": "Protected harness, opaque sandbox. Startup/media and bounded synthetic events only.",
+        "startup": true,
+        "images": [],
+        "videos": [
+          {
+            "loaded": true,
+            "advanced": true,
+            "before": 0.8754,
+            "time": 1.0426,
+            "width": 960,
+            "height": 540,
+            "error": false,
+            "src": "blob:[embedded]",
+            "capabilities": {
+              "nativeHls": "maybe",
+              "avc": "probably",
+              "mseAvc": true,
+              "vp9": "probably"
+            }
+          }
+        ],
+        "canvas": [],
+        "requests": [],
+        "errors": [],
+        "interaction": {
+          "kind": "none",
+          "after": null,
+          "changed": null
+        },
+        "result": "passed"
+      },
+      "prompt": {
+        "bytes": 6359966,
+        "sha256": "d63960d099599909ed3834127e59c9e6a447d13ea0da281630f8f7044c879e8f",
+        "includesItemName": true
+      },
+      "zip": {
+        "bytes": 8751102,
+        "sha256": "e15c7314da07d8b356bdd553cb0d0a8423310c8d0dd3784d40bc8da40a8de09d",
+        "files": 21,
+        "previewSha256": "8c0893d3b4668467700498f71af46c101a41e9a655db90e70984f38c8b66e05f",
+        "originalAndCompatibleVideo": true
+      },
+      "manual": {
+        "standalone": "Extracted preview used embedded WebM at a separate local origin, readyState 4, width 960, playback advanced from 0 to 2.08s.",
+        "viewport": {
+          "mobile": 388
+        },
+        "clipboard": "UI reported Copiado; exact clipboard contents not independently confirmed."
+      },
+      "acceptance": "partial",
+      "next": "Confirm remaining manual interactions, responsive layouts, clipboard, standalone packages and production for this item."
+    },
+    {
+      "id": "21st-d4aa2cb3b048",
+      "name": "Rising Ball",
+      "kind": "component",
+      "environment": "http://127.0.0.1:4411",
+      "checkedAt": "2026-11-11T18:43:11.451Z",
+      "sourceDocumentSha256": "6e81c7bcc64241598330331c4e5392eb28049265f2691ab503c9667263208b6a",
+      "preparedDocumentSha256": "6e81c7bcc64241598330331c4e5392eb28049265f2691ab503c9667263208b6a",
+      "baseline": {
+        "id": "21st-d4aa2cb3b048",
+        "errors": [],
+        "requests": [],
+        "images": [],
+        "videos": [],
+        "canvases": [],
+        "svg": 0,
+        "text": "",
+        "interaction": {
+          "kind": "none",
+          "after": null,
+          "changed": null
+        },
+        "name": "Rising Ball",
+        "kind": "component",
+        "checkedAt": "2026-11-11T16:43:17.617Z",
+        "sourceDocumentSha256": "6e81c7bcc64241598330331c4e5392eb28049265f2691ab503c9667263208b6a",
+        "preparedDocumentSha256": "6e81c7bcc64241598330331c4e5392eb28049265f2691ab503c9667263208b6a",
+        "ready": true,
+        "passed": true
+      },
+      "browser": {
+        "scope": "Protected harness, opaque sandbox. Startup/media and bounded synthetic events only.",
+        "startup": true,
+        "images": [],
+        "videos": [],
+        "canvas": [],
+        "requests": [],
+        "errors": [],
+        "interaction": {
+          "kind": "none",
+          "after": null,
+          "changed": null
+        },
+        "result": "passed"
+      },
+      "prompt": {
+        "bytes": 221249,
+        "sha256": "a2e5de17f97442fcc981a650f40cb163f197daba2d477df01e5e3e4b6abf9de7",
+        "includesItemName": true
+      },
+      "zip": {
+        "bytes": 87406,
+        "sha256": "e8bdcb1b3dff47bf661f9ccd03659cf65ea0b86aee8056e6b2a8d51e83b97801",
+        "files": 16,
+        "previewSha256": "987ab0bfd5e12c4cd31dee060407ab74d8157ca0a0ccf0bea0e20eac26336f08"
+      },
+      "manual": {
+        "standalone": "Opened the extracted preview at a separate origin; actual rendered pixels were visually observed. Progress showed the filled segment with value 30 of 100.",
+        "viewport": {
+          "mobile": 388
+        }
+      },
+      "acceptance": "partial",
+      "next": "Confirm remaining manual interactions, responsive layouts, clipboard, standalone packages and production for this item."
+    },
+    {
+      "id": "recovered--mosaik",
+      "name": "Mosaik",
+      "kind": "template",
+      "recoveryMode": "interactive-page",
+      "environment": "http://127.0.0.1:4411",
+      "checkedAt": "2026-11-11T18:43:20.898Z",
+      "sourceDocumentSha256": "f70ce73b2171d22314576b353ebeba570ecc2cb2e6aba3922c5efcdf7fa53ac3",
+      "preparedDocumentSha256": "0c35572856a5a2fd249eaac3ea38597e150191663fd668d3cae1e2d26dc79843",
+      "baseline": {
+        "id": "recovered--mosaik",
+        "errors": [
+          "Failed to fetch"
+        ],
+        "requests": [
+          {
+            "url": "http://127.0.0.1:4411/draco/draco_wasm_wrapper.js",
+            "error": "TypeError"
+          },
+          {
+            "url": "http://127.0.0.1:4411/draco/draco_decoder.wasm",
+            "error": "TypeError"
+          }
+        ],
+        "images": [
+          {
+            "src": "blob:[embedded]",
+            "loaded": true
+          }
+        ],
+        "videos": [],
+        "canvases": [
+          {
+            "width": 1187,
+            "height": 774,
+            "gpu": true
+          }
+        ],
+        "svg": 103,
+        "text": "Workspace\nHow it works\nWhy Mosaik\nGet started\nYour prompts.\nStructured. Reusable. Powerful.\nStart with Mosaik\nExplore the library\nScroll down\n\nMosaik turns one-",
+        "interaction": {
+          "kind": "canvas",
+          "before": {
+            "gpu": true
+          },
+          "after": {
+            "gpu": true
+          },
+          "changed": null
+        },
+        "name": "Mosaik",
+        "kind": "template",
+        "recoveryMode": "interactive-page",
+        "checkedAt": "2026-11-11T16:43:23.683Z",
+        "sourceDocumentSha256": "f70ce73b2171d22314576b353ebeba570ecc2cb2e6aba3922c5efcdf7fa53ac3",
+        "preparedDocumentSha256": "66ef56fcb4fb44219b788dd8ec946d538a5451f7d7782730c3d14f0d4d46236c",
+        "ready": true,
+        "passed": false
+      },
+      "browser": {
+        "scope": "Protected harness, opaque sandbox. Startup/media and bounded synthetic events only.",
+        "startup": true,
+        "images": [
+          {
+            "src": "blob:[embedded]",
+            "loaded": true
+          }
+        ],
+        "videos": [],
+        "canvas": [
+          {
+            "width": 1187,
+            "height": 774,
+            "gpu": true
+          }
+        ],
+        "requests": [],
+        "errors": [],
+        "interaction": {
+          "kind": "canvas",
+          "before": {
+            "gpu": true
+          },
+          "after": {
+            "gpu": true
+          },
+          "changed": null
+        },
+        "result": "passed"
+      },
+      "prompt": {
+        "bytes": 1787,
+        "sha256": "35e62091b62afd79b2f0562224954b6f317d277a62b0fa111ef766bb2cf0f166",
+        "includesItemName": true
+      },
+      "zip": {
+        "bytes": 1118947,
+        "sha256": "2c7aa4dc360343c56bd79f586f606beaca97565846caa7844e875ff18b557a8f",
+        "files": 46,
+        "previewSha256": "9c07ebb520dede9934f9d4a4bc40b87f8277253eb00d34433af25bc08927e519",
+        "mosaikDecoder": true
+      },
+      "manual": {
+        "standalone": "Ran the ZIP-provided serve.mjs. Rendered the visible 3D logo; clicked How it works, URL changed to #how; no Draco or fetch error observed on landing.",
+        "limit": "Compiled landing only. Original service host cgociqdhdcpkqltaicmu.supabase.co did not resolve. No original authentication or workspace backend recovered or tested.",
+        "viewport": {
+          "desktop": 1179,
+          "mobile": 388
+        }
+      },
+      "acceptance": "partial",
+      "next": "Confirm remaining manual interactions, responsive layouts, clipboard, standalone packages and production for this item."
+    }
+  ],
+  "productionBaseline": {
+    "commit": "1214db1fa5700bb5ba9537cba5c1775f6e9edce9",
+    "anonymous": {
+      "requests": [
+        "GET",
+        "HEAD",
+        "GET Range bytes=0-255"
+      ],
+      "paths": [
+        "/previews/expanded/21st-84b5c4cf7d2f.html",
+        "/assets/demo-cache/c721f302e4673e41bbd2b395.mp4",
+        "/code/recovered/recovered--mosaik.json",
+        "/data/catalog-live.json",
+        "/tools/runtime-audit/index.html"
+      ],
+      "status": 401,
+      "cache": "private, no-store"
+    },
+    "billingMode": "disabled"
+  },
+  "media": {
+    "dracoVersion": "1.5.5",
+    "decoderSource": "https://www.gstatic.com/draco/versioned/decoders/1.5.5/",
+    "licenseSource": "https://raw.githubusercontent.com/google/draco/1.5.5/LICENSE",
+    "hlsSourceHTTP": {
+      "master": 200,
+      "variant": 200,
+      "segmentRange": 206,
+      "cors": "*"
+    },
+    "videoConversion": {
+      "format": "VP9 lossless, yuv420p, VFR; original MP4s retained byte-for-byte",
+      "command": "ffmpeg -i original.mp4 -map 0:v:0 -an -vsync vfr -c:v libvpx-vp9 -pix_fmt yuv420p -lossless 1 -threads 2 compatible.webm",
+      "verified": "MP4 sample counts 18 and 20; decoded frame counts matched and every decoded frame MD5 matched its corresponding VP9 frame. The upstream MP4s reproduced AVC parameter warnings in FFmpeg and decode errors in Chromium."
+    }
+  },
+  "fileHashes": [
+    {
+      "file": "src/retained-preview-compat.js",
+      "sha256": "7c5cf0f8227ec80d3486f8f47f4ba944c446d97c8fb09b69546242adfba1db11",
+      "bytes": 1727,
+      "releaseGitSha256": "7c5cf0f8227ec80d3486f8f47f4ba944c446d97c8fb09b69546242adfba1db11"
+    },
+    {
+      "file": "src/preview-assets.js",
+      "sha256": "12d3bcf449eacbbc1ce8b7ac85fdbff548735d1f74894884008916ca81275258",
+      "bytes": 10367,
+      "releaseGitSha256": "3885d219200a2d87d5c32cf9cd3fa091c673e41744924c952628abfeb4bdebcf"
+    },
+    {
+      "file": "src/component-export.js",
+      "sha256": "ff05c14cf8e60c2d5e49ffa7af6b6c560ef9ad71383a3b2ecbdcea749eefaeb3",
+      "bytes": 15166,
+      "releaseGitSha256": "ff05c14cf8e60c2d5e49ffa7af6b6c560ef9ad71383a3b2ecbdcea749eefaeb3"
+    },
+    {
+      "file": "public/data/recovered-demo-assets.json",
+      "sha256": "022e22f4a16c1c394d42a32867d327d3177500e7adc8791c2e9b46900167fb1c",
+      "bytes": 41045,
+      "releaseGitSha256": "022e22f4a16c1c394d42a32867d327d3177500e7adc8791c2e9b46900167fb1c"
+    },
+    {
+      "file": "public/previews/recovered/demos/mosaik/assets/MosaikLogo3D-B9wrQNt1.js",
+      "sha256": "e16b61ad824295990c6d574cb9fe43e4c24a19f916437268076361ca35a10afd",
+      "bytes": 1036031,
+      "releaseGitSha256": "693b2f9480bd8fabf14ac0e476b18030a530aad4ffb7eea20ba49899ffad0941"
+    },
+    {
+      "file": "public/previews/recovered/demos/mosaik/draco/draco_decoder.js",
+      "sha256": "6604be0104930049a96f5b30e2c17928fb13daca25c1f088349730eb0c6db3c8",
+      "bytes": 709590,
+      "releaseGitSha256": "6604be0104930049a96f5b30e2c17928fb13daca25c1f088349730eb0c6db3c8"
+    },
+    {
+      "file": "public/previews/recovered/demos/mosaik/draco/draco_decoder.wasm",
+      "sha256": "0103c8bff79532c2f1a496dd9ea0764ac692ed8585d9136596ef9f043873a61f",
+      "bytes": 283091,
+      "releaseGitSha256": "0103c8bff79532c2f1a496dd9ea0764ac692ed8585d9136596ef9f043873a61f"
+    },
+    {
+      "file": "public/previews/recovered/demos/mosaik/draco/draco_wasm_wrapper.js",
+      "sha256": "b93f6384147828f857456c84845f4dbceada5b7a8455991109c853e236a1f018",
+      "bytes": 58916,
+      "releaseGitSha256": "b93f6384147828f857456c84845f4dbceada5b7a8455991109c853e236a1f018"
+    },
+    {
+      "file": "public/previews/recovered/demos/mosaik/draco/LICENSE",
+      "sha256": "d3709b0fb4b8a94bbb1d02b8a2e484f258b0d9c5c5a01f940391f3fe662cd1a4",
+      "bytes": 13898,
+      "releaseGitSha256": "d3709b0fb4b8a94bbb1d02b8a2e484f258b0d9c5c5a01f940391f3fe662cd1a4"
+    },
+    {
+      "file": "public/assets/demo-cache/c721f302e4673e41bbd2b395.mp4",
+      "sha256": "3a2391e037b8aa6fed540b4c3e0f66da6028b1e893b6cbc9f17444bdb8fa40bf",
+      "bytes": 212959,
+      "releaseGitSha256": "3a2391e037b8aa6fed540b4c3e0f66da6028b1e893b6cbc9f17444bdb8fa40bf"
+    },
+    {
+      "file": "public/assets/demo-cache/c721f302e4673e41bbd2b395.compat.webm",
+      "sha256": "44143820a1e4a199379732dd73b5a17eaae0ee847d80b275398f2c93c127f227",
+      "bytes": 4170453,
+      "releaseGitSha256": "44143820a1e4a199379732dd73b5a17eaae0ee847d80b275398f2c93c127f227"
+    },
+    {
+      "file": "public/assets/demo-cache/a173a27bb35f6ab1e3f1fa8f.mp4",
+      "sha256": "b790b0939aff65074355a1f0f9e854be432ed62721d72c1dbf35a211f50ab37f",
+      "bytes": 272282,
+      "releaseGitSha256": "b790b0939aff65074355a1f0f9e854be432ed62721d72c1dbf35a211f50ab37f"
+    },
+    {
+      "file": "public/assets/demo-cache/a173a27bb35f6ab1e3f1fa8f.compat.webm",
+      "sha256": "e0e1a118aeb7445578c5c09b65f1f05473e4e2e4d2933b9b856bdada767f6e09",
+      "bytes": 3574906,
+      "releaseGitSha256": "e0e1a118aeb7445578c5c09b65f1f05473e4e2e4d2933b9b856bdada767f6e09"
+    }
+  ],
+  "releaseCandidate": "c68978f050f573a4a8d15f9f8ff62b3379ecd45e",
+  "productionEvidence": "reports/catalog-production-audit-2026-11-11.json"
+}

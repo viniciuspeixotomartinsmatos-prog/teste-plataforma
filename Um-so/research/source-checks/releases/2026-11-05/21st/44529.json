@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 44529,
+    "name": "EZPZ Type Fold",
+    "description": "Big ideas. Made EZPZ. Responsive native SVG typography folded across three planes. Customize each line, color and font through demo settings. MIT licensed for personal and commercial reuse; React is the only runtime dependency.",
+    "previewUrl": "https://cdn.21st.dev/ezam0000/ezpz-type-fold/default/preview.1793744873204-ed5e4c72-4404-4a37-ab37-e27c16782a70.png",
+    "videoUrl": null,
+    "author": "ezam0000",
+    "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18yeTRtQWx0WVB2NFJtelBQQ1lRMUtPcmkybXIifQ",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/ezam0000/ezpz-type-fold?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@ezam0000/components/ezpz-type-fold"
+  },
+  "component": {
+    "id": 44529,
+    "componentId": 25667,
+    "authorUserId": "user_2y4mAmG5WMonwhwjqKc8LyeecUz",
+    "name": "EZPZ Type Fold",
+    "demoName": "Default",
+    "description": "Big ideas. Made EZPZ. Responsive native SVG typography folded across three planes. Customize each line, color and font through demo settings. MIT licensed for personal and commercial reuse; React is the only runtime dependency.",
+    "previewUrl": "https://cdn.21st.dev/ezam0000/ezpz-type-fold/default/preview.1793744873204-ed5e4c72-4404-4a37-ab37-e27c16782a70.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/ezam0000/ezpz-type-fold?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\";\n\n/*\nMIT License\n\nCopyright (c) 2026 EZPZ\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n*/\n\n/**\n * Customize words, palette and fontFamily through props.\n * Place inside a width-constrained container; the SVG scales at 4:5.\n * Keep each line short. Use decorative when nearby text repeats the message.\n */\n\nimport { useId, type CSSProperties } from \"react\";\n\nexport interface EZPZTypeFoldProps {\n  words?: readonly [string, string, string];\n  background?: string;\n  ink?: string;\n  paper?: string;\n  fontFamily?: string;\n  className?: string;\n  style?: CSSProperties;\n  label?: string;\n  decorative?: boolean;\n}\n\n/** A single typographic composition folded across three clipped planes. */\nexport default function EZPZTypeFold({\n  words = [\"BIG IDEAS.\", \"MADE\", \"EZPZ.\"],\n  background = \"var(--color-background, #eae4d9)\",\n  ink = \"var(--color-primary, #1736c7)\",\n  paper = \"var(--color-card, #fcf7ec)\",\n  fontFamily = '\"Helvetica Neue\", Arial, sans-serif',\n  className, style, label, decorative = false,\n}: EZPZTypeFoldProps) {\n  const id = useId().replace(/:/g, \"\");\n  const titleId = `${id}-title`;\n  const letteringId = `${id}-lettering`;\n  return (\n    <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1440 1800\" width=\"1440\" height=\"1800\"\n      className={className} style={{ display: \"block\", width: \"100%\", height: \"auto\", ...style }}\n      role={decorative ? undefined : \"img\"} aria-hidden={decorative || undefined}\n      aria-labelledby={decorative ? undefined : titleId} focusable=\"false\">\n      {decorative ? null : <title id={titleId}>{label ?? words.join(\" \")}</title>}\n      <rect width=\"1440\" height=\"1800\" fill={background}/>\n      <defs>\n        <g id={letteringId} fontFamily={fontFamily} fontWeight=\"700\" fill={ink}>\n          {words.map((word, i) => <text key={i} x=\"18\" y={238 + i * 226} fontSize=\"270\"\n            textLength=\"1014\" lengthAdjust=\"spacingAndGlyphs\">{word}</text>)}\n        </g>\n        {[0, 1, 2].map(i => <clipPath key={i} id={`${id}-clip-${i}`}><rect width=\"350\" height=\"790\"/></clipPath>)}\n      </defs>\n      <g transform=\"translate(0 30)\" aria-hidden=\"true\">\n        {[0, 1, 2].map(i => <g key={i}\n          transform={`matrix(.8660254 ${i === 1 ? -.5 : .5} 0 1 ${265 + .8660254 * 350 * i} ${387 + (i === 1 ? 175 : 0)})`}>\n          <rect width=\"350\" height=\"790\" fill={paper}/>\n          <rect width=\"350\" height=\"790\" fill=\"black\" opacity={i === 0 ? .12 : i === 2 ? .08 : 0}/>\n          <g clipPath={`url(#${id}-clip-${i})`}>\n            <use href={`#${letteringId}`} transform={`translate(${-350 * i} 0)`}/>\n          </g>\n        </g>)}\n      </g>\n    </svg>\n  );\n}\n",
+    "demoCode": "import EZPZTypeFold from \"@/components/ui/ezpz-type-fold\";\n\n// Change these values or use the live controls on 21st.dev.\nconst settings = {\n  \"firstLine\": \"BIG IDEAS.\",\n  \"secondLine\": \"MADE\",\n  \"thirdLine\": \"EZPZ.\",\n  \"background\": \"#eae4d9\",\n  \"ink\": \"#1736c7\",\n  \"paper\": \"#fcf7ec\",\n  \"fontFamily\": \"\\\"Helvetica Neue\\\", Arial, sans-serif\"\n};\n\nexport default function Demo(props: Partial<typeof settings>) {\n  const s = { ...settings, ...props };\n  return <div style={{ width: \"100%\", minHeight: \"100svh\", background: s.background, display: \"grid\", placeItems: \"center\" }}>\n    <div style={{ width: \"100%\", maxWidth: \"min(720px, 80svh)\", margin: \"auto\" }}>\n    <EZPZTypeFold\n      words={[s.firstLine, s.secondLine, s.thirdLine]}\n      background={s.background}\n      ink={s.ink}\n      paper={s.paper}\n      fontFamily={s.fontFamily}\n    />\n    </div>\n  </div>;\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "validation": "Acquired through the existing entitled connection. Browser validation and application publication pending."
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "route": "/@lumesec/components/px-tabs",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44908,
+      "name": "Pixel Tabs",
+      "description": "Accessible tabs whose underline is made of dots that stream across from the previously selected tab to the new one, with panel content that slides in from the side it was selected from.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_lumesec_1793377338131/px-tabs/default/preview.1794255961448.png",
+      "videoUrl": "https://cdn.21st.dev/user_registry_lumesec_1793377338131/px-tabs/default/video.1794255909417.mp4",
+      "author": "lumesec",
+      "authorImage": "https://github.com/lumesec.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/lumesec/px-tabs?api_key=REDACTED\"",
+      "url": "https://21st.dev/@lumesec/components/px-tabs"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@lumesec/components/px-toaster",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44967,
+      "name": "Pixel Toaster",
+      "description": "A stacked toast notification component with pixel-art status icons and a draining timer bar that pauses on hover or focus, optionally pinned to a viewport corner.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_lumesec_1793377338131/px-toaster/default/preview.1794253324129.webp",
+      "videoUrl": "https://cdn.21st.dev/user_registry_lumesec_1793377338131/px-toaster/default/video.1794253304225.mp4",
+      "author": "lumesec",
+      "authorImage": "https://github.com/lumesec.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/lumesec/px-toaster?api_key=REDACTED\"",
+      "url": "https://21st.dev/@lumesec/components/px-toaster"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@lumesec/components/ui-dial",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44563,
+      "name": "Rotary Dial",
+      "description": "A draggable rotary knob control that snaps to defined steps along a 270° arc, with tick marks that flash and a rolling numeric readout, for picking a numeric value like temperature or volume.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_lumesec_1793377338131/ui-dial/default/preview.1794340688649.webp",
+      "videoUrl": "https://cdn.21st.dev/user_registry_lumesec_1793377338131/ui-dial/default/video.1794340678490.mp4",
+      "author": "lumesec",
+      "authorImage": "https://github.com/lumesec.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/lumesec/ui-dial?api_key=REDACTED\"",
+      "url": "https://21st.dev/@lumesec/components/ui-dial"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@lyanchouss/templates/kora-3d-creative-agency",
+    "type": "template",
+    "status": "metadata_unresolved"
+  },
+  {
+    "route": "/@marvkr/components/card-resize",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44630,
+      "name": "Card Resize Toggle",
+      "description": "A card that smoothly animates its width and height between a large and a small size when toggled, using an eased CSS transition.",
+      "previewUrl": "https://cdn.21st.dev/user_2vHC2hNE6X5X6EE72FGhVeRzcQp/card-resize/default/preview.1794408187072.png",
+      "videoUrl": "https://cdn.21st.dev/user_2vHC2hNE6X5X6EE72FGhVeRzcQp/card-resize/default/video.1794408030572.mp4",
+      "author": "marvkr",
+      "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18ydkhDMmNWVk5idGtGNlloenFDSm91MzZJZ1MifQ",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/marvkr/card-resize?api_key=REDACTED\"",
+      "url": "https://21st.dev/@marvkr/components/card-resize"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@mayurrawte/components/accordion",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45002,
+      "name": "Accordion",
+      "description": "A headless, render-prop accordion for building collapsible content sections like FAQs or settings panels, with keyboard navigation and single or multiple expand modes.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_mayurrawte_1793377663685/accordion/default/preview.1794334485021.png",
+      "videoUrl": "https://cdn.21st.dev/user_registry_mayurrawte_1793377663685/accordion/default/video.1794334311625.mp4",
+      "author": "mayurrawte",
+      "authorImage": "https://avatars.githubusercontent.com/u/32830023?v=4",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/mayurrawte/accordion?api_key=REDACTED\"",
+      "url": "https://21st.dev/@mayurrawte/components/accordion"
+    },
+    "status": "retained_unvalidated"
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:45:53.351Z",
+  "metadata": {
+    "type": "component",
+    "id": 45468,
+    "name": "Astryx Checkbox Input",
+    "description": "CheckboxInput toggles a single on/off value. Use it for settings like \"Enable notifications\", terms acceptance, or opt-in choices. For multiple checkboxes in a group, use CheckboxList instead.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-checkbox-input/checkbox-input-status/preview.1794506008315.png",
+    "videoUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-checkbox-input/checkbox-input-status/video.1794505974173.mp4",
+    "author": "Astryxdesign",
+    "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-checkbox-input?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-checkbox-input"
+  },
+  "component": {
+    "id": 45468,
+    "componentId": 26208,
+    "name": "Astryx Checkbox Input",
+    "demoName": "CheckboxInput — Status",
+    "description": "CheckboxInput toggles a single on/off value. Use it for settings like \"Enable notifications\", terms acceptance, or opt-in choices. For multiple checkboxes in a group, use CheckboxList instead.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-checkbox-input/checkbox-input-status/preview.1794506008315.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-checkbox-input?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\nimport \"./astryx-checkbox-input-utils/index.css\"\nimport { CheckboxInput } from \"@astryxdesign/core/CheckboxInput\"\n\nexport * from \"@astryxdesign/core/CheckboxInput\"\nexport default CheckboxInput\n",
+    "demoCode": "'use client';\n\nimport {useState} from 'react';\nimport {CheckboxInput} from '@/components/ui/astryx-checkbox-input';\nimport {Stack} from '@astryxdesign/core/Layout';\n\nfunction CheckboxInputStatusVariations() {\n  const [error, setError] = useState<boolean | 'indeterminate'>(false);\n  const [warning, setWarning] = useState<boolean | 'indeterminate'>(true);\n  const [success, setSuccess] = useState<boolean | 'indeterminate'>(true);\n\n  return (\n    <Stack direction=\"vertical\" gap={4}>\n      <CheckboxInput\n        label=\"Error\"\n        description=\"Required field that has not been accepted.\"\n        value={error}\n        onChange={setError}\n        status={{\n          type: 'error',\n          message: 'You must accept the terms to continue',\n        }}\n      />\n      <CheckboxInput\n        label=\"Warning\"\n        description=\"Enabled setting with a side effect to be aware of.\"\n        value={warning}\n        onChange={setWarning}\n        status={{\n          type: 'warning',\n          message: 'This data may be shared with partners',\n        }}\n      />\n      <CheckboxInput\n        label=\"Success\"\n        description=\"Confirmed setting that has been verified.\"\n        value={success}\n        onChange={setSuccess}\n        status={{type: 'success', message: 'Your email has been verified'}}\n      />\n    </Stack>\n  );\n}\n\nexport default function CheckboxInputStatusVariationsDemo() {\n  return (\n    <div\n      data-astryx-theme=\"neutral\"\n      data-theme=\"light\"\n      style={{colorScheme: 'light', display: 'contents'}}>\n      <CheckboxInputStatusVariations />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source and usage retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

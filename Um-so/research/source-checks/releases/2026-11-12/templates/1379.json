@@ -1,0 +1,16 @@
+{
+  "route": "/@qa-author-847/templates/qa-847-demo-only",
+  "type": "template",
+  "status": "template_metadata_only",
+  "metadata": {
+    "type": "template",
+    "id": 1379,
+    "name": "QA 847 demo only",
+    "description": "E2E fixture for PR 847, no code. Safe to delete.",
+    "previewUrl": "",
+    "author": "qa-author-847",
+    "authorImage": "https://img.clerk.com/eyJ0eXBlIjoiZGVmYXVsdCIsImlpZCI6Imluc18ybW1uNXd5Y01CNnIwakx3YXFSeEV0ODNCbW4iLCJyaWQiOiJ1c2VyXzNMeFRPUmJtSjVXYWpVdUZPUmFhdmRjZU1rcSJ9",
+    "url": "https://21st.dev/community/templates/qa-847-demo-only",
+    "price": 0
+  }
+}

@@ -1,0 +1,138 @@
+[
+  {
+    "route": "/@dhxwhy/components/progressive-sign-up-form",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44849,
+      "name": "Progressive Sign Up Form – Fields Appear as You Go, No Steps",
+      "description": "Progressive Sign Up Form for React and Tailwind CSS (shadcn/ui): one card that starts with an email field and grows the next field only when the previous one is valid, with no step pages. The name slides in under a valid email, the password brings a four-segment strength meter that fills rule by rule, and the terms row arrives as the button morphs from Continue to Create account. Earlier fields stay editable. An async onSubmit fills the button, then the card morphs into a welcome state or offers Try again. Use it for SaaS onboarding and newsletter sign-ups. The demo types a sign-up, fails once and retries, with no requests. Requires React only.",
+      "previewUrl": "https://cdn.21st.dev/user_35e5ygDqQuDYzujLgyG9331zPPO/progressive-sign-up-form/default/preview.1794235490129.webp",
+      "videoUrl": "https://cdn.21st.dev/dhxwhy/progressive-sign-up-form/default/video.1794235493086.mp4",
+      "author": "dhxwhy",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_35e5ygDqQuDYzujLgyG9331zPPO/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/dhxwhy/progressive-sign-up-form?api_key=REDACTED\"",
+      "url": "https://21st.dev/@dhxwhy/components/progressive-sign-up-form"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@dhxwhy/components/rail-panel-sidebar",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44858,
+      "name": "Rail Panel Sidebar – Icon Rail with Context Panels, Pin to Collapse and Hover Peek",
+      "description": "Rail Panel Sidebar for React and Tailwind CSS (shadcn/ui): an icon rail plus a context panel per section. It is built to show where you just went: the active marker slides along the rail and the panel content enters from the direction of travel. Unpin it and the panel folds into the rail; hover or focus the rail and the panel peeks over the content as a floating layer. Controlled or uncontrolled activeId, pinned and peeking, arrow keys, Enter and Escape, aria-current, reduced motion, light and dark. Use it for workspace app shells. The included demo plays a scripted tour on local data and makes no network requests (inline avatars). Requires React only, with no animation library.",
+      "previewUrl": "https://cdn.21st.dev/user_35e5ygDqQuDYzujLgyG9331zPPO/rail-panel-sidebar/default/preview.1794245101950.webp",
+      "videoUrl": "https://cdn.21st.dev/dhxwhy/rail-panel-sidebar/default/video.1794245089913.mp4",
+      "author": "dhxwhy",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_35e5ygDqQuDYzujLgyG9331zPPO/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/dhxwhy/rail-panel-sidebar?api_key=REDACTED\"",
+      "url": "https://21st.dev/@dhxwhy/components/rail-panel-sidebar"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@dhxwhy/components/read-along-text",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44846,
+      "name": "Read Along Text – Word Highlight Synced to Speech or Audio Progress",
+      "description": "Read Along Text for React and Tailwind CSS (shadcn/ui): a paragraph whose words light up in time with speech, the current word lifted on a soft highlight with a caret under it and a breath after punctuation. It is built to show listeners where the voice is, so a transcript can be followed and tapped. It owns no clock: drive it with progress or currentTime, or use playing with wordsPerSecond. Click or Enter on a word calls onSeek, arrow keys move between words, reduced motion keeps colors only. Use it for AI voice answers, transcripts and read-aloud modes. The included demo plays a fake voice reply and makes no requests. Requires React only, with no animation library.",
+      "previewUrl": "https://cdn.21st.dev/user_35e5ygDqQuDYzujLgyG9331zPPO/read-along-text/default/preview.1794235840255.webp",
+      "videoUrl": "https://cdn.21st.dev/dhxwhy/read-along-text/default/video.1794235844088.mp4",
+      "author": "dhxwhy",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_35e5ygDqQuDYzujLgyG9331zPPO/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/dhxwhy/read-along-text?api_key=REDACTED\"",
+      "url": "https://21st.dev/@dhxwhy/components/read-along-text"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@dhxwhy/components/scrub-pagination",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44851,
+      "name": "Scrub Pagination – Drag a Track to Scrub Pages, Ellipsis Morphs into Jump Input",
+      "description": "Scrub Pagination for React and Tailwind CSS (shadcn/ui): page numbers over a thin track that scrubs hundreds of pages at once. It is built to reach page 37 of 120 in one drag. A click slides the pill and rolls the numbers; the dragged handle shows a live “Page 37 / 120” tooltip and snaps on release; the ellipsis morphs into a jump field. onPageChange fires only on commit while onScrub reports the live page; controlled or uncontrolled, a keyboard role=\"slider\" handle, aria-current, reduced motion, light and dark. Use it for data tables, search results and log viewers. The included demo pages through 720 invoices and makes no requests. Requires React only, with no animation library.",
+      "previewUrl": "https://cdn.21st.dev/dhxwhy/scrub-pagination/default/preview.1794138520956-557c9b16-6653-4288-94c4-c6849daa0a70.png",
+      "videoUrl": "https://cdn.21st.dev/dhxwhy/scrub-pagination/default/video.1794138520956-557c9b16-6653-4288-94c4-c6849daa0a70.mp4",
+      "author": "dhxwhy",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_35e5ygDqQuDYzujLgyG9331zPPO/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/dhxwhy/scrub-pagination?api_key=REDACTED\"",
+      "url": "https://21st.dev/@dhxwhy/components/scrub-pagination"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@dhxwhy/components/status-dropdown-select",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44852,
+      "name": "Status Dropdown Select – Status and Priority Picker where the Chosen Dot Flies to the Trigger",
+      "description": "Status Dropdown Select for React and Tailwind CSS (shadcn/ui): a status picker whose chosen dot, icon or photo flies from the list to the trigger, tinting the pill and rolling the label on landing. It is built to make a change in a row readable at a glance. Portal listbox with groups, shortcuts, type-ahead and arrow keys; opens upward when space is short. Controlled or uncontrolled, dot, icon or avatar kinds, full ARIA, reduced motion, light and dark. Use it for issue status, priority, assignees and orders. The included demo plays pointer and keyboard scenes, stops when you interact, uses embedded headshots and makes no network requests. Requires React only, with no animation library.",
+      "previewUrl": "https://cdn.21st.dev/user_35e5ygDqQuDYzujLgyG9331zPPO/status-dropdown-select/default/preview.1794235382316.webp",
+      "videoUrl": "https://cdn.21st.dev/dhxwhy/status-dropdown-select/default/video.1794235386080.mp4",
+      "author": "dhxwhy",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_35e5ygDqQuDYzujLgyG9331zPPO/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/dhxwhy/status-dropdown-select?api_key=REDACTED\"",
+      "url": "https://21st.dev/@dhxwhy/components/status-dropdown-select"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@dhxwhy/components/wordmark-reveal-footer",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44843,
+      "name": "Wordmark Reveal Footer – Giant Logo Footer with Reflection, Status and Local Time",
+      "description": "Wordmark Reveal Footer for React and Tailwind CSS (shadcn/ui): a footer whose giant wordmark rises letter by letter through the floor line, lights a reflection, then switches on a status band with live local time per office. It is built to close a page with a brand moment that feels alive instead of a static logo. Props: brand, columns, newsletter, socials, legal, status tone, offices with IANA time zones, reflection, reveal on mount, in view or manual, controlled revealed with onRevealEnd. Landmarks, reduced motion, light and dark. Use it for SaaS, studio and agency sites. The included demo replays the reveal once and makes no requests. Requires React only, with no animation library.",
+      "previewUrl": "https://cdn.21st.dev/user_35e5ygDqQuDYzujLgyG9331zPPO/wordmark-reveal-footer/default/preview.1794245055815.webp",
+      "videoUrl": "https://cdn.21st.dev/dhxwhy/wordmark-reveal-footer/default/video.1794245043910.mp4",
+      "author": "dhxwhy",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_35e5ygDqQuDYzujLgyG9331zPPO/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/dhxwhy/wordmark-reveal-footer?api_key=REDACTED\"",
+      "url": "https://21st.dev/@dhxwhy/components/wordmark-reveal-footer"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@diarmuradi/components/gloss-button",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 39225,
+      "name": "Gloss Button",
+      "description": "A rounded button with a glossy top-light gradient and inset sheen, built on Base UI's Button primitive with size variants.",
+      "previewUrl": "https://cdn.21st.dev/user_37TqCAC00s9KcfmZ614YPQ0tnLG/gloss-button/default/preview.1794257750175.png",
+      "videoUrl": "https://cdn.21st.dev/user_37TqCAC00s9KcfmZ614YPQ0tnLG/gloss-button/default/video.1794257458853.mp4",
+      "author": "diarmuradi",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_37TqCAC00s9KcfmZ614YPQ0tnLG/avatar.svg+xml",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/diarmuradi/gloss-button?api_key=REDACTED\"",
+      "url": "https://21st.dev/@diarmuradi/components/gloss-button"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@diarmuradi/components/pill-button",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 40112,
+      "name": "Pill Button",
+      "description": "A rounded, glossy pill-shaped button built on Base UI with size variants for primary actions and icon buttons.",
+      "previewUrl": "https://cdn.21st.dev/user_37TqCAC00s9KcfmZ614YPQ0tnLG/pill-button/default/preview.1794257145794.webp",
+      "videoUrl": "https://cdn.21st.dev/user_37TqCAC00s9KcfmZ614YPQ0tnLG/pill-button/default/video.1794257131002.mp4",
+      "author": "diarmuradi",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_37TqCAC00s9KcfmZ614YPQ0tnLG/avatar.svg+xml",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/diarmuradi/pill-button?api_key=REDACTED\"",
+      "url": "https://21st.dev/@diarmuradi/components/pill-button"
+    },
+    "status": "retained_unvalidated"
+  }
+]

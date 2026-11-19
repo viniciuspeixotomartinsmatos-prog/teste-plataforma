@@ -1,0 +1,31 @@
+<!doctype html><html class="light" data-theme="light"><head><script data-umso-environment>(function sandboxStorage(workerBootstrap=''){
+ let isolated=false;
+ // Opaque sandbox documents cannot access browser storage. Give each demo an
+ // isolated, temporary store instead of granting access to the app's origin.
+ for(const name of ['localStorage','sessionStorage']){
+  try{window[name].getItem('__preview_probe__');continue;}catch{isolated=true;}
+  const entries=new Map();const storage={get length(){return entries.size;},key(index){return [...entries.keys()][index]??null;},getItem(key){return entries.get(String(key))??null;},setItem(key,value){entries.set(String(key),String(value));},removeItem(key){entries.delete(String(key));},clear(){entries.clear();}};
+  try{Object.defineProperty(window,name,{configurable:true,value:storage});}catch{}
+ }
+ try{if(isolated)throw Error('isolated');void document.cookie;}catch{
+  const cookies=new Map();try{Object.defineProperty(document,'cookie',{configurable:true,get(){return [...cookies].map(([key,value])=>key+'='+value).join('; ');},set(value){const [pair,...options]=String(value).split(';'),index=pair.indexOf('=');if(index<0)return;const key=pair.slice(0,index).trim();if(options.some(option=>/^\s*max-age\s*=\s*0\s*$/i.test(option)))cookies.delete(key);else cookies.set(key,pair.slice(index+1));}});}catch{}
+ }
+ if(isolated){const original=window.postMessage;window.postMessage=function(message,targetOrigin,transfer){if(this===window){if(targetOrigin==='null')targetOrigin='*';else if(targetOrigin?.targetOrigin==='null')targetOrigin={...targetOrigin,targetOrigin:'*'};}return original.call(this,message,targetOrigin,transfer);};}
+ if(isolated){
+  // URL synchronization is optional inside an embedded demo. Keep its state
+  // local when the browser rejects a URL belonging to the host application.
+  const stateGetter=Object.getOwnPropertyDescriptor(Object.getPrototypeOf(history),'state')?.get;let localState=null,fallback=false;
+  for(const method of ['pushState','replaceState']){const original=history[method].bind(history);history[method]=function(state,unused,url){try{const result=original(state,unused,url);fallback=false;return result;}catch(error){if(error.name!=='SecurityError')throw error;localState=typeof structuredClone==='function'?structuredClone(state):JSON.parse(JSON.stringify(state));fallback=true;}};}
+  if(stateGetter)Object.defineProperty(history,'state',{configurable:true,get(){return fallback?localState:stateGetter.call(history);}});
+ }
+ if(workerBootstrap&&typeof Worker==='function'){
+  const NativeBlob=window.Blob;
+  window.Blob=class extends NativeBlob{static [Symbol.hasInstance](value){return value instanceof NativeBlob;}constructor(parts=[],options={}){
+   const text=parts.every(part=>typeof part==='string')?parts.join(''):'';
+   const script=/javascript/.test(options.type||'')||!options.type&&/^\s*(?:var |let |const |\(?function|["']use strict)/.test(text)&&/\bonmessage\s*=|\bpostMessage\s*\(/.test(text);
+   if(script&&text&&!text.includes('/* umso-worker-compat */')){const strict=text.match(/^\s*(["'])use strict\1\s*;?/);parts=strict?[strict[0]+'\n/* umso-worker-compat */\n'+workerBootstrap+'\n'+text.slice(strict[0].length)]:['/* umso-worker-compat */\n'+workerBootstrap+'\n',...parts];}
+   super(parts,options);
+  }};
+ }
+})("");</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Clipboard Icon · Preview</title><link rel="stylesheet" href="/assets/preview.css"><style>:root{color-scheme:light;--background:#ffffff;--foreground:#18181b;--card:var(--background);--card-foreground:var(--foreground);--popover:var(--background);--popover-foreground:var(--foreground);--primary:#18181b;--primary-foreground:#fafafa;--secondary:#f4f4f5;--secondary-foreground:var(--foreground);--muted:var(--secondary);--muted-foreground:#a1a1aa;--accent:var(--secondary);--accent-foreground:var(--foreground);--border:#e4e4e7;--input:var(--border);--ring:#71717a;--radius:.75rem}*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,system-ui,sans-serif;background:var(--background);color:var(--foreground)}#root{width:100%;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px}#root>div{max-width:100%}#root{display:grid;place-items:center}
+html.dark{color-scheme:dark;--background:#09090b;--foreground:#fafafa;--primary:#fafafa;--primary-foreground:#09090b;--secondary:#27272a;--border:#27272a}html.light{color-scheme:light;--background:#ffffff;--foreground:#18181b;--primary:#18181b;--primary-foreground:#ffffff;--secondary:#f4f4f5;--border:#e4e4e7}</style></head><body><div id="root"></div><script src="/previews/runtime/43c0bc298d9f5ada90adcb34.js" defer></script></body></html>

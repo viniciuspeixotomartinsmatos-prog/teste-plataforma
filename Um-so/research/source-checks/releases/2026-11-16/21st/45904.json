@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:45:53.102Z",
+  "metadata": {
+    "type": "component",
+    "id": 45904,
+    "name": "Astryx Command Palette Empty",
+    "description": "Empty state display for the results area. CommandPalette renders it automatically when a search returns no results, or when there is no query and bootstrap() returns nothing.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-command-palette-empty/command-palette-empty-basic/preview.1794511656168.png",
+    "videoUrl": null,
+    "author": "Astryxdesign",
+    "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-command-palette-empty?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-command-palette-empty"
+  },
+  "component": {
+    "id": 45904,
+    "componentId": 26426,
+    "name": "Astryx Command Palette Empty",
+    "demoName": "CommandPaletteEmpty — Basic",
+    "description": "Empty state display for the results area. CommandPalette renders it automatically when a search returns no results, or when there is no query and bootstrap() returns nothing.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-command-palette-empty/command-palette-empty-basic/preview.1794511656168.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-command-palette-empty?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\nimport \"./astryx-command-palette-empty-utils/index.css\"\nimport { CommandPaletteEmpty } from \"@astryxdesign/core/CommandPalette\"\n\nexport * from \"@astryxdesign/core/CommandPalette\"\nexport default CommandPaletteEmpty\n",
+    "demoCode": "'use client';\n\nimport {useMemo} from 'react';\nimport {CommandPalette} from '@/components/ui/astryx-command-palette-empty';\nimport {Text} from '@astryxdesign/core/Text';\nimport {createStaticSource} from '@astryxdesign/core/Typeahead';\n\nfunction CommandPaletteEmptyBasic() {\n  const emptySource = useMemo(() => createStaticSource([]), []);\n\n  return (\n    <CommandPalette\n      isOpen\n      isInline\n      onOpenChange={() => {}}\n      searchSource={emptySource}\n      emptyBootstrapText={\n        <Text type=\"supporting\" color=\"secondary\">\n          No commands available\n        </Text>\n      }\n    />\n  );\n}\n\nexport default function CommandPaletteEmptyBasicDemo() {\n  return (\n    <div\n      data-astryx-theme=\"neutral\"\n      data-theme=\"light\"\n      style={{colorScheme: 'light', display: 'contents'}}>\n      <CommandPaletteEmptyBasic />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source and usage retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

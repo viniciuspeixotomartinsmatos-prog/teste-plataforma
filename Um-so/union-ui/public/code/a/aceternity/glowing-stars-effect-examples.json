@@ -1,0 +1,11 @@
+{
+  "name": "glowing-stars-effect-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/glowing-stars-demo.tsx",
+      "type": "registry:example",
+      "content": "\"use client\";\nimport React from \"react\";\nimport {\n  GlowingStarsBackgroundCard,\n  GlowingStarsDescription,\n  GlowingStarsTitle,\n} from \"../ui/glowing-stars\";\n\nexport function GlowingStarsBackgroundCardPreview() {\n  return (\n    <div className=\"flex items-center justify-center py-20 antialiased\">\n      <GlowingStarsBackgroundCard>\n        <GlowingStarsTitle>Next.js 14</GlowingStarsTitle>\n        <div className=\"flex items-end justify-between\">\n          <GlowingStarsDescription>\n            The power of full-stack to the frontend. Read the release notes.\n          </GlowingStarsDescription>\n          <div className=\"flex h-8 w-8 items-center justify-center rounded-full bg-[hsla(0,0%,100%,.1)]\">\n            <Icon />\n          </div>\n        </div>\n      </GlowingStarsBackgroundCard>\n    </div>\n  );\n}\n\nconst Icon = () => {\n  return (\n    <svg\n      xmlns=\"http://www.w3.org/2000/svg\"\n      fill=\"none\"\n      viewBox=\"0 0 24 24\"\n      strokeWidth=\"1.5\"\n      stroke=\"currentColor\"\n      className=\"h-4 w-4 stroke-2 text-white\"\n    >\n      <path\n        strokeLinecap=\"round\"\n        strokeLinejoin=\"round\"\n        d=\"M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3\"\n      />\n    </svg>\n  );\n};\n"
+    }
+  ]
+}

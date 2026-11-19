@@ -1,0 +1,384 @@
+[
+  {
+    "id": "staged-kokonut-ai-attachment",
+    "sourceId": "kokonut",
+    "name": "Ai Attachment",
+    "slug": "ai-attachment",
+    "url": "https://kokonutui.com/docs/components/ai-attachment",
+    "description": "",
+    "category": "AI components",
+    "kind": "component",
+    "framework": "react",
+    "availability": "code",
+    "codePath": "/code/releases/staged-kokonut-ai-attachment.json",
+    "image": "",
+    "dependencies": [
+      "motion"
+    ],
+    "license": "Preserve original source notices and applicable upstream license.",
+    "tags": [
+      "React"
+    ],
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-kokonut-ai-attachment.html"
+  },
+  {
+    "id": "staged-kokonut-ai-checkout",
+    "sourceId": "kokonut",
+    "name": "Ai Checkout",
+    "slug": "ai-checkout",
+    "url": "https://kokonutui.com/docs/components/ai-checkout",
+    "description": "",
+    "category": "AI components",
+    "kind": "component",
+    "framework": "react",
+    "availability": "code",
+    "codePath": "/code/releases/staged-kokonut-ai-checkout.json",
+    "image": "",
+    "dependencies": [
+      "lucide-react",
+      "motion"
+    ],
+    "license": "Preserve original source notices and applicable upstream license.",
+    "tags": [
+      "React"
+    ],
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-kokonut-ai-checkout.html"
+  },
+  {
+    "id": "staged-kokonut-ai-code-run",
+    "sourceId": "kokonut",
+    "name": "Ai Code Run",
+    "slug": "ai-code-run",
+    "url": "https://kokonutui.com/docs/components/ai-code-run",
+    "description": "",
+    "category": "AI components",
+    "kind": "component",
+    "framework": "react",
+    "availability": "code",
+    "codePath": "/code/releases/staged-kokonut-ai-code-run.json",
+    "image": "",
+    "dependencies": [
+      "lucide-react",
+      "motion"
+    ],
+    "license": "Preserve original source notices and applicable upstream license.",
+    "tags": [
+      "React"
+    ],
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-kokonut-ai-code-run.html"
+  },
+  {
+    "id": "staged-kokonut-ai-connect",
+    "sourceId": "kokonut",
+    "name": "Ai Connect",
+    "slug": "ai-connect",
+    "url": "https://kokonutui.com/docs/components/ai-connect",
+    "description": "",
+    "category": "AI components",
+    "kind": "component",
+    "framework": "react",
+    "availability": "code",
+    "codePath": "/code/releases/staged-kokonut-ai-connect.json",
+    "image": "",
+    "dependencies": [
+      "lucide-react",
+      "motion"
+    ],
+    "license": "Preserve original source notices and applicable upstream license.",
+    "tags": [
+      "React"
+    ],
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-kokonut-ai-connect.html"
+  },
+  {
+    "id": "staged-kokonut-ai-handoff",
+    "sourceId": "kokonut",
+    "name": "Ai Handoff",
+    "slug": "ai-handoff",
+    "url": "https://kokonutui.com/docs/components/ai-handoff",
+    "description": "",
+    "category": "AI components",
+    "kind": "component",
+    "framework": "react",
+    "availability": "code",
+    "codePath": "/code/releases/staged-kokonut-ai-handoff.json",
+    "image": "",
+    "dependencies": [
+      "lucide-react",
+      "motion"
+    ],
+    "license": "Preserve original source notices and applicable upstream license.",
+    "tags": [
+      "React"
+    ],
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-kokonut-ai-handoff.html"
+  },
+  {
+    "id": "staged-kokonut-ai-order-status",
+    "sourceId": "kokonut",
+    "name": "Ai Order Status",
+    "slug": "ai-order-status",
+    "url": "https://kokonutui.com/docs/components/ai-order-status",
+    "description": "",
+    "category": "AI components",
+    "kind": "component",
+    "framework": "react",
+    "availability": "code",
+    "codePath": "/code/releases/staged-kokonut-ai-order-status.json",
+    "image": "",
+    "dependencies": [
+      "lucide-react",
+      "motion"
+    ],
+    "license": "Preserve original source notices and applicable upstream license.",
+    "tags": [
+      "React"
+    ],
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-kokonut-ai-order-status.html"
+  },
+  {
+    "id": "staged-kokonut-ai-schedule",
+    "sourceId": "kokonut",
+    "name": "Ai Schedule",
+    "slug": "ai-schedule",
+    "url": "https://kokonutui.com/docs/components/ai-schedule",
+    "description": "",
+    "category": "AI components",
+    "kind": "component",
+    "framework": "react",
+    "availability": "code",
+    "codePath": "/code/releases/staged-kokonut-ai-schedule.json",
+    "image": "",
+    "dependencies": [
+      "lucide-react",
+      "motion"
+    ],
+    "license": "Preserve original source notices and applicable upstream license.",
+    "tags": [
+      "React"
+    ],
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-kokonut-ai-schedule.html"
+  },
+  {
+    "id": "staged-kokonut-ai-send",
+    "sourceId": "kokonut",
+    "name": "Ai Send",
+    "slug": "ai-send",
+    "url": "https://kokonutui.com/docs/components/ai-send",
+    "description": "",
+    "category": "AI components",
+    "kind": "component",
+    "framework": "react",
+    "availability": "code",
+    "codePath": "/code/releases/staged-kokonut-ai-send.json",
+    "image": "",
+    "dependencies": [
+      "lucide-react",
+      "motion"
+    ],
+    "license": "Preserve original source notices and applicable upstream license.",
+    "tags": [
+      "React"
+    ],
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-kokonut-ai-send.html"
+  },
+  {
+    "id": "staged-kokonut-ai-tool-calls",
+    "sourceId": "kokonut",
+    "name": "Ai Tool Calls",
+    "slug": "ai-tool-calls",
+    "url": "https://kokonutui.com/docs/components/ai-tool-calls",
+    "description": "",
+    "category": "AI components",
+    "kind": "component",
+    "framework": "react",
+    "availability": "code",
+    "codePath": "/code/releases/staged-kokonut-ai-tool-calls.json",
+    "image": "",
+    "dependencies": [
+      "lucide-react",
+      "motion"
+    ],
+    "license": "Preserve original source notices and applicable upstream license.",
+    "tags": [
+      "React"
+    ],
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-kokonut-ai-tool-calls.html"
+  },
+  {
+    "id": "staged-kokonut-empty-state",
+    "sourceId": "kokonut",
+    "name": "Empty State",
+    "slug": "empty-state",
+    "url": "https://kokonutui.com/docs/components/empty-state",
+    "description": "",
+    "category": "Interactions",
+    "kind": "component",
+    "framework": "react",
+    "availability": "code",
+    "codePath": "/code/releases/staged-kokonut-empty-state.json",
+    "image": "",
+    "dependencies": [
+      "lucide-react",
+      "motion"
+    ],
+    "license": "Preserve original source notices and applicable upstream license.",
+    "tags": [
+      "React"
+    ],
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-kokonut-empty-state.html"
+  },
+  {
+    "id": "staged-kokonut-helpful-rating",
+    "sourceId": "kokonut",
+    "name": "Helpful Rating",
+    "slug": "helpful-rating",
+    "url": "https://kokonutui.com/docs/components/helpful-rating",
+    "description": "",
+    "category": "Interactions",
+    "kind": "component",
+    "framework": "react",
+    "availability": "code",
+    "codePath": "/code/releases/staged-kokonut-helpful-rating.json",
+    "image": "",
+    "dependencies": [
+      "lucide-react",
+      "motion"
+    ],
+    "license": "Preserve original source notices and applicable upstream license.",
+    "tags": [
+      "React"
+    ],
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-kokonut-helpful-rating.html"
+  },
+  {
+    "id": "staged-kokonut-inline-alert",
+    "sourceId": "kokonut",
+    "name": "Inline Alert",
+    "slug": "inline-alert",
+    "url": "https://kokonutui.com/docs/components/inline-alert",
+    "description": "",
+    "category": "Interactions",
+    "kind": "component",
+    "framework": "react",
+    "availability": "code",
+    "codePath": "/code/releases/staged-kokonut-inline-alert.json",
+    "image": "",
+    "dependencies": [
+      "lucide-react",
+      "motion"
+    ],
+    "license": "Preserve original source notices and applicable upstream license.",
+    "tags": [
+      "React"
+    ],
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-kokonut-inline-alert.html"
+  },
+  {
+    "id": "staged-kokonut-promise-toast",
+    "sourceId": "kokonut",
+    "name": "Promise Toast",
+    "slug": "promise-toast",
+    "url": "https://kokonutui.com/docs/components/promise-toast",
+    "description": "",
+    "category": "Interactions",
+    "kind": "component",
+    "framework": "react",
+    "availability": "code",
+    "codePath": "/code/releases/staged-kokonut-promise-toast.json",
+    "image": "",
+    "dependencies": [
+      "lucide-react",
+      "motion"
+    ],
+    "license": "Preserve original source notices and applicable upstream license.",
+    "tags": [
+      "React"
+    ],
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-kokonut-promise-toast.html"
+  },
+  {
+    "id": "staged-kokonut-save-status",
+    "sourceId": "kokonut",
+    "name": "Save Status",
+    "slug": "save-status",
+    "url": "https://kokonutui.com/docs/components/save-status",
+    "description": "",
+    "category": "Interactions",
+    "kind": "component",
+    "framework": "react",
+    "availability": "code",
+    "codePath": "/code/releases/staged-kokonut-save-status.json",
+    "image": "",
+    "dependencies": [
+      "lucide-react",
+      "motion"
+    ],
+    "license": "Preserve original source notices and applicable upstream license.",
+    "tags": [
+      "React"
+    ],
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-kokonut-save-status.html"
+  },
+  {
+    "id": "staged-magic-code-comparison",
+    "sourceId": "magic",
+    "name": "Code Comparison",
+    "slug": "code-comparison",
+    "url": "https://magicui.design/docs/components/code-comparison",
+    "description": "A component which compares two code snippets.",
+    "category": "Interactions",
+    "kind": "component",
+    "framework": "react",
+    "availability": "code",
+    "codePath": "/code/releases/staged-magic-code-comparison.json",
+    "image": "",
+    "dependencies": [
+      "shiki",
+      "@shikijs/transformers"
+    ],
+    "license": "Preserve original source notices and applicable upstream license.",
+    "tags": [
+      "React"
+    ],
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-magic-code-comparison.html"
+  },
+  {
+    "id": "staged-magic-magic-card",
+    "sourceId": "magic",
+    "name": "Magic Card",
+    "slug": "magic-card",
+    "url": "https://magicui.design/docs/components/magic-card",
+    "description": "A spotlight effect that follows your mouse cursor and highlights borders on hover.",
+    "category": "Interactions",
+    "kind": "component",
+    "framework": "react",
+    "availability": "code",
+    "codePath": "/code/releases/staged-magic-magic-card.json",
+    "image": "",
+    "dependencies": [
+      "motion"
+    ],
+    "license": "Preserve original source notices and applicable upstream license.",
+    "tags": [
+      "React"
+    ],
+    "updated": "2026-11-12",
+    "previewPath": "/previews/runtime/staged-magic-magic-card.html"
+  }
+]

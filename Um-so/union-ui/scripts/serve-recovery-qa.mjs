@@ -1,0 +1,8 @@
+import http from 'node:http';
+import fs from 'node:fs';
+import path from 'node:path';
+const root=path.resolve('public');
+const types={'.js':'text/javascript','.css':'text/css','.json':'application/json','.html':'text/html','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp','.jpg':'image/jpeg','.woff2':'font/woff2','.mp4':'video/mp4','.webm':'video/webm','.wasm':'application/wasm'};
+http.createServer((request,response)=>{
+ let file;try{const pathname=decodeURIComponent(new URL(request.url,'http://localhost').pathname);file=pathname==='/recovery-qa.html'?path.resolve('tests/fixtures/recovery-qa.html'):path.resolve(root,'.'+pathname);if(pathname!=='/recovery-qa.html'&&!file.startsWith(root+path.sep))throw Error('Invalid path');const stat=fs.statSync(file);if(!stat.isFile())throw Error('Not a file');response.setHeader('Content-Type',types[path.extname(file)]||'application/octet-stream');response.setHeader('Access-Control-Allow-Origin','*');response.setHeader('Cache-Control','no-store');const range=request.headers.range?.match(/^bytes=(\d+)-(\d*)$/);if(range){const start=Number(range[1]),end=Math.min(Number(range[2]||stat.size-1),stat.size-1);if(start>end){response.writeHead(416);response.end();return;}response.writeHead(206,{'Content-Range':`bytes ${start}-${end}/${stat.size}`,'Content-Length':end-start+1,'Accept-Ranges':'bytes'});fs.createReadStream(file,{start,end}).pipe(response);}else{response.setHeader('Content-Length',stat.size);fs.createReadStream(file).pipe(response);}}catch{response.writeHead(404);response.end('Not found');}
+}).listen(4182,'127.0.0.1',()=>console.log('Recovery QA: http://127.0.0.1:4182/recovery-qa.html'));

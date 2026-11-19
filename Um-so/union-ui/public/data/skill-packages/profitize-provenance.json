@@ -1,0 +1,164 @@
+[
+  {
+    "id": "profitize-direcao-de-arte",
+    "sourceUrl": "https://profitize.com.br/build/skills/direcao-de-arte",
+    "sha256": "0adb57bbc6da5fdeb21ce4f9d9a6cfed741f5e0639c0f2b39604bf687a2e8f02",
+    "packageSha256": "0adb57bbc6da5fdeb21ce4f9d9a6cfed741f5e0639c0f2b39604bf687a2e8f02",
+    "files": 40,
+    "download": "authenticated Max UI",
+    "instructionsExecuted": false
+  },
+  {
+    "id": "profitize-seo-google",
+    "sourceUrl": "https://profitize.com.br/build/skills/seo-google",
+    "sha256": "da281ae06f05ad54fc32f1938429ba454c3b84ffb5b11538a03d2659ef0a9853",
+    "packageSha256": "da281ae06f05ad54fc32f1938429ba454c3b84ffb5b11538a03d2659ef0a9853",
+    "files": 1,
+    "download": "authenticated Max UI",
+    "instructionsExecuted": false
+  },
+  {
+    "id": "profitize-trafego-pago",
+    "sourceUrl": "https://profitize.com.br/build/skills/trafego-pago",
+    "sha256": "a5480a8c583e5077ea1acc9af0a9c83e23e54cec7c9eb58e1e5ba9e06e5726a8",
+    "packageSha256": "a5480a8c583e5077ea1acc9af0a9c83e23e54cec7c9eb58e1e5ba9e06e5726a8",
+    "files": 1,
+    "download": "authenticated Max UI",
+    "instructionsExecuted": false
+  },
+  {
+    "id": "profitize-anuncios-concorrencia",
+    "sourceUrl": "https://profitize.com.br/build/skills/anuncios-concorrencia",
+    "sha256": "c03b92c9a26e7ae64340106f0b7737d05b72be66cbae5e6aeeb252a54efffce9",
+    "packageSha256": "c03b92c9a26e7ae64340106f0b7737d05b72be66cbae5e6aeeb252a54efffce9",
+    "files": 1,
+    "download": "authenticated Max UI",
+    "instructionsExecuted": false
+  },
+  {
+    "id": "profitize-banco-de-dados",
+    "sourceUrl": "https://profitize.com.br/build/skills/banco-de-dados",
+    "sha256": "6ec3d269fd285dddc5784feecaa6f01dcbb86d9d56507e6e658463f8290eb538",
+    "packageSha256": "6ec3d269fd285dddc5784feecaa6f01dcbb86d9d56507e6e658463f8290eb538",
+    "files": 8,
+    "download": "authenticated Max UI",
+    "instructionsExecuted": false
+  },
+  {
+    "id": "profitize-backend",
+    "sourceUrl": "https://profitize.com.br/build/skills/backend",
+    "sha256": "4228785a94082afc993d42388bba7ef5dcb8bc74c3fc7bfa9487d565ddf72be0",
+    "packageSha256": "4228785a94082afc993d42388bba7ef5dcb8bc74c3fc7bfa9487d565ddf72be0",
+    "files": 1,
+    "download": "authenticated Max UI",
+    "instructionsExecuted": false
+  },
+  {
+    "id": "profitize-jogos",
+    "sourceUrl": "https://profitize.com.br/build/skills/jogos",
+    "sha256": "c32c8ec42e3bfd3f2bc3de8900a8b9ab717d7b5e8ffa812e0dcdc911e7e60c48",
+    "packageSha256": "c32c8ec42e3bfd3f2bc3de8900a8b9ab717d7b5e8ffa812e0dcdc911e7e60c48",
+    "files": 11,
+    "download": "authenticated Max UI",
+    "instructionsExecuted": false
+  },
+  {
+    "id": "profitize-apresentacoes",
+    "sourceUrl": "https://profitize.com.br/build/skills/apresentacoes",
+    "sha256": "7884015671057cfa17f9f27ae8ba66875ce529f511412277f3b5357966bab57a",
+    "packageSha256": "7884015671057cfa17f9f27ae8ba66875ce529f511412277f3b5357966bab57a",
+    "files": 111,
+    "download": "authenticated Max UI",
+    "instructionsExecuted": false
+  },
+  {
+    "id": "profitize-documentos",
+    "sourceUrl": "https://profitize.com.br/build/skills/documentos",
+    "sha256": "c26656c3d696654c0c02017e66cba6625438315713e0c0554200b496ad64f4cc",
+    "packageSha256": "c26656c3d696654c0c02017e66cba6625438315713e0c0554200b496ad64f4cc",
+    "files": 111,
+    "download": "authenticated Max UI",
+    "instructionsExecuted": false
+  },
+  {
+    "id": "profitize-estilo-apple",
+    "sourceUrl": "https://profitize.com.br/build/design-systems/estilo-apple",
+    "sha256": "b0a87d298dd4166f4c57572e767bbb793ebb2f6ae0d8373c9bedad3588069e0b",
+    "packageSha256": "915d96d8fff3d0537b06f124d1d0e6f7ea79285e4cba983c3d06a8344c1820c0",
+    "files": 1,
+    "download": "authenticated Max UI",
+    "instructionsExecuted": false
+  },
+  {
+    "id": "profitize-estilo-wise",
+    "sourceUrl": "https://profitize.com.br/build/design-systems/estilo-wise",
+    "sha256": "820bc95a0cb7901c4e9f017a9c8301c60e389f7b3295e9b6d25441f37e2f384a",
+    "packageSha256": "376b44097d1a32ae93cb2f7a395f68e502e0dacf47ca8211167def7f16fc3b55",
+    "files": 1,
+    "download": "authenticated Max UI",
+    "instructionsExecuted": false
+  },
+  {
+    "id": "profitize-estilo-cursor",
+    "sourceUrl": "https://profitize.com.br/build/design-systems/estilo-cursor",
+    "sha256": "18e292df52a3f09c857121e72a6b331adb946b187ce2d9c2f8e75ef4b330a8b7",
+    "packageSha256": "850c8e2543138ebaf7aa509c30393951f751fc13e63c65f8c654a5a6a1a4bddb",
+    "files": 1,
+    "download": "authenticated Max UI",
+    "instructionsExecuted": false
+  },
+  {
+    "id": "profitize-estilo-duna",
+    "sourceUrl": "https://profitize.com.br/build/design-systems/estilo-duna",
+    "sha256": "bbfac13b8399e5f48d323abf2a226e125c66d859fbde4ae79db9d94ec3a7adc2",
+    "packageSha256": "a9afaa42764eb1099b3bbcda0e7945109193c0a9de7f73cabc09926dced33318",
+    "files": 1,
+    "download": "authenticated Max UI",
+    "instructionsExecuted": false
+  },
+  {
+    "id": "profitize-estilo-linear",
+    "sourceUrl": "https://profitize.com.br/build/design-systems/estilo-linear",
+    "sha256": "a4aea5a8122725efacbafe19dcfc944a315922e30bbd8af33ec8f5530006786d",
+    "packageSha256": "dc3b875fb6cc01b8006a3fd8bec7549623cbaa6688aaf9631c622f086b1bdaac",
+    "files": 1,
+    "download": "authenticated Max UI",
+    "instructionsExecuted": false
+  },
+  {
+    "id": "profitize-estilo-notion",
+    "sourceUrl": "https://profitize.com.br/build/design-systems/estilo-notion",
+    "sha256": "5ebe274a0af8c59586d3e62ecae9ba3d5fbf0a5471ebdce6bf72bbae7d85cf04",
+    "packageSha256": "7d33eb0712e23e277adf95b875f238a403620ed2530c5e803181d9b1783cfad9",
+    "files": 1,
+    "download": "authenticated Max UI",
+    "instructionsExecuted": false
+  },
+  {
+    "id": "profitize-estilo-vercel",
+    "sourceUrl": "https://profitize.com.br/build/design-systems/estilo-vercel",
+    "sha256": "76756f4b9e72d8457c18f5e566375594dccc4859937c4ff3f51f0415cb444ff4",
+    "packageSha256": "e326059d70ea4cd400b9698474c2f1142de17125d4ac00a9f3a27d7a9a87f8b5",
+    "files": 1,
+    "download": "authenticated Max UI",
+    "instructionsExecuted": false
+  },
+  {
+    "id": "profitize-estilo-duolingo",
+    "sourceUrl": "https://profitize.com.br/build/design-systems/estilo-duolingo",
+    "sha256": "0f8728a28e749868ff4d7d1589069de134e1ab12163f8b82df9ba59372304554",
+    "packageSha256": "6ba19be781ed5a0b99536454de3bd29e63d2d2f23622137a93b828b90873ac7b",
+    "files": 1,
+    "download": "authenticated Max UI",
+    "instructionsExecuted": false
+  },
+  {
+    "id": "profitize-estilo-anthropic",
+    "sourceUrl": "https://profitize.com.br/build/design-systems/estilo-anthropic",
+    "sha256": "05a63b941a6cebea1cce299acb45516c7030dfc3da0cb8bbd52434976da9fb80",
+    "packageSha256": "ffc977a3184aec3b0e74b2bb342a6f3b19d2bf607e67fe9cd10fc463c81d8791",
+    "files": 1,
+    "download": "authenticated Max UI",
+    "instructionsExecuted": false
+  }
+]

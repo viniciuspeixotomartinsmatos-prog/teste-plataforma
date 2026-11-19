@@ -1,0 +1,224 @@
+<!doctype html><html><head><script data-umso-environment>(function sandboxStorage(workerBootstrap=''){
+ let isolated=false;
+ // Opaque sandbox documents cannot access browser storage. Give each demo an
+ // isolated, temporary store instead of granting access to the app's origin.
+ for(const name of ['localStorage','sessionStorage']){
+  try{window[name].getItem('__preview_probe__');continue;}catch{isolated=true;}
+  const entries=new Map();const storage={get length(){return entries.size;},key(index){return [...entries.keys()][index]??null;},getItem(key){return entries.get(String(key))??null;},setItem(key,value){entries.set(String(key),String(value));},removeItem(key){entries.delete(String(key));},clear(){entries.clear();}};
+  try{Object.defineProperty(window,name,{configurable:true,value:storage});}catch{}
+ }
+ try{if(isolated)throw Error('isolated');void document.cookie;}catch{
+  const cookies=new Map();try{Object.defineProperty(document,'cookie',{configurable:true,get(){return [...cookies].map(([key,value])=>key+'='+value).join('; ');},set(value){const [pair,...options]=String(value).split(';'),index=pair.indexOf('=');if(index<0)return;const key=pair.slice(0,index).trim();if(options.some(option=>/^\s*max-age\s*=\s*0\s*$/i.test(option)))cookies.delete(key);else cookies.set(key,pair.slice(index+1));}});}catch{}
+ }
+ if(isolated){const original=window.postMessage;window.postMessage=function(message,targetOrigin,transfer){if(this===window){if(targetOrigin==='null')targetOrigin='*';else if(targetOrigin?.targetOrigin==='null')targetOrigin={...targetOrigin,targetOrigin:'*'};}return original.call(this,message,targetOrigin,transfer);};}
+ if(isolated){
+  // URL synchronization is optional inside an embedded demo. Keep its state
+  // local when the browser rejects a URL belonging to the host application.
+  const stateGetter=Object.getOwnPropertyDescriptor(Object.getPrototypeOf(history),'state')?.get;let localState=null,fallback=false;
+  for(const method of ['pushState','replaceState']){const original=history[method].bind(history);history[method]=function(state,unused,url){try{const result=original(state,unused,url);fallback=false;return result;}catch(error){if(error.name!=='SecurityError')throw error;localState=typeof structuredClone==='function'?structuredClone(state):JSON.parse(JSON.stringify(state));fallback=true;}};}
+  if(stateGetter)Object.defineProperty(history,'state',{configurable:true,get(){return fallback?localState:stateGetter.call(history);}});
+ }
+ if(workerBootstrap&&typeof Worker==='function'){
+  const NativeBlob=window.Blob;
+  window.Blob=class extends NativeBlob{static [Symbol.hasInstance](value){return value instanceof NativeBlob;}constructor(parts=[],options={}){
+   const text=parts.every(part=>typeof part==='string')?parts.join(''):'';
+   const script=/javascript/.test(options.type||'')||!options.type&&/^\s*(?:var |let |const |\(?function|["']use strict)/.test(text)&&/\bonmessage\s*=|\bpostMessage\s*\(/.test(text);
+   if(script&&text&&!text.includes('/* umso-worker-compat */')){const strict=text.match(/^\s*(["'])use strict\1\s*;?/);parts=strict?[strict[0]+'\n/* umso-worker-compat */\n'+workerBootstrap+'\n'+text.slice(strict[0].length)]:['/* umso-worker-compat */\n'+workerBootstrap+'\n',...parts];}
+   super(parts,options);
+  }};
+ }
+})("");</script>
+<script>(function(){try{var p=new URLSearchParams(location.search);var t=(p.get('theme')||'').toLowerCase();var dark;if(t==='dark'||p.get('dark')==='true'){dark=true;}else if(t==='light'){dark=false;}else{dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;}var h=document.documentElement,b=document.body;function apply(el){if(!el)return;el.classList.remove('dark','light');el.classList.add(dark?'dark':'light');}apply(h);if(b){apply(b);}else{document.addEventListener('DOMContentLoaded',function(){apply(document.body);});}document.documentElement.style.colorScheme=dark?'dark':'light';}catch(e){document.documentElement.classList.add('dark');}})();</script><meta charset='utf-8'/><meta name='viewport' content='width=device-width,initial-scale=1'>
+<script type="importmap">{"imports":{"react":"https://esm.sh/react@19.1.0","react/jsx-runtime":"https://esm.sh/react@19.1.0/jsx-runtime","react-dom":"https://esm.sh/react-dom@19.1.0","react-dom/client":"https://esm.sh/react-dom@19.1.0/client","clsx":"https://esm.sh/clsx@2.1.1","tailwind-merge":"https://esm.sh/tailwind-merge@3.3.0","@tabler/icons-react":"https://esm.sh/@tabler/icons-react@3.34.0?deps=react@19.1.0"}}</script>
+<script src='https://cdn.tailwindcss.com'></script>
+<script>tailwind.config={darkMode:'class',theme:{extend:{colors:{background:'hsl(var(--background))',foreground:'hsl(var(--foreground))'}}}};</script>
+<style>:root{--background:0 0% 100%;--foreground:0 0% 9%}.dark{--background:0 0% 7%;--foreground:0 0% 98%}html,body,#root{height:100%;margin:0}body{background:hsl(var(--background));color:hsl(var(--foreground));font-family:Inter,ui-sans-serif,system-ui,sans-serif}</style>
+<style>.fixed.top-4.left-4{display:none!important}</style>
+</head><body><div id='root'></div><script type='module'>// ../../../../../tmp/agent-elements-plan-tool/entry-default.tsx
+import React2 from "react";
+import { createRoot } from "react-dom/client";
+
+// ../../../../../tmp/agent-elements-plan-tool/code.tsx
+import * as React from "react";
+import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+import {
+  IconChevronsDown,
+  IconChevronsUp,
+  IconFileDescription
+} from "@tabler/icons-react";
+import { jsx, jsxs } from "react/jsx-runtime";
+function cn(...inputs) {
+  return twMerge(clsx(inputs));
+}
+function Spinner({ className }) {
+  return /* @__PURE__ */ jsx(
+    "svg",
+    {
+      className: cn("animate-spin", className),
+      viewBox: "0 0 16 16",
+      fill: "none",
+      "aria-hidden": "true",
+      children: /* @__PURE__ */ jsx(
+        "circle",
+        {
+          cx: "8",
+          cy: "8",
+          r: "6",
+          stroke: "currentColor",
+          strokeWidth: "1.5",
+          strokeDasharray: "28",
+          strokeDashoffset: "7",
+          strokeLinecap: "round"
+        }
+      )
+    }
+  );
+}
+function getPlanFileName(plan2) {
+  const rawId = plan2.id?.trim();
+  if (!rawId) return "plan-working.md";
+  if (rawId.endsWith(".md")) return rawId;
+  return `plan-${rawId}.md`;
+}
+var PlanTool = React.memo(function PlanTool2({
+  state = "idle",
+  plan: plan2,
+  approved = false,
+  approveLabel = "Approve",
+  onApprove,
+  className
+}) {
+  const [isExpanded, setIsExpanded] = React.useState(false);
+  const [localApproved, setLocalApproved] = React.useState(false);
+  const isPending = state === "pending";
+  const fileName = getPlanFileName(plan2);
+  const summary = plan2.summary?.trim() ?? "";
+  const hasSummary = summary.length > 0;
+  const isAlreadyApproved = approved || localApproved;
+  const approveText = isAlreadyApproved ? "Approved" : approveLabel;
+  const handleApprove = () => {
+    if (isAlreadyApproved) return;
+    setLocalApproved(true);
+    onApprove?.();
+  };
+  return /* @__PURE__ */ jsxs(
+    "div",
+    {
+      className: cn(
+        "rounded-[10px] border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 overflow-hidden",
+        className
+      ),
+      children: [
+        /* @__PURE__ */ jsxs("div", { className: "h-7 pl-3 pr-2.5 flex items-center justify-between", children: [
+          /* @__PURE__ */ jsxs("div", { className: "min-w-0 flex items-center gap-1", children: [
+            isPending ? /* @__PURE__ */ jsx(Spinner, { className: "w-3 h-3 text-neutral-500 dark:text-neutral-400 shrink-0" }) : /* @__PURE__ */ jsx(IconFileDescription, { className: "w-3.5 h-3.5 text-neutral-500 dark:text-neutral-400 shrink-0" }),
+            /* @__PURE__ */ jsx("span", { className: "text-xs text-neutral-500 dark:text-neutral-400 truncate", children: fileName })
+          ] }),
+          /* @__PURE__ */ jsx(
+            "button",
+            {
+              type: "button",
+              onClick: () => setIsExpanded((prev) => !prev),
+              "aria-label": isExpanded ? "Collapse plan" : "Expand plan",
+              className: "size-5 inline-flex items-center justify-center text-neutral-500 dark:text-neutral-400",
+              children: isExpanded ? /* @__PURE__ */ jsx(IconChevronsUp, { className: "w-3.5 h-3.5" }) : /* @__PURE__ */ jsx(IconChevronsDown, { className: "w-3.5 h-3.5" })
+            }
+          )
+        ] }),
+        /* @__PURE__ */ jsxs("div", { className: "border-t border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-950 pt-2", children: [
+          /* @__PURE__ */ jsxs("div", { className: "space-y-1.5", children: [
+            /* @__PURE__ */ jsx("div", { className: "text-sm text-neutral-900 dark:text-neutral-100 px-3", children: plan2.title }),
+            hasSummary ? /* @__PURE__ */ jsxs("div", { className: "relative", children: [
+              /* @__PURE__ */ jsx(
+                "div",
+                {
+                  className: cn(
+                    "px-3 text-sm text-neutral-500 dark:text-neutral-400 whitespace-pre-wrap",
+                    !isExpanded && "max-h-[94px] overflow-hidden"
+                  ),
+                  children: summary
+                }
+              ),
+              !isExpanded && /* @__PURE__ */ jsxs("div", { className: "absolute inset-x-0 bottom-0 h-16 pb-2 pl-3.5 pr-2", children: [
+                /* @__PURE__ */ jsx("div", { className: "absolute inset-x-0 bottom-0 h-full w-full bg-gradient-to-b from-transparent to-white dark:to-neutral-950" }),
+                /* @__PURE__ */ jsxs("div", { className: "h-full flex items-end justify-between relative", children: [
+                  /* @__PURE__ */ jsx(
+                    "button",
+                    {
+                      type: "button",
+                      onClick: () => setIsExpanded(true),
+                      className: "-mx-2 h-5 px-1.5 rounded-[4px] text-xs text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100",
+                      children: "Read detailed plan"
+                    }
+                  ),
+                  !isAlreadyApproved && /* @__PURE__ */ jsx(
+                    "button",
+                    {
+                      type: "button",
+                      onClick: handleApprove,
+                      className: "h-5 px-1.5 rounded-[4px] text-xs font-medium bg-blue-500 dark:bg-blue-400 text-white dark:text-neutral-950 hover:bg-blue-500/90 dark:hover:bg-blue-400/90 active:scale-[0.98] transition-[background-color,transform] duration-150",
+                      children: approveText
+                    }
+                  )
+                ] })
+              ] })
+            ] }) : /* @__PURE__ */ jsx("div", { className: "text-xs text-neutral-500 dark:text-neutral-400 px-3 pb-2", children: "No plan summary provided." })
+          ] }),
+          (isExpanded || !hasSummary) && /* @__PURE__ */ jsxs("div", { className: "mt-2 flex items-center justify-between pt-1.5 pb-2 pl-3.5 pr-2 border-t border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900", children: [
+            /* @__PURE__ */ jsx(
+              "button",
+              {
+                type: "button",
+                onClick: () => setIsExpanded((prev) => !prev),
+                className: "-mx-2 h-5 px-1.5 rounded-[4px] text-xs text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100",
+                children: isExpanded ? "Hide detailed plan" : "Read detailed plan"
+              }
+            ),
+            !isAlreadyApproved && /* @__PURE__ */ jsx(
+              "button",
+              {
+                type: "button",
+                onClick: handleApprove,
+                className: "h-5 px-1.5 rounded-[4px] text-xs font-medium bg-blue-500 dark:bg-blue-400 text-white dark:text-neutral-950 hover:bg-blue-500/90 dark:hover:bg-blue-400/90 active:scale-[0.98] transition-[background-color,transform] duration-150",
+                children: approveText
+              }
+            )
+          ] })
+        ] })
+      ]
+    }
+  );
+});
+
+// ../../../../../private/tmp/agent-elements-plan-tool/demo-default.tsx
+import { jsx as jsx2 } from "react/jsx-runtime";
+var plan = {
+  id: "plan-1",
+  title: "Refresh UI previews",
+  summary: "Unify tool card spacing and interaction patterns so docs previews feel cohesive across all tool components. Standardize card chrome (header height, borders, radius, and muted labels) for Plan, Approval, Edit, Search, and Todo previews. Align content density and typography so title, metadata, and body text read consistently at a glance. Normalize interaction states: loading shimmer, pending indicators, hover affordances, and disabled action buttons. Validate responsive behavior on narrow widths, including truncation rules and action-row wrapping. Run a visual QA pass in both light and dark themes and tighten spacing where cards feel too loose or cramped. Outcome: preview gallery feels intentionally designed, easier to scan, and stable across viewport sizes."
+};
+function Demo() {
+  return /* @__PURE__ */ jsx2("div", { className: "flex items-center justify-center w-full min-h-screen bg-background p-8 overflow-hidden", children: /* @__PURE__ */ jsx2("div", { className: "w-full max-w-md", children: /* @__PURE__ */ jsx2(PlanTool, { state: "idle", plan }) }) });
+}
+
+// ../../../../../tmp/agent-elements-plan-tool/entry-default.tsx
+var root = createRoot(document.getElementById("root"));
+root.render(React2.createElement(Demo));
+requestAnimationFrame(() => {
+  document.body.dataset.ready = "1";
+});
+</script><script>(()=>{const r=()=>requestAnimationFrame(()=>requestAnimationFrame(()=>parent.postMessage({type:"21st-preview-ready"},"*")));document.readyState==="complete"?r():addEventListener("load",r,{once:true})})()</script><script data-21st-keys="1">(()=>{
+if(parent===window)return
+const q='[data-state="open"],dialog[open]'
+const open=()=>document.querySelectorAll(q).length
+addEventListener("keydown",(e)=>{
+const before=open()
+setTimeout(()=>{
+if(e.defaultPrevented||open()<before)return
+const t=(e.composedPath&&e.composedPath()[0])||e.target
+if(t&&(t.isContentEditable||/^(INPUT|TEXTAREA|SELECT)$/.test(t.nodeName)))return
+parent.postMessage({type:"21st-preview-key",key:e.key,code:e.code,altKey:e.altKey,ctrlKey:e.ctrlKey,metaKey:e.metaKey,shiftKey:e.shiftKey},"*")
+},0)
+})
+})()</script></body></html>

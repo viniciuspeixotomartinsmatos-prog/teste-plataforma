@@ -1,0 +1,1 @@
+{"files":[{"path":"Usage.tsx","content":"import { BeamsBackground } from \"@/components/ui/beams-background\"\n\n\nexport function BeamsBackgroundDemo() {\n    return < BeamsBackground />\n}"}],"usageOnly":true,"description":"Beams Bacground animated with colors","examples":[],"variants":[],"additionalCodePaths":[],"framework":"react"}

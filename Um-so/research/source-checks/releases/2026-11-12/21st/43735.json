@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 43735,
+    "name": "Feedback Widget",
+    "description": "A floating corner button that opens a compact feedback form for capturing a quick good/bad mood rating and an optional message.",
+    "previewUrl": "https://cdn.21st.dev/user_registry_f0rextasy_1791204275988/feedback-widget/default/preview.1794426234945.png",
+    "videoUrl": null,
+    "author": "f0rextasy",
+    "authorImage": "https://avatars.githubusercontent.com/u/99847357?v=4",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/f0rextasy/feedback-widget?api_key=REDACTED\"",
+    "url": "https://21st.dev/@f0rextasy/components/feedback-widget"
+  },
+  "requestedRoute": "/@f0rextasy/components/feedback-widget",
+  "checkedAt": "2026-11-13T01:50:08.682Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 43735,
+    "componentId": 25201,
+    "authorUserId": "user_registry_f0rextasy_1791204275988",
+    "name": "Feedback Widget",
+    "demoName": "Default",
+    "description": "A floating corner button that opens a compact feedback form for capturing a quick good/bad mood rating and an optional message.",
+    "previewUrl": "https://cdn.21st.dev/user_registry_f0rextasy_1791204275988/feedback-widget/default/preview.1794426234945.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/f0rextasy/feedback-widget?api_key=REDACTED\"",
+    "componentCode": "\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"./feedback-widget-utils/utils\";\n\nexport interface FeedbackWidgetProps extends Omit<\n  React.HTMLAttributes<HTMLDivElement>,\n  \"onSubmit\"\n> {\n  onSubmit?: (message: string, mood: \"good\" | \"bad\") => void;\n  position?: \"bottom-right\" | \"bottom-left\";\n}\n\nexport function FeedbackWidget({\n  onSubmit,\n  position = \"bottom-right\",\n  className,\n  ...props\n}: FeedbackWidgetProps) {\n  const [open, setOpen] = React.useState(false);\n  const [mood, setMood] = React.useState<\"good\" | \"bad\" | null>(null);\n  const [message, setMessage] = React.useState(\"\");\n  const [sent, setSent] = React.useState(false);\n\n  const send = () => {\n    if (!mood) return;\n    onSubmit?.(message.trim(), mood);\n    setSent(true);\n    setTimeout(() => {\n      setOpen(false);\n      setSent(false);\n      setMood(null);\n      setMessage(\"\");\n    }, 1400);\n  };\n\n  return (\n    <div\n      className={cn(\n        \"fixed bottom-5 z-40 flex flex-col items-end gap-2\",\n        position === \"bottom-right\" ? \"right-5\" : \"left-5 items-start\",\n        className,\n      )}\n      {...props}\n    >\n      {open ? (\n        <div className=\"w-72 overflow-hidden rounded-xl border-2 border-foreground bg-card shadow-xl\">\n          <div className=\"border-b border-dashed border-border px-4 py-2 font-mono text-[10px] font-bold uppercase tracking-[0.2em]\">\n            Ticket feedback\n          </div>\n          <div className=\"space-y-3 p-4\">\n            {sent ? (\n              <p className=\"py-4 text-center font-mono text-sm text-accent\">\n                Stamped. Thank you!\n              </p>\n            ) : (\n              <>\n                <div className=\"flex gap-2\" role=\"group\" aria-label=\"Mood\">\n                  {([\"good\", \"bad\"] as const).map((m) => (\n                    <button\n                      key={m}\n                      type=\"button\"\n                      aria-pressed={mood === m}\n                      onClick={() => setMood(m)}\n                      className={cn(\n                        \"flex-1 cursor-pointer rounded-md border px-3 py-2 text-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring\",\n                        mood === m\n                          ? \"border-accent bg-accent/10 scale-105\"\n                          : \"border-border hover:border-foreground/50\",\n                      )}\n                    >\n                      <span aria-hidden=\"true\" className=\"flex justify-center\">\n                        <svg\n                          viewBox=\"0 0 24 24\"\n                          fill=\"none\"\n                          stroke=\"currentColor\"\n                          strokeWidth={1.8}\n                          strokeLinecap=\"round\"\n                          strokeLinejoin=\"round\"\n                          aria-hidden=\"true\"\n                          className={cn(\"size-5\", m === \"bad\" && \"rotate-180\")}\n                        >\n                          <path d=\"M7 11v8H4.6A1.6 1.6 0 0 1 3 17.4v-4.8A1.6 1.6 0 0 1 4.6 11H7z\" />\n                          <path d=\"M7 11l3.1-6.6c.4-.9 1.7-.9 2 .1L13.4 9H19a1.5 1.5 0 0 1 1.5 1.8l-1.2 5.3a2 2 0 0 1-2 1.6H7\" />\n                        </svg>\n                      </span>\n                      <span className=\"sr-only\">\n                        {m === \"good\" ? \"Good\" : \"Bad\"}\n                      </span>\n                    </button>\n                  ))}\n                </div>\n                <textarea\n                  value={message}\n                  onChange={(e) => setMessage(e.target.value)}\n                  rows={3}\n                  placeholder=\"What should we stamp next?\"\n                  aria-label=\"Feedback message\"\n                  className=\"w-full rounded-md border border-border bg-background px-3 py-2 font-mono text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring\"\n                />\n                <button\n                  type=\"button\"\n                  disabled={!mood}\n                  onClick={send}\n                  className=\"w-full cursor-pointer rounded-md bg-primary px-3 py-2 font-mono text-xs font-bold uppercase text-primary-foreground transition-transform hover:scale-[1.01] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-40\"\n                >\n                  Send stub\n                </button>\n              </>\n            )}\n          </div>\n        </div>\n      ) : null}\n      <button\n        type=\"button\"\n        onClick={() => setOpen((v) => !v)}\n        aria-expanded={open}\n        aria-label=\"Send feedback\"\n        className=\"cursor-pointer rounded-full border-2 border-foreground bg-accent px-4 py-2 font-mono text-xs font-bold uppercase text-accent-foreground shadow-lg transition-transform hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring\"\n      >\n        ✎ Feedback\n      </button>\n    </div>\n  );\n}\n\nexport default FeedbackWidget;\n",
+    "demoCode": "import { FeedbackWidget } from \"@/components/ui/feedback-widget\";\n\nexport default function FeedbackWidgetDemo() {\n  return (\n    <div className=\"relative flex h-screen w-full items-center justify-center bg-background text-foreground\">\n      <p className=\"max-w-sm text-center text-sm text-muted-foreground\">\n        Click the floating button in the corner to open the feedback form.\n      </p>\n      <FeedbackWidget\n        onSubmit={(message, mood) => {\n          console.log(\"feedback submitted\", { message, mood });\n        }}\n      />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": "user_registry_f0rextasy_1791204275988"
+  }
+}

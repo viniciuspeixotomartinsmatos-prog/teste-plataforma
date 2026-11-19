@@ -1,0 +1,138 @@
+[
+  {
+    "route": "/@boardui/components/social-button",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44761,
+      "name": "Social Button",
+      "description": "A sign-in button for a third-party provider like Google, GitHub, Slack or Apple, with the correct brand logo, color and label, plus icon-only and custom-provider SSO variants.",
+      "previewUrl": "https://cdn.21st.dev/boardui/social-button/appearance-variants/preview.1793993668078-275d9bca-d041-4db3-9c7e-68da295ae96f.png",
+      "videoUrl": null,
+      "author": "boardui",
+      "authorImage": "https://github.com/BoardUI.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/boardui/social-button?api_key=REDACTED\"",
+      "url": "https://21st.dev/@boardui/components/social-button"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@daiwiikharihar/components/3d-topology-mesh",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 28776,
+      "name": "3D Topology Mesh",
+      "description": "A dynamic React Canvas component that renders an interactive, physics-driven 3D mesh seamlessly morphing between complex topologies like a Möbius strip and Helix.",
+      "previewUrl": "https://cdn.21st.dev/user_332oxzW8MyPod4IDIdKq9rbPYuk/3d-topology-mesh/default/preview.1794246525887.webp",
+      "videoUrl": "https://cdn.21st.dev/user_332oxzW8MyPod4IDIdKq9rbPYuk/3d-topology-mesh/default/video.1794246515442.mp4",
+      "author": "daiwiikharihar",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_332oxzW8MyPod4IDIdKq9rbPYuk/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/daiwiikharihar/3d-topology-mesh?api_key=REDACTED\"",
+      "url": "https://21st.dev/@daiwiikharihar/components/3d-topology-mesh"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@daiwiikharihar/components/block-text",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 10004,
+      "name": "Block Text",
+      "description": "A self-contained, mobile-responsive React component using GSAP and Tailwind CSS to create a repeating \"physics-based\" text reveal animation where color overlays fall away as you scroll.",
+      "previewUrl": "https://cdn.21st.dev/user_332oxzW8MyPod4IDIdKq9rbPYuk/block-text/default/preview.1794246611987.webp",
+      "videoUrl": "https://cdn.21st.dev/daiwiikharihar17147/block-text/default/video.1770616513135.mp4",
+      "author": "daiwiikharihar",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_332oxzW8MyPod4IDIdKq9rbPYuk/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/daiwiikharihar/block-text?api_key=REDACTED\"",
+      "url": "https://21st.dev/@daiwiikharihar/components/block-text"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@daiwiikharihar/components/caution-tape-text",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45150,
+      "name": "Caution Tape Text",
+      "description": "Heavy condensed headline with warning caution-tape strips weaving across words and smooth load animations.",
+      "previewUrl": "https://cdn.21st.dev/user_332oxzW8MyPod4IDIdKq9rbPYuk/caution-tape-text/default/preview.1794401840672.webp",
+      "videoUrl": "https://cdn.21st.dev/user_332oxzW8MyPod4IDIdKq9rbPYuk/caution-tape-text/default/video.1794401821639.mp4",
+      "author": "daiwiikharihar",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_332oxzW8MyPod4IDIdKq9rbPYuk/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/daiwiikharihar/caution-tape-text?api_key=REDACTED\"",
+      "url": "https://21st.dev/@daiwiikharihar/components/caution-tape-text"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@daiwiikharihar/components/color-pairing-card",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45030,
+      "name": "Color Pairing Card",
+      "description": "An interactive SVG-notched bento color palette card with inverted corner cutouts, one-click hex copying, live color dominance swapping, and dual light/dark mode support.",
+      "previewUrl": "https://cdn.21st.dev/daiwiikharihar/color-pairing-card/default/preview.1794304775624-006e030a-bf28-444d-ba67-117471800360.webp",
+      "videoUrl": "https://cdn.21st.dev/daiwiikharihar/color-pairing-card/default/video.1794304775624-006e030a-bf28-444d-ba67-117471800360.mp4",
+      "author": "daiwiikharihar",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_332oxzW8MyPod4IDIdKq9rbPYuk/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/daiwiikharihar/color-pairing-card?api_key=REDACTED\"",
+      "url": "https://21st.dev/@daiwiikharihar/components/color-pairing-card"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@daiwiikharihar/components/curly-wave-poster",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45027,
+      "name": "Curly Wave Poster",
+      "description": "An animated, vintage-inspired motivational poster featuring interwoven brush stroke ribbons and dynamic typography with interactive replay.",
+      "previewUrl": "https://cdn.21st.dev/daiwiikharihar/curly-wave-poster/default/preview.1794303534631-b6c948ae-b4a2-4c48-ba49-a352f1a5307f.webp",
+      "videoUrl": "https://cdn.21st.dev/daiwiikharihar/curly-wave-poster/default/video.1794303534631-b6c948ae-b4a2-4c48-ba49-a352f1a5307f.mp4",
+      "author": "daiwiikharihar",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_332oxzW8MyPod4IDIdKq9rbPYuk/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/daiwiikharihar/curly-wave-poster?api_key=REDACTED\"",
+      "url": "https://21st.dev/@daiwiikharihar/components/curly-wave-poster"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@daiwiikharihar/components/eclipse-corona",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 27862,
+      "name": "Eclipse Corona",
+      "description": "Movable solar eclipse with fanning corona; cursor and click drive totality.",
+      "previewUrl": "https://cdn.21st.dev/daiwiikharihar/eclipse-corona/default/preview.1789816179451-d817afa6-552d-4d87-a53f-63ccbc8e968a.png",
+      "videoUrl": null,
+      "author": "daiwiikharihar",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_332oxzW8MyPod4IDIdKq9rbPYuk/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/daiwiikharihar/eclipse-corona?api_key=REDACTED\"",
+      "url": "https://21st.dev/@daiwiikharihar/components/eclipse-corona"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@daiwiikharihar/components/nvidia-dgx-pod",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44815,
+      "name": "Nvidia Dgx Pod",
+      "description": "Isometric NVIDIA DGX SuperPOD rack machine with slide-out blades",
+      "previewUrl": "https://cdn.21st.dev/user_332oxzW8MyPod4IDIdKq9rbPYuk/nvidia-dgx-pod/default/preview.1794245398507.webp",
+      "videoUrl": "https://cdn.21st.dev/user_332oxzW8MyPod4IDIdKq9rbPYuk/nvidia-dgx-pod/default/video.1794245393658.mp4",
+      "author": "daiwiikharihar",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_332oxzW8MyPod4IDIdKq9rbPYuk/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/daiwiikharihar/nvidia-dgx-pod?api_key=REDACTED\"",
+      "url": "https://21st.dev/@daiwiikharihar/components/nvidia-dgx-pod"
+    },
+    "status": "retained_unvalidated"
+  }
+]

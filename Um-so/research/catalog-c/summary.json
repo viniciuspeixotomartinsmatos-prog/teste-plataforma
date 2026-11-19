@@ -1,0 +1,23 @@
+{
+  "animate": {
+    "items": 1786,
+    "localSource": 1770,
+    "localImages": 18,
+    "kinds": {
+      "component": 240,
+      "icon": 1546
+    }
+  },
+  "shadcnblocks": {
+    "items": 4811,
+    "localSource": 117,
+    "localImages": 117,
+    "kinds": {
+      "block": 2500,
+      "component": 2154,
+      "page": 97,
+      "template": 21,
+      "theme": 39
+    }
+  }
+}

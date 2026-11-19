@@ -1,0 +1,21 @@
+{
+  "name": "compare-examples",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "/src/registry/default/example/compare-demo.tsx",
+      "type": "registry:example",
+      "content": "import React from \"react\";\nimport { Compare } from \"@/components/ui/compare\";\n\nexport function CompareDemo() {\n  return (\n    <div className=\"p-4 border rounded-3xl dark:bg-neutral-900 bg-neutral-100  border-neutral-200 dark:border-neutral-800 px-4\">\n      <Compare\n        firstImage=\"https://assets.aceternity.com/code-problem.png\"\n        secondImage=\"https://assets.aceternity.com/code-solution.png\"\n        firstImageClassName=\"object-cover object-left-top\"\n        secondImageClassname=\"object-cover object-left-top\"\n        className=\"h-[250px] w-[200px] md:h-[500px] md:w-[500px]\"\n        slideMode=\"hover\"\n      />\n    </div>\n  );\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/compare-autoplay-demo.tsx",
+      "type": "registry:example",
+      "content": "import React from \"react\";\nimport { Compare } from \"@/components/ui/compare\";\n\nexport function CompareDemo() {\n  return (\n    <div className=\"w-3/4 h-[60vh] px-1 md:px-8 flex items-center justify-center [perspective:800px] [transform-style:preserve-3d]\">\n      <div\n        style={{\n          transform: \"rotateX(15deg) translateZ(80px)\",\n        }}\n        className=\"p-1 md:p-4 border rounded-3xl dark:bg-neutral-900 bg-neutral-100  border-neutral-200 dark:border-neutral-800 mx-auto w-3/4 h-1/2 md:h-3/4\"\n      >\n        <Compare\n          firstImage=\"https://assets.aceternity.com/notes-dark.png\"\n          secondImage=\"https://assets.aceternity.com/linear-dark.png\"\n          firstImageClassName=\"object-cover object-left-top w-full\"\n          secondImageClassname=\"object-cover object-left-top w-full\"\n          className=\"w-full h-full rounded-[22px] md:rounded-lg\"\n          slideMode=\"hover\"\n          autoplay={true}\n        />\n      </div>\n    </div>\n  );\n}\n"
+    },
+    {
+      "path": "/src/registry/default/example/compare-drag-demo.tsx",
+      "type": "registry:example",
+      "content": "import React from \"react\";\nimport { Compare } from \"@/components/ui/compare\";\n\nexport function CompareDemo() {\n  return (\n    <div className=\"flex h-[60vh] w-3/4 items-center justify-center px-1 [perspective:800px] [transform-style:preserve-3d] md:px-8\">\n      <div\n        style={{\n          transform: \"rotateX(15deg) translateZ(80px)\",\n        }}\n        className=\"mx-auto h-1/2 w-3/4 rounded-3xl border border-neutral-200 bg-neutral-100 p-1 md:h-3/4 md:p-4 dark:border-neutral-800 dark:bg-neutral-900\"\n      >\n        <Compare\n          firstImage=\"https://assets.aceternity.com/notes-dark.png\"\n          secondImage=\"https://assets.aceternity.com/linear-dark.png\"\n          firstImageClassName=\"object-cover object-left-top w-full\"\n          secondImageClassname=\"object-cover object-left-top w-full\"\n          className=\"h-full w-full rounded-[22px] md:rounded-lg\"\n          slideMode=\"drag\"\n          autoplay={false}\n        />\n      </div>\n    </div>\n  );\n}\n"
+    }
+  ]
+}

@@ -1,0 +1,1063 @@
+[
+  {
+    "slug": "3d-card-effect",
+    "name": "3D Card Hover Tilt Effect",
+    "description": "A card that tilts in 3D as the cursor moves, with layered depth on each child element. Built with React, Tailwind CSS and CSS perspective.",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/3d-card.webp",
+    "registries": [
+      "3d-card"
+    ]
+  },
+  {
+    "slug": "3d-globe",
+    "name": "3D Globe",
+    "description": "A realistic globe component with tooltips and avatar tips",
+    "thumbnailUrl": "https://assets.aceternity.com/components/3d-globe.webp",
+    "registries": [
+      "3d-globe"
+    ]
+  },
+  {
+    "slug": "3d-marquee",
+    "name": "3D Marquee",
+    "description": "A 3D Marquee effect with grid, good for showcasing testimonials and hero sections",
+    "thumbnailUrl": "https://assets.aceternity.com/3d-marquee.webp",
+    "registries": [
+      "3d-marquee"
+    ]
+  },
+  {
+    "slug": "3d-pin",
+    "name": "3D Animated Pin",
+    "description": "A gradient pin that animates on hover, perfect for product links.",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/3d_pin_sklefs.webp",
+    "registries": [
+      "3d-pin"
+    ]
+  },
+  {
+    "slug": "animated-modal",
+    "name": "Animated Modal",
+    "description": "A customizable, compound modal component with animated transitions",
+    "thumbnailUrl": "https://assets.aceternity.com/animated-modal.webp",
+    "registries": [
+      "animated-modal"
+    ]
+  },
+  {
+    "slug": "animated-testimonials",
+    "name": "Animated Testimonials",
+    "description": "Minimal testimonials sections with image and quote.",
+    "thumbnailUrl": "https://assets.aceternity.com/animated-testimonials.webp",
+    "registries": [
+      "animated-testimonials"
+    ]
+  },
+  {
+    "slug": "animated-tooltip",
+    "name": "Animated Tooltip",
+    "description": "A cool tooltip that reveals on hover, follows mouse pointer",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/Tooltip_luwy44.webp",
+    "registries": [
+      "animated-tooltip"
+    ]
+  },
+  {
+    "slug": "apple-cards-carousel",
+    "name": "Apple Cards Carousel",
+    "description": "A sleek and minimal carousel implementation, as seen on apple.com",
+    "thumbnailUrl": "https://assets.aceternity.com/apple-cards-carousel.webp",
+    "registries": [
+      "apple-cards-carousel"
+    ]
+  },
+  {
+    "slug": "ascii-art",
+    "name": "ASCII Art",
+    "description": "Convert any image to ASCII art with customizable charsets, colors, and animations.",
+    "thumbnailUrl": "https://assets.aceternity.com/components/ascii-art.webp",
+    "registries": [
+      "ascii-art"
+    ]
+  },
+  {
+    "slug": "aurora-background",
+    "name": "Aurora Background Animation for Tailwind CSS",
+    "description": "A soft animated aurora gradient background for React and Next.js. Pure CSS, respects prefers-reduced-motion, and works in light and dark mode.",
+    "thumbnailUrl": "https://assets.aceternity.com/aurora-background.webp",
+    "registries": [
+      "aurora-background"
+    ]
+  },
+  {
+    "slug": "background-beams",
+    "name": "Background Beams Animation",
+    "description": "Multiple background beams that follow a path of SVG, makes a good hero section background.",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/Background_Beams_ilbyga.webp",
+    "registries": [
+      "background-beams"
+    ]
+  },
+  {
+    "slug": "background-beams-with-collision",
+    "name": "Background Beams With Collision",
+    "description": "Exploding beams in the background",
+    "thumbnailUrl": "https://assets.aceternity.com/background-beams-with-collision.webp",
+    "registries": [
+      "background-beams-with-collision"
+    ]
+  },
+  {
+    "slug": "background-boxes",
+    "name": "Background Boxes",
+    "description": "A full width background box container that highlights on hover",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/Background_Boxes_indgdr.webp",
+    "registries": [
+      "background-boxes"
+    ]
+  },
+  {
+    "slug": "background-cubes-grid",
+    "name": "Background Cubes Grid",
+    "description": "A grid of 3D cubes that ripples under the cursor. Use the flat isometric field or a tilted perspective grid with glowing crests.",
+    "thumbnailUrl": "https://assets.aceternity.com/components/background-cubes-grid.webp",
+    "registries": [
+      "background-cubes-grid"
+    ]
+  },
+  {
+    "slug": "background-gradient",
+    "name": "Background Gradient",
+    "description": "An animated gradient that sits at the background of a card, button or anything.",
+    "thumbnailUrl": "https://assets.aceternity.com/gradient.webp",
+    "registries": [
+      "background-gradient"
+    ]
+  },
+  {
+    "slug": "background-gradient-animation",
+    "name": "Animated Gradient Background for Tailwind CSS",
+    "description": "Add a smooth animated gradient background to any React or Next.js page. Pure CSS keyframes, no canvas, and a dark mode variant. Copy and paste the component.",
+    "thumbnailUrl": "https://assets.aceternity.com/background-gradient-animation.webp",
+    "registries": [
+      "background-gradient-animation"
+    ]
+  },
+  {
+    "slug": "background-lines",
+    "name": "Background Lines",
+    "description": "A set of svg paths that animate in a wave pattern. Good for hero sections background, as seen on height.app",
+    "thumbnailUrl": "https://assets.aceternity.com/background-lines.webp",
+    "registries": [
+      "background-lines"
+    ]
+  },
+  {
+    "slug": "background-ripple-effect",
+    "name": "Background Ripple Effect",
+    "description": "A grid of cells that ripple when clicked.",
+    "thumbnailUrl": "https://assets.aceternity.com/background-ripple-effect.webp",
+    "registries": [
+      "background-ripple-effect"
+    ]
+  },
+  {
+    "slug": "bento-grid",
+    "name": "Bento Grid Component",
+    "description": "Build an Apple-style bento grid in React with asymmetric tiles, hover states and a responsive collapse to one column. Works alongside shadcn/ui.",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/bento-2.webp",
+    "registries": [
+      "bento-grid"
+    ]
+  },
+  {
+    "slug": "canvas-reveal-effect",
+    "name": "Canvas Reveal Effect",
+    "description": "A dot background that expands on hover, as seen on Clerk's website",
+    "thumbnailUrl": "https://assets.aceternity.com/canvas-reveal-effect.webp",
+    "registries": [
+      "canvas-reveal-effect"
+    ]
+  },
+  {
+    "slug": "canvas-text",
+    "name": "Canvas Text",
+    "description": "Animated text component with colorful curved lines rendered on canvas, clipped to the text shape.",
+    "thumbnailUrl": "https://assets.aceternity.com/components/canvas-text.webp",
+    "registries": [
+      "canvas-text"
+    ]
+  },
+  {
+    "slug": "card-hover-effect",
+    "name": "Hover Effect",
+    "description": "Hover over the cards and the effect slides to the currently hovered card.",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/Hover_Effect_vie10l.webp",
+    "registries": [
+      "card-hover-effect"
+    ]
+  },
+  {
+    "slug": "card-spotlight",
+    "name": "Card Spotlight",
+    "description": "A card component with a spotlight effect revealing a radial gradient background",
+    "thumbnailUrl": "https://assets.aceternity.com/card-spotlight.webp",
+    "registries": [
+      "card-spotlight",
+      "canvas-reveal-effect"
+    ]
+  },
+  {
+    "slug": "card-stack",
+    "name": "Card Stack",
+    "description": "Cards stack on top of each other after some interval. Perfect for showing testimonials.",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/Card_Stack_bdxdhf.webp",
+    "registries": [
+      "card-stack"
+    ]
+  },
+  {
+    "slug": "cards-free",
+    "name": "Cards",
+    "description": "A set of cards that can be used for different use cases",
+    "thumbnailUrl": "https://assets.aceternity.com/cards.webp",
+    "registries": []
+  },
+  {
+    "slug": "carousel",
+    "name": "Carousel & Image Slider Component",
+    "description": "A customizable carousel with microinteractions and slider.",
+    "thumbnailUrl": "https://assets.aceternity.com/carousel.webp",
+    "registries": [
+      "carousel"
+    ]
+  },
+  {
+    "slug": "chromatic-image",
+    "name": "Chromatic Image",
+    "description": "An interactive image with responsive color separation, displacement, and tilt.",
+    "thumbnailUrl": "https://assets.aceternity.com/components/chromatic-image.webp",
+    "registries": [
+      "chromatic-image"
+    ]
+  },
+  {
+    "slug": "cloud-shader",
+    "name": "Cloud Shader",
+    "description": "Soft procedural clouds that drift across the sky. Tune speed, count, and colors with props.",
+    "thumbnailUrl": "https://assets.aceternity.com/components/cloud-shader.webp",
+    "registries": [
+      "cloud-shader"
+    ]
+  },
+  {
+    "slug": "code-block",
+    "name": "Code Block",
+    "description": "A configurable code block component built on top of react-syntax-highlighter.",
+    "thumbnailUrl": "https://assets.aceternity.com/code-block.webp",
+    "registries": [
+      "code-block"
+    ]
+  },
+  {
+    "slug": "colourful-text",
+    "name": "Colourful Text",
+    "description": "A text component with various colours, filter and scale effects.",
+    "thumbnailUrl": "https://assets.aceternity.com/colourful-text.webp",
+    "registries": [
+      "colourful-text"
+    ]
+  },
+  {
+    "slug": "comet-card",
+    "name": "Comet Card",
+    "description": "A perspective, 3D, Tilt card as seen on Perplexity Comet's website.",
+    "thumbnailUrl": "https://assets.aceternity.com/comet-card.webp",
+    "registries": [
+      "comet-card"
+    ]
+  },
+  {
+    "slug": "compare",
+    "name": "Compare",
+    "description": "A comparison component between two images, slide or drag to compare",
+    "thumbnailUrl": "https://assets.aceternity.com/compare.webp",
+    "registries": [
+      "compare",
+      "sparkles"
+    ]
+  },
+  {
+    "slug": "container-cover",
+    "name": "Cover",
+    "description": "A Cover component that wraps any children, providing beams and space effect, hover to reveal speed.",
+    "thumbnailUrl": "https://assets.aceternity.com/container-cover.webp",
+    "registries": [
+      "cover",
+      "sparkles"
+    ]
+  },
+  {
+    "slug": "container-scroll-animation",
+    "name": "Container Scroll Animation",
+    "description": "A scroll animation that rotates in 3d on scroll. Perfect for hero or marketing sections.",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/Hero_Scroll_xzhqrj.webp",
+    "registries": [
+      "container-scroll-animation"
+    ]
+  },
+  {
+    "slug": "container-text-flip",
+    "name": "Container Text Flip",
+    "description": "A container that flips through words, animating the width.",
+    "thumbnailUrl": "https://assets.aceternity.com/container-text-flip.webp",
+    "registries": [
+      "container-text-flip"
+    ]
+  },
+  {
+    "slug": "direction-aware-hover",
+    "name": "Direction Aware Hover",
+    "description": "A direction aware hover effect using Framer Motion, Tailwindcss and good old javascript.",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/direction-aware-hover.webp",
+    "registries": [
+      "direction-aware-hover"
+    ]
+  },
+  {
+    "slug": "dither-shader",
+    "name": "Dither Shader",
+    "description": "A real-time ordered dithering effect for images, perfect for pixel art and retro aesthetics.",
+    "thumbnailUrl": "https://assets.aceternity.com/dither-shader.webp",
+    "registries": [
+      "dither-shader"
+    ]
+  },
+  {
+    "slug": "dotted-glow-background",
+    "name": "Dotted Glow Background",
+    "description": "A background effect with opacity animation, glow effect and more.",
+    "thumbnailUrl": "https://assets.aceternity.com/dotted-glow-background.webp",
+    "registries": [
+      "dotted-glow-background"
+    ]
+  },
+  {
+    "slug": "draggable-card",
+    "name": "Draggable Card",
+    "description": "A tiltable, draggable card component that jumps on bounds.",
+    "thumbnailUrl": "https://assets.aceternity.com/draggable-card.webp",
+    "registries": [
+      "draggable-card"
+    ]
+  },
+  {
+    "slug": "empty-states-thumbnail",
+    "unavailable": true
+  },
+  {
+    "slug": "encrypted-text",
+    "name": "Encrypted Text",
+    "description": "A text component that reveals the text gradually, gibberish effect.",
+    "thumbnailUrl": "https://assets.aceternity.com/encrypted-text.webp",
+    "registries": [
+      "encrypted-text"
+    ]
+  },
+  {
+    "slug": "evervault-card",
+    "name": "Evervault Card",
+    "description": "A cool card with amazing hover effect, reveals encrypted text and a mixed gradient.",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/Evervault_Card_a1qko9.webp",
+    "registries": [
+      "evervault-card"
+    ]
+  },
+  {
+    "slug": "expandable-card",
+    "name": "Expandable Cards",
+    "description": "Click cards to expand them and show additional information",
+    "thumbnailUrl": "https://assets.aceternity.com/expandable-card.webp",
+    "registries": []
+  },
+  {
+    "slug": "feature-sections-free",
+    "name": "Feature Sections",
+    "description": "A set of feature sections ranging from bento grids to simple layouts",
+    "thumbnailUrl": "https://assets.aceternity.com/features-section.webp",
+    "registries": []
+  },
+  {
+    "slug": "features-section-with-skeletons",
+    "unavailable": true
+  },
+  {
+    "slug": "file-upload",
+    "name": "File Upload",
+    "description": "A minimal file upload form with background grid, drag and drop, and micro interactions.",
+    "thumbnailUrl": "https://assets.aceternity.com/file-upload.webp",
+    "registries": [
+      "file-upload"
+    ]
+  },
+  {
+    "slug": "flip-words",
+    "name": "Flip Words",
+    "description": "A component that flips through a list of words",
+    "thumbnailUrl": "https://assets.aceternity.com/flip-text.webp",
+    "registries": [
+      "flip-words"
+    ]
+  },
+  {
+    "slug": "floating-dock",
+    "name": "Floating Dock",
+    "description": "A floating dock mac os style component, acts as a navigation bar.",
+    "thumbnailUrl": "https://assets.aceternity.com/floating-dock.webp",
+    "registries": [
+      "floating-dock"
+    ]
+  },
+  {
+    "slug": "floating-navbar",
+    "name": "Floating Navbar",
+    "description": "A sticky Navbar that hides on scroll, reveals when scrolled up.",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/floating-nav-final.webp",
+    "registries": [
+      "floating-navbar"
+    ]
+  },
+  {
+    "slug": "focus-cards",
+    "name": "Focus Cards",
+    "description": "Hover over the card to focus on it, blurring the rest of the cards.",
+    "thumbnailUrl": "https://assets.aceternity.com/focus-cards.webp",
+    "registries": [
+      "focus-cards"
+    ]
+  },
+  {
+    "slug": "following-pointer",
+    "name": "Following Pointer",
+    "description": "A custom pointer that follows mouse arrow and animates in pointer and content.",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/Following_Pointer_ix95ne.webp",
+    "registries": [
+      "following-pointer"
+    ]
+  },
+  {
+    "slug": "github-globe",
+    "name": "GitHub Globe: 3D Interactive Globe in React",
+    "description": "Recreate the GitHub homepage globe in React with three.js and react-globe.gl. Animated arcs, custom markers and auto-rotation. Copy and paste.",
+    "thumbnailUrl": "https://assets.aceternity.com/github-globe.webp",
+    "registries": [
+      "globe"
+    ]
+  },
+  {
+    "slug": "glare-card",
+    "name": "Glare Card",
+    "description": "A glare effect that happens on hover, as seen on Linear's website",
+    "thumbnailUrl": "https://assets.aceternity.com/glare-card.webp",
+    "registries": [
+      "glare-card"
+    ]
+  },
+  {
+    "slug": "glowing-effect",
+    "name": "Glowing Effect Component",
+    "description": "A border glow that tracks the cursor around a card or panel. Useful for feature grids and pricing tables. Built with React and Tailwind CSS.",
+    "thumbnailUrl": "https://assets.aceternity.com/glowing-effect.webp",
+    "registries": [
+      "glowing-effect"
+    ]
+  },
+  {
+    "slug": "glowing-stars-effect",
+    "name": "Glowing Background Stars Card",
+    "description": "Card background stars that animate on hover and animate anyway",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/Glowing_Stars_Background_Card_skueec.webp",
+    "registries": [
+      "glowing-stars"
+    ]
+  },
+  {
+    "slug": "gooey-input",
+    "name": "Gooey Input",
+    "description": "A search-style input that expands with a gooey SVG filter and shared layout animation",
+    "thumbnailUrl": "https://assets.aceternity.com/components/gooey-input.webp",
+    "registries": [
+      "gooey-input"
+    ]
+  },
+  {
+    "slug": "google-gemini-effect",
+    "name": "Google Gemini Effect",
+    "description": "An effect of SVGs as seen on the Google Gemini Website",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/google-gemini.webp",
+    "registries": [
+      "google-gemini-effect"
+    ]
+  },
+  {
+    "slug": "grid-and-dot-backgrounds",
+    "name": "Grid & Dot Background Patterns for Tailwind",
+    "description": "Grid, dot and dotted background patterns for React and Tailwind CSS. Includes radial fade masks so the pattern never fights your text. Copy and paste.",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/GridBackground_fbsnkq.webp",
+    "registries": []
+  },
+  {
+    "slug": "hero-highlight",
+    "name": "Hero Highlight",
+    "description": "A background effect with a text highlight component, perfect for hero sections.",
+    "thumbnailUrl": "https://assets.aceternity.com/hero-highlight.webp",
+    "registries": [
+      "hero-highlight"
+    ]
+  },
+  {
+    "slug": "hero-parallax",
+    "name": "Hero Parallax",
+    "description": "A scroll effect with rotation, translation and opacity animations.",
+    "thumbnailUrl": "https://assets.aceternity.com/hero-parallax.webp",
+    "registries": [
+      "hero-parallax"
+    ]
+  },
+  {
+    "slug": "hero-section-with-mousemove",
+    "unavailable": true
+  },
+  {
+    "slug": "hero-sections-free",
+    "name": "Hero Sections",
+    "description": "A set of hero sections ranging from simple to complex layouts",
+    "thumbnailUrl": "https://assets.aceternity.com/hero-sections.webp",
+    "registries": []
+  },
+  {
+    "slug": "hover-border-gradient",
+    "name": "Hover Border Gradient",
+    "description": "A hover effect that expands to the entire container with a gradient border.",
+    "thumbnailUrl": "https://assets.aceternity.com/hover-border-gradient.webp",
+    "registries": [
+      "hover-border-gradient"
+    ]
+  },
+  {
+    "slug": "illustrations",
+    "name": "Illustrations",
+    "description": "A set of motion illustrations for blocks, sections and pages",
+    "thumbnailUrl": "https://assets.aceternity.com/components/illustrations.webp",
+    "registries": []
+  },
+  {
+    "slug": "image-generation-loader",
+    "name": "Image Generation Loader",
+    "description": "A canvas loader that scans across an image with animated pixel grids, text masks, and progress overlays.",
+    "thumbnailUrl": "https://assets.aceternity.com/components/sliding-loader.webp",
+    "registries": [
+      "image-generation-loader"
+    ]
+  },
+  {
+    "slug": "images-badge",
+    "name": "Images Badge",
+    "description": "A badge with images that can be hovered to reveal more images.",
+    "thumbnailUrl": "https://assets.aceternity.com/images-badge.webp",
+    "registries": [
+      "images-badge"
+    ]
+  },
+  {
+    "slug": "images-slider",
+    "name": "Images Slider",
+    "description": "A full page slider with images that can be navigated with the keyboard.",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/images-slider.webp",
+    "registries": [
+      "images-slider"
+    ]
+  },
+  {
+    "slug": "inference-landing-page-hd",
+    "unavailable": true
+  },
+  {
+    "slug": "infinite-moving-cards",
+    "name": "Infinite Moving Cards Marquee",
+    "description": "An infinite scrolling marquee of cards for testimonials and logos. Pauses on hover, supports both directions, and is built with Tailwind CSS.",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/Infinite_Moving_Cards_evhzur.webp",
+    "registries": [
+      "infinite-moving-cards"
+    ]
+  },
+  {
+    "slug": "keyboard",
+    "name": "Keyboard",
+    "description": "A mac style keyboard component with mechanical keys sound effects.",
+    "thumbnailUrl": "https://assets.aceternity.com/components/keyboard.webp",
+    "registries": [
+      "keyboard"
+    ]
+  },
+  {
+    "slug": "lamp-effect",
+    "name": "Lamp Section Header",
+    "description": "A lamp effect as seen on linear, great for section headers.",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/Lamp_hlq3ln.webp",
+    "registries": [
+      "lamp"
+    ]
+  },
+  {
+    "slug": "layout-grid",
+    "name": "Layout Grid",
+    "description": "A layout effect that animates the grid item on click, powered by framer motion layout",
+    "thumbnailUrl": "https://assets.aceternity.com/layout-grid.webp",
+    "registries": [
+      "layout-grid"
+    ]
+  },
+  {
+    "slug": "layout-text-flip",
+    "name": "Layout Text Flip",
+    "description": "A text flip effect that changes the layout of surrounding text",
+    "thumbnailUrl": "https://assets.aceternity.com/layout-text-flip.webp",
+    "registries": [
+      "layout-text-flip"
+    ]
+  },
+  {
+    "slug": "lens",
+    "name": "Lens",
+    "description": "A lens component to zoom into images, videos, or practically anything.",
+    "thumbnailUrl": "https://assets.aceternity.com/lens.webp",
+    "registries": [
+      "lens"
+    ]
+  },
+  {
+    "slug": "link-preview",
+    "name": "Link Preview",
+    "description": "Dynamic link previews for your anchor tags",
+    "thumbnailUrl": "https://assets.aceternity.com/link-preview.webp",
+    "registries": [
+      "link-preview"
+    ]
+  },
+  {
+    "slug": "liquid-glass",
+    "name": "Liquid Glass",
+    "description": "A glass surface that refracts the content behind it, with a curved rim, color fringing and a frosted fallback for every browser.",
+    "thumbnailUrl": "https://assets.aceternity.com/components/liquid-glass.webp",
+    "registries": [
+      "liquid-glass"
+    ]
+  },
+  {
+    "slug": "loader",
+    "name": "Loaders",
+    "description": "A set of simple and minimal loaders for your loading screens and components.",
+    "thumbnailUrl": "https://assets.aceternity.com/loader.webp",
+    "registries": [
+      "loader"
+    ]
+  },
+  {
+    "slug": "macbook-scroll",
+    "name": "MacBook Scroll Animation",
+    "description": "Scroll through the page and see the image come out of the screen, as seen on Fey.com website.",
+    "thumbnailUrl": "https://assets.aceternity.com/macbook-scroll.webp",
+    "registries": [
+      "macbook-scroll"
+    ]
+  },
+  {
+    "slug": "magnetic-button",
+    "name": "Magnetic Button",
+    "description": "A button that subtly drifts toward the cursor as you hover, with a spring-based return when you leave.",
+    "thumbnailUrl": "https://assets.aceternity.com/components/magnetic-button.webp",
+    "registries": [
+      "magnetic-button"
+    ]
+  },
+  {
+    "slug": "meteors",
+    "name": "Meteor Effect",
+    "description": "A group of beams in the background of a container, sort of like meteors.",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/Meteors_fye3ys.webp",
+    "registries": [
+      "meteors"
+    ]
+  },
+  {
+    "slug": "moving-border",
+    "name": "Moving Border Animation",
+    "description": "A button and card border that animates a light around the perimeter. SVG path based, works at any border radius, styled with Tailwind CSS.",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/Moving_Border_yn78lv.webp",
+    "registries": [
+      "moving-border"
+    ]
+  },
+  {
+    "slug": "multi-step-loader",
+    "name": "Multi Step Loader",
+    "description": "A step loader for screens that take a lot of time to load.",
+    "thumbnailUrl": "https://assets.aceternity.com/multi-step-loader.webp",
+    "registries": [
+      "multi-step-loader"
+    ]
+  },
+  {
+    "slug": "navbar-menu",
+    "name": "Navbar Menu Component",
+    "description": "An animated navbar with a hover-reveal dropdown menu for React and Next.js. Spring transitions, mobile fallback and Tailwind CSS styling.",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/Navbar_Menu_ildcda.webp",
+    "registries": [
+      "navbar-menu"
+    ]
+  },
+  {
+    "slug": "noise-background",
+    "name": "Noise Background",
+    "description": "A dynamic background effect with animated gradients, noise texture, and smooth motion.",
+    "thumbnailUrl": "https://assets.aceternity.com/noise-background.webp",
+    "registries": [
+      "noise-background"
+    ]
+  },
+  {
+    "slug": "notch",
+    "name": "Notch",
+    "description": "A floating, configurable notch that pins to the top or bottom of the screen. Pass an array of items with links and it animates the active state as you switch between them.",
+    "thumbnailUrl": "https://assets.aceternity.com/components/notch.webp",
+    "registries": [
+      "notch"
+    ]
+  },
+  {
+    "slug": "parallax-hero-images",
+    "name": "Parallax Hero Images",
+    "description": "Mouse-driven parallax effect, perfect for hero sections. Images blur fade in and move at different depths.",
+    "thumbnailUrl": "https://assets.aceternity.com/components/parallax-hero-images-2.webp",
+    "registries": [
+      "parallax-hero-images"
+    ]
+  },
+  {
+    "slug": "parallax-hero-images-2",
+    "unavailable": true
+  },
+  {
+    "slug": "parallax-scroll",
+    "name": "Parallax Scroll Component",
+    "description": "A multi-column parallax scrolling image grid for React. Columns move at different speeds as the page scrolls. Built with Tailwind CSS and Motion.",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/Parallax_Scroll_pzlatw_anfkh7.webp",
+    "registries": [
+      "parallax-scroll",
+      "parallax-scroll-2"
+    ]
+  },
+  {
+    "slug": "pixelated-canvas",
+    "name": "Pixelated Canvas",
+    "description": "Convert any image to a pixelated canvas mouse distortion effects, as seen on Tailwind CSS Website.",
+    "thumbnailUrl": "https://assets.aceternity.com/pixelated-canvas.webp",
+    "registries": [
+      "pixelated-canvas"
+    ]
+  },
+  {
+    "slug": "placeholders-and-vanish-input",
+    "name": "Placeholders And Vanish Input",
+    "description": "Sliding in placeholders and vanish effect of input on submit",
+    "thumbnailUrl": "https://assets.aceternity.com/placeholders-and-vanish-input.webp",
+    "registries": [
+      "placeholders-and-vanish-input"
+    ]
+  },
+  {
+    "slug": "pointer-highlight",
+    "name": "Pointer Highlight",
+    "description": "A component that highlights text when it's in view, with a pointer and border.",
+    "thumbnailUrl": "https://assets.aceternity.com/pointer-highlight.webp",
+    "registries": [
+      "pointer-highlight"
+    ]
+  },
+  {
+    "slug": "product-landing-page",
+    "unavailable": true
+  },
+  {
+    "slug": "resizable-navbar",
+    "name": "Resizable Navbar: Shrink on Scroll in React",
+    "description": "A navbar that shrinks and blurs once the page scrolls, with a mobile drawer. Built for React and Next.js with Tailwind CSS and Motion.",
+    "thumbnailUrl": "https://assets.aceternity.com/resizable-navbar.webp",
+    "registries": [
+      "resizable-navbar"
+    ]
+  },
+  {
+    "slug": "scales",
+    "name": "Scales",
+    "description": "A repeating diagonal, horizontal, or vertical line pattern background effect.",
+    "thumbnailUrl": "https://assets.aceternity.com/components/scales.webp",
+    "registries": [
+      "scales"
+    ]
+  },
+  {
+    "slug": "shooting-stars-and-stars-background",
+    "name": "Shooting Stars Background Animation",
+    "description": "A shooting star animation on top of a starry background, as seen on figmaplug.in",
+    "thumbnailUrl": "https://assets.aceternity.com/shooting-stars-and-stars-background.webp",
+    "registries": [
+      "shooting-stars",
+      "stars-background"
+    ]
+  },
+  {
+    "slug": "sidebar",
+    "name": "Sidebar Component",
+    "description": "Expandable sidebar that expands on hover, mobile responsive and dark mode support",
+    "thumbnailUrl": "https://assets.aceternity.com/sidebar.webp",
+    "registries": [
+      "sidebar"
+    ]
+  },
+  {
+    "slug": "signup-form",
+    "name": "Signup Form",
+    "description": "A customizable form built on top of shadcn's input and label, with a touch of framer motion",
+    "thumbnailUrl": "https://assets.aceternity.com/signup-form.webp",
+    "registries": [
+      "input",
+      "label"
+    ]
+  },
+  {
+    "slug": "sliding-loader",
+    "unavailable": true
+  },
+  {
+    "slug": "sparkles",
+    "name": "Sparkles: Animated Particle Effect",
+    "description": "A configurable sparkle and particle background for React. Control density, speed and colour, and layer it behind headings or hero sections.",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/stars_sxle3d.webp",
+    "registries": [
+      "sparkles"
+    ]
+  },
+  {
+    "slug": "spotlight",
+    "name": "Spotlight Effect",
+    "description": "Add a spotlight beam that follows the cursor or sits behind your hero copy. SVG based, GPU friendly, and drop-in for React and Next.js.",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/Spotlight_ar5jpr.webp",
+    "registries": [
+      "spotlight"
+    ]
+  },
+  {
+    "slug": "spotlight-new",
+    "name": "Spotlight New",
+    "description": "A new spotlight component with left and right spotlight, configurable and customizable.",
+    "thumbnailUrl": "https://assets.aceternity.com/spotlight-new.webp",
+    "registries": [
+      "spotlight-new"
+    ]
+  },
+  {
+    "slug": "squiggly-text",
+    "name": "Squiggly Text",
+    "description": "A squiggly text effect using SVG turbulence and displacement filters, animated with Motion.",
+    "thumbnailUrl": "https://assets.aceternity.com/components/squiggly-text.webp",
+    "registries": [
+      "squiggly-text"
+    ]
+  },
+  {
+    "slug": "stateful-button",
+    "name": "Stateful Button",
+    "description": "A button that shows a loading state when clicked, and a success state when the action is completed.",
+    "thumbnailUrl": "https://assets.aceternity.com/stateful-button.webp",
+    "registries": [
+      "stateful-button"
+    ]
+  },
+  {
+    "slug": "sticky-banner",
+    "name": "Sticky Banner",
+    "description": "A banner component that sticks to top, hides when user scrolls down",
+    "thumbnailUrl": "https://assets.aceternity.com/sticky-banner.webp",
+    "registries": [
+      "sticky-banner"
+    ]
+  },
+  {
+    "slug": "sticky-scroll-reveal",
+    "name": "Sticky Scroll Reveal",
+    "description": "A sticky container that sticks while scrolling, text reveals on scroll",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/Sticky_Scroll_Reveal_j7mzxl.webp",
+    "registries": [
+      "sticky-scroll-reveal"
+    ]
+  },
+  {
+    "slug": "svg-mask-effect",
+    "name": "SVG Mask Effect",
+    "description": "A mask reveal effect, hover the cursor over a container to reveal what's underneath.",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/SVG_Mask_Effect_idbmqx.webp",
+    "registries": [
+      "svg-mask-effect"
+    ]
+  },
+  {
+    "slug": "tabs",
+    "name": "Animated Tabs",
+    "description": "Tabs to switch content, click on a tab to check background animation.",
+    "thumbnailUrl": "https://assets.aceternity.com/tabs.webp",
+    "registries": [
+      "tabs"
+    ]
+  },
+  {
+    "slug": "tailwindcss-buttons",
+    "name": "Tailwind CSS Buttons: Copy-Paste Button Styles",
+    "description": "A set of Tailwind CSS button styles with gradients, borders, shadows and hover animations. Copy the class list straight into your markup.",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/tailwindcss-buttons.webp",
+    "registries": [
+      "tailwindcss-buttons"
+    ]
+  },
+  {
+    "slug": "team-section-with-scales",
+    "unavailable": true
+  },
+  {
+    "slug": "terminal",
+    "name": "Terminal",
+    "description": "A mac style terminal component with bash syntax highlighting and typewriter effect.",
+    "thumbnailUrl": "https://assets.aceternity.com/components/terminal.webp",
+    "registries": [
+      "terminal"
+    ]
+  },
+  {
+    "slug": "text-flipping-board",
+    "name": "Text Flipping Board",
+    "description": "A split-flap display component that animates characters with flip transitions, inspired by Vestaboard.",
+    "thumbnailUrl": "https://assets.aceternity.com/components/text-flipping-board.webp",
+    "registries": [
+      "text-flipping-board"
+    ]
+  },
+  {
+    "slug": "text-generate-effect",
+    "name": "Text Generate Effect",
+    "description": "A cool text effect that fades in text on page load, one by one.",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/Text_Generate_Effect_p1p0mm.webp",
+    "registries": [
+      "text-generate-effect"
+    ]
+  },
+  {
+    "slug": "text-hover-effect",
+    "name": "Text Hover Effect",
+    "description": "A text hover effect that animates and outlines gradient on hover, as seen on x.ai",
+    "thumbnailUrl": "https://assets.aceternity.com/text-hover-effect.webp",
+    "registries": [
+      "text-hover-effect"
+    ]
+  },
+  {
+    "slug": "text-reveal-card",
+    "name": "Text Reveal Card",
+    "description": "Mousemove effect to reveal text content at the bottom of the card.",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/Diagram_Card_tp3vaw.webp",
+    "registries": [
+      "text-reveal-card"
+    ]
+  },
+  {
+    "slug": "timeline",
+    "name": "Timeline Component",
+    "description": "A scroll-animated vertical timeline for React and Next.js. Sticky headings, a progress beam and responsive layout. Built with Tailwind CSS and Motion.",
+    "thumbnailUrl": "https://assets.aceternity.com/timeline.webp",
+    "registries": [
+      "timeline"
+    ]
+  },
+  {
+    "slug": "tooltip-card",
+    "name": "Tooltip Card",
+    "description": "A tooltip card container that follows mouse pointer when hovered over",
+    "thumbnailUrl": "https://assets.aceternity.com/tooltip-card.webp",
+    "registries": [
+      "tooltip-card"
+    ]
+  },
+  {
+    "slug": "tracing-beam",
+    "name": "Tracing Beam",
+    "description": "A Beam that follows the path of an SVG as the user scrolls. Adjusts beam length with scroll speed.",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/Tracing_Beam_npujte.webp",
+    "registries": [
+      "tracing-beam"
+    ]
+  },
+  {
+    "slug": "typewriter-effect",
+    "name": "Typewriter Effect Component",
+    "description": "A typewriter text animation for React and Next.js with a blinking cursor, configurable speed and per-word styling. Built with Tailwind CSS and Motion.",
+    "thumbnailUrl": "https://assets.aceternity.com/cloudinary_bkp/typewriter-effect.webp",
+    "registries": [
+      "typewriter-effect"
+    ]
+  },
+  {
+    "slug": "vortex",
+    "name": "Vortex Background",
+    "description": "A wavy, swirly, vortex background ideal for CTAs and backgrounds.",
+    "thumbnailUrl": "https://assets.aceternity.com/vortex.webp",
+    "registries": [
+      "vortex"
+    ]
+  },
+  {
+    "slug": "wavy-background",
+    "name": "Wavy Background",
+    "description": "A cool background effect with waves that move.",
+    "thumbnailUrl": "https://assets.aceternity.com/wavy-background.webp",
+    "registries": [
+      "wavy-background"
+    ]
+  },
+  {
+    "slug": "webcam-pixel-grid",
+    "name": "Webcam Pixel Grid",
+    "description": "A real-time webcam pixel grid effect, perfect for pixel art and retro aesthetics.",
+    "thumbnailUrl": "https://assets.aceternity.com/webcam-pixel-grid.webp",
+    "registries": [
+      "webcam-pixel-grid"
+    ]
+  },
+  {
+    "slug": "wobble-card",
+    "name": "Wobble Card",
+    "description": "A card effect that translates and scales on mousemove, perfect for feature cards.",
+    "thumbnailUrl": "https://assets.aceternity.com/wobble-card.webp",
+    "registries": [
+      "wobble-card"
+    ]
+  },
+  {
+    "slug": "world-map",
+    "name": "World Map",
+    "description": "A world map with animated lines and dots, programatically generated.",
+    "thumbnailUrl": "https://assets.aceternity.com/world-map.webp",
+    "registries": [
+      "world-map"
+    ]
+  }
+]

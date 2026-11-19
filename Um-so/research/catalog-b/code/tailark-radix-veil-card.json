@@ -1,0 +1,24 @@
+{
+  "name": "Veil Card",
+  "sourceId": "tailark",
+  "files": [
+    {
+      "path": "registry/bases/radix/veil/ui/card.tsx",
+      "content": "import * as React from 'react'\nimport { cva, type VariantProps } from 'class-variance-authority'\nimport { cn } from '@/registry/core/lib/utils'\n\nconst cardVariants = cva('text-card-foreground rounded-2xl', {\n    variants: {\n        variant: {\n            default: 'bg-card ring-1 ring-foreground/6.5 shadow-lg shadow-foreground/5 dark:shadow-black/10',\n            soft: 'bg-muted',\n            mixed: 'bg-muted border',\n            outline: 'bg-card ring-1 ring-border',\n        },\n    },\n    defaultVariants: {\n        variant: 'default',\n    },\n})\n\nexport interface CardProps extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof cardVariants> {}\n\nconst Card = React.forwardRef<HTMLDivElement, CardProps>(({ className, variant, ...props }, ref) => (\n    <div\n        ref={ref}\n        className={cn(cardVariants({ variant, className }))}\n        {...props}\n    />\n))\nCard.displayName = 'Card'\n\nconst CardHeader = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(({ className, ...props }, ref) => (\n    <div\n        ref={ref}\n        className={cn('flex flex-col space-y-1.5 p-6', className)}\n        {...props}\n    />\n))\nCardHeader.displayName = 'CardHeader'\n\nconst CardTitle = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(({ className, ...props }, ref) => (\n    <div\n        ref={ref}\n        className={cn('font-semibold leading-none tracking-tight', className)}\n        {...props}\n    />\n))\nCardTitle.displayName = 'CardTitle'\n\nconst CardDescription = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(({ className, ...props }, ref) => (\n    <div\n        ref={ref}\n        className={cn('text-muted-foreground text-sm', className)}\n        {...props}\n    />\n))\nCardDescription.displayName = 'CardDescription'\n\nconst CardContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(({ className, ...props }, ref) => (\n    <div\n        ref={ref}\n        className={cn('p-6 pt-0', className)}\n        {...props}\n    />\n))\nCardContent.displayName = 'CardContent'\n\nconst CardFooter = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(({ className, ...props }, ref) => (\n    <div\n        ref={ref}\n        className={cn('flex items-center p-6 pt-0', className)}\n        {...props}\n    />\n))\nCardFooter.displayName = 'CardFooter'\n\nexport { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }\n",
+      "type": "registry:component"
+    },
+    {
+      "path": "registry/core/lib/utils.ts",
+      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}",
+      "type": "dependency"
+    }
+  ],
+  "demoCode": null,
+  "dependencies": [
+    "class-variance-authority",
+    "react"
+  ],
+  "registryDependencies": [],
+  "license": "MIT",
+  "sourceUrl": "https://github.com/tailark/blocks/blob/main/registry/bases/radix/veil/ui/card.tsx"
+}

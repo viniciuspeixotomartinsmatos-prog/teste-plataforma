@@ -1,0 +1,104 @@
+[
+  {
+    "route": "/@support_596fe4b8/components/mac-keyboard",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44873,
+      "name": "Mac Keyboard",
+      "description": "A full Mac keyboard with soft keycaps that press down as you type. Works with your real keyboard and with taps, and the typed text shows in the bar above. Part of Nexus UI: nexus-ui.com/components/mac-keyboard",
+      "previewUrl": "https://cdn.21st.dev/user_3LfQDpxmLCWepfcwLitp9KqvRFw/mac-keyboard/default/preview.1794234638572.webp",
+      "videoUrl": "https://cdn.21st.dev/user_3LfQDpxmLCWepfcwLitp9KqvRFw/mac-keyboard/default/video.1794234610143.mp4",
+      "author": "support_596fe4b8",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3LfQDpxmLCWepfcwLitp9KqvRFw/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/support_596fe4b8/mac-keyboard?api_key=REDACTED\"",
+      "url": "https://21st.dev/@support_596fe4b8/components/mac-keyboard"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@support_596fe4b8/components/mercury-upload",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44876,
+      "name": "Mercury Upload",
+      "description": "A file upload that pours the file in as liquid mercury. Drops fall from the file chip into a pool that spreads as the progress, then pulls into a bead with a check. Part of Nexus UI: nexus-ui.com/components/mercury-upload",
+      "previewUrl": "https://cdn.21st.dev/user_3LfQDpxmLCWepfcwLitp9KqvRFw/mercury-upload/default/preview.1794234436100.webp",
+      "videoUrl": "https://cdn.21st.dev/user_3LfQDpxmLCWepfcwLitp9KqvRFw/mercury-upload/default/video.1794234439668.mp4",
+      "author": "support_596fe4b8",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3LfQDpxmLCWepfcwLitp9KqvRFw/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/support_596fe4b8/mercury-upload?api_key=REDACTED\"",
+      "url": "https://21st.dev/@support_596fe4b8/components/mercury-upload"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@support_596fe4b8/components/otp-input",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44870,
+      "name": "OTP Input",
+      "description": "Three one-time-code inputs: soft pill boxes, an underline row that fills dot by dot, and an iOS-style Messages banner that autofills the code. Paste, backspace and arrow keys all work. Part of Nexus UI: nexus-ui.com/components/otp-input",
+      "previewUrl": "https://cdn.21st.dev/user_3LfQDpxmLCWepfcwLitp9KqvRFw/otp-input/default/preview.1794234949216.webp",
+      "videoUrl": "https://cdn.21st.dev/user_3LfQDpxmLCWepfcwLitp9KqvRFw/otp-input/default/video.1794234954561.mp4",
+      "author": "support_596fe4b8",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3LfQDpxmLCWepfcwLitp9KqvRFw/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/support_596fe4b8/otp-input?api_key=REDACTED\"",
+      "url": "https://21st.dev/@support_596fe4b8/components/otp-input"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@support_596fe4b8/components/pixel-atlas",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44874,
+      "name": "Pixel Atlas",
+      "description": "A world map built from pixels, with a glowing activity heatmap, pins you can open for details, filters, and zoom. Drag to pan. Part of Nexus UI: nexus-ui.com/components/pixel-atlas",
+      "previewUrl": "https://cdn.21st.dev/user_3LfQDpxmLCWepfcwLitp9KqvRFw/pixel-atlas/default/preview.1794234521155.webp",
+      "videoUrl": "https://cdn.21st.dev/user_3LfQDpxmLCWepfcwLitp9KqvRFw/pixel-atlas/default/video.1794234514411.mp4",
+      "author": "support_596fe4b8",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3LfQDpxmLCWepfcwLitp9KqvRFw/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/support_596fe4b8/pixel-atlas?api_key=REDACTED\"",
+      "url": "https://21st.dev/@support_596fe4b8/components/pixel-atlas"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@support_596fe4b8/components/three-d-folder",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 31414,
+      "name": "3D Folder Card",
+      "description": "An interactive folder card that fans out stacked project thumbnails on hover and opens a keyboard-navigable lightbox gallery when a thumbnail is clicked.",
+      "previewUrl": "https://cdn.21st.dev/nexus-ui/three-d-folder/default/preview.1790301155001-cb117663-3d7e-493e-9df5-0059b5da9314.png",
+      "videoUrl": "https://cdn.21st.dev/nexus-ui/three-d-folder/default/video.1790301155001-cb117663-3d7e-493e-9df5-0059b5da9314.mp4",
+      "author": "support_596fe4b8",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3LfQDpxmLCWepfcwLitp9KqvRFw/avatar.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/support_596fe4b8/three-d-folder?api_key=REDACTED\"",
+      "url": "https://21st.dev/@support_596fe4b8/components/three-d-folder"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@themeocean/components/3d-animated-tilt-dynamic-glow-card",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 44838,
+      "name": "3D Animated Tilt & Dynamic Glow Card",
+      "description": "A premium Bento-grid ready card featuring an interactive 3D perspective tilt effect and a mouse-tracking neon glow border. Fully accessible, type-safe, and perfect for highlighting feature sections.",
+      "previewUrl": "https://cdn.21st.dev/user_3KgWzslqJFclZ2iRrfddAtKvi27/3d-animated-tilt-dynamic-glow-card/default/preview.1794245307278.webp",
+      "videoUrl": "https://cdn.21st.dev/user_3KgWzslqJFclZ2iRrfddAtKvi27/3d-animated-tilt-dynamic-glow-card/default/video.1794245301966.mp4",
+      "author": "themeocean",
+      "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3KgWzslqJFclZ2iRrfddAtKvi27/avatar.jpeg",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/themeocean/3d-animated-tilt-dynamic-glow-card?api_key=REDACTED\"",
+      "url": "https://21st.dev/@themeocean/components/3d-animated-tilt-dynamic-glow-card"
+    },
+    "status": "retained_unvalidated"
+  }
+]

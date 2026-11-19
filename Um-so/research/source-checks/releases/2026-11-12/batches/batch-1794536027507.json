@@ -1,0 +1,104 @@
+[
+  {
+    "route": "/@nomanjack/components/glimm-html-in-canvas",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45165,
+      "name": "Glimm HTML-in-Canvas",
+      "description": "The original Glimm HTML-in-Canvas invoice transition demonstration in a responsive media frame.",
+      "previewUrl": "https://cdn.21st.dev/larsen66/glimm-html-in-canvas/default/preview.1794407392085-950e4ca0-c0e5-472d-85dd-09cc0e014e85.png",
+      "videoUrl": "https://cdn.21st.dev/larsen66/glimm-html-in-canvas/default/video.1794407392085-950e4ca0-c0e5-472d-85dd-09cc0e014e85.mp4",
+      "author": "nomanjack",
+      "authorImage": "https://github.com/nomanjack.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/nomanjack/glimm-html-in-canvas?api_key=REDACTED\"",
+      "url": "https://21st.dev/@nomanjack/components/glimm-html-in-canvas"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@nomanjack/components/glimm-invoice-paid",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45173,
+      "name": "Glimm Invoice Paid",
+      "description": "A faithful Glimm billing dashboard demo that reveals a paid-invoice banner behind a real shader sweep.",
+      "previewUrl": "https://cdn.21st.dev/larsen66/glimm-invoice-paid/default/preview.1794408575518-a546dd09-f751-4bbe-b123-dfabe1bad22f.png",
+      "videoUrl": "https://cdn.21st.dev/larsen66/glimm-invoice-paid/default/video.1794408575518-a546dd09-f751-4bbe-b123-dfabe1bad22f.mp4",
+      "author": "nomanjack",
+      "authorImage": "https://github.com/nomanjack.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/nomanjack/glimm-invoice-paid?api_key=REDACTED\"",
+      "url": "https://21st.dev/@nomanjack/components/glimm-invoice-paid"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@nomanjack/components/glimm-publish",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45185,
+      "name": "Glimm Publish",
+      "description": "A faithful Glimm editor publishing flow that transitions from the canvas into a success screen.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_nomanjack_1793739459000/glimm-publish/default/preview.1794431473935.webp",
+      "videoUrl": "https://cdn.21st.dev/user_registry_nomanjack_1793739459000/glimm-publish/default/video.1794431477870.mp4",
+      "author": "nomanjack",
+      "authorImage": "https://github.com/nomanjack.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/nomanjack/glimm-publish?api_key=REDACTED\"",
+      "url": "https://21st.dev/@nomanjack/components/glimm-publish"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@nomanjack/components/glimm-teammate-joins",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45172,
+      "name": "Glimm Teammate Joins",
+      "description": "A faithful Glimm workspace demo that reveals a new teammate notification behind a real shader sweep.",
+      "previewUrl": "https://cdn.21st.dev/larsen66/glimm-teammate-joins/default/preview.1794408547556-911deab1-9dd3-4a29-9578-646ba7fd8cec.png",
+      "videoUrl": "https://cdn.21st.dev/larsen66/glimm-teammate-joins/default/video.1794408547556-911deab1-9dd3-4a29-9578-646ba7fd8cec.mp4",
+      "author": "nomanjack",
+      "authorImage": "https://github.com/nomanjack.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/nomanjack/glimm-teammate-joins?api_key=REDACTED\"",
+      "url": "https://21st.dev/@nomanjack/components/glimm-teammate-joins"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@nomanjack/components/glimm-theme",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45196,
+      "name": "Glimm Theme",
+      "description": "A faithful Glimm theme toggle that sweeps a complete dashboard between light and dark appearances.",
+      "previewUrl": "https://cdn.21st.dev/user_registry_nomanjack_1793739459000/glimm-theme/default/preview.1794431821522.webp",
+      "videoUrl": "https://cdn.21st.dev/user_registry_nomanjack_1793739459000/glimm-theme/default/video.1794431806642.mp4",
+      "author": "nomanjack",
+      "authorImage": "https://github.com/nomanjack.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/nomanjack/glimm-theme?api_key=REDACTED\"",
+      "url": "https://21st.dev/@nomanjack/components/glimm-theme"
+    },
+    "status": "retained_unvalidated"
+  },
+  {
+    "route": "/@nomanjack/components/glimm-to-dos",
+    "type": "component",
+    "metadata": {
+      "type": "component",
+      "id": 45199,
+      "name": "Glimm To-dos",
+      "description": "A faithful Glimm task list with interactive checkboxes and a completion sweep when every task is done.",
+      "previewUrl": "https://cdn.21st.dev/larsen66/glimm-to-dos/default/preview.1794412266552-fac49fb6-21f9-47fa-b21c-8cb722f3947c.png",
+      "videoUrl": "https://cdn.21st.dev/larsen66/glimm-to-dos/default/video.1794412266552-fac49fb6-21f9-47fa-b21c-8cb722f3947c.mp4",
+      "author": "nomanjack",
+      "authorImage": "https://github.com/nomanjack.png",
+      "installCommand": "npx shadcn@latest add \"https://21st.dev/r/nomanjack/glimm-to-dos?api_key=REDACTED\"",
+      "url": "https://21st.dev/@nomanjack/components/glimm-to-dos"
+    },
+    "status": "retained_unvalidated"
+  }
+]

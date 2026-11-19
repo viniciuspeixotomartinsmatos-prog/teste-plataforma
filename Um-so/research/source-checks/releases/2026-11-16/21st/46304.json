@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:46:42.143Z",
+  "metadata": {
+    "type": "component",
+    "id": 46304,
+    "name": "HANZO Secure Shield Hex",
+    "description": "Animated (flicker) ASCII art in the Hex Dump style, made with the 21st ASCII editor and baked to a looping video. Styled with a glitch, terminal look. A drop-in, zero-dependency React component for hero sections, cards, and retro terminal-style backgrounds.",
+    "previewUrl": "https://cdn.21st.dev/workout_scorpion/hanzo-secure-shield-hex/default/preview.1794568856265-e21486ab-15b0-4575-ac79-81895d0343e9.webp",
+    "videoUrl": "https://cdn.21st.dev/workout_scorpion/hanzo-secure-shield-hex/default/video.1794568856265-e21486ab-15b0-4575-ac79-81895d0343e9.mp4",
+    "author": "workout_scorpion",
+    "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zR1BHVUtXS3k2NnZ5T2pNRzdNQmk1VWdqYzYifQ",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/workout_scorpion/hanzo-secure-shield-hex?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@workout_scorpion/components/hanzo-secure-shield-hex"
+  },
+  "component": {
+    "id": 46304,
+    "componentId": 26606,
+    "name": "HANZO Secure Shield Hex",
+    "demoName": "Default",
+    "description": "Animated (flicker) ASCII art in the Hex Dump style, made with the 21st ASCII editor and baked to a looping video. Styled with a glitch, terminal look. A drop-in, zero-dependency React component for hero sections, cards, and retro terminal-style backgrounds.",
+    "previewUrl": "https://cdn.21st.dev/workout_scorpion/hanzo-secure-shield-hex/default/preview.1794568856265-e21486ab-15b0-4575-ac79-81895d0343e9.webp",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/workout_scorpion/hanzo-secure-shield-hex?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\n// AsciiArt — \"HANZO Secure Shield Hex\", made with the 21st ASCII editor and baked\n// to its exact rendered output (looping video + poster). Zero dependencies:\n// one <video> that fills its parent. Drop it behind or inside your content:\n// <div className=\"relative h-96\"><AsciiArt className=\"absolute inset-0\" /></div>\n// Remix the source recipe (styles, animation, palette) in the editor:\n// https://21st.dev/community/ascii/editor?from=97438cfd-a0b5-4bf6-bf9d-43a752e80ac3\nexport function AsciiArt({ className }: { className?: string }) {\n  return (\n    <video\n      className={className}\n      src={\"https://assets.21st.dev/ascii-recipes/videos/user_3GPGUGW0kezwI1M261bFhugwynL/f36e0877-7542-4f6b-9c1d-904fba3c6d7e.mp4\"}\n      poster={\"https://assets.21st.dev/ascii-recipes/thumbnails/user_3GPGUGW0kezwI1M261bFhugwynL/8b803fd0-45be-4499-b628-00f1585633b8.webp\"}\n      autoPlay\n      loop\n      muted\n      playsInline\n      aria-label={\"HANZO Secure Shield Hex — animated ASCII art\"}\n      style={{\n        display: \"block\",\n        width: \"100%\",\n        height: \"100%\",\n        objectFit: \"cover\",\n      }}\n    />\n  )\n}\n",
+    "demoCode": "import { AsciiArt } from \"@/components/ui/hanzo-secure-shield-hex\"\n\nexport default function AsciiArtDemo() {\n  return (\n    <div className=\"relative h-screen w-full overflow-hidden\">\n      <AsciiArt className=\"h-full w-full\" />\n    </div>\n  )\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source and usage retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

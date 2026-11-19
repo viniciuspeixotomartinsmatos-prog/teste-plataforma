@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 45182,
+    "name": "Glimm Usage Reset",
+    "description": "A faithful Glimm composer demo where a timed limit reset is revealed by a bottom-up shader sweep.",
+    "previewUrl": "https://cdn.21st.dev/user_registry_nomanjack_1793739459000/glimm-usage-reset/default/preview.1794431250761.webp",
+    "videoUrl": "https://cdn.21st.dev/user_registry_nomanjack_1793739459000/glimm-usage-reset/default/video.1794431256591.mp4",
+    "author": "nomanjack",
+    "authorImage": "https://github.com/nomanjack.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/nomanjack/glimm-usage-reset?api_key=REDACTED\"",
+    "url": "https://21st.dev/@nomanjack/components/glimm-usage-reset"
+  },
+  "requestedRoute": "/@nomanjack/components/glimm-usage-reset",
+  "checkedAt": "2026-11-13T02:14:22.423Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 45182,
+    "componentId": 26133,
+    "authorUserId": "user_registry_nomanjack_1793739459000",
+    "name": "Glimm Usage Reset",
+    "demoName": "Default",
+    "description": "A faithful Glimm composer demo where a timed limit reset is revealed by a bottom-up shader sweep.",
+    "previewUrl": "https://cdn.21st.dev/user_registry_nomanjack_1793739459000/glimm-usage-reset/default/preview.1794431250761.webp",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/nomanjack/glimm-usage-reset?api_key=REDACTED\"",
+    "componentCode": "\"use client\"\n\nimport * as React from \"react\"\nimport { accentChain } from \"glimm\"\nimport { GlimmScope, type GlimmScopeHandle } from \"glimm/react\"\n\nconst palette = accentChain([\"#0088FF\", \"#6155F5\", \"#CB30E0\", \"#FF2D55\"])\n\nfunction Bar({ width, height = 9 }: { width: number | string; height?: number }) { return <span aria-hidden=\"true\" style={{ background: \"#f1f1f2\", borderRadius: 6, display: \"block\", height, width }} /> }\n\nfunction Conversation() {\n  return <div style={{ display: \"grid\", gap: 28, margin: \"0 auto\", maxWidth: 600, padding: \"32px 16px 200px\" }}>{[[220, [\"96%\", \"88%\", \"92%\", \"54%\"]], [164, [\"90%\", \"94%\", \"38%\"]]].map(([asked, replies], idx) => <div key={idx} style={{ display: \"grid\", gap: 18 }}><div style={{ justifySelf: \"end\", maxWidth: \"70%\", width: asked as number }}><Bar height={34} width=\"100%\" /></div><div style={{ display: \"grid\", gap: 12 }}>{(replies as string[]).map((w) => <Bar key={w} width={w} />)}</div></div>)}</div>\n}\n\nfunction ResetScene() {\n  const scope = React.useRef<GlimmScopeHandle>(null)\n  const dock = React.useRef<HTMLDivElement>(null)\n  const [enabled, setEnabled] = React.useState(false)\n  const [seconds, setSeconds] = React.useState(3)\n\n  React.useEffect(() => {\n    if (enabled) return\n    setSeconds(3)\n    const interval = window.setInterval(() => setSeconds((value) => value > 1 ? value - 1 : 0), 1000)\n    const timeout = window.setTimeout(() => {\n      const rect = dock.current?.getBoundingClientRect()\n      scope.current?.play({ anticipate: true, at: rect ? [rect.left + rect.width / 2, rect.bottom - 40] : undefined, change: () => setEnabled(true) })\n    }, 3000)\n    return () => { window.clearInterval(interval); window.clearTimeout(timeout) }\n  }, [enabled])\n\n  return <GlimmScope ref={scope} palette={palette} direction=\"btt\" curve={0.2} span={0.92} bandTight={16} fade={[0.28, 0.82]} sweepMs={2700} style={{ inset: 0, position: \"absolute\" }}>\n    <main style={{ background: \"#fff\", color: \"#242529\", fontFamily: \"Inter, ui-sans-serif, system-ui, sans-serif\", height: \"100%\", minHeight: 560, overflow: \"hidden\", position: \"relative\" }}>\n      <header style={{ alignItems: \"center\", borderBottom: \"1px solid #ececee\", display: \"flex\", height: 44, justifyContent: \"space-between\", padding: \"0 16px\" }}><div style={{ alignItems: \"center\", display: \"flex\", gap: 12 }}><Bar height={24} width={24} /><Bar width={110} /></div><Bar height={30} width={30} /></header>\n      <Conversation />\n      <div style={{ bottom: 24, display: \"flex\", insetInline: 0, justifyContent: \"center\", paddingInline: 12, position: \"absolute\" }}><div ref={dock} style={{ maxWidth: 600, width: \"100%\" }}>\n        {!enabled && <div style={{ background: \"#f5f5f5\", borderRadius: \"16px 16px 0 0\", color: \"#8b8b8f\", display: \"flex\", fontSize: 13, height: 48, justifyContent: \"space-between\", marginBottom: -16, padding: \"8px 16px 0\" }}><span>Usage limit reached</span><span role=\"timer\" aria-label={`Resets in 0:0${seconds}`}>Resets in 0:0{seconds}</span></div>}\n        <div style={{ background: \"#fff\", borderRadius: 16, boxShadow: \"0 12px 35px rgba(0,0,0,.10),0 0 0 1px rgba(0,0,0,.06)\", padding: 12, position: \"relative\" }}><textarea aria-label=\"Message\" disabled={!enabled} rows={2} style={{ background: \"transparent\", border: 0, display: \"block\", font: \"inherit\", outline: 0, padding: \"2px 0\", resize: \"none\", width: \"100%\" }} /><div style={{ display: \"flex\", justifyContent: \"space-between\", marginTop: 12 }}><button aria-label=\"Add\" disabled={!enabled} style={{ background: \"#fafafa\", border: 0, borderRadius: 999, color: \"#999\", fontSize: 20, height: 36, width: 36 }}>+</button><button disabled={!enabled} onClick={() => setEnabled(false)} style={{ background: enabled ? \"#242529\" : \"#aaa\", border: 0, borderRadius: 999, color: \"#fff\", height: 36, padding: \"0 17px\" }}>Send</button></div></div>\n      </div></div>\n    </main>\n  </GlimmScope>\n}\n\nexport default function GlimmUsageReset() { return <ResetScene /> }\nexport { GlimmUsageReset }\n",
+    "demoCode": "import GlimmUsageReset from \"@/components/ui/glimm-usage-reset\"\n\nexport default function Demo() { return <GlimmUsageReset /> }\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  }
+}

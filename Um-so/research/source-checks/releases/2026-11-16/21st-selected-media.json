@@ -1,0 +1,34 @@
+[
+  {
+    "id": "staged-21st-45654",
+    "kind": "image",
+    "sourceURL": "https://cdn.21st.dev/user_3KgWzslqJFclZ2iRrfddAtKvi27/bento-grid-product-hero-with-live-metric-cards/default/preview.1794603957052.webp",
+    "path": "/assets/releases/2026-11-16/staged-21st-45654-5c7d03c0af8c.webp",
+    "bytes": 58910,
+    "sha256": "5c7d03c0af8c42130f2e262999b12a2cf3bea61530a7697154712da6720fe4fd"
+  },
+  {
+    "id": "staged-21st-45654",
+    "kind": "video",
+    "sourceURL": "https://cdn.21st.dev/user_3KgWzslqJFclZ2iRrfddAtKvi27/bento-grid-product-hero-with-live-metric-cards/default/video.1794603948736.mp4",
+    "path": "/assets/releases/2026-11-16/staged-21st-45654-5b4e9d5fd299.mp4",
+    "bytes": 507805,
+    "sha256": "5b4e9d5fd299cac26254be3ecb22d2d22dfa5bc14f20926e4f3ce620f29d77de"
+  },
+  {
+    "id": "staged-21st-45695",
+    "kind": "image",
+    "sourceURL": "https://cdn.21st.dev/user_332oxzW8MyPod4IDIdKq9rbPYuk/figma-brand-hero/default/preview.1794522354200.webp",
+    "path": "/assets/releases/2026-11-16/staged-21st-45695-f40334360051.webp",
+    "bytes": 78080,
+    "sha256": "f4033436005135ca019a5371525f8f33d3ff20e8546e8490049604f063435a96"
+  },
+  {
+    "id": "staged-21st-45695",
+    "kind": "video",
+    "sourceURL": "https://cdn.21st.dev/user_332oxzW8MyPod4IDIdKq9rbPYuk/figma-brand-hero/default/video.1794522062740.mp4",
+    "path": "/assets/releases/2026-11-16/staged-21st-45695-c1cd3ed04791.mp4",
+    "bytes": 239354,
+    "sha256": "c1cd3ed04791631e4c45813d3daed3a16aea813dca3cafc4444e4c3e5f375fc7"
+  }
+]

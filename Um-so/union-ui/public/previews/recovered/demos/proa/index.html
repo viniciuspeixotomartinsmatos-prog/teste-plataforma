@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><script src="/previews/recovered/compat.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Proa — das 7h às 22h em Angra</title>
+  <meta name="description" content="Proa: um iate de 60 pés em Angra dos Reis, cinco ilhas e uma tripulação de três. A diária vai das 7h às 22h." />
+  <meta name="theme-color" content="#04202c" />
+  <link rel="icon" href="/previews/recovered/demos/proa/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="/previews/recovered/demos/proa/img/hero.webp" as="image" type="image/webp" />
+  <script>
+    // abertura só com JS; se o JS não subir em 4 s, a página aparece sem ela
+    (function () {
+      var d = document.documentElement;
+      d.classList.add('intro-on');
+      if (matchMedia('(pointer: fine)').matches) d.classList.add('has-cursor');
+      setTimeout(function () { if (!window.__proaBooted) { d.classList.remove('intro-on'); d.classList.add('intro-done'); } }, 4000);
+    })();
+  </script>
+  <style>html,body{background:#04202c}.intro{display:none}.intro-on .intro{display:block}.intro-on .day__stage{clip-path:circle(0)}.intro-on .port,.intro-on .hud__clock{opacity:0}.intro-on .nav,.intro-on .hud__track,.intro-on .hud__hint{visibility:hidden}.intro-on.intro-reveal .nav,.intro-on.intro-reveal .hud__track,.intro-on.intro-reveal .hud__hint{visibility:visible}</style>
+  <script type="module" crossorigin src="/previews/recovered/demos/proa/assets/index-BNAbSGkl.js"></script>
+  <link rel="stylesheet" crossorigin href="/previews/recovered/demos/proa/assets/index-pMvwaQgD.css">
+</head>
+<body>
+  <!-- Abertura: a marca e as coordenadas; a escotilha e o relógio são os mesmos do dia (seção .day) -->
+  <div class="intro" aria-hidden="true">
+    <div class="intro__brand">
+      <span class="intro__word">PROA</span>
+      <span class="intro__coord label">Angra dos Reis · 23°00′ S 44°18′ W</span>
+    </div>
+  </div>
+
+  <div class="cursor" aria-hidden="true"><i class="cursor__ring"></i><i class="cursor__dot"></i></div>
+
+  <header class="nav" data-tone="dark">
+    <a class="nav__logo" href="#topo" aria-label="Proa, início">
+      <span class="nav__mark"><svg viewBox="0 0 22 36" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linejoin="round" aria-hidden="true"><path d="M11 1.2c4.3 5.3 6.4 11.2 6.4 18.4v12.6c0 1.4-1.1 2.5-2.5 2.5H7.1c-1.4 0-2.5-1.1-2.5-2.5V19.6C4.6 12.4 6.7 6.5 11 1.2Z"/><path d="M7.6 18.3c2.2-1.6 4.6-1.6 6.8 0" stroke-linecap="round"/><path d="M11 5.6v7.2" stroke-linecap="round" opacity=".55"/></svg></span>
+      <span class="nav__word">PROA</span>
+    </a>
+    <nav class="nav__links" aria-label="Seções">
+      <a href="#dia"><span data-t="O dia">O dia</span></a>
+      <a href="#barco"><span data-t="O barco">O barco</span></a>
+      <a href="#roteiros"><span data-t="Roteiros">Roteiros</span></a>
+      <a href="#diaria"><span data-t="Diária">Diária</span></a>
+    </nav>
+    <a class="btn-line nav__cta" href="#reserva"><span>Reservar</span></a>
+  </header>
+
+  <main>
+    <!-- 01 Hero + 02 O dia: quatro planos do mesmo barco, cortados com borrão, presos ao scroll; fecha na escotilha -->
+    <section class="day" id="topo" data-tone="dark">
+      <div class="day__stage">
+        <img class="day__still" src="/previews/recovered/demos/proa/img/hero.webp" width="1920" height="1080" alt="Vista de cima do iate Proa ancorado em água turquesa junto à Ilha Grande" fetchpriority="high" />
+        <canvas class="day__canvas" aria-hidden="true"></canvas>
+        <div class="day__shade" aria-hidden="true"></div>
+      </div>
+
+      <div class="port" aria-hidden="true">
+        <svg viewBox="0 0 300 300">
+          <circle class="port__track" cx="150" cy="150" r="140" />
+          <circle class="port__arc" cx="150" cy="150" r="140" />
+          <g class="port__ticks"></g>
+        </svg>
+      </div>
+
+      <div class="day__copy">
+        <div class="hero">
+          <h1 class="duo hero__title"><span class="s">das 7h</span> <span class="r">às 22h em Angra</span></h1>
+          <p class="hero__p" data-lines>Um iate de 60 pés, cinco ilhas,<br>uma tripulação de três.<br>O roteiro é o dia.</p>
+        </div>
+
+        <article class="hour" data-hour="0" id="dia">
+          <h2 class="duo hour__title"><span class="s">às 7h,</span> <span class="r">café na proa…</span></h2>
+          <p class="hour__p" data-lines>Âncora na Enseada do Sítio Forte. A água ainda parada e o café passado a bordo.</p>
+        </article>
+        <article class="hour" data-hour="1">
+          <h2 class="duo hour__title"><span class="s">às 11h,</span> <span class="r">a Lagoa Azul…</span></h2>
+          <p class="hour__p" data-lines>Três metros de água transparente até o fundo. Máscara, nadadeira e ninguém com pressa.</p>
+        </article>
+        <article class="hour" data-hour="2">
+          <h2 class="duo hour__title"><span class="s">às 18h,</span> <span class="r">o sol atrás da popa…</span></h2>
+          <p class="hour__p" data-lines>Volta devagar pela baía, espumante gelado e as ilhas virando silhueta.</p>
+        </article>
+        <article class="hour" data-hour="3">
+          <h2 class="duo hour__title"><span class="s">às 22h,</span> <span class="r">luz debaixo d’água.</span></h2>
+          <p class="hour__p" data-lines>Jantar ancorado no Saco do Céu, com as luzes do casco acesas. Quem quiser, dorme a bordo.</p>
+        </article>
+
+        <ul class="where label" aria-hidden="true">
+          <li data-lines>Ilha Grande<br><span class="num">23°09′ S 44°15′ W</span></li>
+          <li data-lines>Lagoa Azul<br><span class="num">23°05′ S 44°14′ W</span></li>
+          <li data-lines>Baía da Ilha Grande<br><span class="num">23°04′ S 44°19′ W</span></li>
+          <li data-lines>Saco do Céu<br><span class="num">23°06′ S 44°13′ W</span></li>
+        </ul>
+
+        <p class="day__caption label" data-lines>07:00 → 22:00 · quinze horas a bordo</p>
+      </div>
+
+      <div class="hud" aria-hidden="true">
+        <div class="hud__track">
+          <div class="hud__line"><i class="hud__fill"></i></div>
+          <ol class="hud__ticks num"><li>07</li><li>11</li><li>18</li><li>22</li></ol>
+        </div>
+        <div class="hud__hint label"><span class="hud__dot"><i></i></span>Scroll para navegar</div>
+        <div class="hud__clock num"></div>
+      </div>
+    </section>
+
+    <!-- 03 O barco: a planta plotada andar por andar, descendo com o scroll -->
+    <section class="boat" id="barco" data-tone="dark">
+      <div class="boat__pin">
+        <div class="boat__head">
+          <h2 class="duo boat__title"><span class="s">o barco</span> <span class="r">inteiro para vocês</span></h2>
+          <p class="boat__p" data-lines>Proa 60, casco de 2019, reformado em 2025. Cabe um dia inteiro aqui dentro.</p>
+        </div>
+        <div class="boat__bar" data-fade>
+          <div class="boat__tabs" role="tablist" aria-label="Andares do barco">
+            <button class="tab is-on" role="tab" aria-selected="true" data-deck="0"><span class="num">01</span>Flybridge</button>
+            <button class="tab" role="tab" aria-selected="false" data-deck="1"><span class="num">02</span>Convés</button>
+            <button class="tab" role="tab" aria-selected="false" data-deck="2"><span class="num">03</span>Cabines</button>
+            <span class="boat__tabline" aria-hidden="true"></span>
+          </div>
+          <div class="boat__level" aria-hidden="true">
+            <svg class="level" viewBox="0 0 132 42">
+              <path class="lv" data-deck="0" d="M44 5h38l7 9H40z" />
+              <path class="lv" data-deck="1" d="M16 16h92l14 9H11z" />
+              <path class="lv" data-deck="2" d="M9 27h120l-13 11H23z" />
+            </svg>
+            <span class="label boat__deckname">andar de cima</span>
+          </div>
+        </div>
+        <div class="plan">
+          <div class="plan__decks">
+            <figure class="deck" data-deck="0"><img src="/previews/recovered/demos/proa/img/planta-flybridge.webp" width="2100" height="800" alt="Planta do flybridge: segundo timão, bar, mesa e espreguiçadeiras sob o hardtop" loading="lazy" /></figure>
+            <figure class="deck" data-deck="1"><img src="/previews/recovered/demos/proa/img/planta-conves.webp" width="2100" height="800" alt="Planta do convés principal: plataforma de banho, cockpit, salão, cozinha, timão e solário de proa" loading="lazy" /></figure>
+            <figure class="deck" data-deck="2"><img src="/previews/recovered/demos/proa/img/planta-cabines.webp" width="2100" height="800" alt="Planta das cabines: suíte master no meio do barco, suíte VIP na proa e suíte com duas camas" loading="lazy" /></figure>
+            <i class="plan__scan" aria-hidden="true"></i>
+            <ul class="pins" aria-hidden="true"></ul>
+          </div>
+        </div>
+        <ol class="plan__legend"></ol>
+      </div>
+      <dl class="specs">
+        <div><dt class="label">Comprimento</dt><dd><span class="num" data-count="18.3" data-dec="1">18,3</span> m</dd></div>
+        <div><dt class="label">Hóspedes</dt><dd><span class="num" data-count="8">8</span></dd></div>
+        <div><dt class="label">Suítes</dt><dd><span class="num" data-count="3">3</span></dd></div>
+        <div><dt class="label">Tripulação</dt><dd><span class="num" data-count="3">3</span></dd></div>
+        <div><dt class="label">Velocidade</dt><dd><span class="num" data-count="26">26</span> nós</dd></div>
+        <div><dt class="label">Reforma</dt><dd><span class="num">2025</span></dd></div>
+      </dl>
+    </section>
+
+    <!-- 04 Roteiros: carta náutica com a rota desenhada pelo scroll -->
+    <section class="routes" id="roteiros" data-tone="light">
+      <div class="routes__side">
+        <h2 class="duo duo--stack routes__title"><span class="s">três</span> <span class="r">roteiros, um dia</span></h2>
+        <div class="routes__tabs" role="tablist" aria-label="Roteiros" data-fade>
+          <button class="rtab is-on" role="tab" aria-selected="true" data-route="0">Ilha Grande</button>
+          <button class="rtab" role="tab" aria-selected="false" data-route="1">Lagoas</button>
+          <button class="rtab" role="tab" aria-selected="false" data-route="2">Gipóia</button>
+        </div>
+        <ol class="stops"></ol>
+        <p class="routes__meta label" data-fade><i></i><span class="routes__miles num">42 milhas náuticas · 5 paradas</span></p>
+      </div>
+      <div class="chart">
+        <div class="chart__zoom">
+          <img class="chart__img" src="/previews/recovered/demos/proa/img/carta.webp" width="1586" height="992" alt="Carta náutica da Baía da Ilha Grande" loading="lazy" />
+          <svg class="chart__svg" viewBox="0 0 1586 992" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <text class="chart__name chart__name--ig" x="1010" y="640">Ilha Grande</text>
+            <text class="chart__name chart__name--angra" x="150" y="140">Angra dos Reis</text>
+            <text class="chart__name chart__name--baia" x="880" y="215">Baía da Ilha Grande</text>
+            <path class="chart__route" d="" />
+            <g class="chart__stops"></g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 A diária: o dia num relógio de 24 horas, varrido pelo scroll -->
+    <section class="price" id="diaria" data-tone="light">
+      <div class="price__pin">
+        <div class="price__head">
+          <h2 class="duo duo--stack price__title"><span class="s">a diária</span> <span class="r">das 7h às 22h</span></h2>
+        </div>
+        <div class="dial">
+          <svg class="dial__svg" viewBox="-500 -500 1000 1000" aria-hidden="true">
+            <g class="dial__ticks"></g>
+            <circle class="dial__off" r="300" />
+            <path class="dial__arc" d="" />
+            <g class="dial__dots"></g>
+            <path class="dial__boat" d="M0,-13 C5,-6 6,0 6,6 L6,11 L-6,11 L-6,6 C-6,0 -5,-6 0,-13 Z" />
+          </svg>
+          <div class="dial__center">
+            <p class="dial__price"><span class="dial__cur">R$</span> <span class="num">14.800</span></p>
+            <p class="label dial__pax">Até 8 pessoas</p>
+            <p class="dial__now" aria-live="off"><span class="dial__nowin"><b class="num">07h</b> café na proa</span></p>
+          </div>
+          <ul class="dial__labels"></ul>
+        </div>
+        <div class="price__side" data-fade>
+          <p>Combustível, tripulação, comida e bebida inclusos. Pernoite a bordo: + R$ 4.200.</p>
+          <a class="btn-line btn-line--sol" href="#reserva"><span>Escolher a data</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 Reserva -->
+    <section class="book" id="reserva" data-tone="dark">
+      <div class="book__bg" aria-hidden="true"><img src="/previews/recovered/demos/proa/img/reserva.webp" width="1672" height="941" alt="" loading="lazy" /></div>
+      <div class="book__copy">
+        <h2 class="duo duo--stack book__title"><span class="s">reserve</span> <span class="r">o seu dia</span></h2>
+        <p class="book__p" data-lines>Respondemos pelo WhatsApp em até uma hora, das 7h às 22h.</p>
+      </div>
+      <form class="book__form" novalidate>
+        <div class="cal">
+          <div class="cal__head">
+            <button type="button" class="cal__nav" data-step="-1" aria-label="Mês anterior">‹</button>
+            <p class="cal__month"></p>
+            <button type="button" class="cal__nav" data-step="1" aria-label="Próximo mês">›</button>
+          </div>
+          <ol class="cal__week label" aria-hidden="true"><li>D</li><li>S</li><li>T</li><li>Q</li><li>Q</li><li>S</li><li>S</li></ol>
+          <div class="cal__grid" role="grid"></div>
+        </div>
+        <div class="fields">
+          <label class="field field--date"><span class="label">Data</span><output class="field__val num" name="data">—</output></label>
+          <div class="field field--pax"><span class="label">Pessoas</span>
+            <div class="pax"><button type="button" class="pax__b" data-d="-1" aria-label="Menos uma pessoa">−</button><output class="field__val num" name="pessoas">4</output><button type="button" class="pax__b" data-d="1" aria-label="Mais uma pessoa">+</button></div>
+          </div>
+          <label class="field field--route"><span class="label">Roteiro</span>
+            <select name="roteiro"><option>Ilha Grande</option><option>Lagoas</option><option>Gipóia</option></select>
+          </label>
+          <label class="field field--wide"><span class="label">Nome</span><input name="nome" autocomplete="name" required /></label>
+          <label class="field field--wide"><span class="label">WhatsApp</span><input name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(24) 9 0000-0000" required /></label>
+        </div>
+        <button class="btn-sol" type="submit"><span>Reservar o dia</span></button>
+        <p class="book__done" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- 07 Rodapé: 22:00, boa noite. PROA na linha d'água -->
+  <footer class="foot" data-tone="dark">
+    <div class="foot__top">
+      <p class="foot__clock"><span class="foot__time num">22:00</span><span class="duo foot__bye"><span class="s">boa noite.</span></span></p>
+      <div class="foot__cols">
+        <p data-fade>Marina Ponta do Cais,<br>Angra dos Reis, RJ</p>
+        <p data-fade><a href="mailto:contato@proa.com.br">contato@proa.com.br</a><br><a href="#reserva">WhatsApp (24) 9 8812-0460</a></p>
+        <p data-fade><a href="#" rel="noopener">Instagram</a><br><a href="#roteiros">Roteiros</a></p>
+      </div>
+    </div>
+    <div class="foot__water">
+      <p class="foot__word" aria-label="Proa"><span>P</span><span>R</span><span>O</span><span>A</span></p>
+      <i class="foot__line" aria-hidden="true"></i>
+    </div>
+    <p class="foot__legal">Proa Charter Náutico Ltda. · CNPJ 48.311.270/0001-62 · Embarcação inscrita na Capitania dos Portos do Rio de Janeiro · © 2026</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-16T13:45:53.206Z",
+  "metadata": {
+    "type": "component",
+    "id": 45864,
+    "name": "Astryx Code",
+    "description": "Code marks short inline references such as function names, variables, file paths, and command-line flags. Use CodeBlock for standalone or multi-line snippets.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-code/code-text-sizes/preview.1794515374947.png",
+    "videoUrl": null,
+    "author": "Astryxdesign",
+    "authorImage": "https://pbs.twimg.com/profile_images/2069568757198974976/-GS_pIPq_400x400.jpg",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-code?api_key=$API_KEY_21ST\"",
+    "url": "https://21st.dev/@Astryxdesign/components/astryx-code"
+  },
+  "component": {
+    "id": 45864,
+    "componentId": 26420,
+    "name": "Astryx Code",
+    "demoName": "Code — Text Sizes",
+    "description": "Code marks short inline references such as function names, variables, file paths, and command-line flags. Use CodeBlock for standalone or multi-line snippets.",
+    "previewUrl": "https://cdn.21st.dev/user_2wdgsmfD3BNOOm4oOqUDUS9IXZI/astryx-code/code-text-sizes/preview.1794515374947.png",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/Astryxdesign/astryx-code?api_key=$API_KEY_21ST\"",
+    "componentCode": "\"use client\"\n\nimport \"./astryx-code-utils/index.css\"\nimport { Code } from \"@astryxdesign/core/Code\"\n\nexport * from \"@astryxdesign/core/Code\"\nexport default Code\n",
+    "demoCode": "'use client';\n\nimport {Code} from '@/components/ui/astryx-code';\nimport {Text} from '@astryxdesign/core/Text';\nimport {Heading} from '@astryxdesign/core/Text';\nimport {VStack} from '@astryxdesign/core/Stack';\n\nfunction CodeAcrossTextSizes() {\n  return (\n    <VStack gap={3}>\n      <Heading level={3}>\n        Heading with <Code>inline code</Code>\n      </Heading>\n      <Text type=\"body\">\n        Body text with <Code>inline code</Code>\n      </Text>\n      <Text type=\"supporting\">\n        Supporting text with <Code>inline code</Code>\n      </Text>\n      <Text type=\"label\">\n        Label text with <Code>inline code</Code>\n      </Text>\n    </VStack>\n  );\n}\n\nexport default function CodeAcrossTextSizesDemo() {\n  return (\n    <div\n      data-astryx-theme=\"neutral\"\n      data-theme=\"light\"\n      style={{colorScheme: 'light', display: 'contents'}}>\n      <CodeAcrossTextSizes />\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": null
+  },
+  "scope": "Original public source and usage retrieved through the authorized connector; rendering/media/export acceptance pending."
+}

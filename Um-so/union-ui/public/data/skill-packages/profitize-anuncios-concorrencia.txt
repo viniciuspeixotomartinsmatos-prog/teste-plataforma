@@ -1,0 +1,292 @@
+---
+name: anuncios-concorrencia
+description: Extrai e analisa os anúncios dos concorrentes nas bibliotecas de anúncios (Biblioteca de Anúncios da Meta, LinkedIn etc.) para entender quais mensagens, dores e abordagens de criativo estão funcionando. Ajuda a inspirar e melhorar as suas próprias campanhas de anúncios.
+---
+
+# Competitive Ads Extractor
+
+Esta skill extrai os anúncios dos seus concorrentes nas bibliotecas de anúncios e analisa o que está funcionando: as dores que eles destacam, os casos de uso que miram e a copy (o texto persuasivo do anúncio) e os criativos que estão conectando com o público.
+
+## Quando usar esta skill
+
+- Pesquisar a estratégia de anúncios dos concorrentes
+- Buscar inspiração para os seus próprios anúncios
+- Entender o posicionamento de mercado
+- Identificar padrões de anúncios que dão resultado
+- Analisar mensagens que funcionam
+- Descobrir novos casos de uso ou dores
+- Planejar campanhas de anúncios com conceitos já testados
+
+## O que esta skill faz
+
+1. **Extrai os anúncios**: coleta (scraping) os anúncios da Biblioteca de Anúncios da Meta, do LinkedIn etc.
+2. **Faz capturas de tela**: salva cópias visuais de todos os anúncios
+3. **Analisa as mensagens**: identifica dores, casos de uso e propostas de valor
+4. **Categoriza os anúncios**: agrupa por tema, público ou formato
+5. **Identifica padrões**: encontra as abordagens de sucesso em comum
+6. **Traz insights**: explica por que certos anúncios provavelmente têm bom desempenho
+
+## Como usar
+
+### Extração básica
+
+```
+Extraia todos os anúncios ativos de [Nome do concorrente] na Biblioteca de Anúncios da Meta
+```
+
+```
+Colete os anúncios de [Empresa] e analise as mensagens deles
+```
+
+### Análise específica
+
+```
+Pegue todos os anúncios de [Concorrente], com foco nas mensagens 
+sobre [problema específico]. Que dores eles estão destacando?
+```
+
+### Grupo de concorrentes
+
+```
+Extraia os anúncios destes 5 concorrentes: [lista]. 
+Compare as abordagens e me diga o que está funcionando.
+```
+
+### Plataforma específica
+
+```
+Pegue os anúncios de [Concorrente] no LinkedIn e analise a 
+estratégia de posicionamento B2B deles
+```
+
+## Exemplo
+
+**Usuário**: "Extraia os anúncios do Notion na Biblioteca de Anúncios da Meta e me diga quais mensagens estão funcionando para eles."
+
+**Processo**:
+```
+Acessando a Biblioteca de Anúncios da Meta...
+Buscando: Notion
+Encontrados: 23 anúncios ativos
+
+Fazendo as capturas de tela...
+[████████████████████] 100%
+
+Salvo em: competitor-ads/notion/
+- ad-001-collaboration.png
+- ad-002-productivity.png
+- ad-003-templates.png
+...
+
+Analisando as mensagens...
+```
+
+**Resultado**:
+```
+# Análise dos anúncios do Notion
+
+## Visão geral
+- Total de anúncios: 23 ativos
+- Temas principais: Produtividade (35%), Colaboração (30%), 
+  Templates (20%), Recursos de IA (15%)
+- Formatos: Imagem estática (60%), Vídeo (40%)
+- Padrões de CTA: "Teste grátis", "Comece agora"
+
+## Principais dores que eles destacam
+
+1. **Informação espalhada** (8 anúncios)
+   Copy: "Chega de pular entre 10 ferramentas diferentes"
+   Por que funciona: dor direta que muitas equipes vivem
+
+2. **Excesso de reuniões** (5 anúncios)
+   Copy: "Troque reuniões desnecessárias por atualizações assíncronas"
+   Por que funciona: dor do trabalho remoto pós-pandemia
+
+3. **Documentos perdidos** (4 anúncios)
+   Copy: "Nunca mais pergunte 'cadê aquele documento?'"
+   Por que funciona: frustração universal no trabalho
+
+## Padrões de criativo que dão resultado
+
+### Padrão 1: Antes e depois lado a lado
+- Mostra o caos de ferramentas → o espaço de trabalho limpo do Notion
+- Usado em 6 anúncios de alto desempenho
+- A metáfora visual se entende na hora
+
+### Padrão 2: Vitrine de recurso
+- GIF do produto sendo usado de verdade
+- Mostra um recurso específico em 5 segundos
+- Usado para recursos novos (IA, templates)
+
+### Padrão 3: Prova social
+- Mensagem "Junte-se a 20 milhões de usuários"
+- Logos de clientes
+- Usado em 4 anúncios voltados a grandes empresas
+
+## Copy que está funcionando
+
+Melhores títulos:
+1. "O conhecimento da sua equipe, finalmente num lugar só"
+   → Focado no benefício, ataca a dor de frente
+   
+2. "O espaço de trabalho tudo-em-um"
+   → Posicionamento claro, apelo amplo
+   
+3. "IA que ajuda de verdade no seu trabalho"
+   → Responde ao ceticismo com IA, ângulo prático
+
+Melhores padrões de texto principal:
+- Frases curtas (menos de 10 palavras)
+- Foco no resultado, não no recurso
+- Números específicos ("Corte 50% das reuniões")
+
+## Insights de segmentação de público
+
+Com base nas variações dos anúncios:
+- Fundadores de startup: ângulo da produtividade individual
+- Líderes de equipe: colaboração e alinhamento
+- Grandes empresas: menções a segurança e compliance
+- Estudantes: plano grátis, templates, organização
+
+## Recomendações para os seus anúncios
+
+1. **Teste a dor do "excesso de ferramentas"**
+   → Conecta forte com o público, pela frequência dos anúncios deles
+
+2. **Use capturas de tela do produto em vez de visuais abstratos**
+   → Todos os melhores anúncios deles mostram a interface real
+
+3. **Comece pelo problema, não pela solução**
+   → "Cansado de X?" funciona melhor que "Conheça o Y"
+
+4. **Mantenha a copy com menos de 100 caracteres**
+   → Os anúncios mais curtos deles parecem ser os mais frequentes
+
+5. **Teste formatos visuais de antes e depois**
+   → Padrão comprovado nos criativos deles
+
+## Arquivos salvos
+- Todos os anúncios: ~/competitor-ads/notion/
+- Análise: ~/competitor-ads/notion/analysis.md
+- Melhores desempenhos: ~/competitor-ads/notion/top-10/
+```
+
+**Inspirado em:** caso de uso de Sumant Subrahmanya na Lenny's Newsletter
+
+## O que você pode aprender
+
+### Análise de mensagens
+- Quais problemas eles enfatizam
+- Como se posicionam contra a concorrência
+- Propostas de valor que conectam com o público
+- Segmentos de público-alvo
+
+### Padrões de criativo
+- Estilos visuais que funcionam
+- Desempenho de vídeo vs. imagem estática
+- Paletas de cores e identidade da marca
+- Padrões de layout
+
+### Fórmulas de copy
+- Estruturas de título
+- Padrões de CTA (chamada para ação)
+- Tamanho e tom
+- Gatilhos emocionais
+
+### Estratégia de campanha
+- Campanhas sazonais
+- Abordagens de lançamento de produto
+- Táticas de divulgação de recursos
+- Padrões de retargeting
+
+## Boas práticas
+
+### Jurídico e ético
+✓ Use só para pesquisa e inspiração
+✓ Não copie os anúncios diretamente
+✓ Respeite a propriedade intelectual
+✓ Use os insights para orientar criativos originais
+✗ Não plagie a copy nem roube o design
+
+### Dicas de análise
+1. **Procure padrões**: quais temas se repetem?
+2. **Acompanhe ao longo do tempo**: salve os anúncios todo mês para ver a evolução
+3. **Teste hipóteses**: adapte os padrões de sucesso para a sua marca
+4. **Segmente por público**: mensagens diferentes para públicos diferentes
+5. **Compare as plataformas**: as mensagens no LinkedIn e no Facebook são diferentes
+
+## Recursos avançados
+
+### Acompanhamento de tendências
+```
+Compare os anúncios de [Concorrente] do T1 com os do T2. 
+O que mudou nas mensagens?
+```
+
+### Análise de vários concorrentes
+```
+Extraia os anúncios de [Empresa A], [Empresa B], [Empresa C]. 
+Quais são os padrões em comum? Onde eles diferem?
+```
+
+### Benchmarks do setor
+```
+Mostre os padrões de anúncios das 10 maiores ferramentas de gestão 
+de projetos. Em quais problemas todas elas focam?
+```
+
+### Análise de formato
+```
+Analise os anúncios em vídeo vs. os de imagem estática de [Concorrente]. 
+Qual tem mais engajamento? (se houver dados)
+```
+
+## Fluxos de trabalho comuns
+
+### Planejamento de campanha
+1. Extrair os anúncios dos concorrentes
+2. Identificar os padrões de sucesso
+3. Anotar as lacunas nas mensagens deles
+4. Levantar ângulos únicos
+5. Rascunhar variações de anúncio para teste
+
+### Pesquisa de posicionamento
+1. Pegar os anúncios de 5 concorrentes
+2. Mapear o posicionamento deles
+3. Encontrar ângulos pouco explorados
+4. Desenvolver mensagens que diferenciem
+5. Testar contra as abordagens deles
+
+### Inspiração de criativos
+1. Extrair os anúncios por tema
+2. Analisar os padrões visuais
+3. Anotar as tendências de cor e layout
+4. Adaptar os padrões de sucesso
+5. Criar variações originais
+
+## Dicas para dar certo
+
+1. **Monitoramento regular**: confira todo mês o que mudou
+2. **Pesquisa ampla**: olhe também os concorrentes indiretos
+3. **Salve tudo**: monte uma biblioteca de referências
+4. **Teste os insights**: rode os seus próprios experimentos
+5. **Acompanhe o desempenho**: faça teste A/B dos conceitos inspirados
+6. **Seja original**: use como inspiração, não como cópia
+7. **Várias plataformas**: compare Facebook, LinkedIn, TikTok etc.
+
+## Formatos de saída
+
+- **Capturas de tela**: todos os anúncios salvos como imagem
+- **Relatório de análise**: resumo dos insights em Markdown
+- **Planilha**: CSV com a copy, os CTAs e os temas
+- **Apresentação**: deck visual com os anúncios de melhor desempenho
+- **Biblioteca de padrões**: organizada por abordagem
+
+## Casos de uso relacionados
+
+- Escrever uma copy melhor para as suas campanhas
+- Entender o posicionamento de mercado
+- Encontrar lacunas de conteúdo nas suas mensagens
+- Descobrir novos casos de uso para o seu produto
+- Planejar a estratégia de marketing de produto
+- Inspirar o conteúdo das redes sociais

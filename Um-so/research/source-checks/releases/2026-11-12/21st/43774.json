@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "component",
+    "id": 43774,
+    "name": "Theme Toggle",
+    "description": "A button that cycles through light, dark, and system theme preferences and shows a sun, moon, or monitor icon for the active mode.",
+    "previewUrl": "https://cdn.21st.dev/user_registry_serayudigital_1791204328603/theme-toggle/default/preview.1794427200675.webp",
+    "videoUrl": "https://cdn.21st.dev/user_registry_serayudigital_1791204328603/theme-toggle/default/video.1794427182049.mp4",
+    "author": "serayudigital",
+    "authorImage": "https://avatars.githubusercontent.com/u/41495217?v=4",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/serayudigital/theme-toggle?api_key=REDACTED\"",
+    "url": "https://21st.dev/@serayudigital/components/theme-toggle"
+  },
+  "requestedRoute": "/@serayudigital/components/theme-toggle",
+  "checkedAt": "2026-11-13T02:14:57.756Z",
+  "status": "retained_unvalidated",
+  "credentialQueries": "Removed from retrieval/install metadata; source notices preserved.",
+  "component": {
+    "id": 43774,
+    "componentId": 25227,
+    "authorUserId": "user_registry_serayudigital_1791204328603",
+    "name": "Theme Toggle",
+    "demoName": "Default",
+    "description": "A button that cycles through light, dark, and system theme preferences and shows a sun, moon, or monitor icon for the active mode.",
+    "previewUrl": "https://cdn.21st.dev/user_registry_serayudigital_1791204328603/theme-toggle/default/preview.1794427200675.webp",
+    "installCommand": "npx shadcn@latest add \"https://21st.dev/r/serayudigital/theme-toggle?api_key=REDACTED\"",
+    "componentCode": "import * as React from \"react\";\nimport { Moon, Sun, Monitor } from \"lucide-react\";\nimport {\n  useTheme,\n  type ThemePreference,\n} from \"@/components/ui/theme-toggle-utils/use-theme\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface ThemeToggleProps extends Omit<\n  React.ButtonHTMLAttributes<HTMLButtonElement>,\n  \"onClick\"\n> {\n  /** Whether to show the third \"system\" option. Default: true. */\n  showSystem?: boolean;\n  /** Label for screen readers. */\n  ariaLabel?: string;\n}\n\n/**\n * ThemeToggle - theme toggle with 2 or 3 states (light/dark/system).\n * Client-side only. Wrap with a mounting boundary if needed.\n */\nconst ThemeToggle = React.forwardRef<HTMLButtonElement, ThemeToggleProps>(\n  ({ className, showSystem = true, ariaLabel, ...props }, ref) => {\n    const { preference, resolved, setPreference } = useTheme();\n\n    const cycle: ThemePreference[] = showSystem\n      ? [\"light\", \"dark\", \"system\"]\n      : [\"light\", \"dark\"];\n\n    const getNext = (): ThemePreference => {\n      const idx = cycle.indexOf(preference);\n      return cycle[(idx + 1) % cycle.length];\n    };\n\n    const Icon =\n      preference === \"system\" ? Monitor : resolved === \"dark\" ? Moon : Sun;\n\n    const labelText =\n      preference === \"system\"\n        ? \"Follow system\"\n        : resolved === \"dark\"\n          ? \"Dark mode\"\n          : \"Light mode\";\n\n    return (\n      <button\n        ref={ref}\n        type=\"button\"\n        aria-label={ariaLabel ?? `Theme: ${labelText}. Click to switch.`}\n        title={`Current theme: ${labelText}`}\n        onClick={() => setPreference(getNext())}\n        className={cn(\n          \"inline-flex h-11 w-11 items-center justify-center rounded-md border border-border bg-transparent text-foreground sd-tap transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background\",\n          className,\n        )}\n        {...props}\n      >\n        <Icon className=\"h-5 w-5\" aria-hidden />\n      </button>\n    );\n  },\n);\nThemeToggle.displayName = \"ThemeToggle\";\n\nexport { ThemeToggle };\nexport default ThemeToggle;\n",
+    "demoCode": "import { ThemeToggle } from \"@/components/ui/theme-toggle\";\n\nexport default function ThemeToggleDemo() {\n  return (\n    <div className=\"flex min-h-[240px] w-full items-center justify-center bg-background p-10 text-foreground\">\n      <div className=\"flex flex-col items-center gap-4 rounded-lg border border-border bg-card p-8\">\n        <p className=\"text-sm text-muted-foreground\">\n          Click to cycle light / dark / system\n        </p>\n        <ThemeToggle ariaLabel=\"Toggle theme\" />\n      </div>\n    </div>\n  );\n}\n",
+    "registryDependencies": {
+      "filesWithRegistry": {},
+      "npmDependencies": {}
+    },
+    "isPublic": true,
+    "registryTeamId": null,
+    "registryUserId": "user_registry_serayudigital_1791204328603"
+  }
+}
